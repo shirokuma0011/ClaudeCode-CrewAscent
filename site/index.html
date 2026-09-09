@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="assets/css/base.css?v=20260817r9">
   <link rel="stylesheet" href="assets/css/system.css?v=20260817r9">
   <link rel="stylesheet" href="assets/css/top.css?v=20260817r9">
+  <link rel="stylesheet" href="assets/css/crew.css?v=20260909">
   <script>/* 動きの入り切り。?motion=off と、動きを減らす設定で外れる。
      site-config.js の motion:'off' は main.js が後から外します。 */
   (function(d){var r=d.documentElement;r.classList.remove('no-js');
@@ -150,38 +151,36 @@
 <main id="main">
 
 <!-- ================================ HERO ================================ -->
-<section class="hero hero--photo" id="hero">
-  <div class="hero__bg" aria-hidden="true">
-    <img src="assets/img/hero-light.webp" width="1438" height="809" alt="" fetchpriority="high" decoding="async" srcset="assets/img/hero-light-760.webp 760w, assets/img/hero-light.webp 1438w" sizes="100vw">
-  </div>
-  <div class="hero__scrim" aria-hidden="true"></div>
-  <div class="arch hero__arch" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-  <div class="hero__cross" aria-hidden="true"><span class="x"></span><span class="y"></span></div>
-
-  <div class="wrap hero__in">
-    <p class="hero__eyebrow">小規模事業者向けWebサイト制作 ／ 買い切り 80,000円〜</p>
-    <h1><span class="nb">小規模事業者のための</span><br><span class="nb">Webサイト制作</span></h1>
-    <p class="hero__lead">誰に何をどう伝えるかを、診断とヒアリングで整理してから制作します。必要なページ、文章、写真が最初から決まっていなくても始められます。</p>
-    <div class="btn-row">
-      <a class="btn btn--primary btn--lg" href="diagnosis.html">無料診断を始める<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-      <a class="btn btn--ghost btn--lg" href="plans.html">4つのプランを見る</a>
+<section class="hero2" id="hero">
+  <div class="wrap hero2__in">
+    <div class="hero2__tx">
+      <p class="hero2__kicker"><span>小規模事業者向け Webサイト制作</span><span class="hero2__kicker-sep" aria-hidden="true"></span><span>買い切り 80,000円〜</span></p>
+      <h1><span class="nb">「何を優先するか」から、</span><br><span class="nb">Webサイトを組み立てる。</span></h1>
+      <p class="hero2__lead">誰に、何を、どう伝えるか。36タイプの無料診断で方向を整理してから、必要なページだけを作ります。文章や写真が最初から決まっていなくても始められます。</p>
+      <div class="btn-row hero2__cta">
+        <a class="btn btn--primary btn--lg" href="diagnosis.html">無料診断を始める<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+        <a class="btn btn--line btn--lg" href="plans.html">4つのプランを見る</a>
+      </div>
+      <ul class="hero2__assure">
+        <li><svg class="ico" aria-hidden="true"><use href="#i-shield"></use></svg>氏名・メール登録なし</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-shield"></use></svg>診断だけの利用も可能</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-shield"></use></svg>16問と48問から選択</li>
+      </ul>
     </div>
-    <ul class="hero__assure">
-      <li><svg class="ico" aria-hidden="true"><use href="#i-shield"></use></svg>氏名・メール登録なし</li>
-      <li><svg class="ico" aria-hidden="true"><use href="#i-shield"></use></svg>診断結果だけの利用も可能</li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-shield"></use></svg>16問と48問から選択</li>
-    </ul>
+    <a class="hero2__map" href="types.html" aria-label="36タイプの座標マップを見る">
+      <span class="hero2__map-ax hero2__map-ax--t" aria-hidden="true">先進・新しさ</span>
+      <span class="hero2__grid" aria-hidden="true"><i class="q1" style="--i:0"></i><i class="q1" style="--i:1"></i><i class="q1" style="--i:2"></i><i class="q2" style="--i:3"></i><i class="q2" style="--i:4"></i><i class="q2" style="--i:5"></i><i class="q1" style="--i:6"></i><i class="q1" style="--i:7"></i><i class="q1" style="--i:8"></i><i class="q2" style="--i:9"></i><i class="q2" style="--i:10"></i><i class="q2" style="--i:11"></i><i class="q1" style="--i:12"></i><i class="q1" style="--i:13"></i><i class="q1" style="--i:14"></i><i class="q2" style="--i:15"></i><i class="q2" style="--i:16"></i><i class="q2" style="--i:17"></i><i class="q3" style="--i:18"></i><i class="q3" style="--i:19"></i><i class="q3 on" style="--i:20"></i><i class="q4" style="--i:21"></i><i class="q4" style="--i:22"></i><i class="q4" style="--i:23"></i><i class="q3" style="--i:24"></i><i class="q3" style="--i:25"></i><i class="q3" style="--i:26"></i><i class="q4" style="--i:27"></i><i class="q4" style="--i:28"></i><i class="q4" style="--i:29"></i><i class="q3" style="--i:30"></i><i class="q3" style="--i:31"></i><i class="q3" style="--i:32"></i><i class="q4" style="--i:33"></i><i class="q4" style="--i:34"></i><i class="q4" style="--i:35"></i></span>
+      <span class="hero2__map-ax hero2__map-ax--b" aria-hidden="true">王道・安心</span>
+      <span class="hero2__map-x" aria-hidden="true"><span>実用・情報</span><span>ブランド・魅力</span></span>
+      <span class="hero2__map-cap"><b>CA21</b>親切案内型サイト ― 36タイプの座標のひとつ</span>
+    </a>
   </div>
-
-  <div class="hero__rail">
+  <div class="hero2__strip">
     <div class="wrap">
-      <dl>
-        <div><dt>診断のボリューム</dt>
-          <dd><span class="num num--xl" data-count="16">16</span><span class="num__u">問</span><span class="hero__rail__sup">／</span><span class="num num--xl" data-count="48">48</span><span class="num__u">問</span></dd></div>
-        <div><dt>判定できる方向</dt>
-          <dd><span class="num num--xl" data-count="36">36</span><span class="num__u">タイプ</span><span class="hero__rail__sup">2軸 × 6段階</span></dd></div>
-        <div><dt>制作費</dt>
-          <dd><span class="num num--xl" data-count="80000">80,000</span><span class="num__u">円〜</span><span class="hero__rail__sup">買い切り</span></dd></div>
+      <dl class="stat3">
+        <div><dt>診断の設問</dt><dd><span class="num" data-count="16">16</span><span class="num__u">問</span><span class="stat3__or">または</span><span class="num" data-count="48">48</span><span class="num__u">問</span></dd><p>登録なし・2〜9分</p></div>
+        <div><dt>判定できる方向</dt><dd><span class="num" data-count="36">36</span><span class="num__u">タイプ</span></dd><p>2軸 × 6段階</p></div>
+        <div><dt>制作費</dt><dd><span class="num">80,000</span><span class="num__u">円〜</span></dd><p>買い切り・4つのプラン</p></div>
       </dl>
     </div>
   </div>
@@ -190,16 +189,13 @@
 
 <!-- ============================ 01 Diagnosis ============================ -->
 <section class="sec sec--tint-1" id="diagnosis">
-  <div class="gridlines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <div class="wrap">
     <div class="opener">
       <div class="opener__top">
         <span class="opener__no">01</span>
-        <span class="lbl">Chapter</span>
-        <span class="opener__ja">／36タイプ診断</span>
+        <span class="opener__ja">36タイプ診断</span>
       </div>
       <span class="opener__rule rvl" aria-hidden="true"><i></i></span>
-      <span class="opener__en rvm"><span>Diagnosis</span></span>
       <div class="g6 opener__body">
         <div class="c1-4"><h2 class="sec-title rvm"><span><span class="nb">「好きなデザイン」だけでなく、</span><span class="nb">「Webサイトで何を優先するか」から。</span></span></h2></div>
         <div class="c5-6 rv rv-d1"><p class="sec-lead">マスを選ぶと、そのタイプの名前が出ます。タイプに優劣はありません。</p></div>
@@ -473,16 +469,13 @@
 
 <!-- ============================ 02 Approach ============================ -->
 <section class="sec" id="approach">
-  <div class="gridlines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <div class="wrap">
     <div class="opener">
       <div class="opener__top">
         <span class="opener__no">02</span>
-        <span class="lbl">Chapter</span>
-        <span class="opener__ja">／相談から公開後まで</span>
+        <span class="opener__ja">相談から公開後まで</span>
       </div>
       <span class="opener__rule rvl" aria-hidden="true"><i></i></span>
-      <span class="opener__en rvm"><span>Approach</span></span>
       <div class="g6 opener__body">
         <div class="c1-4"><h2 class="sec-title rvm"><span><span class="nb">相談から公開後まで、</span><span class="nb">四つの段階でお手伝いします。</span></span></h2></div>
         <div class="c5-6 rv rv-d1"><p class="sec-lead">番号を選ぶと内容が切り替わります。自動では切り替わりません。</p></div>
@@ -578,16 +571,13 @@
 
 <!-- ============================= 03 Report ============================= -->
 <section class="sec sec--ink" id="report">
-  <div class="arch" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <div class="wrap">
     <div class="opener">
       <div class="opener__top">
         <span class="opener__no">03</span>
-        <span class="lbl">Chapter</span>
-        <span class="opener__ja">／診断結果でわかること</span>
+        <span class="opener__ja">診断結果でわかること</span>
       </div>
       <span class="opener__rule rvl" aria-hidden="true"><i></i></span>
-      <span class="opener__en rvm"><span>Report</span></span>
       <div class="g6 opener__body">
         <div class="c1-4"><h2 class="sec-title rvm"><span>結果は、タイプ名だけで終わりません。</span></h2></div>
         <div class="c5-6 rv rv-d1"><p class="sec-lead">相談するときは、そのまま共通言語として使えます。</p></div>
@@ -639,16 +629,13 @@
 
 <!-- ============================== 04 Plans ============================== -->
 <section class="sec sec--tint-4" id="plans">
-  <div class="gridlines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <div class="wrap">
     <div class="opener">
       <div class="opener__top">
         <span class="opener__no">04</span>
-        <span class="lbl">Chapter</span>
-        <span class="opener__ja">／4つの制作プラン</span>
+        <span class="opener__ja">4つの制作プラン</span>
       </div>
       <span class="opener__rule rvl" aria-hidden="true"><i></i></span>
-      <span class="opener__en rvm"><span>Plans</span></span>
       <div class="g6 opener__body">
         <div class="c1-4"><h2 class="sec-title rvm"><span>今の状況に近い進め方を選んでください。</span></h2></div>
       <div class="c5-6 rv rv-d1"><p class="sec-lead">ページ数と、文章・画像をどこまで用意できるかで比べられます。全項目の比較は料金ページにあります。</p></div>
@@ -737,16 +724,13 @@
 
 <!-- ============================= 05 Process ============================= -->
 <section class="sec sec--tint-3" id="process">
-  <div class="gridlines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <div class="wrap">
     <div class="opener">
       <div class="opener__top">
         <span class="opener__no">05</span>
-        <span class="lbl">Chapter</span>
-        <span class="opener__ja">／制作の流れと公開後</span>
+        <span class="opener__ja">制作の流れと公開後</span>
       </div>
       <span class="opener__rule rvl" aria-hidden="true"><i></i></span>
-      <span class="opener__en rvm"><span>Process</span></span>
       <div class="g6 opener__body">
         <div class="c1-4"><h2 class="sec-title rvm"><span><span class="nb">相談から公開までの要点を、</span><span class="nb">四つにまとめました。</span></span></h2></div>
         <div class="c5-6 rv rv-d1"><p class="sec-lead">フォーム送信だけでは契約になりません。範囲、料金、納期、修正回数を確認してから制作を始めます。</p></div>
@@ -783,16 +767,13 @@
 <div class="pband pband--md" aria-hidden="true"><img width="1800" height="375" src="assets/img/band-shop-morning.webp" alt="" decoding="async" fetchpriority="low" srcset="assets/img/band-shop-morning-900.webp 900w, assets/img/band-shop-morning-1440.webp 1440w, assets/img/band-shop-morning.webp 1800w" sizes="100vw"></div>
 <!-- =========================== 06 Perspective =========================== -->
 <section class="sec sec--ink" id="perspective">
-  <div class="arch" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <div class="wrap">
     <div class="opener">
       <div class="opener__top">
         <span class="opener__no">06</span>
-        <span class="lbl">Chapter</span>
-        <span class="opener__ja">／Webサイトの役割</span>
+        <span class="opener__ja">Webサイトの役割</span>
       </div>
       <span class="opener__rule rvl" aria-hidden="true"><i></i></span>
-      <span class="opener__en rvm"><span>Perspective</span></span>
       <div class="g6 opener__body">
         <div class="c1-4"><h2 class="sec-title rvm"><span><span class="nb">SNSだけでは伝えきれない全体像を、</span><span class="nb">いつでも確認できる場所へ。</span></span></h2></div>
         <div class="c5-6 rv rv-d1"><p class="sec-lead">公開しただけで問い合わせや検索順位が上がるものではありません。成果を保証するのではなく、その土台を作ります。</p></div>
@@ -815,16 +796,13 @@
 
 <!-- ============================= 07 Guides ============================= -->
 <section class="sec sec--tint-2" id="guides">
-  <div class="gridlines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <div class="wrap">
     <div class="opener">
       <div class="opener__top">
         <span class="opener__no">07</span>
-        <span class="lbl">Chapter</span>
-        <span class="opener__ja">／Webサイトづくりガイド</span>
+        <span class="opener__ja">Webサイトづくりガイド</span>
       </div>
       <span class="opener__rule rvl" aria-hidden="true"><i></i></span>
-      <span class="opener__en rvm"><span>Guides</span></span>
       <div class="g6 opener__body">
         <div class="c1-4"><h2 class="sec-title rvm"><span>決める前に読める形で、整理しています。</span></h2></div>
         <div class="c5-6 rv rv-d1"><p class="sec-lead">制作会社へ相談する前にも読めます。</p></div>
@@ -849,11 +827,10 @@
   <img src="assets/img/band-opening.webp" width="1800" height="375" alt="" decoding="async" fetchpriority="low" srcset="assets/img/band-opening-900.webp 900w, assets/img/band-opening-1440.webp 1440w, assets/img/band-opening.webp 1800w" sizes="100vw">
 </div>
 <section class="sec sec--ink stmt" id="about-statement">
-  <div class="arch" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <div class="wrap">
     <div class="g6">
       <div class="c1-3 rv">
-        <div class="opener__top"><span class="lbl">About</span><span class="opener__ja">／クルーアセントについて</span></div>
+        <div class="opener__top"><span class="lbl">About</span><span class="opener__ja">クルーアセントについて</span></div>
         <span class="opener__rule rvl" aria-hidden="true"><i></i></span>
         <h2><span class="nb">決める前に、</span><span class="nb">整理するところから。</span></h2>
       <p class="stmt__body">最初から完成イメージを求められるのではなく、診断とヒアリングでWebサイトの優先順位を言葉にし、必要なページを決めてから制作へ進みます。料金と対応範囲を先に見せて、比べてから選べる状態を大切にします。</p>
@@ -925,17 +902,6 @@
     </div>
   </div>
 </footer>
-
-
-<nav class="chapidx" aria-label="章の索引">
-  <a href="#diagnosis"><i aria-hidden="true"></i><span>01 DIAGNOSIS</span></a>
-  <a href="#approach"><i aria-hidden="true"></i><span>02 APPROACH</span></a>
-  <a href="#report"><i aria-hidden="true"></i><span>03 REPORT</span></a>
-  <a href="#plans"><i aria-hidden="true"></i><span>04 PLANS</span></a>
-  <a href="#process"><i aria-hidden="true"></i><span>05 PROCESS</span></a>
-  <a href="#perspective"><i aria-hidden="true"></i><span>06 PERSPECTIVE</span></a>
-  <a href="#guides"><i aria-hidden="true"></i><span>07 GUIDES</span></a>
-</nav>
 
 <div class="mcta" aria-label="主要な導線">
   <a class="btn btn--primary" href="diagnosis.html">無料診断を始める</a>

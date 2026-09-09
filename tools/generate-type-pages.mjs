@@ -262,7 +262,6 @@ function page(t) {
 
   const closing = `
   <section class="sec sec--ink">
-    <div class="arch" aria-hidden="true">${'<i></i>'.repeat(36)}</div>
     <div class="wrap">
       <div class="closing">
         <h2>このタイプかどうかは、16問で確かめられます。</h2>
@@ -289,7 +288,6 @@ function page(t) {
     `<li><a href="index.html">ホーム</a></li><li><a href="diagnosis.html">診断</a></li>` +
     `<li><a href="types.html">36タイプ</a></li><li aria-current="page">${esc(t.id)}</li></ol></div></nav>\n` +
     `  <main id="main">\n\n  <section class="ah ah--type ah--${ac}">\n` +
-    `      <div class="wrap ah__enwrap"><span class="ah__en rvm"><span>${esc(t.id)}</span></span></div>\n` +
     `      <div class="wrap ah__inner"><div class="ah__main">` +
     `<p class="eyebrow">Web診断36 ／ ${esc(AREA[ac])}</p>` +
     `<h1>${esc(t.name)}</h1><p class="ah__lead">${esc(t.oneLiner)}</p>` +
@@ -359,12 +357,11 @@ function hub() {
     `<nav class="breadcrumb" aria-label="パンくず"><div class="wrap"><ol><li><a href="index.html">ホーム</a></li>` +
     `<li><a href="diagnosis.html">診断</a></li><li aria-current="page">36タイプ一覧</li></ol></div></nav>\n` +
     `  <main id="main">\n\n  <section class="ah ah--editorial">\n` +
-    `      <div class="wrap ah__enwrap"><span class="ah__en rvm"><span>36 Types</span></span></div>\n` +
     `      <div class="wrap ah__inner"><div class="ah__main"><p class="eyebrow">Web診断36</p>` +
     `<h1>36タイプ一覧</h1><p class="ah__lead">二つの軸を6段階に分けるので、6×6＝36通りになります。優劣はありません。` +
     `どれも「今どちらを先にするか」の置き方の違いです。</p>` +
     `<p class="ah__meta">全36タイプ ／ 4つの領域</p></div></div>\n    </section>\n` + finder + body +
-    `\n  <section class="sec sec--ink">\n    <div class="arch" aria-hidden="true">${'<i></i>'.repeat(36)}</div>\n` +
+    `\n  <section class="sec sec--ink">\n` +
     `    <div class="wrap"><div class="closing"><h2>自分がどこに入るかは、16問で分かります。</h2>` +
     `<p class="lead">2〜3分です。登録もログインも必要ありません。</p>` +
     `<div class="cta-row"><a class="btn btn--primary" href="diagnosis.html">無料診断を始める</a>` +
