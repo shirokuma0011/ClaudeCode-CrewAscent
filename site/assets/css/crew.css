@@ -578,3 +578,119 @@ html.motion .btn--primary:hover .ico { transform:translateX(3px); }
 .occ-nav__all { margin: 0; }
 @media (min-width:760px) { .occ-nav__all { display: none; } }
 @media (max-width:759px) { body[data-page="industries"] .idx-head p { display:none; } body[data-page="industries"] .sec:has(.occ-fold) { padding-block: var(--s5); } }
+
+/* ============================== 13. 第3版: 「マス」を署名にする ============================== */
+/* 章番号・目次・読み取りの印を、マップの選択マス（墨の四角）と同じ形にそろえる */
+.opener__no, .idx-head__no {
+  width: 28px; height: 28px; border: 0; border-radius: 6px; background: var(--ink); color: #fff;
+  font-size: .75rem; font-weight: 700; letter-spacing: .02em;
+}
+.sec--ink .opener__no, .sec--ink .idx-head__no, .band--ink .idx-head__no { background: #fff; color: var(--ink); border: 0; }
+.opener__rule { display: none; }
+.opener__top { padding-bottom: 0; }
+.opener__body { margin-top: 12px; }
+.idx-head { display: flex; align-items: flex-start; gap: 12px; }
+.idx-head > div { border-top: 0; padding-top: 0; margin-top: 0; min-width: 0; }
+.idx-head__no { flex: none; margin-top: .3em; }
+.idx-head h2 { margin: 0 0 6px; }
+.idx-head p { margin: 0; }
+.sec--ink .idx-head > div, .band--ink .idx-head > div { border-top: 0; }
+html.motion .rvsec .idx-head > div::before { display: none; }
+.fig figcaption b { display: none; }
+
+/* ヒーローの地図は本物（選べる・矢印キーで動く）。読み取りはカードの足元に一行 */
+.hero2__map--live { display: grid; gap: 10px; text-decoration: none; cursor: default; }
+.hero2__map--live:hover { transform: none; box-shadow: var(--sh-card); }
+.hero2__map-h { margin: 0; font-size: .75rem; font-weight: 700; letter-spacing: .04em; color: var(--tx-3); }
+.hero2 .tmap__frame { max-width: none; gap: 6px; }
+.hero2 .tmap__ax { font-family: var(--font); font-size: .75rem; letter-spacing: .04em; color: var(--tx-3); }
+.hero2 .tmap__grid { gap: 3px; }
+.hero2 .tmap__c { border-radius: 4px; border: 0; box-shadow: none; }
+.hero2 .tmap__c.q1 { background: color-mix(in srgb, var(--q1) 30%, #fff); }
+.hero2 .tmap__c.q2 { background: color-mix(in srgb, var(--q2) 30%, #fff); }
+.hero2 .tmap__c.q3 { background: color-mix(in srgb, var(--q3) 30%, #fff); }
+.hero2 .tmap__c.q4 { background: color-mix(in srgb, var(--q4) 32%, #fff); }
+.hero2 .tmap__c:hover { filter: none; background: var(--ink-3); }
+.hero2 .tmap__c[aria-pressed="true"] { background: var(--ink); box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--ink); transform: none; }
+.hero2 .tmap__c[aria-pressed="true"]::after { display: none; }
+.hero2 .tmap__c:focus-visible { outline: 3px solid var(--focus); outline-offset: 1px; }
+html.motion .hero2 .tmap__c { opacity: 0; transform: scale(.6); animation: cellIn 520ms var(--ease-o) forwards; animation-delay: calc(var(--i) * 18ms + 120ms); }
+html:not(.motion) .hero2 .tmap__c { opacity: 1; transform: none; }
+.hero2__read { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 0; padding-top: 10px; border-top: 1px solid var(--rule-soft); font-size: .8125rem; color: var(--tx-2); }
+.hero2__read b { font-family: var(--mono); font-size: .75rem; color: #fff; background: var(--ink); padding: 3px 7px; border-radius: 6px; letter-spacing: .04em; }
+.hero2__read-nm { font-weight: 700; color: var(--ink); }
+.hero2__read-ar { color: var(--tx-3); }
+.hero2__read .alink { font-size: .8125rem; margin-left: auto; }
+
+/* 四つの視点: 試し診断の横に縦2列 */
+.quad--v { grid-template-columns: 1fr 1fr; }
+.diag-foot { margin: var(--s4) 0 0; }
+.mini__foot { padding: 10px var(--s4); font-size: .75rem; }
+
+/* 診断の見出し帯も明るい紙に（濃色は締めとフッターだけ） */
+.ah--product, .ah--ink { background: var(--paper-2); color: var(--tx-2); border-bottom-color: var(--rule-soft); }
+.ah--product h1, .ah--product .ah__brand { color: var(--ink); }
+.ah--product .ah__h1sub { color: var(--tx-2); }
+.ah--product .ah__lead { color: var(--tx-2); }
+.ah--product .ah__facts { background: #fff; border-color: var(--rule-soft); box-shadow: var(--sh-card); }
+.ah--product .ah__facts > div { border-bottom-color: var(--rule-fine); }
+.ah--product .ah__facts dt { color: var(--tx-3); }
+.ah--product .ah__facts dd, .ah--product .num, .ah--product .ah__coords dd, .ah--product .tread__bd dd { color: var(--ink); }
+.ah--product .num__u, .ah--product .num__unit { color: var(--tx-2); }
+.ah--product .ah__facts p, .ah--product .ah__peek { color: var(--tx-3); border-top-color: var(--rule-soft); }
+.ah--product .eyebrow, .eyebrow--on-ink { color: var(--act-dark); }
+.ah--product .eyebrow::before { background: var(--act); }
+.ah--product .ah__lead a, .ah--product a:not(.btn) { color: var(--act-dark); }
+
+/* 結果カード・約束の一覧を明るい面で */
+.rp { background: #fff; border-color: var(--rule-soft); }
+.rp__hd { border-bottom: 1px solid var(--rule-fine); }
+.rp__id { color: #fff; background: var(--ink); }
+.rp__tag { border-color: var(--rule); color: var(--tx-2); }
+.rp h3, .rp h4 { color: var(--tx-3); border-bottom-color: var(--rule-fine); }
+.rp p, .rp li { color: var(--tx-2); }
+.rp ol b, .rp li b { color: var(--ink); }
+.rp__ft { color: var(--tx-3); }
+.pledge li { border-top-color: var(--rule-soft); border-bottom-color: var(--rule-soft); }
+.pledge li:first-child { border-top-color: var(--rule-soft); }
+.pledge b { color: var(--ink); }
+.pledge p { color: var(--tx-2); }
+.pledge__mk--do { color: var(--act); }
+.pledge__mk--dont { color: var(--tx-3); }
+.stmt h2 { color: var(--ink); }
+.stmt__body { color: var(--tx-2); }
+.stmt .lbl { color: var(--tx-3); }
+.stmt .btn--onink { background: var(--act); color: #fff; border-color: var(--act); }
+.stmt .btn--onink:hover { background: var(--act-dark); border-color: var(--act-dark); }
+.stmt .btn--ghost { color: var(--ink); border-color: var(--ink); background: transparent; }
+.stmt .btn--ghost:hover { background: var(--ink); color: #fff; }
+
+/* 締めの帯: 36の点の署名 */
+.cta-band { position: relative; overflow: hidden; }
+.cta-band::after {
+  content: ""; position: absolute; right: clamp(-40px, -2vw, 24px); top: 50%; width: 168px; height: 168px; transform: translateY(-50%);
+  background-image: radial-gradient(circle, rgba(11,18,32,.16) 4px, transparent 4.5px); background-size: 28px 28px; background-position: 14px 14px;
+  pointer-events: none;
+}
+@media (max-width: 899px) { .cta-band::after { display: none; } }
+.ftr__brand { position: relative; }
+/* 診断・仕組みページの見出し帯の右側（軸・問数）を白いカードに */
+.ah__coords { border: 1px solid var(--rule-soft); border-block-start-width: 1px; border-radius: var(--r-lg); background: #fff; box-shadow: var(--sh-card); overflow: hidden; }
+.ah__coords > div { padding: 14px var(--s5); border-block-end: 1px solid var(--rule-fine); grid-template-columns: 5.5em 1fr; }
+.ah__coords > div:last-child { border-block-end: 0; }
+.ah__coords dt { font-family: var(--font); font-size: .75rem; letter-spacing: .06em; color: var(--tx-3); }
+.ah__coords dd { color: var(--ink); font-weight: 700; }
+.ah__coords .num { font-size: 1.375rem; }
+/* 工程の番号は本文書体・墨。英字の段階名は小さく */
+.timeline > li::before, .timeline--wide > li::before { font-family: var(--font); font-size: 1.5rem; font-weight: 700; color: var(--ink); letter-spacing: -.02em; line-height: 1; padding-top: 2px; }
+@media (min-width:900px) { .timeline--wide > li::before { font-size: 1.75rem; } }
+.tl-phase__no { font-family: var(--font); font-size: .8125rem; letter-spacing: .04em; color: var(--tx-3); }
+.tl-phase { border-radius: var(--r); border-top: 0; }
+/* 差し色は青1つ。濃色帯の緑の罫と印も青に */
+.sec--ink .step, .sec--ink .dg-step, .sec--ink [class*="__c"][style*="teal"] { border-top-color: var(--act-on-ink); }
+.sec--ink .dg-assure__item .ico { color: var(--act-on-ink); }
+.dg-assure__item .ico { color: var(--act); }
+.timeline > li:last-child::before { color: var(--ink); }
+.pair__col, .cycle__step, .timeaxis__step { border-top: 2px solid var(--rule); }
+.sec--ink .pair__col, .sec--ink .cycle__step, .sec--ink .timeaxis__step { border-top-color: rgba(255,255,255,.35); }
+.dgm__hd b, .dgm__hd { font-family: var(--font); letter-spacing: .02em; }
