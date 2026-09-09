@@ -1,0 +1,1614 @@
+@charset "utf-8";
+/* =====================================================================
+   system.css — 全ページで使う章の語彙
+
+   base.css  … トークン、素地、文字、版面、ボタン、ヘッダー、フッター
+   system.css… 章の面、章の入口、図版、写真の帯、一覧、表、注記   ← このファイル
+   top.css   … index.html だけの部品
+   styles.css… 旧システム。下層ページの移行が終わったら削除する
+
+   置く基準: 2ページ以上で使う、または今後使う見込みがあるもの。
+   ===================================================================== */
+
+@charset "utf-8";
+.quad { display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--rule); border:1px solid var(--rule); }
+.quad__c { background:var(--paper); padding:var(--s4); }
+.quad__c b { display:flex; align-items:center; gap:8px; font-size:.875rem; margin-bottom:4px; }
+.quad__c b::before { content:""; width:9px; height:9px; flex:none; }
+.quad__c:nth-child(1) b::before { background:var(--q1); }
+.quad__c:nth-child(2) b::before { background:var(--q2); }
+.quad__c:nth-child(3) b::before { background:var(--q3); }
+.quad__c:nth-child(4) b::before { background:var(--q4); }
+.quad__c p { margin:0; font-size:var(--fs-xxs); line-height:1.7; color:var(--tx-3); }
+.quad--mt { margin-top:var(--s5); }
+@keyframes pIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
+.dl-inline { display:flex; flex-wrap:wrap; gap:var(--s3) var(--s6); margin:var(--s5) 0; padding-top:var(--s4); border-top:1px solid var(--rule); }
+.dl-inline > div { display:grid; gap:3px; }
+.dl-inline dt { margin:0; font-family:var(--mono); font-size:var(--fs-xxs); color:var(--tx-3); letter-spacing:.1em; }
+.dl-inline dd { margin:0; font-size:.9375rem; font-weight:700; color:var(--ink); }
+/* 図版は「囲った絵」ではなく製図の版面として扱う。下辺に表題欄を置く。 */
+.fig { margin:0; border:1px solid var(--rule); background:var(--paper); }
+.fig img { width:100%; display:block; }
+.fig figcaption { display:flex; align-items:center; gap:var(--s4); padding:11px var(--s4);
+  border-top:1px solid var(--rule); background:var(--paper-2);
+  font-size:var(--fs-xxs); line-height:1.6; color:var(--tx-3); }
+.fig figcaption b { font-family:var(--mono); font-size:var(--fs-xxs); font-weight:700; letter-spacing:.16em;
+  color:var(--ink); flex:none; }
+
+/* ====================== 11. Report ====================== */
+.rp { border:1px solid var(--rule); background:var(--paper); }
+.rp__hd { display:flex; align-items:center; flex-wrap:wrap; gap:var(--s3) var(--s4); padding:var(--s4) var(--s5);
+  border-bottom:1px solid var(--rule); background:var(--paper-2); }
+.rp__id { display:inline-flex; align-items:center; gap:7px; font-family:var(--mono); font-size:.875rem; font-weight:700;
+  letter-spacing:.05em; color:var(--ink); border:1px solid var(--rule); background:var(--paper); padding:4px 10px; }
+.rp__id i { width:8px; height:8px; border-radius:50%; background:var(--q3); flex:none; }
+.rp__nm { margin:0; font-size:1.0625rem; font-weight:700; color:var(--ink); }
+.rp__tag { font-size:var(--fs-xxs); font-weight:700; color:var(--tx-2); border:1px solid var(--rule); padding:4px 10px; background:var(--paper); }
+.rp__bd { display:grid; gap:var(--s5); padding:var(--s5); }
+@media (min-width:820px) { .rp__bd { grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--s7); padding:var(--s7) var(--s6); } }
+.rp h4, .rp h3 { font-family:var(--mono); font-size:var(--fs-xxs); font-weight:700; letter-spacing:.12em; color:var(--tx-3);
+  margin:0 0 12px; padding-bottom:8px; border-bottom:1px solid var(--rule-soft); }
+.rp p { font-size:var(--fs-sm); line-height:1.85; margin:0; }
+.ranks { list-style:none; margin:0; padding:0; counter-reset:r; display:grid; gap:7px; }
+.ranks li { margin:0; counter-increment:r; display:grid; grid-template-columns:20px 1fr; gap:9px; align-items:baseline;
+  font-size:var(--fs-sm); color:var(--ink); font-weight:600; }
+.ranks li::before { content:counter(r,decimal-leading-zero); font-family:var(--mono); font-size: .8125rem; font-weight:700; color:var(--act); }
+.pagemap { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:5px; align-items:center; }
+.pagemap li { margin:0; display:flex; align-items:center; gap:5px; }
+.pagemap li:not(:last-child)::after { content:"›"; color:var(--tx-3); font-size:.8125rem; }
+.pagemap span { font-size:var(--fs-xxs); font-weight:700; color:var(--ink); border:1px solid var(--rule); padding:4px 9px; background:var(--paper); }
+.pagemap li:first-child span { border-color:var(--act); color:var(--act-dark); background:var(--act-tint); }
+.rp__ft { padding:var(--s3) var(--s5); border-top:1px solid var(--rule-soft); background:var(--paper-2);
+  font-size:var(--fs-xxs); line-height:1.8; color:var(--tx-3); margin:0; }
+
+/* ====================== 12. Plans ====================== */
+.pcards { display:grid; gap:1px; background:var(--rule); border:1px solid var(--rule); }
+@media (min-width:620px)  { .pcards { grid-template-columns:repeat(2,1fr); } }
+@media (min-width:1000px) { .pcards { grid-template-columns:repeat(4,1fr); } }
+.pcard { background:var(--paper); padding:var(--s6) var(--s5) var(--s7); display:grid; align-content:start; transition:background var(--dur) var(--ease); }
+.pcard:hover { background:var(--act-tint); }
+.pcard__bar { height:4px; width:36px; margin-bottom:var(--s4); }
+/* プランの識別は「範囲が広がる」ことを濃さの進行で示す。
+   4領域色は診断の意味を持つ場所だけに残す。 */
+.pcard:nth-child(1) .pcard__bar { background:#AEBBCB; }
+.pcard:nth-child(2) .pcard__bar { background:#7889A1; height:5px; }
+.pcard:nth-child(3) .pcard__bar { background:#42516A; height:6px; }
+.pcard:nth-child(4) .pcard__bar { background:var(--ink); height:7px; }
+.pcard h3 { font-size:1.0625rem; margin:0 0 5px; }
+.pcard__who { font-size:var(--fs-xxs); color:var(--tx-3); margin:0 0 var(--s5); line-height:1.65; min-height:3.3em; }
+.pcard__pr { font-family:var(--mono); font-size:clamp(2rem, 3.2vw, 3rem); font-weight:700; color:var(--ink);
+  letter-spacing:-.05em; line-height:.95; margin:0 0 var(--s5); }
+.pcard__pr span { font-size:max(.8125rem, .3em); font-weight:700; margin-left:5px; letter-spacing:0; }
+.pcard__cap { display:block; font-family:var(--mono); font-size:var(--fs-xxs); font-weight:700; letter-spacing:.18em;
+  color:var(--tx-3); margin-bottom:10px; padding-bottom:8px; border-bottom:1px solid var(--rule-soft); }
+.pcard ul { list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+.pcard li { margin:0; font-size:var(--fs-xs); color:var(--tx-2); display:grid; grid-template-columns:15px 1fr; gap:8px; align-items:start; line-height:1.6; }
+.pcard li .mk { width:15px; height:15px; margin-top:2px; }
+.mk--y { color:var(--ok); }
+.mk--n { color:var(--tx-3); }
+.callout { display:flex; gap:var(--s4); margin-top:var(--s5); padding:var(--s4) var(--s5); background:var(--act-tint); border-left:3px solid var(--act); }
+.callout .ico { width:19px; height:19px; flex:none; color:var(--act-dark); margin-top:3px; }
+.callout b { display:block; margin-bottom:3px; }
+.callout p { margin:0; font-size:var(--fs-sm); line-height:1.8; }
+.todo { display:inline-block; font-size:var(--fs-xxs); font-weight:700; color:#7A5300; background:#FDF3DF; border:1px dashed #E0BC72; padding:1px 8px; }
+
+/* ====================== 13. Process ====================== */
+.flow { list-style:none; margin:0; padding:0; display:grid; gap:1px; background:var(--rule-soft); border:1px solid var(--rule-soft); }
+@media (min-width:560px) { .flow { grid-template-columns:repeat(2,1fr); } }
+@media (min-width:820px) { .flow { grid-template-columns:repeat(3,1fr); } }
+.flow li { margin:0; background:var(--paper); padding:var(--s5) var(--s4) var(--s6); display:grid; gap:10px; align-content:start; }
+/* 工程番号は情報なので、装飾の淡さではなく大きな文字の下限（3:1）を満たす色にする */
+.flow__no { font-family:var(--mono); font-size:clamp(1.5rem, 2vw, 1.875rem); font-weight:700;
+  letter-spacing:-.04em; line-height:1; color:#7889A1; transition:color var(--dur) var(--ease); }
+.flow li:hover .flow__no { color:var(--tx-2); }
+.flow b { font-size:.9375rem; color:var(--ink); line-height:1.45; }
+.flow li.is-pay { background:var(--act-tint); }
+.flow li.is-pay .flow__no { color:var(--act); }
+.flow__tag { font-family:var(--mono); font-size: .8125rem; font-weight:700; letter-spacing:.1em; color:#fff;
+  background:var(--act); padding:3px 7px; width:fit-content; }
+.mgmt { display:grid; gap:var(--s5); align-items:center; margin-top:var(--s7); padding-top:var(--s6); border-top:1px solid var(--rule); }
+@media (min-width:900px) { .mgmt { grid-template-columns:minmax(0,1fr) 320px; gap:var(--s8); } }
+.pricepair { display:flex; flex-wrap:wrap; align-items:baseline; gap:var(--s2) var(--s5); margin:var(--s4) 0; }
+.pricepair__or { font-size:var(--fs-sm); color:var(--tx-3); }
+
+/* ====================== 14. Perspective（全幅・大組み） ====================== */
+.roles { display:grid; gap:1px; background:var(--rule-ink); border-top:1px solid var(--rule-ink); border-bottom:1px solid var(--rule-ink); }
+@media (min-width:820px) { .roles { grid-template-columns:repeat(3,1fr); } }
+.roles__c { background:var(--ink); padding:var(--s6) var(--s5) var(--s7); }
+.roles__no { display:block; margin-bottom:var(--s4); font-family:var(--mono);
+  font-size:clamp(1.5rem, 2vw, 1.875rem); font-weight:700; letter-spacing:-.04em; line-height:1;
+  color:rgba(255,255,255,.5); }
+.roles__c h3 { font-size:1.125rem; margin:0 0 11px; color:#fff; }
+.roles__c p { margin:0; font-size:var(--fs-sm); line-height:1.85; color:var(--tx-on-ink-2); }
+
+/* ====================== 15. Guides ====================== */
+.glist { list-style:none; margin:0; padding:0; border-top:1px solid var(--rule); }
+.glist li { margin:0; border-bottom:1px solid var(--rule-soft); }
+.glist a { display:grid; grid-template-columns:3em minmax(0,1fr) 1.2em; gap:var(--s4); align-items:center; padding:var(--s5) 0;
+  text-decoration:none; color:var(--ink); transition:color var(--dur) var(--ease); }
+/* ホバーで padding を変えるとレイアウトが走る。スクロール中はポインタが止まったまま
+   行が下を通るのでホバーが連続発火し、そのたびに版面を測り直していた。色だけ変える。 */
+.glist a:hover { color:var(--act-dark); }
+.glist__no { font-family:var(--mono); font-size:var(--fs-xxs); font-weight:700; letter-spacing:.1em; color:var(--tx-3); }
+.glist__tx { display:grid; gap:4px; }
+.glist__ttl { font-size:1.0625rem; font-weight:700; line-height:1.55; }
+.glist__desc { font-size:var(--fs-xs); color:var(--tx-3); line-height:1.65; }
+.glist .ico { width:1em; height:1em; color:var(--tx-3); transition:transform var(--dur) var(--ease); }
+.glist a:hover .ico { transform:translateX(5px); color:var(--act); }
+
+/* ====================== 16. Statement ====================== */
+.band-photo { position:relative; height:clamp(130px, 17vw, 230px); overflow:hidden; background:var(--ink); }
+/* 大きな写真の上に「半透明の画像」と「半透明のグラデ」が二枚重なっていた。
+   画像に opacity を掛けると、その大きさぶんの透明レイヤを作って合成し直すことになり、
+   そこへさらにグラデを重ねるため、1コマ 33ms（＝毎秒30コマ）まで落ちていた。
+   濃色の帯と写真だけで加速が強かったのはこれが理由。
+   地色はどれも #0B1220 なので、二枚は一枚にまとめられる。
+   合成後の不透明度 a = a1 + a2 - a1*a2（見え方は数式上まったく同じ）。 */
+.band-photo img { width:100%; height:100%; object-fit:cover; object-position:60% 46%; opacity:1; }
+.band-photo::after { content:""; position:absolute; inset:0;
+  background:linear-gradient(180deg,rgba(11,18,32,.829) 0%,rgba(11,18,32,.676) 36%,var(--ink) 100%); }
+.stmt h2 { font-size:clamp(1.75rem, 3.6vw, 3.25rem); line-height:1.34; margin-bottom:var(--s5); letter-spacing:-.03em; }
+.stmt__body { font-size:var(--fs-lead); line-height:2; color:var(--tx-on-ink-2); max-width:30em; }
+.pledge { list-style:none; margin:0; padding:0; }
+.pledge li { margin:0; display:grid; grid-template-columns:24px minmax(0,1fr); gap:var(--s4); padding:var(--s4) 0; border-bottom:1px solid var(--rule-ink); }
+.pledge li:first-child { border-top:1px solid var(--rule-ink); }
+.pledge__mk { width:21px; height:21px; border-radius:50%; flex:none; margin-top:3px; display:grid; place-items:center; border:1px solid var(--rule-ink); }
+.pledge__mk::before,.pledge__mk::after { content:""; grid-area:1/1; background:currentColor; }
+.pledge__mk::before { width:9px; height:1.5px; }
+.pledge__mk::after { width:0; height:0; }
+.pledge__mk--do { color:var(--act-on-ink); }
+.pledge__mk--do::after { width:1.5px; height:9px; }
+.pledge__mk--dont { color:#93A4BA; }
+.pledge b { display:block; color:#fff; font-size:.9375rem; margin-bottom:3px; }
+.pledge p { margin:0; font-size:var(--fs-xs); line-height:1.75; color:var(--tx-on-ink-2); }
+
+/* ====================== 19. Report を濃色面へ（計器盤としての読み） ====================== */
+.sec--ink .rp { border-color:var(--rule-ink); background:transparent; }
+.sec--ink .rp__hd { border-bottom-color:var(--rule-ink); background:rgba(255,255,255,.04); }
+.sec--ink .rp__id { color:#fff; border-color:var(--rule-ink); background:transparent; }
+.sec--ink .rp__nm { color:#fff; }
+.sec--ink .rp__tag { color:var(--tx-on-ink-2); border-color:var(--rule-ink); background:transparent; }
+.sec--ink .rp h4, .rp h3 { color:rgba(255,255,255,.55); border-bottom-color:var(--rule-ink); }
+.sec--ink .rp p { color:var(--tx-on-ink-2); }
+.sec--ink .ranks li { color:#fff; }
+.sec--ink .ranks li::before { color:var(--act-on-ink); }
+.sec--ink .pagemap span { color:#fff; border-color:var(--rule-ink); background:transparent; }
+.sec--ink .pagemap li:first-child span { border-color:var(--act-on-ink); color:var(--act-on-ink); background:rgba(127,178,255,.1); }
+.sec--ink .pagemap li:not(:last-child)::after { color:rgba(255,255,255,.4); }
+.sec--ink .rp__ft { border-top-color:var(--rule-ink); background:rgba(255,255,255,.03); color:rgba(255,255,255,.6); }
+
+/* 小見出しの語彙をページ全体でそろえる */
+.mlbl { display:block; font-family:var(--mono); font-size:var(--fs-xxs); font-weight:700; letter-spacing:.18em;
+  color:var(--tx-3); margin:0 0 10px; padding-bottom:8px; border-bottom:1px solid var(--rule-soft); }
+.sec--ink .mlbl { color:rgba(255,255,255,.55); border-bottom-color:var(--rule-ink); }
+
+/* 濃色面での枠線ボタン（暗地に暗文字で消えるのを防ぐ） */
+.sec--ink .btn--line { color:#fff; border-color:rgba(255,255,255,.45); background:transparent; }
+.sec--ink .btn--line:hover { background:rgba(255,255,255,.1); border-color:#fff; color:#fff; }
+.sec--ink .callout { background:rgba(127,178,255,.09); border-left-color:var(--act-on-ink); }
+.sec--ink .callout .ico { color:var(--act-on-ink); }
+.sec--ink .callout b { color:#fff; }
+.sec--ink .callout p,.sec--ink .note { color:var(--tx-on-ink-2); }
+
+/* 四つの視点は全幅の帯に出す */
+.quad--4 { grid-template-columns:repeat(2,1fr); }
+@media (min-width:820px) { .quad--4 { grid-template-columns:repeat(4,1fr); } }
+.diag-foot { display:grid; gap:var(--s4); margin-top:var(--s5); align-items:center; }
+@media (min-width:900px) { .diag-foot { grid-template-columns:minmax(0,1fr) auto; gap:var(--s7); } }
+.diag-foot .note { margin:0; }
+/* ====================== 19. Report を濃色面へ（計器盤としての読み） ====================== */
+.sec--ink .rp { border-color:var(--rule-ink); background:transparent; }
+.sec--ink .rp__hd { border-bottom-color:var(--rule-ink); background:rgba(255,255,255,.04); }
+.sec--ink .rp__id { color:#fff; border-color:var(--rule-ink); background:transparent; }
+.sec--ink .rp__nm { color:#fff; }
+.sec--ink .rp__tag { color:var(--tx-on-ink-2); border-color:var(--rule-ink); background:transparent; }
+.sec--ink .rp h4, .rp h3 { color:rgba(255,255,255,.55); border-bottom-color:var(--rule-ink); }
+.sec--ink .rp p { color:var(--tx-on-ink-2); }
+.sec--ink .ranks li { color:#fff; }
+.sec--ink .ranks li::before { color:var(--act-on-ink); }
+.sec--ink .pagemap span { color:#fff; border-color:var(--rule-ink); background:transparent; }
+.sec--ink .pagemap li:first-child span { border-color:var(--act-on-ink); color:var(--act-on-ink); background:rgba(127,178,255,.1); }
+.sec--ink .pagemap li:not(:last-child)::after { color:rgba(255,255,255,.4); }
+.sec--ink .rp__ft { border-top-color:var(--rule-ink); background:rgba(255,255,255,.03); color:rgba(255,255,255,.6); }
+
+/* 小見出しの語彙をページ全体でそろえる */
+.mlbl { display:block; font-family:var(--mono); font-size:var(--fs-xxs); font-weight:700; letter-spacing:.18em;
+  color:var(--tx-3); margin:0 0 10px; padding-bottom:8px; border-bottom:1px solid var(--rule-soft); }
+.sec--ink .mlbl { color:rgba(255,255,255,.55); border-bottom-color:var(--rule-ink); }
+
+/* 濃色面での枠線ボタン（暗地に暗文字で消えるのを防ぐ） */
+.sec--ink .btn--line { color:#fff; border-color:rgba(255,255,255,.45); background:transparent; }
+.sec--ink .btn--line:hover { background:rgba(255,255,255,.1); border-color:#fff; color:#fff; }
+.sec--ink .callout { background:rgba(127,178,255,.09); border-left-color:var(--act-on-ink); }
+.sec--ink .callout .ico { color:var(--act-on-ink); }
+.sec--ink .callout b { color:#fff; }
+.sec--ink .callout p,.sec--ink .note { color:var(--tx-on-ink-2); }
+
+/* 四つの視点は全幅の帯に出す */
+.quad--4 { grid-template-columns:repeat(2,1fr); }
+@media (min-width:820px) { .quad--4 { grid-template-columns:repeat(4,1fr); } }
+.diag-foot { display:grid; gap:var(--s4); margin-top:var(--s5); align-items:center; }
+@media (min-width:900px) { .diag-foot { grid-template-columns:minmax(0,1fr) auto; gap:var(--s7); } }
+.diag-foot .note { margin:0; }
+
+/* 工程の説明文（注記ではないので枠も地色も付けない） */
+.flow__d { margin:0; font-size:var(--fs-xs); line-height:1.8; color:var(--tx-3); }
+.flow li.is-pay .flow__d { color:var(--tx-2); }
+
+/* ================= 写真の帯（章と章のあいだに敷く） =================
+   骨格を壊さないよう、カードの中ではなく全幅の帯としてだけ使う。 */
+.pband { position:relative; overflow:hidden; background:var(--paper-3); }
+.pband img { width:100%; height:100%; object-fit:cover; display:block; }
+.pband--sm { height:clamp(150px, 19vw, 260px); }
+.pband--md { height:clamp(200px, 26vw, 360px); }
+.pband--ink { background:var(--ink); }
+.pband--ink img { opacity:1; }
+.pband--ink::after { content:""; position:absolute; inset:0;
+  background:linear-gradient(180deg, var(--ink) 0%, rgba(11,18,32,.473) 42%, var(--ink) 100%); }
+
+/* 帯の上に短い一行を置ける（任意） */
+.pband__cap { position:absolute; left:0; right:0; bottom:0; z-index:2; }
+.pband__cap .wrap { padding-block:var(--s4); }
+.pband__cap span { display:inline-block; font-family:var(--mono); font-size:var(--fs-xxs);
+  font-weight:700; letter-spacing:.16em; color:#fff; background:rgba(11,18,32,.72);
+  padding:6px 12px; }
+
+/* 章の中で使う写真（図版枠と同じ扱い） */
+.fig--photo img { border:0; }
+.fig--photo { border:1px solid var(--rule); }
+.sec--ink .fig--photo { border-color:var(--rule-ink); }
+.sec--ink .fig figcaption { border-top-color:var(--rule-ink); background:rgba(255,255,255,.04); color:var(--tx-on-ink-2); }
+.sec--ink .fig figcaption b { color:#fff; }
+
+/* 小規模事業者の実体（Perspective の役割カードに敷く） */
+.roles__c { position:relative; overflow:hidden; }
+.roles__ph { position:absolute; inset:0; z-index:0; }
+.roles__ph img { width:100%; height:100%; object-fit:cover; opacity:1; }
+.roles__ph::after { content:""; position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(11,18,32,.91) 0%, var(--ink) 78%); }
+.roles__c > *:not(.roles__ph) { position:relative; z-index:1; }
+.pcards--mt { margin-top: var(--s6); }
+.quad__c:nth-child(1) b::before { background: var(--q1); }
+.quad__c:nth-child(2) b::before { background: var(--q2); }
+.quad__c:nth-child(3) b::before { background: var(--q3); }
+.quad__c:nth-child(4) b::before { background: var(--q4); }
+
+/* 濃色面に置いた図版の表題欄（白地のまま淡色文字になっていたのを修正） */
+.sec--ink .fig { background: transparent; border-color: var(--rule-ink); }
+.sec--ink .fig figcaption { background: rgba(255,255,255,.06); border-top-color: var(--rule-ink); color: #C6D3E4; }
+.sec--ink .fig figcaption b { color: #fff; }
+
+/* ==================== 章ごとの面の色 ====================
+   白・淡いグレー・濃紺の3面しかなかったので、四領域色の淡い面を足す。
+   スクロールするだけで色が移り変わる。 */
+.sec--tint-1 { background: color-mix(in srgb, var(--q1) 7%, #fff); }
+.sec--tint-2 { background: color-mix(in srgb, var(--q2) 7%, #fff); }
+.sec--tint-3 { background: color-mix(in srgb, var(--q3) 7%, #fff); }
+.sec--tint-4 { background: color-mix(in srgb, var(--q4) 8%, #fff); }
+.sec--tint-1 .gridlines i, .sec--tint-2 .gridlines i,
+.sec--tint-3 .gridlines i, .sec--tint-4 .gridlines i { border-color: rgba(17,28,43,.055); }
+.sec--tint-3 .flow { background: color-mix(in srgb, var(--q3) 14%, #fff); border-color: color-mix(in srgb, var(--q3) 14%, #fff); }
+.sec--tint-4 .pcards { background: color-mix(in srgb, var(--q4) 16%, #fff); border-color: color-mix(in srgb, var(--q4) 16%, #fff); }
+
+/* ==================== ガイドのサムネイル ==================== */
+.glist a { grid-template-columns: 112px 2.6em minmax(0,1fr) 1.2em; }
+@media (max-width:640px) { .glist a { grid-template-columns: 76px minmax(0,1fr) 1.2em; } }
+.glist__th { display:block; overflow:hidden; border:1px solid var(--rule); background:var(--paper-3); }
+.glist__th img { width:100%; aspect-ratio:4/3; object-fit:cover; display:block;
+  transition:transform var(--dur-2) var(--ease-o); }
+.glist a:hover .glist__th img { transform:scale(1.05); }
+@media (max-width:640px) { .glist__no { display:none; } }
+
+/* 大きすぎる写真図版は帯の比率へ切り出す（縦に伸びて紙面を占有しないように） */
+
+/* 章の面の色をもう一段はっきりさせる */
+.sec--tint-1 { background: color-mix(in srgb, var(--q1) 10%, #fff); }
+.sec--tint-2 { background: color-mix(in srgb, var(--q2) 10%, #fff); }
+.sec--tint-3 { background: color-mix(in srgb, var(--q3) 10%, #fff); }
+.sec--tint-4 { background: color-mix(in srgb, var(--q4) 12%, #fff); }
+
+/* =====================================================================
+   R7 — 面を3つに絞る
+   白・淡グレー・四色の淡面・濃紺・写真帯 と面が5種あり、
+   スクロール中に色が落ち着かなかった。
+   面は「暖かい白 / 砂色 / 濃色」の3つだけにして、
+   色は写真とマップと差し色だけが持つようにする。
+   ===================================================================== */
+.sec--tint-1, .sec--tint-2, .sec--tint-3, .sec--tint-4 { background: var(--paper-2); }
+.sec--tint-3 .flow { background: var(--rule-soft); border-color: var(--rule-soft); }
+.sec--tint-4 .pcards { background: var(--rule-soft); border-color: var(--rule-soft); }
+.sec--tint-1 .gridlines i, .sec--tint-2 .gridlines i,
+.sec--tint-3 .gridlines i, .sec--tint-4 .gridlines i { border-color: rgba(25,27,31,.05); }
+
+/* =====================================================================
+   描画の負荷を下げる（スクロール中に速度が変わって見えていた原因）
+   ・骨格と方眼を DOM の格子から背景グラデーションへ置き換え
+   ・画面外の章は描画自体を止める
+   ・スクロール中に高くつく backdrop-filter をやめる
+   ===================================================================== */
+.gridlines { display: none !important; }
+
+/* 方眼は背景画像で描く（要素を持たない） */
+@media (min-width: 1080px) {
+  .sec > .wrap::before {
+    content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+    background-image: repeating-linear-gradient(to right,
+      var(--rule-fine) 0 1px, transparent 1px calc((100% + var(--gut)) / 6));
+  }
+  /* 濃色の章は .sec--ink::before が全面に方眼を描いている。
+     ここで版面にもう一組の縦罫を重ねると、同じ場所を二度塗ることになる。
+     連続スクロールでは、この二度塗りがそのままフレーム落ちにつながる。 */
+  .sec--ink > .wrap::before { background-image: none; }
+  .sec > .wrap { position: relative; }
+}
+.sec--ink { position: relative; }
+.sec--ink::before { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    repeating-linear-gradient(to right, rgba(255,255,255,.05) 0 1px, transparent 1px 16.666%),
+    repeating-linear-gradient(to bottom, rgba(255,255,255,.05) 0 1px, transparent 1px 16.666%);
+  background-size: 100% 100%; }
+
+/* ヘッダーのぼかしを外し、単色にする */
+.hdr.is-solid { backdrop-filter: none; -webkit-backdrop-filter: none; background: #FDFCFA; }
+.mcta { backdrop-filter: none; -webkit-backdrop-filter: none; background: #FDFCFA; }
+
+/* =====================================================================
+   スクロール連動の出現アニメーションを廃止
+   要素が下から浮き上がる動きが、ページ本体と違う速度で動くものとして見え、
+   「スクロール速度が変わる」感覚を作っていた。
+   読み込み時のヒーローの演出だけ残し、本文は動かさない。
+   ===================================================================== */
+.rv, .rv.is-in { opacity: 1 !important; transform: none !important; transition: none !important; }
+.rvm { overflow: visible; padding-bottom: 0; margin-bottom: 0; }
+.rvm > *, .rvm.is-in > * { transform: none !important; transition: none !important; }
+.rvl > i, .rvl.is-in > i { transform: none !important; transition: none !important; }
+/* 画像は表示比率に切り出し済み。
+   aspect-ratio: auto にすると width/height 属性からの比率が効かなくなり、
+   読み込まれるまで高さ 0 になる。読み込みのたびにページが伸び、
+   スクロール位置が飛ぶ原因になっていた。
+   属性の比率をそのまま使い、高さを最初から確保する。 */
+.fig--photo img { object-fit: fill; height: auto; width: 100%; }
+/* 画像ごとの比率を明示する（attr() はまだ使えないため）。
+   ここを書き忘れると読み込み前の高さが 0 になり、ページが伸びる。 */
+.fig--photo img[src$="ph-four-views.webp"]   { aspect-ratio: 1600 / 686; }
+.fig--photo img[src$="ph-color-in-dark.webp"]{ aspect-ratio: 1600 / 686; }
+.fig--photo img[src$="ph-four-areas.webp"]   { aspect-ratio: 1448 / 620; }
+.fig--photo img[src$="ph-drawing-grid.webp"] { aspect-ratio: 1100 / 471; }
+.fig--photo img[src$="ph-appr-02.webp"]      { aspect-ratio: 1100 / 471; }
+.fig--photo img[src$="ph-appr-03.webp"]      { aspect-ratio: 1100 / 471; }
+.fig--photo img[src$="ph-appr-04.webp"]      { aspect-ratio: 1100 / 471; }
+/* 帯・サムネイル・カード背景も同様に高さを先に確保する */
+.pband img { width: 100%; height: 100%; object-fit: cover; }
+.roles__ph img { width: 100%; height: 100%; object-fit: cover; }
+
+/* =====================================================================
+   スクロールが加速して見える問題の根本原因への対策
+   （描画性能ではなく、版面の構造の問題）
+
+   実測: 全幅の写真と濃色面のところで、見出し・本文・罫・キャプションが
+   1つも画面に無い区間が 565〜626px（画面の63〜70%）続いていた。
+   動きを判断する基準が視界から消えるため、速度が同じでも速く見える。
+   Chrome / Safari / Edge のすべてで同じように起きるのはこのため。
+
+   対策: 目印の無い区間を画面の45%以下に抑える。
+   写真は残す。高さだけを詰め、キャプションと本文が必ず同時に見えるようにする。
+   ===================================================================== */
+
+/* 図版の写真: 画面の4割まで。切り抜きは中央基準 */
+.fig--photo img {
+  max-height: min(40vh, 360px);
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 章と章のあいだの写真帯も同様に詰める */
+.pband--sm { height: clamp(120px, 13vw, 180px); }
+.pband--md { height: clamp(150px, 17vw, 240px); }
+.band-photo { height: clamp(110px, 13vw, 170px); }
+
+/* キャプションは図版の一部として必ず写真に密着させる（目印を切らさない） */
+.fig--photo figcaption { position: relative; z-index: 1; }
+
+/* 写真帯の前後は、章の余白がそのまま「目印の無い区間」に足し算される。
+   実測では 帯240px に対し 前94px + 後77px が付き、合計411pxになっていた。
+   帯に接する側だけ余白を詰める（他の章の呼吸は変えない）。 */
+.pband + .sec { padding-block-start: clamp(28px, 2.6vw, 44px); }
+.sec:has(+ .pband) { padding-block-end: clamp(28px, 2.6vw, 44px); }
+.pband + .sec--ink > .wrap > .opener { margin-bottom: clamp(20px, 2.2vw, 34px); }
+
+/* 濃色面に置かれた本文の既定色。
+   下層ページを .sec--ink へ移した際、淡色面用の色が残ると読めなくなる。 */
+.sec--ink .lead, .sec--ink p, .sec--ink li, .sec--ink dd { color: var(--tx-on-ink-2); }
+.sec--ink .caption, .sec--ink .hint, .sec--ink .note { color: #9FB0C6; }
+.sec--ink dt { color: #9FB0C6; }
+.sec--ink strong, .sec--ink b { color: #fff; }
+.sec--ink a:not(.btn) { color: var(--act-on-ink); }
+.sec--ink a:not(.btn):hover { color: #fff; }
+
+/* ---------------------------------------------------------------
+   濃色面の中に置かれた「白いカード」
+   .sec--ink の子孫でも、白地のカードの中は淡色面と同じ扱いに戻す。
+   これをしないと、白地に白文字が出る。
+   --------------------------------------------------------------- */
+.sec--ink .on-paper,
+.sec--ink .mode-card,
+.sec--ink .card,
+.sec--ink .panel {
+  color: var(--tx-2);
+}
+.sec--ink .on-paper h1, .sec--ink .on-paper h2, .sec--ink .on-paper h3, .sec--ink .on-paper h4,
+.sec--ink .mode-card h1, .sec--ink .mode-card h2, .sec--ink .mode-card h3, .sec--ink .mode-card h4,
+.sec--ink .on-paper .num, .sec--ink .mode-card .num,
+.sec--ink .on-paper b, .sec--ink .on-paper strong,
+.sec--ink .mode-card b, .sec--ink .mode-card strong { color: var(--ink); }
+.sec--ink .on-paper p, .sec--ink .on-paper li, .sec--ink .on-paper dd,
+.sec--ink .mode-card p, .sec--ink .mode-card li, .sec--ink .mode-card dd { color: var(--tx-2); }
+.sec--ink .on-paper .num__unit, .sec--ink .mode-card .num__unit,
+.sec--ink .on-paper dt, .sec--ink .mode-card dt,
+.sec--ink .on-paper .caption, .sec--ink .mode-card .caption { color: var(--tx-3); }
+.sec--ink .on-paper a:not(.btn), .sec--ink .mode-card a:not(.btn) { color: var(--act-dark); }
+
+/* 濃色面に残った四領域色は、濃い地では沈む。明るい側の値へ置き換える。 */
+.sec--ink .n, .sec--ink .num--accent { color: var(--act-on-ink); }
+.sec--ink .on-paper .n, .sec--ink .mode-card .n { color: var(--q3); }
+
+/* 濃色面の小さな見出し・番号 */
+.sec--ink .step__no, .sec--ink .timeline__no, .sec--ink .spec-card__no { color: #9FB0C6; }
+.sec--ink .step__pay, .sec--ink .timeline__pay,
+.sec--ink .tag, .sec--ink .badge { color: #fff; background: var(--act); }
+
+
+/* ---------------------------------------------------------------
+   .container は旧システムの版面。JavaScript が生成する箇所にも残るため、
+   クラス名は変えず、.wrap と同じ寸法に合わせる。
+   これで HTML と JS のどちらから来ても同じ版面に乗る。
+   --------------------------------------------------------------- */
+.container {
+  width: 100%; max-width: var(--w-page); margin-inline: auto; padding-inline: var(--pad-x);
+}
+.container--read { max-width: var(--w-read); }
+.container--quiz { max-width: var(--w-quiz, 900px); }
+.wrap--mid { max-width: 1080px; }
+
+/* =====================================================================
+   下層ページの第一画面を index.html の密度へそろえる（UI/UX 改修）
+
+   実測（1440×900・改修前）:
+     index.html    h1 が y=220 に出て、900pxまでに
+                   見出し・リード・CTA2つ・保証3件・指標3件が入る
+     services.html h1 が y=416。英字見出しと日本語見出しの間に約160pxの空白。
+                   900pxまでに入るのは見出しとリードと要点表だけで、CTAが無い。
+
+   空白の原因は .ah__inner の align-items:end。
+   左桁（見出し）が右桁（要点表）の高さに合わせて下端へ押し下げられていた。
+   ===================================================================== */
+
+/* 1. 下端揃えをやめ、英字見出しと日本語見出しを地続きにする */
+.ah__inner,
+.ah--decision .ah__inner,
+.ah--product .ah__inner,
+.ah--editorial .ah__inner { align-items: start; }
+@media (min-width: 900px) {
+  /* 要点表は eyebrow の帯と同じ高さから始める */
+  .ah__aside { padding-block-start: .2em; }
+}
+
+/* 2. 章の英字と見出しの間を詰める（別々の塊に見えないように） */
+.ah__enwrap { margin-block-end: 0; }
+.ah__en { margin-block-end: clamp(8px, 1vw, 14px); }
+.ah__main > .eyebrow:first-child { margin-block-start: 0; }
+
+/* 3. 第一画面に必ず次の一手を置く（index と同じ主CTA＋副CTA＋保証） */
+.ah__cta { display: flex; flex-wrap: wrap; gap: var(--s3) var(--s4); margin-block-start: var(--s5); }
+.ah__cta .btn { min-height: 48px; }
+.ah__assure {
+  display: flex; flex-wrap: wrap; gap: 6px var(--s5);
+  margin: var(--s4) 0 0; padding: 0; list-style: none;
+  font-size: var(--fs-xs); color: var(--tx-3);
+}
+.ah__assure li { margin: 0; display: flex; align-items: center; gap: 7px; }
+.ah__assure .ico { width: 15px; height: 15px; flex: none; color: var(--ok); }
+.ah--product .ah__assure { color: var(--tx-on-ink-2); }
+.ah--product .ah__assure .ico { color: var(--act-on-ink); }
+
+/* =====================================================================
+   タップ領域を 44px 以上にする（スマホ）
+   実測で 40px 未満の操作要素が index で25件、法務ページで10〜15件あった。
+   本文中のインラインリンクは行間を壊すので対象外。
+   単独で置かれる操作要素（矢印リンク、目次、ロゴ）だけを広げる。
+   ===================================================================== */
+@media (max-width: 899px) {
+  .link-arrow,
+  .alink,
+  .legal__toc a,
+  .rs-toc a,
+  .toc a,
+  .article__related a,
+  .breadcrumb a,
+  .brand {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  /* 目次のように縦に並ぶものは、行そのものを押し広げる */
+  .legal__toc a, .rs-toc a, .toc a { width: 100%; padding-block: 6px; }
+  /* パンくずは文字が短い（「診断」で22px）。
+     左右に余白を足し、同じ幅の負のマージンで見た目の位置は動かさない。 */
+  .breadcrumb a { padding-inline: 11px; margin-inline: -11px; }
+  .breadcrumb li:not(:last-child) a { margin-inline-end: -1px; }
+}
+
+/* =====================================================================
+   ロゴ: 採用された正式マークを使う
+
+   これまでは 20〜48px での可読性を優先し、上昇矢印と三点経路を省いた
+   簡略SVGを表示していた（base.css の .lg-* ）。
+   正式マークではその二つがブランドの意味そのものなので、正本の絵を使う。
+
+   背景画像にしている理由:
+     ・明るい地と濃い地で絵柄そのものが違う（濃い地では A が白の輪郭）。
+       <img> を2枚置くと両方を読み込むが、背景画像なら
+       実際に適用された方だけを取得する。
+     ・名前は <a class="brand" aria-label="..."> が持っているので、
+       絵は装飾として扱ってよい。
+   ===================================================================== */
+.brand__mark {
+  /* 正式マークは上昇矢印と三点経路を含むので、簡略版より大きさが要る。
+     44px幅では暗色地で白抜きのAの線が潰れたため、ヘッダーの高さ(64〜80px)に
+     対して素直な比率まで上げた。 */
+  width: 54px; height: 42px; flex: none;
+  background: center / contain no-repeat;
+  background-image: url("../brand/logo.png");
+}
+@media (min-width: 768px)  { .brand__mark { width: 60px; height: 46px; } }
+@media (min-width: 1180px) { .brand__mark { width: 66px; height: 51px; } }
+
+/* 濃い地の上（TOPのヒーロー上のヘッダー・フッター）は白抜き版 */
+.hdr:not(.is-solid):not(.is-panel-open) .brand__mark,
+.ftr .brand__mark { background-image: url("../brand/logo-onink.png"); }
+.ftr .brand__mark { width: 66px; height: 51px; }
+
+/* 高精細ディスプレイでは2倍の絵を使う（WebP対応環境のみ） */
+@supports (background-image: image-set(url("../brand/logo.webp") 1x)) {
+  .brand__mark {
+    background-image: image-set(url("../brand/logo.webp") 1x, url("../brand/logo@2x.webp") 2x);
+  }
+  .hdr:not(.is-solid):not(.is-panel-open) .brand__mark,
+  .ftr .brand__mark {
+    background-image: image-set(url("../brand/logo-onink.webp") 1x, url("../brand/logo-onink@2x.webp") 2x);
+  }
+}
+
+/* =====================================================================
+   図解コンポーネント（記事の説明を絵で支える）
+
+   なぜ SVG の一枚絵にしないか:
+     横長のSVGはスマホで縮むと文字が読めなくなる。
+     箱と文字でできた説明図は HTML で組めば折り返しが効き、
+     文字は選択・検索・翻訳・読み上げの対象のままになる。
+     「絵でないと伝わらないもの」（画面の見本など）だけ中に SVG を置く。
+
+   3つの型で6枚の図をまかなう:
+     .dgm--vs      2つを対比する（Before/After、できる/できない）
+     .dgm--matrix  担い手 × 段階 の割り当てを示す
+     .dgm--rank    優先順を段で示す
+   ===================================================================== */
+.dgm {
+  margin: var(--s6) 0;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+}
+.dgm__hd {
+  display: flex; align-items: center; gap: var(--s3);
+  padding: 10px var(--s4);
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper-2);
+  font-family: var(--mono); font-size: var(--fs-xxs); font-weight: 700;
+  letter-spacing: .14em; color: var(--tx-3);
+}
+.dgm__hd b { color: var(--ink); letter-spacing: .16em; }
+.dgm__bd { padding: var(--s5); }
+.dgm figcaption,
+.dgm__ft {
+  padding: 10px var(--s4); border-top: 1px solid var(--rule);
+  background: var(--paper-2);
+  font-size: var(--fs-xxs); line-height: 1.7; color: var(--tx-3);
+}
+
+/* --- 型A: 対比 ------------------------------------------------------ */
+.dgm--vs .dgm__bd { display: grid; gap: var(--s4); }
+@media (min-width: 640px) { .dgm--vs .dgm__bd { grid-template-columns: 1fr 1fr; gap: var(--s5); } }
+.dgm-card { border: 1px solid var(--rule); background: var(--paper); padding: var(--s4); }
+.dgm-card__lbl {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--mono); font-size: var(--fs-xxs); font-weight: 700; letter-spacing: .1em;
+  padding: 3px 9px; margin-bottom: var(--s3); border: 1px solid currentColor;
+}
+.dgm-card--no  { border-color: #E2CFCB; background: #FDF7F6; }
+.dgm-card--no  .dgm-card__lbl { color: #A33A28; }
+.dgm-card--yes { border-color: #C6DFD9; background: #F4FAF8; }
+.dgm-card--yes .dgm-card__lbl { color: var(--q3); }
+.dgm-card p { margin: 0 0 .6em; font-size: var(--fs-sm); line-height: 1.8; }
+.dgm-card p:last-child { margin-bottom: 0; }
+.dgm-card ul { margin: 0; padding-left: 1.15em; font-size: var(--fs-sm); line-height: 1.8; }
+.dgm-card li { margin: .25em 0; }
+
+/* 画面の見本（絵でないと伝わらないのでSVGを使う） */
+.dgm-screen { display: block; width: 100%; height: auto; margin-bottom: var(--s3); border: 1px solid var(--rule); background: #fff; }
+
+/* --- 型B: 担い手 × 段階 --------------------------------------------- */
+.dgm--matrix .dgm__bd { padding: 0; overflow-x: auto; }
+.dgm-mx { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); min-width: 34rem; }
+.dgm-mx th, .dgm-mx td { padding: 12px var(--s4); border-bottom: 1px solid var(--rule-soft); text-align: left; vertical-align: top; }
+.dgm-mx thead th {
+  font-family: var(--mono); font-size: var(--fs-xxs); font-weight: 700; letter-spacing: .12em;
+  color: var(--tx-3); background: var(--paper-2); border-bottom: 1px solid var(--rule);
+}
+.dgm-mx tbody th { width: 9.5em; color: var(--ink); font-weight: 700; }
+.dgm-mx tbody tr:last-child th, .dgm-mx tbody tr:last-child td { border-bottom: 0; }
+.dgm-mx__on  { color: var(--ink); font-weight: 700; }
+.dgm-mx__off { color: var(--tx-3); }
+.dgm-mx__mark { display: inline-block; width: 9px; height: 9px; margin-right: 8px; vertical-align: 1px; }
+.dgm-mx tbody tr:nth-child(1) .dgm-mx__mark { background: var(--q1); }
+.dgm-mx tbody tr:nth-child(2) .dgm-mx__mark { background: var(--q4); }
+.dgm-mx tbody tr:nth-child(3) .dgm-mx__mark { background: var(--q3); }
+
+/* --- 型C: 優先順の段 ------------------------------------------------ */
+.dgm--rank .dgm__bd { padding: 0; }
+.dgm-rank { list-style: none; margin: 0; padding: 0; counter-reset: dr; }
+.dgm-rank > li {
+  counter-increment: dr; margin: 0;
+  display: grid; grid-template-columns: 3.2em minmax(0, 1fr);
+  gap: var(--s4); align-items: start;
+  padding: var(--s4) var(--s5);
+  border-bottom: 1px solid var(--rule-soft);
+}
+.dgm-rank > li:last-child { border-bottom: 0; }
+.dgm-rank > li::before {
+  content: counter(dr, decimal-leading-zero);
+  font-family: var(--mono); font-size: 1.125rem; font-weight: 700;
+  color: var(--act); line-height: 1.25;
+}
+.dgm-rank b { display: block; font-size: .9375rem; color: var(--ink); margin-bottom: 3px; }
+.dgm-rank span { display: block; font-size: var(--fs-xs); color: var(--tx-2); line-height: 1.75; }
+.dgm-rank__bar { grid-column: 2; height: 4px; margin-top: 8px; background: var(--rule-soft); }
+.dgm-rank__bar i { display: block; height: 100%; background: var(--act); }
+
+/* 濃色の面に置いたときの読み替え */
+.sec--ink .dgm, .band--ink .dgm { background: transparent; border-color: var(--rule-ink); }
+.sec--ink .dgm__hd, .band--ink .dgm__hd { background: rgba(255,255,255,.04); border-bottom-color: var(--rule-ink); color: var(--tx-on-ink-2); }
+.sec--ink .dgm__hd b, .band--ink .dgm__hd b { color: #fff; }
+
+/* 図解を入れたことで、記事の本文列が画面幅を超えていた。
+   grid/flex の子は既定で min-width:auto（中身の最小幅より縮まない）なので、
+   表の min-width が本文列をそのまま押し広げていた。
+   本文列を縮められるようにし、はみ出しは図の中の横スクロールで受ける。 */
+.article__body, .article__main, .article__aside { min-width: 0; }
+.dgm, .dgm__bd { min-width: 0; max-width: 100%; }
+@media (max-width: 600px) { .dgm-mx { min-width: 30rem; } }
+
+/* 狭い画面では、表を横スクロールさせず「行ごとのカード」へ積み替える。
+   4列の日本語を360pxに詰めると1列90pxになり読めないため。
+   display を変えると表の意味づけが落ちる環境があるので role を明示している。 */
+@media (max-width: 600px) {
+  .dgm--matrix .dgm__bd { overflow-x: visible; }
+  .dgm-mx { min-width: 0; display: block; }
+  .dgm-mx thead { display: none; }
+  .dgm-mx tbody, .dgm-mx tr, .dgm-mx th, .dgm-mx td { display: block; width: auto; }
+  .dgm-mx tbody tr { border-bottom: 1px solid var(--rule); padding-bottom: 10px; }
+  .dgm-mx tbody tr:last-child { border-bottom: 0; }
+  .dgm-mx tbody th { width: auto; padding: 14px var(--s4) 4px; border-bottom: 0; font-size: 1rem; }
+  .dgm-mx td { padding: 6px var(--s4); border-bottom: 0; }
+  .dgm-mx td::before {
+    content: attr(data-h); display: block;
+    font-family: var(--mono); font-size: var(--fs-xxs); font-weight: 700;
+    letter-spacing: .12em; color: var(--tx-3); margin-bottom: 2px;
+  }
+}
+
+/* --- 型D: 段階の流れ（診断の「答えたあと何が出るか」） ---------------- */
+.dgm--steps .dgm__bd { padding: 0; }
+.dgm-steps { list-style: none; margin: 0; padding: 0; display: grid; }
+@media (min-width: 760px) { .dgm-steps { grid-template-columns: repeat(4, 1fr); } }
+.dgm-steps > li {
+  margin: 0; padding: var(--s4) var(--s5) var(--s5);
+  border-bottom: 1px solid var(--rule-soft);
+}
+.dgm-steps > li:last-child { border-bottom: 0; }
+@media (min-width: 760px) {
+  .dgm-steps > li { border-bottom: 0; border-right: 1px solid var(--rule-soft); }
+  .dgm-steps > li:last-child { border-right: 0; }
+}
+.dgm-steps__no {
+  display: block; font-family: var(--mono); font-size: var(--fs-xxs); font-weight: 700;
+  letter-spacing: .16em; color: var(--act); margin-bottom: 8px;
+}
+.dgm-steps b { display: block; font-size: .9375rem; color: var(--ink); line-height: 1.5; margin-bottom: 6px; }
+.dgm-steps p { margin: 0; font-size: var(--fs-xs); line-height: 1.75; color: var(--tx-2); }
+
+/* 出力の見本として置く 6×6（結果ページと同じ並び） */
+.dgm-mini {
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 2px;
+  width: 100%; max-width: 132px; margin: 0 0 6px;
+}
+.dgm-mini i { display: block; aspect-ratio: 1; border-radius: 1px; }
+.dgm-mini i.q1 { background: var(--q1-bg); }
+.dgm-mini i.q2 { background: var(--q2-bg); }
+.dgm-mini i.q3 { background: var(--q3-bg); }
+.dgm-mini i.q4 { background: var(--q4-bg); }
+.dgm-mini i.on { background: var(--q3); box-shadow: 0 0 0 2px var(--paper), 0 0 0 3px var(--ink); }
+/* 2軸の向きを添える */
+.dgm-axis {
+  display: flex; justify-content: space-between; gap: var(--s3);
+  max-width: 168px; margin: 0 0 10px;
+  font-family: var(--mono); font-size: .8125rem; font-weight: 700; letter-spacing: .04em; color: var(--tx-3);
+}
+/* 縦軸は上下に1行ずつ添える（結果ページの地図と同じ向き） */
+.dgm-axis--y {
+  display: block; max-width: 168px;
+  font-family: var(--mono); font-size: .8125rem; font-weight: 700; letter-spacing: .04em; color: var(--tx-3);
+}
+.dgm-axis--y.is-top { margin: 0 0 4px; }
+.dgm-axis--y.is-bottom { margin: 0 0 6px; }
+
+/* =====================================================================
+   結果が無いときの画面（result.html)
+
+   これまでは白い面に巨大な黒の見出しが3行で折れていた。
+   型B（診断まわり）は「濃色から始まる唯一の型」と決めてあるので、
+   ここも濃色で組み直し、見出しは読める大きさに落とす。
+   ===================================================================== */
+.rs-none { position: relative; overflow: hidden; padding-block: var(--s8) var(--s9); }
+.rs-none__arch {
+  position: absolute; inset: -10% -10% auto -10%; height: 120%;
+  background-image:
+    repeating-linear-gradient(to right,  rgba(255,255,255,.10) 0 1px, transparent 1px 16.666%),
+    repeating-linear-gradient(to bottom, rgba(255,255,255,.10) 0 1px, transparent 1px 16.666%);
+  pointer-events: none;
+}
+.rs-none__inner { position: relative; z-index: 1; max-width: 46rem; }
+.rs-none__en {
+  font-family: var(--mono); font-size: var(--fs-xxs); font-weight: 700;
+  letter-spacing: .18em; color: var(--act-on-ink); margin: 0 0 var(--s4);
+}
+.rs-none__h {
+  color: #fff; font-size: clamp(1.5rem, 4.2vw, 2.25rem); line-height: 1.45;
+  margin: 0 0 var(--s4);
+}
+.rs-none__lead { color: var(--tx-on-ink-2); line-height: 1.78; margin: 0 0 var(--s5); }
+.rs-none__why { list-style: none; margin: 0 0 var(--s6); padding: 0; display: grid; gap: 1px; background: rgba(255,255,255,.16); }
+.rs-none__why li { margin: 0; padding: var(--s4) var(--s5); background: var(--ink); }
+.rs-none__why b { display: block; color: #fff; font-size: .9375rem; line-height: 1.6; margin-bottom: 4px; }
+.rs-none__why p { margin: 0; font-size: var(--fs-xs); line-height: 1.8; color: var(--tx-on-ink-2); }
+@media (min-width: 720px) { .rs-none__why { grid-template-columns: 1fr 1fr; } }
+/* 狭い画面では左右の余白を外し、見出しと文字の左端をそろえる */
+@media (max-width: 719px) { .rs-none__why li { padding-inline: 0; } }
+.rs-none__cta { margin-bottom: var(--s4); }
+.rs-none__note { margin: 0; font-size: var(--fs-xs); color: var(--tx-on-ink-2); }
+
+/* =====================================================================
+   下層の濃色帯にも、6×6の骨格を見えるようにする
+
+   骨格（6×6の細い格子）はこのサイトの署名にあたる形です。
+   ところが濃色帯の格子は rgba(255,255,255,.05) で、
+   トップのヒーロー（.16）に対して5分の1以下しかなく、
+   下層では実質「ただの濃紺の面」になっていました。
+   「トップだけ作り込まれて見える」原因の一つです。
+
+   濃さを上げるだけで、要素も画像も増やしません。
+   本文のコントラストには影響しません（線は本文の背後、文字の下）。
+   ===================================================================== */
+.sec--ink::before {
+  background-image:
+    repeating-linear-gradient(to right,  rgba(255,255,255,.10) 0 1px, transparent 1px 16.666%),
+    repeating-linear-gradient(to bottom, rgba(255,255,255,.10) 0 1px, transparent 1px 16.666%);
+}
+
+/* =====================================================================
+   ガイド一覧に見出し画像を出す
+
+   トップページの同じ3本には見本画像が付いているのに、
+   専門の一覧ページ（guide.html）は文字だけの3行でした。
+   一覧のほうが情報が少ないという逆転を直します。
+   画像はトップと同じ3枚で、追加のダウンロードは発生しません。
+   ===================================================================== */
+/* 狭い画面ではトップページの一覧と同じ扱いにする（画像を出し、番号は省く） */
+.article-list__item a { grid-template-columns: 84px 1fr auto; align-items: start; }
+.article-list__th {
+  display: block; overflow: hidden; border: 1px solid var(--rule); background: var(--paper-3);
+}
+.article-list__th img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+@media (max-width: 759px) { .article-list__no { display: none; } }
+@media (min-width: 760px) {
+  .article-list__item a { grid-template-columns: 190px auto 1fr auto; align-items: center; }
+  .article-list__th img { transition: transform 600ms var(--ease); }
+  .article-list__item a:hover .article-list__th img { transform: scale(1.05); }
+  .article-list__no { align-self: start; }
+}
+
+/* =====================================================================
+   9つの段階を、4つのまとまりに分ける（process.html）
+
+   同じ高さの行が9本続き、どこまでが相談で、どこから制作なのかが
+   スクロールでは分かりませんでした。行を増やさずに、
+   区切りだけを入れて「今どのあたりか」を読めるようにします。
+   番号はCSSカウンタなので、区切りの行では止めます。
+   ===================================================================== */
+.tl-phase {
+  counter-increment: none !important;
+  display: grid !important; grid-template-columns: 1fr auto !important;
+  align-items: baseline; gap: 4px var(--s4) !important;
+  padding: var(--s5) var(--s4) var(--s3) !important;
+  margin-top: var(--s5) !important;
+  background: var(--paper-2); border-top: 2px solid var(--ink) !important;
+}
+.timeline > li.tl-phase::before { content: none; }
+.tl-phase__en {
+  grid-column: 1; font-family: var(--mono); font-size: var(--fs-xxs); font-weight: 700;
+  letter-spacing: .18em; color: var(--act); text-transform: uppercase;
+}
+.tl-phase__no {
+  grid-column: 2; grid-row: 1 / span 2; align-self: center;
+  font-family: var(--mono); font-size: 1.125rem; font-weight: 700; color: var(--tx-3);
+}
+.tl-phase__ja { grid-column: 1; font-size: 1.125rem; line-height: 1.4; color: var(--ink); }
+.tl-phase__note { grid-column: 1; font-size: var(--fs-xs); color: var(--tx-2); }
+@media (min-width: 760px) {
+  .tl-phase { padding-inline: var(--s5) !important; }
+  .tl-phase__note { grid-column: 1; }
+}
+
+/* =====================================================================
+   よくある質問の見出しを、章として読めるようにする（faq.html）
+
+   5つのまとまりがあるのに、その見出しが本文より小さい極細のラベルで、
+   20行の同じ高さの行が延々と続いて見えていました。
+   行の数も内容も変えず、章の入口だけを他のページと同じ言語にします。
+   ===================================================================== */
+.faq-group { margin-bottom: var(--s7); }
+.faq-group__title {
+  display: grid; grid-template-columns: auto 1fr auto; align-items: baseline;
+  gap: var(--s3); margin-bottom: var(--s3); padding-bottom: var(--s3);
+  border-bottom: 2px solid var(--ink);
+}
+.faq-group__no {
+  font-family: var(--mono); font-size: var(--fs-xxs); font-weight: 700;
+  letter-spacing: .12em; color: var(--act);
+}
+.faq-group__ja { font-size: 1.125rem; font-weight: 700; color: var(--ink); letter-spacing: .01em; }
+.faq-group__en {
+  font-family: var(--mono); font-size: var(--fs-xxs); font-weight: 700;
+  letter-spacing: .14em; color: var(--tx-3); text-transform: uppercase;
+}
+@media (max-width: 520px) { .faq-group__en { display: none; } }
+/* 右側の目次の見出しは、章ではないので元の細いラベルのまま */
+nav .faq-group__title { display: block; border-bottom: 1px solid var(--rule-soft); font-size: var(--fs-xxs); }
+
+/* =====================================================================
+   「動きを減らす」設定を、取りこぼしなく効かせる
+
+   OS側で「視差効果を減らす／動きを減らす」を選んでいる人には、
+   このサイトの動きを全て止めます。これまでは出現アニメーションだけを
+   止めており、ヘッダーの切り替え、開閉の矢印、画像の拡大など
+   95か所の transition が残っていました（実測）。
+   一つ一つが小さくても、動きに弱い人には合算で負担になります。
+   ===================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    transition-delay: 0s !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =====================================================================
+   モーション復活（2026-08-19）— 詳細は MOTION_PLAN_2026-08-19.md
+
+   守る2行:
+     ・本文・写真・見出しは最初から最後まで見えている。動くのは「印」だけ
+     ・スクロールは縦。だから動きはすべて横（左→右）。縦には動かさない
+
+   なぜこの2行かというと、「加速して見える」の実測原因が
+     (1) 目印の無い区間が画面の58〜61%続く
+     (2) 要素がページ本体と違う速度で縦に動く
+   の2つだったからです。内容を隠す出現アニメは(1)を作り、
+   translateY の出現は(2)そのものでした。
+   横方向の動きだけなら、縦のスクロールと競合しようがありません。
+
+   使う性質は opacity / transform(scaleX・translateX) / clip-path のみ。
+   filter・box-shadow・width・top は使いません（再描画が重いため）。
+   ===================================================================== */
+
+/* --- 停止指定の解除 ---------------------------------------------------
+   base.css と system.css で全部止めていたものを、ここで選び直します。
+   .rv（本文ブロックの出現）は戻しません。大きな内容を隠すと、
+   スクロール中の目印が消えるためです。動かすのは罫と英字だけ。 */
+html.motion .rvm { overflow: visible; padding-bottom: 0; margin-bottom: 0; }
+
+html.motion .rvl { display: block; height: 1px; overflow: visible; }
+html.motion .rvl > i {
+  display: block; height: 1px; background: currentColor;
+  transform: scaleX(0) !important; transform-origin: left center;
+  transition: transform 760ms var(--ease-o) !important;
+}
+html.motion .rvl.is-in > i { transform: scaleX(1) !important; }
+
+html.motion .rvm > * {
+  display: block;
+  opacity: 0 !important; transform: translateX(-14px) !important;
+  transition: opacity 520ms var(--ease-o), transform 620ms var(--ease-o) !important;
+}
+html.motion .rvm.is-in > * { opacity: 1 !important; transform: none !important; }
+
+/* 章の入口では、罫が引かれてから英字が現れる */
+html.motion .opener .rvm > * { transition-delay: 220ms, 220ms; }
+
+/* --- 安全装置1: 速く送っている間は動かさない -------------------------
+   top.js が実測の速度で html.is-fast を付けます（1400px/秒より速いとき）。
+   勢いよくスクロールしている間は補間を切るだけにします。
+   値そのものは動かしません（動かすと、まだ発火していない要素が
+   「見えている状態から隠れる方向へ」逆再生されてしまうため）。
+   結果として、速く送っている間は罫も英字も瞬時に出ます。 */
+html.motion.is-fast .rvl > i,
+html.motion.is-fast .rvm > * { transition: none !important; }
+
+/* --- 安全装置2: 動きを減らす設定 / スイッチOFF ------------------------
+   html.motion が付いていないときは、この節のCSSが1つも効きません。
+   （main.js が付ける。?motion=off と site-config.js の motion:'off' で外れる） */
+@media (prefers-reduced-motion: reduce) {
+  html.motion .rvl > i { transform: scaleX(1) !important; transition: none !important; }
+  html.motion .rvm > * { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+
+/* --- M1: ヒーロー（読み込み時に1回だけ） -----------------------------
+   すでに動いているもの: 写真のズーム（1.06→1.00、1,800ms）と
+   十字の罫（620ms / 800ms 遅れで伸びる）。
+   足すもの: 6×6の骨格が左から現れ、最後に1マスが点く。
+
+   骨格は背景グラデーションで描いています（要素を持たないため軽い）。
+   これを clip-path で左から開きます。スクロール前に終わる演出です。
+   点灯するマスだけは位置が要るので、36個の空要素で桝目を作ります
+   （背景も罫も持たないので、描画の対象になるのは点灯する1マスだけ）。 */
+html.motion .hero .hero__arch {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 1000ms var(--ease-o) 140ms;
+}
+html.motion .hero.is-in .hero__arch { clip-path: inset(0 0 0 0); }
+/* 演出が終わったら clip-path を外す。付けたままだと、スクロールのたびに
+   ヒーロー全面の切り抜き計算が走り、実測で p95 が 16.8ms → 33.3ms へ落ちた。
+   終了は top.js が .arch-done を付けて知らせる。 */
+html.motion .hero .hero__arch.arch-done { clip-path: none; transition: none; }
+
+/* 点灯する1マスは、桝目を組まずに座標で置く（36個の箱を作らない）。
+   index.html の <i class="on"> は22番目 = 上から4行目・左から4列目。 */
+html.motion .hero .hero__arch i { display: none; }
+html.motion .hero .hero__arch i.on {
+  display: block; position: absolute;
+  left: 50%; top: 50%; width: 16.666%; height: 16.666%;
+  background: var(--q3); opacity: 0;
+  transition: opacity 700ms var(--ease-o) 1250ms;
+}
+html.motion .hero.is-in .hero__arch i.on { opacity: .30; }
+
+@media (prefers-reduced-motion: reduce) {
+  html.motion .hero .hero__arch { clip-path: none !important; transition: none !important; }
+  html.motion .hero .hero__arch i.on { opacity: .30 !important; transition: none !important; }
+}
+
+/* --- M3: 操作したときの動き -------------------------------------------
+   触った場所だけが動きます。スクロールとは無関係なので、
+   速度の見え方には影響しません。 */
+
+/* よくある質問の開閉。高さは瞬時（高さを動かすと再計算が走るため）、
+   中身だけが左から入る。 */
+@keyframes ca-open { from { opacity: 0; transform: translateX(-8px); } to { opacity: 1; transform: none; } }
+html.motion .faq-item[open] .faq-body { animation: ca-open 240ms var(--ease-o) both; }
+
+/* 診断の設問ページ送り。6問がまとめて入れ替わるので、
+   入れ替わったことが分かるように短く重ねる。 */
+html.motion #dg-qlist.is-turning { animation: ca-open 260ms var(--ease-o) both; }
+
+/* --- M4: 図の中で完結する動き -----------------------------------------
+   面積が小さく、外に影響しません。 */
+
+/* 結果ページ: 36マスの中の「あなた」の位置を1回だけ知らせる */
+@keyframes ca-ring {
+  0%   { box-shadow: 0 0 0 0 rgba(4,106,112,.55); }
+  70%  { box-shadow: 0 0 0 12px rgba(4,106,112,0); }
+  100% { box-shadow: 0 0 0 0 rgba(4,106,112,0); }
+}
+html.motion .map-cell.is-current { animation: ca-ring 1100ms var(--ease-o) 500ms 1 both; }
+
+/* 診断ページ FIG.01 の36マス: 画面に入ったら左上から順に点く */
+html.motion .dgm-mini i { opacity: 0; transition: opacity 260ms var(--ease-o); }
+html.motion .dgm-mini.is-in i { opacity: 1; }
+html.motion .dgm-mini.is-in i:nth-child(6n+1) { transition-delay: 0ms; }
+html.motion .dgm-mini.is-in i:nth-child(6n+2) { transition-delay: 40ms; }
+html.motion .dgm-mini.is-in i:nth-child(6n+3) { transition-delay: 80ms; }
+html.motion .dgm-mini.is-in i:nth-child(6n+4) { transition-delay: 120ms; }
+html.motion .dgm-mini.is-in i:nth-child(6n+5) { transition-delay: 160ms; }
+html.motion .dgm-mini.is-in i:nth-child(6n)   { transition-delay: 200ms; }
+html.motion.is-fast .dgm-mini i { transition: none !important; opacity: 1 !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  html.motion .faq-item[open] .faq-body,
+  html.motion #dg-qlist.is-turning,
+  html.motion .map-cell.is-current { animation: none !important; }
+  html.motion .dgm-mini i { opacity: 1 !important; transition: none !important; }
+}
+
+/* =====================================================================
+   小さすぎる文字を、スマホでだけ持ち上げる（2026-08-19）
+
+   実測: 390px幅で 11px の文章が index に8か所、plans に1か所ありました。
+   `--fs-xxs`(11px) は英字ラベル用の大きさで、
+   日本語の文章に使うと読めません（ラベルはそのまま）。
+   ===================================================================== */
+@media (max-width: 700px) {
+  .quad__c p,
+  .pcard__who,
+  .mini__foot,
+  .tread__ft,
+  .ah__facts p { font-size: .8125rem; }   /* 11px → 12.5px */
+}
+
+/* 診断中は、下の締めの帯を隠す（回答の下に別の導線を置かない） */
+body[data-diagnosing="true"] .dg-closing { display: none; }
+
+/* --- 404: 主な行き先 ---------------------------------------------------
+   「見つかりません」だけで終わると、そこで離脱します。
+   探していたものに近いページへ、1タップで移れるようにします。 */
+.nf-links { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; background: var(--rule-soft); }
+@media (min-width: 720px) { .nf-links { grid-template-columns: 1fr 1fr; } }
+.nf-links li { margin: 0; background: var(--paper); }
+.nf-links a {
+  display: block; padding: var(--s4) var(--s5); min-height: 44px;
+  text-decoration: none; color: inherit;
+}
+.nf-links b { display: block; font-size: .9375rem; color: var(--ink); margin-bottom: 2px; }
+.nf-links span { display: block; font-size: var(--fs-xs); line-height: 1.7; color: var(--tx-2); }
+html.motion .nf-links a { transition: background 180ms var(--ease-o); }
+.nf-links a:hover { background: var(--paper-2); }
+.nf-links a:hover b { color: var(--act-dark); text-decoration: underline; }
+
+/* --- 404 の見出しが大きすぎた ----------------------------------------
+   実測で 1280px 幅のとき 72px、「見つかりませ／んでした。」と語の途中で
+   3行に折れていました。型F（法務・404）は「最もコンパクト、H1=30px」と
+   決めてあるので、そこへ戻します。英字の 404 を主役にし、日本語は説明に。 */
+body[data-page="404"] h1 {
+  font-size: clamp(1.375rem, 3.2vw, 1.75rem); line-height: 1.65; margin-top: var(--s3);
+}
+body[data-page="404"] .ah__en > span { font-size: clamp(3rem, 9vw, 5rem); }
+
+/* --- 結果ページの節にも、章の罫を引く -------------------------------
+   結果ページはJSで組み立てるため、サイト共通の「罫が左から伸びる」が
+   1本も無い状態でした（実測 罫0・英字0）。
+   節の見出しの上にある1pxの罫を、同じ動きで引きます。 */
+html.motion .rvsec .idx-head > div { position: relative; border-top-color: transparent; }
+html.motion .rvsec .idx-head > div::before {
+  content: ""; position: absolute; top: -1px; left: 0; right: 0; height: 1px;
+  background: var(--ink); transform: scaleX(0); transform-origin: left center;
+  transition: transform 760ms var(--ease-o);
+}
+html.motion .rvsec.is-in .idx-head > div::before { transform: scaleX(1); }
+html.motion.is-fast .rvsec .idx-head > div::before { transition: none; }
+@media (prefers-reduced-motion: reduce) {
+  html.motion .rvsec .idx-head > div { border-top-color: var(--ink); }
+  html.motion .rvsec .idx-head > div::before { display: none; }
+}
+
+/* --- M3 追加: 開くもの・押すもの -------------------------------------
+   メニューやドロワーが「瞬間的に出現」していたのを、
+   ひと呼吸だけ添えます。押した手ごたえも同じ考えで最小限に。 */
+@keyframes ca-panel { from { opacity: 0; transform: translateX(-6px); } to { opacity: 1; transform: none; } }
+html.motion .mega:not([hidden]),
+html.motion .drawer:not([hidden]),
+html.motion #mobile-menu:not([hidden]) { animation: ca-panel 200ms var(--ease-o) both; }
+
+/* 押した瞬間に少し沈む。位置は動かさない（拡大縮小だけ） */
+html.motion .btn { transition: background 180ms var(--ease), color 180ms var(--ease),
+                               border-color 180ms var(--ease), transform 90ms var(--ease); }
+html.motion .btn:active { transform: scale(.985); }
+
+/* 一覧・カードの当たりを、色だけでなく罫でも示す */
+html.motion .glist a, html.motion .article-list__item a,
+html.motion .mega__list a, html.motion .m-nav a { transition: background 180ms var(--ease-o); }
+
+@media (prefers-reduced-motion: reduce) {
+  html.motion .mega:not([hidden]),
+  html.motion .drawer:not([hidden]),
+  html.motion #mobile-menu:not([hidden]) { animation: none !important; }
+  html.motion .btn:active { transform: none !important; }
+}
+
+/* --- 図解と段階の区切りにも、同じ「罫を引く」を使う ------------------
+   記事の図解（.dgm）と、制作の流れの区切り（.tl-phase）は
+   上端に太い罫を持っています。章の入口と同じ動きで引くと、
+   ページをまたいで同じ言語になります。中身は最初から見えています。 */
+html.motion .dgm, html.motion .tl-phase { position: relative; }
+html.motion .dgm::before, html.motion .tl-phase::before {
+  content: ""; position: absolute; top: -2px; left: 0; right: 0; height: 2px;
+  background: var(--ink); transform: scaleX(0); transform-origin: left center;
+  transition: transform 700ms var(--ease-o);
+}
+html.motion .dgm.is-in::before, html.motion .tl-phase.is-in::before { transform: scaleX(1); }
+html.motion.is-fast .dgm::before, html.motion.is-fast .tl-phase::before { transition: none; }
+@media (prefers-reduced-motion: reduce) {
+  html.motion .dgm::before, html.motion .tl-phase::before { transform: scaleX(1) !important; transition: none !important; }
+}
+
+/* =====================================================================
+   36タイプの個別ページ（type-*.html）と一覧（types.html）
+   2026-08-20。tools/generate-type-pages.mjs が組み立てます。
+   ===================================================================== */
+
+/* 第一画面。領域ごとに地の色を変え、どの象限かが一目で分かるようにする */
+/* 領域ごとの地の色は、実値で書きます。
+   color-mix() を使うと計算値が color(srgb …) になり、
+   検査ツールも古い環境も色を読めません（実測で36ページが誤検出されました）。 */
+.ah--type { background: var(--paper-2); }
+.ah--type.ah--area-tl { background: #EDF3FB; }   /* 実用・情報 × 先進・新しさ */
+.ah--type.ah--area-tr { background: #F2EFF7; }   /* ブランド・魅力 × 先進・新しさ */
+.ah--type.ah--area-bl { background: #EBF5F5; }   /* 実用・情報 × 王道・安心 */
+.ah--type.ah--area-br { background: #FBF3E8; }   /* ブランド・魅力 × 王道・安心 */
+
+/* 320pxで版面が7px はみ出していた。
+   grid の子は既定で min-width:auto のため、長い肩書き
+   （「Web診断36 ／ ブランド・魅力 × 先進・新しさ」）が列を押し広げていた。 */
+.ah--type .ah__main, .ah--type .ah__inner { min-width: 0; }
+.ah--type .eyebrow { flex-wrap: wrap; }
+
+/* 6×6の地図。マスは他のタイプへのリンクを兼ねる */
+.tp-map { max-width: 30rem; }
+.tp-map__grid {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 2px;
+  background: var(--rule-soft); border: 1px solid var(--rule);
+}
+.tp-map__c { margin: 0; aspect-ratio: 1; position: relative; }
+.tp-map__c a, .tp-map__c b {
+  display: grid; place-items: center; width: 100%; height: 100%;
+  font-family: var(--mono); font-size: .8125rem; font-weight: 700; letter-spacing: 0;
+  /* --tx-3 では四色の地に対して 4.00〜4.38:1 で、AA(4.5:1)に届かない。
+     実測して --tx-2 へ上げた（6.26〜6.86:1）。 */
+  color: var(--tx-2); text-decoration: none;
+}
+@media (min-width: 700px) { .tp-map__c a, .tp-map__c b { font-size: 13px; } }
+.tp-map__c.area-tl { background: var(--q1-bg); }
+.tp-map__c.area-tr { background: var(--q2-bg); }
+.tp-map__c.area-bl { background: var(--q3-bg); }
+.tp-map__c.area-br { background: var(--q4-bg); }
+.tp-map__c a:hover { background: rgba(11,18,32,.08); color: var(--ink); }
+.tp-map__c.is-here { outline: 3px solid var(--ink); outline-offset: -3px; z-index: 1; }
+.tp-map__c.is-here b { background: var(--ink); color: #fff; }
+.tp-map__ax {
+  margin: 6px 0; font-family: var(--mono); font-size: var(--fs-xxs);
+  font-weight: 700; letter-spacing: .06em; color: var(--tx-3);
+}
+.tp-map__ax--x { display: flex; justify-content: space-between; }
+.tp-cols { display: grid; gap: var(--s6); }
+@media (min-width: 900px) { .tp-cols { grid-template-columns: 30rem 1fr; gap: var(--s7); align-items: start; } }
+
+/* 項目と説明の並び */
+.tp-dl { margin: 0; display: grid; gap: 1px; background: var(--rule-soft); border-block: 1px solid var(--rule-soft); }
+.tp-dl > div { background: var(--paper); padding: 10px 0; display: grid; gap: 2px; }
+@media (min-width: 760px) { .tp-dl > div { grid-template-columns: 15rem 1fr; gap: var(--s5); padding: var(--s4) 0; } }
+.sec--paper2 .tp-dl > div { background: var(--paper-2); }
+.tp-dl dt { font-family: var(--mono); font-size: var(--fs-xxs); font-weight: 700; letter-spacing: .1em; color: var(--tx-3); }
+.tp-dl dd { margin: 0; font-size: var(--fs-sm); line-height: 1.78; color: var(--tx-2); }
+.tp-dl dd .marker-list { margin: 0; }
+
+/* 見出しのひな形 */
+.tp-tmpl { border: 2px solid var(--ink); padding: var(--s5); background: var(--paper); }
+.tp-tmpl__h { margin: 0 0 var(--s3); font-size: clamp(1.125rem, 2.6vw, 1.5rem); font-weight: 700; color: var(--ink); line-height: 1.5; }
+.tp-tmpl__s { margin: 0; font-size: var(--fs-sm); line-height: 1.78; color: var(--tx-2); }
+
+/* 相談前の質問 */
+.tp-q { margin: 0; padding-left: 1.4em; display: grid; gap: 10px; }
+.tp-q li { font-size: var(--fs-sm); line-height: 1.8; color: var(--tx-2); }
+
+/* 近いタイプ・一覧 */
+.tp-near, .tp-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; background: var(--rule-soft); }
+@media (min-width: 760px) { .tp-near { grid-template-columns: repeat(3, 1fr); } .tp-list { grid-template-columns: repeat(3, 1fr); } }
+.tp-near li, .tp-list li { margin: 0; background: var(--paper); }
+.sec--paper2 .tp-near li, .sec--paper2 .tp-list li { background: var(--paper-2); }
+.tp-near a, .tp-list a { display: block; padding: var(--s4) var(--s5); min-height: 44px; text-decoration: none; color: inherit; }
+.tp-near__id, .tp-list__id {
+  display: block; font-family: var(--mono); font-size: var(--fs-xxs); font-weight: 700;
+  letter-spacing: .1em; color: var(--act); margin-bottom: 4px;
+}
+.tp-near b, .tp-list b { display: block; font-size: .9375rem; color: var(--ink); margin-bottom: 4px; }
+.tp-near span:last-child, .tp-list__s { display: block; font-size: var(--fs-xs); line-height: 1.75; color: var(--tx-2); }
+html.motion .tp-near a, html.motion .tp-list a, html.motion .tp-map__c a { transition: background 180ms var(--ease-o); }
+.tp-near a:hover, .tp-list a:hover { background: var(--rule-soft); }
+.tp-near a:hover b, .tp-list a:hover b { color: var(--act-dark); text-decoration: underline; }
+
+/* 結果ページ → 36タイプ個別ページへの導線（2026-08-20） */
+.rs-mast__go { margin-bottom: var(--s5); }
+a.near-card { display: block; text-decoration: none; color: inherit; }
+.near-card__go {
+  display: block; margin-top: var(--s3); font-size: var(--fs-xs); font-weight: 700; color: var(--act-dark);
+}
+html.motion a.near-card { transition: background 180ms var(--ease-o); }
+a.near-card:hover { background: var(--paper-2); }
+a.near-card:hover .cname { color: var(--act-dark); text-decoration: underline; }
+.map-cell__in { display: grid; place-items: center; width: 100%; height: 100%; text-decoration: none; color: inherit; gap: 2px; }
+a.map-cell__in:hover { background: rgba(11,18,32,.10); }
+
+/* =====================================================================
+   60秒の見本（type-*.html）— 2026-08-25
+   X軸の6方式ごとに、操作の種類そのものが違います。
+   中身は最初からHTMLにあり、JSは表示の出し分けだけを行います。
+   ===================================================================== */
+.spx { border: 2px solid var(--ink); background: var(--paper); }
+.spx__hd { padding: var(--s4) var(--s5); border-bottom: 1px solid var(--rule); background: var(--paper-2); }
+.spx__lbl { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s3); margin: 0 0 6px; }
+.spx__lbl b { font-family: var(--mono); font-size: var(--fs-xxs); font-weight: 700; letter-spacing: .14em; color: var(--act); }
+.spx__lbl span { font-size: var(--fs-xxs); color: var(--tx-3); }
+.spx__ttl { margin: 0; font-size: .9375rem; line-height: 1.7; color: var(--ink); font-weight: 700; }
+.spx__hint { margin: 6px 0 0; font-size: var(--fs-xs); color: var(--tx-2); }
+.spx__bd { padding: var(--s5); display: grid; gap: var(--s5); }
+@media (min-width: 860px) {
+  .spx--filter .spx__bd, .spx--match, .spx--pair, .spx--gallery, .spx--story { }
+  .spx__bd.spx--filter { grid-template-columns: 17rem 1fr; align-items: start; }
+  .spx__bd.spx--match, .spx__bd.spx--pair,
+  .spx__bd.spx--gallery, .spx__bd.spx--story { grid-template-columns: 15rem 1fr; align-items: start; }
+}
+.spx__live { margin: 0; padding: 0 var(--s5) var(--s3); font-size: var(--fs-xs); color: var(--act-dark); min-height: 1.5em; }
+.spx__note { margin: 0; padding: var(--s3) var(--s5); border-top: 1px solid var(--rule-soft);
+  background: var(--paper-2); font-size: var(--fs-xxs); line-height: 1.7; color: var(--tx-3); }
+
+/* 条件で絞り込む（X1） */
+.spx-conds { border: 0; margin: 0; padding: 0; display: grid; gap: 10px; }
+.spx-conds legend { font-family: var(--mono); font-size: var(--fs-xxs); font-weight: 700; letter-spacing: .1em; color: var(--tx-3); padding: 0 0 6px; }
+.spx-chk { display: flex; align-items: flex-start; gap: 10px; min-height: 44px; align-items: center;
+  padding: 6px 8px; border: 1px solid var(--rule); background: var(--paper); cursor: pointer; }
+.spx-chk input { width: 20px; height: 20px; flex: none; accent-color: var(--act); }
+.spx-chk span { font-size: var(--fs-xs); line-height: 1.6; }
+.spx-chk:has(input:checked) { border-color: var(--ink); background: var(--paper-2); box-shadow: inset 3px 0 0 var(--act); }
+.spx-out__n { margin: 0 0 var(--s3); font-family: var(--mono); font-size: var(--fs-xs); color: var(--tx-3); }
+.spx-out__n b { font-size: 1.25rem; color: var(--ink); }
+.spx-rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; background: var(--rule-soft); }
+.spx-row { margin: 0; padding: 10px var(--s4); background: var(--paper); display: grid; gap: 2px; }
+.spx-row b { font-size: var(--fs-sm); color: var(--ink); }
+.spx-row span { font-size: var(--fs-xxs); color: var(--tx-3); }
+.spx-empty { margin: var(--s3) 0 0; padding: var(--s4); border: 1px dashed var(--rule); font-size: var(--fs-xs); color: var(--tx-2); }
+
+/* 段階を進む（X2） */
+.spx-prog { height: 4px; background: var(--rule-soft); }
+.spx-prog__bar { height: 100%; background: var(--act); transform-origin: left center; transition: transform 220ms var(--ease-o); }
+.spx-dots { list-style: none; display: flex; gap: 6px; margin: 0; padding: 0; }
+.spx-dots li { width: 26px; height: 26px; display: grid; place-items: center; border: 1px solid var(--rule);
+  font-family: var(--mono); font-size: var(--fs-xxs); font-weight: 700; color: var(--tx-3); }
+.spx-dots li[aria-current="step"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+.spx-step { display: grid; gap: 6px; }
+.spx-step__no { margin: 0; font-family: var(--mono); font-size: var(--fs-xxs); font-weight: 700; letter-spacing: .14em; color: var(--act); }
+.spx-step b { font-size: 1rem; color: var(--ink); line-height: 1.6; }
+.spx-step p { margin: 0; font-size: var(--fs-sm); line-height: 1.78; color: var(--tx-2); }
+.spx-nav { display: flex; align-items: center; gap: var(--s4); }
+.spx-pos { font-family: var(--mono); font-size: var(--fs-xs); color: var(--tx-3); }
+
+/* 選んで入れ替える（X3〜X6） */
+.spx-picks { display: grid; gap: 1px; background: var(--rule-soft); align-content: start; }
+.spx-pick { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 44px;
+  padding: 10px var(--s4); border: 0; background: var(--paper); text-align: left; cursor: pointer;
+  font: inherit; font-size: var(--fs-xs); line-height: 1.6; color: var(--tx-2); }
+.spx-pick__i { font-family: var(--mono); font-size: var(--fs-xxs); font-weight: 700; color: var(--tx-3); flex: none; }
+.spx-pick[aria-pressed="true"] { background: var(--ink); color: #fff; }
+.spx-pick[aria-pressed="true"] .spx-pick__i { color: var(--act-on-ink); }
+.spx-pick:hover:not([aria-pressed="true"]) { background: var(--paper-2); }
+.spx-panel__h { margin: 0 0 var(--s3); font-size: 1rem; font-weight: 700; color: var(--ink); line-height: 1.6; }
+.spx-panel__dl { margin: 0; display: grid; gap: 1px; background: var(--rule-soft); border-block: 1px solid var(--rule-soft); }
+.spx-panel__dl > div { background: var(--paper); padding: 10px 0; display: grid; gap: 3px; }
+@media (min-width: 700px) { .spx-panel__dl > div { grid-template-columns: 11rem 1fr; gap: var(--s4); } }
+.spx-panel__dl dt { font-family: var(--mono); font-size: var(--fs-xxs); font-weight: 700; letter-spacing: .08em; color: var(--tx-3); }
+.spx-panel__dl dd { margin: 0; font-size: var(--fs-sm); line-height: 1.85; color: var(--tx-2); }
+
+/* 根拠の一覧 */
+.tp-proof { margin: 0 0 var(--s4); padding-left: 1.4em; display: grid; gap: 10px; }
+.tp-proof li { font-size: var(--fs-sm); line-height: 1.85; color: var(--tx-2); }
+
+/* 第一画面に置く3つの事実 */
+.ah__facts2 { display: grid; gap: 8px; margin: var(--s4) 0 var(--s3); }
+@media (min-width: 760px) { .ah__facts2 { grid-template-columns: repeat(3, auto); justify-content: start; gap: var(--s6); } }
+.ah__facts2 span { font-size: var(--fs-xs); color: var(--tx-2); }
+.ah__facts2 b { display: block; font-family: var(--mono); font-size: var(--fs-xxs); font-weight: 700;
+  letter-spacing: .12em; color: var(--tx-3); margin-bottom: 2px; }
+
+@media (prefers-reduced-motion: reduce) { .spx-prog__bar { transition: none !important; } }
+
+/* JSが動かない環境では、すべての状態がそのまま並ぶ（hidden は付いたままにしない） */
+.no-js .spx [hidden] { display: revert !important; }
+.no-js .spx-nav, .no-js .spx-picks, .no-js .spx-conds { display: none; }
+
+/* ============================================================
+   結果「この位置になった理由」— 回答をそのまま観点ごとに見せる帯
+   判定は engine が持つ。ここは表示だけで、順位や優劣は出さない。
+   ============================================================ */
+.why { display: grid; gap: var(--s6, 32px); }
+@media (min-width: 900px) { .why { grid-template-columns: 1fr 1fr; gap: var(--s5) var(--s6, 40px); } }
+
+.why__ax { border-top: 3px solid var(--ink); padding-top: var(--s4); min-width: 0; }
+.why__name { font-size: 1rem; line-height: 1.5; margin: 0 0 6px; }
+.why__lean { margin: 0 0 var(--s3); font-size: .92rem; color: var(--body); }
+
+.why__bar {
+  position: relative; height: 14px; background: #fff;
+  border: 1px solid var(--border); border-radius: 2px; overflow: hidden;
+}
+/* 中央の基準線。どちら側へ寄ったかを目で読めるようにする */
+.why__bar::before {
+  content: ""; position: absolute; left: 50%; top: 0; bottom: 0;
+  width: 1px; background: var(--ink); opacity: .55;
+}
+.why__fill {
+  position: absolute; top: 2px; bottom: 2px; left: 50%;
+  background: var(--coral); min-width: 2px;
+}
+.why__fill.is-left { left: auto; right: 50%; background: var(--teal); }
+
+.why__ends {
+  display: flex; justify-content: space-between; gap: var(--s3);
+  margin-top: 6px; font-size: .8125rem; color: var(--muted); font-family: var(--mono);
+}
+
+.why__nums { margin: var(--s4) 0 0; border-top: 1px solid var(--hair); }
+.why__nums > div { border-bottom: 1px solid var(--hair); padding: 10px 0; }
+.why__nums dt { font-size: .8125rem; color: var(--muted); margin: 0 0 3px; }
+.why__nums dd { margin: 0; font-size: .92rem; color: var(--ink); font-family: var(--mono); }
+
+.why__top { margin-top: var(--s4); }
+.why__top-h { font-size: .8125rem; font-weight: 700; letter-spacing: .06em; color: var(--muted); margin: 0 0 8px; }
+.why__top ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.why__top li {
+  display: grid; gap: 3px; padding: 10px 12px;
+  background: #fff; border: 1px solid var(--border); border-left: 3px solid var(--ink); border-radius: var(--r);
+}
+.why__cat { font-size: .8125rem; font-weight: 700; color: var(--muted); font-family: var(--mono); }
+.why__st { font-size: .88rem; line-height: 1.65; color: var(--body); }
+.why__ans { font-size: .82rem; font-weight: 700; color: var(--ink); }
+.why__foot { margin-top: var(--s5); }
+.why__note { margin: 8px 0 0; }
+/* 効いた回答: 帯と同じ色で、どちらの極へ効いたかを示す */
+.why__top li.is-left { border-left-color: var(--teal); }
+.why__top li.is-right { border-left-color: var(--coral); }
+
+/* ============================================================
+   見本の「見せ方」— Y軸6段階（王道・安心 ⇄ 先進・新しさ）
+   操作の種類はX軸で決まる。ここで変えるのは並べ方だけなので、
+   X6方式 × Y6段階 = 36通りが、それぞれ違う画面になる。
+   どの段階でも、キーボード操作・aria・文字での状態表示は同じ。
+   ============================================================ */
+
+/* Y1 定番の一覧: 縦並び。既定の形をそのまま使う */
+.spx--y1 .spx-pick { border-left: 3px solid transparent; }
+.spx--y1 .spx-pick[aria-pressed="true"] { border-left-color: var(--act-on-ink); }
+
+/* Y2 見出し付きの表: 番号を左の欄に固定し、行の高さをそろえる */
+.spx--y2 .spx-picks { background: var(--rule); }
+.spx--y2 .spx-pick { display: grid; grid-template-columns: 3rem 1fr; gap: 0; align-items: center; padding: 12px var(--s4) 12px 0; }
+.spx--y2 .spx-pick__i { display: grid; place-items: center; align-self: stretch; background: var(--paper-2); }
+.spx--y2 .spx-pick > span + span { padding-left: var(--s4); }
+.spx--y2 .spx-pick[aria-pressed="true"] .spx-pick__i { background: var(--act-dark); color: #fff; }
+.spx--y2 .spx-panel__dl > div { padding: 12px 0; }
+
+/* Y3 横並びのタブ: 選択肢を上に横一列で並べる */
+/* タブとラベルは横に広がるので、広い画面でも2カラムにしない */
+@media (min-width: 860px) {
+  .spx--y3 .spx__bd[class*="spx--"],
+  .spx--y6 .spx__bd[class*="spx--"] { grid-template-columns: 1fr; }
+}
+.spx--y3 .spx-picks { display: flex; flex-wrap: wrap; gap: 1px; }
+.spx--y3 .spx-pick { width: auto; flex: 1 1 12rem; justify-content: center; text-align: center;
+  border-bottom: 3px solid var(--rule); }
+.spx--y3 .spx-pick[aria-pressed="true"] { background: var(--paper); color: var(--ink);
+  border-bottom-color: var(--act); font-weight: 700; }
+.spx--y3 .spx-pick[aria-pressed="true"] .spx-pick__i { color: var(--act-dark); }
+
+/* Y4 カード: 一つずつ枠で囲む */
+.spx--y4 .spx-picks { background: transparent; gap: 10px; }
+.spx--y4 .spx-pick { border: 1px solid var(--rule); border-radius: var(--r); align-items: flex-start; padding: 12px var(--s4); }
+.spx--y4 .spx-pick[aria-pressed="true"] { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
+.spx--y4 .spx-panel { border: 1px solid var(--rule); border-radius: var(--r); padding: var(--s4) var(--s5); background: var(--paper); }
+
+/* Y5 余白の広い編集: 一度に一つだけ読ませる */
+.spx--y5 .spx-picks { gap: 0; background: transparent; border-top: 1px solid var(--rule-soft); }
+.spx--y5 .spx-pick { border-bottom: 1px solid var(--rule-soft); padding: 14px var(--s4) 14px 0; }
+.spx--y5 .spx-panel__h { font-size: 1.125rem; line-height: 1.55; margin-bottom: var(--s4); }
+.spx--y5 .spx-panel__dl > div { padding: 14px 0; }
+.spx--y5 .spx-panel__dl dd { line-height: 2; }
+
+/* Y6 角の丸いラベル: ラベル列 + 開いた内容 */
+.spx--y6 .spx-picks { display: flex; flex-wrap: wrap; gap: 8px; background: transparent; }
+.spx--y6 .spx-pick { width: auto; min-height: 40px; padding: 8px 14px; border: 1px solid var(--rule);
+  border-radius: 999px; }
+.spx--y6 .spx-pick[aria-pressed="true"] { border-color: var(--ink); }
+.spx--y6 .spx-pick__i { display: none; }
+.spx--y6 .spx-panel__dl { border-block: 0; gap: 10px; background: transparent; }
+.spx--y6 .spx-panel__dl > div { border: 1px solid var(--rule-soft); border-radius: var(--r); padding: 10px var(--s4); }
+
+/* 促す行動と、読み終えて決めること（タイプごとに違う） */
+.spx__act { padding: 0 var(--s5) var(--s4); display: grid; gap: 8px; }
+.spx__act-h { margin: 0; font-family: var(--mono); font-size: var(--fs-xxs); font-weight: 700;
+  letter-spacing: .1em; color: var(--tx-3); }
+.spx__act-l { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.spx__act-l li { font-size: var(--fs-xs); font-weight: 700; color: var(--ink);
+  border: 1px solid var(--ink); border-radius: var(--r); padding: 7px 12px; background: var(--paper); }
+.spx__act-l li.is-sub { font-weight: 400; color: var(--tx-2); border-color: var(--rule); }
+.spx__dec { margin: 0; font-size: var(--fs-xs); line-height: 1.8; color: var(--tx-2); }
+
+/* 見せ方(Y)は、絞り込み(X1)と段階(X2)にも同じ考えで効かせる。
+   操作は変わらない。並べ方と枠の付け方だけが変わる。 */
+/* Y2 位置をそろえた表 */
+.spx--y2 .spx-chk { border-radius: 0; }
+.spx--y2 .spx-row { grid-template-columns: 1fr; padding: 12px var(--s4); }
+@media (min-width: 700px) { .spx--y2 .spx-row { grid-template-columns: 1fr 12rem; align-items: baseline; } }
+.spx--y2 .spx-dots li { border-radius: 0; }
+
+/* Y3 横並び */
+.spx--y3 .spx-conds { grid-auto-flow: row; }
+@media (min-width: 700px) { .spx--y3 .spx-conds { grid-auto-flow: column; grid-auto-columns: 1fr; } }
+.spx--y3 .spx-chk { border-radius: 0; border-bottom: 3px solid var(--rule); }
+.spx--y3 .spx-chk:has(input:checked) { border-bottom-color: var(--act); box-shadow: none; }
+.spx--y3 .spx-dots li { border-radius: 0; border-bottom-width: 3px; }
+.spx--y3 .spx-dots li[aria-current="step"] { background: var(--paper); color: var(--ink); border-bottom-color: var(--act); }
+
+/* Y4 カード */
+.spx--y4 .spx-rows { background: transparent; gap: 10px; }
+.spx--y4 .spx-row { border: 1px solid var(--rule); border-radius: var(--r); }
+.spx--y4 .spx-step { border: 1px solid var(--rule); border-radius: var(--r); padding: var(--s4) var(--s5); }
+
+/* Y5 余白の広い編集 */
+.spx--y5 .spx-rows { background: transparent; gap: 0; }
+.spx--y5 .spx-row { border-bottom: 1px solid var(--rule-soft); padding: 14px 0; }
+.spx--y5 .spx-step b { font-size: 1.125rem; }
+.spx--y5 .spx-step p { line-height: 2.05; }
+
+/* Y6 角の丸いラベル */
+.spx--y6 .spx-chk { border-radius: 999px; padding-inline: 14px; }
+.spx--y6 .spx-rows { background: transparent; gap: 8px; }
+.spx--y6 .spx-row { border: 1px solid var(--rule-soft); border-radius: var(--r); padding: 10px var(--s4); }
+.spx--y6 .spx-dots li { border-radius: 999px; }
+
+/* ============================================================
+   この端末に残っている診断の記録と、その削除
+   ============================================================ */
+.erase {
+  border: 1px solid var(--rule); border-radius: var(--r);
+  padding: var(--s4) var(--s5); background: var(--paper);
+  display: grid; gap: 10px; max-width: 44rem;
+}
+.erase__hd { margin: 0; font-size: var(--fs-sm); font-weight: 700; color: var(--ink); }
+.erase__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.erase__list li {
+  margin: 0; font-size: var(--fs-xs); line-height: 1.7; color: var(--tx-2);
+  padding-left: 1.1em; position: relative;
+}
+.erase__list li::before { content: "・"; position: absolute; left: 0; }
+.erase__msg { margin: 0; font-size: var(--fs-xs); font-weight: 700; color: var(--act-dark); min-height: 1.4em; }
+.erase__note { margin: 0; font-size: var(--fs-xxs); line-height: 1.7; color: var(--tx-3); }
+.erase [data-erase-run] { justify-self: start; }
+/* 読み取り欄から、そのタイプのページへ */
+.tread__go { margin-top: var(--s3); }
+
+/* ============================================================
+   タイプページ: 見出しの一覧と、畳んだ節
+   スマホで「見出しは全部見えて、読みたい所だけ開く」形にする。
+   中身はHTMLにそのまま入っているので、JSが無くても開けるし検索にも載る。
+   ============================================================ */
+.tp-toc { padding-block: var(--s5); background: var(--paper-2); border-block: 1px solid var(--rule-soft); }
+.tp-toc__h {
+  margin: 0 0 var(--s3); font-family: var(--mono); font-size: var(--fs-xxs);
+  font-weight: 700; letter-spacing: .12em; color: var(--tx-3);
+}
+.tp-toc__l { list-style: none; margin: 0 0 var(--s4); padding: 0; display: grid; gap: 1px; }
+@media (min-width: 640px) { .tp-toc__l { grid-template-columns: 1fr 1fr; column-gap: var(--s5); } }
+@media (min-width: 1024px) { .tp-toc__l { grid-template-columns: repeat(3, 1fr); } }
+.tp-toc__l li { margin: 0; }
+.tp-toc__l a {
+  display: flex; gap: 10px; align-items: baseline; padding: 7px 0;
+  font-size: var(--fs-sm); line-height: 1.5; color: var(--tx-2); text-decoration: none;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.tp-toc__l a:hover { color: var(--ink); }
+.tp-toc__l a span { font-family: var(--mono); font-size: var(--fs-xxs); font-weight: 700; color: var(--tx-3); flex: none; }
+
+/* 畳んだ節 */
+.sec--fold { padding-block: 0; }
+.sec--fold + .sec--fold { border-top: 1px solid var(--rule-soft); }
+.fold > summary { list-style: none; }
+.fold > summary::-webkit-details-marker { display: none; }
+.fold__sum {
+  display: flex; gap: var(--s3); align-items: flex-start;
+  padding: var(--s4) 0; cursor: pointer; min-height: 44px;
+}
+.fold__sum:hover { background: var(--paper-2); }
+.fold__sum:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.fold__t { display: grid; gap: 4px; flex: 1 1 auto; min-width: 0; }
+.fold__t b { font-size: 1.0625rem; line-height: 1.5; color: var(--ink); }
+@media (min-width: 768px) { .fold__t b { font-size: 1.1875rem; } }
+.fold__lead { font-size: var(--fs-xs); line-height: 1.7; color: var(--tx-3); }
+/* 開閉の印。色だけに頼らず、開いているかは details の状態と記号で示す */
+.fold__mk {
+  flex: none; width: 22px; height: 22px; margin-top: 2px; position: relative;
+  border: 1px solid var(--rule); border-radius: 50%;
+}
+.fold__mk::before, .fold__mk::after {
+  content: ""; position: absolute; left: 50%; top: 50%; background: var(--ink);
+  transform: translate(-50%, -50%);
+}
+.fold__mk::before { width: 10px; height: 1.5px; }
+.fold__mk::after { width: 1.5px; height: 10px; }
+.fold[open] .fold__mk::after { display: none; }
+.fold__bd { padding: 0 0 var(--s5); }
+.fold[open] .fold__sum { border-bottom: 1px solid var(--rule-soft); }
+.tp-toc__all { justify-self: start; }
+
+/* 見本サイトの一覧（掲載できる実物ができるまでは空） */
+.work-grid { display: grid; gap: var(--s5); }
+@media (min-width: 700px) { .work-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1100px) { .work-grid { grid-template-columns: repeat(3, 1fr); } }
+.work-card { border: 1px solid var(--rule); border-radius: var(--r); overflow: hidden; background: var(--paper); }
+.work-card img { display: block; width: 100%; height: auto; border-bottom: 1px solid var(--rule-soft); }
+.work-card__bd { padding: var(--s4) var(--s5) var(--s5); display: grid; gap: 6px; }
+.work-card__id { font-family: var(--mono); font-size: var(--fs-xxs); font-weight: 700; color: var(--tx-3); }
+.work-card__t { margin: 0; font-size: 1.0625rem; line-height: 1.5; }
+.work-card__n { margin: 0; font-size: var(--fs-sm); line-height: 1.78; color: var(--tx-2); }
+.work-card__cap { margin: 0; font-size: var(--fs-xxs); line-height: 1.7; color: var(--tx-3); }
+
+/* ============================================================
+   業種からタイプを探す（industries.html）
+   ============================================================ */
+.occ-nav { padding-block: var(--s5); background: var(--paper-2); border-block: 1px solid var(--rule-soft); }
+.occ-nav__h { margin: 0 0 var(--s3); font-family: var(--mono); font-size: var(--fs-xxs);
+  font-weight: 700; letter-spacing: .12em; color: var(--tx-3); }
+.occ-nav__l { list-style: none; margin: 0 0 var(--s5); padding: 0; display: grid; gap: 1px; }
+@media (min-width: 640px) { .occ-nav__l { grid-template-columns: 1fr 1fr; column-gap: var(--s5); } }
+@media (min-width: 1024px) { .occ-nav__l { grid-template-columns: repeat(3, 1fr); } }
+.occ-nav__l li { margin: 0; }
+.occ-nav__l a { display: flex; justify-content: space-between; gap: var(--s3); padding: 8px 0;
+  font-size: var(--fs-sm); color: var(--tx-2); text-decoration: none; border-bottom: 1px solid var(--rule-soft); }
+.occ-nav__l a:hover { color: var(--ink); }
+.occ-nav__l a span { font-family: var(--mono); font-size: var(--fs-xxs); color: var(--tx-3); }
+
+.occ-find { display: grid; gap: 6px; max-width: 32rem; }
+.occ-find label { font-size: var(--fs-xs); font-weight: 700; color: var(--tx-2); }
+.occ-find input {
+  font: inherit; font-size: 1rem; padding: 11px 14px; min-height: 44px;
+  border: 1px solid var(--rule); border-radius: var(--r); background: var(--paper); color: var(--ink);
+}
+.occ-find input:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.occ-find__n { margin: 0; min-height: 1.5em; font-size: var(--fs-xs); font-weight: 700; color: var(--act-dark); }
+
+.occ { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; background: var(--rule-soft); }
+@media (min-width: 760px) { .occ { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1180px) { .occ { grid-template-columns: repeat(3, 1fr); } }
+.occ__i { margin: 0; padding: 12px var(--s4) 14px; background: var(--paper); display: grid; gap: 8px; align-content: start; }
+.sec--paper2 .occ__i { background: var(--paper-2); }
+.occ__n { margin: 0; font-size: var(--fs-sm); font-weight: 700; color: var(--ink); line-height: 1.5; }
+.occ__ts { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.occ__ts li { margin: 0; }
+.occ__t {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 5px 10px;
+  border: 1px solid var(--rule); border-radius: 999px; text-decoration: none;
+  font-size: var(--fs-xs); line-height: 1.4; color: var(--tx-2);
+}
+.occ__t:hover { border-color: var(--ink); color: var(--ink); }
+.occ__t.area-tl { background: var(--q1-bg); }
+.occ__t.area-tr { background: var(--q2-bg); }
+.occ__t.area-bl { background: var(--q3-bg); }
+.occ__t.area-br { background: var(--q4-bg); }
+.occ__id { font-family: var(--mono); font-size: var(--fs-xxs); font-weight: 700; color: var(--tx-3); }
+
+/* 36タイプ一覧の入口（マスから／業種から） */
+.tp-find { display: grid; gap: var(--s6); align-items: start; }
+@media (min-width: 900px) { .tp-find { grid-template-columns: minmax(0, 26rem) 1fr; gap: var(--s6) var(--s8); } }
+.tp-find__h { margin: 0 0 var(--s3); font-family: var(--mono); font-size: var(--fs-xxs);
+  font-weight: 700; letter-spacing: .12em; color: var(--tx-3); }
+.tp-find__occ p { font-size: var(--fs-sm); line-height: 1.78; color: var(--tx-2); }
+.tp-find__occ .btn { margin-top: var(--s3); }
+.tp-find__occ .note { margin-top: var(--s4); }
+.tp-map--all { max-width: 26rem; }
+.tp-map--all .tp-map__c a:hover { background: var(--ink); color: #fff; }

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr" class="no-js">
+<head>
+<!-- 公開前は noindex。公開時に productionIndexingEnabled=true とし、index対象ページの robots と絶対canonicalを設定する。 -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web診断36の仕組みと使い方｜四つの視点と二つの軸</title>
+  <meta name="description" content="Web診断36は、四つの視点を二つの軸へまとめ、6×6の36タイプで表します。16問と48問の違い、結果の使い方、診断の限界まで説明します。心理検査や経営診断ではありません。">
+  <meta name="robots" content="noindex,follow">
+  <meta property="og:title" content="Web診断36の仕組みと使い方｜四つの視点と二つの軸">
+  <meta property="og:description" content="Web診断36は、四つの視点を二つの軸へまとめ、6×6の36タイプで表します。16問と48問の違い、結果の使い方、診断の限界まで説明します。心理検査や経営診断ではありません。">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="クルーアセント">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="assets/og/og-diagnosis.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/brand/icon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="assets/brand/icon-512.png" sizes="512x512" type="image/png">
+  <link rel="apple-touch-icon" href="assets/brand/icon-180.png">
+  <!-- 旧CSSを先に読み、新しい共通CSSで上書きする。トークンは base.css が正本。 -->
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CASans-700.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CASans-400.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CAMono-700.woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260817r9">
+  <link rel="stylesheet" href="assets/css/base.css?v=20260817r9">
+  <link rel="stylesheet" href="assets/css/system.css?v=20260817r9">
+  <script>document.documentElement.className += ' js';</script>
+  <script src="assets/js/site-config.js?v=20260817r9"></script>
+  <script defer src="assets/js/top.js?v=20260817r9"></script>
+  <script defer src="assets/js/scroll-steady.js?v=20260817r9"></script>
+  <script defer src="assets/js/main.js?v=20260817r9"></script>
+  <script defer src="assets/js/diagnosis-data.js?v=20260817r9"></script>
+  <script defer src="assets/js/sample-result.js?v=20260817r9"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"index.html"},{"@type":"ListItem","position":2,"name":"診断","item":"diagnosis.html"},{"@type":"ListItem","position":3,"name":"Web診断36の仕組み","item":"diagnosis-guide.html"}]}</script>
+  <script>/* 動きの入り切り。?motion=off と、動きを減らす設定で外れる。
+     site-config.js の motion:'off' は main.js が後から外します。 */
+  (function(d){var r=d.documentElement;r.classList.remove('no-js');
+   var off=/[?&]motion=off/.test(location.search)||
+     (window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+   if(!off)r.classList.add('motion');})(document);</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "inLanguage": "ja", "name": "Web診断36の使い方", "description": "Web診断36で、Webサイトで今優先したい方向を36タイプへ整理する手順です。", "step": [{"@type": "HowToStep", "name": "問題数を選ぶ", "text": "16問のかんたん診断か、48問のじっくり診断を選びます。"}, {"@type": "HowToStep", "name": "近いほうを選ぶ", "text": "各問で、今どちらを先にしたいかを5段階から選びます。"}, {"@type": "HowToStep", "name": "座標を読む", "text": "二つの軸と6×6のマップ上に、今回の位置が表示されます。"}, {"@type": "HowToStep", "name": "設計へつなぐ", "text": "ページ構成や文章の方針を、制作の相談でそのまま使えます。"}]}</script>
+</head>
+<body data-page="diagnosis-guide" data-archetype="product" class="pg pg--product pg-sub">
+  <a class="skip-link" href="#main">本文へスキップ</a>
+  <header class="hdr" id="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="index.html" aria-label="クルーアセント ホームへ">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__tx"><span class="brand__ja">クルーアセント</span><span class="brand__en">CREW ASCENT</span></span>
+    </a>
+    <nav class="gnav" aria-label="メインメニュー">
+      <ul class="gnav__list">
+        <li class="gnav__item"><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-service">サービス<span class="gnav__caret" aria-hidden="true"></span></button></li>
+        <li class="gnav__item"><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-diagnosis" aria-current="page">診断<span class="gnav__caret" aria-hidden="true"></span></button></li>
+        <li class="gnav__item"><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-first">はじめての方へ<span class="gnav__caret" aria-hidden="true"></span></button></li>
+        <li class="gnav__item"><a class="gnav__link" href="about.html">クルーアセントについて</a></li>
+        <li class="gnav__item"><a class="gnav__link" href="contact.html">相談</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--primary btn--sm hdr-cta" href="diagnosis.html">無料診断を始める<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="drawer">
+      <span class="burger__label">メニュー</span>
+      <span class="burger__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+
+  <div class="mega" id="mega-service" hidden>
+    <div class="wrap mega__in"><div class="g6">
+      <div class="mega__intro c1-2"><p class="mega__h">サービス</p><p>何を作り、何を整え、公開後に何を続けるのか。対応範囲と料金を先に開示しています。</p></div>
+      <ul class="mega__list c3-6">
+        <li><a href="services.html"><span class="mega__ttl">Web制作サービス</span><span class="mega__note">何を作り、何を整えるか</span></a></li>
+        <li><a href="plans.html"><span class="mega__ttl">4つのプラン・料金</span><span class="mega__note">8万〜22万円の買い切り</span></a></li>
+        <li><a href="process.html"><span class="mega__ttl">制作の流れ</span><span class="mega__note">相談から公開までの9段階</span></a></li>
+        <li><a href="management.html"><span class="mega__ttl">公開・管理</span><span class="mega__note">公開後に必要な範囲だけ</span></a></li>
+      </ul>
+    </div></div>
+  </div>
+
+  <div class="mega" id="mega-diagnosis" hidden>
+    <div class="wrap mega__in"><div class="g6">
+      <div class="mega__intro c1-2"><p class="mega__h">Web診断36</p><p>2軸 × 6段階で36通り。Webサイトで何を優先するかを整理するための、無料の入口です。</p></div>
+      <ul class="mega__list c3-6">
+        <li><a href="diagnosis.html"><span class="mega__ttl">無料診断を始める</span><span class="mega__note">16問または48問</span></a></li>
+        <li><a href="diagnosis-guide.html"><span class="mega__ttl">Web診断36の仕組み</span><span class="mega__note">四つの視点と二つの軸</span></a></li>
+        <li><a href="types.html"><span class="mega__ttl">36タイプ一覧</span><span class="mega__note">4つの領域・36の方向</span></a></li>
+        <li><a href="industries.html"><span class="mega__ttl">業種からタイプを探す</span><span class="mega__note">13分類・102の業種</span></a></li>
+        <li><a href="result.html?type=helpful-guidance"><span class="mega__ttl">結果サンプルを見る</span><span class="mega__note">実際の結果画面</span></a></li>
+      </ul>
+    </div></div>
+  </div>
+
+  <div class="mega" id="mega-first" hidden>
+    <div class="wrap mega__in"><div class="g6">
+      <div class="mega__intro c1-2"><p class="mega__h">はじめての方へ</p><p>制作会社へ相談する前に読んでも使える形で、判断に必要なことを整理しています。</p></div>
+      <ul class="mega__list c3-6">
+        <li><a href="website-guide.html"><span class="mega__ttl">Webサイトの役割</span><span class="mega__note">SNSとの使い分け</span></a></li>
+        <li><a href="guide.html"><span class="mega__ttl">Webサイトづくりガイド</span><span class="mega__note">決める前に読む記事</span></a></li>
+        <li><a href="faq.html"><span class="mega__ttl">よくある質問</span><span class="mega__note">料金・制作・契約</span></a></li>
+      </ul>
+    </div></div>
+  </div>
+
+  <nav class="drawer" id="drawer" aria-label="メインメニュー（モバイル）" hidden>
+    <div class="wrap">
+      <ul class="drawer__list">
+        <li>
+          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-1">サービス<span class="drawer__caret" aria-hidden="true"></span></button>
+          <ul class="drawer__sub" id="dr-1" hidden>
+            <li><a href="services.html">Web制作サービス<span>何を作り、何を整えるか</span></a></li>
+            <li><a href="plans.html">4つのプラン・料金<span>8万〜22万円の買い切り</span></a></li>
+            <li><a href="process.html">制作の流れ<span>相談から公開までの9段階</span></a></li>
+            <li><a href="management.html">公開・管理<span>公開後に必要な範囲だけ</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-2">診断<span class="drawer__caret" aria-hidden="true"></span></button>
+          <ul class="drawer__sub" id="dr-2" hidden>
+            <li><a href="diagnosis.html">無料診断を始める<span>16問または48問</span></a></li>
+            <li><a href="diagnosis-guide.html">Web診断36の仕組み<span>四つの視点と二つの軸</span></a></li>
+            <li><a href="types.html">36タイプ一覧<span>4つの領域・36の方向</span></a></li>
+              <li><a href="industries.html">業種からタイプを探す<span>13分類・102の業種</span></a></li>
+            <li><a href="result.html?type=helpful-guidance">結果サンプルを見る<span>実際の結果画面</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-3">はじめての方へ<span class="drawer__caret" aria-hidden="true"></span></button>
+          <ul class="drawer__sub" id="dr-3" hidden>
+            <li><a href="website-guide.html">Webサイトの役割<span>SNSとの使い分け</span></a></li>
+            <li><a href="guide.html">Webサイトづくりガイド<span>決める前に読む記事</span></a></li>
+            <li><a href="faq.html">よくある質問<span>料金・制作・契約</span></a></li>
+          </ul>
+        </li>
+        <li><a class="drawer__row" href="about.html">クルーアセントについて</a></li>
+        <li><a class="drawer__row" href="contact.html">相談</a></li>
+      </ul>
+      <div class="drawer__foot">
+        <a class="btn btn--primary btn--block" href="diagnosis.html">無料診断を始める<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+        <a class="btn btn--line btn--block" href="plans.html">4つのプランを見る</a>
+      </div>
+    </div>
+  </nav>
+</header>
+  <nav class="breadcrumb" aria-label="パンくず"><div class="wrap"><ol><li><a href="index.html">ホーム</a></li><li><a href="diagnosis.html">診断</a></li><li aria-current="page">Web診断36の仕組み</li></ol></div></nav>
+  <main id="main">
+
+  <section class="ah ah--product">
+      <div class="wrap ah__enwrap"><span class="ah__en rvm"><span>Method</span></span></div>
+    <div class="ah__field" aria-hidden="true"></div>
+    <div class="wrap ah__inner">
+      <div class="ah__main"><p class="eyebrow eyebrow--on-ink">Web診断36の仕組み</p><h1><span class="ah__brand">Web診断36の仕組み</span><span class="ah__h1sub">Webサイトづくりの、<br>共通言語をつくる。</span></h1><p class="ah__lead">言葉にしにくいWebサイトの方向を、二つの軸と36タイプで見える形にします。正解や優劣を決めるのではなく、制作前の相談で使うための診断です。</p></div>
+      <div class="ah__aside"><dl class="ah__coords">
+      <div><dt>横軸</dt><dd>実用・情報 ⇄ ブランド・魅力</dd></div>
+      <div><dt>縦軸</dt><dd>王道・安心 ⇄ 先進・新しさ</dd></div>
+      <div><dt>タイプ</dt><dd><span class="num num--md">6</span> × <span class="num num--md">6</span> = <span class="num num--md">36</span></dd></div>
+    </dl></div>
+    </div>
+    <div class="ah__peek"><span aria-hidden="true">↓</span>四つの視点から、二つの軸へ</div>
+  </section>
+
+  <section class="sec">
+    <div class="gridlines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="wrap">
+      <div class="opener">
+        <div class="opener__top"><span class="opener__no">01</span><span class="lbl">Chapter</span></div>
+        <span class="opener__rule rvl" aria-hidden="true"><i></i></span>
+        <span class="opener__en rvm"><span>Four Views</span></span>
+        <div class="g6 opener__body">
+          <div class="c1-4"><h2 class="sec-title rvm"><span>四つの視点</span></h2></div>
+          <div class="c5-6 rv rv-d1"><p class="sec-lead">「好きなデザイン」だけでなく、「Webサイトで何を優先するか」を四つに分けて聞きます。</p></div>
+        </div>
+      </div>
+      <div class="quad-grid">
+        <div class="quad-grid__cell quad-grid__cell--tl"><span class="quad-grid__tag">実用・情報</span><h3>迷わずたどり着けるか</h3><p>料金、対応範囲、手順が分かりやすいか。必要な情報へ最短で届くか。</p></div>
+        <div class="quad-grid__cell quad-grid__cell--tr"><span class="quad-grid__tag">ブランド・魅力</span><h3>印象に残るか</h3><p>事業らしさ、価値、雰囲気が伝わるか。他と入れ替えられない部分があるか。</p></div>
+        <div class="quad-grid__cell quad-grid__cell--bl"><span class="quad-grid__tag">王道・安心</span><h3>安心して読めるか</h3><p>見慣れた構成、落ち着いた表現、誠実さで不安が減るか。</p></div>
+        <div class="quad-grid__cell quad-grid__cell--br"><span class="quad-grid__tag">先進・新しさ</span><h3>今らしさが伝わるか</h3><p>現在の標準に合っているか。成長性や新しい考え方が伝わるか。</p></div>
+      </div>
+    </div>
+  </section>
+
+    <section class="sec sec--paper2">
+    <div class="gridlines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="wrap">
+      <div class="figure-band">
+        <figure class="fig fig--crop">
+    <img src="assets/img/four-perspectives-to-map.webp" width="1800" height="1000" alt="四つの視点が一本にまとまり、6×6のマップへ整理されることを示した図" decoding="async" srcset="assets/img/four-perspectives-to-map-900.webp 900w, assets/img/four-perspectives-to-map.webp 1800w" sizes="(min-width: 900px) 60vw, 92vw">
+    <figcaption>四つの視点を二軸へまとめ、6×6の36通りにします</figcaption>
+  </figure>
+        <div>
+          <h2 style="font-size:1.5rem">二つの軸と36タイプ</h2>
+          
+    <p>横軸は「実用・情報 ⇄ ブランド・魅力」、縦軸は「王道・安心 ⇄ 先進・新しさ」です。それぞれを6段階に分け、6 × 6 = 36タイプとして今回の回答位置を表示します。</p>
+    <p>四つの視点それぞれの合計点から、横の位置（ブランド − 実用）と縦の位置（先進 − 王道）を計算します。中央からの距離は、今回の回答でどちらをどの程度優先したかを表します。事業の良し悪しや、将来の成果を示す値ではありません。</p>
+    <p class="hint mb-0">タイプに優劣はありません。36の位置は、優先順位の違いを表しているだけです。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--ink">
+    <div class="arch" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="wrap">
+      <div class="opener">
+        <div class="opener__top"><span class="opener__no">02</span><span class="lbl">Chapter</span></div>
+        <span class="opener__rule rvl" aria-hidden="true"><i></i></span>
+        <span class="opener__en rvm"><span>16 or 48</span></span>
+        <div class="g6 opener__body">
+          <div class="c1-4"><h2 class="sec-title rvm"><span>16問と48問</span></h2></div>
+          <div class="c5-6 rv rv-d1"><p class="sec-lead">どちらも同じ36タイプを使います。質問数の違いは回答量の違いです。</p></div>
+        </div>
+      </div>
+      <div class="ed ed--5-7">
+        <div class="mode-card on-paper">
+          <div class="mode-card__top"><span class="num num--lg">16</span><span class="num__unit">問</span><span class="tag">2〜3分</span></div>
+          <h3>かんたん診断</h3>
+          <p>四つの視点を4問ずつ答え、短時間で方向をつかむ版です。6問 × 3ページ（6問・6問・4問）で終わります。</p>
+        </div>
+        <div class="mode-card on-paper">
+          <div class="mode-card__top"><span class="num num--lg">48</span><span class="num__unit">問</span><span class="tag">6〜9分</span></div>
+          <h3>じっくり診断</h3>
+          <p>同じ四つの視点を、料金、文章、画像、更新など、より多くの場面から整理する版です。6問 × 8ページ。制作前に考えを細かく言葉にしたい場合に向きます。</p>
+        </div>
+      </div>
+      <p class="hint" style="margin-top:var(--s5);max-width:52em">質問数の違いは、人や事業の優劣を示すものではありません。どちらのスコアも同じ目盛りへ正規化し、同じ境界で表示しています（16問は5.25倍、48問は1.75倍）。48問版は一問の回答に左右されにくくなりますが、心理尺度としての信頼性や統計的な精度を検証した診断ではありません。途中で48問へ切り替えても、共通する16問の回答は引き継がれます。</p>
+    </div>
+  </section>
+
+  <section class="sec sec--paper2">
+    <div class="gridlines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="wrap">
+      <div class="opener">
+        <div class="opener__top"><span class="opener__no">03</span><span class="lbl">Chapter</span></div>
+        <span class="opener__rule rvl" aria-hidden="true"><i></i></span>
+        <span class="opener__en rvm"><span>The Report</span></span>
+        <div class="g6 opener__body">
+          <div class="c1-4"><h2 class="sec-title rvm"><span>結果は、こう表示されます</span></h2></div>
+          <div class="c5-6 rv rv-d1"><p class="sec-lead">実際の結果画面をそのまま表示しています。画像ではありません。</p></div>
+        </div>
+      </div>
+      <div id="sample-result" class="sample-result" data-sample-type="helpful-guidance">
+        <p class="hint">結果サンプルを読み込んでいます。表示されない場合は <a href="result.html?type=helpful-guidance">結果サンプルのページ</a>をご覧ください。</p>
+      </div>
+      <div class="cta-row" style="margin-top:var(--s5)">
+        <a class="btn btn--secondary" href="result.html?type=helpful-guidance">結果サンプルを全画面で見る</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="gridlines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="wrap">
+      <div class="ed ed--7-5 ed--sticky">
+        <div>
+          <div class="opener">
+        <div class="opener__top"><span class="opener__no">04</span><span class="lbl">Chapter</span></div>
+        <span class="opener__rule rvl" aria-hidden="true"><i></i></span>
+        <span class="opener__en rvm"><span>How to Use</span></span>
+        <div class="g6 opener__body">
+          <div class="c1-4"><h2 class="sec-title rvm"><span>結果の使い方</span></h2></div>
+          <div class="c5-6 rv rv-d1"><p class="sec-lead">結果を見て終わりにせず、制作の会話へ持ち込むための5段階です。</p></div>
+        </div>
+      </div>
+          <ol class="numbered">
+            <li><h3>納得できる点と違和感がある点を分ける</h3><p>すべてが当たっている必要はありません。違和感のある項目こそ、相談で話す価値があります。</p></li>
+            <li><h3>近い3タイプと比べる</h3><p>「こちらの方が近い」と感じたら、その理由が本当の優先順位です。</p></li>
+            <li><h3>必要なページと機能を選ぶ</h3><p>結果に出たページ構成を、今の事業に合わせて足し引きします。</p></li>
+            <li><h3>参考サイトの好きな点を、診断の言葉で説明する</h3><p>「おしゃれ」ではなく「ブランド寄りで、先進寄り」と言えると、認識のずれが減ります。</p></li>
+            <li><h3>予算と準備状況でプランを比べる</h3><p>診断結果はプランを決めません。ページ数と準備状況から、ご自身で選んでください。</p></li>
+          </ol>
+        </div>
+        <div class="stack">
+          <div class="note note--info">
+            <b>近い3タイプの意味</b>
+            <p>次点や精度ではありません。36の格子の中で、あなたの位置から距離が近いタイプです。方向性が似ているので、比較の材料として使えます。</p>
+          </div>
+          <div class="note note--warn">
+            <b>この診断ではないもの</b>
+            <p>心理検査、性格診断、経営診断ではありません。Webサイトの成果、検索順位、売上を予測するものでもありません。回答は端末内に30日間だけ保存し、外部へ送信しません。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section class="sec sec--ink">
+    <div class="arch" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="wrap">
+      <div class="closing">
+        <h2>まず16問から始められます。</h2>
+        <p class="lead">氏名やメールの登録はありません。結果だけを見て終わることもできます。</p>
+        <div class="cta-row"><a class="btn btn--primary" href="diagnosis.html">無料診断を始める</a><a class="btn btn--onink" href="plans.html">4つのプランを見る</a></div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+  <footer class="ftr">
+  <div class="wrap">
+    <div class="g6">
+      <div class="c1-2">
+        <div class="ftr__brand">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span><span class="ftr__ja">クルーアセント</span><span class="ftr__en">CREW ASCENT</span></span>
+        </div>
+        <p class="ftr__note">診断で方向を整理してから始める、小規模事業者向けのWeb制作事務所です。検索順位や問い合わせ件数を保証するサービスではありません。</p>
+      </div>
+      <div class="c3-4">
+        <h2>サイト</h2>
+        <ul>
+          <li><a href="diagnosis.html">Web診断36</a></li>
+          <li><a href="plans.html">制作プラン・料金</a></li>
+          <li><a href="process.html">制作の流れ</a></li>
+          <li><a href="management.html">公開・管理プラン</a></li>
+          <li><a href="services.html">Web制作サービス</a></li>
+        </ul>
+      </div>
+      <div class="c5-6">
+        <h2>知る・相談する</h2>
+        <ul>
+          <li><a href="about.html">クルーアセントについて</a></li>
+          <li><a href="guide.html">Webサイトづくりガイド</a></li>
+          <li><a href="faq.html">よくある質問</a></li>
+          <li><a href="contact.html">無料相談・お問い合わせ</a></li>
+          <li>事業者名 <span class="todo" title="公開前に確定する項目">公開前に確定</span></li>
+          <li><a href="privacy.html">プライバシーポリシー</a> ／ <a href="terms.html">サイト利用条件</a></li>
+          <li><a href="commercial-transactions.html">特定商取引法に基づく表記</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr__bottom">
+      <span>© <span data-year>2026</span> クルーアセント（CREW ASCENT）</span>
+      <span>このサイトは公開準備中です。確定前の項目があります。</span>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

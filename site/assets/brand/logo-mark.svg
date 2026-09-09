@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 120" role="img" aria-label="クルーアセント">
+  <title>クルーアセント</title>
+  <g class="lg-sep" stroke="var(--lg-bg, #FDFCFA)" stroke-width="9" fill="none" stroke-linejoin="round">
+    <path d="M64 82.2 A28 28 0 1 1 64 33.8"/>
+    <path d="M82 16 L118 104 L46 104 Z"/>
+  </g>
+  <path class="lg-c" d="M64 82.2 A28 28 0 1 1 64 33.8" fill="none" stroke-width="14" stroke-linecap="butt"/>
+  <path class="lg-a" d="M82 16 L118 104 L46 104 Z"/>
+  <path class="lg-xbar" d="M82 50 L94 80 L70 80 Z"/>
+</svg>

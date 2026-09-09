@@ -1,0 +1,11 @@
+node_modules/
+package-lock.json
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+# 検査の出力（生成物）
+qa-out/

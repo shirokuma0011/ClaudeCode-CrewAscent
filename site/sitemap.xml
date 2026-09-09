@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  クルーアセント sitemap.xml — tools/build-sitemap.mjs が生成します。手で編集しないでください。
+
+  載せる基準: そのページの <meta name="robots"> が index,follow であること。
+  解禁の段階は tools/publish-stages.mjs に書いてあります。
+  noindex のページ（result.html / 404.html / works.html / 未解禁のページ）は載りません。
+  changefreq / priority は使いません。
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- いま index,follow のページはありません（公開前は全ページ noindex,follow です）。
+       解禁が進むと、このファイルに自動で並びます。 -->
+</urlset>

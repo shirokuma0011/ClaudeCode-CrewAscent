@@ -1,0 +1,1013 @@
+{
+  "generatedAt": "2026-09-09",
+  "records": [
+    {
+      "id": "CA01",
+      "slug": "future-information-design",
+      "xFamily": "検索・参照アーキテクチャ",
+      "yModifier": "先進・実験的",
+      "related": [
+        {
+          "slug": "advanced-guidance",
+          "id": "CA02",
+          "name": "先進案内型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "advanced-information",
+          "id": "CA07",
+          "name": "先進情報型サイト",
+          "relation": "安心寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA02",
+      "slug": "advanced-guidance",
+      "xFamily": "案内・導入アーキテクチャ",
+      "yModifier": "先進・実験的",
+      "related": [
+        {
+          "slug": "future-information-design",
+          "id": "CA01",
+          "name": "未来情報設計型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "growth-service",
+          "id": "CA03",
+          "name": "成長サービス型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "modern-guidance",
+          "id": "CA08",
+          "name": "今らしい案内型サイト",
+          "relation": "安心寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA03",
+      "slug": "growth-service",
+      "xFamily": "行動・成果アーキテクチャ",
+      "yModifier": "先進・実験的",
+      "related": [
+        {
+          "slug": "advanced-guidance",
+          "id": "CA02",
+          "name": "先進案内型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "advanced-brand",
+          "id": "CA04",
+          "name": "先進ブランド型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "refined-conversion",
+          "id": "CA09",
+          "name": "洗練集客型サイト",
+          "relation": "安心寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA04",
+      "slug": "advanced-brand",
+      "xFamily": "価値・根拠アーキテクチャ",
+      "yModifier": "先進・実験的",
+      "related": [
+        {
+          "slug": "growth-service",
+          "id": "CA03",
+          "name": "成長サービス型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "future-brand",
+          "id": "CA05",
+          "name": "未来感ブランド型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "refined-brand",
+          "id": "CA10",
+          "name": "洗練ブランド型サイト",
+          "relation": "安心寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA05",
+      "slug": "future-brand",
+      "xFamily": "魅力・体験アーキテクチャ",
+      "yModifier": "先進・実験的",
+      "related": [
+        {
+          "slug": "advanced-brand",
+          "id": "CA04",
+          "name": "先進ブランド型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "fan-brand",
+          "id": "CA06",
+          "name": "ファン化ブランド型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "modern-appeal",
+          "id": "CA11",
+          "name": "今らしさ魅力型サイト",
+          "relation": "安心寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA06",
+      "slug": "fan-brand",
+      "xFamily": "世界観・編集アーキテクチャ",
+      "yModifier": "先進・実験的",
+      "related": [
+        {
+          "slug": "future-brand",
+          "id": "CA05",
+          "name": "未来感ブランド型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "memorable-brand",
+          "id": "CA12",
+          "name": "印象記憶ブランド型サイト",
+          "relation": "安心寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA07",
+      "slug": "advanced-information",
+      "xFamily": "検索・参照アーキテクチャ",
+      "yModifier": "洗練・先取り",
+      "related": [
+        {
+          "slug": "modern-guidance",
+          "id": "CA08",
+          "name": "今らしい案内型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "clear-information",
+          "id": "CA13",
+          "name": "クリア情報型サイト",
+          "relation": "安心寄りの隣接"
+        },
+        {
+          "slug": "future-information-design",
+          "id": "CA01",
+          "name": "未来情報設計型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA08",
+      "slug": "modern-guidance",
+      "xFamily": "案内・導入アーキテクチャ",
+      "yModifier": "洗練・先取り",
+      "related": [
+        {
+          "slug": "advanced-information",
+          "id": "CA07",
+          "name": "先進情報型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "refined-conversion",
+          "id": "CA09",
+          "name": "洗練集客型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "growth-guidance",
+          "id": "CA14",
+          "name": "成長案内型サイト",
+          "relation": "安心寄りの隣接"
+        },
+        {
+          "slug": "advanced-guidance",
+          "id": "CA02",
+          "name": "先進案内型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA09",
+      "slug": "refined-conversion",
+      "xFamily": "行動・成果アーキテクチャ",
+      "yModifier": "洗練・先取り",
+      "related": [
+        {
+          "slug": "modern-guidance",
+          "id": "CA08",
+          "name": "今らしい案内型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "refined-brand",
+          "id": "CA10",
+          "name": "洗練ブランド型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "clean-practical",
+          "id": "CA15",
+          "name": "すっきり実用型サイト",
+          "relation": "安心寄りの隣接"
+        },
+        {
+          "slug": "growth-service",
+          "id": "CA03",
+          "name": "成長サービス型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA10",
+      "slug": "refined-brand",
+      "xFamily": "価値・根拠アーキテクチャ",
+      "yModifier": "洗練・先取り",
+      "related": [
+        {
+          "slug": "refined-conversion",
+          "id": "CA09",
+          "name": "洗練集客型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "modern-appeal",
+          "id": "CA11",
+          "name": "今らしさ魅力型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "fresh-appeal",
+          "id": "CA16",
+          "name": "新鮮魅力型サイト",
+          "relation": "安心寄りの隣接"
+        },
+        {
+          "slug": "advanced-brand",
+          "id": "CA04",
+          "name": "先進ブランド型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA11",
+      "slug": "modern-appeal",
+      "xFamily": "魅力・体験アーキテクチャ",
+      "yModifier": "洗練・先取り",
+      "related": [
+        {
+          "slug": "refined-brand",
+          "id": "CA10",
+          "name": "洗練ブランド型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "memorable-brand",
+          "id": "CA12",
+          "name": "印象記憶ブランド型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "appeal-communication",
+          "id": "CA17",
+          "name": "魅力発信型サイト",
+          "relation": "安心寄りの隣接"
+        },
+        {
+          "slug": "future-brand",
+          "id": "CA05",
+          "name": "未来感ブランド型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA12",
+      "slug": "memorable-brand",
+      "xFamily": "世界観・編集アーキテクチャ",
+      "yModifier": "洗練・先取り",
+      "related": [
+        {
+          "slug": "modern-appeal",
+          "id": "CA11",
+          "name": "今らしさ魅力型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "distinctive-communication",
+          "id": "CA18",
+          "name": "個性発信型サイト",
+          "relation": "安心寄りの隣接"
+        },
+        {
+          "slug": "fan-brand",
+          "id": "CA06",
+          "name": "ファン化ブランド型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA13",
+      "slug": "clear-information",
+      "xFamily": "検索・参照アーキテクチャ",
+      "yModifier": "今らしい・軽やか",
+      "related": [
+        {
+          "slug": "growth-guidance",
+          "id": "CA14",
+          "name": "成長案内型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "reassuring-information",
+          "id": "CA19",
+          "name": "安心情報型サイト",
+          "relation": "安心寄りの隣接"
+        },
+        {
+          "slug": "advanced-information",
+          "id": "CA07",
+          "name": "先進情報型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA14",
+      "slug": "growth-guidance",
+      "xFamily": "案内・導入アーキテクチャ",
+      "yModifier": "今らしい・軽やか",
+      "related": [
+        {
+          "slug": "clear-information",
+          "id": "CA13",
+          "name": "クリア情報型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "clean-practical",
+          "id": "CA15",
+          "name": "すっきり実用型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "clear-consultation",
+          "id": "CA20",
+          "name": "クリア相談型サイト",
+          "relation": "安心寄りの隣接"
+        },
+        {
+          "slug": "modern-guidance",
+          "id": "CA08",
+          "name": "今らしい案内型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA15",
+      "slug": "clean-practical",
+      "xFamily": "行動・成果アーキテクチャ",
+      "yModifier": "今らしい・軽やか",
+      "related": [
+        {
+          "slug": "growth-guidance",
+          "id": "CA14",
+          "name": "成長案内型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "fresh-appeal",
+          "id": "CA16",
+          "name": "新鮮魅力型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "helpful-guidance",
+          "id": "CA21",
+          "name": "親切案内型サイト",
+          "relation": "安心寄りの隣接"
+        },
+        {
+          "slug": "refined-conversion",
+          "id": "CA09",
+          "name": "洗練集客型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA16",
+      "slug": "fresh-appeal",
+      "xFamily": "価値・根拠アーキテクチャ",
+      "yModifier": "今らしい・軽やか",
+      "related": [
+        {
+          "slug": "clean-practical",
+          "id": "CA15",
+          "name": "すっきり実用型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "appeal-communication",
+          "id": "CA17",
+          "name": "魅力発信型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "friendly-brand",
+          "id": "CA22",
+          "name": "親しみブランド型サイト",
+          "relation": "安心寄りの隣接"
+        },
+        {
+          "slug": "refined-brand",
+          "id": "CA10",
+          "name": "洗練ブランド型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA17",
+      "slug": "appeal-communication",
+      "xFamily": "魅力・体験アーキテクチャ",
+      "yModifier": "今らしい・軽やか",
+      "related": [
+        {
+          "slug": "fresh-appeal",
+          "id": "CA16",
+          "name": "新鮮魅力型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "distinctive-communication",
+          "id": "CA18",
+          "name": "個性発信型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "premium-appeal",
+          "id": "CA23",
+          "name": "上質魅力型サイト",
+          "relation": "安心寄りの隣接"
+        },
+        {
+          "slug": "modern-appeal",
+          "id": "CA11",
+          "name": "今らしさ魅力型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA18",
+      "slug": "distinctive-communication",
+      "xFamily": "世界観・編集アーキテクチャ",
+      "yModifier": "今らしい・軽やか",
+      "related": [
+        {
+          "slug": "appeal-communication",
+          "id": "CA17",
+          "name": "魅力発信型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "empathetic-brand",
+          "id": "CA24",
+          "name": "共感ブランド型サイト",
+          "relation": "安心寄りの隣接"
+        },
+        {
+          "slug": "memorable-brand",
+          "id": "CA12",
+          "name": "印象記憶ブランド型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA19",
+      "slug": "reassuring-information",
+      "xFamily": "検索・参照アーキテクチャ",
+      "yModifier": "標準・明快",
+      "related": [
+        {
+          "slug": "clear-consultation",
+          "id": "CA20",
+          "name": "クリア相談型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "trustworthy-information",
+          "id": "CA25",
+          "name": "信頼情報型サイト",
+          "relation": "安心寄りの隣接"
+        },
+        {
+          "slug": "clear-information",
+          "id": "CA13",
+          "name": "クリア情報型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA20",
+      "slug": "clear-consultation",
+      "xFamily": "案内・導入アーキテクチャ",
+      "yModifier": "標準・明快",
+      "related": [
+        {
+          "slug": "reassuring-information",
+          "id": "CA19",
+          "name": "安心情報型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "helpful-guidance",
+          "id": "CA21",
+          "name": "親切案内型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "classic-service",
+          "id": "CA26",
+          "name": "王道サービス型サイト",
+          "relation": "安心寄りの隣接"
+        },
+        {
+          "slug": "growth-guidance",
+          "id": "CA14",
+          "name": "成長案内型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA21",
+      "slug": "helpful-guidance",
+      "xFamily": "行動・成果アーキテクチャ",
+      "yModifier": "標準・明快",
+      "related": [
+        {
+          "slug": "clear-consultation",
+          "id": "CA20",
+          "name": "クリア相談型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "friendly-brand",
+          "id": "CA22",
+          "name": "親しみブランド型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "sincere-conversion",
+          "id": "CA27",
+          "name": "誠実集客型サイト",
+          "relation": "安心寄りの隣接"
+        },
+        {
+          "slug": "clean-practical",
+          "id": "CA15",
+          "name": "すっきり実用型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA22",
+      "slug": "friendly-brand",
+      "xFamily": "価値・根拠アーキテクチャ",
+      "yModifier": "標準・明快",
+      "related": [
+        {
+          "slug": "helpful-guidance",
+          "id": "CA21",
+          "name": "親切案内型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "premium-appeal",
+          "id": "CA23",
+          "name": "上質魅力型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "reassuring-brand",
+          "id": "CA28",
+          "name": "安心ブランド型サイト",
+          "relation": "安心寄りの隣接"
+        },
+        {
+          "slug": "fresh-appeal",
+          "id": "CA16",
+          "name": "新鮮魅力型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA23",
+      "slug": "premium-appeal",
+      "xFamily": "魅力・体験アーキテクチャ",
+      "yModifier": "標準・明快",
+      "related": [
+        {
+          "slug": "friendly-brand",
+          "id": "CA22",
+          "name": "親しみブランド型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "empathetic-brand",
+          "id": "CA24",
+          "name": "共感ブランド型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "premium-brand",
+          "id": "CA29",
+          "name": "上質ブランド型サイト",
+          "relation": "安心寄りの隣接"
+        },
+        {
+          "slug": "appeal-communication",
+          "id": "CA17",
+          "name": "魅力発信型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA24",
+      "slug": "empathetic-brand",
+      "xFamily": "世界観・編集アーキテクチャ",
+      "yModifier": "標準・明快",
+      "related": [
+        {
+          "slug": "premium-appeal",
+          "id": "CA23",
+          "name": "上質魅力型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "chosen-appeal",
+          "id": "CA30",
+          "name": "選ばれる魅力型サイト",
+          "relation": "安心寄りの隣接"
+        },
+        {
+          "slug": "distinctive-communication",
+          "id": "CA18",
+          "name": "個性発信型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA25",
+      "slug": "trustworthy-information",
+      "xFamily": "検索・参照アーキテクチャ",
+      "yModifier": "堅実・信頼",
+      "related": [
+        {
+          "slug": "classic-service",
+          "id": "CA26",
+          "name": "王道サービス型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "solid-information",
+          "id": "CA31",
+          "name": "堅実情報型サイト",
+          "relation": "安心寄りの隣接"
+        },
+        {
+          "slug": "reassuring-information",
+          "id": "CA19",
+          "name": "安心情報型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA26",
+      "slug": "classic-service",
+      "xFamily": "案内・導入アーキテクチャ",
+      "yModifier": "堅実・信頼",
+      "related": [
+        {
+          "slug": "trustworthy-information",
+          "id": "CA25",
+          "name": "信頼情報型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "sincere-conversion",
+          "id": "CA27",
+          "name": "誠実集客型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "orthodox-guidance",
+          "id": "CA32",
+          "name": "正統案内型サイト",
+          "relation": "安心寄りの隣接"
+        },
+        {
+          "slug": "clear-consultation",
+          "id": "CA20",
+          "name": "クリア相談型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA27",
+      "slug": "sincere-conversion",
+      "xFamily": "行動・成果アーキテクチャ",
+      "yModifier": "堅実・信頼",
+      "related": [
+        {
+          "slug": "classic-service",
+          "id": "CA26",
+          "name": "王道サービス型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "reassuring-brand",
+          "id": "CA28",
+          "name": "安心ブランド型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "trust-acquisition",
+          "id": "CA33",
+          "name": "信頼獲得型サイト",
+          "relation": "安心寄りの隣接"
+        },
+        {
+          "slug": "helpful-guidance",
+          "id": "CA21",
+          "name": "親切案内型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA28",
+      "slug": "reassuring-brand",
+      "xFamily": "価値・根拠アーキテクチャ",
+      "yModifier": "堅実・信頼",
+      "related": [
+        {
+          "slug": "sincere-conversion",
+          "id": "CA27",
+          "name": "誠実集客型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "premium-brand",
+          "id": "CA29",
+          "name": "上質ブランド型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "dignified-brand",
+          "id": "CA34",
+          "name": "品格ブランド型サイト",
+          "relation": "安心寄りの隣接"
+        },
+        {
+          "slug": "friendly-brand",
+          "id": "CA22",
+          "name": "親しみブランド型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA29",
+      "slug": "premium-brand",
+      "xFamily": "魅力・体験アーキテクチャ",
+      "yModifier": "堅実・信頼",
+      "related": [
+        {
+          "slug": "reassuring-brand",
+          "id": "CA28",
+          "name": "安心ブランド型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "chosen-appeal",
+          "id": "CA30",
+          "name": "選ばれる魅力型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "high-trust-brand",
+          "id": "CA35",
+          "name": "高信頼ブランド型サイト",
+          "relation": "安心寄りの隣接"
+        },
+        {
+          "slug": "premium-appeal",
+          "id": "CA23",
+          "name": "上質魅力型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA30",
+      "slug": "chosen-appeal",
+      "xFamily": "世界観・編集アーキテクチャ",
+      "yModifier": "堅実・信頼",
+      "related": [
+        {
+          "slug": "premium-brand",
+          "id": "CA29",
+          "name": "上質ブランド型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "value-communication-brand",
+          "id": "CA36",
+          "name": "価値伝達ブランド型サイト",
+          "relation": "安心寄りの隣接"
+        },
+        {
+          "slug": "empathetic-brand",
+          "id": "CA24",
+          "name": "共感ブランド型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA31",
+      "slug": "solid-information",
+      "xFamily": "検索・参照アーキテクチャ",
+      "yModifier": "王道・端正",
+      "related": [
+        {
+          "slug": "orthodox-guidance",
+          "id": "CA32",
+          "name": "正統案内型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "trustworthy-information",
+          "id": "CA25",
+          "name": "信頼情報型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA32",
+      "slug": "orthodox-guidance",
+      "xFamily": "案内・導入アーキテクチャ",
+      "yModifier": "王道・端正",
+      "related": [
+        {
+          "slug": "solid-information",
+          "id": "CA31",
+          "name": "堅実情報型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "trust-acquisition",
+          "id": "CA33",
+          "name": "信頼獲得型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "classic-service",
+          "id": "CA26",
+          "name": "王道サービス型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA33",
+      "slug": "trust-acquisition",
+      "xFamily": "行動・成果アーキテクチャ",
+      "yModifier": "王道・端正",
+      "related": [
+        {
+          "slug": "orthodox-guidance",
+          "id": "CA32",
+          "name": "正統案内型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "dignified-brand",
+          "id": "CA34",
+          "name": "品格ブランド型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "sincere-conversion",
+          "id": "CA27",
+          "name": "誠実集客型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA34",
+      "slug": "dignified-brand",
+      "xFamily": "価値・根拠アーキテクチャ",
+      "yModifier": "王道・端正",
+      "related": [
+        {
+          "slug": "trust-acquisition",
+          "id": "CA33",
+          "name": "信頼獲得型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "high-trust-brand",
+          "id": "CA35",
+          "name": "高信頼ブランド型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "reassuring-brand",
+          "id": "CA28",
+          "name": "安心ブランド型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA35",
+      "slug": "high-trust-brand",
+      "xFamily": "魅力・体験アーキテクチャ",
+      "yModifier": "王道・端正",
+      "related": [
+        {
+          "slug": "dignified-brand",
+          "id": "CA34",
+          "name": "品格ブランド型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "value-communication-brand",
+          "id": "CA36",
+          "name": "価値伝達ブランド型サイト",
+          "relation": "魅力寄りの隣接"
+        },
+        {
+          "slug": "premium-brand",
+          "id": "CA29",
+          "name": "上質ブランド型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    },
+    {
+      "id": "CA36",
+      "slug": "value-communication-brand",
+      "xFamily": "世界観・編集アーキテクチャ",
+      "yModifier": "王道・端正",
+      "related": [
+        {
+          "slug": "high-trust-brand",
+          "id": "CA35",
+          "name": "高信頼ブランド型サイト",
+          "relation": "情報寄りの隣接"
+        },
+        {
+          "slug": "chosen-appeal",
+          "id": "CA30",
+          "name": "選ばれる魅力型サイト",
+          "relation": "先進寄りの隣接"
+        }
+      ]
+    }
+  ]
+}

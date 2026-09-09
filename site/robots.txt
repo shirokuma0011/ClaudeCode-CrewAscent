@@ -1,0 +1,15 @@
+# クルーアセント robots.txt
+#
+# 【公開前の状態】
+# 現在サイトは公開準備中のため、全ページの <meta name="robots"> が noindex です。
+# 公開時に、下記 Sitemap 行の [DOMAIN] を実ドメインへ差し替え、
+# index 対象ページの meta robots を index,follow へ切り替えてください。
+#
+# result.html は Disallow しません。クロールできないと noindex を読めないため、
+# meta robots で制御します(SEO仕様 §2)。
+
+User-agent: *
+Allow: /
+
+# 公開前に実ドメインへ差し替える(PUBLISH-BLOCKER: 公開ドメイン)
+# Sitemap: https://[DOMAIN]/sitemap.xml
