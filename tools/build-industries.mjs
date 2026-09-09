@@ -73,6 +73,9 @@ const cats = OCC.categories.map((c) => `
     <div class="wrap">
       <div class="idx-head"><span class="idx-head__no">${String(OCC.categories.indexOf(c) + 1).padStart(2, '0')}</span>
         <div><h2>${esc(c.name)}</h2><p>${c.items.length}の業種</p></div></div>
+      <details class="fold occ-fold" open>
+        <summary class="fold__sum"><span class="fold__mk" aria-hidden="true"></span><span class="fold__t"><b>${c.items.length}の業種を見る</b></span></summary>
+        <div class="fold__bd">
       <ul class="occ">${c.items.map((it) => {
         const chips = it.types.map((id) => {
           const t = BY_ID.get(id);
@@ -84,6 +87,8 @@ const cats = OCC.categories.map((c) => `
           <ul class="occ__ts">${chips}</ul>
         </li>`;
       }).join('')}</ul>
+        </div>
+      </details>
     </div>
   </section>`).join('\n');
 
@@ -96,7 +101,7 @@ const jsonld = JSON.stringify({
 const html = HEAD_TOP + `  <title>${esc(title)}</title>\n  <meta name="description" content="${esc(desc)}">\n`
   + AFTER_DESC.replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${esc(title)}">`)
               .replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${esc(desc)}">`)
-  + `<script defer src="assets/js/industries.js?v=20260909"></script>\n`
+  + `<script defer src="assets/js/industries.js?v=20260909b"></script>\n`
   + `<script type="application/ld+json">${jsonld}</script>\n</head>\n<body data-page="industries">\n`
   + HEADER
   + `<nav class="breadcrumb" aria-label="現在地"><div class="wrap"><ol>
@@ -125,6 +130,7 @@ const html = HEAD_TOP + `  <title>${esc(title)}</title>\n  <meta name="descripti
     <div class="wrap">
       <p class="occ-nav__h">分類から探す</p>
       <ol class="occ-nav__l">${nav}</ol>
+      <p class="occ-nav__all"><button type="button" class="btn btn--secondary btn--sm" data-fold-all>すべて閉じる</button></p>
       <div class="occ-find">
         <label for="occ-q">業種名でしぼり込む</label>
         <input type="search" id="occ-q" data-occ-q placeholder="例: 美容室、工務店、SaaS" autocomplete="off">

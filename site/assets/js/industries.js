@@ -49,6 +49,30 @@
     }
   }
 
+  /* 狭い画面では、分類の見出しだけを並べ、押して開く。広い画面は最初から全部開いている。
+     位置指定（#c-…）で来たときは、その分類だけ開いた状態にする */
+  var folds = Array.prototype.slice.call(document.querySelectorAll('details.occ-fold'));
+  var narrow = window.matchMedia && window.matchMedia('(max-width: 759px)').matches;
+  if (narrow && folds.length) {
+    folds.forEach(function (d) { d.open = false; });
+    var all = document.querySelector('[data-fold-all]');
+    if (all) all.textContent = 'すべて開く';
+    if (location.hash) {
+      var t = null;
+      try { t = document.querySelector(location.hash); } catch (e) { t = null; }
+      var d0 = t && t.querySelector && t.querySelector('details.occ-fold');
+      if (d0) d0.open = true;
+    }
+  }
+  /* しぼり込み中は、該当のある分類を開いて見せる */
+  var applyBase = apply;
+  apply = function () {
+    applyBase();
+    if (q.value.trim()) {
+      folds.forEach(function (d) { if (d.querySelector('[data-occ]:not([hidden])')) d.open = true; });
+    }
+  };
+
   q.addEventListener('input', apply);
   q.addEventListener('search', apply);
   apply();

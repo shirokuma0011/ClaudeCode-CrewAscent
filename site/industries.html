@@ -38,7 +38,7 @@
      (window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
    if(!off)r.classList.add('motion');})(document);</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "inLanguage": "ja", "name": "Web診断36の使い方", "description": "Web診断36で、Webサイトで今優先したい方向を36タイプへ整理する手順です。", "step": [{"@type": "HowToStep", "name": "問題数を選ぶ", "text": "16問のかんたん診断か、48問のじっくり診断を選びます。"}, {"@type": "HowToStep", "name": "近いほうを選ぶ", "text": "各問で、今どちらを先にしたいかを5段階から選びます。"}, {"@type": "HowToStep", "name": "座標を読む", "text": "二つの軸と6×6のマップ上に、今回の位置が表示されます。"}, {"@type": "HowToStep", "name": "設計へつなぐ", "text": "ページ構成や文章の方針を、制作の相談でそのまま使えます。"}]}</script>
-<script defer src="assets/js/industries.js?v=20260909"></script>
+<script defer src="assets/js/industries.js?v=20260909b"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"業種からタイプを探す","description":"13の分類と102の業種から、Webサイト設計のタイプを探せます。1つの業種に複数のタイプを示します。どれが正しいかではなく、今どちらを先にしたいかで選んでください。","isPartOf":{"@type":"WebSite","name":"クルーアセント"}}</script>
 </head>
 <body data-page="industries">
@@ -167,6 +167,7 @@
     <div class="wrap">
       <p class="occ-nav__h">分類から探す</p>
       <ol class="occ-nav__l"><li><a href="#c-food">飲食・食品<span>8</span></a></li><li><a href="#c-beauty">美容・健康・リラクゼーション<span>8</span></a></li><li><a href="#c-medical">医療・歯科・薬局<span>7</span></a></li><li><a href="#c-care">介護・福祉・保育<span>6</span></a></li><li><a href="#c-professional">士業・相談業<span>8</span></a></li><li><a href="#c-construction">建設・住宅・不動産<span>9</span></a></li><li><a href="#c-living">修理・生活サービス<span>8</span></a></li><li><a href="#c-school">教室・スクール・習い事<span>8</span></a></li><li><a href="#c-retail">小売・ものづくり・工芸<span>8</span></a></li><li><a href="#c-btob">BtoB・法人サービス<span>9</span></a></li><li><a href="#c-industry">製造・技術・インフラ<span>7</span></a></li><li><a href="#c-culture">宿泊・観光・イベント・文化<span>8</span></a></li><li><a href="#c-creator">クリエイター・専門職個人<span>8</span></a></li></ol>
+      <p class="occ-nav__all"><button type="button" class="btn btn--secondary btn--sm" data-fold-all>すべて閉じる</button></p>
       <div class="occ-find">
         <label for="occ-q">業種名でしぼり込む</label>
         <input type="search" id="occ-q" data-occ-q placeholder="例: 美容室、工務店、SaaS" autocomplete="off">
@@ -179,6 +180,9 @@
     <div class="wrap">
       <div class="idx-head"><span class="idx-head__no">01</span>
         <div><h2>飲食・食品</h2><p>8の業種</p></div></div>
+      <details class="fold occ-fold" open>
+        <summary class="fold__sum"><span class="fold__mk" aria-hidden="true"></span><span class="fold__t"><b>8の業種を見る</b></span></summary>
+        <div class="fold__bd">
       <ul class="occ"><li class="occ__i" data-occ="カフェ" data-occ-kana="かふぇ">
           <p class="occ__n">カフェ</p>
           <ul class="occ__ts"><li><a class="occ__t area-tr" href="type-modern-appeal.html"><span class="occ__id">CA11</span><span>今らしさ魅力型サイト</span></a></li><li><a class="occ__t area-br" href="type-friendly-brand.html"><span class="occ__id">CA22</span><span>親しみブランド型サイト</span></a></li><li><a class="occ__t area-tr" href="type-fresh-appeal.html"><span class="occ__id">CA16</span><span>新鮮魅力型サイト</span></a></li></ul>
@@ -204,6 +208,8 @@
           <p class="occ__n">高級食材・専門卸</p>
           <ul class="occ__ts"><li><a class="occ__t area-br" href="type-premium-brand.html"><span class="occ__id">CA29</span><span>上質ブランド型サイト</span></a></li><li><a class="occ__t area-br" href="type-high-trust-brand.html"><span class="occ__id">CA35</span><span>高信頼ブランド型サイト</span></a></li><li><a class="occ__t area-br" href="type-value-communication-brand.html"><span class="occ__id">CA36</span><span>価値伝達ブランド型サイト</span></a></li></ul>
         </li></ul>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -211,6 +217,9 @@
     <div class="wrap">
       <div class="idx-head"><span class="idx-head__no">02</span>
         <div><h2>美容・健康・リラクゼーション</h2><p>8の業種</p></div></div>
+      <details class="fold occ-fold" open>
+        <summary class="fold__sum"><span class="fold__mk" aria-hidden="true"></span><span class="fold__t"><b>8の業種を見る</b></span></summary>
+        <div class="fold__bd">
       <ul class="occ"><li class="occ__i" data-occ="美容室" data-occ-kana="びようしつ">
           <p class="occ__n">美容室</p>
           <ul class="occ__ts"><li><a class="occ__t area-tr" href="type-modern-appeal.html"><span class="occ__id">CA11</span><span>今らしさ魅力型サイト</span></a></li><li><a class="occ__t area-br" href="type-friendly-brand.html"><span class="occ__id">CA22</span><span>親しみブランド型サイト</span></a></li><li><a class="occ__t area-tr" href="type-distinctive-communication.html"><span class="occ__id">CA18</span><span>個性発信型サイト</span></a></li></ul>
@@ -236,6 +245,8 @@
           <p class="occ__n">ペットサロン・トリミング</p>
           <ul class="occ__ts"><li><a class="occ__t area-br" href="type-friendly-brand.html"><span class="occ__id">CA22</span><span>親しみブランド型サイト</span></a></li><li><a class="occ__t area-bl" href="type-helpful-guidance.html"><span class="occ__id">CA21</span><span>親切案内型サイト</span></a></li><li><a class="occ__t area-tr" href="type-fresh-appeal.html"><span class="occ__id">CA16</span><span>新鮮魅力型サイト</span></a></li></ul>
         </li></ul>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -243,6 +254,9 @@
     <div class="wrap">
       <div class="idx-head"><span class="idx-head__no">03</span>
         <div><h2>医療・歯科・薬局</h2><p>7の業種</p></div></div>
+      <details class="fold occ-fold" open>
+        <summary class="fold__sum"><span class="fold__mk" aria-hidden="true"></span><span class="fold__t"><b>7の業種を見る</b></span></summary>
+        <div class="fold__bd">
       <ul class="occ"><li class="occ__i" data-occ="クリニック" data-occ-kana="くりにっく">
           <p class="occ__n">クリニック</p>
           <ul class="occ__ts"><li><a class="occ__t area-bl" href="type-helpful-guidance.html"><span class="occ__id">CA21</span><span>親切案内型サイト</span></a></li><li><a class="occ__t area-tl" href="type-modern-guidance.html"><span class="occ__id">CA08</span><span>今らしい案内型サイト</span></a></li><li><a class="occ__t area-br" href="type-reassuring-brand.html"><span class="occ__id">CA28</span><span>安心ブランド型サイト</span></a></li></ul>
@@ -265,6 +279,8 @@
           <p class="occ__n">助産院・産後ケア</p>
           <ul class="occ__ts"><li><a class="occ__t area-br" href="type-empathetic-brand.html"><span class="occ__id">CA24</span><span>共感ブランド型サイト</span></a></li><li><a class="occ__t area-br" href="type-reassuring-brand.html"><span class="occ__id">CA28</span><span>安心ブランド型サイト</span></a></li><li><a class="occ__t area-bl" href="type-helpful-guidance.html"><span class="occ__id">CA21</span><span>親切案内型サイト</span></a></li></ul>
         </li></ul>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -272,6 +288,9 @@
     <div class="wrap">
       <div class="idx-head"><span class="idx-head__no">04</span>
         <div><h2>介護・福祉・保育</h2><p>6の業種</p></div></div>
+      <details class="fold occ-fold" open>
+        <summary class="fold__sum"><span class="fold__mk" aria-hidden="true"></span><span class="fold__t"><b>6の業種を見る</b></span></summary>
+        <div class="fold__bd">
       <ul class="occ"><li class="occ__i" data-occ="デイサービス" data-occ-kana="でいさーびす">
           <p class="occ__n">デイサービス</p>
           <ul class="occ__ts"><li><a class="occ__t area-bl" href="type-helpful-guidance.html"><span class="occ__id">CA21</span><span>親切案内型サイト</span></a></li><li><a class="occ__t area-bl" href="type-reassuring-information.html"><span class="occ__id">CA19</span><span>安心情報型サイト</span></a></li><li><a class="occ__t area-br" href="type-reassuring-brand.html"><span class="occ__id">CA28</span><span>安心ブランド型サイト</span></a></li></ul>
@@ -291,6 +310,8 @@
           <p class="occ__n">自然保育・オルタナティブ教育</p>
           <ul class="occ__ts"><li><a class="occ__t area-br" href="type-empathetic-brand.html"><span class="occ__id">CA24</span><span>共感ブランド型サイト</span></a></li><li><a class="occ__t area-tr" href="type-appeal-communication.html"><span class="occ__id">CA17</span><span>魅力発信型サイト</span></a></li><li><a class="occ__t area-br" href="type-reassuring-brand.html"><span class="occ__id">CA28</span><span>安心ブランド型サイト</span></a></li></ul>
         </li></ul>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -298,6 +319,9 @@
     <div class="wrap">
       <div class="idx-head"><span class="idx-head__no">05</span>
         <div><h2>士業・相談業</h2><p>8の業種</p></div></div>
+      <details class="fold occ-fold" open>
+        <summary class="fold__sum"><span class="fold__mk" aria-hidden="true"></span><span class="fold__t"><b>8の業種を見る</b></span></summary>
+        <div class="fold__bd">
       <ul class="occ"><li class="occ__i" data-occ="税理士・会計" data-occ-kana="ぜいりしかいけい">
           <p class="occ__n">税理士・会計</p>
           <ul class="occ__ts"><li><a class="occ__t area-bl" href="type-clear-consultation.html"><span class="occ__id">CA20</span><span>クリア相談型サイト</span></a></li><li><a class="occ__t area-bl" href="type-trustworthy-information.html"><span class="occ__id">CA25</span><span>信頼情報型サイト</span></a></li><li><a class="occ__t area-bl" href="type-orthodox-guidance.html"><span class="occ__id">CA32</span><span>正統案内型サイト</span></a></li></ul>
@@ -323,6 +347,8 @@
           <p class="occ__n">コーチング</p>
           <ul class="occ__ts"><li><a class="occ__t area-tl" href="type-growth-service.html"><span class="occ__id">CA03</span><span>成長サービス型サイト</span></a></li><li><a class="occ__t area-tl" href="type-growth-guidance.html"><span class="occ__id">CA14</span><span>成長案内型サイト</span></a></li><li><a class="occ__t area-tr" href="type-distinctive-communication.html"><span class="occ__id">CA18</span><span>個性発信型サイト</span></a></li></ul>
         </li></ul>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -330,6 +356,9 @@
     <div class="wrap">
       <div class="idx-head"><span class="idx-head__no">06</span>
         <div><h2>建設・住宅・不動産</h2><p>9の業種</p></div></div>
+      <details class="fold occ-fold" open>
+        <summary class="fold__sum"><span class="fold__mk" aria-hidden="true"></span><span class="fold__t"><b>9の業種を見る</b></span></summary>
+        <div class="fold__bd">
       <ul class="occ"><li class="occ__i" data-occ="工務店" data-occ-kana="こうむてん">
           <p class="occ__n">工務店</p>
           <ul class="occ__ts"><li><a class="occ__t area-bl" href="type-classic-service.html"><span class="occ__id">CA26</span><span>王道サービス型サイト</span></a></li><li><a class="occ__t area-bl" href="type-trust-acquisition.html"><span class="occ__id">CA33</span><span>信頼獲得型サイト</span></a></li><li><a class="occ__t area-br" href="type-reassuring-brand.html"><span class="occ__id">CA28</span><span>安心ブランド型サイト</span></a></li></ul>
@@ -358,6 +387,8 @@
           <p class="occ__n">不動産管理</p>
           <ul class="occ__ts"><li><a class="occ__t area-bl" href="type-sincere-conversion.html"><span class="occ__id">CA27</span><span>誠実集客型サイト</span></a></li><li><a class="occ__t area-tl" href="type-clear-information.html"><span class="occ__id">CA13</span><span>クリア情報型サイト</span></a></li><li><a class="occ__t area-bl" href="type-reassuring-information.html"><span class="occ__id">CA19</span><span>安心情報型サイト</span></a></li></ul>
         </li></ul>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -365,6 +396,9 @@
     <div class="wrap">
       <div class="idx-head"><span class="idx-head__no">07</span>
         <div><h2>修理・生活サービス</h2><p>8の業種</p></div></div>
+      <details class="fold occ-fold" open>
+        <summary class="fold__sum"><span class="fold__mk" aria-hidden="true"></span><span class="fold__t"><b>8の業種を見る</b></span></summary>
+        <div class="fold__bd">
       <ul class="occ"><li class="occ__i" data-occ="修理全般" data-occ-kana="しゅうりぜんぱん">
           <p class="occ__n">修理全般</p>
           <ul class="occ__ts"><li><a class="occ__t area-tl" href="type-clean-practical.html"><span class="occ__id">CA15</span><span>すっきり実用型サイト</span></a></li><li><a class="occ__t area-bl" href="type-helpful-guidance.html"><span class="occ__id">CA21</span><span>親切案内型サイト</span></a></li><li><a class="occ__t area-bl" href="type-classic-service.html"><span class="occ__id">CA26</span><span>王道サービス型サイト</span></a></li></ul>
@@ -390,6 +424,8 @@
           <p class="occ__n">設備メンテナンス・点検</p>
           <ul class="occ__ts"><li><a class="occ__t area-bl" href="type-trustworthy-information.html"><span class="occ__id">CA25</span><span>信頼情報型サイト</span></a></li><li><a class="occ__t area-bl" href="type-solid-information.html"><span class="occ__id">CA31</span><span>堅実情報型サイト</span></a></li><li><a class="occ__t area-tl" href="type-advanced-information.html"><span class="occ__id">CA07</span><span>先進情報型サイト</span></a></li></ul>
         </li></ul>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -397,6 +433,9 @@
     <div class="wrap">
       <div class="idx-head"><span class="idx-head__no">08</span>
         <div><h2>教室・スクール・習い事</h2><p>8の業種</p></div></div>
+      <details class="fold occ-fold" open>
+        <summary class="fold__sum"><span class="fold__mk" aria-hidden="true"></span><span class="fold__t"><b>8の業種を見る</b></span></summary>
+        <div class="fold__bd">
       <ul class="occ"><li class="occ__i" data-occ="学習塾" data-occ-kana="がくしゅうじゅく">
           <p class="occ__n">学習塾</p>
           <ul class="occ__ts"><li><a class="occ__t area-br" href="type-chosen-appeal.html"><span class="occ__id">CA30</span><span>選ばれる魅力型サイト</span></a></li><li><a class="occ__t area-tl" href="type-growth-guidance.html"><span class="occ__id">CA14</span><span>成長案内型サイト</span></a></li><li><a class="occ__t area-br" href="type-reassuring-brand.html"><span class="occ__id">CA28</span><span>安心ブランド型サイト</span></a></li></ul>
@@ -422,6 +461,8 @@
           <p class="occ__n">オンライン教育</p>
           <ul class="occ__ts"><li><a class="occ__t area-tl" href="type-advanced-guidance.html"><span class="occ__id">CA02</span><span>先進案内型サイト</span></a></li><li><a class="occ__t area-tl" href="type-future-information-design.html"><span class="occ__id">CA01</span><span>未来情報設計型サイト</span></a></li><li><a class="occ__t area-tl" href="type-growth-guidance.html"><span class="occ__id">CA14</span><span>成長案内型サイト</span></a></li></ul>
         </li></ul>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -429,6 +470,9 @@
     <div class="wrap">
       <div class="idx-head"><span class="idx-head__no">09</span>
         <div><h2>小売・ものづくり・工芸</h2><p>8の業種</p></div></div>
+      <details class="fold occ-fold" open>
+        <summary class="fold__sum"><span class="fold__mk" aria-hidden="true"></span><span class="fold__t"><b>8の業種を見る</b></span></summary>
+        <div class="fold__bd">
       <ul class="occ"><li class="occ__i" data-occ="セレクトショップ" data-occ-kana="せれくとしょっぷ">
           <p class="occ__n">セレクトショップ</p>
           <ul class="occ__ts"><li><a class="occ__t area-tr" href="type-modern-appeal.html"><span class="occ__id">CA11</span><span>今らしさ魅力型サイト</span></a></li><li><a class="occ__t area-tr" href="type-memorable-brand.html"><span class="occ__id">CA12</span><span>印象記憶ブランド型サイト</span></a></li><li><a class="occ__t area-tr" href="type-appeal-communication.html"><span class="occ__id">CA17</span><span>魅力発信型サイト</span></a></li></ul>
@@ -454,6 +498,8 @@
           <p class="occ__n">オーダーメイド（服・靴・家具）</p>
           <ul class="occ__ts"><li><a class="occ__t area-br" href="type-premium-appeal.html"><span class="occ__id">CA23</span><span>上質魅力型サイト</span></a></li><li><a class="occ__t area-br" href="type-premium-brand.html"><span class="occ__id">CA29</span><span>上質ブランド型サイト</span></a></li><li><a class="occ__t area-tr" href="type-distinctive-communication.html"><span class="occ__id">CA18</span><span>個性発信型サイト</span></a></li></ul>
         </li></ul>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -461,6 +507,9 @@
     <div class="wrap">
       <div class="idx-head"><span class="idx-head__no">10</span>
         <div><h2>BtoB・法人サービス</h2><p>9の業種</p></div></div>
+      <details class="fold occ-fold" open>
+        <summary class="fold__sum"><span class="fold__mk" aria-hidden="true"></span><span class="fold__t"><b>9の業種を見る</b></span></summary>
+        <div class="fold__bd">
       <ul class="occ"><li class="occ__i" data-occ="SaaS・ITサービス" data-occ-kana="さーすあいてぃーさーびす">
           <p class="occ__n">SaaS・ITサービス</p>
           <ul class="occ__ts"><li><a class="occ__t area-tl" href="type-future-information-design.html"><span class="occ__id">CA01</span><span>未来情報設計型サイト</span></a></li><li><a class="occ__t area-tl" href="type-advanced-information.html"><span class="occ__id">CA07</span><span>先進情報型サイト</span></a></li><li><a class="occ__t area-tl" href="type-clear-information.html"><span class="occ__id">CA13</span><span>クリア情報型サイト</span></a></li></ul>
@@ -489,6 +538,8 @@
           <p class="occ__n">補助金・助成金の申請サポート</p>
           <ul class="occ__ts"><li><a class="occ__t area-tl" href="type-growth-service.html"><span class="occ__id">CA03</span><span>成長サービス型サイト</span></a></li><li><a class="occ__t area-bl" href="type-clear-consultation.html"><span class="occ__id">CA20</span><span>クリア相談型サイト</span></a></li><li><a class="occ__t area-bl" href="type-orthodox-guidance.html"><span class="occ__id">CA32</span><span>正統案内型サイト</span></a></li></ul>
         </li></ul>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -496,6 +547,9 @@
     <div class="wrap">
       <div class="idx-head"><span class="idx-head__no">11</span>
         <div><h2>製造・技術・インフラ</h2><p>7の業種</p></div></div>
+      <details class="fold occ-fold" open>
+        <summary class="fold__sum"><span class="fold__mk" aria-hidden="true"></span><span class="fold__t"><b>7の業種を見る</b></span></summary>
+        <div class="fold__bd">
       <ul class="occ"><li class="occ__i" data-occ="金属加工・板金" data-occ-kana="きんぞくかこうばんきん">
           <p class="occ__n">金属加工・板金</p>
           <ul class="occ__ts"><li><a class="occ__t area-bl" href="type-solid-information.html"><span class="occ__id">CA31</span><span>堅実情報型サイト</span></a></li><li><a class="occ__t area-bl" href="type-trustworthy-information.html"><span class="occ__id">CA25</span><span>信頼情報型サイト</span></a></li><li><a class="occ__t area-tl" href="type-advanced-information.html"><span class="occ__id">CA07</span><span>先進情報型サイト</span></a></li></ul>
@@ -518,6 +572,8 @@
           <p class="occ__n">AI・先端技術</p>
           <ul class="occ__ts"><li><a class="occ__t area-tr" href="type-future-brand.html"><span class="occ__id">CA05</span><span>未来感ブランド型サイト</span></a></li><li><a class="occ__t area-tr" href="type-advanced-brand.html"><span class="occ__id">CA04</span><span>先進ブランド型サイト</span></a></li><li><a class="occ__t area-tl" href="type-future-information-design.html"><span class="occ__id">CA01</span><span>未来情報設計型サイト</span></a></li></ul>
         </li></ul>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -525,6 +581,9 @@
     <div class="wrap">
       <div class="idx-head"><span class="idx-head__no">12</span>
         <div><h2>宿泊・観光・イベント・文化</h2><p>8の業種</p></div></div>
+      <details class="fold occ-fold" open>
+        <summary class="fold__sum"><span class="fold__mk" aria-hidden="true"></span><span class="fold__t"><b>8の業種を見る</b></span></summary>
+        <div class="fold__bd">
       <ul class="occ"><li class="occ__i" data-occ="旅館・ホテル" data-occ-kana="りょかんほてる">
           <p class="occ__n">旅館・ホテル</p>
           <ul class="occ__ts"><li><a class="occ__t area-br" href="type-premium-appeal.html"><span class="occ__id">CA23</span><span>上質魅力型サイト</span></a></li><li><a class="occ__t area-br" href="type-premium-brand.html"><span class="occ__id">CA29</span><span>上質ブランド型サイト</span></a></li><li><a class="occ__t area-br" href="type-value-communication-brand.html"><span class="occ__id">CA36</span><span>価値伝達ブランド型サイト</span></a></li></ul>
@@ -550,6 +609,8 @@
           <p class="occ__n">地域ブランド・NPO</p>
           <ul class="occ__ts"><li><a class="occ__t area-tr" href="type-appeal-communication.html"><span class="occ__id">CA17</span><span>魅力発信型サイト</span></a></li><li><a class="occ__t area-br" href="type-empathetic-brand.html"><span class="occ__id">CA24</span><span>共感ブランド型サイト</span></a></li><li><a class="occ__t area-tr" href="type-fan-brand.html"><span class="occ__id">CA06</span><span>ファン化ブランド型サイト</span></a></li></ul>
         </li></ul>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -557,6 +618,9 @@
     <div class="wrap">
       <div class="idx-head"><span class="idx-head__no">13</span>
         <div><h2>クリエイター・専門職個人</h2><p>8の業種</p></div></div>
+      <details class="fold occ-fold" open>
+        <summary class="fold__sum"><span class="fold__mk" aria-hidden="true"></span><span class="fold__t"><b>8の業種を見る</b></span></summary>
+        <div class="fold__bd">
       <ul class="occ"><li class="occ__i" data-occ="写真・映像制作" data-occ-kana="しゃしんえいぞうせいさく">
           <p class="occ__n">写真・映像制作</p>
           <ul class="occ__ts"><li><a class="occ__t area-tr" href="type-refined-brand.html"><span class="occ__id">CA10</span><span>洗練ブランド型サイト</span></a></li><li><a class="occ__t area-tr" href="type-distinctive-communication.html"><span class="occ__id">CA18</span><span>個性発信型サイト</span></a></li><li><a class="occ__t area-tl" href="type-refined-conversion.html"><span class="occ__id">CA09</span><span>洗練集客型サイト</span></a></li></ul>
@@ -582,6 +646,8 @@
           <p class="occ__n">音楽・文化</p>
           <ul class="occ__ts"><li><a class="occ__t area-tr" href="type-fan-brand.html"><span class="occ__id">CA06</span><span>ファン化ブランド型サイト</span></a></li><li><a class="occ__t area-tr" href="type-memorable-brand.html"><span class="occ__id">CA12</span><span>印象記憶ブランド型サイト</span></a></li><li><a class="occ__t area-tr" href="type-appeal-communication.html"><span class="occ__id">CA17</span><span>魅力発信型サイト</span></a></li></ul>
         </li></ul>
+        </div>
+      </details>
     </div>
   </section>
 
