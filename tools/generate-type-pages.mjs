@@ -10,14 +10,12 @@
    ===================================================================== */
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath, pathToFileURL } from 'node:url';
-import { SITE, DATA } from './paths.mjs';
+import { fileURLToPath } from 'node:url';
 
 /* Windows では new URL(...).pathname が "/C:/…" になり、パスとして壊れる。
    fileURLToPath を使うと、どのOSでも正しい絶対パスになる。 */
-const ROOT = SITE;   /* 書き出し先・読み取り先は公開ディレクトリ */
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const rd = (p) => fs.readFileSync(path.join(ROOT, p), 'utf8');
-const rdData = (p) => fs.readFileSync(path.join(DATA, p), 'utf8');
 
 /* --- データを読む（ブラウザ用スクリプトをそのまま評価する） --- */
 const g = { window: {} };
@@ -27,9 +25,9 @@ const { TYPES } = g.CrewData;
 
 /* 36タイプ固有の設計（利用場面・読者・判断・見本・検索意図・根拠・隣接）
    正本: data/type-page-specs.json（設計書パッケージ 2026-08-25 由来） */
-const SPECS = JSON.parse(rdData('type-page-specs.json')).records;
+const SPECS = JSON.parse(rd('data/type-page-specs.json')).records;
 const SPEC_BY_ID = new Map(SPECS.map((r) => [r.id, r]));
-const { TYPE_OVERLAYS } = await import(pathToFileURL(path.join(DATA, 'type-overlays.mjs')).href);
+const { TYPE_OVERLAYS } = await import(new URL('../data/type-overlays.mjs', import.meta.url));
 const { specimenFor } = await import(new URL('./specimen-data.mjs', import.meta.url));
 const { buildSpecimen } = await import(new URL('./build-specimen.mjs', import.meta.url));
 
@@ -42,23 +40,6 @@ const X_ORDER = [
   ['position', 'scene', 'specimen', 'tone', 'blueprint', 'proof', 'cta', 'industry', 'search', 'avoid', 'starter', 'consult', 'neighbor'],
   ['position', 'scene', 'specimen', 'tone', 'proof', 'blueprint', 'cta', 'industry', 'avoid', 'search', 'starter', 'consult', 'neighbor'],
 ];
-
-/* 見出しの一覧に出す短い名前。節の見出しそのものより短くする */
-const TITLE_BY_KEY = {
-  position: 'このタイプの位置',
-  scene: 'この設計が効く場面',
-  specimen: '60秒で試せる見本',
-  blueprint: 'サイト設計のたたき台',
-  proof: '公開前に用意する根拠',
-  tone: '文章とデザインの方向',
-  cta: '問い合わせへの導き方',
-  search: '検索の考え方',
-  avoid: '避けたい形と公開後',
-  industry: '合いやすい業種',
-  starter: '見出しのひな形',
-  consult: '相談前に決めること',
-  neighbor: 'となりのタイプとの違い',
-};
 
 /* --- 骨組みを既存ページから取り出す --- */
 const base = rd('diagnosis-guide.html');
@@ -103,42 +84,12 @@ function map6(t) {
     `<p class="tp-map__ax tp-map__ax--x" aria-hidden="true"><span>← 実用・情報</span><span>ブランド・魅力 →</span></p></div>`;
 }
 
-/* 節。先頭3つは開いたまま、残りは畳んで出す。
-   畳んでも中身はHTMLにそのまま入っているので、検索にも載るしJSが無くても開ける。
-   スマホで「見出しは全部見えて、読みたい所だけ開く」形にするための作り。 */
-const OPEN_COUNT = 3;
-
-/* いま組み立てている節の { id, folded }。節を作る関数は13個あって引数を増やすと
-   全部の呼び出しを書き換えることになるので、直前にここへ置いて sec() が読む。
-   1ページずつ順番に組み立てるだけなので、取り違えは起きない。 */
-let CURRENT = null;
-
 function sec(no, title, lead, body, cls) {
-  const id = CURRENT && CURRENT.id;
-  const folded = !!(CURRENT && CURRENT.folded);
-  const head = `<div class="idx-head"><span class="idx-head__no">${no}</span><div><h2>${esc(title)}</h2>${lead ? `<p>${esc(lead)}</p>` : ''}</div></div>`;
-  if (!folded) {
-    return `
-  <section class="sec ${cls || ''} rvsec"${id ? ` id="${id}"` : ''}>
-    <div class="wrap">
-      ${head}
-      ${body}
-    </div>
-  </section>`;
-  }
   return `
-  <section class="sec sec--fold ${cls || ''} rvsec"${id ? ` id="${id}"` : ''}>
+  <section class="sec ${cls || ''} rvsec">
     <div class="wrap">
-      <details class="fold">
-        <summary class="fold__sum">
-          <span class="idx-head__no">${no}</span>
-          <span class="fold__t"><b>${esc(title)}</b>${lead ? `<span class="fold__lead">${esc(lead)}</span>` : ''}</span>
-          <span class="fold__mk" aria-hidden="true"></span>
-        </summary>
-        <div class="fold__bd">
-          ${body}
-        </div>
-      </details>
+      <div class="idx-head"><span class="idx-head__no">${no}</span><div><h2>${esc(title)}</h2>${lead ? `<p>${esc(lead)}</p>` : ''}</div></div>
+      ${body}
     </div>
   </section>`;
 }
@@ -238,30 +189,11 @@ function page(t) {
   };
 
   const order = X_ORDER[t.xIndex];
-  /* 見出しの一覧。畳んだ節へも飛べるようにする（飛び先が閉じていれば main.js が開く） */
-  const secId = (k) => 's-' + k;
-  const rendered = order.map((k, i) => {
-    const no = String(i + 1).padStart(2, '0');
-    CURRENT = { id: secId(k), folded: i >= OPEN_COUNT };
-    const html = S[k](no);
-    CURRENT = null;
-    return { key: k, no, html };
-  });
-  const toc = `
-  <nav class="tp-toc" aria-label="このページの内容">
-    <div class="wrap">
-      <p class="tp-toc__h">このページの内容</p>
-      <ol class="tp-toc__l">${rendered.map((r) => {
-        const title = TITLE_BY_KEY[r.key] || r.key;
-        return `<li><a href="#${secId(r.key)}"><span>${r.no}</span>${esc(title)}</a></li>`;
-      }).join('')}</ol>
-      <button type="button" class="btn btn--secondary btn--sm tp-toc__all" data-fold-all>すべて開く</button>
-    </div>
-  </nav>`;
-  const body = toc + rendered.map((r) => r.html).join('\n');
+  const body = order.map((k, i) => S[k](String(i + 1).padStart(2, '0'))).join('\n');
 
   const closing = `
   <section class="sec sec--ink">
+    <div class="arch" aria-hidden="true">${'<i></i>'.repeat(36)}</div>
     <div class="wrap">
       <div class="closing">
         <h2>このタイプかどうかは、16問で確かめられます。</h2>
@@ -288,6 +220,7 @@ function page(t) {
     `<li><a href="index.html">ホーム</a></li><li><a href="diagnosis.html">診断</a></li>` +
     `<li><a href="types.html">36タイプ</a></li><li aria-current="page">${esc(t.id)}</li></ol></div></nav>\n` +
     `  <main id="main">\n\n  <section class="ah ah--type ah--${ac}">\n` +
+    `      <div class="wrap ah__enwrap"><span class="ah__en rvm"><span>${esc(t.id)}</span></span></div>\n` +
     `      <div class="wrap ah__inner"><div class="ah__main">` +
     `<p class="eyebrow">Web診断36 ／ ${esc(AREA[ac])}</p>` +
     `<h1>${esc(t.name)}</h1><p class="ah__lead">${esc(t.oneLiner)}</p>` +
@@ -296,22 +229,6 @@ function page(t) {
     `<span><b>座標</b>横${t.xIndex + 1} / 縦${t.yIndex + 1}</span></p>` +
     `<p class="ah__meta">この診断はWebサイトで何を先にするかの整理です。性格・能力・適性・成果を測るものではありません。</p>` +
     `</div></div>\n    </section>\n` + body + closing + `\n\n  </main>\n  ` + FOOTER;
-}
-
-/* 一覧ページ用のマップ。36マスすべてがリンク。名前も出して、番号だけに頼らない */
-function map6All() {
-  let cells = '';
-  for (let y = 5; y >= 0; y--) {
-    for (let x = 0; x <= 5; x++) {
-      const o = TYPES.find((z) => z.xIndex === x && z.yIndex === y);
-      cells += `<li class="tp-map__c ${areaClass(x, y)}">`
-        + `<a href="type-${o.slug}.html" title="${esc(o.name)}"><span>${esc(o.id)}</span></a></li>`;
-    }
-  }
-  return `<div class="tp-map tp-map--all"><p class="tp-map__ax tp-map__ax--t" aria-hidden="true">↑ 先進・新しさ</p>`
-    + `<ol class="tp-map__grid" aria-label="36タイプの位置。マスを選ぶとそのタイプのページへ進みます。">${cells}</ol>`
-    + `<p class="tp-map__ax tp-map__ax--b" aria-hidden="true">↓ 王道・安心</p>`
-    + `<p class="tp-map__ax tp-map__ax--x" aria-hidden="true"><span>← 実用・情報</span><span>ブランド・魅力 →</span></p></div>`;
 }
 
 /* --- 一覧ページ --- */
@@ -324,30 +241,6 @@ function hub() {
         `<b>${esc(t.name)}</b><span class="tp-list__s">${esc(t.oneLiner)}</span></a></li>`).join('')}</ul>`,
     i % 2 ? 'sec--paper2' : '')).join('\n');
 
-  /* 一覧に入ってすぐ、36タイプのどれへも行けるようにする。
-     マス（座標で探す）と業種（自分の仕事から探す）の2通りを先頭に置く。 */
-  const finder = `
-  <section class="sec sec--paper2 rvsec" id="find">
-    <div class="wrap">
-      <div class="idx-head"><span class="idx-head__no">00</span>
-        <div><h2>36タイプへ、ここから</h2><p>マスを選ぶか、業種から引くか、どちらでも同じ36タイプに行き着きます。</p></div></div>
-      <div class="tp-find">
-        <div class="tp-find__map">
-          <p class="tp-find__h">マスから選ぶ</p>
-          ${map6All()}
-        </div>
-        <div class="tp-find__occ">
-          <p class="tp-find__h">業種から引く</p>
-          <p>13の分類・102の業種から、よく分かれる方向を引けます。1つの業種に2〜4タイプを示します。
-          どれが正解かではなく、その業種で分かれやすい置き方です。</p>
-          <a class="btn btn--primary" href="industries.html">業種からタイプを探す</a>
-          <p class="note">同じ業種でも、顧客層や売り方が違えば合うタイプは変わります。
-          自分に近いものは、48問または16問の診断で確かめられます。</p>
-        </div>
-      </div>
-    </div>
-  </section>`;
-
   const title = '36タイプ一覧｜Web診断36';
   const desc = 'Web診断36で判定する36タイプの一覧です。二つの軸（実用・情報⇄ブランド・魅力／王道・安心⇄先進・新しさ）を6段階に分け、6×6＝36通りで表します。各タイプの向く状況と設計のたたき台を掲載しています。';
   return HEAD_TOP + `  <title>${esc(title)}</title>\n  <meta name="description" content="${esc(desc)}">\n` +
@@ -357,11 +250,12 @@ function hub() {
     `<nav class="breadcrumb" aria-label="パンくず"><div class="wrap"><ol><li><a href="index.html">ホーム</a></li>` +
     `<li><a href="diagnosis.html">診断</a></li><li aria-current="page">36タイプ一覧</li></ol></div></nav>\n` +
     `  <main id="main">\n\n  <section class="ah ah--editorial">\n` +
+    `      <div class="wrap ah__enwrap"><span class="ah__en rvm"><span>36 Types</span></span></div>\n` +
     `      <div class="wrap ah__inner"><div class="ah__main"><p class="eyebrow">Web診断36</p>` +
     `<h1>36タイプ一覧</h1><p class="ah__lead">二つの軸を6段階に分けるので、6×6＝36通りになります。優劣はありません。` +
     `どれも「今どちらを先にするか」の置き方の違いです。</p>` +
-    `<p class="ah__meta">全36タイプ ／ 4つの領域</p></div></div>\n    </section>\n` + finder + body +
-    `\n  <section class="sec sec--ink">\n` +
+    `<p class="ah__meta">全36タイプ ／ 4つの領域</p></div></div>\n    </section>\n` + body +
+    `\n  <section class="sec sec--ink">\n    <div class="arch" aria-hidden="true">${'<i></i>'.repeat(36)}</div>\n` +
     `    <div class="wrap"><div class="closing"><h2>自分がどこに入るかは、16問で分かります。</h2>` +
     `<p class="lead">2〜3分です。登録もログインも必要ありません。</p>` +
     `<div class="cta-row"><a class="btn btn--primary" href="diagnosis.html">無料診断を始める</a>` +

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  クルーアセント sitemap.xml — tools/build-pages.mjs が自動生成します。手で編集しないでください。
+
+  【公開前の状態】
+  <loc> は公開ドメイン確定後に絶対URLへ差し替えてください(PUBLISH-BLOCKER: 公開ドメイン)。
+
+  含めないもの(SEO仕様 §2/§10):
+   - result.html (noindex,follow)
+   - 404.html
+   - examples.html (掲載可能な実物がないため未作成)
+   - URLパラメータ違い
+  changefreq / priority は使いません。
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://[DOMAIN]/</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://[DOMAIN]/diagnosis.html</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://[DOMAIN]/services.html</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://[DOMAIN]/diagnosis-guide.html</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://[DOMAIN]/website-guide.html</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://[DOMAIN]/guide-first-decisions.html</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://[DOMAIN]/guide-sns-vs-website.html</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://[DOMAIN]/guide-basic-seo.html</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://[DOMAIN]/guide.html</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://[DOMAIN]/plans.html</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://[DOMAIN]/process.html</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://[DOMAIN]/management.html</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://[DOMAIN]/about.html</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://[DOMAIN]/faq.html</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://[DOMAIN]/contact.html</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://[DOMAIN]/privacy.html</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://[DOMAIN]/terms.html</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://[DOMAIN]/commercial-transactions.html</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://[DOMAIN]/types.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-future-information-design.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-advanced-guidance.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-growth-service.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-advanced-brand.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-future-brand.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-fan-brand.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-advanced-information.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-modern-guidance.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-refined-conversion.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-refined-brand.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-modern-appeal.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-memorable-brand.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-clear-information.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-growth-guidance.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-clean-practical.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-fresh-appeal.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-appeal-communication.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-distinctive-communication.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-reassuring-information.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-clear-consultation.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-helpful-guidance.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-friendly-brand.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-premium-appeal.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-empathetic-brand.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-trustworthy-information.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-classic-service.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-sincere-conversion.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-reassuring-brand.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-premium-brand.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-chosen-appeal.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-solid-information.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-orthodox-guidance.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-trust-acquisition.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-dignified-brand.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-high-trust-brand.html</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://[DOMAIN]/type-value-communication-brand.html</loc><lastmod>2026-08-20</lastmod></url>
+</urlset>

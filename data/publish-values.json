@@ -5,16 +5,6 @@
     "推測で埋めないでください。分からない項目は空のままにしてください。"
   ],
 
-  "_switchesReadme": [
-    "index解禁のスイッチです。空欄チェックの対象ではありません（_ で始まる項目は数えません）。",
-    "indexTypePages: 36タイプの個別ページと一覧を検索エンジンに載せるかどうか。",
-    "  基本ページが index になったあと、内容を確認してから true にしてください。",
-    "  基準は tools/publish-stages.mjs に書いてあります。"
-  ],
-  "_switches": {
-    "indexTypePages": false
-  },
-
   "canonicalOrigin": "",
   "googleFormUrl": "",
 

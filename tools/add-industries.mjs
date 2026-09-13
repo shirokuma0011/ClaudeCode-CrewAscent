@@ -20,9 +20,11 @@
    ===================================================================== */
 import fs from 'node:fs';
 import path from 'node:path';
-import { SITE, DATA } from './paths.mjs';
+import { fileURLToPath } from 'node:url';
 
-const ROOT = SITE;   /* 書き出し先・読み取り先は公開ディレクトリ */
+/* Windows では new URL(...).pathname が "/C:/…" になり、パスとして壊れる。
+   fileURLToPath を使うと、どのOSでも正しい絶対パスになる。 */
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const FILE = path.join(ROOT, 'assets/js/diagnosis-data.js');
 const DRY = process.argv.includes('--dry-run');
 

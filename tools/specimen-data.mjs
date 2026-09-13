@@ -21,21 +21,6 @@ function tagsFor(text) {
 
 const take = (a, n) => (Array.isArray(a) ? a.slice(0, n) : []);
 
-/* Y軸(王道・安心 ⇄ 先進・新しさ)の6段階で「見せ方」を変える。
-   操作の種類はX軸で決まる。ここで変えるのは並べ方と説明の書き方だけなので、
-   X6方式 × Y6段階 = 36通りが、それぞれ違う画面になります。 */
-const Y_PRESENT = [
-  { key: 'y1', name: '定番の一覧', hint: '見せ方は、縦に並べて上から順に読む形です。' },
-  { key: 'y2', name: '位置をそろえた表', hint: '見せ方は、番号と項目の位置をそろえた表に近い形です。' },
-  { key: 'y3', name: '横並び', hint: '見せ方は、横に並べて選んだところに下線を引く形です。' },
-  { key: 'y4', name: 'カード', hint: '見せ方は、一つずつ枠で囲むカードの形です。' },
-  { key: 'y5', name: '余白の広い編集', hint: '見せ方は、余白を広く取り一度に一つだけ見せる形です。' },
-  { key: 'y6', name: '角の丸いラベル', hint: '見せ方は、角の丸いラベルで並べる形です。' },
-];
-
-/* X軸の方式ごとに、何を選ぶのかの呼び名（読み上げにもそのまま使う） */
-const X_UNIT = ['条件', '段階', '場面', '印象', '見せる情報', '読む順番'];
-
 export function specimenFor(type, overlay) {
   const d = type.detail || {};
   const flow = d.conversionFlow || [];
@@ -44,19 +29,10 @@ export function specimenFor(type, overlay) {
   const title = (overlay && overlay.specimen) || '設計の見本';
   const kinds = ['filter', 'steps', 'match', 'pair', 'gallery', 'story'];
   const kind = kinds[type.xIndex];
-  /* 見せ方(Y)と、そのタイプ自身の行動・判断。新しい文章は作らず、既にある値を使う */
-  const common = {
-    yIndex: type.yIndex,
-    present: Y_PRESENT[type.yIndex],
-    unit: X_UNIT[type.xIndex],
-    action: (overlay && overlay.specimenAction) || '',
-    secondary: (overlay && overlay.specimenSecondary) || '',
-    decision: (overlay && overlay.decision) || '',
-  };
 
   if (kind === 'filter') {
     return {
-      kind, title, ...common,
+      kind, title,
       conditions: INTENTS.map((i) => i.label),
       rows: take(prio, 7).map((p) => ({
         name: p,
@@ -68,7 +44,7 @@ export function specimenFor(type, overlay) {
 
   if (kind === 'steps') {
     return {
-      kind, title, ...common,
+      kind, title,
       steps: take(flow, 5).map((f, i) => ({
         title: f,
         body: prio[i] ? `この段階で見せる情報: ${prio[i]}` : '前の段階で示した内容を確かめられる状態にします。',
@@ -109,5 +85,5 @@ export function specimenFor(type, overlay) {
     })),
   };
 
-  return { kind, title, ...common, picks: pickSets[kind] || [] };
+  return { kind, title, picks: pickSets[kind] || [] };
 }

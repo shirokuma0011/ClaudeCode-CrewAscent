@@ -1,1013 +1,2563 @@
 {
-  "generatedAt": "2026-09-09",
+  "generatedAt": "2026-08-25",
   "records": [
     {
       "id": "CA01",
       "slug": "future-information-design",
+      "name": "未来情報設計型サイト",
+      "xIndex": 0,
+      "yIndex": 5,
+      "xStep": 1,
+      "yStep": 6,
+      "area": "実用・情報 × 先進・新しさ",
       "xFamily": "検索・参照アーキテクチャ",
       "yModifier": "先進・実験的",
+      "scenario": "架空の複合SaaSを例に、機能、対象条件、料金体系、連携可否を利用者自身が絞り込む場面。",
+      "audience": "複数の条件を照合し、社内へ比較結果を持ち帰りたい実務担当者。",
+      "decision": "自社の条件に合う選択肢があり、詳しい確認へ進む価値があるか。",
+      "specimen": "三つの条件を選ぶと候補と比較表が更新され、用語説明と更新日を同時に確認できる「条件検索コンソール」。",
+      "seoIntent": "情報量の多いサービスサイトを、検索・比較・用語解説で整理する方法を知りたい。",
+      "queries": [
+        "情報量が多い ホームページ 構成",
+        "複雑なサービス サイト 情報設計",
+        "料金 比較表 Webサイト 作り方"
+      ],
+      "primaryIndustries": [
+        "SaaS",
+        "ITプラットフォーム",
+        "研究・分析サービス",
+        "複合型BtoB"
+      ],
       "related": [
         {
-          "slug": "advanced-guidance",
+          "relation": "魅力寄りの隣接",
           "id": "CA02",
           "name": "先進案内型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "advanced-guidance"
         },
         {
-          "slug": "advanced-information",
+          "relation": "安心寄りの隣接",
           "id": "CA07",
           "name": "先進情報型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "advanced-information"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-future-information-design.html",
+        "mainTextCharacters": 3429,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA01_未来情報設計型サイト.md"
     },
     {
       "id": "CA02",
       "slug": "advanced-guidance",
+      "name": "先進案内型サイト",
+      "xIndex": 1,
+      "yIndex": 5,
+      "xStep": 2,
+      "yStep": 6,
+      "area": "実用・情報 × 先進・新しさ",
       "xFamily": "案内・導入アーキテクチャ",
       "yModifier": "先進・実験的",
+      "scenario": "架空のオンライン業務サービスを例に、対象判定から初期設定までを初回利用者が迷わず進む場面。",
+      "audience": "新しい仕組みに関心はあるが、開始条件、準備物、サポート範囲が分からず止まっている人。",
+      "decision": "自分が対象で、開始までの負担と支援内容を受け入れられるか。",
+      "specimen": "対象確認、準備チェック、三段階オンボーディング、途中保存、相談への切替を試せる「利用開始ガイド」。",
+      "seoIntent": "新サービスの使い方や導入手順を、初めての人へ分かりやすく案内する方法を知りたい。",
+      "queries": [
+        "新サービス 使い方 わかりやすい サイト",
+        "オンボーディング Webサイト 設計",
+        "初回利用 案内ページ 作り方"
+      ],
+      "primaryIndustries": [
+        "新規ITサービス",
+        "オンライン教育",
+        "HRテック",
+        "DX支援"
+      ],
       "related": [
         {
-          "slug": "future-information-design",
+          "relation": "情報寄りの隣接",
           "id": "CA01",
           "name": "未来情報設計型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "future-information-design"
         },
         {
-          "slug": "growth-service",
+          "relation": "魅力寄りの隣接",
           "id": "CA03",
           "name": "成長サービス型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "growth-service"
         },
         {
-          "slug": "modern-guidance",
+          "relation": "安心寄りの隣接",
           "id": "CA08",
           "name": "今らしい案内型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "modern-guidance"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-advanced-guidance.html",
+        "mainTextCharacters": 3400,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA02_先進案内型サイト.md"
     },
     {
       "id": "CA03",
       "slug": "growth-service",
+      "name": "成長サービス型サイト",
+      "xIndex": 2,
+      "yIndex": 5,
+      "xStep": 3,
+      "yStep": 6,
+      "area": "実用・情報 × 先進・新しさ",
       "xFamily": "行動・成果アーキテクチャ",
       "yModifier": "先進・実験的",
+      "scenario": "架空の新規事業伴走サービスを例に、最初の小さな契約から評価、次段階までを検討する場面。",
+      "audience": "課題はあるが、大きな契約の前に範囲、期間、共同作業の内容を確かめたい責任者。",
+      "decision": "最初の一歩として依頼できる範囲があり、自社も必要な作業を担えるか。",
+      "specimen": "現在地、最初の支援、確認指標、次段階を分けた「90日ロードマップ」と、保証しない事項の対照表示。",
+      "seoIntent": "成長支援サービスの工程と役割分担を、成果保証に見せず説明する方法を知りたい。",
+      "queries": [
+        "伴走支援 サービスページ 構成",
+        "コーチング ホームページ 説明 順番",
+        "成果保証しない 支援サービス 見せ方"
+      ],
+      "primaryIndustries": [
+        "新規事業支援",
+        "BtoBサービス",
+        "コーチング",
+        "採用支援"
+      ],
       "related": [
         {
-          "slug": "advanced-guidance",
+          "relation": "情報寄りの隣接",
           "id": "CA02",
           "name": "先進案内型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "advanced-guidance"
         },
         {
-          "slug": "advanced-brand",
+          "relation": "魅力寄りの隣接",
           "id": "CA04",
           "name": "先進ブランド型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "advanced-brand"
         },
         {
-          "slug": "refined-conversion",
+          "relation": "安心寄りの隣接",
           "id": "CA09",
           "name": "洗練集客型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "refined-conversion"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-growth-service.html",
+        "mainTextCharacters": 3338,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA03_成長サービス型サイト.md"
     },
     {
       "id": "CA04",
       "slug": "advanced-brand",
-      "xFamily": "価値・根拠アーキテクチャ",
+      "name": "先進ブランド型サイト",
+      "xIndex": 3,
+      "yIndex": 5,
+      "xStep": 4,
+      "yStep": 6,
+      "area": "ブランド・魅力 × 先進・新しさ",
+      "xFamily": "価値・根拠ブリッジ",
       "yModifier": "先進・実験的",
+      "scenario": "架空の研究開発企業を例に、新しい技術を顧客価値、利用場面、現在の提供範囲へ翻訳する場面。",
+      "audience": "先進性に惹かれつつ、技術の実用性、現在地、協業可能性まで確認したい法人担当者。",
+      "decision": "技術思想に共感でき、現在依頼できる具体的な接点があるか。",
+      "specimen": "技術要素を選ぶと利用価値、実装段階、協業窓口へつながる「技術から価値への変換図」。",
+      "seoIntent": "先端技術企業が技術説明とブランド表現を両立するサイト設計を知りたい。",
+      "queries": [
+        "技術会社 ブランドサイト 構成",
+        "研究開発 ホームページ 伝え方",
+        "先端技術 わかりやすい Webデザイン"
+      ],
+      "primaryIndustries": [
+        "テクノロジー企業",
+        "デザインスタジオ",
+        "先進製造業",
+        "R&D"
+      ],
       "related": [
         {
-          "slug": "growth-service",
+          "relation": "情報寄りの隣接",
           "id": "CA03",
           "name": "成長サービス型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "growth-service"
         },
         {
-          "slug": "future-brand",
+          "relation": "魅力寄りの隣接",
           "id": "CA05",
           "name": "未来感ブランド型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "future-brand"
         },
         {
-          "slug": "refined-brand",
+          "relation": "安心寄りの隣接",
           "id": "CA10",
           "name": "洗練ブランド型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "refined-brand"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-advanced-brand.html",
+        "mainTextCharacters": 3441,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA04_先進ブランド型サイト.md"
     },
     {
       "id": "CA05",
       "slug": "future-brand",
+      "name": "未来感ブランド型サイト",
+      "xIndex": 4,
+      "yIndex": 5,
+      "xStep": 5,
+      "yStep": 6,
+      "area": "ブランド・魅力 × 先進・新しさ",
       "xFamily": "魅力・体験アーキテクチャ",
       "yModifier": "先進・実験的",
+      "scenario": "架空の未来モビリティ事業を例に、長期ビジョンと現在の試作、次の検証段階を読み分ける場面。",
+      "audience": "未来像へ関心を持つ投資・採用・協業候補のうち、構想だけでなく現在の実行状況を見たい人。",
+      "decision": "掲げる未来と現在の活動に一貫性があり、関わる具体的な入口があるか。",
+      "specimen": "未来像、現在の実証、次の節目を時間軸で切り替える「現在から未来への検証タイムライン」。",
+      "seoIntent": "未来ビジョンを誇張せず、現在の取り組みと結びつけて伝えるブランドサイト設計を知りたい。",
+      "queries": [
+        "未来 ビジョン ブランドサイト 作り方",
+        "研究開発 構想 現在地 伝え方",
+        "先進企業 コーポレートサイト 表現"
+      ],
+      "primaryIndustries": [
+        "AI・先端技術",
+        "宇宙・モビリティ",
+        "研究開発",
+        "未来都市"
+      ],
       "related": [
         {
-          "slug": "advanced-brand",
+          "relation": "情報寄りの隣接",
           "id": "CA04",
           "name": "先進ブランド型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "advanced-brand"
         },
         {
-          "slug": "fan-brand",
+          "relation": "魅力寄りの隣接",
           "id": "CA06",
           "name": "ファン化ブランド型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "fan-brand"
         },
         {
-          "slug": "modern-appeal",
+          "relation": "安心寄りの隣接",
           "id": "CA11",
           "name": "今らしさ魅力型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "modern-appeal"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-future-brand.html",
+        "mainTextCharacters": 3418,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA05_未来感ブランド型サイト.md"
     },
     {
       "id": "CA06",
       "slug": "fan-brand",
+      "name": "ファン化ブランド型サイト",
+      "xIndex": 5,
+      "yIndex": 5,
+      "xStep": 6,
+      "yStep": 6,
+      "area": "ブランド・魅力 × 先進・新しさ",
       "xFamily": "世界観・編集アーキテクチャ",
       "yModifier": "先進・実験的",
+      "scenario": "架空のD2C文化ブランドを例に、商品購入だけでなく制作背景、参加企画、継続発信へ関わる場面。",
+      "audience": "価値観や作り手へ共感し、購入、共有、イベント参加など自分に合う関わり方を選びたい人。",
+      "decision": "このブランドを継続して追い、参加または購入する理由が自分にあるか。",
+      "specimen": "ブランド宣言、最新ドロップ、制作ノート、参加方法が連動する「コミュニティ・ドロップ画面」。",
+      "seoIntent": "ファンとの継続関係を、押しつけずに育てるブランドサイトの構成を知りたい。",
+      "queries": [
+        "ファンを増やす ブランドサイト 構成",
+        "D2C コミュニティ Webサイト",
+        "クリエイターブランド ホームページ 作り方"
+      ],
+      "primaryIndustries": [
+        "D2Cブランド",
+        "クリエイター",
+        "音楽・文化",
+        "コミュニティ"
+      ],
       "related": [
         {
-          "slug": "future-brand",
+          "relation": "情報寄りの隣接",
           "id": "CA05",
           "name": "未来感ブランド型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "future-brand"
         },
         {
-          "slug": "memorable-brand",
+          "relation": "安心寄りの隣接",
           "id": "CA12",
           "name": "印象記憶ブランド型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "memorable-brand"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-fan-brand.html",
+        "mainTextCharacters": 3453,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA06_ファン化ブランド型サイト.md"
     },
     {
       "id": "CA07",
       "slug": "advanced-information",
+      "name": "先進情報型サイト",
+      "xIndex": 0,
+      "yIndex": 4,
+      "xStep": 1,
+      "yStep": 5,
+      "area": "実用・情報 × 先進・新しさ",
       "xFamily": "検索・参照アーキテクチャ",
-      "yModifier": "洗練・先取り",
+      "yModifier": "先進・編集的",
+      "scenario": "架空の産業機器サービスを例に、専門仕様、対応規格、用途、保守条件を比較する場面。",
+      "audience": "概要だけ知りたい意思決定者と、仕様を確認したい技術担当者。",
+      "decision": "要求仕様へ適合し、詳細確認や見積もりへ進める候補か。",
+      "specimen": "概要と詳細を切り替え、仕様差と用語を同じ場所で確認する「技術比較・用語パネル」。",
+      "seoIntent": "専門情報を初学者と担当者の双方へ伝える現代的な情報設計を知りたい。",
+      "queries": [
+        "専門情報 ホームページ わかりやすく",
+        "技術仕様 比較ページ 作り方",
+        "BtoB 用語集 Webサイト"
+      ],
+      "primaryIndustries": [
+        "ITインフラ",
+        "技術コンサル",
+        "産業機器",
+        "医療技術"
+      ],
       "related": [
         {
-          "slug": "modern-guidance",
+          "relation": "魅力寄りの隣接",
           "id": "CA08",
           "name": "今らしい案内型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "modern-guidance"
         },
         {
-          "slug": "clear-information",
+          "relation": "安心寄りの隣接",
           "id": "CA13",
           "name": "クリア情報型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "clear-information"
         },
         {
-          "slug": "future-information-design",
+          "relation": "先進寄りの隣接",
           "id": "CA01",
           "name": "未来情報設計型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "future-information-design"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-advanced-information.html",
+        "mainTextCharacters": 3330,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA07_先進情報型サイト.md"
     },
     {
       "id": "CA08",
       "slug": "modern-guidance",
+      "name": "今らしい案内型サイト",
+      "xIndex": 1,
+      "yIndex": 4,
+      "xStep": 2,
+      "yStep": 5,
+      "area": "実用・情報 × 先進・新しさ",
       "xFamily": "案内・導入アーキテクチャ",
-      "yModifier": "洗練・先取り",
+      "yModifier": "先進・編集的",
+      "scenario": "架空の予約制クリニックを例に、対象、料金、予約、持ち物を移動中のスマートフォンで確認する場面。",
+      "audience": "新しい見た目を好むが、利用直前の情報を短時間で確かめたい一般利用者。",
+      "decision": "自分が対象で、無理なく予約・来店できるか。",
+      "specimen": "状況選択から予約前チェック、地図、外部予約へ進む「スマート初回案内」。",
+      "seoIntent": "日常サービスの初回案内を、軽やかなスマートフォン体験へ整える方法を知りたい。",
+      "queries": [
+        "初めての方 ページ 構成",
+        "予約サイト 導線 スマホ",
+        "クリニック ホームページ 案内 わかりやすい"
+      ],
+      "primaryIndustries": [
+        "クリニック",
+        "教室",
+        "生活サービス",
+        "オンライン相談"
+      ],
       "related": [
         {
-          "slug": "advanced-information",
+          "relation": "情報寄りの隣接",
           "id": "CA07",
           "name": "先進情報型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "advanced-information"
         },
         {
-          "slug": "refined-conversion",
+          "relation": "魅力寄りの隣接",
           "id": "CA09",
           "name": "洗練集客型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "refined-conversion"
         },
         {
-          "slug": "growth-guidance",
+          "relation": "安心寄りの隣接",
           "id": "CA14",
           "name": "成長案内型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "growth-guidance"
         },
         {
-          "slug": "advanced-guidance",
+          "relation": "先進寄りの隣接",
           "id": "CA02",
           "name": "先進案内型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "advanced-guidance"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-modern-guidance.html",
+        "mainTextCharacters": 3296,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA08_今らしい案内型サイト.md"
     },
     {
       "id": "CA09",
       "slug": "refined-conversion",
+      "name": "洗練集客型サイト",
+      "xIndex": 2,
+      "yIndex": 4,
+      "xStep": 3,
+      "yStep": 5,
+      "area": "実用・情報 × 先進・新しさ",
       "xFamily": "行動・成果アーキテクチャ",
-      "yModifier": "洗練・先取り",
+      "yModifier": "先進・編集的",
+      "scenario": "架空のWeb制作事務所を例に、課題、対応範囲、費用の入口を確認して相談する場面。",
+      "audience": "比較検討中で、強い営業を避けながら自分の課題を理解してくれる依頼先を探す人。",
+      "decision": "課題とサービスが合い、相談しても無理に契約を迫られないか。",
+      "specimen": "課題を選ぶと対応範囲、確認事項、相談の準備が現れる「相談前セルフチェック」。",
+      "seoIntent": "洗練された印象を保ちながら、自然な問い合わせ導線を作る方法を知りたい。",
+      "queries": [
+        "問い合わせにつながる ホームページ 構成",
+        "売り込まない Webサイト 導線",
+        "BtoB サービス 相談フォーム 導線"
+      ],
+      "primaryIndustries": [
+        "Web制作",
+        "コンサル",
+        "士業",
+        "リフォーム",
+        "BtoBサービス"
+      ],
       "related": [
         {
-          "slug": "modern-guidance",
+          "relation": "情報寄りの隣接",
           "id": "CA08",
           "name": "今らしい案内型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "modern-guidance"
         },
         {
-          "slug": "refined-brand",
+          "relation": "魅力寄りの隣接",
           "id": "CA10",
           "name": "洗練ブランド型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "refined-brand"
         },
         {
-          "slug": "clean-practical",
+          "relation": "安心寄りの隣接",
           "id": "CA15",
           "name": "すっきり実用型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "clean-practical"
         },
         {
-          "slug": "growth-service",
+          "relation": "先進寄りの隣接",
           "id": "CA03",
           "name": "成長サービス型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "growth-service"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-refined-conversion.html",
+        "mainTextCharacters": 3339,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA09_洗練集客型サイト.md"
     },
     {
       "id": "CA10",
       "slug": "refined-brand",
-      "xFamily": "価値・根拠アーキテクチャ",
-      "yModifier": "洗練・先取り",
+      "name": "洗練ブランド型サイト",
+      "xIndex": 3,
+      "yIndex": 4,
+      "xStep": 4,
+      "yStep": 5,
+      "area": "ブランド・魅力 × 先進・新しさ",
+      "xFamily": "価値・根拠ブリッジ",
+      "yModifier": "先進・編集的",
+      "scenario": "架空の建築設計事務所を例に、作風、考え方、実績の担当範囲、予算条件を見て相談する場面。",
+      "audience": "価格だけでなく、審美眼、提案姿勢、相性を重視する高関与の個人・法人。",
+      "decision": "この作風と進め方が自分の依頼に合い、予算と条件が現実的か。",
+      "specimen": "思想、代表プロジェクト、設計判断、依頼条件を一つの流れで見せる「プロジェクト編集ビュー」。",
+      "seoIntent": "上質なブランド表現と依頼判断に必要な情報を両立する方法を知りたい。",
+      "queries": [
+        "設計事務所 ブランドサイト 構成",
+        "上質な ホームページ 情報設計",
+        "作品と料金 両立 Webデザイン"
+      ],
+      "primaryIndustries": [
+        "建築設計",
+        "デザイン事務所",
+        "高付加価値コンサル",
+        "写真・映像"
+      ],
       "related": [
         {
-          "slug": "refined-conversion",
+          "relation": "情報寄りの隣接",
           "id": "CA09",
           "name": "洗練集客型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "refined-conversion"
         },
         {
-          "slug": "modern-appeal",
+          "relation": "魅力寄りの隣接",
           "id": "CA11",
           "name": "今らしさ魅力型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "modern-appeal"
         },
         {
-          "slug": "fresh-appeal",
+          "relation": "安心寄りの隣接",
           "id": "CA16",
           "name": "新鮮魅力型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "fresh-appeal"
         },
         {
-          "slug": "advanced-brand",
+          "relation": "先進寄りの隣接",
           "id": "CA04",
           "name": "先進ブランド型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "advanced-brand"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-refined-brand.html",
+        "mainTextCharacters": 3381,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA10_洗練ブランド型サイト.md"
     },
     {
       "id": "CA11",
       "slug": "modern-appeal",
+      "name": "今らしさ魅力型サイト",
+      "xIndex": 4,
+      "yIndex": 4,
+      "xStep": 5,
+      "yStep": 5,
+      "area": "ブランド・魅力 × 先進・新しさ",
       "xFamily": "魅力・体験アーキテクチャ",
-      "yModifier": "洗練・先取り",
+      "yModifier": "先進・編集的",
+      "scenario": "架空の美容室を例に、スタイル、価格、担当者、空き状況をSNSから来た利用者が確認する場面。",
+      "audience": "雰囲気が自分に合うかを重視しつつ、来店条件を短時間で決めたい人。",
+      "decision": "期待するスタイルと価格帯が合い、希望日に予約できるか。",
+      "specimen": "スタイル写真からメニュー、担当者、予約条件へ短く移る「スタイル起点予約ビュー」。",
+      "seoIntent": "写真の魅力と料金・予約情報を近くに置く店舗サイトの作り方を知りたい。",
+      "queries": [
+        "美容室 ホームページ 写真 予約 導線",
+        "店舗サイト 今らしい デザイン",
+        "メニュー 料金 写真 Webサイト"
+      ],
+      "primaryIndustries": [
+        "美容室",
+        "カフェ",
+        "サロン",
+        "フードブランド"
+      ],
       "related": [
         {
-          "slug": "refined-brand",
+          "relation": "情報寄りの隣接",
           "id": "CA10",
           "name": "洗練ブランド型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "refined-brand"
         },
         {
-          "slug": "memorable-brand",
+          "relation": "魅力寄りの隣接",
           "id": "CA12",
           "name": "印象記憶ブランド型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "memorable-brand"
         },
         {
-          "slug": "appeal-communication",
+          "relation": "安心寄りの隣接",
           "id": "CA17",
           "name": "魅力発信型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "appeal-communication"
         },
         {
-          "slug": "future-brand",
+          "relation": "先進寄りの隣接",
           "id": "CA05",
           "name": "未来感ブランド型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "future-brand"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-modern-appeal.html",
+        "mainTextCharacters": 3312,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA11_今らしさ魅力型サイト.md"
     },
     {
       "id": "CA12",
       "slug": "memorable-brand",
+      "name": "印象記憶ブランド型サイト",
+      "xIndex": 5,
+      "yIndex": 4,
+      "xStep": 6,
+      "yStep": 5,
+      "area": "ブランド・魅力 × 先進・新しさ",
       "xFamily": "世界観・編集アーキテクチャ",
-      "yModifier": "洗練・先取り",
+      "yModifier": "先進・編集的",
+      "scenario": "架空のブティックホテルを例に、一夜の体験、空間、背景物語から予約条件へ進む場面。",
+      "audience": "比較表より固有の世界観を重視し、記憶に残る場所や作品を探す人。",
+      "decision": "この世界観へ時間と費用を使いたいと感じ、実際の利用条件も受け入れられるか。",
+      "specimen": "到着から滞在、朝までを場面ごとに読む「一夜の編集ストーリー」と静かな予約入口。",
+      "seoIntent": "強い世界観を保ちながら、操作性と予約情報を失わないブランドサイト設計を知りたい。",
+      "queries": [
+        "世界観のある ブランドサイト 構成",
+        "印象に残る ホームページ デザイン",
+        "ホテル ストーリー 予約 導線"
+      ],
+      "primaryIndustries": [
+        "ファッション",
+        "アーティスト",
+        "クリエイティブスタジオ",
+        "ブティックホテル"
+      ],
       "related": [
         {
-          "slug": "modern-appeal",
+          "relation": "情報寄りの隣接",
           "id": "CA11",
           "name": "今らしさ魅力型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "modern-appeal"
         },
         {
-          "slug": "distinctive-communication",
+          "relation": "安心寄りの隣接",
           "id": "CA18",
           "name": "個性発信型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "distinctive-communication"
         },
         {
-          "slug": "fan-brand",
+          "relation": "先進寄りの隣接",
           "id": "CA06",
           "name": "ファン化ブランド型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "fan-brand"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-memorable-brand.html",
+        "mainTextCharacters": 3370,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA12_印象記憶ブランド型サイト.md"
     },
     {
       "id": "CA13",
       "slug": "clear-information",
+      "name": "クリア情報型サイト",
+      "xIndex": 0,
+      "yIndex": 3,
+      "xStep": 1,
+      "yStep": 4,
+      "area": "実用・情報 × 先進・新しさ",
       "xFamily": "検索・参照アーキテクチャ",
-      "yModifier": "今らしい・軽やか",
+      "yModifier": "新鮮・軽快",
+      "scenario": "架空の法人研修サービスを例に、対象、内容、料金、実施形式を比較する場面。",
+      "audience": "複数候補を短時間で比較し、社内説明に必要な条件を持ち帰りたい担当者。",
+      "decision": "対象者、実施条件、予算に合う研修があるか。",
+      "specimen": "対象人数と目的を選ぶと、対応プランの条件差が見える「研修比較シート」。",
+      "seoIntent": "料金や対応範囲を明快に比較できるサービスページの構成を知りたい。",
+      "queries": [
+        "サービス 比較表 ホームページ",
+        "料金 対応範囲 わかりやすい サイト",
+        "法人研修 ページ 構成"
+      ],
+      "primaryIndustries": [
+        "BtoBサービス",
+        "研修",
+        "IT支援",
+        "保険代理"
+      ],
       "related": [
         {
-          "slug": "growth-guidance",
+          "relation": "魅力寄りの隣接",
           "id": "CA14",
           "name": "成長案内型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "growth-guidance"
         },
         {
-          "slug": "reassuring-information",
+          "relation": "安心寄りの隣接",
           "id": "CA19",
           "name": "安心情報型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "reassuring-information"
         },
         {
-          "slug": "advanced-information",
+          "relation": "先進寄りの隣接",
           "id": "CA07",
           "name": "先進情報型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "advanced-information"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-clear-information.html",
+        "mainTextCharacters": 3332,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA13_クリア情報型サイト.md"
     },
     {
       "id": "CA14",
       "slug": "growth-guidance",
+      "name": "成長案内型サイト",
+      "xIndex": 1,
+      "yIndex": 3,
+      "xStep": 2,
+      "yStep": 4,
+      "area": "実用・情報 × 先進・新しさ",
       "xFamily": "案内・導入アーキテクチャ",
-      "yModifier": "今らしい・軽やか",
+      "yModifier": "新鮮・軽快",
+      "scenario": "架空の語学教室を例に、現在のレベルから学習段階、期間、支援方法を選ぶ場面。",
+      "audience": "始めたいが、自分の現在地と続け方が分からずコース選択に迷う初心者・再挑戦者。",
+      "decision": "自分の段階に合う入口があり、必要な時間と努力を続けられるか。",
+      "specimen": "現在地を選ぶと次の三段階と支援内容が出る「学習ロードマップ」。",
+      "seoIntent": "利用者の成長段階に合わせてコースを案内するサイト設計を知りたい。",
+      "queries": [
+        "スクール コース 選び方 ページ",
+        "学習ロードマップ ホームページ",
+        "初心者 向け サービス案内 構成"
+      ],
+      "primaryIndustries": [
+        "スクール",
+        "コーチング",
+        "キャリア支援",
+        "研修"
+      ],
       "related": [
         {
-          "slug": "clear-information",
+          "relation": "情報寄りの隣接",
           "id": "CA13",
           "name": "クリア情報型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "clear-information"
         },
         {
-          "slug": "clean-practical",
+          "relation": "魅力寄りの隣接",
           "id": "CA15",
           "name": "すっきり実用型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "clean-practical"
         },
         {
-          "slug": "clear-consultation",
+          "relation": "安心寄りの隣接",
           "id": "CA20",
           "name": "クリア相談型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "clear-consultation"
         },
         {
-          "slug": "modern-guidance",
+          "relation": "先進寄りの隣接",
           "id": "CA08",
           "name": "今らしい案内型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "modern-guidance"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-growth-guidance.html",
+        "mainTextCharacters": 3289,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA14_成長案内型サイト.md"
     },
     {
       "id": "CA15",
       "slug": "clean-practical",
+      "name": "すっきり実用型サイト",
+      "xIndex": 2,
+      "yIndex": 3,
+      "xStep": 3,
+      "yStep": 4,
+      "area": "実用・情報 × 先進・新しさ",
       "xFamily": "行動・成果アーキテクチャ",
-      "yModifier": "今らしい・軽やか",
+      "yModifier": "新鮮・軽快",
+      "scenario": "架空の地域修理サービスを例に、症状、対応地域、料金、訪問可能時間を急いで確認する場面。",
+      "audience": "長い説明より、今頼めるかと総額の目安をすぐ知りたい生活者。",
+      "decision": "自分の依頼が対象で、時間と費用を受け入れられるか。",
+      "specimen": "症状と地域を選ぶと料金内訳、到着目安、対象外が表示される「即時確認パネル」。",
+      "seoIntent": "地域サービスの料金、対応範囲、連絡方法を最短で伝える構成を知りたい。",
+      "queries": [
+        "地域サービス ホームページ 必要情報",
+        "修理 料金 ページ わかりやすい",
+        "問い合わせまで 短い 導線"
+      ],
+      "primaryIndustries": [
+        "修理",
+        "清掃",
+        "整体",
+        "地域店舗"
+      ],
       "related": [
         {
-          "slug": "growth-guidance",
+          "relation": "情報寄りの隣接",
           "id": "CA14",
           "name": "成長案内型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "growth-guidance"
         },
         {
-          "slug": "fresh-appeal",
+          "relation": "魅力寄りの隣接",
           "id": "CA16",
           "name": "新鮮魅力型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "fresh-appeal"
         },
         {
-          "slug": "helpful-guidance",
+          "relation": "安心寄りの隣接",
           "id": "CA21",
           "name": "親切案内型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "helpful-guidance"
         },
         {
-          "slug": "refined-conversion",
+          "relation": "先進寄りの隣接",
           "id": "CA09",
           "name": "洗練集客型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "refined-conversion"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-clean-practical.html",
+        "mainTextCharacters": 3243,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA15_すっきり実用型サイト.md"
     },
     {
       "id": "CA16",
       "slug": "fresh-appeal",
-      "xFamily": "価値・根拠アーキテクチャ",
-      "yModifier": "今らしい・軽やか",
+      "name": "新鮮魅力型サイト",
+      "xIndex": 3,
+      "yIndex": 3,
+      "xStep": 4,
+      "yStep": 4,
+      "area": "ブランド・魅力 × 先進・新しさ",
+      "xFamily": "価値・根拠ブリッジ",
+      "yModifier": "新鮮・軽快",
+      "scenario": "架空の花店を例に、季節商品、用途、受取日、価格を見て予約する場面。",
+      "audience": "新鮮な提案を楽しみつつ、購入条件も迷わず確認したい生活者。",
+      "decision": "目的に合う現在の商品があり、希望日に受け取れるか。",
+      "specimen": "季節特集から用途、価格、受取条件へつながる「シーズン・セレクター」。",
+      "seoIntent": "定番の使いやすさに季節の新鮮さを加える店舗サイトの構成を知りたい。",
+      "queries": [
+        "季節商品 ホームページ 更新",
+        "店舗サイト 新鮮な デザイン",
+        "写真 価格 予約 導線"
+      ],
+      "primaryIndustries": [
+        "飲食",
+        "サロン",
+        "花・雑貨",
+        "フィットネス"
+      ],
       "related": [
         {
-          "slug": "clean-practical",
+          "relation": "情報寄りの隣接",
           "id": "CA15",
           "name": "すっきり実用型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "clean-practical"
         },
         {
-          "slug": "appeal-communication",
+          "relation": "魅力寄りの隣接",
           "id": "CA17",
           "name": "魅力発信型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "appeal-communication"
         },
         {
-          "slug": "friendly-brand",
+          "relation": "安心寄りの隣接",
           "id": "CA22",
           "name": "親しみブランド型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "friendly-brand"
         },
         {
-          "slug": "refined-brand",
+          "relation": "先進寄りの隣接",
           "id": "CA10",
           "name": "洗練ブランド型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "refined-brand"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-fresh-appeal.html",
+        "mainTextCharacters": 3324,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA16_新鮮魅力型サイト.md"
     },
     {
       "id": "CA17",
       "slug": "appeal-communication",
+      "name": "魅力発信型サイト",
+      "xIndex": 4,
+      "yIndex": 3,
+      "xStep": 5,
+      "yStep": 4,
+      "area": "ブランド・魅力 × 先進・新しさ",
       "xFamily": "魅力・体験アーキテクチャ",
-      "yModifier": "今らしい・軽やか",
+      "yModifier": "新鮮・軽快",
+      "scenario": "架空の地域食品ブランドを例に、製造背景、食べ方、地域活動の記事から商品へ戻る場面。",
+      "audience": "すぐに買うだけでなく、知識や背景を読みながらブランドとの関係を深めたい人。",
+      "decision": "発信内容に継続して触れ、商品、来訪、共有のどれかへ進みたいか。",
+      "specimen": "特集、つくり手、利用ガイド、関連商品を結ぶ「編集マガジン・ハブ」。",
+      "seoIntent": "記事発信を商品・サービスと結びつけ、再訪を育てるサイト構成を知りたい。",
+      "queries": [
+        "オウンドメディア 商品 導線",
+        "ブランド 発信 ホームページ 構成",
+        "地域ブランド コンテンツ SEO"
+      ],
+      "primaryIndustries": [
+        "地域ブランド",
+        "クリエイター",
+        "食品",
+        "ライフスタイルサービス"
+      ],
       "related": [
         {
-          "slug": "fresh-appeal",
+          "relation": "情報寄りの隣接",
           "id": "CA16",
           "name": "新鮮魅力型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "fresh-appeal"
         },
         {
-          "slug": "distinctive-communication",
+          "relation": "魅力寄りの隣接",
           "id": "CA18",
           "name": "個性発信型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "distinctive-communication"
         },
         {
-          "slug": "premium-appeal",
+          "relation": "安心寄りの隣接",
           "id": "CA23",
           "name": "上質魅力型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "premium-appeal"
         },
         {
-          "slug": "modern-appeal",
+          "relation": "先進寄りの隣接",
           "id": "CA11",
           "name": "今らしさ魅力型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "modern-appeal"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-appeal-communication.html",
+        "mainTextCharacters": 3320,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA17_魅力発信型サイト.md"
     },
     {
       "id": "CA18",
       "slug": "distinctive-communication",
+      "name": "個性発信型サイト",
+      "xIndex": 5,
+      "yIndex": 3,
+      "xStep": 6,
+      "yStep": 4,
+      "area": "ブランド・魅力 × 先進・新しさ",
       "xFamily": "世界観・編集アーキテクチャ",
-      "yModifier": "今らしい・軽やか",
+      "yModifier": "新鮮・軽快",
+      "scenario": "架空の写真家を例に、作品、視点、依頼可能範囲、権利条件を確認する場面。",
+      "audience": "価格だけでなく作風と人の相性を重視する編集者、企業、個人顧客。",
+      "decision": "この人へ頼む理由があり、依頼条件と権利範囲が合うか。",
+      "specimen": "作品から制作意図、担当範囲、依頼条件へ進む「作品・依頼二層ポートフォリオ」。",
+      "seoIntent": "個性を前面に出しながら、依頼可能な内容を明確にするポートフォリオ設計を知りたい。",
+      "queries": [
+        "ポートフォリオ 依頼 導線",
+        "クリエイター ホームページ 構成",
+        "作風と料金 伝え方"
+      ],
+      "primaryIndustries": [
+        "アーティスト",
+        "写真家",
+        "デザイナー",
+        "作家・講師"
+      ],
       "related": [
         {
-          "slug": "appeal-communication",
+          "relation": "情報寄りの隣接",
           "id": "CA17",
           "name": "魅力発信型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "appeal-communication"
         },
         {
-          "slug": "empathetic-brand",
+          "relation": "安心寄りの隣接",
           "id": "CA24",
           "name": "共感ブランド型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "empathetic-brand"
         },
         {
-          "slug": "memorable-brand",
+          "relation": "先進寄りの隣接",
           "id": "CA12",
           "name": "印象記憶ブランド型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "memorable-brand"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-distinctive-communication.html",
+        "mainTextCharacters": 3342,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA18_個性発信型サイト.md"
     },
     {
       "id": "CA19",
       "slug": "reassuring-information",
+      "name": "安心情報型サイト",
+      "xIndex": 0,
+      "yIndex": 2,
+      "xStep": 1,
+      "yStep": 3,
+      "area": "実用・情報 × 王道・安心",
       "xFamily": "検索・参照アーキテクチャ",
       "yModifier": "標準・明快",
+      "scenario": "架空の介護相談窓口を例に、本人と家族が悩み別に支援内容、費用、初回手順を確認する場面。",
+      "audience": "知識不足や不安を抱え、対象、担当者、安全、費用を慎重に確かめたい本人・家族。",
+      "decision": "自分たちが相談対象で、安心して最初の連絡をできるか。",
+      "specimen": "悩みを選ぶと対象、初回手順、必要書類、別窓口が出る「安心情報ナビ」。",
+      "seoIntent": "不安のある利用者へ、制度・費用・安全情報を順序立てて伝える方法を知りたい。",
+      "queries": [
+        "介護 初めての方 ページ",
+        "不安を減らす ホームページ 情報設計",
+        "相談窓口 対象 費用 わかりやすい"
+      ],
+      "primaryIndustries": [
+        "医療・福祉",
+        "教育",
+        "相談窓口",
+        "地域支援"
+      ],
       "related": [
         {
-          "slug": "clear-consultation",
+          "relation": "魅力寄りの隣接",
           "id": "CA20",
           "name": "クリア相談型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "clear-consultation"
         },
         {
-          "slug": "trustworthy-information",
+          "relation": "安心寄りの隣接",
           "id": "CA25",
           "name": "信頼情報型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "trustworthy-information"
         },
         {
-          "slug": "clear-information",
+          "relation": "先進寄りの隣接",
           "id": "CA13",
           "name": "クリア情報型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "clear-information"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-reassuring-information.html",
+        "mainTextCharacters": 3313,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA19_安心情報型サイト.md"
     },
     {
       "id": "CA20",
       "slug": "clear-consultation",
+      "name": "クリア相談型サイト",
+      "xIndex": 1,
+      "yIndex": 2,
+      "xStep": 2,
+      "yStep": 3,
+      "area": "実用・情報 × 王道・安心",
       "xFamily": "案内・導入アーキテクチャ",
       "yModifier": "標準・明快",
+      "scenario": "架空の相続相談を例に、悩みを整理し、相談範囲、必要資料、費用の入口を確認する場面。",
+      "audience": "問題をうまく言語化できず、専門家へ何を伝えればよいか迷う個人・小規模事業者。",
+      "decision": "この窓口が問題に対応でき、守秘と費用の条件を受け入れられるか。",
+      "specimen": "状況を選ぶと論点、必要資料、対応専門領域が見える「相談論点オーガナイザー」。",
+      "seoIntent": "複雑な悩みを相談前に整理し、専門家への連絡負担を下げるページ設計を知りたい。",
+      "queries": [
+        "相談フォーム 質問項目 専門家",
+        "相続相談 ホームページ 構成",
+        "相談前 必要資料 ページ"
+      ],
+      "primaryIndustries": [
+        "税理士・行政書士",
+        "カウンセリング",
+        "コンサル",
+        "相続相談"
+      ],
       "related": [
         {
-          "slug": "reassuring-information",
+          "relation": "情報寄りの隣接",
           "id": "CA19",
           "name": "安心情報型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "reassuring-information"
         },
         {
-          "slug": "helpful-guidance",
+          "relation": "魅力寄りの隣接",
           "id": "CA21",
           "name": "親切案内型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "helpful-guidance"
         },
         {
-          "slug": "classic-service",
+          "relation": "安心寄りの隣接",
           "id": "CA26",
           "name": "王道サービス型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "classic-service"
         },
         {
-          "slug": "growth-guidance",
+          "relation": "先進寄りの隣接",
           "id": "CA14",
           "name": "成長案内型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "growth-guidance"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-clear-consultation.html",
+        "mainTextCharacters": 3330,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA20_クリア相談型サイト.md"
     },
     {
       "id": "CA21",
       "slug": "helpful-guidance",
+      "name": "親切案内型サイト",
+      "xIndex": 2,
+      "yIndex": 2,
+      "xStep": 3,
+      "yStep": 3,
+      "area": "実用・情報 × 王道・安心",
       "xFamily": "行動・成果アーキテクチャ",
       "yModifier": "標準・明快",
+      "scenario": "架空の地域クリニックを例に、初診の人が予約、持ち物、当日、利用後を順に確認する場面。",
+      "audience": "サービス利用やWeb操作に慣れず、失敗や迷惑を避けたい本人・家族。",
+      "decision": "自分が対象で、次に何をすればよいか迷わず理解できるか。",
+      "specimen": "予約前、当日、利用後を一つずつ開き、電話で伝える内容も示す「初診ステップガイド」。",
+      "seoIntent": "初めての利用者が次の行動を迷わない親切な案内ページの作り方を知りたい。",
+      "queries": [
+        "初診 案内ページ わかりやすい",
+        "初めての方 ホームページ 手順",
+        "高齢者にも使いやすい Webサイト"
+      ],
+      "primaryIndustries": [
+        "クリニック",
+        "修理",
+        "教室",
+        "生活支援"
+      ],
       "related": [
         {
-          "slug": "clear-consultation",
+          "relation": "情報寄りの隣接",
           "id": "CA20",
           "name": "クリア相談型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "clear-consultation"
         },
         {
-          "slug": "friendly-brand",
+          "relation": "魅力寄りの隣接",
           "id": "CA22",
           "name": "親しみブランド型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "friendly-brand"
         },
         {
-          "slug": "sincere-conversion",
+          "relation": "安心寄りの隣接",
           "id": "CA27",
           "name": "誠実集客型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "sincere-conversion"
         },
         {
-          "slug": "clean-practical",
+          "relation": "先進寄りの隣接",
           "id": "CA15",
           "name": "すっきり実用型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "clean-practical"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-helpful-guidance.html",
+        "mainTextCharacters": 3241,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA21_親切案内型サイト.md"
     },
     {
       "id": "CA22",
       "slug": "friendly-brand",
-      "xFamily": "価値・根拠アーキテクチャ",
+      "name": "親しみブランド型サイト",
+      "xIndex": 3,
+      "yIndex": 2,
+      "xStep": 4,
+      "yStep": 3,
+      "area": "ブランド・魅力 × 王道・安心",
+      "xFamily": "価値・根拠ブリッジ",
       "yModifier": "標準・明快",
+      "scenario": "架空の地域カフェを例に、店主、店内、メニュー、利用条件を見て初来店を決める場面。",
+      "audience": "大手より顔の見える店や地域とのつながりを好み、初めてでも入りやすいか知りたい人。",
+      "decision": "自分に合う雰囲気と商品があり、安心して訪問できるか。",
+      "specimen": "店主の短い挨拶、店内の一日、代表メニュー、初来店情報をつなぐ「顔の見える店内案内」。",
+      "seoIntent": "人柄と地域性を伝えながら、価格や営業時間も明確にする店舗ブランド設計を知りたい。",
+      "queries": [
+        "地域店舗 ホームページ 人柄",
+        "親しみやすい ブランドサイト",
+        "カフェ 初めての方 情報"
+      ],
+      "primaryIndustries": [
+        "カフェ",
+        "美容室",
+        "地域店舗",
+        "教室"
+      ],
       "related": [
         {
-          "slug": "helpful-guidance",
+          "relation": "情報寄りの隣接",
           "id": "CA21",
           "name": "親切案内型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "helpful-guidance"
         },
         {
-          "slug": "premium-appeal",
+          "relation": "魅力寄りの隣接",
           "id": "CA23",
           "name": "上質魅力型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "premium-appeal"
         },
         {
-          "slug": "reassuring-brand",
+          "relation": "安心寄りの隣接",
           "id": "CA28",
           "name": "安心ブランド型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "reassuring-brand"
         },
         {
-          "slug": "fresh-appeal",
+          "relation": "先進寄りの隣接",
           "id": "CA16",
           "name": "新鮮魅力型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "fresh-appeal"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-friendly-brand.html",
+        "mainTextCharacters": 3315,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA22_親しみブランド型サイト.md"
     },
     {
       "id": "CA23",
       "slug": "premium-appeal",
+      "name": "上質魅力型サイト",
+      "xIndex": 4,
+      "yIndex": 2,
+      "xStep": 5,
+      "yStep": 3,
+      "area": "ブランド・魅力 × 王道・安心",
       "xFamily": "魅力・体験アーキテクチャ",
       "yModifier": "標準・明快",
+      "scenario": "架空の高級宿泊施設を例に、体験、客室、価格に含まれるもの、予約条件を確認する場面。",
+      "audience": "安さより空間、接客、プライバシーを重視し、特別な機会に納得して費用をかけたい人。",
+      "decision": "期待する体験と品質の根拠があり、総額と条件を受け入れられるか。",
+      "specimen": "体験場面を選ぶと、含まれるサービス、時間、価格条件が現れる「上質体験ディテール」。",
+      "seoIntent": "上質な写真と透明な価格・予約条件を両立するサイト設計を知りたい。",
+      "queries": [
+        "高級感 ホームページ 読みやすい",
+        "上質 サービス 価格 伝え方",
+        "ホテル 体験 予約条件 ページ"
+      ],
+      "primaryIndustries": [
+        "エステ",
+        "宿泊",
+        "ブライダル",
+        "高級飲食"
+      ],
       "related": [
         {
-          "slug": "friendly-brand",
+          "relation": "情報寄りの隣接",
           "id": "CA22",
           "name": "親しみブランド型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "friendly-brand"
         },
         {
-          "slug": "empathetic-brand",
+          "relation": "魅力寄りの隣接",
           "id": "CA24",
           "name": "共感ブランド型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "empathetic-brand"
         },
         {
-          "slug": "premium-brand",
+          "relation": "安心寄りの隣接",
           "id": "CA29",
           "name": "上質ブランド型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "premium-brand"
         },
         {
-          "slug": "appeal-communication",
+          "relation": "先進寄りの隣接",
           "id": "CA17",
           "name": "魅力発信型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "appeal-communication"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-premium-appeal.html",
+        "mainTextCharacters": 3281,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA23_上質魅力型サイト.md"
     },
     {
       "id": "CA24",
       "slug": "empathetic-brand",
+      "name": "共感ブランド型サイト",
+      "xIndex": 5,
+      "yIndex": 2,
+      "xStep": 6,
+      "yStep": 3,
+      "area": "ブランド・魅力 × 王道・安心",
       "xFamily": "世界観・編集アーキテクチャ",
       "yModifier": "標準・明快",
+      "scenario": "架空の子育て支援NPOを例に、利用、寄付、参加、協働の入口を立場別に選ぶ場面。",
+      "audience": "課題へ共感し、自分にできる関わり方と運営の透明性を確認したい利用者・支援者・企業。",
+      "decision": "理念と活動実態が一致し、自分の立場で安全に関われるか。",
+      "specimen": "利用者、寄付者、協力者を分け、活動と資金用途へつなぐ「関わり方セレクター」。",
+      "seoIntent": "共感を感情操作にせず、活動実態と参加方法へつなげるサイト設計を知りたい。",
+      "queries": [
+        "NPO ホームページ 構成",
+        "共感 ブランドサイト 事例",
+        "寄付 活動報告 導線"
+      ],
+      "primaryIndustries": [
+        "NPO",
+        "カウンセリング",
+        "福祉",
+        "教育支援"
+      ],
       "related": [
         {
-          "slug": "premium-appeal",
+          "relation": "情報寄りの隣接",
           "id": "CA23",
           "name": "上質魅力型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "premium-appeal"
         },
         {
-          "slug": "chosen-appeal",
+          "relation": "安心寄りの隣接",
           "id": "CA30",
           "name": "選ばれる魅力型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "chosen-appeal"
         },
         {
-          "slug": "distinctive-communication",
+          "relation": "先進寄りの隣接",
           "id": "CA18",
           "name": "個性発信型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "distinctive-communication"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-empathetic-brand.html",
+        "mainTextCharacters": 3330,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA24_共感ブランド型サイト.md"
     },
     {
       "id": "CA25",
       "slug": "trustworthy-information",
+      "name": "信頼情報型サイト",
+      "xIndex": 0,
+      "yIndex": 1,
+      "xStep": 1,
+      "yStep": 2,
+      "area": "実用・情報 × 王道・安心",
       "xFamily": "検索・参照アーキテクチャ",
-      "yModifier": "堅実・信頼",
+      "yModifier": "安心・親和的",
+      "scenario": "架空の会計・法務連携事務所を例に、資格、対応範囲、費用、責任体制を確認する場面。",
+      "audience": "生活や事業に影響する選択で、広告表現より正式情報と責任の所在を重視する人。",
+      "decision": "運営主体と専門性が確認でき、自分の条件で相談できるか。",
+      "specimen": "資格、許認可、対象、料金、苦情窓口を一つの順で確認する「信頼情報台帳」。",
+      "seoIntent": "資格や制度情報を、生活者が読める形で整理するサイト設計を知りたい。",
+      "queries": [
+        "士業 ホームページ 信頼情報",
+        "資格 許認可 Webサイト 掲載",
+        "料金 制度 わかりやすい ページ"
+      ],
+      "primaryIndustries": [
+        "法律・会計",
+        "建設",
+        "保険",
+        "医療"
+      ],
       "related": [
         {
-          "slug": "classic-service",
+          "relation": "魅力寄りの隣接",
           "id": "CA26",
           "name": "王道サービス型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "classic-service"
         },
         {
-          "slug": "solid-information",
+          "relation": "安心寄りの隣接",
           "id": "CA31",
           "name": "堅実情報型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "solid-information"
         },
         {
-          "slug": "reassuring-information",
+          "relation": "先進寄りの隣接",
           "id": "CA19",
           "name": "安心情報型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "reassuring-information"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-trustworthy-information.html",
+        "mainTextCharacters": 3303,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA25_信頼情報型サイト.md"
     },
     {
       "id": "CA26",
       "slug": "classic-service",
+      "name": "王道サービス型サイト",
+      "xIndex": 1,
+      "yIndex": 1,
+      "xStep": 2,
+      "yStep": 2,
+      "area": "実用・情報 × 王道・安心",
       "xFamily": "案内・導入アーキテクチャ",
-      "yModifier": "堅実・信頼",
+      "yModifier": "安心・親和的",
+      "scenario": "架空の地域工務店を例に、サービス、施工の流れ、料金例、保証を順に確認する場面。",
+      "audience": "初めて業者を探し、家族や社内へ候補を説明するため定番情報をそろえたい人。",
+      "decision": "期待する依頼へ標準的に対応でき、費用と保証に納得できるか。",
+      "specimen": "サービス選択から見積もり、施工、保証までを読む「王道依頼フロー」。",
+      "seoIntent": "利用者が予想する順序で情報をそろえ、安心して依頼できるサイト構成を知りたい。",
+      "queries": [
+        "工務店 ホームページ 必要ページ",
+        "サービスサイト 王道 構成",
+        "依頼の流れ 料金 保証 ページ"
+      ],
+      "primaryIndustries": [
+        "工務店",
+        "修理",
+        "士業",
+        "地域サービス"
+      ],
       "related": [
         {
-          "slug": "trustworthy-information",
+          "relation": "情報寄りの隣接",
           "id": "CA25",
           "name": "信頼情報型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "trustworthy-information"
         },
         {
-          "slug": "sincere-conversion",
+          "relation": "魅力寄りの隣接",
           "id": "CA27",
           "name": "誠実集客型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "sincere-conversion"
         },
         {
-          "slug": "orthodox-guidance",
+          "relation": "安心寄りの隣接",
           "id": "CA32",
           "name": "正統案内型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "orthodox-guidance"
         },
         {
-          "slug": "clear-consultation",
+          "relation": "先進寄りの隣接",
           "id": "CA20",
           "name": "クリア相談型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "clear-consultation"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-classic-service.html",
+        "mainTextCharacters": 3271,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA26_王道サービス型サイト.md"
     },
     {
       "id": "CA27",
       "slug": "sincere-conversion",
+      "name": "誠実集客型サイト",
+      "xIndex": 2,
+      "yIndex": 1,
+      "xStep": 3,
+      "yStep": 2,
+      "area": "実用・情報 × 王道・安心",
       "xFamily": "行動・成果アーキテクチャ",
-      "yModifier": "堅実・信頼",
+      "yModifier": "安心・親和的",
+      "scenario": "架空の住宅リフォームを例に、悩み、適合条件、費用、相談後の流れを確認する場面。",
+      "audience": "売り込まれることを警戒しつつ、誠実な専門家へ具体的な相談をしたい人。",
+      "decision": "自分の案件が対象で、相談後も断れる透明な進め方か。",
+      "specimen": "向く依頼、向かない依頼、費用の入口、断れる段階を並べる「誠実相談ルート」。",
+      "seoIntent": "不安を煽らず、適合条件と費用を示して問い合わせへ導く方法を知りたい。",
+      "queries": [
+        "売り込まない 問い合わせ 導線",
+        "リフォーム 相談 ホームページ 構成",
+        "向く人 向かない人 サービスページ"
+      ],
+      "primaryIndustries": [
+        "士業",
+        "建設",
+        "リフォーム",
+        "整体",
+        "BtoBサービス"
+      ],
       "related": [
         {
-          "slug": "classic-service",
+          "relation": "情報寄りの隣接",
           "id": "CA26",
           "name": "王道サービス型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "classic-service"
         },
         {
-          "slug": "reassuring-brand",
+          "relation": "魅力寄りの隣接",
           "id": "CA28",
           "name": "安心ブランド型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "reassuring-brand"
         },
         {
-          "slug": "trust-acquisition",
+          "relation": "安心寄りの隣接",
           "id": "CA33",
           "name": "信頼獲得型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "trust-acquisition"
         },
         {
-          "slug": "helpful-guidance",
+          "relation": "先進寄りの隣接",
           "id": "CA21",
           "name": "親切案内型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "helpful-guidance"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-sincere-conversion.html",
+        "mainTextCharacters": 3286,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA27_誠実集客型サイト.md"
     },
     {
       "id": "CA28",
       "slug": "reassuring-brand",
-      "xFamily": "価値・根拠アーキテクチャ",
-      "yModifier": "堅実・信頼",
+      "name": "安心ブランド型サイト",
+      "xIndex": 3,
+      "yIndex": 1,
+      "xStep": 4,
+      "yStep": 2,
+      "area": "ブランド・魅力 × 王道・安心",
+      "xFamily": "価値・根拠ブリッジ",
+      "yModifier": "安心・親和的",
+      "scenario": "架空の地域住宅管理会社を例に、日常の品質、人、地域対応、緊急時を見て長期利用を決める場面。",
+      "audience": "一度の安さより、近くで長く付き合えることと問題時の対応を重視する家族・地域住民。",
+      "decision": "普段の仕事と緊急時の仕組みに一貫性があり、継続して任せられるか。",
+      "specimen": "平常時の管理、担当者、緊急時、保証をつなぐ「日常ともしもの安心ビュー」。",
+      "seoIntent": "人柄と運営体制を結びつけ、継続利用の安心を伝えるブランド設計を知りたい。",
+      "queries": [
+        "地域密着 ブランドサイト 構成",
+        "安心感 ホームページ 伝え方",
+        "長期利用 サービスサイト 信頼"
+      ],
+      "primaryIndustries": [
+        "クリニック",
+        "教育",
+        "住宅",
+        "介護"
+      ],
       "related": [
         {
-          "slug": "sincere-conversion",
+          "relation": "情報寄りの隣接",
           "id": "CA27",
           "name": "誠実集客型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "sincere-conversion"
         },
         {
-          "slug": "premium-brand",
+          "relation": "魅力寄りの隣接",
           "id": "CA29",
           "name": "上質ブランド型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "premium-brand"
         },
         {
-          "slug": "dignified-brand",
+          "relation": "安心寄りの隣接",
           "id": "CA34",
           "name": "品格ブランド型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "dignified-brand"
         },
         {
-          "slug": "friendly-brand",
+          "relation": "先進寄りの隣接",
           "id": "CA22",
           "name": "親しみブランド型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "friendly-brand"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-reassuring-brand.html",
+        "mainTextCharacters": 3305,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA28_安心ブランド型サイト.md"
     },
     {
       "id": "CA29",
       "slug": "premium-brand",
+      "name": "上質ブランド型サイト",
+      "xIndex": 4,
+      "yIndex": 1,
+      "xStep": 5,
+      "yStep": 2,
+      "area": "ブランド・魅力 × 王道・安心",
       "xFamily": "魅力・体験アーキテクチャ",
-      "yModifier": "堅実・信頼",
+      "yModifier": "安心・親和的",
+      "scenario": "架空の注文住宅ブランドを例に、思想、素材、工程、保守、価格帯を長期視点で確認する場面。",
+      "audience": "背景、耐久性、作り手、購入後の関係まで含めて長く選ぶ理由を探す人。",
+      "decision": "価格差を支える一貫した品質があり、長期的に任せられるか。",
+      "specimen": "素材から工程、完成後の保守へたどる「品質の系譜ビュー」。",
+      "seoIntent": "上質さを歴史、技術、保守の事実で説明するブランドサイト設計を知りたい。",
+      "queries": [
+        "上質 ブランドサイト 根拠",
+        "注文住宅 ブランド 伝え方",
+        "高価格 サービス 価値 説明"
+      ],
+      "primaryIndustries": [
+        "注文住宅",
+        "高級宿泊",
+        "法務・財務",
+        "オーダーメイド"
+      ],
       "related": [
         {
-          "slug": "reassuring-brand",
+          "relation": "情報寄りの隣接",
           "id": "CA28",
           "name": "安心ブランド型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "reassuring-brand"
         },
         {
-          "slug": "chosen-appeal",
+          "relation": "魅力寄りの隣接",
           "id": "CA30",
           "name": "選ばれる魅力型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "chosen-appeal"
         },
         {
-          "slug": "high-trust-brand",
+          "relation": "安心寄りの隣接",
           "id": "CA35",
           "name": "高信頼ブランド型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "high-trust-brand"
         },
         {
-          "slug": "premium-appeal",
+          "relation": "先進寄りの隣接",
           "id": "CA23",
           "name": "上質魅力型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "premium-appeal"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-premium-brand.html",
+        "mainTextCharacters": 3327,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA29_上質ブランド型サイト.md"
     },
     {
       "id": "CA30",
       "slug": "chosen-appeal",
+      "name": "選ばれる魅力型サイト",
+      "xIndex": 5,
+      "yIndex": 1,
+      "xStep": 6,
+      "yStep": 2,
+      "area": "ブランド・魅力 × 王道・安心",
       "xFamily": "世界観・編集アーキテクチャ",
-      "yModifier": "堅実・信頼",
+      "yModifier": "安心・親和的",
+      "scenario": "架空のブライダル会場を例に、雰囲気、対応、費用、向く利用者を比較して候補を絞る場面。",
+      "audience": "候補が多く、価格以外の違いと自分との相性を明確にしたい比較検討者。",
+      "decision": "この会場固有の価値が自分の優先条件と一致するか。",
+      "specimen": "重視する条件を選ぶと、向く理由、注意点、費用確認へ進む「選択理由マトリクス」。",
+      "seoIntent": "他社批判や根拠のない一番表現を使わず、選ばれる理由を明確にする方法を知りたい。",
+      "queries": [
+        "選ばれる理由 ホームページ 書き方",
+        "競合が多い サービス 差別化 Web",
+        "ブライダル サイト 比較 導線"
+      ],
+      "primaryIndustries": [
+        "ブライダル",
+        "注文住宅",
+        "コンサル",
+        "高額スクール"
+      ],
       "related": [
         {
-          "slug": "premium-brand",
+          "relation": "情報寄りの隣接",
           "id": "CA29",
           "name": "上質ブランド型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "premium-brand"
         },
         {
-          "slug": "value-communication-brand",
+          "relation": "安心寄りの隣接",
           "id": "CA36",
           "name": "価値伝達ブランド型サイト",
-          "relation": "安心寄りの隣接"
+          "slug": "value-communication-brand"
         },
         {
-          "slug": "empathetic-brand",
+          "relation": "先進寄りの隣接",
           "id": "CA24",
           "name": "共感ブランド型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "empathetic-brand"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-chosen-appeal.html",
+        "mainTextCharacters": 3353,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA30_選ばれる魅力型サイト.md"
     },
     {
       "id": "CA31",
       "slug": "solid-information",
+      "name": "堅実情報型サイト",
+      "xIndex": 0,
+      "yIndex": 0,
+      "xStep": 1,
+      "yStep": 1,
+      "area": "実用・情報 × 王道・安心",
       "xFamily": "検索・参照アーキテクチャ",
-      "yModifier": "王道・端正",
+      "yModifier": "王道・制度的",
+      "scenario": "架空の産業部品メーカーを例に、仕様、ロット、納期、品質、供給体制を調達担当者が確認する場面。",
+      "audience": "要求仕様への適合と取引リスクを確認し、社内稟議へ根拠を持ち帰る法人担当者。",
+      "decision": "要求条件へ適合し、安定供給と不具合対応を任せられる候補か。",
+      "specimen": "仕様、供給、品質、契約の確認欄を持つ「調達適合シート」。",
+      "seoIntent": "法人調達に必要な仕様と信頼情報を、安定した構造で公開する方法を知りたい。",
+      "queries": [
+        "製造業 ホームページ 仕様 掲載",
+        "BtoB 調達 サイト 必要情報",
+        "品質 納期 ロット Webページ"
+      ],
+      "primaryIndustries": [
+        "産業製造",
+        "インフラ",
+        "検査",
+        "公共関連"
+      ],
       "related": [
         {
-          "slug": "orthodox-guidance",
+          "relation": "魅力寄りの隣接",
           "id": "CA32",
           "name": "正統案内型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "orthodox-guidance"
         },
         {
-          "slug": "trustworthy-information",
+          "relation": "先進寄りの隣接",
           "id": "CA25",
           "name": "信頼情報型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "trustworthy-information"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-solid-information.html",
+        "mainTextCharacters": 3328,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA31_堅実情報型サイト.md"
     },
     {
       "id": "CA32",
       "slug": "orthodox-guidance",
+      "name": "正統案内型サイト",
+      "xIndex": 1,
+      "yIndex": 0,
+      "xStep": 2,
+      "yStep": 1,
+      "area": "実用・情報 × 王道・安心",
       "xFamily": "案内・導入アーキテクチャ",
-      "yModifier": "王道・端正",
+      "yModifier": "王道・制度的",
+      "scenario": "架空の行政書士手続窓口を例に、対象、期限、必要書類、提出後の流れを正式順序で確認する場面。",
+      "audience": "手続を間違えず、最新の条件と様式を確認したい申請者・関係者。",
+      "decision": "自分が対象で、期限までに正しい書類を用意できるか。",
+      "specimen": "対象判定から様式、提出、処理期間へ進む「正式手続ナビゲーター」。",
+      "seoIntent": "制度や申請を、正式性と平易さを両立して案内するページ設計を知りたい。",
+      "queries": [
+        "申請 手続 ページ 構成",
+        "必要書類 ホームページ わかりやすい",
+        "正式案内 Web アクセシビリティ"
+      ],
+      "primaryIndustries": [
+        "法律事務所",
+        "行政書士",
+        "金融・保険",
+        "建設手続"
+      ],
       "related": [
         {
-          "slug": "solid-information",
+          "relation": "情報寄りの隣接",
           "id": "CA31",
           "name": "堅実情報型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "solid-information"
         },
         {
-          "slug": "trust-acquisition",
+          "relation": "魅力寄りの隣接",
           "id": "CA33",
           "name": "信頼獲得型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "trust-acquisition"
         },
         {
-          "slug": "classic-service",
+          "relation": "先進寄りの隣接",
           "id": "CA26",
           "name": "王道サービス型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "classic-service"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-orthodox-guidance.html",
+        "mainTextCharacters": 3303,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA32_正統案内型サイト.md"
     },
     {
       "id": "CA33",
       "slug": "trust-acquisition",
+      "name": "信頼獲得型サイト",
+      "xIndex": 2,
+      "yIndex": 0,
+      "xStep": 3,
+      "yStep": 1,
+      "area": "実用・情報 × 王道・安心",
       "xFamily": "行動・成果アーキテクチャ",
-      "yModifier": "王道・端正",
+      "yModifier": "王道・制度的",
+      "scenario": "架空の法人向け建設会社を例に、会社の実在性、体制、許認可、品質、安全を取引前に確認する場面。",
+      "audience": "新規取引の社内審査を通すため、公開情報と営業説明の一致を確認する調達・法務担当者。",
+      "decision": "組織として責任を持ち、継続的な取引へ進める会社か。",
+      "specimen": "会社、事業、品質、安全、問い合わせ部署を横断する「取引前デューデリジェンス概要」。",
+      "seoIntent": "知名度に頼らず、法人取引前の信用を公開情報で作るコーポレートサイト設計を知りたい。",
+      "queries": [
+        "BtoB コーポレートサイト 信頼",
+        "取引前 会社情報 ホームページ",
+        "許認可 品質 安全 サイト掲載"
+      ],
+      "primaryIndustries": [
+        "工務店",
+        "リフォーム",
+        "医療",
+        "介護"
+      ],
       "related": [
         {
-          "slug": "orthodox-guidance",
+          "relation": "情報寄りの隣接",
           "id": "CA32",
           "name": "正統案内型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "orthodox-guidance"
         },
         {
-          "slug": "dignified-brand",
+          "relation": "魅力寄りの隣接",
           "id": "CA34",
           "name": "品格ブランド型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "dignified-brand"
         },
         {
-          "slug": "sincere-conversion",
+          "relation": "先進寄りの隣接",
           "id": "CA27",
           "name": "誠実集客型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "sincere-conversion"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-trust-acquisition.html",
+        "mainTextCharacters": 3266,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA33_信頼獲得型サイト.md"
     },
     {
       "id": "CA34",
       "slug": "dignified-brand",
-      "xFamily": "価値・根拠アーキテクチャ",
-      "yModifier": "王道・端正",
+      "name": "品格ブランド型サイト",
+      "xIndex": 3,
+      "yIndex": 0,
+      "xStep": 4,
+      "yStep": 1,
+      "area": "ブランド・魅力 × 王道・安心",
+      "xFamily": "価値・根拠ブリッジ",
+      "yModifier": "王道・制度的",
+      "scenario": "架空の伝統工芸組織を例に、歴史、技術、現在の活動、依頼・購入方法を確認する場面。",
+      "audience": "文化、専門性、社会的役割を重視し、長期的な関係や購入を検討する人。",
+      "decision": "過去の権威だけでなく、現在も価値を守り更新している組織か。",
+      "specimen": "沿革の出来事を現在の製品、活動、次世代育成へ結ぶ「歴史と現在の対照年表」。",
+      "seoIntent": "歴史や専門文化を、閉鎖的にせず現代の事業へ結びつけるブランド設計を知りたい。",
+      "queries": [
+        "老舗 ブランドサイト 歴史 見せ方",
+        "伝統工芸 ホームページ 構成",
+        "品格ある Webデザイン 読みやすい"
+      ],
+      "primaryIndustries": [
+        "伝統工芸",
+        "老舗",
+        "文化施設",
+        "専門家"
+      ],
       "related": [
         {
-          "slug": "trust-acquisition",
+          "relation": "情報寄りの隣接",
           "id": "CA33",
           "name": "信頼獲得型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "trust-acquisition"
         },
         {
-          "slug": "high-trust-brand",
+          "relation": "魅力寄りの隣接",
           "id": "CA35",
           "name": "高信頼ブランド型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "high-trust-brand"
         },
         {
-          "slug": "reassuring-brand",
+          "relation": "先進寄りの隣接",
           "id": "CA28",
           "name": "安心ブランド型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "reassuring-brand"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-dignified-brand.html",
+        "mainTextCharacters": 3350,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA34_品格ブランド型サイト.md"
     },
     {
       "id": "CA35",
       "slug": "high-trust-brand",
+      "name": "高信頼ブランド型サイト",
+      "xIndex": 4,
+      "yIndex": 0,
+      "xStep": 5,
+      "yStep": 1,
+      "area": "ブランド・魅力 × 王道・安心",
       "xFamily": "魅力・体験アーキテクチャ",
-      "yModifier": "王道・端正",
+      "yModifier": "王道・制度的",
+      "scenario": "架空のM&A・財務助言会社を例に、専門家、利益相反、情報管理、責任範囲を確認する場面。",
+      "audience": "高額・高影響の契約で、失敗時の損失と統治まで確認する経営層・法務・財務担当者。",
+      "decision": "高度な専門性だけでなく、組織として説明責任とリスク管理を任せられるか。",
+      "specimen": "専門家、案件統治、情報管理、問題時対応をつなぐ「責任と統制の信頼マップ」。",
+      "seoIntent": "高責任サービスのブランドを、資格・統治・危機対応の証拠で示す方法を知りたい。",
+      "queries": [
+        "高信頼 ブランドサイト 構成",
+        "専門サービス ガバナンス Web",
+        "M&A アドバイザリー ホームページ 信頼"
+      ],
+      "primaryIndustries": [
+        "法律・財務",
+        "医療法人",
+        "高額BtoB",
+        "投資・M&A"
+      ],
       "related": [
         {
-          "slug": "dignified-brand",
+          "relation": "情報寄りの隣接",
           "id": "CA34",
           "name": "品格ブランド型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "dignified-brand"
         },
         {
-          "slug": "value-communication-brand",
+          "relation": "魅力寄りの隣接",
           "id": "CA36",
           "name": "価値伝達ブランド型サイト",
-          "relation": "魅力寄りの隣接"
+          "slug": "value-communication-brand"
         },
         {
-          "slug": "premium-brand",
+          "relation": "先進寄りの隣接",
           "id": "CA29",
           "name": "上質ブランド型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "premium-brand"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-high-trust-brand.html",
+        "mainTextCharacters": 3359,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA35_高信頼ブランド型サイト.md"
     },
     {
       "id": "CA36",
       "slug": "value-communication-brand",
+      "name": "価値伝達ブランド型サイト",
+      "xIndex": 5,
+      "yIndex": 0,
+      "xStep": 6,
+      "yStep": 1,
+      "area": "ブランド・魅力 × 王道・安心",
       "xFamily": "世界観・編集アーキテクチャ",
-      "yModifier": "王道・端正",
+      "yModifier": "王道・制度的",
+      "scenario": "架空の老舗専門メーカーを例に、蓄積した技術、選び方、現在の商品、保守までを物語と根拠で理解する場面。",
+      "audience": "完成品だけでなく、長年の判断、技術、購入後の関係まで含む価値を理解したい人。",
+      "decision": "この組織が積み重ねた価値に納得し、価格と長期利用を受け入れられるか。",
+      "specimen": "一つの製品を起点に、歴史上の判断、現在の技術、使用、修理へ進む「価値の系譜ストーリー」。",
+      "seoIntent": "見えにくい蓄積価値を、抽象語にせず物語と検証可能な根拠で伝える方法を知りたい。",
+      "queries": [
+        "ブランド 価値 伝え方 ホームページ",
+        "老舗 メーカー ストーリー Web",
+        "高価格 理由 技術 歴史 説明"
+      ],
+      "primaryIndustries": [
+        "老舗メーカー",
+        "伝統ブランド",
+        "高級専門サービス",
+        "工芸"
+      ],
       "related": [
         {
-          "slug": "high-trust-brand",
+          "relation": "情報寄りの隣接",
           "id": "CA35",
           "name": "高信頼ブランド型サイト",
-          "relation": "情報寄りの隣接"
+          "slug": "high-trust-brand"
         },
         {
-          "slug": "chosen-appeal",
+          "relation": "先進寄りの隣接",
           "id": "CA30",
           "name": "選ばれる魅力型サイト",
-          "relation": "先進寄りの隣接"
+          "slug": "chosen-appeal"
         }
-      ]
+      ],
+      "current": {
+        "file": "_analysis_crewascentimproved_2/crew-ascent/type-value-communication-brand.html",
+        "mainTextCharacters": 3402,
+        "h2Count": 12,
+        "h2": [
+          "このタイプの位置",
+          "向く状況と、気をつける点",
+          "サイト設計のたたき台",
+          "文章とデザインの方向",
+          "問い合わせへの導き方",
+          "検索の考え方",
+          "避けたい形と、公開後にすること",
+          "合いやすい業種と、その理由",
+          "見出しのひな形",
+          "相談前に決めておくこと",
+          "考え方が近いタイプ",
+          "このタイプかどうかは、16問で確かめられます。"
+        ],
+        "robots": "noindex,follow"
+      },
+      "specFile": "types/CA36_価値伝達ブランド型サイト.md"
     }
   ]
 }

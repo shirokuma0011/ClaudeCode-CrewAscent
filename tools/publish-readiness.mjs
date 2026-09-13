@@ -7,28 +7,27 @@
      1. data/publish-values.json の空欄
      2. HTML内に残る「公開前に確定」の印
      3. assets/js/site-config.js の PUBLISH_BLOCKER
-     4. canonical / og:url / sitemap / robots.txt の状態
-     5. 段階公開（どのページが index になっていて、残りは何が理由で止まっているか）
+     4. canonical / og:url / sitemap / robots.txt / noindex の状態
    ===================================================================== */
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { indexPlan, NEVER_INDEX } from './publish-stages.mjs';
-import { SITE, DATA } from './paths.mjs';
 
 /* Windows では new URL(...).pathname が "/C:/…" になり、パスとして壊れる。
    fileURLToPath を使うと、どのOSでも正しい絶対パスになる。 */
-const ROOT = SITE;   /* 書き出し先・読み取り先は公開ディレクトリ */
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = (p) => fs.readFileSync(path.join(ROOT, p), 'utf8');
-const readData = (p) => fs.readFileSync(path.join(DATA, p), 'utf8');
 const htmlFiles = fs.readdirSync(ROOT).filter((f) => f.endsWith('.html') && !f.startsWith('_'));
+
+/* 検索エンジンに載せるページ。結果・404・見本一覧は載せません。 */
+const NOINDEX_ALWAYS = ['result.html', '404.html', 'works.html'];
 
 let ng = 0;
 const line = (ok, msg) => { if (!ok) ng++; console.log((ok ? '  ok   ' : '  未   ') + msg); };
 
 console.log('\n■ 1. 確定値（data/publish-values.json）');
 let values = {};
-try { values = JSON.parse(readData('publish-values.json')); }
+try { values = JSON.parse(read('data/publish-values.json')); }
 catch { console.log('  未   data/publish-values.json が読めません'); ng++; }
 const keys = Object.keys(values).filter((k) => !k.startsWith('_'));
 const empty = keys.filter((k) => !String(values[k] || '').trim());
@@ -59,57 +58,12 @@ line(/property="og:url"/.test(idx), 'og:url が入っている');
 line(!/assets\/og\//.test((idx.match(/og:image" content="([^"]*)"/) || [, ''])[1]) ||
      /^https?:\/\//.test((idx.match(/og:image" content="([^"]*)"/) || [, ''])[1]),
      'og:image が絶対URL');
-/* 空の sitemap は「[DOMAIN] が無い」だけで合格に見えてしまうので、URLの有無も見る */
-const sitemapUrls = (read('sitemap.xml').match(/<loc>/g) || []).length;
-line(sitemapUrls > 0 && !read('sitemap.xml').includes('[DOMAIN]'),
-  `sitemap.xml のドメインが実ドメイン（いま ${sitemapUrls} ページ）`);
+line(!read('sitemap.xml').includes('[DOMAIN]'), 'sitemap.xml のドメインが実ドメイン');
 line(/^Sitemap:/m.test(read('robots.txt')), 'robots.txt に Sitemap 行がある');
 
-
-console.log('\n■ 5. 段階公開（基準は tools/publish-stages.mjs）');
-const { plan } = indexPlan(ROOT);
-const robotsOf = (f) => (read(f).match(/<meta name="robots" content="([^"]+)"/) || [])[1] || '';
-const nowIndexed = htmlFiles.filter((f) => /(^|,)index/.test(robotsOf(f)));
-const base = plan.filter((p) => p.group === '基本ページ');
-const types = plan.filter((p) => p.group === 'タイプページ');
-const cnt = (g) => g.filter((p) => p.index).length;
-line(cnt(base) === base.length, `基本ページ ${cnt(base)} / ${base.length} が index`);
-console.log(`  ―    タイプページ ${cnt(types)} / ${types.length} が index` +
-  (cnt(types) === 0 ? '（_switches.indexTypePages を true にすると解禁します）' : ''));
-console.log(`  ―    載せないページ ${NEVER_INDEX.length} 件: ${NEVER_INDEX.join(', ')}`);
-
-/* 基準の判定と、実際のHTMLがずれていないか */
-const mismatch = plan.filter((p) => p.index !== /(^|,)index/.test(robotsOf(p.file)));
-line(mismatch.length === 0,
-  `基準と <meta name="robots"> の食い違い ${mismatch.length} 件` +
-  (mismatch.length ? '（tools/apply-publish-values.mjs を実行してください）' : ''));
-
-/* sitemap は index のページとちょうど同じであること */
-const listed = new Set([...read('sitemap.xml').matchAll(/<loc>[^<]*?\/([^<\/]*)<\/loc>/g)]
-  .map((m) => (m[1] === '' ? 'index.html' : m[1])));
-const notListed = nowIndexed.filter((f) => !listed.has(f));
-const overListed = [...listed].filter((f) => !nowIndexed.includes(f));
-line(notListed.length === 0 && overListed.length === 0,
-  `sitemap.xml と index のページが一致（載っていない ${notListed.length} 件 / noindex なのに載っている ${overListed.length} 件）`);
-if (notListed.length) console.log('       載っていない: ' + notListed.join(', '));
-if (overListed.length) console.log('       余分: ' + overListed.join(', '));
-
-/* 止まっている理由を、理由ごとにまとめて出す */
-const held = plan.filter((p) => !p.index && p.group !== '載せない');
-if (held.length) {
-  const byReason = new Map();
-  for (const p of held) {
-    for (const w of p.why) {
-      const k = w.replace(/\d+/g, 'N');
-      if (!byReason.has(k)) byReason.set(k, []);
-      byReason.get(k).push(p.file);
-    }
-  }
-  console.log('       止まっている理由:');
-  for (const [reason, fs2] of byReason) {
-    console.log(`         ・${reason} … ${fs2.length}ページ` + (fs2.length <= 4 ? `（${fs2.join(', ')}）` : ''));
-  }
-}
+const stillNoindex = htmlFiles.filter((f) => !NOINDEX_ALWAYS.includes(f) &&
+  /name="robots" content="noindex/.test(read(f)));
+line(stillNoindex.length === 0, `noindex のままのページ ${stillNoindex.length} 件（結果・404・見本を除く）`);
 
 console.log('\n' + (ng === 0
   ? '公開に必要な機械的な項目はすべて埋まっています。\n専門家の確認（terms / commercial-transactions / privacy）は別途必要です。'

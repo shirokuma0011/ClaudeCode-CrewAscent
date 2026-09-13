@@ -9,29 +9,18 @@
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const id = (t, k) => `sp-${t.slug}-${k}`;
 
-/* 見本の枠。どの方式でも共通の外側。
-   操作の種類はX軸(spec.kind)、並べ方はY軸(spec.present)で変わる。
-   その下に、そのタイプ自身の「促す行動」と「読み終えて決めること」を置く。 */
+/* 見本の枠。どの方式でも共通の外側 */
 function shell(t, spec, inner, hint) {
-  const p = spec.present || { key: 'y1', name: '', hint: '' };
-  const acts = [spec.action, spec.secondary].filter(Boolean);
   return `
-      <div class="spx spx--${p.key}" data-spec="${spec.kind}" data-spec-unit="${esc(spec.unit || '')}">
+      <div class="spx" data-spec="${spec.kind}">
         <div class="spx__hd">
           <p class="spx__lbl"><b>60秒の見本</b><span>架空の事業を想定した操作見本です</span></p>
           <p class="spx__ttl">${esc(spec.title)}</p>
-          ${hint ? `<p class="spx__hint">${esc(hint)}${p.hint ? ' ' + esc(p.hint) : ''}</p>` : ''}
+          ${hint ? `<p class="spx__hint">${esc(hint)}</p>` : ''}
         </div>
         ${inner}
         <p class="spx__live" data-spec-live role="status" aria-live="polite"></p>
-        ${acts.length ? `
-        <div class="spx__act">
-          <p class="spx__act-h">この見本が促す行動</p>
-          <ul class="spx__act-l">${acts.map((a, i) => `<li${i ? ' class="is-sub"' : ''}>${esc(a)}</li>`).join('')}</ul>
-          ${spec.decision ? `<p class="spx__dec">読み終えて決めること: ${esc(spec.decision)}</p>` : ''}
-        </div>` : ''}
-        <p class="spx__note">この見本の数値・名称はすべて架空です。実在の事業者・実績ではありません。
-          「促す行動」は見本の説明で、ここから送信・申込みは行いません。</p>
+        <p class="spx__note">この見本の数値・名称はすべて架空です。実在の事業者・実績ではありません。</p>
       </div>`;
 }
 

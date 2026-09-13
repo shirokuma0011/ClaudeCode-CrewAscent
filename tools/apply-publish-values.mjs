@@ -10,28 +10,25 @@
      3. canonical と og:url を各ページへ入れ、og:image を絶対URLにする
      4. sitemap.xml と robots.txt のドメインを差し替える
      5. JSON-LD に url を足す
-     6. 段階公開の基準（tools/publish-stages.mjs）を満たしたページだけ
-        noindex を index,follow へ変える
-     7. sitemap.xml を、いま index にしているページだけで作り直す
+     6. 全項目が埋まっているときだけ noindex を index,follow へ変える
+        （結果・404・見本一覧は noindex のまま）
 
    やらないこと:
      ・値の推測。空欄の項目は印を残したまま、noindex も外しません
      ・法務文の判断。専門家の確認は別途必要です
    ===================================================================== */
 import fs from 'node:fs';
-import { spawnSync } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { indexPlan } from './publish-stages.mjs';
-import { SITE, DATA } from './paths.mjs';
 
 /* Windows では new URL(...).pathname が "/C:/…" になり、パスとして壊れる。
    fileURLToPath を使うと、どのOSでも正しい絶対パスになる。 */
-const ROOT = SITE;   /* 書き出し先・読み取り先は公開ディレクトリ */
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DRY = process.argv.includes('--dry-run');
 const rd = (p) => fs.readFileSync(path.join(ROOT, p), 'utf8');
-const rdData = (p) => fs.readFileSync(path.join(DATA, p), 'utf8');
 const wr = (p, s) => { if (!DRY) fs.writeFileSync(path.join(ROOT, p), s); };
+
+const NOINDEX_ALWAYS = ['result.html', '404.html', 'works.html'];
 
 /* 印のラベル → 確定値のキー */
 const MAP = {
@@ -63,7 +60,7 @@ const MAP = {
   '合意管轄裁判所': 'jurisdictionCourt',
 };
 
-const V = JSON.parse(rdData('publish-values.json'));
+const V = JSON.parse(rd('data/publish-values.json'));
 const has = (k) => String(V[k] || '').trim().length > 0;
 const val = (k) => String(V[k]).trim();
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -78,7 +75,6 @@ if (origin && !/^https:\/\/[^\/]+$/.test(origin)) {
 
 const files = fs.readdirSync(ROOT).filter((f) => f.endsWith('.html') && !f.startsWith('_'));
 let filled = 0, left = 0;
-const out = new Map();   /* 書き換えたあとの内容。段階公開の判定に使う */
 
 for (const f of files) {
   let s = rd(f), before = s;
@@ -107,21 +103,12 @@ for (const f of files) {
     s = s.replace(/("@type":"WebSite","name")/g, `"@type":"WebSite","url":"${origin}/","name"`);
   }
 
-  out.set(f, s);
-  if (s !== before) { wr(f, s); }
-}
+  /* 5. noindex の解除は、全項目が埋まったときだけ */
+  if (missing.length === 0 && !NOINDEX_ALWAYS.includes(f)) {
+    s = s.replace(/(<meta name="robots" content=")noindex,follow(")/, '$1index,follow$2');
+  }
 
-/* 5. index の解禁は段階ごとに。基準は tools/publish-stages.mjs */
-const { plan } = indexPlan(ROOT, out);
-const opened = [];
-const held = [];
-for (const p of plan) {
-  let s = out.get(p.file);
-  const before = s;
-  s = s.replace(/(<meta name="robots" content=")(?:no)?index,follow(")/,
-    `$1${p.index ? 'index' : 'noindex'},follow$2`);
-  if (p.index) opened.push(p.file); else held.push(p);
-  if (s !== before) { out.set(p.file, s); wr(p.file, s); }
+  if (s !== before) { wr(f, s); }
 }
 
 /* 6. site-config.js */
@@ -157,32 +144,9 @@ if (origin) {
 
 console.log(`${DRY ? '[確認のみ] ' : ''}印を埋めた: ${filled} か所 ／ 残り: ${left} か所`);
 if (missing.length) {
-  console.log(`未入力の項目 ${missing.length} 件`);
+  console.log(`未入力の項目 ${missing.length} 件のため、noindex は外していません。`);
   console.log('  ' + missing.join(', '));
-}
-
-console.log(`\n段階公開: index にしたページ ${opened.length} / ${plan.length}`);
-if (held.length) {
-  /* なぜ出せないのかを、ページごとではなく理由ごとにまとめる（同じ理由が並ぶため） */
-  const byReason = new Map();
-  for (const p of held) {
-    for (const w of p.why) {
-      const k = w.replace(/\d+/g, 'N');
-      if (!byReason.has(k)) byReason.set(k, []);
-      byReason.get(k).push(p.file);
-    }
-  }
-  for (const [reason, fs2] of byReason) {
-    console.log(`  ${reason} … ${fs2.length}ページ${fs2.length <= 4 ? '（' + fs2.join(', ') + '）' : ''}`);
-  }
-}
-
-/* 8. sitemap は index にしたページだけで作り直す */
-if (!DRY) {
-  const r = spawnSync(process.execPath, [path.join(ROOT, 'tools/build-sitemap.mjs')], { encoding: 'utf8' });
-  process.stdout.write(r.stdout || '');
-  if (r.status !== 0) process.stdout.write(r.stderr || '');
 } else {
-  console.log('[確認のみ] sitemap.xml は書き換えていません（node tools/build-sitemap.mjs で作り直します）');
+  console.log('全項目が埋まりました。noindex を index,follow へ変更しました（結果・404・見本を除く）。');
+  console.log('公開前に tools/publish-readiness.mjs で最終確認してください。');
 }
-console.log('\n公開前に tools/publish-readiness.mjs で最終確認してください。');

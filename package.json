@@ -1,23 +1,6 @@
 {
-  "name": "crew-ascent",
-  "version": "1.0.0",
-  "private": true,
-  "type": "module",
-  "description": "クルーアセント本体サイト。静的HTML/CSS/Vanilla JS、ビルド不要。依存は開発用の検査ツールだけで、公開物には一切含まれません。",
-  "scripts": {
-    "serve": "python3 -m http.server 8899 --bind 127.0.0.1 --directory site",
-    "data": "node tools/generate-data.mjs",
-    "data:check": "node tools/generate-data.mjs --check",
-    "types": "node tools/build-type-page-specs.mjs && node tools/generate-type-pages.mjs",
-    "sitemap": "node tools/build-sitemap.mjs",
-    "check": "node tools/generate-data.mjs --check && node tools/content-quality-check.mjs && node tools/build-sitemap.mjs --check",
-    "check:browser": "node tools/browser-check.mjs",
-    "publish:dry": "node tools/apply-publish-values.mjs --dry-run",
-    "publish:apply": "node tools/apply-publish-values.mjs",
-    "publish:ready": "node tools/publish-readiness.mjs",
-    "test": "node --test tests/*.test.mjs"
-  },
-  "devDependencies": {
-    "playwright": "^1.49.0"
-  }
+  "name":"crew-ascent-studio", "private":true, "version":"2.0.0", "type":"module",
+  "engines":{"node":">=24.0.0"},
+  "scripts":{"dev":"node --watch server/dev.mjs","start":"node server/dev.mjs","build":"node tools/build.mjs","test":"node --test tests/*.test.mjs","db:generate":"drizzle-kit generate","check":"node tools/check.mjs"},
+  "devDependencies":{"drizzle-kit":"0.31.4","drizzle-orm":"0.44.5"}
 }
