@@ -84,15 +84,18 @@
 
   /* ---------------- 1. ヘッダー ---------------- */
   function header() {
-    var hdr = $('.hdr'), hero = $('.hero');
+    var hdr = $('.hdr'), hero = $('.hero') || $('.atl-room');
     if (!hdr) return;
     if (!hero) { hdr.classList.add('is-solid'); return; }   /* 下層ページは常に不透明 */
+    /* トップの部屋（.atl-room）は明るい面で、操作欄がヘッダーの下に貼りつく。
+       透明のまま本文を下へ流すと文字が重なるので、少しでも動いたら不透明にする */
+    var atelier = hero.classList.contains('atl-room');
 
     /* 閾値はスクロール中に測らない。
        スクロール中に offsetHeight を読むと、そのたびにブラウザが
        レイアウトを計算し直し、連続スクロールでコマ落ちの原因になる。 */
     var limit = 80;
-    function measure() { limit = Math.max(hero.offsetHeight - hdr.offsetHeight - 40, 80); }
+    function measure() { limit = atelier ? 24 : Math.max(hero.offsetHeight - hdr.offsetHeight - 40, 80); }
 
     var solid = null;
     function apply(y) {

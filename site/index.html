@@ -7,7 +7,7 @@
   <title>小規模事業者のためのWebサイト制作｜Web診断36｜クルーアセント</title>
   <meta name="description" content="Webサイトで何を優先するかを無料の「Web診断36」で整理してから、1〜5ページ前後の小規模サイトを買い切り8万〜22万円で制作します。">
   <meta name="robots" content="noindex,follow">
-  <meta name="theme-color" content="#0B1524">
+  <meta name="theme-color" content="#f6f4ed">
   <meta property="og:title" content="小規模事業者のためのWebサイト制作｜Web診断36｜クルーアセント">
   <meta property="og:description" content="Webサイトで何を優先するかを無料の「Web診断36」で整理してから、1〜5ページ前後の小規模サイトを買い切り8万〜22万円で制作します。">
   <meta property="og:type" content="website">
@@ -21,10 +21,11 @@
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CASans-700.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CASans-400.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CAMono-700.woff2" crossorigin>
+  <link rel="preload" as="image" href="assets/img/atelier.webp">
   <link rel="stylesheet" href="assets/css/base.css?v=20260817r9">
   <link rel="stylesheet" href="assets/css/system.css?v=20260817r9">
-  <link rel="stylesheet" href="assets/css/top.css?v=20260817r9">
-  <link rel="stylesheet" href="assets/css/crew.css?v=20260909">
+  <link rel="stylesheet" href="assets/css/crew.css?v=20261014">
+  <link rel="stylesheet" href="assets/css/atelier-top.css?v=20261014">
   <script>/* 動きの入り切り。?motion=off と、動きを減らす設定で外れる。
      site-config.js の motion:'off' は main.js が後から外します。 */
   (function(d){var r=d.documentElement;r.classList.remove('no-js');
@@ -35,9 +36,12 @@
   <script defer src="assets/js/top.js?v=20260817r9"></script>
   <script defer src="assets/js/main.js?v=20260817r9"></script>
   <script defer src="assets/js/scroll-steady.js?v=20260817r9"></script>
+  <script defer src="assets/js/atelier-types.js?v=20261014"></script>
+  <script defer src="assets/js/atelier-app.js?v=20261014"></script>
+  <script defer src="assets/js/atelier-spatial.js?v=20261014"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"クルーアセント","alternateName":"CREW ASCENT"}</script>
 </head>
-<body>
+<body class="pg-atelier">
 
 <a class="skip-link" href="#main">本文へスキップ</a>
 
@@ -148,672 +152,87 @@
   </nav>
 </header>
 
-<main id="main">
-
-<!-- ================================ HERO ================================ -->
-<section class="hero2" id="hero">
-  <div class="wrap hero2__in">
-    <div class="hero2__tx">
-      <p class="hero2__kicker"><span>小規模事業者向け Webサイト制作</span><span class="hero2__kicker-sep" aria-hidden="true"></span><span>買い切り 80,000円〜</span></p>
-      <h1><span class="nb">「何を優先するか」から、</span><br><span class="nb">Webサイトを組み立てる。</span></h1>
-      <p class="hero2__lead">誰に、何を、どう伝えるか。36タイプの無料診断で方向を整理してから、必要なページだけを作ります。文章や写真が最初から決まっていなくても始められます。</p>
-      <div class="btn-row hero2__cta">
-        <a class="btn btn--primary btn--lg" href="diagnosis.html">無料診断を始める<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-        <a class="btn btn--line btn--lg" href="plans.html">4つのプランを見る</a>
+<main id="main" class="atl">
+    <section class="atl-room" aria-labelledby="hero-title" data-room="atelier">
+      <div class="atl-room-backdrop" aria-hidden="true"></div>
+      <div class="atl-hero-copy">
+        <p class="atl-eyebrow"><span class="atl-tiny-grid" aria-hidden="true">▦</span> WEB DESIGN, WITH DIRECTION.</p>
+        <p class="atl-hero-signature" aria-hidden="true">Find your direction.</p>
+        <h1 id="hero-title">らしさを見つけ、<br><span>伝わるサイトへ。</span></h1>
+        <p class="atl-hero-description">Web診断36で、サイトに必要なことを整理。<br>伝える内容から一緒に考える、小さな事業のWeb制作。</p>
+        <a class="atl-primary-cta" href="diagnosis.html?mode=quick"><span>16問で、サイトの方向性を整理する<small>無料・登録不要 ／ 約2〜3分</small></span><span class="atl-cta-arrow" aria-hidden="true">↗</span></a>
+        <div class="atl-hero-footnote"><span class="atl-hero-coordinate" aria-hidden="true">＋</span><p>小さな事業の、大切な一歩に。<br><span>診断から、言葉・構成・デザインまで。</span></p></div>
       </div>
-      <ul class="hero2__assure">
-        <li><svg class="ico" aria-hidden="true"><use href="#i-shield"></use></svg>氏名・メール登録なし</li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-shield"></use></svg>診断だけの利用も可能</li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-shield"></use></svg>16問と48問から選択</li>
-      </ul>
-    </div>
-  <div class="hero2__media" aria-hidden="true">
-      <img src="assets/img/web-planning-workspace.webp" width="2000" height="1400"
-           srcset="assets/img/web-planning-workspace-1000.webp 1000w, assets/img/web-planning-workspace.webp 2000w"
-           sizes="(min-width: 1000px) 46vw, 100vw" fetchpriority="high" decoding="async"
-           alt="Web設計の作業机を上から見た様子。配色見本、ペン、6×6の枠を描いた紙面が並んでいる">
-    </div>
-  </div>
-  <div class="hero2__strip">
-    <div class="wrap">
-      <dl class="stat3">
-        <div><dt>診断の設問</dt><dd><span class="num" data-count="16">16</span><span class="num__u">問</span><span class="stat3__or">または</span><span class="num" data-count="48">48</span><span class="num__u">問</span></dd><p>登録なし・2〜9分</p></div>
-        <div><dt>判定できる方向</dt><dd><span class="num" data-count="36">36</span><span class="num__u">タイプ</span></dd><p>2軸 × 6段階</p></div>
-        <div><dt>制作費</dt><dd><span class="num">80,000</span><span class="num__u">円〜</span></dd><p>買い切り・4つのプラン</p></div>
-      </dl>
-    </div>
-  </div>
-</section>
-
-
-<!-- ============================ 01 Diagnosis ============================ -->
-<section class="sec sec--tint-1" id="diagnosis">
-  <div class="wrap">
-    <div class="opener">
-      <div class="opener__top">
-        <span class="opener__no">01</span>
-        <span class="opener__ja">36タイプ診断</span>
-      </div>
-      <span class="opener__rule rvl" aria-hidden="true"><i></i></span>
-      <div class="g6 opener__body">
-        <div class="c1-4"><h2 class="sec-title rvm"><span><span class="nb">「好きなデザイン」だけでなく、</span><span class="nb">「Webサイトで何を優先するか」から。</span></span></h2></div>
-        <div class="c5-6 rv rv-d1"><p class="sec-lead">4問だけで、おおまかな方向が出ます。タイプに優劣はありません。</p></div>
-      </div>
-    </div>
-
-    <div class="dgx tmap rv" data-tmap-block>
-      <div class="dgx__map">
-        <p class="dgx__h">36タイプの座標</p>
-        <div class="tmap__frame">
-            <p class="tmap__ax"><i aria-hidden="true">↑</i>先進・新しさ</p>
-            <div class="tmap__grid" role="group" aria-label="36タイプのマップ。矢印キーで移動できます。">
-          <button class="tmap__c q1" style="--i:0" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA01" data-slug="future-information-design" data-name="未来情報設計型サイト" data-x="1" data-y="6"
-                  data-q="q1" data-area="実用・情報 × 先進・新しさ"
-                  aria-label="未来情報設計型サイト（CA01）横軸 1 / 6、縦軸 6 / 6"></button>
-          <button class="tmap__c q1" style="--i:1" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA02" data-slug="advanced-guidance" data-name="先進案内型サイト" data-x="2" data-y="6"
-                  data-q="q1" data-area="実用・情報 × 先進・新しさ"
-                  aria-label="先進案内型サイト（CA02）横軸 2 / 6、縦軸 6 / 6"></button>
-          <button class="tmap__c q1" style="--i:2" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA03" data-slug="growth-service" data-name="成長サービス型サイト" data-x="3" data-y="6"
-                  data-q="q1" data-area="実用・情報 × 先進・新しさ"
-                  aria-label="成長サービス型サイト（CA03）横軸 3 / 6、縦軸 6 / 6"></button>
-          <button class="tmap__c q2" style="--i:3" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA04" data-slug="advanced-brand" data-name="先進ブランド型サイト" data-x="4" data-y="6"
-                  data-q="q2" data-area="ブランド・魅力 × 先進・新しさ"
-                  aria-label="先進ブランド型サイト（CA04）横軸 4 / 6、縦軸 6 / 6"></button>
-          <button class="tmap__c q2" style="--i:4" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA05" data-slug="future-brand" data-name="未来感ブランド型サイト" data-x="5" data-y="6"
-                  data-q="q2" data-area="ブランド・魅力 × 先進・新しさ"
-                  aria-label="未来感ブランド型サイト（CA05）横軸 5 / 6、縦軸 6 / 6"></button>
-          <button class="tmap__c q2" style="--i:5" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA06" data-slug="fan-brand" data-name="ファン化ブランド型サイト" data-x="6" data-y="6"
-                  data-q="q2" data-area="ブランド・魅力 × 先進・新しさ"
-                  aria-label="ファン化ブランド型サイト（CA06）横軸 6 / 6、縦軸 6 / 6"></button>
-          <button class="tmap__c q1" style="--i:6" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA07" data-slug="advanced-information" data-name="先進情報型サイト" data-x="1" data-y="5"
-                  data-q="q1" data-area="実用・情報 × 先進・新しさ"
-                  aria-label="先進情報型サイト（CA07）横軸 1 / 6、縦軸 5 / 6"></button>
-          <button class="tmap__c q1" style="--i:7" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA08" data-slug="modern-guidance" data-name="今らしい案内型サイト" data-x="2" data-y="5"
-                  data-q="q1" data-area="実用・情報 × 先進・新しさ"
-                  aria-label="今らしい案内型サイト（CA08）横軸 2 / 6、縦軸 5 / 6"></button>
-          <button class="tmap__c q1" style="--i:8" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA09" data-slug="refined-conversion" data-name="洗練集客型サイト" data-x="3" data-y="5"
-                  data-q="q1" data-area="実用・情報 × 先進・新しさ"
-                  aria-label="洗練集客型サイト（CA09）横軸 3 / 6、縦軸 5 / 6"></button>
-          <button class="tmap__c q2" style="--i:9" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA10" data-slug="refined-brand" data-name="洗練ブランド型サイト" data-x="4" data-y="5"
-                  data-q="q2" data-area="ブランド・魅力 × 先進・新しさ"
-                  aria-label="洗練ブランド型サイト（CA10）横軸 4 / 6、縦軸 5 / 6"></button>
-          <button class="tmap__c q2" style="--i:10" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA11" data-slug="modern-appeal" data-name="今らしさ魅力型サイト" data-x="5" data-y="5"
-                  data-q="q2" data-area="ブランド・魅力 × 先進・新しさ"
-                  aria-label="今らしさ魅力型サイト（CA11）横軸 5 / 6、縦軸 5 / 6"></button>
-          <button class="tmap__c q2" style="--i:11" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA12" data-slug="memorable-brand" data-name="印象記憶ブランド型サイト" data-x="6" data-y="5"
-                  data-q="q2" data-area="ブランド・魅力 × 先進・新しさ"
-                  aria-label="印象記憶ブランド型サイト（CA12）横軸 6 / 6、縦軸 5 / 6"></button>
-          <button class="tmap__c q1" style="--i:12" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA13" data-slug="clear-information" data-name="クリア情報型サイト" data-x="1" data-y="4"
-                  data-q="q1" data-area="実用・情報 × 先進・新しさ"
-                  aria-label="クリア情報型サイト（CA13）横軸 1 / 6、縦軸 4 / 6"></button>
-          <button class="tmap__c q1" style="--i:13" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA14" data-slug="growth-guidance" data-name="成長案内型サイト" data-x="2" data-y="4"
-                  data-q="q1" data-area="実用・情報 × 先進・新しさ"
-                  aria-label="成長案内型サイト（CA14）横軸 2 / 6、縦軸 4 / 6"></button>
-          <button class="tmap__c q1" style="--i:14" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA15" data-slug="clean-practical" data-name="すっきり実用型サイト" data-x="3" data-y="4"
-                  data-q="q1" data-area="実用・情報 × 先進・新しさ"
-                  aria-label="すっきり実用型サイト（CA15）横軸 3 / 6、縦軸 4 / 6"></button>
-          <button class="tmap__c q2" style="--i:15" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA16" data-slug="fresh-appeal" data-name="新鮮魅力型サイト" data-x="4" data-y="4"
-                  data-q="q2" data-area="ブランド・魅力 × 先進・新しさ"
-                  aria-label="新鮮魅力型サイト（CA16）横軸 4 / 6、縦軸 4 / 6"></button>
-          <button class="tmap__c q2" style="--i:16" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA17" data-slug="appeal-communication" data-name="魅力発信型サイト" data-x="5" data-y="4"
-                  data-q="q2" data-area="ブランド・魅力 × 先進・新しさ"
-                  aria-label="魅力発信型サイト（CA17）横軸 5 / 6、縦軸 4 / 6"></button>
-          <button class="tmap__c q2" style="--i:17" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA18" data-slug="distinctive-communication" data-name="個性発信型サイト" data-x="6" data-y="4"
-                  data-q="q2" data-area="ブランド・魅力 × 先進・新しさ"
-                  aria-label="個性発信型サイト（CA18）横軸 6 / 6、縦軸 4 / 6"></button>
-          <button class="tmap__c q3" style="--i:18" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA19" data-slug="reassuring-information" data-name="安心情報型サイト" data-x="1" data-y="3"
-                  data-q="q3" data-area="実用・情報 × 王道・安心"
-                  aria-label="安心情報型サイト（CA19）横軸 1 / 6、縦軸 3 / 6"></button>
-          <button class="tmap__c q3" style="--i:19" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA20" data-slug="clear-consultation" data-name="クリア相談型サイト" data-x="2" data-y="3"
-                  data-q="q3" data-area="実用・情報 × 王道・安心"
-                  aria-label="クリア相談型サイト（CA20）横軸 2 / 6、縦軸 3 / 6"></button>
-          <button class="tmap__c q3" style="--i:20" type="button" aria-pressed="true" tabindex="0"
-                  data-id="CA21" data-slug="helpful-guidance" data-name="親切案内型サイト" data-x="3" data-y="3"
-                  data-q="q3" data-area="実用・情報 × 王道・安心"
-                  aria-label="親切案内型サイト（CA21）横軸 3 / 6、縦軸 3 / 6"></button>
-          <button class="tmap__c q4" style="--i:21" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA22" data-slug="friendly-brand" data-name="親しみブランド型サイト" data-x="4" data-y="3"
-                  data-q="q4" data-area="ブランド・魅力 × 王道・安心"
-                  aria-label="親しみブランド型サイト（CA22）横軸 4 / 6、縦軸 3 / 6"></button>
-          <button class="tmap__c q4" style="--i:22" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA23" data-slug="premium-appeal" data-name="上質魅力型サイト" data-x="5" data-y="3"
-                  data-q="q4" data-area="ブランド・魅力 × 王道・安心"
-                  aria-label="上質魅力型サイト（CA23）横軸 5 / 6、縦軸 3 / 6"></button>
-          <button class="tmap__c q4" style="--i:23" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA24" data-slug="empathetic-brand" data-name="共感ブランド型サイト" data-x="6" data-y="3"
-                  data-q="q4" data-area="ブランド・魅力 × 王道・安心"
-                  aria-label="共感ブランド型サイト（CA24）横軸 6 / 6、縦軸 3 / 6"></button>
-          <button class="tmap__c q3" style="--i:24" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA25" data-slug="trustworthy-information" data-name="信頼情報型サイト" data-x="1" data-y="2"
-                  data-q="q3" data-area="実用・情報 × 王道・安心"
-                  aria-label="信頼情報型サイト（CA25）横軸 1 / 6、縦軸 2 / 6"></button>
-          <button class="tmap__c q3" style="--i:25" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA26" data-slug="classic-service" data-name="王道サービス型サイト" data-x="2" data-y="2"
-                  data-q="q3" data-area="実用・情報 × 王道・安心"
-                  aria-label="王道サービス型サイト（CA26）横軸 2 / 6、縦軸 2 / 6"></button>
-          <button class="tmap__c q3" style="--i:26" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA27" data-slug="sincere-conversion" data-name="誠実集客型サイト" data-x="3" data-y="2"
-                  data-q="q3" data-area="実用・情報 × 王道・安心"
-                  aria-label="誠実集客型サイト（CA27）横軸 3 / 6、縦軸 2 / 6"></button>
-          <button class="tmap__c q4" style="--i:27" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA28" data-slug="reassuring-brand" data-name="安心ブランド型サイト" data-x="4" data-y="2"
-                  data-q="q4" data-area="ブランド・魅力 × 王道・安心"
-                  aria-label="安心ブランド型サイト（CA28）横軸 4 / 6、縦軸 2 / 6"></button>
-          <button class="tmap__c q4" style="--i:28" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA29" data-slug="premium-brand" data-name="上質ブランド型サイト" data-x="5" data-y="2"
-                  data-q="q4" data-area="ブランド・魅力 × 王道・安心"
-                  aria-label="上質ブランド型サイト（CA29）横軸 5 / 6、縦軸 2 / 6"></button>
-          <button class="tmap__c q4" style="--i:29" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA30" data-slug="chosen-appeal" data-name="選ばれる魅力型サイト" data-x="6" data-y="2"
-                  data-q="q4" data-area="ブランド・魅力 × 王道・安心"
-                  aria-label="選ばれる魅力型サイト（CA30）横軸 6 / 6、縦軸 2 / 6"></button>
-          <button class="tmap__c q3" style="--i:30" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA31" data-slug="solid-information" data-name="堅実情報型サイト" data-x="1" data-y="1"
-                  data-q="q3" data-area="実用・情報 × 王道・安心"
-                  aria-label="堅実情報型サイト（CA31）横軸 1 / 6、縦軸 1 / 6"></button>
-          <button class="tmap__c q3" style="--i:31" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA32" data-slug="orthodox-guidance" data-name="正統案内型サイト" data-x="2" data-y="1"
-                  data-q="q3" data-area="実用・情報 × 王道・安心"
-                  aria-label="正統案内型サイト（CA32）横軸 2 / 6、縦軸 1 / 6"></button>
-          <button class="tmap__c q3" style="--i:32" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA33" data-slug="trust-acquisition" data-name="信頼獲得型サイト" data-x="3" data-y="1"
-                  data-q="q3" data-area="実用・情報 × 王道・安心"
-                  aria-label="信頼獲得型サイト（CA33）横軸 3 / 6、縦軸 1 / 6"></button>
-          <button class="tmap__c q4" style="--i:33" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA34" data-slug="dignified-brand" data-name="品格ブランド型サイト" data-x="4" data-y="1"
-                  data-q="q4" data-area="ブランド・魅力 × 王道・安心"
-                  aria-label="品格ブランド型サイト（CA34）横軸 4 / 6、縦軸 1 / 6"></button>
-          <button class="tmap__c q4" style="--i:34" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA35" data-slug="high-trust-brand" data-name="高信頼ブランド型サイト" data-x="5" data-y="1"
-                  data-q="q4" data-area="ブランド・魅力 × 王道・安心"
-                  aria-label="高信頼ブランド型サイト（CA35）横軸 5 / 6、縦軸 1 / 6"></button>
-          <button class="tmap__c q4" style="--i:35" type="button" aria-pressed="false" tabindex="-1"
-                  data-id="CA36" data-slug="value-communication-brand" data-name="価値伝達ブランド型サイト" data-x="6" data-y="1"
-                  data-q="q4" data-area="ブランド・魅力 × 王道・安心"
-                  aria-label="価値伝達ブランド型サイト（CA36）横軸 6 / 6、縦軸 1 / 6"></button>
-            </div>
-            <p class="tmap__ax"><i aria-hidden="true">↓</i>王道・安心</p>
-            <div class="tmap__x">
-              <p class="tmap__ax"><i aria-hidden="true">←</i>実用・情報</p>
-              <p class="tmap__ax">ブランド・魅力<i aria-hidden="true">→</i></p>
-            </div>
-          </div>
-      </div>
-      <div class="dgx__side">
-        <p class="dgx__read" aria-live="polite"><b data-read="id">CA21</b><span class="dgx__read-nm" data-read="name">親切案内型サイト</span><span class="dgx__read-ar" data-read="area">実用・情報 × 王道・安心</span><a class="alink" data-read="go" href="type-helpful-guidance.html">親切案内型サイトのページを見る</a></p>
-        <div class="quad quad--4 quad--v">
-          <div class="quad__c"><b>実用・情報</b><p>必要な情報へ迷わずたどり着けるか</p></div>
-          <div class="quad__c"><b>ブランド・魅力</b><p>らしさや価値が印象に残るか</p></div>
-          <div class="quad__c"><b>王道・安心</b><p>見慣れた形で読み進められるか</p></div>
-          <div class="quad__c"><b>先進・新しさ</b><p>新しさや動きで印象づけられるか</p></div>
+      <div class="atl-direction-workbench" aria-label="Web診断36が整理する設計方向の紹介">
+        <div class="atl-direction-map-wrap"><div class="atl-workbench-heading"><span>36 <small>WAYS TO TELL YOUR STORY</small></span><span>WEB診断36</span></div><p class="atl-map-instruction" id="map-instruction">ひとつ選んで、伝え方の違いにふれてみる。</p>
+          <div class="atl-stage-toolbar">
+          <div class="atl-arrangement-controls" role="group" aria-label="36タイプの並び替え"><span>ARRANGE</span><button type="button" data-arrange="coord" aria-pressed="true">座標</button><button type="button" data-arrange="regions" aria-pressed="false">4つの領域</button><button type="button" data-arrange="industry" aria-pressed="false">業種</button><button type="button" id="spatial-motion" aria-pressed="true" aria-label="立体的な動きを切り替える">立体 ON</button></div>
+          <button type="button" class="atl-selection-peek" id="selection-detail" aria-haspopup="dialog"><span id="selection-name">CA09 / 洗練集客型サイト</span><span>詳細 →</span></button></div>
+          <div class="atl-spatial-stage" data-arrangement="coord"><div class="atl-spatial-plane"><div class="atl-stage-labels" aria-hidden="true"></div><div class="atl-priority-grid" id="type-map" role="group" aria-label="36の設計方向。矢印キーで移動できます" aria-describedby="map-instruction arrangement-note axis-description"></div></div></div>
+          <p class="atl-map-caption" id="arrangement-note" role="status">36の位置から、伝え方のバランスを探せます。</p>
+          <p class="atl-stage-help">業種ごとの詳しい対応は<a href="industries.html">業種からタイプを探す</a>にまとめています。</p>
+          <p class="atl-stage-help">タイルを選ぶと設計方針を表示します。矢印キーでも移動できます。</p>
+          <details class="atl-axis-help"><summary>座標と色の見方</summary><p id="axis-description">横軸は左が実用・情報、右がブランド・魅力。縦軸は下が王道・信頼、上が先進・新しさです。色は4つの領域を表し、位置は優劣や料金を意味しません。タイルのドットは元の座標を示します。</p></details>
         </div>
-        <p class="diag-foot"><a class="alink" href="diagnosis-guide.html">Web診断36の仕組みを見る<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a></p>
+        <div class="atl-direction-preview"><p class="atl-eyebrow" id="direction-id">DESIGN DIRECTION / CA09</p><h2 id="direction-name" aria-live="polite">洗練集客型サイト</h2><p id="direction-summary">分かりやすさを土台に、洗練された印象と相談導線を整えるタイプです。</p><div class="atl-priority-guidance"><span>サイトづくりで大切にすること</span><p id="direction-keywords">情報の整理 ／ 読みやすさ ／ 相談への流れ</p></div><button type="button" class="atl-direction-detail" id="direction-detail" aria-haspopup="dialog">この方向の設計ポイントを見る <span>↗</span></button><p class="atl-preview-note">閲覧用の例です。ここでの選択は診断結果ではありません。</p></div>
       </div>
-    </div>
+      <div class="atl-room-caption"><span>決める前に、整理するところから。</span><a href="#idea">クルーアセントのサイトづくり <span>↓</span></a></div>
+      <noscript><p class="atl-no-js">設計方向の切り替えにはJavaScriptが必要です。<a href="types.html">36タイプの一覧はこちら</a></p></noscript>
+    </section>
 
-    <div class="dgx__try rv">
-      <div class="mini" data-mini>
-          <div class="mini__hd">
-            <span class="mlbl">TRY ／4問で暫定表示</span>
-            <p class="mini__lead">Webサイトで今優先したい考えに、どの程度近いですか。答えるとマップ上の方向が動きます。詳しい結果は16問または48問の診断で確認できます。</p>
-            <div class="mini__bar" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-          </div>
-          <ol class="mini__qs">
-        <li class="mini__q" data-cat="practical">
-          <p class="mini__t" id="mq1"><span class="mini__no">Q1</span><span>第一印象の強さより、サービス内容と連絡方法がすぐ分かることを優先したい。</span></p>
-          <div class="mini__scale" role="radiogroup" aria-labelledby="mq1">
-            <span class="mini__end">近い</span>
-              <button type="button" role="radio" aria-checked="false" tabindex="0" data-v="2" aria-label="とても近い"></button>
-              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-v="1" aria-label="やや近い"></button>
-              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-v="0" aria-label="どちらともいえない"></button>
-              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-v="-1" aria-label="あまり近くない"></button>
-              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-v="-2" aria-label="まったく近くない"></button>
-            <span class="mini__end">近くない</span>
-          </div>
-        </li>
-        <li class="mini__q" data-cat="brand">
-          <p class="mini__t" id="mq2"><span class="mini__no">Q2</span><span>情報へすぐ到達できることより、最初に事業の雰囲気や価値観を感じてもらうことを優先したい。</span></p>
-          <div class="mini__scale" role="radiogroup" aria-labelledby="mq2">
-            <span class="mini__end">近い</span>
-              <button type="button" role="radio" aria-checked="false" tabindex="0" data-v="2" aria-label="とても近い"></button>
-              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-v="1" aria-label="やや近い"></button>
-              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-v="0" aria-label="どちらともいえない"></button>
-              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-v="-1" aria-label="あまり近くない"></button>
-              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-v="-2" aria-label="まったく近くない"></button>
-            <span class="mini__end">近くない</span>
-          </div>
-        </li>
-        <li class="mini__q" data-cat="trust">
-          <p class="mini__t" id="mq3"><span class="mini__no">Q3</span><span>独自性のある操作より、初めて見ても使い方を予想できる構成を選びたい。</span></p>
-          <div class="mini__scale" role="radiogroup" aria-labelledby="mq3">
-            <span class="mini__end">近い</span>
-              <button type="button" role="radio" aria-checked="false" tabindex="0" data-v="2" aria-label="とても近い"></button>
-              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-v="1" aria-label="やや近い"></button>
-              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-v="0" aria-label="どちらともいえない"></button>
-              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-v="-1" aria-label="あまり近くない"></button>
-              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-v="-2" aria-label="まったく近くない"></button>
-            <span class="mini__end">近くない</span>
-          </div>
-        </li>
-        <li class="mini__q" data-cat="modern">
-          <p class="mini__t" id="mq4"><span class="mini__no">Q4</span><span>使い方を予想できる定番構成より、見た瞬間に新しさを感じる構成を選びたい。</span></p>
-          <div class="mini__scale" role="radiogroup" aria-labelledby="mq4">
-            <span class="mini__end">近い</span>
-              <button type="button" role="radio" aria-checked="false" tabindex="0" data-v="2" aria-label="とても近い"></button>
-              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-v="1" aria-label="やや近い"></button>
-              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-v="0" aria-label="どちらともいえない"></button>
-              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-v="-1" aria-label="あまり近くない"></button>
-              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-v="-2" aria-label="まったく近くない"></button>
-            <span class="mini__end">近くない</span>
-          </div>
-        </li>
-          </ol>
-          <div class="mini__out" data-mini-out hidden>
-            <span class="mlbl">4問で見た方向</span>
-            <p class="mini__res"><span class="mini__id" data-mini="id">CA21</span><span class="mini__nm" data-mini="name">親切案内型サイト</span></p>
-            <p class="mini__hint">4問だけで見た、おおまかな方向です。タイプに優劣はありません。この4問は診断の冒頭と同じで、回答を引き継いで5問目から続けられます。</p>
-            <div class="mini__acts">
-              <a class="btn btn--primary btn--sm" href="diagnosis.html" data-mini-go>この4問を引き継いで16問へ<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-              <button class="mini__reset" type="button" data-mini-reset>回答をやり直す</button>
-            </div>
-          </div>
-          <p class="mini__foot">この診断は心理検査・性格診断・経営診断ではありません。Webサイト設計の方向を整理するための目安です。</p>
-        </div>
-    </div>
-  </div>
-</section>
+    <section class="atl-intro" id="idea">
+      <div class="atl-section-index"><span>01 — OUR APPROACH</span><span class="atl-asterisk" aria-hidden="true">✳</span></div>
+      <div class="atl-intro-heading"><p class="atl-eyebrow">見た目を決める、その前に。</p><h2>伝えたいことが見えると、<br>必要なサイトが見えてくる。</h2></div>
+      <div class="atl-intro-text"><p>「何を載せたらいい？」「自分の事業には何が必要？」<br>クルーアセントは、その整理からお手伝いします。</p><p>診断で優先順位を言葉にし、<br>ページの構成、文章、問い合わせまでの流れへ。<br>見た目と中身を、つなげて考えるWeb制作です。</p><a class="atl-text-link" href="diagnosis.html">Web診断36で整理してみる <span>↗</span></a></div>
+      <div class="atl-value-chain"><article><span>01 / DISCOVER</span><h3>優先順位を、見つける。</h3><p>16問・48問の診断で、情報・魅力・信頼・新しさのバランスを整理。</p></article><article><span>02 / TRANSLATE</span><h3>伝わる設計に、つなげる。</h3><p>タイプ名だけで終わらず、向くページ構成や言葉、導線の考え方へ。</p></article><article><span>03 / CREATE</span><h3>必要な範囲で、つくる。</h3><p>小さな事業に合う制作範囲を相談。公開後の管理も、必要に応じて。</p></article></div>
+    </section>
 
-<!-- ============================ 02 Approach ============================ -->
-<section class="sec" id="approach">
-  <div class="wrap">
-    <div class="opener">
-      <div class="opener__top">
-        <span class="opener__no">02</span>
-        <span class="opener__ja">相談から公開後まで</span>
-      </div>
-      <span class="opener__rule rvl" aria-hidden="true"><i></i></span>
-      <div class="g6 opener__body">
-        <div class="c1-4"><h2 class="sec-title rvm"><span><span class="nb">相談から公開後まで、</span><span class="nb">四つの段階でお手伝いします。</span></span></h2></div>
-        <div class="c5-6 rv rv-d1"><p class="sec-lead">番号を選ぶと内容が切り替わります。自動では切り替わりません。</p></div>
-      </div>
-    </div>
+    <section class="atl-archive" id="collection" aria-labelledby="collection-title">
+      <div class="atl-section-index"><span>02 — DESIGN DIRECTIONS</span><span>WEB診断36</span></div>
+      <div class="atl-archive-heading"><div><p class="atl-eyebrow">大切にしたいことから、考える。</p><h2 id="collection-title" tabindex="-1">事業に合わせた、<br>36の設計方向。</h2></div><p>情報の分かりやすさ、事業の魅力、信頼感、新しさ。<br>「何を、どう伝えるか」から、設計の違いを見つけます。</p></div>
+      <form class="atl-archive-filters" role="search" aria-label="タイプを検索" id="type-search-form">
+        <label class="atl-search-field">キーワード<input id="type-search" type="search" placeholder="タイプ名・CA09・特徴など" autocomplete="off"></label>
+        <label>伝える内容<select id="filter-x"><option value="">すべてのバランス</option><option value="0">1 / 実用・情報寄り</option><option value="1">2 / 実用・情報寄り</option><option value="2">3 / 中間・情報寄り</option><option value="3">4 / 中間・魅力寄り</option><option value="4">5 / ブランド・魅力寄り</option><option value="5">6 / ブランド・魅力寄り</option></select></label>
+        <label>表現の方向<select id="filter-y"><option value="">すべての方向</option><option value="5">6 / 先進・新しさ寄り</option><option value="4">5 / 先進・新しさ寄り</option><option value="3">4 / 中間・新しさ寄り</option><option value="2">3 / 中間・王道寄り</option><option value="1">2 / 王道・信頼寄り</option><option value="0">1 / 王道・信頼寄り</option></select></label>
+        <button type="button" id="filter-reset">条件をクリア</button>
+      </form>
+      <div class="atl-archive-status"><p id="result-count" role="status"></p><span>位置は優劣や料金の違いを表しません</span></div>
+      <div class="atl-archive-grid" id="archive-grid"></div>
+      <p class="atl-empty-results" id="empty-results" hidden>該当するタイプがありません。キーワードを短くするか、条件をクリアしてください。</p>
+      <div class="atl-archive-pagination"><button type="button" id="archive-prev">← 前の12タイプ</button><span id="archive-page" aria-live="polite"></span><button type="button" id="archive-next">次の12タイプ →</button></div>
+      <noscript><p><a class="atl-text-link" href="types.html">全36タイプのテキスト一覧を見る ↗</a></p></noscript>
+      <div class="atl-archive-afterword"><span>NOT A LABEL. A STARTING POINT.</span><p>「どれが好きか」と「どれが合うか」は、少し違うかもしれません。<br>迷ったら、診断から一緒に整理してみませんか。</p><a class="atl-text-link" href="diagnosis.html">Web診断36をはじめる <span>↗</span></a></div>
+    </section>
 
-    <div class="rv" data-tabs>
-      <ul class="appr__nav" role="tablist" aria-label="サービスの四つの段階">
-        <li role="presentation"><button class="appr__tab" type="button" role="tab" id="tab-01" aria-controls="pan-01" aria-selected="true" tabindex="0"><span class="appr__tab-no">01</span><span class="appr__tab-tx">診断から方向を整理する</span></button></li>
-        <li role="presentation"><button class="appr__tab" type="button" role="tab" id="tab-02" aria-controls="pan-02" aria-selected="false" tabindex="-1"><span class="appr__tab-no">02</span><span class="appr__tab-tx">4つのプランから選ぶ</span></button></li>
-        <li role="presentation"><button class="appr__tab" type="button" role="tab" id="tab-03" aria-controls="pan-03" aria-selected="false" tabindex="-1"><span class="appr__tab-no">03</span><span class="appr__tab-tx">原稿・画像・導線を整える</span></button></li>
-        <li role="presentation"><button class="appr__tab" type="button" role="tab" id="tab-04" aria-controls="pan-04" aria-selected="false" tabindex="-1"><span class="appr__tab-no">04</span><span class="appr__tab-tx">公開後も必要な範囲で支える</span></button></li>
-      </ul>
+    <section class="atl-service-section" id="service" aria-labelledby="service-title">
+      <div class="atl-section-index"><span>03 — FROM DIRECTION TO DESIGN</span><span>CREW ASCENT</span></div>
+      <div class="atl-service-lead"><div><p class="atl-eyebrow">診断の、その先も。</p><h2 id="service-title">見つけた方向を、<br>事業のWebサイトへ。</h2></div><p>診断結果は、完成形を決めつけるものではありません。<br>伝える順番、言葉、見た目、相談までの道筋。<br>事業のお話を聞きながら、一つずつ形にします。</p></div>
+      <div class="atl-service-steps"><article><span>01 / CONSULTATION</span><h3>目的と制作範囲を、確認。</h3><p>誰に何を伝えたいか、必要なページ、ご用意できる素材を確認。事業に合う制作範囲を相談します。</p></article><article><span>02 / DESIGN</span><h3>構成とデザインを、具体化。</h3><p>掲載する内容と順番、文章、写真、問い合わせへの流れを整理。診断も参考に、画面の形へ落とし込みます。</p></article><article><span>03 / BUILD & CHECK</span><h3>表示と導線を確かめて、公開へ。</h3><p>スマートフォンでの表示やリンク、問い合わせまでの操作を確認。公開後の管理は必要に応じて相談できます。</p></article></div>
+      <div class="atl-service-links"><a href="plans.html"><small>PLANS</small><strong>4つの制作プランを比べる</strong><span>↗</span></a><a href="process.html"><small>PROCESS</small><strong>相談から公開までの流れ</strong><span>↗</span></a></div>
+    </section>
 
-      <div class="appr__panel" role="tabpanel" id="pan-01" aria-labelledby="tab-01">
-        <div class="g6">
-          <div class="c1-4">
-            <h3><span class="nb">「何を作るか」より先に、</span><span class="nb">「何を優先するか」を整理します。</span></h3>
-            <p>色や写真を選ぶ前に、誰へ何を伝え、どんな行動につなげたいかを考えます。Web診断36は、四つの視点からWebサイトで今優先したい方向を言葉にするための入口です。</p>
-            <dl class="dl-inline">
-              <div><dt>所要時間</dt><dd>2〜3分 または 6〜9分</dd></div>
-              <div><dt>登録</dt><dd>氏名・メール不要</dd></div>
-              <div><dt>費用</dt><dd>無料</dd></div>
-            </dl>
-            <a class="alink" href="diagnosis-guide.html">診断の仕組みを見る<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-          </div>
-        </div>
-      </div>
+    <section class="atl-consultation" aria-labelledby="consultation-title">
+      <div><p class="atl-eyebrow">LET’S FIND YOUR FORM.</p><h2 id="consultation-title">まだ、まとまっていなくても。</h2><p>「何から決めればいい？」というところから。<br>診断結果があっても、なくても、お話を整理する入口をご用意します。</p></div>
+      <div class="atl-consultation-action">
+        <!-- 公開前に差し替え: 相談受付の開始時（site-config.js の PUBLISH_BLOCKER 解消時）に下の注記を更新する --><a class="atl-primary-cta" href="contact.html">相談の進め方・受付状況を見る <span>↗</span></a><p>現在は制作プレビューです。<br>正式な相談先は準備中のため、このページから送信はできません。</p></div>
+    </section>
+    <section class="atl-faq-section" aria-labelledby="faq-title"><p class="atl-eyebrow">BEFORE WE BEGIN</p><h2 id="faq-title">はじめに、よくある疑問。</h2><details><summary>診断結果のデザインにしないといけませんか？</summary><p>いいえ。診断は設計の優先順位を整理するための目安です。好みや顧客、運用方法に合わせて調整します。</p></details><details><summary>同じ業種なら、同じタイプになりますか？</summary><p>業種だけでは決まりません。同じ業種でも、顧客や伝えたい価値、サイトの目的によって合う方向性は変わります。</p></details><details><summary>診断だけでも利用できますか？</summary><p>はい。無料・登録不要で利用できます。診断を受けるだけで、制作の申し込みになることはありません。</p></details><a class="atl-text-link atl-faq-more" href="faq.html">よくある質問をすべて見る <span>↗</span></a></section>
 
-      <div class="appr__panel" role="tabpanel" id="pan-02" aria-labelledby="tab-02" hidden>
-        <div class="g6">
-          <div class="c1-4">
-            <h3><span class="nb">必要な範囲は、</span><span class="nb">事業ごとに違います。</span></h3>
-            <p>1ページの窓口を作る8万円から、文章・画像・簡易ロゴまで一緒に整える22万円まで。特定のプランをすすめるのではなく、準備状況と必要な範囲を比べて選べるようにしています。</p>
-            <dl class="dl-inline">
-              <div><dt>制作費</dt><dd>80,000円 〜 220,000円</dd></div>
-              <div><dt>ページ数</dt><dd>1 〜 5ページ前後</dd></div>
-              <div><dt>支払い</dt><dd>着手金50% / 納品前50%</dd></div>
-            </dl>
-            <a class="alink" href="plans.html">4つのプランを比較する<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-          </div>
-        </div>
+    <details class="atl-design-review" hidden><summary>制作確認用：2つの空間デザインを比較する</summary><section class="atl-direction-lab" aria-labelledby="direction-title">
+      <div class="atl-lab-heading"><div><p class="atl-eyebrow">DESIGN REVIEW</p><h2 id="direction-title">アトリエの空気を、選ぶ。</h2></div><p>制作確認用の2つの表現案です。<br>選択すると、上の空間が切り替わります。</p></div>
+      <div class="atl-direction-options">
+        <button class="atl-direction-card" data-direction="atelier" aria-pressed="true"><img src="assets/img/atelier.webp" loading="lazy" alt="柔らかな日差しと木のテーブルのアトリエ" width="600" height="338"><span class="atl-direction-meta"><span><small>01 / RECOMMENDED</small><strong>Warm Atelier</strong><span>木と紙、午後の光。親しみのある洗練。</span></span><span class="atl-direction-check" aria-hidden="true">✓</span></span></button>
+        <button class="atl-direction-card" data-direction="gallery" aria-pressed="false"><img src="assets/img/atelier-gallery.webp" loading="lazy" alt="石のテーブルとシルバーを基調にしたギャラリー" width="600" height="338"><span class="atl-direction-meta"><span><small>02 / ALTERNATIVE</small><strong>Quiet Gallery</strong><span>石とシルバー、澄んだ光。静かな先進性。</span></span><span class="atl-direction-check" aria-hidden="true">↗</span></span></button>
       </div>
+      <p class="atl-lab-note" id="direction-status" aria-live="polite">現在：Warm Atelier。空間は生成したコンセプト画像です。</p>
+    </section></details>
+  </main>
 
-      <div class="appr__panel" role="tabpanel" id="pan-03" aria-labelledby="tab-03" hidden>
-        <div class="g6">
-          <div class="c1-4">
-            <h3><span class="nb">原稿や写真がそろっていなくても、</span><span class="nb">相談できます。</span></h3>
-            <p>手元のメモ、既存の資料、フォームの回答をもとに、伝える順番を整理します。プランに応じて、商用利用できる画像の準備、文章の作成、簡易ロゴ、GoogleフォームやLINEなど外部サービスへの導線も整えます。</p>
-            <dl class="dl-inline">
-              <div><dt>文章</dt><dd>支給原稿の整理 〜 紹介文の作成</dd></div>
-              <div><dt>画像</dt><dd>ご支給 〜 選定・調整</dd></div>
-              <div><dt>ロゴ</dt><dd>おまかせプランで簡易1案</dd></div>
-            </dl>
-            <a class="alink" href="process.html">制作の流れを見る<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="appr__panel" role="tabpanel" id="pan-04" aria-labelledby="tab-04" hidden>
-        <div class="g6">
-          <div class="c1-4">
-            <h3><span class="nb">公開したサイトを、</span><span class="nb">止まったままにしないために。</span></h3>
-            <p>公開後管理は必須ではありません。必要な場合は、サーバー管理、公開状態の確認、SSLまわり、月1回までの軽微なテキスト修正、障害時の一次確認を、月額または年額で選べます。</p>
-            <dl class="dl-inline">
-              <div><dt>月額</dt><dd>5,500円 / 月</dd></div>
-              <div><dt>年額</dt><dd>50,000円 / 年</dd></div>
-              <div><dt>必須か</dt><dd>いいえ。制作のみでも可</dd></div>
-            </dl>
-            <a class="alink" href="management.html">公開・管理を見る<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-          </div>
-                  </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================= 03 Report ============================= -->
-<section class="sec sec--paper2" id="report">
-  <div class="wrap">
-    <div class="opener">
-      <div class="opener__top">
-        <span class="opener__no">03</span>
-        <span class="opener__ja">診断結果でわかること</span>
-      </div>
-      <span class="opener__rule rvl" aria-hidden="true"><i></i></span>
-      <div class="g6 opener__body">
-        <div class="c1-4"><h2 class="sec-title rvm"><span>結果は、タイプ名だけで終わりません。</span></h2></div>
-        <div class="c5-6 rv rv-d1"><p class="sec-lead">相談するときは、そのまま共通言語として使えます。</p></div>
-      </div>
-    </div>
-
-    <div class="rp rv">
-      <div class="rp__hd">
-        <span class="rp__id"><i aria-hidden="true"></i>CA21</span>
-        <p class="rp__nm">親切案内型サイト</p>
-        <span class="rp__tag">実用・情報 × 王道・安心</span>
-      </div>
-      <div class="rp__bd">
-        <div>
-          <h3>SUMMARY ／最初に見る要点</h3>
-          <p>必要な情報だけを短くそろえ、読み終える前に次の行動へ進める窓口をつくり、手順が段階で示され、途中で分からなくなっても戻れることで支える構成が向きます。</p>
-        </div>
-        <div>
-          <h3>PRIORITY ／情報の優先順</h3>
-          <ol class="ranks">
-            <li>何をする事業か</li>
-            <li>主なサービスと料金の目安</li>
-            <li>連絡方法と受付時間</li>
-            <li>初めての人向けの説明</li>
-          </ol>
-        </div>
-        <div>
-          <h3>STRUCTURE ／ページ構成のたたき台</h3>
-          <ol class="pagemap">
-            <li><span>HOME</span></li><li><span>はじめての方へ</span></li><li><span>サービス</span></li>
-            <li><span>料金</span></li><li><span>流れ</span></li><li><span>FAQ</span></li><li><span>Contact</span></li>
-          </ol>
-        </div>
-      </div>
-      <p class="rp__ft">このほかに、想定する訪問状況、問い合わせまでの経路、文章の調子、配色・文字・画像・動きの方針、基本SEOの考え方、避けたい表現、公開後の運用、合いやすい業種の理由、近い3タイプとの比較、制作相談で確認する質問を表示します。</p>
-    </div>
-
-    
-
-    <div class="btn-row btn-row--mt rv">
-      <a class="btn btn--primary" href="diagnosis.html">自分のタイプを診断する<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-      <a class="btn btn--line" href="result.html?type=helpful-guidance">結果サンプルを全部見る</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============================== 04 Plans ============================== -->
-<section class="sec sec--tint-4" id="plans">
-  <div class="wrap">
-    <div class="opener">
-      <div class="opener__top">
-        <span class="opener__no">04</span>
-        <span class="opener__ja">4つの制作プラン</span>
-      </div>
-      <span class="opener__rule rvl" aria-hidden="true"><i></i></span>
-      <div class="g6 opener__body">
-        <div class="c1-4"><h2 class="sec-title rvm"><span>今の状況に近い進め方を選んでください。</span></h2></div>
-      <div class="c5-6 rv rv-d1"><p class="sec-lead">ページ数と、文章・画像をどこまで用意できるかで比べられます。全項目の比較は料金ページにあります。</p></div>
-      </div>
-    </div>
-
-    
-
-    <div class="pcards rv pcards--mt">
-      <div class="pcard">
-        <span class="pcard__bar" aria-hidden="true"></span>
-        <h3>はじめて</h3>
-        <p class="pcard__who">まずは1ページでWeb上の窓口を作りたい人</p>
-        <p class="pcard__pr">80,000<span>円</span></p>
-        <span class="pcard__cap">含まれるもの</span>
-        <ul>
-          <li><svg class="mk mk--y" aria-hidden="true"><use href="#i-check"></use></svg>1ページ</li>
-          <li><svg class="mk mk--y" aria-hidden="true"><use href="#i-check"></use></svg>支給原稿の誤字・見出しを調整</li>
-          <li><svg class="mk mk--y" aria-hidden="true"><use href="#i-check"></use></svg>計測の基本設定</li>
-          <li><svg class="mk mk--n" aria-hidden="true"><use href="#i-minus"></use></svg>画像・ロゴはご支給</li>
-          <li><svg class="mk mk--y" aria-hidden="true"><use href="#i-check"></use></svg>修正1回 ／ 1〜2週間</li>
-        </ul>
-      </div>
-      <div class="pcard">
-        <span class="pcard__bar" aria-hidden="true"></span>
-        <h3>シンプル</h3>
-        <p class="pcard__who">必要な情報を3ページ前後で整えたい人</p>
-        <p class="pcard__pr">120,000<span>円</span></p>
-        <span class="pcard__cap">含まれるもの</span>
-        <ul>
-          <li><svg class="mk mk--y" aria-hidden="true"><use href="#i-check"></use></svg>3ページ前後</li>
-          <li><svg class="mk mk--y" aria-hidden="true"><use href="#i-check"></use></svg>フォーム回答をページへ整理</li>
-          <li><svg class="mk mk--y" aria-hidden="true"><use href="#i-check"></use></svg>商用利用可能な候補素材を少数提案</li>
-          <li><svg class="mk mk--n" aria-hidden="true"><use href="#i-minus"></use></svg>簡易ロゴは既存を使用</li>
-          <li><svg class="mk mk--y" aria-hidden="true"><use href="#i-check"></use></svg>修正1〜2回 ／ 2〜3週間</li>
-        </ul>
-      </div>
-      <div class="pcard">
-        <span class="pcard__bar" aria-hidden="true"></span>
-        <h3>標準</h3>
-        <p class="pcard__who">5ページ前後で事業内容をしっかり伝えたい人</p>
-        <p class="pcard__pr">150,000<span>円</span></p>
-        <span class="pcard__cap">含まれるもの</span>
-        <ul>
-          <li><svg class="mk mk--y" aria-hidden="true"><use href="#i-check"></use></svg>5ページ前後</li>
-          <li><svg class="mk mk--y" aria-hidden="true"><use href="#i-check"></use></svg>情報をページごとに配分し、見出しを調整</li>
-          <li><svg class="mk mk--y" aria-hidden="true"><use href="#i-check"></use></svg>画像をページごとに選定・調整</li>
-          <li><svg class="mk mk--n" aria-hidden="true"><use href="#i-minus"></use></svg>外部サービス導線は別途</li>
-          <li><svg class="mk mk--y" aria-hidden="true"><use href="#i-check"></use></svg>修正1〜2回 ／ 3〜4週間</li>
-        </ul>
-      </div>
-      <div class="pcard">
-        <span class="pcard__bar" aria-hidden="true"></span>
-        <h3>おまかせ</h3>
-        <p class="pcard__who">原稿・画像・簡易ロゴも一緒に整えたい人</p>
-        <p class="pcard__pr">220,000<span>円</span></p>
-        <span class="pcard__cap">含まれるもの</span>
-        <ul>
-          <li><svg class="mk mk--y" aria-hidden="true"><use href="#i-check"></use></svg>5ページ前後</li>
-          <li><svg class="mk mk--y" aria-hidden="true"><use href="#i-check"></use></svg>回答内容から見出し・紹介文・導線文を作成</li>
-          <li><svg class="mk mk--y" aria-hidden="true"><use href="#i-check"></use></svg>画像の選定・生成・調整</li>
-          <li><svg class="mk mk--y" aria-hidden="true"><use href="#i-check"></use></svg>簡易ロゴ・外部導線・GA4等の初期設定支援</li>
-          <li><svg class="mk mk--y" aria-hidden="true"><use href="#i-check"></use></svg>修正1〜3回 ／ 4〜6週間</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="g6 rv">
-      <div class="c1-4">
-        <div class="callout">
-          <svg class="ico" aria-hidden="true"><use href="#i-info"></use></svg>
-          <div><b>プランはご自身で選べます</b><p>ページ数と準備状況を比べて選べます。判断が難しい項目だけ、プラン未定のままご相談ください。</p></div>
-        </div>
-      </div>
-      <div class="c5-6">
-        <p class="note">※ 料金は買い切りの制作費です。<span class="todo" title="公開前に確定する項目">公開前に確定: 消費税の表示方針</span><br>※ 公開・管理プランは別途お選びいただけます。</p>
-        <a class="alink" href="plans.html">全項目を比較する<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ============================= 05 Process ============================= -->
-<section class="sec sec--tint-3" id="process">
-  <div class="wrap">
-    <div class="opener">
-      <div class="opener__top">
-        <span class="opener__no">05</span>
-        <span class="opener__ja">制作の流れと公開後</span>
-      </div>
-      <span class="opener__rule rvl" aria-hidden="true"><i></i></span>
-      <div class="g6 opener__body">
-        <div class="c1-4"><h2 class="sec-title rvm"><span><span class="nb">相談から公開までの要点を、</span><span class="nb">四つにまとめました。</span></span></h2></div>
-        <div class="c5-6 rv rv-d1"><p class="sec-lead">フォーム送信だけでは契約になりません。範囲、料金、納期、修正回数を確認してから制作を始めます。</p></div>
-      </div>
-    </div>
-
-    <ol class="flow rv">
-      <li><span class="flow__no">01</span><b>相談・内容確認</b><p class="flow__d">分かる範囲をフォームへ。診断は任意です</p></li>
-      <li class="is-pay"><span class="flow__no">02</span><b>見積もり・着手金50%</b><p class="flow__d">条件への同意と入金後に制作開始</p><span class="flow__tag">契約・お支払い</span></li>
-      <li><span class="flow__no">03</span><b>素材・制作・修正</b><p class="flow__d">不足を整理し、プランの回数内で確認</p></li>
-      <li class="is-pay"><span class="flow__no">04</span><b>残金50%・公開</b><p class="flow__d">入金確認後に公開。管理は必要な場合のみ</p><span class="flow__tag">お支払い・納品</span></li>
-    </ol>
-
-    <div class="mgmt rv">
-      <div>
-        <h3>公開して終わりにしません。</h3>
-        <p>表示できているか、SSLに問題がないか、連絡先が古くなっていないか。毎月この順番で確認します。管理が不要な場合は制作のみでも相談できます。</p>
-        <p class="pricepair">
-          <span><span class="num num--lg">5,500</span><span class="num__u">円 / 月</span></span>
-          <span class="pricepair__or">または</span>
-          <span><span class="num num--lg">50,000</span><span class="num__u">円 / 年</span></span>
-          <span class="pricepair__or">（実質月額 約4,167円）</span>
-        </p>
-      </div>
-      <div class="btn-row">
-        <a class="btn btn--line" href="process.html">流れをくわしく見る<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-        <a class="btn btn--line" href="management.html">公開・管理プランを見る</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ============================= 07 Guides ============================= -->
-<section class="sec sec--tint-2" id="guides">
-  <div class="wrap">
-    <div class="opener">
-      <div class="opener__top">
-        <span class="opener__no">06</span>
-        <span class="opener__ja">読みもの</span>
-      </div>
-      <span class="opener__rule rvl" aria-hidden="true"><i></i></span>
-      <div class="g6 opener__body">
-        <div class="c1-4"><h2 class="sec-title rvm"><span>決める前に読める形で、整理しています。</span></h2></div>
-        <div class="c5-6 rv rv-d1"><p class="sec-lead">制作会社へ相談する前にも読めます。</p></div>
-      </div>
-    </div>
-    <ul class="icards rv">
-      <li class="icard"><a href="guide-first-decisions.html">
-        <span class="icard__th"><img src="assets/img/th-guide-01.webp" srcset="assets/img/th-guide-01-240.webp 240w, assets/img/th-guide-01.webp 420w" sizes="(min-width: 900px) 24vw, 92vw" width="420" height="315" alt="色と質感の異なるページをめくっている指" decoding="async" fetchpriority="low"></span>
-        <span class="icard__bd">
-          <span class="icard__no">01</span>
-          <span class="icard__t">初めてのWebサイトで、最初に決める7つのこと</span>
-          <span class="icard__d">デザインや色を決める前に確認したい7項目を、決め方の例つきで説明します。</span>
-        </span>
-        <span class="icard__go" aria-hidden="true"><svg class="ico"><use href="#i-arrow"></use></svg></span>
-      </a></li>
-      <li class="icard"><a href="guide-sns-vs-website.html">
-        <span class="icard__th"><img src="assets/img/th-guide-02.webp" srcset="assets/img/th-guide-02-240.webp 240w, assets/img/th-guide-02.webp 420w" sizes="(min-width: 900px) 24vw, 92vw" width="420" height="315" alt="透明なレンズで焦点を合わせている手元" decoding="async" fetchpriority="low"></span>
-        <span class="icard__bd">
-          <span class="icard__no">02</span>
-          <span class="icard__t">SNSとWebサイトは、どう使い分ければよいですか？</span>
-          <span class="icard__d">それぞれが得意なことと、両方を組み合わせたときの役割分担。</span>
-        </span>
-        <span class="icard__go" aria-hidden="true"><svg class="ico"><use href="#i-arrow"></use></svg></span>
-      </a></li>
-      <li class="icard"><a href="guide-basic-seo.html">
-        <span class="icard__th"><img src="assets/img/th-guide-03.webp" srcset="assets/img/th-guide-03-240.webp 240w, assets/img/th-guide-03.webp 420w" sizes="(min-width: 900px) 24vw, 92vw" width="420" height="315" alt="青空へ向かって開くガラスの入口" decoding="async" fetchpriority="low"></span>
-        <span class="icard__bd">
-          <span class="icard__no">03</span>
-          <span class="icard__t">小規模サイトの基本SEOで、最初に整えること</span>
-          <span class="icard__d">順位を保証せずに、最低限やっておく価値のあることだけを挙げます。</span>
-        </span>
-        <span class="icard__go" aria-hidden="true"><svg class="ico"><use href="#i-arrow"></use></svg></span>
-      </a></li>
-      <li class="icard"><a href="website-guide.html">
-        <span class="icard__th"><img src="assets/img/ph-biz-desk.webp" srcset="assets/img/ph-biz-desk-420.webp 420w, assets/img/ph-biz-desk.webp 760w" sizes="(min-width: 900px) 24vw, 92vw" width="760" height="570" alt="窓辺の小さな机で、パソコンに向かって作業している人" decoding="async" fetchpriority="low"></span>
-        <span class="icard__bd">
-          <span class="icard__no">04</span>
-          <span class="icard__t">Webサイトの役割 ― いつでも確認できる場所をつくる</span>
-          <span class="icard__d">信頼を確かめる、比較と判断を助ける、問い合わせへの道筋を作る。公開しただけで成果が出るものではありません。</span>
-        </span>
-        <span class="icard__go" aria-hidden="true"><svg class="ico"><use href="#i-arrow"></use></svg></span>
-      </a></li>
-    </ul>
-    <p class="btn-row btn-row--mt rv"><a class="alink" href="guide.html">ガイドの一覧を見る<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a><a class="alink" href="services.html">Web制作で整える6項目を見る<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a></p>
-  </div>
-</section>
-
-<!-- ============================= Statement ============================= -->
-<div class="cband" aria-hidden="true">
-  <img src="assets/img/band-four-colors.webp" width="1942" height="809"
-       srcset="assets/img/band-four-colors.webp 1942w" sizes="100vw" decoding="async" fetchpriority="low" alt="">
-</div>
-<section class="sec sec--paper2 stmt" id="about-statement">
-  <div class="wrap">
-    <div class="g6">
-      <div class="c1-3 rv">
-        <div class="opener__top"><span class="lbl">About</span><span class="opener__ja">クルーアセントについて</span></div>
-        <span class="opener__rule rvl" aria-hidden="true"><i></i></span>
-        <h2><span class="nb">決める前に、</span><span class="nb">整理するところから。</span></h2>
-      <p class="stmt__body">最初から完成イメージを求められるのではなく、診断とヒアリングでWebサイトの優先順位を言葉にし、必要なページを決めてから制作へ進みます。料金と対応範囲を先に見せて、比べてから選べる状態を大切にします。</p>
-        <div class="btn-row">
-          <a class="btn btn--onink" href="diagnosis.html">無料診断を始める<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-          <a class="btn btn--ghost" href="about.html">クルーアセントについて</a>
-        </div>
-      </div>
-      <ul class="pledge c4-6 rv rv-d1">
-        <li><span class="pledge__mk pledge__mk--do" aria-hidden="true"></span><div><b>分からない状態から相談できます</b><p>完成イメージが固まっていなくても構いません。</p></div></li>
-        <li><span class="pledge__mk pledge__mk--do" aria-hidden="true"></span><div><b>料金と対応範囲を先に確認できます</b><p>見積もり前に、ページ数・修正回数・納期・追加費用の考え方を公開しています。</p></div></li>
-        <li><span class="pledge__mk pledge__mk--dont" aria-hidden="true"></span><div><b>特定プランを無理にすすめません</b><p>診断結果から料金プランを自動で決めることはしません。</p></div></li>
-        <li><span class="pledge__mk pledge__mk--dont" aria-hidden="true"></span><div><b>架空の実績や成果保証で飾りません</b><p>実在しない顧客の声や受注件数は掲載しません。検索順位や売上も保証しません。</p></div></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="sec sec--tight cta-band">
-  <div class="wrap wrap--read cta-band__in rv">
-    <h2>まず、2〜3分の診断から。</h2>
-    <p>氏名・メールの登録はありません。結果だけを持ち帰っていただいても構いません。</p>
-    <div class="btn-row">
-      <a class="btn btn--primary btn--lg" href="diagnosis.html">無料診断を始める<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-      <a class="btn btn--line btn--lg" href="contact.html">プラン未定のまま相談する</a>
-    </div>
-  </div>
-</section>
-
-</main>
+<dialog id="direction-dialog" class="atl-dialog" aria-labelledby="detail-title">
+    <button type="button" class="atl-dialog-close" aria-label="設計方針を閉じる">✕</button>
+    <div class="atl-dialog-visual"><p class="atl-eyebrow">PRIORITIES → STRUCTURE</p><div class="atl-dialog-position" id="dialog-position"></div><div class="atl-layout-study"><p class="atl-eyebrow">サイトに必要な情報の例</p><div id="layout-preview"></div><p>掲載項目の例です。完成デザインではありません。</p></div></div>
+    <div class="atl-dialog-copy"><p class="atl-eyebrow" id="detail-id"></p><h2 id="detail-title"></h2><p class="atl-detail-one" id="detail-one"></p><div class="atl-detail-tags" id="detail-tags"></div><div class="atl-detail-rule"></div><p class="atl-detail-label">このタイプが大切にすること</p><p id="detail-summary"></p><p class="atl-detail-label">設計するときの注意点</p><p id="detail-tradeoff"></p><a class="atl-primary-cta atl-detail-link" id="detail-link" href="types.html">設計方針を詳しく見る <span aria-hidden="true">↗</span></a><a class="atl-dialog-diagnosis" href="diagnosis.html?mode=quick">自分に合う方向性を診断する →</a><p class="atl-detail-disclaimer">業種だけで決まる分類ではありません。事業の目的に合わせて調整します。</p></div>
+  </dialog>
 
 <footer class="ftr">
   <div class="wrap">

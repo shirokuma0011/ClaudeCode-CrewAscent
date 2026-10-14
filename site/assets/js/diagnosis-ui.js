@@ -89,6 +89,13 @@
         start(mode, null);
       });
     });
+    /* トップなど他ページから ?mode=quick / ?mode=full で来たら、その診断へ直接入る。
+       回答途中の記録があるときは勝手に始めず、いつもの「前回の続き」を出す（保存を上書きしない）。 */
+    var want = (location.search.match(/[?&]mode=(quick|full)(?:&|$)/) || [])[1];
+    if (want && !(saved && Object.keys(saved.answers).length > 0)) {
+      track('diagnosis_mode_select', { mode: want, from: 'link' });
+      start(want, null);
+    }
   }
 
   function showResume(saved) {
@@ -183,6 +190,7 @@
       '  <div class="dg-page__head">' +
       '    <h1 id="dg-heading" tabindex="-1"></h1>' +
       '    <p class="caption" id="dg-sub"></p>' +
+      '    <p class="caption dg-page__note">回答はこの端末にだけ30日間保存し、外部へは送信しません。心理検査・性格診断ではありません。</p>' +
       '  </div>' +
       '  <form id="dg-form" novalidate><div class="q-list" id="dg-qlist"></div></form>' +
       '  <div class="dg-nav">' +
