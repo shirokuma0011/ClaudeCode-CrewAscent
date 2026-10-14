@@ -586,3 +586,8 @@ a.card:hover, a.near-card:hover, a.work-card:hover, .near-card a:hover { backgro
   .btn:hover .ico, .alink:hover .ico { transform:none; }
 }
 @media print { .ah::before, .ah::after, .rs-mast::before, .rs-mast::after { display:none; } }
+
+/* 濃い緑の面の補助文字: 旧版の青灰・紙面用の淡色を引き継がない（コントラスト4.5:1以上） */
+.sec--ink .cycle__step span, .sec--ink .dg-assure__item span, .sec--ink .dg-assure__item p { color:var(--tx-on-ink-2); }
+.sec--ink .cycle__step b, .sec--ink .dg-assure__item b { color:#f5f5e9; }
+.sec--ink .num__unit, .sec--ink .num__u { color:var(--tx-on-ink-2); }

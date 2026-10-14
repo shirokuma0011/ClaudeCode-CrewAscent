@@ -34,6 +34,10 @@
 /* ---------- このページの中だけの素地 ---------- */
 .atl, .atl-dialog { color: var(--atl-ink); font-family: var(--font); -webkit-font-smoothing: antialiased; }
 .atl { background: var(--atl-paper); }
+/* 引き継ぎ版と同じく、見出しと強調は所属する面の文字色を引き継ぐ。
+   crew.css の h1–h3 / strong の色指定が勝つと、濃い緑の面で見出しが沈むため */
+.atl, .atl-dialog { color: var(--atl-ink); }
+.atl :where(h1, h2, h3, strong, b), .atl-dialog :where(h1, h2, h3, strong, b) { color: inherit; }
 /* :where() で要素部分の詳細度を0にする。.atl p だと詳細度が 0-1-1 になり、
    .atl-hero-signature（0-1-0）などクラスで付けた余白を打ち消してしまう */
 .atl :where(p, h1, h2, h3), .atl-dialog :where(p, h2) { margin: 0; }
@@ -94,6 +98,10 @@ body.atl-dialog-open { overflow: hidden; }
 .atl-spatial-plane { position: relative; width: 100%; transform-style: preserve-3d; transform: scale(.94) rotateX(calc(23deg + var(--look-x,0deg))) rotateY(calc(-6deg + var(--look-y,0deg))) rotateZ(-7deg); transition: transform .5s ease,height var(--atl-motion); }
 .atl-spatial-plane:before { content: ''; position: absolute; inset: 12px 0; border: 1px solid #ffffff66; border-radius: 2px; background: linear-gradient(125deg,#f4f4e978,#fcfaf24b); box-shadow: 10px 25px 32px #393e2610; transform: translateZ(-18px); pointer-events: none; }
 .atl-priority-grid { position: absolute; inset: 0; transform-style: preserve-3d; }
+/* 立体ONでは格子とタイルが同じ面(z=0)に並ぶため、クリックが格子側に吸われることがある。
+   面と格子はクリックを素通りさせ、当たり判定をタイルだけにする（傾きは .atl-spatial-stage が受ける） */
+.atl-spatial-plane, .atl-priority-grid { pointer-events: none; }
+.atl-map-cell { pointer-events: auto; }
 .atl-map-cell { position: absolute; left: 0; top: 0; width: var(--tile-size); height: var(--tile-size); padding: 2px; border: 1px solid #fafcf4; border-radius: 2px; background: linear-gradient(130deg,#fffef9,#e9ede0); color: var(--point-color); box-shadow: 0 2px 0 #d5dccc,0 3px 0 #c6cebb,3px 10px 10px #3b42271c; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; transform: translate3d(var(--tile-x),var(--tile-y),0); transition: transform var(--atl-motion),background .2s,box-shadow .3s; scroll-margin-block: 140px 30px; }
 .atl-map-cell:hover,.atl-map-cell:focus-visible { transform: translate3d(var(--tile-x),var(--tile-y),16px); background: #fff; box-shadow: 0 3px 0 #c5cfbf,7px 18px 20px #35412e30; }
 .atl-map-cell[aria-pressed=true] { transform: translate3d(var(--tile-x),var(--tile-y),26px); background: linear-gradient(135deg,#517555,#294c3c); color: #fff; border-color: #839b75; box-shadow: 0 3px 0 #24432f,8px 22px 18px #3045263b; }
