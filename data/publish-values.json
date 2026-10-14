@@ -15,8 +15,18 @@
     "indexTypePages": false
   },
 
+  "_optionalReadme": [
+    "任意の項目です。空でも公開の妨げにはなりません（_ で始まるので空欄チェックの対象外）。",
+    "ownerPhoto: 運営者の写真。site/ からの相対パス（例: assets/img/owner.webp）。縦横比 4:5、960×1200px 推奨。",
+    "  ファイルを置いてパスを書くと、about.html の写真枠が実際の写真に置き換わります。"
+  ],
+  "_optional": {
+    "ownerPhoto": ""
+  },
+
   "canonicalOrigin": "",
   "googleFormUrl": "",
+  "hearingFormUrl": "",
 
   "legalBusinessName": "",
   "responsiblePerson": "",
@@ -26,6 +36,7 @@
   "businessDays": "",
   "replyEstimate": "",
   "serviceArea": "",
+  "ownerProfile": "",
 
   "taxDisplayNote": "",
   "taxDisplayShort": "",
@@ -33,6 +44,7 @@
   "transferFeeBearer": "",
   "domainFeeInclusion": "",
   "domainFeePolicy": "",
+  "invoiceStatus": "",
 
   "cancelContactMethod": "",
   "monthlyRefundPolicy": "",

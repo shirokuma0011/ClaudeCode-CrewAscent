@@ -591,3 +591,60 @@ a.card:hover, a.near-card:hover, a.work-card:hover, .near-card a:hover { backgro
 .sec--ink .cycle__step span, .sec--ink .dg-assure__item span, .sec--ink .dg-assure__item p { color:var(--tx-on-ink-2); }
 .sec--ink .cycle__step b, .sec--ink .dg-assure__item b { color:#f5f5e9; }
 .sec--ink .num__unit, .sec--ink .num__u { color:var(--tx-on-ink-2); }
+
+/* 狭い画面: 補足文は14px、ラベルは13pxへ。リンクの押せる高さを44px以上へ（2026-10-15 ペルソナ確認）
+   本文の最小13px・等幅ラベル12pxという全体の下限は変えず、スマホでだけ一段上げる */
+@media (max-width: 760px) {
+  :root { --fs-xs: .875rem; --fs-xxs: .8125rem; }
+  .hint, .caption, .ftr__note, .fold__lead, .erase__note, .spx__note, .spx__hint, .spx__dec, .ah__meta, .ah__peek,
+  .dgm-steps p, .mark-list li span, .mark-list li b, .info-dl dd { font-size:.875rem; }
+  figcaption, .dgm__hd, .info-dl dt, .plan-panel dt, .ftr__bottom span, .plan-entry__cap, .ftr h2 { font-size:.8125rem; }
+  .ftr ul { display:grid; gap:0; }
+  .ftr ul li { min-height:44px; display:flex; flex-wrap:wrap; align-items:center; column-gap:.4em; }
+  .ftr ul a { display:inline-flex; align-items:center; min-height:44px; }
+  .breadcrumb a { display:inline-block; padding-block:10px; }
+}
+
+/* 制作する人（about.html）: 写真・名前・紹介文は公開前に本人の情報で埋める。埋まるまでは枠と印だけ */
+.owner { display:grid; gap:clamp(24px, 4vw, 56px); align-items:start; }
+@media (min-width:760px) { .owner { grid-template-columns:minmax(0, 300px) minmax(0, 1fr); } }
+.owner__photo { margin:0; }
+.owner__photo img, .owner__photo-slot { display:block; width:100%; aspect-ratio:4 / 5; height:auto; object-fit:cover; border:1px solid var(--rule); border-radius:var(--r); background:var(--surface); }
+.owner__photo-slot { display:grid; place-items:center; padding:24px; text-align:center; font-size:.8125rem; color:var(--tx-3);
+  background:repeating-linear-gradient(135deg, transparent 0 12px, color-mix(in srgb, var(--rule) 45%, transparent) 12px 13px), var(--surface); }
+.owner__name { margin:6px 0 14px; font-size:1.375rem; color:var(--ink); }
+.owner__profile { margin:0 0 20px; max-width:34em; }
+.owner__facts { display:grid; gap:0; margin:0 0 20px; border-top:1px solid var(--rule-fine); }
+.owner__facts > div { display:grid; grid-template-columns:7em 1fr; gap:12px; padding:12px 0; border-bottom:1px solid var(--rule-fine); }
+.owner__facts dt { font-size:.8125rem; color:var(--tx-3); }
+.owner__facts dd { margin:0; }
+.owner__links { display:flex; flex-wrap:wrap; gap:8px 24px; margin:0; }
+
+/* 相談ページ: フォーム以外の連絡方法・受付時間・相談前に見るもの（3つを横に並べる） */
+.contact-ways { display:grid; gap:0; margin-top:var(--s5); border-top:1px solid var(--rule); }
+@media (min-width:760px) { .contact-ways { grid-template-columns:repeat(3, minmax(0, 1fr)); } }
+.contact-ways__item { padding:20px 0; border-bottom:1px solid var(--rule-fine); }
+@media (min-width:760px) { .contact-ways__item { padding:22px 22px 22px 0; border-bottom:0; } .contact-ways__item + .contact-ways__item { padding-left:22px; border-left:1px solid var(--rule-fine); } }
+.contact-ways__item h3 { margin:0 0 8px; font-size:1rem; }
+.contact-ways__item p { margin:0; font-size:.875rem; line-height:1.9; }
+.contact-ways__links { list-style:none; margin:0; padding:0; display:grid; gap:2px; }
+.contact-ways__links a { min-height:40px; font-size:.875rem; }
+
+/* 料金ページの「このページで使う言葉」 */
+.words-dl { margin-top:var(--s4); }
+.words-dl > div { grid-template-columns:minmax(8em, 11em) 1fr; }
+@media (max-width:560px) { .words-dl > div { grid-template-columns:1fr; gap:2px; } }
+
+/* 相談ページ: 2つのフォームの選び分け */
+.form-choice { display:grid; gap:16px; margin-top:var(--s4); }
+@media (min-width:760px) { .form-choice { grid-template-columns:repeat(2, minmax(0, 1fr)); gap:22px; } }
+.form-choice__item { display:flex; flex-direction:column; gap:10px; padding:clamp(20px, 2.4vw, 28px); background:var(--card); border:1px solid var(--rule); border-radius:var(--r); }
+.form-choice__item h3 { margin:0; font-size:1.25rem; }
+.form-choice__item p { margin:0; font-size:.875rem; line-height:1.9; }
+.form-choice__item .btn { margin-top:auto; }
+.form-choice__who { font-size:.8125rem !important; color:var(--act); letter-spacing:.04em; }
+.form-choice__url { font-size:.8125rem !important; color:var(--tx-3); }
+
+/* 見本サイト一覧: 空いたマスに罫の色が面で出ないよう、カードごとに罫で囲む */
+.works { background:transparent; border:0; gap:18px; }
+.work { border:1px solid var(--rule); border-radius:var(--r); overflow:hidden; }

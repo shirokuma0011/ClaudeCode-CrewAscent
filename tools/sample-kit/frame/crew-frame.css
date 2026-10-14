@@ -1,0 +1,89 @@
+/* =====================================================================
+   クルーアセント 見本サイト共通の枠  crew-frame.css  v2026-10-15
+   置き場所: site/samples/_shared/crew-frame.css（10件の見本で共有）
+
+   この枠だけはクルーアセントの見た目で統一する（見本の世界観とは切り離す）。
+   ・上の帯（.ca-ribbon）  … 見本であること・架空であること・タイプ・設計メモ
+   ・下の案内（.ca-credit） … 誰が、どのタイプの方針で作ったか／診断への入口
+   ・見本の案内（.ca-dialog）… 予約・購入・送信の代わりに出す
+   クラス名と変数はすべて ca- で始め、見本側のCSSと衝突させない。
+   見本側のCSSでこの枠を上書きしないこと（消す・薄める・小さくするのは不可）。
+   ===================================================================== */
+.ca-ribbon, .ca-credit, .ca-dialog {
+  --ca-ink: #203d35; --ca-paper: #f6f4ed; --ca-paper-2: #edeee5; --ca-act: #254e41; --ca-act-dark: #16392d;
+  --ca-tx-2: #3c5445; --ca-rule: #cdd3c5; --ca-on-ink: #f6f4ed; --ca-on-ink-2: #d4dec9; --ca-focus: #1d64bd;
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", "Noto Sans JP", system-ui, sans-serif;
+  font-weight: 400; letter-spacing: .02em; text-align: left;
+}
+.ca-ribbon *, .ca-credit *, .ca-dialog * { box-sizing: border-box; }
+.ca-ribbon a:focus-visible, .ca-credit a:focus-visible, .ca-dialog a:focus-visible,
+.ca-dialog button:focus-visible { outline: 3px solid var(--ca-focus); outline-offset: 2px; }
+
+/* ---------- 上の帯 ---------- */
+.ca-ribbon {
+  position: relative; z-index: 50; display: flex; align-items: center; gap: 0 18px; flex-wrap: wrap;
+  min-height: 44px; padding: 0 max(16px, calc((100% - 1200px) / 2)); margin: 0;
+  background: var(--ca-ink); color: var(--ca-on-ink); font-size: 13px; line-height: 1.6;
+}
+.ca-ribbon a, .ca-ribbon a:visited { color: var(--ca-on-ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; display: inline-flex; align-items: center; min-height: 44px; }
+.ca-ribbon__brand { gap: 8px; text-decoration: none !important; font-weight: 700; letter-spacing: .06em; }
+.ca-ribbon__brand img { width: 26px; height: auto; display: block; }
+.ca-ribbon .ca-ribbon__text { margin: 0; padding: 10px 0; flex: 1 1 20em; color: var(--ca-on-ink-2); font-size: 13px; }
+.ca-ribbon__text b { color: var(--ca-on-ink); font-weight: 700; margin-right: .6em; padding: 1px 8px; border: 1px solid #c4d3b6; border-radius: 2px; }
+.ca-ribbon .ca-ribbon__links { display: flex; gap: 0 16px; flex-wrap: wrap; margin: 0; }
+/* 狭い画面: 1行に収める（ロゴ・「見本サイト・架空」・タイプ番号・設計メモ） */
+@media (max-width: 640px) {
+  .ca-ribbon { flex-wrap: nowrap; gap: 0 12px; }
+  .ca-ribbon__long { display: none; }
+  .ca-ribbon .ca-ribbon__text { flex: 1 1 auto; padding: 0; white-space: nowrap; }
+  .ca-ribbon__text b { margin-right: 0; }
+  .ca-ribbon .ca-ribbon__links { flex-wrap: nowrap; gap: 0 12px; white-space: nowrap; }
+}
+
+/* ---------- 下の案内 ---------- */
+.ca-credit { background: var(--ca-paper); color: var(--ca-ink); border-top: 1px solid var(--ca-rule); padding: 48px max(16px, calc((100% - 1040px) / 2)); }
+.ca-credit__label { margin: 0 0 10px; font-size: 12px; letter-spacing: .12em; color: var(--ca-tx-2); }
+.ca-credit h2 { margin: 0 0 14px; font-size: clamp(18px, 2.2vw, 22px); line-height: 1.7; font-weight: 400; color: var(--ca-ink); }
+.ca-credit p { margin: 0 0 12px; font-size: 14px; line-height: 1.9; color: var(--ca-tx-2); max-width: 46em; }
+.ca-credit__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin: 22px 0 18px; }
+.ca-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 10px 20px; border: 1px solid #61776a; border-radius: 2px; color: var(--ca-ink); background: transparent; font-size: 14px; text-decoration: none; }
+.ca-credit .ca-btn--primary, .ca-dialog .ca-btn--primary { background: var(--ca-act); border-color: var(--ca-act); color: #fff; }
+.ca-btn--primary:hover { background: var(--ca-act-dark); }
+.ca-link { color: var(--ca-act); font-size: 14px; text-decoration: underline; text-underline-offset: 4px; display: inline-flex; align-items: center; min-height: 44px; }
+.ca-credit__fine { font-size: 13px !important; color: #52634f !important; }
+.ca-credit__brand { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; margin-top: 8px; font-size: 13px; color: var(--ca-tx-2); text-decoration: none; }
+.ca-credit__brand img { width: 30px; height: auto; }
+
+/* ---------- 見本の案内（予約・購入・送信の代わり） ---------- */
+.ca-dialog { max-width: min(92vw, 440px); padding: 28px 26px 22px; border: 1px solid var(--ca-rule); border-radius: 4px; background: var(--ca-paper); color: var(--ca-ink); box-shadow: 0 18px 50px #0003; }
+.ca-dialog::backdrop { background: #141a1866; }
+.ca-dialog h2 { margin: 0 0 10px; font-size: 18px; font-weight: 700; }
+.ca-dialog p { margin: 0 0 18px; font-size: 14px; line-height: 1.9; color: var(--ca-tx-2); }
+.ca-dialog__actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
+.ca-dialog button { font: inherit; min-height: 44px; padding: 8px 18px; border: 1px solid #61776a; border-radius: 2px; background: transparent; color: var(--ca-ink); cursor: pointer; }
+
+/* 見本の中で無効化したフォームに添える注記（見本側のフォームの近くに置く） */
+.ca-form-note { display: block; margin: 8px 0; padding: 10px 14px; border-left: 3px solid #829a76; background: #f6f4edcc; color: #203d35; font-size: 13px; line-height: 1.8; font-family: "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif; }
+
+@media print { .ca-ribbon { background: #fff; color: #000; border-bottom: 1px solid #000; } .ca-dialog { display: none; } }
+@media (prefers-reduced-motion: reduce) { .ca-ribbon *, .ca-credit *, .ca-dialog { transition: none !important; animation: none !important; } }
+
+/* ---------- 設計メモのページ（design-notes.html） ---------- */
+.ca-notes { --ca-ink: #203d35; --ca-paper: #f6f4ed; --ca-act: #254e41; --ca-tx-2: #3c5445; --ca-rule: #cdd3c5; --ca-focus: #1d64bd;
+  margin: 0; background: var(--ca-paper); color: var(--ca-ink); font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", "Noto Sans JP", system-ui, sans-serif; font-size: 16px; line-height: 1.95; letter-spacing: .02em; }
+.ca-notes main { max-width: 960px; margin: 0 auto; padding: 48px 16px 72px; }
+.ca-notes h1 { margin: 0 0 16px; font-size: clamp(26px, 3.6vw, 36px); line-height: 1.5; font-weight: 400; }
+.ca-notes h2 { margin: 56px 0 16px; padding-top: 18px; border-top: 1px solid var(--ca-rule); font-size: clamp(19px, 2.4vw, 23px); line-height: 1.6; font-weight: 400; }
+.ca-notes h2 small { display: block; font-size: 12px; letter-spacing: .12em; color: var(--ca-tx-2); }
+.ca-notes main p, .ca-notes main li { color: var(--ca-tx-2); }
+.ca-notes table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; line-height: 1.8; }
+.ca-notes th, .ca-notes td { text-align: left; vertical-align: top; padding: 12px 10px; border-bottom: 1px solid var(--ca-rule); }
+.ca-notes th { width: 34%; font-weight: 700; color: var(--ca-ink); }
+.ca-notes thead th { font-size: 12px; letter-spacing: .08em; color: var(--ca-tx-2); border-bottom: 1px solid var(--ca-ink); }
+.ca-notes .ca-chip { display: inline-block; margin: 0 6px 6px 0; padding: 2px 10px; border: 1px solid var(--ca-rule); border-radius: 2px; font-size: 13px; color: var(--ca-ink); }
+.ca-notes .ca-swatch { display: inline-block; width: 14px; height: 14px; margin-right: 6px; vertical-align: -2px; border: 1px solid #0002; border-radius: 2px; }
+.ca-notes main a { color: var(--ca-act); text-underline-offset: 4px; }
+.ca-notes main a:focus-visible { outline: 3px solid var(--ca-focus); outline-offset: 2px; }
+.ca-notes th small { display: block; margin-top: 4px; font-size: 13px; font-weight: 400; color: var(--ca-tx-2); line-height: 1.7; }
+.ca-notes .ca-lead { font-size: 17px; color: var(--ca-ink); }
+@media (max-width: 640px) { .ca-notes th, .ca-notes td { display: block; width: auto; padding: 8px 0; } .ca-notes th { border-bottom: 0; padding-top: 14px; } .ca-notes thead { display: none; } }

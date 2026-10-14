@@ -9,3 +9,7 @@ Thumbs.db
 
 # 検査の出力（生成物）
 qa-out/
+
+# 見本サイトの制作用プロンプト（tools/build-sample-prompts.mjs の生成物）と、展開した作業フォルダ
+dist/
+samples-kit/

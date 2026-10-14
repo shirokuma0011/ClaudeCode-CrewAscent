@@ -52,7 +52,8 @@ window.CREW_CONFIG = {
   businessDays: 'PUBLISH_BLOCKER',
   replyEstimate: 'PUBLISH_BLOCKER',
   serviceArea: 'PUBLISH_BLOCKER',
-  googleFormUrl: 'PUBLISH_BLOCKER',      // 相談フォームURL
+  googleFormUrl: 'PUBLISH_BLOCKER',      // 相談フォームURL（サイトのイメージがまだ固まっていない方）
+  hearingFormUrl: 'PUBLISH_BLOCKER',     // 事前ヒアリングフォームURL（サイトのイメージが固まっている方）
   officialLineUrl: '',
   socialUrls: [],
   taxMode: 'PUBLISH_BLOCKER',            // 'included' | 'excluded' 等

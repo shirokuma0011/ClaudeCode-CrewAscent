@@ -1,5 +1,8 @@
 # 見本サイト（仮の実績）を有効にする手順
 
+> 2026-10-15: 見本10件を作るための Claude Code 用パッケージを `npm run sample-prompts` で作れるようになりました（`docs/IMPROVEMENT_2026-08-17.md` §27.3）。
+> 見本は `site/samples/<id>/`、サムネイルは `site/assets/img/works/<id>.jpg` に置きます。
+
 現在は**受け皿だけを作った状態**です。`data/works.json` の `items` が空なので、
 `works.html` は「見本サイトは準備中です」と表示し、ナビゲーションからはリンクされていません。
 

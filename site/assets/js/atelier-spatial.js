@@ -6,7 +6,8 @@
      （pointermove 1回につき rAF 1回。離れたら取り消す）
    ・並び替えても選択は保持する。矢印キーは「見えている位置」で隣を探す
    ・動きを減らす設定では立体を外し、切り替えボタンも無効にする
-   ・業種の並びは引き継ぎ指定の「参考の分類」。診断結果や適性の断定ではない
+   ・業種の並びは業種ページ（data/occupations.json）と同じ13分類。診断結果や適性の断定ではない
+     （引き継ぎ版の7分類は業種ページと食い違っていたため、正本から作る形に改めた）
    ===================================================================== */
 (() => {
   'use strict';
@@ -16,15 +17,11 @@
   if (!stage || !map || !Array.isArray(types)) return;
   const plane = stage.querySelector('.atl-spatial-plane'), labels = stage.querySelector('.atl-stage-labels');
   const tiles = [...map.querySelectorAll('.atl-map-cell')], byId = new Map(tiles.map((b) => [b.dataset.id, b]));
-  const groups = [
-    ['士業', [13, 25, 2, 20, 36]],
-    ['建設・リフォーム・工務店', [31, 26, 32, 27, 33]],
-    ['整体・クリニック', [7, 19, 15, 28, 35, 24]],
-    ['美容室・サロン・エステ', [9, 10, 17, 23, 29, 30]],
-    ['学習塾・教室', [8, 3, 21, 18]],
-    ['カフェ・店舗', [16, 22, 34, 5, 11]],
-    ['小規模BtoB', [1, 14, 4, 6, 12]]
-  ].map(([name, ids]) => [name, ids.map((n) => 'CA' + String(n).padStart(2, '0'))]);
+  /* 業種の並び: 業種ページと同じ13分類。各タイプは「最もよく挙がる分類」に置く（atelier-types.js が正本から計算） */
+  const groups = (window.CrewAtelierIndustryGroups || [])
+    .map((g) => ({ ...g, ids: types.filter((t) => t.industryGroup === g.key).map((t) => t.id) }))
+    .filter((g) => g.ids.length);
+  const groupOf = (id) => groups.find((g) => g.ids.includes(id));
   const reduce = matchMedia('(prefers-reduced-motion: reduce)'), motionButton = document.querySelector('#spatial-motion');
   let mode = 'coord', positions = new Map(), motion = !reduce.matches, frame = 0;
 
@@ -38,10 +35,28 @@
     labels.append(el);
   }
   function arrange() {
+    if (mode === 'industry' && !groups.length) mode = 'coord';
     const width = stage.clientWidth || 480, unit = width / 7.25, size = unit * .83;
     const split = mode === 'regions' ? .62 : 0, origin = (width - unit * (5 + split) - size) / 2;
     const top = mode === 'industry' ? 36 : 45;
-    const height = mode === 'industry' ? top + 7 * unit * 1.42 : top + unit * (6 + split) + 33;
+    /* 業種: 2列 × 各3枠。4件以上の分類は2段に折り返す。分類名は各ブロックの左上 */
+    const industry = new Map(), heads = [];
+    let height = top + unit * (6 + split) + 33;
+    if (mode === 'industry') {
+      const gap = .62, left = (width - unit * (5 + gap) - size) / 2;
+      let y = top;
+      for (let i = 0; i < groups.length; i += 2) {
+        const pair = groups.slice(i, i + 2);
+        const lines = Math.max(...pair.map((g) => Math.ceil(g.ids.length / 3)));
+        pair.forEach((g, side) => {
+          const x0 = left + side * (3 + gap) * unit;
+          g.ids.forEach((id, k) => industry.set(id, { x: x0 + (k % 3) * unit, y: y + Math.floor(k / 3) * unit }));
+          heads.push([g.short, x0, y - 22]);
+        });
+        y += lines * unit + unit * .42;
+      }
+      height = y + 6;
+    }
     stage.style.height = height + 'px';
     plane.style.height = height + 'px';
     plane.style.setProperty('--tile-size', size + 'px');
@@ -50,16 +65,13 @@
     for (const type of types) {
       const row = 5 - type.yIndex, col = type.xIndex, id = type.id;
       let x = origin + (col + (col >= 3 ? split : 0)) * unit, y = top + (row + (row >= 3 ? split : 0)) * unit;
-      if (mode === 'industry') {
-        const g = groups.findIndex(([, ids]) => ids.includes(id)), index = groups[g][1].indexOf(id);
-        x = origin + index * unit;
-        y = top + g * unit * 1.42;
-      }
+      if (mode === 'industry') ({ x, y } = industry.get(id));
       positions.set(id, { x, y });
       const tile = byId.get(id);
       tile.style.setProperty('--tile-x', x + 'px');
       tile.style.setProperty('--tile-y', y + 'px');
-      const context = mode === 'industry' ? groups.find(([, ids]) => ids.includes(id))[0] + 'の参考分類。' : '';
+      const g = groupOf(id);
+      const context = mode === 'industry' && g ? g.name + 'の分類。よく挙がる業種: ' + type.industries.slice(0, 3).join('、') + '。' : '';
       tile.setAttribute('aria-label', context + id + ' ' + type.name + 'を表示。実用からブランドへの位置 ' + (col + 1) + ' / 6、王道から先進への位置 ' + (type.yIndex + 1) + ' / 6');
     }
     if (mode === 'coord') {
@@ -73,14 +85,14 @@
         label(text, x / width * 100, i < 2 ? 12 : height - 27);
       });
     } else {
-      groups.forEach(([name], i) => label(name, origin / width * 100, top + i * unit * 1.42 - 22, 'left'));
+      heads.forEach(([text, x, y]) => label(text, x / width * 100, y, 'left'));
     }
     stage.dataset.arrangement = mode;
     document.querySelectorAll('[data-arrange]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.arrange === mode)));
     document.querySelector('#arrangement-note').textContent = {
       coord: '36の位置から、伝え方のバランスを探せます。',
       regions: '実用・ブランド × 先進・王道。4つの領域で比べられます。',
-      industry: '業種別は参考の分類です。同じ業種でも、合う設計方向は異なります。'
+      industry: '各タイプを、業種ページで最もよく挙がる分類に置いています。1つのタイプは複数の業種に合います。'
     }[mode];
   }
   document.querySelectorAll('[data-arrange]').forEach((b) => b.addEventListener('click', () => { mode = b.dataset.arrange; arrange(); }));

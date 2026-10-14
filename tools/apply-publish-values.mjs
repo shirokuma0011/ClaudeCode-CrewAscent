@@ -23,7 +23,7 @@ import { spawnSync } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { indexPlan } from './publish-stages.mjs';
-import { SITE, DATA } from './paths.mjs';
+import { SITE, DATA, REPO } from './paths.mjs';
 
 /* Windows では new URL(...).pathname が "/C:/…" になり、パスとして壊れる。
    fileURLToPath を使うと、どのOSでも正しい絶対パスになる。 */
@@ -46,6 +46,7 @@ const MAP = {
   '対応地域': 'serviceArea',
   '公開ドメイン': 'canonicalOrigin',
   'GoogleフォームURL': 'googleFormUrl',
+  '事前ヒアリングフォームURL': 'hearingFormUrl',
   '税込総額または税抜+税込併記': 'taxDisplayNote',
   '消費税の表示方針': 'taxDisplayShort',
   '負担者': 'transferFeeBearer',
@@ -61,6 +62,8 @@ const MAP = {
   '保管期間の最終承認': 'retentionPolicy',
   '請求受付方法・手数料': 'disclosureRequest',
   '合意管轄裁判所': 'jurisdictionCourt',
+  '運営者の紹介文': 'ownerProfile',
+  'インボイス対応': 'invoiceStatus',
 };
 
 const V = JSON.parse(rdData('publish-values.json'));
@@ -107,6 +110,18 @@ for (const f of files) {
     s = s.replace(/("@type":"WebSite","name")/g, `"@type":"WebSite","url":"${origin}/","name"`);
   }
 
+  /* 任意: 運営者の写真。ファイルが実在するときだけ写真枠を置き換える */
+  const photo = String((V._optional || {}).ownerPhoto || '').trim();
+  if (photo && /data-owner-photo/.test(s)) {
+    if (fs.existsSync(path.join(ROOT, photo))) {
+      const who = has('responsiblePerson') ? val('responsiblePerson') : '運営者';
+      s = s.replace(/(<figure class="owner__photo" data-owner-photo>)[\s\S]*?(<\/figure>)/,
+        `$1\n          <img src="${esc(photo)}" width="960" height="1200" alt="${esc(who)}の写真" loading="lazy" decoding="async">\n        $2`);
+    } else {
+      console.log(`  運営者の写真が見つかりません: site/${photo}（写真枠のままにしました）`);
+    }
+  }
+
   out.set(f, s);
   if (s !== before) { wr(f, s); }
 }
@@ -127,7 +142,7 @@ for (const p of plan) {
 /* 6. site-config.js */
 let cfg = rd('assets/js/site-config.js');
 const CFG_KEYS = ['canonicalOrigin', 'legalBusinessName', 'responsiblePerson', 'postalAddress',
-  'telephone', 'email', 'businessDays', 'replyEstimate', 'serviceArea', 'googleFormUrl',
+  'telephone', 'email', 'businessDays', 'replyEstimate', 'serviceArea', 'googleFormUrl', 'hearingFormUrl',
   'domainFeePolicy'];
 for (const k of CFG_KEYS) {
   if (!has(k)) continue;
@@ -179,7 +194,8 @@ if (held.length) {
 
 /* 8. sitemap は index にしたページだけで作り直す */
 if (!DRY) {
-  const r = spawnSync(process.execPath, [path.join(ROOT, 'tools/build-sitemap.mjs')], { encoding: 'utf8' });
+  /* tools/ は site/ の外にある（以前は site/tools/ を指していて、公開時に sitemap が作り直されなかった） */
+  const r = spawnSync(process.execPath, [path.join(REPO, 'tools/build-sitemap.mjs')], { encoding: 'utf8' });
   process.stdout.write(r.stdout || '');
   if (r.status !== 0) process.stdout.write(r.stderr || '');
 } else {

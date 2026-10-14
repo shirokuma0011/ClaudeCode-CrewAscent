@@ -47,6 +47,8 @@
     $('#detail-summary').textContent = type.summary;
     $('#detail-tradeoff').textContent = type.tradeoff;
     $('#detail-tags').replaceChildren(...type.designKeywords.slice(0, 4).map((t) => element('span', '', t)));
+    const di = $('#detail-industries');
+    if (di) di.textContent = (type.industries || []).join('、');
     $('#detail-link').href = 'type-' + type.slug + '.html';
     const position = element('div', 'atl-position-description');
     position.append(
@@ -75,11 +77,13 @@
   }
   function selectType(type) {
     selected = type;
-    $('#direction-id').textContent = 'DESIGN DIRECTION / ' + type.id;
+    $('#direction-id').textContent = '設計の方向 / ' + type.id;
     $('#direction-name').textContent = type.name;
     $('#direction-summary').textContent = type.oneLiner;
     $('#direction-keywords').replaceChildren(...type.strengths.slice(0, 2).map((s) => element('span', '', s)));
     $('#selection-name').textContent = type.id + ' / ' + type.name;
+    const ind = $('#direction-industries');
+    if (ind) ind.textContent = (type.industries || []).slice(0, 4).join('、');
     $('#selection-detail').setAttribute('aria-label', type.id + ' ' + type.name + 'の設計ポイントを見る');
     document.querySelectorAll('.atl-map-cell').forEach((b) => {
       const active = b.dataset.id === type.id;
@@ -100,7 +104,7 @@
     mark.style.setProperty('--coordinate-y', 5 - type.yIndex);
     b.append(mark, element('span', 'atl-tile-id', type.id));
     b.setAttribute('aria-label', type.id + ' ' + type.name + 'を表示');
-    b.title = type.name;
+    b.dataset.name = type.name;   /* マウスを重ねる・キーで選ぶと名前の札を出す（CSS） */
     b.addEventListener('click', () => selectType(type));
     $('#type-map').append(b);
   }

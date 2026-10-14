@@ -257,7 +257,7 @@ body.atl-dialog-open { overflow: hidden; }
 .atl-consultation>div>p:last-child { font-size: 14px; line-height: 2; color: #40543d; }
 .atl-consultation-action .atl-primary-cta { width: 100%; min-height: 56px; background: var(--atl-accent); color: white; }
 .atl-consultation-action .atl-primary-cta:hover { background: #16392d; }
-.atl-consultation-action>p { margin-top: 15px; font-size: 12px !important; }
+.atl-consultation-action>p { margin-top: 15px; font-size: 13px; line-height: 1.8; }
 .atl-faq-section { max-width: 950px; margin: auto; padding: 75px 45px; }
 .atl-faq-section h2 { font-size: 28px; font-weight: 400; margin: 18px 0 30px; }
 .atl-faq-section details { border-top: 1px solid var(--atl-line); }
@@ -368,3 +368,43 @@ body.atl-dialog-open { overflow: hidden; }
 /* 業種の並びから、業種ページへの道（業種の対応表は industries.html が正本） */
 .atl-map-caption a { text-decoration: underline; text-underline-offset: 3px; }
 .atl-faq-more { margin-top: 26px; }
+
+/* ============================== ペルソナ確認（2026-10-15）で足したもの ============================== */
+/* ヒーローの料金と範囲: 最初の画面で費用の目安が分かるように（3つの事実を並べる） */
+.atl-hero-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 26px 0 0; max-width: 520px; border-block: 1px solid var(--atl-line); background: #fafbf2c7; }
+.atl-hero-facts > div { padding: 12px 14px; }
+.atl-hero-facts > div + div { border-left: 1px solid var(--atl-line); }
+.atl-hero-facts dt { font-size: 12px; color: var(--atl-muted); letter-spacing: .06em; }
+.atl-hero-facts dd { margin: 2px 0 0; font-size: 13px; color: var(--atl-ink); line-height: 1.5; }
+.atl-hero-facts b { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 24px; letter-spacing: .01em; margin-right: 2px; }
+.atl-hero-facts dd span { display: block; font-size: 12px; color: var(--atl-muted); line-height: 1.6; margin-top: 2px; }
+.atl-hero-facts-note { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; margin-top: 10px; font-size: 13px; color: var(--atl-muted); }
+.atl-hero-facts-note a { display: inline-flex; align-items: center; min-height: 44px; color: var(--atl-accent); text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 760px) {
+  .atl-hero-facts { margin-top: 20px; max-width: none; }
+  .atl-hero-facts > div { padding: 10px 8px; }
+  .atl-hero-facts b { font-size: 20px; }
+  .atl-hero-facts dd { font-size: 13px; }
+}
+
+/* タイルの名前札: マウスを重ねる・キーボードで選ぶと、CA番号の上にタイプ名を出す */
+.atl-map-cell::after { content: none; position: absolute; left: 50%; bottom: calc(100% + 8px); transform: translateX(-50%); padding: 4px 9px; border-radius: 2px; background: var(--atl-accent-dark); color: #f5f5e9; font-size: 12px; line-height: 1.5; letter-spacing: .02em; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity .15s; z-index: 2; }
+/* 札は出すときだけ作る（隠れた札が端のタイルで横スクロールを生まないように）。はみ出しは地図の枠で切る */
+.atl-map-cell:focus-visible::after { content: attr(data-name); opacity: 1; }
+@media (hover: hover) { .atl-map-cell:hover::after { content: attr(data-name); opacity: 1; } }
+.atl-direction-map-wrap { overflow-x: clip; }
+@media (prefers-reduced-motion: reduce) { .atl-map-cell::after { transition: none; } }
+
+/* 選択欄・詳細の「よく挙がる業種」（業種ページと同じデータ） */
+.atl-direction-industries, .atl-detail-industries { display: grid; gap: 2px; margin: 0 0 12px; font-size: 13px; line-height: 1.7; color: var(--atl-ink); }
+.atl-direction-industries > span:first-child, .atl-detail-industries > span:first-child { font-size: 12px; color: var(--atl-muted); }
+.atl-detail-industries { margin-top: 16px; }
+
+/* 狭い画面の本文を14px以上へ（ラベル・CA番号は12pxのまま） */
+@media (max-width: 760px) {
+  .atl-hero-description { font-size: 15px; line-height: 1.9; }
+  .atl-direction-card-summary, .atl-axis-help p, .atl-consultation-action p, .atl-service-steps p,
+  .atl-steps p, .atl :where(article) > p, .atl-direction-preview > p:not(.atl-eyebrow):not(.atl-preview-note) { font-size: 14px; }
+  .atl-direction-card-purpose, .atl-stage-help, .atl-map-caption, .atl-map-instruction, .atl-preview-note { font-size: 13px; }
+  .atl-primary-cta small, .atl-hero-copy .atl-primary-cta { font-size: 13px; }
+}

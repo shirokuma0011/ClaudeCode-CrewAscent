@@ -78,6 +78,10 @@
       .then(function (r) { return r.json(); })
       .then(function (j) {
         var items = (j && Array.isArray(j.items)) ? j.items : [];
+        /* 見出し下の状況表示（works.html）。件数に合わせて文を変える */
+        Array.prototype.forEach.call(document.querySelectorAll('[data-works-status]'), function (s) {
+          s.textContent = items.length ? '公開中の見本: ' + items.length + '件（すべて架空の事業です）' : '現在、公開中の見本はありません。';
+        });
         mounts.forEach(function (m) {
           var n = render(m, items, parseInt(m.getAttribute('data-works'), 10) || 0);
           var host = m.closest('[data-works-host]');

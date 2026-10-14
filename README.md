@@ -35,7 +35,8 @@ npm test             # 診断エンジンのテスト
 npm run data         # data/questions.tsv などから診断データを作り直す
 npm run types        # 36タイプの個別ページと一覧を作り直す
 npm run sitemap      # index にしているページだけで sitemap を作り直す
-npm run atelier      # トップの36タイプ空間のデータを data/types.json から作り直す
+npm run atelier      # トップの36タイプ空間のデータを data/types.json・occupations.json から作り直す
+npm run sample-prompts # 見本サイト10件の制作用プロンプト（ZIP）を dist/sample-prompts/ に作る
 ```
 
 `site/` の中で**手で編集してよいのは、生成対象でないページだけ**です。
@@ -94,7 +95,19 @@ Webサイトで何を先にするかを整理するための目安で、成果�
   （生成画像。実際の事務所ではありません）を淡く敷きます
 - 見た目を直すときは `crew.css`（全ページ）か `atelier-top.css`（トップ）に書き足します。土台は触りません
 - `top.css` は第6版でどのページからも読まれなくなりました（削除は確認待ち）
-- 経緯と採点は `docs/IMPROVEMENT_2026-08-17.md` の §21〜§26
+- 経緯と採点は `docs/IMPROVEMENT_2026-08-17.md` の §21〜§27
+
+## 見本サイト（仮の実績）
+
+- 10件の見本は `data/sample-sites.json` が正本。`npm run sample-prompts` で、Claude Code に渡す制作パッケージ（ZIP）を10件作ります
+- パッケージはリポジトリ直下の `samples-kit/` に展開して使い、見本は `site/samples/<id>/` に出力されます（`samples-kit/` と `dist/` は git に入れません）
+- 見本には必ずクルーアセントの枠（上の帯・下の案内・見本ダイアログ・設計メモ）を入れ、すべて `noindex`。事業・価格はすべて架空です
+- 一覧への載せ方は `docs/WORKS_連携手順.md`
+
+## 相談フォーム
+
+- 2種類（イメージがまだ固まっていない方＝相談フォーム／固まっている方＝事前ヒアリングフォーム）。設問案は `docs/CONTACT_FORM_SETUP.md`
+- URLは `data/publish-values.json` の `googleFormUrl` と `hearingFormUrl`
 
 ## 守っていること
 

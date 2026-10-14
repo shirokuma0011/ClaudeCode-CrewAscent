@@ -287,9 +287,12 @@
      URLが設定済みなら差し込む。未設定でも、サイト内の相談ページへ行けるリンクは
      生かしたままにする（押せない状態にするのは行き先が外部フォームしかない場合だけ）。 */
   var cfg = window.CREW_CONFIG || {};
+  /* data-form-link="hearing" は事前ヒアリングフォーム（イメージが固まっている方）。
+     それ以外は相談フォーム（イメージがまだ固まっていない方） */
   Array.prototype.forEach.call(document.querySelectorAll('[data-form-link]'), function (a) {
-    if (cfg.googleFormUrl && cfg.googleFormUrl !== 'PUBLISH_BLOCKER') {
-      a.href = cfg.googleFormUrl;
+    var url = a.getAttribute('data-form-link') === 'hearing' ? cfg.hearingFormUrl : cfg.googleFormUrl;
+    if (url && url !== 'PUBLISH_BLOCKER') {
+      a.href = url;
       a.setAttribute('target', '_blank');
       a.setAttribute('rel', 'noopener');
     } else {
@@ -298,7 +301,7 @@
     }
     a.addEventListener('click', function (e) {
       if (a.getAttribute('aria-disabled') === 'true') { e.preventDefault(); return; }
-      window.crewTrack('contact_form_open', { source_page: document.body.getAttribute('data-page') || '' });
+      window.crewTrack('contact_form_open', { source_page: document.body.getAttribute('data-page') || '', form: a.getAttribute('data-form-link') || 'consult' });
     });
   });
 

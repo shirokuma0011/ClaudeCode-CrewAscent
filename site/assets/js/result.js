@@ -279,11 +279,11 @@
     s.box.appendChild(pair);
     root.appendChild(s.sec);
 
-    /* ---------- 04 想定する訪問状況 / 05 ファーストビュー設計 ---------- */
+    /* ---------- 04 想定する訪問状況 / 05 最初の画面の設計 ---------- */
     if (D.targetVisitor && D.firstViewPlan) {
       var fv = section('band band--sm band--surface');
       fv.sec.id = 'rs-firstview';
-      fv.box.appendChild(idxHead(nextNo(), 'ファーストビューの設計', '最初の一画面で何を見せるかの方針です。'));
+      fv.box.appendChild(idxHead(nextNo(), '最初の画面の設計', '最初の一画面で何を見せるかの方針です。'));
       var fvGrid = el('div', 'ed ed--5-7');
       var fvL = el('div');
       fvL.appendChild(el('h3', 'h-sm', '想定する訪問状況'));
@@ -367,7 +367,7 @@
     /* ---------- ページ構成 / 機能 ---------- */
     var p = section('band band--sm band--surface');
     p.sec.id = 'rs-build';
-    p.box.appendChild(idxHead(nextNo(), 'サイトの組み立てと問い合わせ導線', '向いているページ構成と機能、デザインの方向です。'));
+    p.box.appendChild(idxHead(nextNo(), 'サイトの組み立てと問い合わせまでの流れ', '向いているページ構成と機能、デザインの方向です。'));
 
     // ページ構成は横に流れる図なので全幅で置く
     var pgWrap = el('div', 'build-row');
@@ -544,7 +544,7 @@
       root.appendChild(cq.sec);
     }
 
-    /* ---------- プラン導線（中立） + 注意書き ---------- */
+    /* ---------- プラン案内の流れ（中立） + 注意書き ---------- */
     var c2 = section('band band--sm band--bl');
     c2.sec.id = 'rs-plans';
     c2.box.appendChild(idxHead(nextNo(), '制作プランを比べる'));

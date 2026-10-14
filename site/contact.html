@@ -24,12 +24,12 @@
   <link rel="stylesheet" href="assets/css/styles.css?v=20260817r9">
   <link rel="stylesheet" href="assets/css/base.css?v=20260817r9">
   <link rel="stylesheet" href="assets/css/system.css?v=20260817r9">
-  <link rel="stylesheet" href="assets/css/crew.css?v=20261014">
+  <link rel="stylesheet" href="assets/css/crew.css?v=20261015">
   <script>document.documentElement.className += ' js';</script>
-  <script src="assets/js/site-config.js?v=20260817r9"></script>
+  <script src="assets/js/site-config.js?v=20261015"></script>
   <script defer src="assets/js/top.js?v=20260817r9"></script>
   <script defer src="assets/js/scroll-steady.js?v=20260817r9"></script>
-  <script defer src="assets/js/main.js?v=20260817r9"></script>
+  <script defer src="assets/js/main.js?v=20261015"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"index.html"},{"@type":"ListItem","position":2,"name":"無料相談・お問い合わせ","item":"contact.html"}]}</script>
   <script>/* 動きの入り切り。?motion=off と、動きを減らす設定で外れる。
      site-config.js の motion:'off' は main.js が後から外します。 */
@@ -171,12 +171,44 @@
   <section class="sec sec--paper2">
     <div class="wrap container--mid">
       <div class="external-cta">
-        <h2 style="font-size:1.25rem">相談フォームへ進む</h2>
-        <p class="caption">お問い合わせは外部のGoogleフォームで受け付けます。ボタンを押すと新しいタブでフォームが開きます。フォームのURLは公開前に設定します（<span class="blocker-inline" title="公開前に確定する項目">（公開前に確定: GoogleフォームURL）</span>）。</p>
-        <div class="cta-row" style="margin-top:var(--s4)">
-          <a class="btn btn--primary btn--lg" href="#" data-form-link>Googleフォームを開く</a>
+        <h2 style="font-size:1.25rem">2つのフォームから、近いほうを選んでください</h2>
+        <p class="caption">どちらも外部のGoogleフォームが新しいタブで開きます。どちらを選んでも相談は無料で、送信は契約の申し込みではありません。迷ったら左の相談フォームで構いません。</p>
+        <div class="form-choice">
+          <div class="form-choice__item">
+            <p class="form-choice__who">サイトのイメージが、まだ固まっていない方</p>
+            <h3>相談フォーム</h3>
+            <p>事業のこと、困っていること、決まっていることを分かる範囲で。目安は5分ほどです。内容を見て、決める順番から一緒に整理します。</p>
+            <a class="btn btn--primary btn--block" href="#" data-form-link>相談フォームを開く</a>
+            <p class="form-choice__url">URL: <span class="blocker-inline" title="公開前に確定する項目">（公開前に確定: GoogleフォームURL）</span></p>
+          </div>
+          <div class="form-choice__item">
+            <p class="form-choice__who">サイトのイメージが、固まっている方</p>
+            <h3>事前ヒアリングフォーム</h3>
+            <p>ページ構成、掲載内容、デザインの希望、ドメインや公開時期まで、制作に必要なことをまとめて伺います。目安は20〜30分です。分からない項目は空欄のまま送れます。</p>
+            <a class="btn btn--secondary btn--block" href="#" data-form-link="hearing">事前ヒアリングフォームを開く</a>
+            <p class="form-choice__url">URL: <span class="blocker-inline" title="公開前に確定する項目">（公開前に確定: 事前ヒアリングフォームURL）</span></p>
+          </div>
         </div>
         <p class="external-cta__meta"><span>外部サイト・新しいタブで開きます</span><span>相談は無料です</span></p>
+      </div>
+      <div class="contact-ways">
+        <div class="contact-ways__item">
+          <h3>フォームが開けないとき</h3>
+          <p>メール <span class="blocker-inline" title="公開前に確定する項目">（公開前に確定: メール）</span> でも受け付けます。件名に「Web制作の相談」と書いてお送りください。</p>
+        </div>
+        <div class="contact-ways__item">
+          <h3>受付と返信</h3>
+          <p>営業日 <span class="blocker-inline" title="公開前に確定する項目">（公開前に確定: 営業日）</span><br>返信の目安 <span class="blocker-inline" title="公開前に確定する項目">（公開前に確定: 返信目安）</span></p>
+        </div>
+        <div class="contact-ways__item">
+          <h3>相談の前に見ておくと早いもの</h3>
+          <ul class="contact-ways__links">
+            <li><a class="alink" href="plans.html">4つのプランと料金</a></li>
+            <li><a class="alink" href="process.html">相談から公開までの流れ</a></li>
+            <li><a class="alink" href="faq.html">よくある質問</a></li>
+            <li><a class="alink" href="diagnosis.html?mode=quick">16問の診断（結果をフォームに書けます）</a></li>
+          </ul>
+        </div>
       </div>
       <div class="stack" style="margin-top:var(--s5)">
         <p class="note"><b>入力していただく主な項目</b> — お名前、事業名、メールアドレス、業種、Webサイトの目的、掲載したい内容、素材の有無、希望納期、予算感、診断結果タイプ、自由記入。分かる範囲で構いません。</p>

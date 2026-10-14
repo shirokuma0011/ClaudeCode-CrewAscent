@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-09",
+  "generatedAt": "2026-10-14",
   "records": [
     {
       "id": "CA01",
       "slug": "future-information-design",
-      "xFamily": "検索・参照アーキテクチャ",
+      "xFamily": "探して調べる構成",
       "yModifier": "先進・実験的",
       "related": [
         {
@@ -24,7 +24,7 @@
     {
       "id": "CA02",
       "slug": "advanced-guidance",
-      "xFamily": "案内・導入アーキテクチャ",
+      "xFamily": "順に案内する構成",
       "yModifier": "先進・実験的",
       "related": [
         {
@@ -50,7 +50,7 @@
     {
       "id": "CA03",
       "slug": "growth-service",
-      "xFamily": "行動・成果アーキテクチャ",
+      "xFamily": "行動へ導く構成",
       "yModifier": "先進・実験的",
       "related": [
         {
@@ -76,7 +76,7 @@
     {
       "id": "CA04",
       "slug": "advanced-brand",
-      "xFamily": "価値・根拠アーキテクチャ",
+      "xFamily": "価値と根拠で伝える構成",
       "yModifier": "先進・実験的",
       "related": [
         {
@@ -102,7 +102,7 @@
     {
       "id": "CA05",
       "slug": "future-brand",
-      "xFamily": "魅力・体験アーキテクチャ",
+      "xFamily": "魅力を体験させる構成",
       "yModifier": "先進・実験的",
       "related": [
         {
@@ -128,7 +128,7 @@
     {
       "id": "CA06",
       "slug": "fan-brand",
-      "xFamily": "世界観・編集アーキテクチャ",
+      "xFamily": "世界観で見せる構成",
       "yModifier": "先進・実験的",
       "related": [
         {
@@ -148,7 +148,7 @@
     {
       "id": "CA07",
       "slug": "advanced-information",
-      "xFamily": "検索・参照アーキテクチャ",
+      "xFamily": "探して調べる構成",
       "yModifier": "洗練・先取り",
       "related": [
         {
@@ -174,7 +174,7 @@
     {
       "id": "CA08",
       "slug": "modern-guidance",
-      "xFamily": "案内・導入アーキテクチャ",
+      "xFamily": "順に案内する構成",
       "yModifier": "洗練・先取り",
       "related": [
         {
@@ -206,7 +206,7 @@
     {
       "id": "CA09",
       "slug": "refined-conversion",
-      "xFamily": "行動・成果アーキテクチャ",
+      "xFamily": "行動へ導く構成",
       "yModifier": "洗練・先取り",
       "related": [
         {
@@ -238,7 +238,7 @@
     {
       "id": "CA10",
       "slug": "refined-brand",
-      "xFamily": "価値・根拠アーキテクチャ",
+      "xFamily": "価値と根拠で伝える構成",
       "yModifier": "洗練・先取り",
       "related": [
         {
@@ -270,7 +270,7 @@
     {
       "id": "CA11",
       "slug": "modern-appeal",
-      "xFamily": "魅力・体験アーキテクチャ",
+      "xFamily": "魅力を体験させる構成",
       "yModifier": "洗練・先取り",
       "related": [
         {
@@ -302,7 +302,7 @@
     {
       "id": "CA12",
       "slug": "memorable-brand",
-      "xFamily": "世界観・編集アーキテクチャ",
+      "xFamily": "世界観で見せる構成",
       "yModifier": "洗練・先取り",
       "related": [
         {
@@ -328,7 +328,7 @@
     {
       "id": "CA13",
       "slug": "clear-information",
-      "xFamily": "検索・参照アーキテクチャ",
+      "xFamily": "探して調べる構成",
       "yModifier": "今らしい・軽やか",
       "related": [
         {
@@ -354,7 +354,7 @@
     {
       "id": "CA14",
       "slug": "growth-guidance",
-      "xFamily": "案内・導入アーキテクチャ",
+      "xFamily": "順に案内する構成",
       "yModifier": "今らしい・軽やか",
       "related": [
         {
@@ -386,7 +386,7 @@
     {
       "id": "CA15",
       "slug": "clean-practical",
-      "xFamily": "行動・成果アーキテクチャ",
+      "xFamily": "行動へ導く構成",
       "yModifier": "今らしい・軽やか",
       "related": [
         {
@@ -418,7 +418,7 @@
     {
       "id": "CA16",
       "slug": "fresh-appeal",
-      "xFamily": "価値・根拠アーキテクチャ",
+      "xFamily": "価値と根拠で伝える構成",
       "yModifier": "今らしい・軽やか",
       "related": [
         {
@@ -450,7 +450,7 @@
     {
       "id": "CA17",
       "slug": "appeal-communication",
-      "xFamily": "魅力・体験アーキテクチャ",
+      "xFamily": "魅力を体験させる構成",
       "yModifier": "今らしい・軽やか",
       "related": [
         {
@@ -482,7 +482,7 @@
     {
       "id": "CA18",
       "slug": "distinctive-communication",
-      "xFamily": "世界観・編集アーキテクチャ",
+      "xFamily": "世界観で見せる構成",
       "yModifier": "今らしい・軽やか",
       "related": [
         {
@@ -508,7 +508,7 @@
     {
       "id": "CA19",
       "slug": "reassuring-information",
-      "xFamily": "検索・参照アーキテクチャ",
+      "xFamily": "探して調べる構成",
       "yModifier": "標準・明快",
       "related": [
         {
@@ -534,7 +534,7 @@
     {
       "id": "CA20",
       "slug": "clear-consultation",
-      "xFamily": "案内・導入アーキテクチャ",
+      "xFamily": "順に案内する構成",
       "yModifier": "標準・明快",
       "related": [
         {
@@ -566,7 +566,7 @@
     {
       "id": "CA21",
       "slug": "helpful-guidance",
-      "xFamily": "行動・成果アーキテクチャ",
+      "xFamily": "行動へ導く構成",
       "yModifier": "標準・明快",
       "related": [
         {
@@ -598,7 +598,7 @@
     {
       "id": "CA22",
       "slug": "friendly-brand",
-      "xFamily": "価値・根拠アーキテクチャ",
+      "xFamily": "価値と根拠で伝える構成",
       "yModifier": "標準・明快",
       "related": [
         {
@@ -630,7 +630,7 @@
     {
       "id": "CA23",
       "slug": "premium-appeal",
-      "xFamily": "魅力・体験アーキテクチャ",
+      "xFamily": "魅力を体験させる構成",
       "yModifier": "標準・明快",
       "related": [
         {
@@ -662,7 +662,7 @@
     {
       "id": "CA24",
       "slug": "empathetic-brand",
-      "xFamily": "世界観・編集アーキテクチャ",
+      "xFamily": "世界観で見せる構成",
       "yModifier": "標準・明快",
       "related": [
         {
@@ -688,7 +688,7 @@
     {
       "id": "CA25",
       "slug": "trustworthy-information",
-      "xFamily": "検索・参照アーキテクチャ",
+      "xFamily": "探して調べる構成",
       "yModifier": "堅実・信頼",
       "related": [
         {
@@ -714,7 +714,7 @@
     {
       "id": "CA26",
       "slug": "classic-service",
-      "xFamily": "案内・導入アーキテクチャ",
+      "xFamily": "順に案内する構成",
       "yModifier": "堅実・信頼",
       "related": [
         {
@@ -746,7 +746,7 @@
     {
       "id": "CA27",
       "slug": "sincere-conversion",
-      "xFamily": "行動・成果アーキテクチャ",
+      "xFamily": "行動へ導く構成",
       "yModifier": "堅実・信頼",
       "related": [
         {
@@ -778,7 +778,7 @@
     {
       "id": "CA28",
       "slug": "reassuring-brand",
-      "xFamily": "価値・根拠アーキテクチャ",
+      "xFamily": "価値と根拠で伝える構成",
       "yModifier": "堅実・信頼",
       "related": [
         {
@@ -810,7 +810,7 @@
     {
       "id": "CA29",
       "slug": "premium-brand",
-      "xFamily": "魅力・体験アーキテクチャ",
+      "xFamily": "魅力を体験させる構成",
       "yModifier": "堅実・信頼",
       "related": [
         {
@@ -842,7 +842,7 @@
     {
       "id": "CA30",
       "slug": "chosen-appeal",
-      "xFamily": "世界観・編集アーキテクチャ",
+      "xFamily": "世界観で見せる構成",
       "yModifier": "堅実・信頼",
       "related": [
         {
@@ -868,7 +868,7 @@
     {
       "id": "CA31",
       "slug": "solid-information",
-      "xFamily": "検索・参照アーキテクチャ",
+      "xFamily": "探して調べる構成",
       "yModifier": "王道・端正",
       "related": [
         {
@@ -888,7 +888,7 @@
     {
       "id": "CA32",
       "slug": "orthodox-guidance",
-      "xFamily": "案内・導入アーキテクチャ",
+      "xFamily": "順に案内する構成",
       "yModifier": "王道・端正",
       "related": [
         {
@@ -914,7 +914,7 @@
     {
       "id": "CA33",
       "slug": "trust-acquisition",
-      "xFamily": "行動・成果アーキテクチャ",
+      "xFamily": "行動へ導く構成",
       "yModifier": "王道・端正",
       "related": [
         {
@@ -940,7 +940,7 @@
     {
       "id": "CA34",
       "slug": "dignified-brand",
-      "xFamily": "価値・根拠アーキテクチャ",
+      "xFamily": "価値と根拠で伝える構成",
       "yModifier": "王道・端正",
       "related": [
         {
@@ -966,7 +966,7 @@
     {
       "id": "CA35",
       "slug": "high-trust-brand",
-      "xFamily": "魅力・体験アーキテクチャ",
+      "xFamily": "魅力を体験させる構成",
       "yModifier": "王道・端正",
       "related": [
         {
@@ -992,7 +992,7 @@
     {
       "id": "CA36",
       "slug": "value-communication-brand",
-      "xFamily": "世界観・編集アーキテクチャ",
+      "xFamily": "世界観で見せる構成",
       "yModifier": "王道・端正",
       "related": [
         {

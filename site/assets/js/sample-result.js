@@ -36,7 +36,7 @@
         '<div><h4>36タイプ上の位置</h4><div class="mini-map" aria-hidden="true">' + cells + '</div>' +
           '<p class="hint">' + esc(d.position.xStep) + '<br>' + esc(d.position.yStep) + '</p></div>' +
         '<div><h4>3分で読む要約</h4><p>' + esc(d.position.summary3min) + '</p>' +
-          '<h4>ファーストビューの設計</h4><p class="mb-0">' + esc(d.firstViewPlan.headlineRole) + '。' + esc(d.firstViewPlan.supportingInformation) + '。</p></div>' +
+          '<h4>最初の画面の設計</h4><p class="mb-0">' + esc(d.firstViewPlan.headlineRole) + '。' + esc(d.firstViewPlan.supportingInformation) + '。</p></div>' +
         '<div><h4>情報の優先順（上から）</h4><ol class="rank-list">' + li(d.contentPriority.slice(0, 5)) + '</ol>' +
           '<h4>避けたい構成</h4><ul class="plain-list">' + li(d.avoidPatterns.slice(0, 2)) + '</ul></div>' +
       '</div>' +
