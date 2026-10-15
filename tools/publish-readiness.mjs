@@ -9,6 +9,7 @@
      3. assets/js/site-config.js の PUBLISH_BLOCKER
      4. canonical / og:url / sitemap / robots.txt の状態
      5. 段階公開（どのページが index になっていて、残りは何が理由で止まっているか）
+     6. 「公開準備中」「下書きです」の注意書きと、運営者の写真枠が残っていないか
    ===================================================================== */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -111,7 +112,33 @@ if (held.length) {
   }
 }
 
+console.log('\n■ 6. 「公開準備中」の表示（全項目がそろうと apply-publish-values.mjs が外します）');
+const notices = { general: [], legal: [], swap: [] };
+let photoSlot = false;
+for (const f of htmlFiles) {
+  const h = read(f);
+  const g = (h.match(/\sdata-prepublish(?!=)/g) || []).length;
+  const l = (h.match(/\sdata-prepublish="legal"/g) || []).length;
+  const w = (h.match(/\sdata-published="/g) || []).length;
+  if (g) notices.general.push(f);
+  if (l) notices.legal.push(f);
+  if (w) notices.swap.push(f);
+  if (/class="owner__photo-slot"/.test(h)) photoSlot = true;
+}
+line(notices.general.length === 0,
+  `「このサイトは公開準備中です」の注記 ${notices.general.length} ページ` +
+  (notices.general.length > 4 ? '（全ページのフッター）' : notices.general.length ? `（${notices.general.join(', ')}）` : ''));
+line(notices.swap.length === 0, `公開後の文に差し替える文 ${notices.swap.length} ページ` +
+  (notices.swap.length ? `（${notices.swap.join(', ')}）` : ''));
+line(notices.legal.length === 0, `法務ページの「下書きです」の注記 ${notices.legal.length} ページ` +
+  (notices.legal.length ? `（${notices.legal.join(', ')}）` : ''));
+line(values._switches && values._switches.legalReviewed === true,
+  '法務3ページの確認が済んでいる（_switches.legalReviewed が true）');
+console.log(photoSlot
+  ? '  ―    運営者の写真枠が残っています（写真は任意。_optional.ownerPhoto を入れるか、全項目がそろえば枠ごと外れます）'
+  : '  ―    運営者の写真枠: なし');
+
 console.log('\n' + (ng === 0
-  ? '公開に必要な機械的な項目はすべて埋まっています。\n専門家の確認（terms / commercial-transactions / privacy）は別途必要です。'
-  : `残り ${ng} 項目。PUBLISH_INPUT_SHEET.md に沿って data/publish-values.json を埋め、\ntools/apply-publish-values.mjs を実行してください。`) + '\n');
+  ? '公開に必要な機械的な項目はすべて埋まっています。\n法務3ページは確認済みとして扱っています（_switches.legalReviewed）。料金や運用が変わったら、文面も見直してください。'
+  : `残り ${ng} 項目。PUBLISH_INPUT_SHEET.md に沿って data/publish-values.json を埋め、\ntools/apply-publish-values.mjs を実行してください。\n法務3ページの確認が済んだら _switches.legalReviewed を true にして、もう一度実行します。`) + '\n');
 process.exit(0);

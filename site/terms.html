@@ -24,12 +24,12 @@
   <link rel="stylesheet" href="assets/css/styles.css?v=20260817r9">
   <link rel="stylesheet" href="assets/css/base.css?v=20260817r9">
   <link rel="stylesheet" href="assets/css/system.css?v=20260817r9">
-  <link rel="stylesheet" href="assets/css/crew.css?v=20261015c">
+  <link rel="stylesheet" href="assets/css/crew.css?v=20261015d">
   <script>document.documentElement.className += ' js';</script>
-  <script src="assets/js/site-config.js?v=20261015c"></script>
+  <script src="assets/js/site-config.js?v=20261015d"></script>
   <script defer src="assets/js/top.js?v=20260817r9"></script>
   <script defer src="assets/js/scroll-steady.js?v=20260817r9"></script>
-  <script defer src="assets/js/main.js?v=20261015c"></script>
+  <script defer src="assets/js/main.js?v=20261015d"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"index.html"},{"@type":"ListItem","position":2,"name":"サイト利用条件","item":"terms.html"}]}</script>
   <script>/* 動きの入り切り。?motion=off と、動きを減らす設定で外れる。
      site-config.js の motion:'off' は main.js が後から外します。 */
@@ -148,7 +148,7 @@
       <nav class="legal__toc" aria-label="目次"><p>目次</p><ol><li><a href="#sec-1">第1条 適用</a></li><li><a href="#sec-2">第2条 診断の位置づけ</a></li><li><a href="#sec-3">第3条 契約の成立</a></li><li><a href="#sec-4">第4条 禁止事項</a></li><li><a href="#sec-5">第5条 知的財産権</a></li><li><a href="#sec-6">第6条 サービスの変更・停止</a></li><li><a href="#sec-7">第7条 免責</a></li><li><a href="#sec-8">第8条 準拠法・管轄</a></li></ol></nav>
       <div class="prose legal__body">
         
-    <p class="note note--info">この文面は公開前の下書きです。管轄裁判所など未確定項目があり、公開前に日本の専門家による確認を推奨します。</p>
+    <p class="note note--info" data-prepublish="legal">この文面は公開前の下書きです。管轄裁判所など未確定項目があり、公開前に日本の専門家による確認を推奨します。</p>
     <h2 id="sec-1">第1条 適用</h2>
     <p>本条件は、クルーアセントが運営するWebサイト、Webサイトタイプ診断、お問い合わせ機能の利用に適用されます。有料のWebサイト制作・管理には、別途提示する見積書、制作条件書、契約書が優先して適用されます。</p>
     <h2 id="sec-2">第2条 診断の位置づけ</h2>
@@ -213,7 +213,7 @@
           <li><a href="guide.html">Webサイトづくりガイド</a></li>
           <li><a href="faq.html">よくある質問</a></li>
           <li><a href="contact.html">無料相談・お問い合わせ</a></li>
-          <li>事業者名 <span class="todo" title="公開前に確定する項目">公開前に確定</span></li>
+          <li>事業者名 <span class="blocker-inline" title="公開前に確定する項目">（公開前に確定: 正式事業者名）</span></li>
           <li><a href="privacy.html">プライバシーポリシー</a> ／ <a href="terms.html">サイト利用条件</a></li>
           <li><a href="commercial-transactions.html">特定商取引法に基づく表記</a></li>
         </ul>
@@ -221,7 +221,7 @@
     </div>
     <div class="ftr__bottom">
       <span>© <span data-year>2026</span> クルーアセント（CREW ASCENT）</span>
-      <span>このサイトは公開準備中です。確定前の項目があります。</span>
+      <span data-prepublish>このサイトは公開準備中です。確定前の項目があります。</span>
     </div>
   </div>
 </footer>

@@ -9,10 +9,14 @@
     "index解禁のスイッチです。空欄チェックの対象ではありません（_ で始まる項目は数えません）。",
     "indexTypePages: 36タイプの個別ページと一覧を検索エンジンに載せるかどうか。",
     "  基本ページが index になったあと、内容を確認してから true にしてください。",
-    "  基準は tools/publish-stages.mjs に書いてあります。"
+    "  基準は tools/publish-stages.mjs に書いてあります。",
+    "legalReviewed: 法務3ページ（特定商取引法の表記・プライバシーポリシー・サイト利用条件）の文面を、",
+    "  実際の運用に合わせて見直し、確認を終えたら true にしてください（専門家への確認をすすめます）。",
+    "  true になるまで、3ページの「この文面は公開前の下書きです」の注記を消さず、どのページも index にしません。"
   ],
   "_switches": {
-    "indexTypePages": false
+    "indexTypePages": false,
+    "legalReviewed": false
   },
 
   "_optionalReadme": [

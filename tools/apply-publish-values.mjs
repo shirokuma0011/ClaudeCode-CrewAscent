@@ -13,6 +13,12 @@
      6. 段階公開の基準（tools/publish-stages.mjs）を満たしたページだけ
         noindex を index,follow へ変える
      7. sitemap.xml を、いま index にしているページだけで作り直す
+     8. 全項目がそろったら「公開準備中」の注意書きを消す
+          data-prepublish          … 全項目がそろったら消す（フッター・about の注記）
+          data-prepublish="legal"  … さらに _switches.legalReviewed が true のときだけ消す
+                                     （法務3ページの「下書きです」の注記）
+          data-published="…"       … 全項目がそろったら、中身をこの文に差し替える
+        運営者の写真が無いまま公開するときは、写真枠（「写真は公開前に掲載します」）を外す
 
    やらないこと:
      ・値の推測。空欄の項目は印を残したまま、noindex も外しません
@@ -70,6 +76,8 @@ const val = (k) => String(V[k]).trim();
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const keys = Object.keys(V).filter((k) => !k.startsWith('_'));
 const missing = keys.filter((k) => !has(k));
+const allFilled = missing.length === 0;
+const legalReviewed = (V._switches || {}).legalReviewed === true;
 
 const origin = has('canonicalOrigin') ? val('canonicalOrigin').replace(/\/+$/, '') : null;
 if (origin && !/^https:\/\/[^\/]+$/.test(origin)) {
@@ -78,7 +86,7 @@ if (origin && !/^https:\/\/[^\/]+$/.test(origin)) {
 }
 
 const files = fs.readdirSync(ROOT).filter((f) => f.endsWith('.html') && !f.startsWith('_'));
-let filled = 0, left = 0;
+let filled = 0, left = 0, cleared = 0, heldLegal = 0;
 const out = new Map();   /* 書き換えたあとの内容。段階公開の判定に使う */
 
 for (const f of files) {
@@ -110,15 +118,34 @@ for (const f of files) {
 
   /* 任意: 運営者の写真。ファイルが実在するときだけ写真枠を置き換える */
   const photo = String((V._optional || {}).ownerPhoto || '').trim();
-  if (photo && /data-owner-photo/.test(s)) {
-    if (fs.existsSync(path.join(ROOT, photo))) {
+  if (/data-owner-photo/.test(s)) {
+    const photoOk = photo && fs.existsSync(path.join(ROOT, photo));
+    if (photoOk) {
       const who = has('responsiblePerson') ? val('responsiblePerson') : '運営者';
       s = s.replace(/(<figure class="owner__photo" data-owner-photo>)[\s\S]*?(<\/figure>)/,
         `$1\n          <img src="${esc(photo)}" width="960" height="1200" alt="${esc(who)}の写真" loading="lazy" decoding="async">\n        $2`);
     } else {
-      console.log(`  運営者の写真が見つかりません: site/${photo}（写真枠のままにしました）`);
+      if (photo) console.log(`  運営者の写真が見つかりません: site/${photo}（写真枠のままにしました）`);
+      /* 写真なしで公開するときは「写真は公開前に掲載します」の枠ごと外し、文章を1列にする */
+      if (allFilled) {
+        s = s.replace(/<div class="owner">(\s*)<figure class="owner__photo" data-owner-photo>[\s\S]*?<\/figure>\s*/,
+          (m, sp) => { cleared++; return `<div class="owner owner--nophoto">${sp}`; });
+      }
     }
   }
+
+  /* 8. 公開準備中の注意書き。全項目がそろうまでは残す（推測で消さない） */
+  s = s.replace(/[ \t]*<(p|span|div)\b[^>]*?\sdata-prepublish(?:="([^"]*)")?[^>]*>[\s\S]*?<\/\1>\n?/g,
+    (m, tag, kind) => {
+      if (!allFilled) return m;
+      if (kind === 'legal' && !legalReviewed) { heldLegal++; return m; }
+      cleared++; return '';
+    });
+  s = s.replace(/<(p|span|div)\b([^>]*?)\sdata-published="([^"]*)"([^>]*)>[\s\S]*?<\/\1>/g,
+    (m, tag, a, text, b) => {
+      if (!allFilled) return m;
+      cleared++; return `<${tag}${a}${b}>${text}</${tag}>`;
+    });
 
   out.set(f, s);
   if (s !== before) { wr(f, s); }
@@ -169,6 +196,9 @@ if (origin) {
 }
 
 console.log(`${DRY ? '[確認のみ] ' : ''}印を埋めた: ${filled} か所 ／ 残り: ${left} か所`);
+if (cleared) console.log(`「公開準備中」の表示を外した: ${cleared} か所`);
+if (!allFilled) console.log('「公開準備中」の表示は、全項目がそろうまで残します');
+if (heldLegal) console.log(`法務ページの「下書きです」の注記 ${heldLegal} か所は残しました（確認が済んだら _switches.legalReviewed を true に）`);
 if (missing.length) {
   console.log(`未入力の項目 ${missing.length} 件`);
   console.log('  ' + missing.join(', '));

@@ -15,7 +15,7 @@ import path from 'node:path';
 import { DATA, SITE } from './paths.mjs';
 
 const CHECK = process.argv.includes('--check');
-const V = '20261015c';
+const V = '20261015d';
 const rd = (p) => fs.readFileSync(path.join(SITE, p), 'utf8');
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const Q = JSON.parse(fs.readFileSync(path.join(DATA, 'questionnaires.json'), 'utf8'));

@@ -567,6 +567,7 @@ a.card:hover, a.near-card:hover, a.work-card:hover, .near-card a:hover { backgro
 .cta-band::after { display:none; }
 .ftr { background:var(--paper-2); color:var(--tx-2); border-top:1px solid var(--rule); padding-block:clamp(44px, 5vw, 76px) var(--s5); }
 .ftr .brand__mark { color:var(--ink); --lg-bg:transparent; --xbar:var(--paper-2); }
+.ftr .blocker-inline { color:var(--amber-text); background:var(--amber-tint); border:1px dashed var(--amber-bright); padding:1px 6px; font-size:var(--fs-xxs); font-weight:700; }   /* フッターの「公開前に確定」（明るい面なので琥珀の濃い文字） */
 .ftr__ja { color:var(--ink); }
 .ftr__en { font-family:var(--mono); font-size:.6875rem; font-weight:400; letter-spacing:.14em; color:var(--tx-3); }
 .ftr__note { color:var(--tx-3); }
@@ -608,6 +609,9 @@ a.card:hover, a.near-card:hover, a.work-card:hover, .near-card a:hover { backgro
 /* 制作する人（about.html）: 写真・名前・紹介文は公開前に本人の情報で埋める。埋まるまでは枠と印だけ */
 .owner { display:grid; gap:clamp(24px, 4vw, 56px); align-items:start; }
 @media (min-width:760px) { .owner { grid-template-columns:minmax(0, 300px) minmax(0, 1fr); } }
+/* 写真なしで公開したとき（apply-publish-values.mjs が付ける）。1列にし、紹介文が横に伸びすぎないよう幅を抑える */
+.owner--nophoto { max-width:46rem; }
+@media (min-width:760px) { .owner--nophoto { grid-template-columns:minmax(0, 1fr); } }
 .owner__photo { margin:0; }
 .owner__photo img, .owner__photo-slot { display:block; width:100%; aspect-ratio:4 / 5; height:auto; object-fit:cover; border:1px solid var(--rule); border-radius:var(--r); background:var(--surface); }
 .owner__photo-slot { display:grid; place-items:center; padding:24px; text-align:center; font-size:.8125rem; color:var(--tx-3);

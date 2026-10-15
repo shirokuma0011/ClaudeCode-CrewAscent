@@ -9,7 +9,9 @@
      ・法務コア4ページ（privacy / terms / commercial-transactions / contact）に
        「公開前に確定」の印が1つも残っていない
      ・そのページ自身にも印が残っていない
-     この3つを満たしたページから index,follow にします。
+     ・data/publish-values.json の _switches.legalReviewed が true
+       （法務3ページの文面を運用に合わせて見直し、確認を終えたという運営者の判断）
+     この4つを満たしたページから index,follow にします。
 
    段階2 タイプページ（type-*.html と types.html）
      段階1に加えて、
@@ -26,6 +28,7 @@
    ===================================================================== */
 import fs from 'node:fs';
 import path from 'node:path';
+import { DATA } from './paths.mjs';
 
 export const NEVER_INDEX = ['result.html', '404.html', 'works.html', 'consult-form.html', 'hearing-form.html'];
 export const LEGAL_CORE = ['privacy.html', 'terms.html', 'commercial-transactions.html', 'contact.html'];
@@ -59,13 +62,16 @@ export function indexPlan(ROOT, htmlOverride) {
     f, (htmlOverride && htmlOverride.get(f)) || fs.readFileSync(path.join(ROOT, f), 'utf8'),
   ]));
 
+  /* 確定値は site/ の外（data/）にある。以前は site/data/ を読みにいき、読めずに
+     「ドメイン未確定・スイッチ off」と判定し続けていた（＝何を埋めても index にならなかった） */
   let values = {};
-  try { values = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/publish-values.json'), 'utf8')); }
+  try { values = JSON.parse(fs.readFileSync(path.join(DATA, 'publish-values.json'), 'utf8')); }
   catch { values = {}; }
   const keys = Object.keys(values).filter((k) => !k.startsWith('_'));
   const originSet = String(values.canonicalOrigin || '').trim().length > 0;
   const switches = values._switches || {};
   const typeSwitch = switches.indexTypePages === true;
+  const legalReviewed = switches.legalReviewed === true;
 
   const marksLeft = (f) => (html.get(f) || '').split(MARK).length - 1;
   const legalLeft = LEGAL_CORE.filter((f) => html.has(f) && marksLeft(f) > 0);
@@ -78,6 +84,7 @@ export function indexPlan(ROOT, htmlOverride) {
     if (!originSet) why.push('公開ドメインが未確定');
     if (marksLeft(file) > 0) why.push(`このページに「公開前に確定」が ${marksLeft(file)} か所`);
     if (legalLeft.length) why.push('法務コアが未確定: ' + legalLeft.join(', '));
+    if (!legalReviewed) why.push('_switches.legalReviewed が false（法務ページの確認が未了）');
 
     const group = isTypePage(file) ? 'タイプページ' : '基本ページ';
     if (group === 'タイプページ') {
@@ -89,5 +96,5 @@ export function indexPlan(ROOT, htmlOverride) {
     return { file, group, index: why.length === 0, why };
   });
 
-  return { plan, originSet, keys, missing: keys.filter((k) => !String(values[k] || '').trim()), typeSwitch };
+  return { plan, originSet, keys, missing: keys.filter((k) => !String(values[k] || '').trim()), typeSwitch, legalReviewed };
 }

@@ -24,7 +24,7 @@
   <link rel="preload" as="image" href="assets/img/atelier.webp">
   <link rel="stylesheet" href="assets/css/base.css?v=20260817r9">
   <link rel="stylesheet" href="assets/css/system.css?v=20260817r9">
-  <link rel="stylesheet" href="assets/css/crew.css?v=20261015c">
+  <link rel="stylesheet" href="assets/css/crew.css?v=20261015d">
   <link rel="stylesheet" href="assets/css/atelier-top.css?v=20261015">
   <script>/* 動きの入り切り。?motion=off と、動きを減らす設定で外れる。
      site-config.js の motion:'off' は main.js が後から外します。 */
@@ -32,9 +32,9 @@
    var off=/[?&]motion=off/.test(location.search)||
      (window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
    if(!off)r.classList.add('motion');})(document);</script>
-  <script defer src="assets/js/site-config.js?v=20261015c"></script>
+  <script defer src="assets/js/site-config.js?v=20261015d"></script>
   <script defer src="assets/js/top.js?v=20260817r9"></script>
-  <script defer src="assets/js/main.js?v=20261015c"></script>
+  <script defer src="assets/js/main.js?v=20261015d"></script>
   <script defer src="assets/js/scroll-steady.js?v=20260817r9"></script>
   <script defer src="assets/js/atelier-types.js?v=20261015"></script>
   <script defer src="assets/js/atelier-app.js?v=20261015"></script>
@@ -216,7 +216,7 @@
     <section class="atl-consultation" aria-labelledby="consultation-title">
       <div><p class="atl-eyebrow">相談について</p><h2 id="consultation-title">まだ、まとまっていなくても。</h2><p>「何から決めればいい？」というところから。<br>診断結果があっても、なくても、お話を整理する入口をご用意します。</p></div>
       <div class="atl-consultation-action">
-        <!-- 公開前に差し替え: 相談受付の開始時（site-config.js の PUBLISH_BLOCKER 解消時）に下の注記を更新する --><a class="atl-primary-cta" href="contact.html">相談の進め方・受付状況を見る <span>↗</span></a><p>現在は制作プレビューです。<br>正式な相談先は準備中のため、このページから送信はできません。</p></div>
+        <!-- 下の注記は、確定値が全部そろうと tools/apply-publish-values.mjs が data-published の文に差し替える --><a class="atl-primary-cta" href="contact.html">相談の進め方・受付状況を見る <span>↗</span></a><p data-published="相談は無料です。分かる範囲で答えられる相談アンケートから送れます。">現在は制作プレビューです。<br>正式な相談先は準備中のため、このページから送信はできません。</p></div>
     </section>
     <section class="atl-faq-section" aria-labelledby="faq-title"><p class="atl-eyebrow">はじめる前に</p><h2 id="faq-title">はじめに、よくある疑問。</h2><details><summary>診断結果のデザインにしないといけませんか？</summary><p>いいえ。診断は設計の優先順位を整理するための目安です。好みや顧客、運用方法に合わせて調整します。</p></details><details><summary>同じ業種なら、同じタイプになりますか？</summary><p>業種だけでは決まりません。同じ業種でも、顧客や伝えたい価値、サイトの目的によって合う方向性は変わります。</p></details><details><summary>診断だけでも利用できますか？</summary><p>はい。無料・登録不要で利用できます。診断を受けるだけで、制作の申し込みになることはありません。</p></details><a class="atl-text-link atl-faq-more" href="faq.html">よくある質問をすべて見る <span>↗</span></a></section>
 
@@ -263,7 +263,7 @@
           <li><a href="guide.html">Webサイトづくりガイド</a></li>
           <li><a href="faq.html">よくある質問</a></li>
           <li><a href="contact.html">無料相談・お問い合わせ</a></li>
-          <li>事業者名 <span class="todo" title="公開前に確定する項目">公開前に確定</span></li>
+          <li>事業者名 <span class="blocker-inline" title="公開前に確定する項目">（公開前に確定: 正式事業者名）</span></li>
           <li><a href="privacy.html">プライバシーポリシー</a> ／ <a href="terms.html">サイト利用条件</a></li>
           <li><a href="commercial-transactions.html">特定商取引法に基づく表記</a></li>
         </ul>
@@ -271,7 +271,7 @@
     </div>
     <div class="ftr__bottom">
       <span>© <span data-year>2026</span> クルーアセント（CREW ASCENT）</span>
-      <span>このサイトは公開準備中です。確定前の項目があります。</span>
+      <span data-prepublish>このサイトは公開準備中です。確定前の項目があります。</span>
     </div>
   </div>
 </footer>
