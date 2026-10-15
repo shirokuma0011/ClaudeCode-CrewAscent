@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr" class="no-js">
+<head>
+<!-- 公開前は noindex。公開時に productionIndexingEnabled=true とし、index対象ページの robots と絶対canonicalを設定する。 -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>事前ヒアリング（イメージが固まっている方）｜クルーアセント</title>
+  <meta name="description" content="サイトのイメージが固まっている方向けの事前ヒアリングです。ページ構成、掲載内容、デザイン、ドメイン、公開時期までを16の段階で伺います。目安は20〜30分。">
+  <meta name="robots" content="noindex,follow">
+  <meta property="og:title" content="事前ヒアリング（イメージが固まっている方）｜クルーアセント">
+  <meta property="og:description" content="サイトのイメージが固まっている方向けの事前ヒアリングです。ページ構成、掲載内容、デザイン、ドメイン、公開時期までを16の段階で伺います。目安は20〜30分。">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="クルーアセント">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="assets/og/og-contact.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/brand/icon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="assets/brand/icon-512.png" sizes="512x512" type="image/png">
+  <link rel="apple-touch-icon" href="assets/brand/icon-180.png">
+  <!-- 旧CSSを先に読み、新しい共通CSSで上書きする。トークンは base.css が正本。 -->
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CASans-700.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CASans-400.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CAMono-700.woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260817r9">
+  <link rel="stylesheet" href="assets/css/base.css?v=20260817r9">
+  <link rel="stylesheet" href="assets/css/system.css?v=20260817r9">
+  <link rel="stylesheet" href="assets/css/crew.css?v=20261015c">
+  <script>document.documentElement.className += ' js';</script>
+  <script src="assets/js/site-config.js?v=20261015c"></script>
+  <script defer src="assets/js/top.js?v=20260817r9"></script>
+  <script defer src="assets/js/scroll-steady.js?v=20260817r9"></script>
+  <script defer src="assets/js/main.js?v=20261015c"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"index.html"},{"@type":"ListItem","position":2,"name":"無料相談・お問い合わせ","item":"contact.html"}]}</script>
+  <script>/* 動きの入り切り。?motion=off と、動きを減らす設定で外れる。
+     site-config.js の motion:'off' は main.js が後から外します。 */
+  (function(d){var r=d.documentElement;r.classList.remove('no-js');
+   var off=/[?&]motion=off/.test(location.search)||
+     (window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+   if(!off)r.classList.add('motion');})(document);</script>
+  <script defer src="assets/js/questionnaire.js?v=20261015c"></script>
+</head>
+<body data-page="hearing-form">
+<a class="skip-link" href="#main">本文へスキップ</a>
+  <header class="hdr" id="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="index.html" aria-label="クルーアセント ホームへ">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__tx"><span class="brand__ja">クルーアセント</span><span class="brand__en">CREW ASCENT</span></span>
+    </a>
+    <nav class="gnav" aria-label="メインメニュー">
+      <ul class="gnav__list">
+        <li class="gnav__item"><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-service">サービス<span class="gnav__caret" aria-hidden="true"></span></button></li>
+        <li class="gnav__item"><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-diagnosis">診断<span class="gnav__caret" aria-hidden="true"></span></button></li>
+        <li class="gnav__item"><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-first">はじめての方へ<span class="gnav__caret" aria-hidden="true"></span></button></li>
+        <li class="gnav__item"><a class="gnav__link" href="about.html">クルーアセントについて</a></li>
+        <li class="gnav__item"><a class="gnav__link" href="contact.html" aria-current="page">相談</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--primary btn--sm hdr-cta" href="diagnosis.html">無料診断を始める<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="drawer">
+      <span class="burger__label">メニュー</span>
+      <span class="burger__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+
+  <div class="mega" id="mega-service" hidden>
+    <div class="wrap mega__in"><div class="g6">
+      <div class="mega__intro c1-2"><p class="mega__h">サービス</p><p>何を作り、何を整え、公開後に何を続けるのか。対応範囲と料金を先に開示しています。</p></div>
+      <ul class="mega__list c3-6">
+        <li><a href="services.html"><span class="mega__ttl">Web制作サービス</span><span class="mega__note">何を作り、何を整えるか</span></a></li>
+        <li><a href="plans.html"><span class="mega__ttl">4つのプラン・料金</span><span class="mega__note">8万〜22万円の買い切り</span></a></li>
+        <li><a href="process.html"><span class="mega__ttl">制作の流れ</span><span class="mega__note">相談から公開までの9段階</span></a></li>
+        <li><a href="management.html"><span class="mega__ttl">公開・管理</span><span class="mega__note">公開後に必要な範囲だけ</span></a></li>
+      </ul>
+    </div></div>
+  </div>
+
+  <div class="mega" id="mega-diagnosis" hidden>
+    <div class="wrap mega__in"><div class="g6">
+      <div class="mega__intro c1-2"><p class="mega__h">Web診断36</p><p>2軸 × 6段階で36通り。Webサイトで何を優先するかを整理するための、無料の入口です。</p></div>
+      <ul class="mega__list c3-6">
+        <li><a href="diagnosis.html"><span class="mega__ttl">無料診断を始める</span><span class="mega__note">16問または48問</span></a></li>
+        <li><a href="diagnosis-guide.html"><span class="mega__ttl">Web診断36の仕組み</span><span class="mega__note">四つの視点と二つの軸</span></a></li>
+        <li><a href="types.html"><span class="mega__ttl">36タイプ一覧</span><span class="mega__note">4つの領域・36の方向</span></a></li>
+        <li><a href="industries.html"><span class="mega__ttl">業種からタイプを探す</span><span class="mega__note">13分類・102の業種</span></a></li>
+        <li><a href="result.html?type=helpful-guidance"><span class="mega__ttl">結果サンプルを見る</span><span class="mega__note">実際の結果画面</span></a></li>
+      </ul>
+    </div></div>
+  </div>
+
+  <div class="mega" id="mega-first" hidden>
+    <div class="wrap mega__in"><div class="g6">
+      <div class="mega__intro c1-2"><p class="mega__h">はじめての方へ</p><p>制作会社へ相談する前に読んでも使える形で、判断に必要なことを整理しています。</p></div>
+      <ul class="mega__list c3-6">
+        <li><a href="website-guide.html"><span class="mega__ttl">Webサイトの役割</span><span class="mega__note">SNSとの使い分け</span></a></li>
+        <li><a href="guide.html"><span class="mega__ttl">Webサイトづくりガイド</span><span class="mega__note">決める前に読む記事</span></a></li>
+        <li><a href="faq.html"><span class="mega__ttl">よくある質問</span><span class="mega__note">料金・制作・契約</span></a></li>
+      </ul>
+    </div></div>
+  </div>
+
+  <nav class="drawer" id="drawer" aria-label="メインメニュー（モバイル）" hidden>
+    <div class="wrap">
+      <ul class="drawer__list">
+        <li>
+          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-1">サービス<span class="drawer__caret" aria-hidden="true"></span></button>
+          <ul class="drawer__sub" id="dr-1" hidden>
+            <li><a href="services.html">Web制作サービス<span>何を作り、何を整えるか</span></a></li>
+            <li><a href="plans.html">4つのプラン・料金<span>8万〜22万円の買い切り</span></a></li>
+            <li><a href="process.html">制作の流れ<span>相談から公開までの9段階</span></a></li>
+            <li><a href="management.html">公開・管理<span>公開後に必要な範囲だけ</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-2">診断<span class="drawer__caret" aria-hidden="true"></span></button>
+          <ul class="drawer__sub" id="dr-2" hidden>
+            <li><a href="diagnosis.html">無料診断を始める<span>16問または48問</span></a></li>
+            <li><a href="diagnosis-guide.html">Web診断36の仕組み<span>四つの視点と二つの軸</span></a></li>
+            <li><a href="types.html">36タイプ一覧<span>4つの領域・36の方向</span></a></li>
+              <li><a href="industries.html">業種からタイプを探す<span>13分類・102の業種</span></a></li>
+            <li><a href="result.html?type=helpful-guidance">結果サンプルを見る<span>実際の結果画面</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-3">はじめての方へ<span class="drawer__caret" aria-hidden="true"></span></button>
+          <ul class="drawer__sub" id="dr-3" hidden>
+            <li><a href="website-guide.html">Webサイトの役割<span>SNSとの使い分け</span></a></li>
+            <li><a href="guide.html">Webサイトづくりガイド<span>決める前に読む記事</span></a></li>
+            <li><a href="faq.html">よくある質問<span>料金・制作・契約</span></a></li>
+          </ul>
+        </li>
+        <li><a class="drawer__row" href="about.html">クルーアセントについて</a></li>
+        <li><a class="drawer__row" href="contact.html" aria-current="page">相談</a></li>
+      </ul>
+      <div class="drawer__foot">
+        <a class="btn btn--primary btn--block" href="diagnosis.html">無料診断を始める<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+        <a class="btn btn--line btn--block" href="plans.html">4つのプランを見る</a>
+      </div>
+    </div>
+  </nav>
+</header>
+  <nav class="breadcrumb" aria-label="現在地"><div class="wrap"><ol>
+      <li><a href="index.html">ホーム</a></li><li><a href="contact.html">無料相談・お問い合わせ</a></li>
+      <li aria-current="page">事前ヒアリング</li></ol></div></nav>
+
+  <main id="main">
+  <section class="ah ah--trust">
+    <div class="wrap ah__inner"><p class="eyebrow">サイトのイメージが、固まっている方</p><h1>事前ヒアリング</h1><p class="ah__lead">制作に必要なことを、16の段階に分けて伺います。目安は20〜30分です。分からない項目は空欄のままで構いません。途中までの入力はこの端末に下書きとして残るので、続きはあとからでも書けます。</p></div>
+    <div class="ah__band"><dl class="ah__facts ah__facts--row">
+      <div><dt>目安</dt><dd class="ah__facts__txt">約20〜30分</dd></div>
+      <div><dt>質問</dt><dd class="ah__facts__txt">59問（16の段階）・必須は4問だけ</dd></div>
+      <div><dt>送り方</dt><dd class="ah__facts__txt">確認画面のあと、メールで送ります</dd></div>
+    </dl></div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap container--mid">
+      <noscript><p class="note note--info">このアンケートの確認画面と送信にはJavaScriptを使います。使えない場合は、メール <span class="blocker-inline" title="公開前に確定する項目">（公開前に確定: メール）</span> でご相談ください。</p></noscript>
+      <p class="qn-intro">分からない項目は空欄のままで構いません。入力した内容は<b>この端末にだけ下書きとして保存</b>し（30日間）、送る操作をするまで外部へは送られません。送信は契約の申し込みではありません。</p>
+      <div class="qn-draft" data-qn-draft hidden><p data-qn-draft-text></p><button type="button" class="btn btn--line btn--sm" data-qn-clear>下書きを消して最初から</button></div>
+      <div class="qn-progress" data-qn-progress hidden><p class="qn-progress__text" aria-live="polite" data-qn-progress-text></p><div class="qn-progress__bar" aria-hidden="true"><i data-qn-progress-bar></i></div>
+        <details class="qn-toc"><summary>段階の一覧</summary><ol data-qn-toc></ol></details></div>
+      <form class="qn" id="qn" data-qn="hearing" data-qn-mode="steps" data-qn-subject="【事前ヒアリング】" data-qn-title="事前ヒアリング" novalidate>
+
+      <section class="qn-sec" id="sec-b-basic" data-qn-section="0" aria-labelledby="t-b-basic">
+        <h2 class="qn-sec__title" id="t-b-basic" tabindex="-1"><span class="qn-sec__no">01</span>基本情報</h2>
+        <div class="qn-q" data-qn-q="b1">
+          <label class="qn-q__label" for="q-b1">お名前（ご担当者名）<span class="qn-req">必須</span></label><p class="qn-q__help" id="h-b1">フルネームでご記入ください。</p>
+          <input class="qn-input" id="q-b1" type="text" name="b1" aria-describedby="h-b1 e-b1" required aria-required="true" maxlength="200" autocomplete="name">
+          <p class="qn-q__err" id="e-b1"></p>
+        </div>
+        <div class="qn-q" data-qn-q="b2">
+          <label class="qn-q__label" for="q-b2">事業者名・屋号／法人名<span class="qn-req">必須</span></label><p class="qn-q__help" id="h-b2">お持ちでない場合は「なし」とご記入ください。</p>
+          <input class="qn-input" id="q-b2" type="text" name="b2" aria-describedby="h-b2 e-b2" required aria-required="true" maxlength="200" autocomplete="organization">
+          <p class="qn-q__err" id="e-b2"></p>
+        </div>
+        <div class="qn-q" data-qn-q="b3">
+          <label class="qn-q__label" for="q-b3">代表者のメールアドレス<span class="qn-req">必須</span></label><p class="qn-q__help" id="h-b3">見積もりや契約のご連絡に使います。</p>
+          <input class="qn-input" id="q-b3" type="email" name="b3" aria-describedby="h-b3 e-b3" required aria-required="true" maxlength="254" autocomplete="email" inputmode="email">
+          <p class="qn-q__err" id="e-b3"></p>
+        </div>
+      </section>
+
+      <section class="qn-sec" id="sec-b-contact" data-qn-section="1" aria-labelledby="t-b-contact">
+        <h2 class="qn-sec__title" id="t-b-contact" tabindex="-1"><span class="qn-sec__no">02</span>制作中の連絡先</h2>
+        <fieldset class="qn-q" data-qn-q="b4" aria-describedby="e-b4">
+          <legend class="qn-q__label">制作中の主な窓口はどなたですか<span class="qn-opt-tag">任意</span></legend>
+          <div class="qn-choices">
+            <label class="qn-choice"><input type="radio" name="b4" value="代表者（上のメールアドレスの方）" id="q-b4-0"><span>代表者（上のメールアドレスの方）</span></label>
+            <label class="qn-choice"><input type="radio" name="b4" value="代表者とは別の担当者" id="q-b4-1"><span>代表者とは別の担当者</span></label>
+          </div>
+          <p class="qn-q__err" id="e-b4"></p>
+        </fieldset>
+        <div class="qn-q" data-qn-q="b5" data-show-if="{&quot;q&quot;:&quot;b4&quot;,&quot;in&quot;:[&quot;代表者とは別の担当者&quot;]}">
+          <label class="qn-q__label" for="q-b5">主な窓口の方のお名前とメールアドレス<span class="qn-opt-tag">任意</span></label><p class="qn-q__help" id="h-b5">主な窓口が代表者ではない場合のみご記入ください。</p>
+          <input class="qn-input" id="q-b5" type="text" name="b5" aria-describedby="h-b5 e-b5" maxlength="200">
+          <p class="qn-q__err" id="e-b5"></p>
+        </div>
+        <div class="qn-q" data-qn-q="b6">
+          <label class="qn-q__label" for="q-b6">ほかに連絡を受ける方のメールアドレスと役割<span class="qn-opt-tag">任意</span></label><p class="qn-q__help" id="h-b6">いなければ空欄で構いません。</p>
+          <textarea class="qn-input" id="q-b6" name="b6" aria-describedby="h-b6 e-b6" rows="2" maxlength="2000" placeholder="例: 経理担当（請求書の受け取り）"></textarea>
+          <p class="qn-q__err" id="e-b6"></p>
+        </div>
+      </section>
+
+      <section class="qn-sec" id="sec-b-business" data-qn-section="2" aria-labelledby="t-b-business">
+        <h2 class="qn-sec__title" id="t-b-business" tabindex="-1"><span class="qn-sec__no">03</span>事業・商品・サービス</h2>
+        <div class="qn-q" data-qn-q="b7">
+          <label class="qn-q__label" for="q-b7">業種と事業の概要<span class="qn-opt-tag">任意</span></label>
+          <textarea class="qn-input" id="q-b7" name="b7" aria-describedby="e-b7" rows="3" maxlength="2000" placeholder="例: 駅前の個人美容室。カットとカラーが中心"></textarea>
+          <p class="qn-q__err" id="e-b7"></p>
+        </div>
+        <div class="qn-q" data-qn-q="b8">
+          <label class="qn-q__label" for="q-b8">提供している商品・サービス<span class="qn-opt-tag">任意</span></label><p class="qn-q__help" id="h-b8">主なものから順に。価格帯が分かれば併せてお書きください。</p>
+          <textarea class="qn-input" id="q-b8" name="b8" aria-describedby="h-b8 e-b8" rows="4" maxlength="2000"></textarea>
+          <p class="qn-q__err" id="e-b8"></p>
+        </div>
+        <div class="qn-q" data-qn-q="b9">
+          <label class="qn-q__label" for="q-b9">商品・サービスで大切にしていること<span class="qn-opt-tag">任意</span></label><p class="qn-q__help" id="h-b9">開業準備中の方は、これから大切にしたいことをご記入ください。</p>
+          <textarea class="qn-input" id="q-b9" name="b9" aria-describedby="h-b9 e-b9" rows="3" maxlength="2000"></textarea>
+          <p class="qn-q__err" id="e-b9"></p>
+        </div>
+      </section>
+
+      <section class="qn-sec" id="sec-b-purpose" data-qn-section="3" aria-labelledby="t-b-purpose">
+        <h2 class="qn-sec__title" id="t-b-purpose" tabindex="-1"><span class="qn-sec__no">04</span>背景と目的</h2>
+        <div class="qn-q" data-qn-q="b10">
+          <label class="qn-q__label" for="q-b10">Webサイトを作ろうと思ったきっかけ、いま困っていること<span class="qn-opt-tag">任意</span></label>
+          <textarea class="qn-input" id="q-b10" name="b10" aria-describedby="e-b10" rows="4" maxlength="2000" placeholder="例: 予約サイト以外に、店の考え方を伝える場所がない"></textarea>
+          <p class="qn-q__err" id="e-b10"></p>
+        </div>
+        <fieldset class="qn-q" data-qn-q="b11" aria-describedby="e-b11">
+          <legend class="qn-q__label">Webサイトで実現したいこと<span class="qn-opt-tag">任意</span><span class="qn-multi">いくつでも</span></legend>
+          <div class="qn-choices">
+            <label class="qn-choice"><input type="checkbox" name="b11" value="問い合わせを増やしたい" id="q-b11-0"><span>問い合わせを増やしたい</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b11" value="予約につなげたい" id="q-b11-1"><span>予約につなげたい</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b11" value="信頼を伝えたい" id="q-b11-2"><span>信頼を伝えたい</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b11" value="商品・サービスを知ってもらいたい" id="q-b11-3"><span>商品・サービスを知ってもらいたい</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b11" value="採用につなげたい" id="q-b11-4"><span>採用につなげたい</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b11" value="情報を1か所にまとめたい" id="q-b11-5"><span>情報を1か所にまとめたい</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b11" value="その他" data-qn-other-toggle><span>その他</span></label>
+            <input class="qn-input qn-other" type="text" name="b11__other" maxlength="200" aria-label="Webサイトで実現したいこと：その他の内容" placeholder="その他の内容" hidden>
+          </div>
+          <p class="qn-q__err" id="e-b11"></p>
+        </fieldset>
+      </section>
+
+      <section class="qn-sec" id="sec-b-audience" data-qn-section="4" aria-labelledby="t-b-audience">
+        <h2 class="qn-sec__title" id="t-b-audience" tabindex="-1"><span class="qn-sec__no">05</span>見てほしい人と、取ってほしい行動</h2>
+        <div class="qn-q" data-qn-q="b12">
+          <label class="qn-q__label" for="q-b12">見てほしい人（顧客層）と、その中で最も大切にしたい人<span class="qn-opt-tag">任意</span></label>
+          <textarea class="qn-input" id="q-b12" name="b12" aria-describedby="e-b12" rows="3" maxlength="2000" placeholder="例: 近所の30〜40代。特に、初めて来店を考えている人"></textarea>
+          <p class="qn-q__err" id="e-b12"></p>
+        </div>
+        <div class="qn-q" data-qn-q="b13">
+          <label class="qn-q__label" for="q-b13">その人たちが抱えている悩みや要望<span class="qn-opt-tag">任意</span></label>
+          <textarea class="qn-input" id="q-b13" name="b13" aria-describedby="e-b13" rows="3" maxlength="2000" placeholder="例: 料金が分からず予約をためらう"></textarea>
+          <p class="qn-q__err" id="e-b13"></p>
+        </div>
+        <fieldset class="qn-q" data-qn-q="b14" aria-describedby="e-b14">
+          <legend class="qn-q__label">サイトを見た人に取ってほしい行動<span class="qn-opt-tag">任意</span><span class="qn-multi">いくつでも</span></legend>
+          <div class="qn-choices">
+            <label class="qn-choice"><input type="checkbox" name="b14" value="問い合わせ" id="q-b14-0"><span>問い合わせ</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b14" value="予約" id="q-b14-1"><span>予約</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b14" value="来店" id="q-b14-2"><span>来店</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b14" value="電話" id="q-b14-3"><span>電話</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b14" value="資料請求" id="q-b14-4"><span>資料請求</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b14" value="購入" id="q-b14-5"><span>購入</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b14" value="SNSのフォロー" id="q-b14-6"><span>SNSのフォロー</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b14" value="その他" data-qn-other-toggle><span>その他</span></label>
+            <input class="qn-input qn-other" type="text" name="b14__other" maxlength="200" aria-label="サイトを見た人に取ってほしい行動：その他の内容" placeholder="その他の内容" hidden>
+          </div>
+          <p class="qn-q__err" id="e-b14"></p>
+        </fieldset>
+        <div class="qn-q" data-qn-q="b15">
+          <label class="qn-q__label" for="q-b15">今回のサイトで扱う事業・サービスの範囲<span class="qn-opt-tag">任意</span></label><p class="qn-q__help" id="h-b15">事業が複数ある場合、今回載せるものと載せないものをお書きください。</p>
+          <textarea class="qn-input" id="q-b15" name="b15" aria-describedby="h-b15 e-b15" rows="3" maxlength="2000"></textarea>
+          <p class="qn-q__err" id="e-b15"></p>
+        </div>
+      </section>
+
+      <section class="qn-sec" id="sec-b-plan" data-qn-section="5" aria-labelledby="t-b-plan">
+        <h2 class="qn-sec__title" id="t-b-plan" tabindex="-1"><span class="qn-sec__no">06</span>プランと予算</h2>
+        <fieldset class="qn-q" data-qn-q="b16" aria-describedby="e-b16">
+          <legend class="qn-q__label">希望している料金プラン<span class="qn-opt-tag">任意</span></legend>
+          <div class="qn-choices">
+            <label class="qn-choice"><input type="radio" name="b16" value="はじめて" id="q-b16-0"><span>はじめて</span></label>
+            <label class="qn-choice"><input type="radio" name="b16" value="シンプル" id="q-b16-1"><span>シンプル</span></label>
+            <label class="qn-choice"><input type="radio" name="b16" value="標準" id="q-b16-2"><span>標準</span></label>
+            <label class="qn-choice"><input type="radio" name="b16" value="おまかせ" id="q-b16-3"><span>おまかせ</span></label>
+            <label class="qn-choice"><input type="radio" name="b16" value="分からない" id="q-b16-4"><span>分からない</span></label>
+          </div>
+          <p class="qn-q__err" id="e-b16"></p>
+        </fieldset>
+        <fieldset class="qn-q" data-qn-q="b17" aria-describedby="h-b17 e-b17">
+          <legend class="qn-q__label">公開後の管理（公開・管理プラン）を希望しますか<span class="qn-opt-tag">任意</span></legend><p class="qn-q__help" id="h-b17">「希望しない」を選ぶと、公開後の更新の段階は飛ばします。</p>
+          <div class="qn-choices">
+            <label class="qn-choice"><input type="radio" name="b17" value="希望する" id="q-b17-0"><span>希望する</span></label>
+            <label class="qn-choice"><input type="radio" name="b17" value="希望しない" id="q-b17-1"><span>希望しない</span></label>
+            <label class="qn-choice"><input type="radio" name="b17" value="分からない" id="q-b17-2"><span>分からない</span></label>
+          </div>
+          <p class="qn-q__err" id="e-b17"></p>
+        </fieldset>
+        <div class="qn-q" data-qn-q="b18">
+          <label class="qn-q__label" for="q-b18">制作にかけられる予算と上限<span class="qn-opt-tag">任意</span></label><p class="qn-q__help" id="h-b18">ドメインやサーバーの取得費用も含めた金額でお考えください。</p>
+          <input class="qn-input" id="q-b18" type="text" name="b18" aria-describedby="h-b18 e-b18" maxlength="200" placeholder="例: 15万円前後、上限20万円">
+          <p class="qn-q__err" id="e-b18"></p>
+        </div>
+        <div class="qn-q" data-qn-q="b19">
+          <label class="qn-q__label" for="q-b19">選んだプランと希望が合わないと感じる点<span class="qn-opt-tag">任意</span></label><p class="qn-q__help" id="h-b19">特になければ空欄で構いません。</p>
+          <textarea class="qn-input" id="q-b19" name="b19" aria-describedby="h-b19 e-b19" rows="3" maxlength="2000"></textarea>
+          <p class="qn-q__err" id="e-b19"></p>
+        </div>
+        <fieldset class="qn-q" data-qn-q="b20" aria-describedby="h-b20 e-b20">
+          <legend class="qn-q__label">費用と希望が合わない場合の進め方<span class="qn-opt-tag">任意</span></legend><p class="qn-q__help" id="h-b20">今のプランで問題なければ空欄で構いません。</p>
+          <div class="qn-choices">
+            <label class="qn-choice"><input type="radio" name="b20" value="予算を優先して内容を絞りたい" id="q-b20-0"><span>予算を優先して内容を絞りたい</span></label>
+            <label class="qn-choice"><input type="radio" name="b20" value="内容を優先して費用を相談したい" id="q-b20-1"><span>内容を優先して費用を相談したい</span></label>
+            <label class="qn-choice"><input type="radio" name="b20" value="見積もりを見てから決めたい" id="q-b20-2"><span>見積もりを見てから決めたい</span></label>
+            <label class="qn-choice"><input type="radio" name="b20" value="その他" data-qn-other-toggle><span>その他</span></label>
+            <input class="qn-input qn-other" type="text" name="b20__other" maxlength="200" aria-label="費用と希望が合わない場合の進め方：その他の内容" placeholder="その他の内容" hidden>
+          </div>
+          <p class="qn-q__err" id="e-b20"></p>
+        </fieldset>
+      </section>
+
+      <section class="qn-sec" id="sec-b-content" data-qn-section="6" aria-labelledby="t-b-content">
+        <h2 class="qn-sec__title" id="t-b-content" tabindex="-1"><span class="qn-sec__no">07</span>掲載したい内容</h2>
+        <div class="qn-q" data-qn-q="b21">
+          <label class="qn-q__label" for="q-b21">希望するページの構成・ページ数<span class="qn-opt-tag">任意</span></label>
+          <textarea class="qn-input" id="q-b21" name="b21" aria-describedby="e-b21" rows="3" maxlength="2000" placeholder="例: トップ、メニューと料金、スタッフ、アクセス"></textarea>
+          <p class="qn-q__err" id="e-b21"></p>
+        </div>
+        <div class="qn-q" data-qn-q="b22">
+          <label class="qn-q__label" for="q-b22">掲載したい内容と、その中で特に大切にしたいもの<span class="qn-opt-tag">任意</span></label>
+          <textarea class="qn-input" id="q-b22" name="b22" aria-describedby="e-b22" rows="4" maxlength="2000"></textarea>
+          <p class="qn-q__err" id="e-b22"></p>
+        </div>
+        <div class="qn-q" data-qn-q="b23">
+          <label class="qn-q__label" for="q-b23">商品・サービスごとに載せたい詳しい情報<span class="qn-opt-tag">任意</span></label><p class="qn-q__help" id="h-b23">価格、所要時間、対象者、注意事項など。</p>
+          <textarea class="qn-input" id="q-b23" name="b23" aria-describedby="h-b23 e-b23" rows="4" maxlength="2000"></textarea>
+          <p class="qn-q__err" id="e-b23"></p>
+        </div>
+        <div class="qn-q" data-qn-q="b24">
+          <label class="qn-q__label" for="q-b24">掲載に特に注意が必要な内容<span class="qn-opt-tag">任意</span></label><p class="qn-q__help" id="h-b24">例: 医療・健康の表現、資格や許認可の表記、写真に写る人の同意。</p>
+          <textarea class="qn-input" id="q-b24" name="b24" aria-describedby="h-b24 e-b24" rows="3" maxlength="2000"></textarea>
+          <p class="qn-q__err" id="e-b24"></p>
+        </div>
+        <div class="qn-q" data-qn-q="b25">
+          <label class="qn-q__label" for="q-b25">制作の都合でも、必ず残してほしい内容<span class="qn-opt-tag">任意</span></label>
+          <textarea class="qn-input" id="q-b25" name="b25" aria-describedby="e-b25" rows="3" maxlength="2000"></textarea>
+          <p class="qn-q__err" id="e-b25"></p>
+        </div>
+      </section>
+
+      <section class="qn-sec" id="sec-b-design" data-qn-section="7" aria-labelledby="t-b-design">
+        <h2 class="qn-sec__title" id="t-b-design" tabindex="-1"><span class="qn-sec__no">08</span>デザインの希望</h2>
+        <div class="qn-q" data-qn-q="b26">
+          <label class="qn-q__label" for="q-b26">Web診断36の結果<span class="qn-opt-tag">任意</span></label><p class="qn-q__help" id="h-b26">使っていない場合は「利用していない」を選んでください。この端末で受けた結果があれば、最初から入っています。</p>
+          <select class="qn-input qn-select" id="q-b26" name="b26" aria-describedby="h-b26 e-b26" data-qn-types><option value="">選んでください</option><option value="CA01 未来情報設計型サイト" data-slug="future-information-design">CA01 未来情報設計型サイト</option><option value="CA02 先進案内型サイト" data-slug="advanced-guidance">CA02 先進案内型サイト</option><option value="CA03 成長サービス型サイト" data-slug="growth-service">CA03 成長サービス型サイト</option><option value="CA04 先進ブランド型サイト" data-slug="advanced-brand">CA04 先進ブランド型サイト</option><option value="CA05 未来感ブランド型サイト" data-slug="future-brand">CA05 未来感ブランド型サイト</option><option value="CA06 ファン化ブランド型サイト" data-slug="fan-brand">CA06 ファン化ブランド型サイト</option><option value="CA07 先進情報型サイト" data-slug="advanced-information">CA07 先進情報型サイト</option><option value="CA08 今らしい案内型サイト" data-slug="modern-guidance">CA08 今らしい案内型サイト</option><option value="CA09 洗練集客型サイト" data-slug="refined-conversion">CA09 洗練集客型サイト</option><option value="CA10 洗練ブランド型サイト" data-slug="refined-brand">CA10 洗練ブランド型サイト</option><option value="CA11 今らしさ魅力型サイト" data-slug="modern-appeal">CA11 今らしさ魅力型サイト</option><option value="CA12 印象記憶ブランド型サイト" data-slug="memorable-brand">CA12 印象記憶ブランド型サイト</option><option value="CA13 クリア情報型サイト" data-slug="clear-information">CA13 クリア情報型サイト</option><option value="CA14 成長案内型サイト" data-slug="growth-guidance">CA14 成長案内型サイト</option><option value="CA15 すっきり実用型サイト" data-slug="clean-practical">CA15 すっきり実用型サイト</option><option value="CA16 新鮮魅力型サイト" data-slug="fresh-appeal">CA16 新鮮魅力型サイト</option><option value="CA17 魅力発信型サイト" data-slug="appeal-communication">CA17 魅力発信型サイト</option><option value="CA18 個性発信型サイト" data-slug="distinctive-communication">CA18 個性発信型サイト</option><option value="CA19 安心情報型サイト" data-slug="reassuring-information">CA19 安心情報型サイト</option><option value="CA20 クリア相談型サイト" data-slug="clear-consultation">CA20 クリア相談型サイト</option><option value="CA21 親切案内型サイト" data-slug="helpful-guidance">CA21 親切案内型サイト</option><option value="CA22 親しみブランド型サイト" data-slug="friendly-brand">CA22 親しみブランド型サイト</option><option value="CA23 上質魅力型サイト" data-slug="premium-appeal">CA23 上質魅力型サイト</option><option value="CA24 共感ブランド型サイト" data-slug="empathetic-brand">CA24 共感ブランド型サイト</option><option value="CA25 信頼情報型サイト" data-slug="trustworthy-information">CA25 信頼情報型サイト</option><option value="CA26 王道サービス型サイト" data-slug="classic-service">CA26 王道サービス型サイト</option><option value="CA27 誠実集客型サイト" data-slug="sincere-conversion">CA27 誠実集客型サイト</option><option value="CA28 安心ブランド型サイト" data-slug="reassuring-brand">CA28 安心ブランド型サイト</option><option value="CA29 上質ブランド型サイト" data-slug="premium-brand">CA29 上質ブランド型サイト</option><option value="CA30 選ばれる魅力型サイト" data-slug="chosen-appeal">CA30 選ばれる魅力型サイト</option><option value="CA31 堅実情報型サイト" data-slug="solid-information">CA31 堅実情報型サイト</option><option value="CA32 正統案内型サイト" data-slug="orthodox-guidance">CA32 正統案内型サイト</option><option value="CA33 信頼獲得型サイト" data-slug="trust-acquisition">CA33 信頼獲得型サイト</option><option value="CA34 品格ブランド型サイト" data-slug="dignified-brand">CA34 品格ブランド型サイト</option><option value="CA35 高信頼ブランド型サイト" data-slug="high-trust-brand">CA35 高信頼ブランド型サイト</option><option value="CA36 価値伝達ブランド型サイト" data-slug="value-communication-brand">CA36 価値伝達ブランド型サイト</option><option value="利用していない">利用していない</option><option value="結果を覚えていない">結果を覚えていない</option></select>
+          <p class="qn-q__err" id="e-b26"></p>
+        </div>
+        <div class="qn-q" data-qn-q="b27">
+          <label class="qn-q__label" for="q-b27">希望する雰囲気や印象と、特に大切にしたいこと<span class="qn-opt-tag">任意</span></label>
+          <textarea class="qn-input" id="q-b27" name="b27" aria-describedby="e-b27" rows="3" maxlength="2000" placeholder="例: 落ち着いた、清潔な感じ。安っぽく見えないことが一番"></textarea>
+          <p class="qn-q__err" id="e-b27"></p>
+        </div>
+        <div class="qn-q" data-qn-q="b28">
+          <label class="qn-q__label" for="q-b28">参考にしたいサイトと、参考にしたい部分<span class="qn-opt-tag">任意</span></label><p class="qn-q__help" id="h-b28">URLと、「色」「写真の使い方」「メニューの見せ方」など、どこを参考にしたいかをお書きください。</p>
+          <textarea class="qn-input" id="q-b28" name="b28" aria-describedby="h-b28 e-b28" rows="3" maxlength="2000"></textarea>
+          <p class="qn-q__err" id="e-b28"></p>
+        </div>
+        <div class="qn-q" data-qn-q="b29">
+          <label class="qn-q__label" for="q-b29">必ず使う・守るもの<span class="qn-opt-tag">任意</span></label><p class="qn-q__help" id="h-b29">ロゴ、店の色、書体、写真の決まりなど。</p>
+          <textarea class="qn-input" id="q-b29" name="b29" aria-describedby="h-b29 e-b29" rows="3" maxlength="2000"></textarea>
+          <p class="qn-q__err" id="e-b29"></p>
+        </div>
+        <div class="qn-q" data-qn-q="b30">
+          <label class="qn-q__label" for="q-b30">避けたいデザインや表現<span class="qn-opt-tag">任意</span></label>
+          <textarea class="qn-input" id="q-b30" name="b30" aria-describedby="e-b30" rows="3" maxlength="2000"></textarea>
+          <p class="qn-q__err" id="e-b30"></p>
+        </div>
+      </section>
+
+      <section class="qn-sec" id="sec-b-function" data-qn-section="8" aria-labelledby="t-b-function">
+        <h2 class="qn-sec__title" id="t-b-function" tabindex="-1"><span class="qn-sec__no">09</span>必要な機能</h2>
+        <fieldset class="qn-q" data-qn-q="b31" aria-describedby="e-b31">
+          <legend class="qn-q__label">サイトに必要な機能<span class="qn-opt-tag">任意</span><span class="qn-multi">いくつでも</span></legend>
+          <div class="qn-choices">
+            <label class="qn-choice"><input type="checkbox" name="b31" value="SNSへのリンク" id="q-b31-0"><span>SNSへのリンク</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b31" value="予約サービスへの案内" id="q-b31-1"><span>予約サービスへの案内</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b31" value="LINE公式アカウントへの案内" id="q-b31-2"><span>LINE公式アカウントへの案内</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b31" value="地図" id="q-b31-3"><span>地図</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b31" value="お問い合わせの窓口" id="q-b31-4"><span>お問い合わせの窓口</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b31" value="お知らせの更新" id="q-b31-5"><span>お知らせの更新</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b31" value="よくある質問" id="q-b31-6"><span>よくある質問</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b31" value="採用情報" id="q-b31-7"><span>採用情報</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b31" value="分からない" id="q-b31-8"><span>分からない</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b31" value="その他" data-qn-other-toggle><span>その他</span></label>
+            <input class="qn-input qn-other" type="text" name="b31__other" maxlength="200" aria-label="サイトに必要な機能：その他の内容" placeholder="その他の内容" hidden>
+          </div>
+          <p class="qn-q__err" id="e-b31"></p>
+        </fieldset>
+        <div class="qn-q" data-qn-q="b32">
+          <label class="qn-q__label" for="q-b32">上で選んだ機能について補足<span class="qn-opt-tag">任意</span></label>
+          <textarea class="qn-input" id="q-b32" name="b32" aria-describedby="e-b32" rows="3" maxlength="2000" placeholder="例: 予約は今使っている予約サービスを使い続けたい"></textarea>
+          <p class="qn-q__err" id="e-b32"></p>
+        </div>
+      </section>
+
+      <section class="qn-sec" id="sec-b-material" data-qn-section="9" aria-labelledby="t-b-material">
+        <h2 class="qn-sec__title" id="t-b-material" tabindex="-1"><span class="qn-sec__no">10</span>原稿・写真・ロゴなどの素材</h2>
+        <fieldset class="qn-q" data-qn-q="b33" aria-describedby="e-b33">
+          <legend class="qn-q__label">用意できる素材（今後用意する予定のものも含む）<span class="qn-opt-tag">任意</span><span class="qn-multi">いくつでも</span></legend>
+          <div class="qn-choices">
+            <label class="qn-choice"><input type="checkbox" name="b33" value="原稿・文章" id="q-b33-0"><span>原稿・文章</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b33" value="写真" id="q-b33-1"><span>写真</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b33" value="ロゴ" id="q-b33-2"><span>ロゴ</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b33" value="イラスト" id="q-b33-3"><span>イラスト</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b33" value="動画" id="q-b33-4"><span>動画</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b33" value="パンフレットなどの資料" id="q-b33-5"><span>パンフレットなどの資料</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b33" value="まだない" id="q-b33-6"><span>まだない</span></label>
+          </div>
+          <p class="qn-q__err" id="e-b33"></p>
+        </fieldset>
+        <div class="qn-q" data-qn-q="b34">
+          <label class="qn-q__label" for="q-b34">上の素材それぞれの詳細<span class="qn-opt-tag">任意</span></label>
+          <textarea class="qn-input" id="q-b34" name="b34" aria-describedby="e-b34" rows="3" maxlength="2000" placeholder="例: 写真は店内10枚ほど。スマホで撮影"></textarea>
+          <p class="qn-q__err" id="e-b34"></p>
+        </div>
+        <div class="qn-q" data-qn-q="b35">
+          <label class="qn-q__label" for="q-b35">用意できない素材、制作側にお願いしたい素材<span class="qn-opt-tag">任意</span></label><p class="qn-q__help" id="h-b35">料金プランによっては対応できない場合があります。その場合は、お見積もりの段階でご相談します。</p>
+          <textarea class="qn-input" id="q-b35" name="b35" aria-describedby="h-b35 e-b35" rows="3" maxlength="2000"></textarea>
+          <p class="qn-q__err" id="e-b35"></p>
+        </div>
+      </section>
+
+      <section class="qn-sec" id="sec-b-domain" data-qn-section="10" aria-labelledby="t-b-domain">
+        <h2 class="qn-sec__title" id="t-b-domain" tabindex="-1"><span class="qn-sec__no">11</span>ドメイン・サーバー・事業用メール</h2>
+        <fieldset class="qn-q" data-qn-q="b36" aria-describedby="e-b36">
+          <legend class="qn-q__label">今回使うドメイン（サイトの住所）の状況<span class="qn-opt-tag">任意</span></legend>
+          <div class="qn-choices">
+            <label class="qn-choice"><input type="radio" name="b36" value="新しく「.com」ドメインを取得したい" id="q-b36-0"><span>新しく「.com」ドメインを取得したい</span></label>
+            <label class="qn-choice"><input type="radio" name="b36" value="すでに持っている「.com」ドメインを使いたい" id="q-b36-1"><span>すでに持っている「.com」ドメインを使いたい</span></label>
+            <label class="qn-choice"><input type="radio" name="b36" value="分からない" id="q-b36-2"><span>分からない</span></label>
+          </div>
+          <p class="qn-q__err" id="e-b36"></p>
+        </fieldset>
+        <div class="qn-q" data-qn-q="b37" data-show-if="{&quot;q&quot;:&quot;b36&quot;,&quot;in&quot;:[&quot;新しく「.com」ドメインを取得したい&quot;]}">
+          <label class="qn-q__label" for="q-b37">希望するドメイン名<span class="qn-opt-tag">任意</span></label><p class="qn-q__help" id="h-b37">候補が複数あれば併記してください。</p>
+          <input class="qn-input" id="q-b37" type="text" name="b37" aria-describedby="h-b37 e-b37" maxlength="200" placeholder="例: sakura-salon.com">
+          <p class="qn-q__err" id="e-b37"></p>
+        </div>
+        <div class="qn-q" data-qn-q="b38" data-show-if="{&quot;q&quot;:&quot;b36&quot;,&quot;in&quot;:[&quot;すでに持っている「.com」ドメインを使いたい&quot;]}">
+          <label class="qn-q__label" for="q-b38">持っているドメインの情報<span class="qn-opt-tag">任意</span></label><p class="qn-q__help" id="h-b38">ドメイン名と、取得したサービス・名義をお書きください。</p>
+          <textarea class="qn-input" id="q-b38" name="b38" aria-describedby="h-b38 e-b38" rows="2" maxlength="2000"></textarea>
+          <p class="qn-q__err" id="e-b38"></p>
+        </div>
+        <div class="qn-q" data-qn-q="b39" data-show-if="{&quot;q&quot;:&quot;b36&quot;,&quot;in&quot;:[&quot;すでに持っている「.com」ドメインを使いたい&quot;]}">
+          <label class="qn-q__label" for="q-b39">そのドメインと連携しているサービス<span class="qn-opt-tag">任意</span></label><p class="qn-q__help" id="h-b39">例: メール、他のサイト、予約サービス。</p>
+          <textarea class="qn-input" id="q-b39" name="b39" aria-describedby="h-b39 e-b39" rows="2" maxlength="2000"></textarea>
+          <p class="qn-q__err" id="e-b39"></p>
+        </div>
+        <fieldset class="qn-q" data-qn-q="b40" aria-describedby="h-b40 e-b40">
+          <legend class="qn-q__label">XServerアカウントをお持ちですか<span class="qn-opt-tag">任意</span></legend><p class="qn-q__help" id="h-b40">XServerアカウントは、ドメインの取得に使います。サーバーの契約は別のサービスを使います。</p>
+          <div class="qn-choices">
+            <label class="qn-choice"><input type="radio" name="b40" value="本人または自社名義で持っている" id="q-b40-0"><span>本人または自社名義で持っている</span></label>
+            <label class="qn-choice"><input type="radio" name="b40" value="持っていない" id="q-b40-1"><span>持っていない</span></label>
+            <label class="qn-choice"><input type="radio" name="b40" value="分からない" id="q-b40-2"><span>分からない</span></label>
+          </div>
+          <p class="qn-q__err" id="e-b40"></p>
+        </fieldset>
+        <fieldset class="qn-q" data-qn-q="b41" aria-describedby="h-b41 e-b41">
+          <legend class="qn-q__label">さくらのレンタルサーバを使っていますか<span class="qn-opt-tag">任意</span></legend><p class="qn-q__help" id="h-b41">さくらのレンタルサーバは、Webサイトを公開しておくサーバーとして使います。</p>
+          <div class="qn-choices">
+            <label class="qn-choice"><input type="radio" name="b41" value="使っている" id="q-b41-0"><span>使っている</span></label>
+            <label class="qn-choice"><input type="radio" name="b41" value="使っていない" id="q-b41-1"><span>使っていない</span></label>
+            <label class="qn-choice"><input type="radio" name="b41" value="分からない" id="q-b41-2"><span>分からない</span></label>
+          </div>
+          <p class="qn-q__err" id="e-b41"></p>
+        </fieldset>
+        <fieldset class="qn-q" data-qn-q="b42" aria-describedby="h-b42 e-b42">
+          <legend class="qn-q__label">事業用メールの状況・希望<span class="qn-opt-tag">任意</span></legend><p class="qn-q__help" id="h-b42">取得したドメインで、あなただけの事業用メールアドレス（例: info@あなたのドメイン）を作れます。</p>
+          <div class="qn-choices">
+            <label class="qn-choice"><input type="radio" name="b42" value="新しく事業用メールを作りたい" id="q-b42-0"><span>新しく事業用メールを作りたい</span></label>
+            <label class="qn-choice"><input type="radio" name="b42" value="今の事業用メールを使い続けたい" id="q-b42-1"><span>今の事業用メールを使い続けたい</span></label>
+            <label class="qn-choice"><input type="radio" name="b42" value="事業用メールは使わない" id="q-b42-2"><span>事業用メールは使わない</span></label>
+          </div>
+          <p class="qn-q__err" id="e-b42"></p>
+        </fieldset>
+        <div class="qn-q" data-qn-q="b43" data-show-if="{&quot;q&quot;:&quot;b42&quot;,&quot;notIn&quot;:[&quot;事業用メールは使わない&quot;]}">
+          <label class="qn-q__label" for="q-b43">事業用メールの詳細<span class="qn-opt-tag">任意</span></label><p class="qn-q__help" id="h-b43">使っている、または希望するアドレス、必要な数、使っているメールサービスなど。</p>
+          <textarea class="qn-input" id="q-b43" name="b43" aria-describedby="h-b43 e-b43" rows="2" maxlength="2000"></textarea>
+          <p class="qn-q__err" id="e-b43"></p>
+        </div>
+      </section>
+
+      <section class="qn-sec" id="sec-b-search" data-qn-section="11" aria-labelledby="t-b-search">
+        <h2 class="qn-sec__title" id="t-b-search" tabindex="-1"><span class="qn-sec__no">12</span>検索・集客・アクセス解析</h2>
+        <div class="qn-q" data-qn-q="b44">
+          <label class="qn-q__label" for="q-b44">検索で見つけてほしい言葉<span class="qn-opt-tag">任意</span></label>
+          <textarea class="qn-input" id="q-b44" name="b44" aria-describedby="e-b44" rows="2" maxlength="2000" placeholder="例: 整体 腰痛／個別指導 中学生"></textarea>
+          <p class="qn-q__err" id="e-b44"></p>
+        </div>
+        <div class="qn-q" data-qn-q="b45">
+          <label class="qn-q__label" for="q-b45">特に見つけてほしい地域<span class="qn-opt-tag">任意</span></label><p class="qn-q__help" id="h-b45">「〇〇駅 整体」のように、地域を絞って探している人に見つけてもらいやすくするための質問です。</p>
+          <input class="qn-input" id="q-b45" type="text" name="b45" aria-describedby="h-b45 e-b45" maxlength="200">
+          <p class="qn-q__err" id="e-b45"></p>
+        </div>
+        <fieldset class="qn-q" data-qn-q="b46" aria-describedby="e-b46">
+          <legend class="qn-q__label">いま使っている、これから使いたい集客方法<span class="qn-opt-tag">任意</span><span class="qn-multi">いくつでも</span></legend>
+          <div class="qn-choices">
+            <label class="qn-choice"><input type="checkbox" name="b46" value="Instagram" id="q-b46-0"><span>Instagram</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b46" value="X" id="q-b46-1"><span>X</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b46" value="LINE" id="q-b46-2"><span>LINE</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b46" value="Googleマップ" id="q-b46-3"><span>Googleマップ</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b46" value="チラシ・ポスティング" id="q-b46-4"><span>チラシ・ポスティング</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b46" value="紹介・口コミ" id="q-b46-5"><span>紹介・口コミ</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b46" value="広告" id="q-b46-6"><span>広告</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b46" value="まだない" id="q-b46-7"><span>まだない</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b46" value="その他" data-qn-other-toggle><span>その他</span></label>
+            <input class="qn-input qn-other" type="text" name="b46__other" maxlength="200" aria-label="いま使っている、これから使いたい集客方法：その他の内容" placeholder="その他の内容" hidden>
+          </div>
+          <p class="qn-q__err" id="e-b46"></p>
+        </fieldset>
+        <fieldset class="qn-q" data-qn-q="b47" aria-describedby="h-b47 e-b47">
+          <legend class="qn-q__label">Googleビジネスプロフィールの利用状況<span class="qn-opt-tag">任意</span></legend><p class="qn-q__help" id="h-b47">Google検索やGoogleマップに表示される、店舗・事業者の情報のことです。</p>
+          <div class="qn-choices">
+            <label class="qn-choice"><input type="radio" name="b47" value="登録している" id="q-b47-0"><span>登録している</span></label>
+            <label class="qn-choice"><input type="radio" name="b47" value="登録していない" id="q-b47-1"><span>登録していない</span></label>
+            <label class="qn-choice"><input type="radio" name="b47" value="分からない" id="q-b47-2"><span>分からない</span></label>
+          </div>
+          <p class="qn-q__err" id="e-b47"></p>
+        </fieldset>
+        <fieldset class="qn-q" data-qn-q="b48" aria-describedby="h-b48 e-b48">
+          <legend class="qn-q__label">公開後に知りたい数字<span class="qn-opt-tag">任意</span><span class="qn-multi">いくつでも</span></legend><p class="qn-q__help" id="h-b48">プランによって設定できる範囲が異なります。</p>
+          <div class="qn-choices">
+            <label class="qn-choice"><input type="checkbox" name="b48" value="見た人の数" id="q-b48-0"><span>見た人の数</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b48" value="どこから来たか（検索・SNSなど）" id="q-b48-1"><span>どこから来たか（検索・SNSなど）</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b48" value="問い合わせの数" id="q-b48-2"><span>問い合わせの数</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b48" value="よく見られているページ" id="q-b48-3"><span>よく見られているページ</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b48" value="特にない" id="q-b48-4"><span>特にない</span></label>
+            <label class="qn-choice"><input type="checkbox" name="b48" value="分からない" id="q-b48-5"><span>分からない</span></label>
+          </div>
+          <p class="qn-q__err" id="e-b48"></p>
+        </fieldset>
+        <div class="qn-q" data-qn-q="b49">
+          <label class="qn-q__label" for="q-b49">検索対策についての希望（任意）<span class="qn-opt-tag">任意</span></label><p class="qn-q__help" id="h-b49">上の質問でカバーできないことを自由にお書きください。</p>
+          <textarea class="qn-input" id="q-b49" name="b49" aria-describedby="h-b49 e-b49" rows="3" maxlength="2000"></textarea>
+          <p class="qn-q__err" id="e-b49"></p>
+        </div>
+      </section>
+
+      <section class="qn-sec" id="sec-b-schedule" data-qn-section="12" aria-labelledby="t-b-schedule">
+        <h2 class="qn-sec__title" id="t-b-schedule" tabindex="-1"><span class="qn-sec__no">13</span>公開時期</h2>
+        <div class="qn-q" data-qn-q="b50">
+          <label class="qn-q__label" for="q-b50">公開したい日・時期<span class="qn-opt-tag">任意</span></label><p class="qn-q__help" id="h-b50">「○月△日」だけでなく、「○月ごろ」「完成次第でよい」でも構いません。</p>
+          <input class="qn-input" id="q-b50" type="text" name="b50" aria-describedby="h-b50 e-b50" maxlength="200">
+          <p class="qn-q__err" id="e-b50"></p>
+        </div>
+        <div class="qn-q" data-qn-q="b51">
+          <label class="qn-q__label" for="q-b51">その時期を希望する理由と、動かせない期限<span class="qn-opt-tag">任意</span></label><p class="qn-q__help" id="h-b51">希望日とは別に「この日を過ぎると困る」期限があれば、その日付も書いてください。例: 11月1日に公開したいが、開店前日の11月29日までには必ず必要。</p>
+          <textarea class="qn-input" id="q-b51" name="b51" aria-describedby="h-b51 e-b51" rows="3" maxlength="2000"></textarea>
+          <p class="qn-q__err" id="e-b51"></p>
+        </div>
+      </section>
+
+      <section class="qn-sec" id="sec-b-process" data-qn-section="13" aria-labelledby="t-b-process">
+        <h2 class="qn-sec__title" id="t-b-process" tabindex="-1"><span class="qn-sec__no">14</span>進め方と連絡</h2>
+        <div class="qn-q" data-qn-q="b52">
+          <label class="qn-q__label" for="q-b52">確認と承認はどなたがしますか<span class="qn-opt-tag">任意</span></label><p class="qn-q__help" id="h-b52">見積もり・発注、原稿・デザイン、公開の各段階で、誰が確認・承認し、誰が返事をまとめるか。例: 発注は代表者、原稿は担当者が確認。返事は担当者がまとめます。</p>
+          <textarea class="qn-input" id="q-b52" name="b52" aria-describedby="h-b52 e-b52" rows="3" maxlength="2000"></textarea>
+          <p class="qn-q__err" id="e-b52"></p>
+        </div>
+        <fieldset class="qn-q" data-qn-q="b53" aria-describedby="h-b53 e-b53">
+          <legend class="qn-q__label">制作中の連絡方法<span class="qn-opt-tag">任意</span></legend><p class="qn-q__help" id="h-b53">契約書などの大切な書類は、どちらを選んでもメールでお送りします。</p>
+          <div class="qn-choices">
+            <label class="qn-choice"><input type="radio" name="b53" value="メール" id="q-b53-0"><span>メール</span></label>
+            <label class="qn-choice"><input type="radio" name="b53" value="LINE公式アカウント" id="q-b53-1"><span>LINE公式アカウント</span></label>
+          </div>
+          <p class="qn-q__err" id="e-b53"></p>
+        </fieldset>
+        <fieldset class="qn-q" data-qn-q="b54" aria-describedby="h-b54 e-b54">
+          <legend class="qn-q__label">こちらから確認をお願いしたとき、お返事までにかかりそうな日数<span class="qn-opt-tag">任意</span></legend><p class="qn-q__help" id="h-b54">原稿やデザインの確認・承認を含めた日数の目安です。制作期間の見積もりに使います。</p>
+          <div class="qn-choices">
+            <label class="qn-choice"><input type="radio" name="b54" value="当日〜翌日" id="q-b54-0"><span>当日〜翌日</span></label>
+            <label class="qn-choice"><input type="radio" name="b54" value="2〜3日" id="q-b54-1"><span>2〜3日</span></label>
+            <label class="qn-choice"><input type="radio" name="b54" value="1週間ほど" id="q-b54-2"><span>1週間ほど</span></label>
+            <label class="qn-choice"><input type="radio" name="b54" value="社内の確認が必要なので都度相談したい" id="q-b54-3"><span>社内の確認が必要なので都度相談したい</span></label>
+          </div>
+          <p class="qn-q__err" id="e-b54"></p>
+        </fieldset>
+        <div class="qn-q" data-qn-q="b55">
+          <label class="qn-q__label" for="q-b55">連絡や確認が難しい時期<span class="qn-opt-tag">任意</span></label><p class="qn-q__help" id="h-b55">特になければ「特になし」とご記入ください。</p>
+          <textarea class="qn-input" id="q-b55" name="b55" aria-describedby="h-b55 e-b55" rows="2" maxlength="2000" placeholder="例: 12月中旬〜年末は繁忙期で返信が遅れます"></textarea>
+          <p class="qn-q__err" id="e-b55"></p>
+        </div>
+        <div class="qn-q" data-qn-q="b56">
+          <label class="qn-q__label" for="q-b56">連絡や確認について、ほかの希望や制約<span class="qn-opt-tag">任意</span></label>
+          <textarea class="qn-input" id="q-b56" name="b56" aria-describedby="e-b56" rows="2" maxlength="2000" placeholder="例: 平日の日中は電話に出られません／LINEは営業時間外のみ見られます"></textarea>
+          <p class="qn-q__err" id="e-b56"></p>
+        </div>
+      </section>
+
+      <section class="qn-sec" id="sec-b-after" data-qn-section="14" data-show-if="{&quot;q&quot;:&quot;b17&quot;,&quot;notIn&quot;:[&quot;希望しない&quot;]}" aria-labelledby="t-b-after">
+        <h2 class="qn-sec__title" id="t-b-after" tabindex="-1"><span class="qn-sec__no">15</span>公開後の更新・管理</h2>
+        <div class="qn-q" data-qn-q="b57">
+          <label class="qn-q__label" for="q-b57">今後追加したいページや機能、更新したい内容とその頻度<span class="qn-opt-tag">任意</span></label><p class="qn-q__help" id="h-b57">今回の制作範囲には含めない、将来の予定をお書きください。例: 半年後にスタッフ紹介を追加／お知らせを月1回更新。</p>
+          <textarea class="qn-input" id="q-b57" name="b57" aria-describedby="h-b57 e-b57" rows="3" maxlength="2000"></textarea>
+          <p class="qn-q__err" id="e-b57"></p>
+        </div>
+      </section>
+
+      <section class="qn-sec" id="sec-b-other" data-qn-section="15" aria-labelledby="t-b-other">
+        <h2 class="qn-sec__title" id="t-b-other" tabindex="-1"><span class="qn-sec__no">16</span>その他</h2>
+        <div class="qn-q" data-qn-q="b58">
+          <label class="qn-q__label" for="q-b58">そのほかの希望・制約<span class="qn-opt-tag">任意</span></label><p class="qn-q__help" id="h-b58">ここまでの質問で書ききれなかったことをお書きください。</p>
+          <textarea class="qn-input" id="q-b58" name="b58" aria-describedby="h-b58 e-b58" rows="4" maxlength="2000"></textarea>
+          <p class="qn-q__err" id="e-b58"></p>
+        </div>
+        <div class="qn-q qn-consent" data-qn-q="b59">
+          <p class="qn-q__label" id="l-b59">個人情報の取り扱い<span class="qn-req">必須</span></p>
+          <label class="qn-choice qn-choice--consent"><input type="checkbox" name="b59" value="同意する" required aria-required="true" aria-describedby="l-b59 e-b59"><span>プライバシーポリシーを確認し、同意します</span></label>
+          <p class="qn-q__help"><a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシーを読む（新しいタブで開きます）</a></p>
+          <p class="qn-q__err" id="e-b59"></p>
+        </div>
+      </section>
+        <div class="qn-hp" aria-hidden="true"><label>この欄は空のままにしてください<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+        <p class="qn-errors" data-qn-errors role="alert" hidden></p>
+        <div class="qn-nav" data-qn-nav>
+          <button type="button" class="btn btn--line" data-qn-prev>戻る</button><button type="button" class="btn btn--primary" data-qn-next>次へ</button>
+          <button type="submit" class="btn btn--primary" data-qn-review-btn>入力内容を確認する</button>
+        </div>
+      </form>
+
+      <section class="qn-review" data-qn-review hidden aria-labelledby="qn-review-title">
+        <h2 id="qn-review-title" tabindex="-1">入力内容の確認</h2>
+        <p class="caption">内容を確かめてから、下の方法で送ってください。直したいときは「修正する」を押してください。</p>
+        <div class="qn-review__list" data-qn-review-list></div>
+        <div class="qn-send" data-qn-send>
+          <h3>送る</h3>
+          <p class="qn-send__to">送信先: <span data-qn-to><span class="blocker-inline" title="公開前に確定する項目">（公開前に確定: メール）</span></span></p>
+          <div class="qn-send__actions" data-qn-send-actions></div>
+          <p class="qn-send__msg" data-qn-send-msg aria-live="polite"></p>
+        </div>
+        <p><button type="button" class="btn btn--line" data-qn-back>入力に戻る</button></p>
+      </section>
+
+      <section class="qn-done" data-qn-done hidden aria-labelledby="qn-done-title">
+        <h2 id="qn-done-title" tabindex="-1">ありがとうございました</h2>
+        <p data-qn-done-text>内容を確認し、メールでご連絡します。</p>
+        <p><button type="button" class="btn btn--line" data-qn-clear>この端末の下書きを消す</button></p>
+        <p><a class="alink" href="index.html">トップへ戻る</a></p>
+      </section>
+    </div>
+  </section>
+
+  <section class="sec sec--paper2">
+    <div class="wrap container--mid">
+      <div class="stack">
+        <p class="note"><b>どちらのアンケートか迷ったら</b> — サイトのイメージがまだ固まっていない方は<a href="consult-form.html">相談アンケート（約5分）</a>をご利用ください。迷う場合は、短い相談アンケートで構いません。</p>
+        <p class="note note--info"><b>送信＝契約ではありません</b> — アンケートの送信は、契約の申し込みではありません。内容を確認し、見積もりと進め方をメールでご案内します。</p>
+        <p class="note note--calm"><b>個人情報の利用目的</b> — いただいた内容は、お問い合わせへの回答、見積もり、制作内容の確認、契約・連絡のために利用します。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご確認ください。</p>
+      </div>
+    </div>
+  </section>
+  </main>
+  <footer class="ftr">
+  <div class="wrap">
+    <div class="g6">
+      <div class="c1-2">
+        <div class="ftr__brand">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span><span class="ftr__ja">クルーアセント</span><span class="ftr__en">CREW ASCENT</span></span>
+        </div>
+        <p class="ftr__note">診断で方向を整理してから始める、小規模事業者向けのWeb制作事務所です。検索順位や問い合わせ件数を保証するサービスではありません。</p>
+      </div>
+      <div class="c3-4">
+        <h2>サイト</h2>
+        <ul>
+          <li><a href="diagnosis.html">Web診断36</a></li>
+          <li><a href="plans.html">制作プラン・料金</a></li>
+          <li><a href="process.html">制作の流れ</a></li>
+          <li><a href="management.html">公開・管理プラン</a></li>
+          <li><a href="services.html">Web制作サービス</a></li>
+        </ul>
+      </div>
+      <div class="c5-6">
+        <h2>知る・相談する</h2>
+        <ul>
+          <li><a href="about.html">クルーアセントについて</a></li>
+          <li><a href="guide.html">Webサイトづくりガイド</a></li>
+          <li><a href="faq.html">よくある質問</a></li>
+          <li><a href="contact.html">無料相談・お問い合わせ</a></li>
+          <li>事業者名 <span class="todo" title="公開前に確定する項目">公開前に確定</span></li>
+          <li><a href="privacy.html">プライバシーポリシー</a> ／ <a href="terms.html">サイト利用条件</a></li>
+          <li><a href="commercial-transactions.html">特定商取引法に基づく表記</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr__bottom">
+      <span>© <span data-year>2026</span> クルーアセント（CREW ASCENT）</span>
+      <span>このサイトは公開準備中です。確定前の項目があります。</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

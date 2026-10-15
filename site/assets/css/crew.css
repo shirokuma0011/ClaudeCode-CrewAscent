@@ -648,3 +648,70 @@ a.card:hover, a.near-card:hover, a.work-card:hover, .near-card a:hover { backgro
 /* 見本サイト一覧: 空いたマスに罫の色が面で出ないよう、カードごとに罫で囲む */
 .works { background:transparent; border:0; gap:18px; }
 .work { border:1px solid var(--rule); border-radius:var(--r); overflow:hidden; }
+
+/* ============================== 相談アンケート（consult-form / hearing-form） ============================== */
+.qn-intro { margin:0 0 var(--s4); font-size:.9375rem; color:var(--tx-2); }
+.qn-draft { display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px; margin:0 0 var(--s4); padding:12px 16px; border-left:3px solid #829a76; background:var(--surface); font-size:.875rem; }
+.qn-draft p { margin:0; }
+.qn-progress { position:sticky; top:calc(var(--hdr-h) + 6px); z-index:5; margin:0 0 var(--s4); padding:12px 16px 10px; background:color-mix(in srgb, var(--paper) 94%, transparent); border:1px solid var(--rule); border-radius:var(--r); backdrop-filter:blur(6px); }
+.qn-progress__text { margin:0 0 8px; font-size:.875rem; color:var(--ink); }
+.qn-progress__bar { height:4px; background:var(--paper-3); border-radius:2px; overflow:hidden; }
+.qn-progress__bar i { display:block; height:100%; width:0; background:var(--act); transition:width .3s var(--ez); }
+.qn-toc { margin-top:8px; font-size:.875rem; }
+.qn-toc summary { cursor:pointer; min-height:36px; display:flex; align-items:center; color:var(--act); }
+.qn-toc ol { margin:6px 0 0; padding-left:1.4em; columns:2 14em; column-gap:24px; }
+.qn-toc__btn { min-height:36px; padding:4px 0; border:0; background:none; font:inherit; color:var(--tx-2); text-align:left; cursor:pointer; text-decoration:underline; text-underline-offset:3px; }
+.qn-toc__btn.is-current { color:var(--ink); font-weight:700; text-decoration:none; }
+.qn { display:grid; gap:var(--s5); }
+.qn-sec { display:grid; gap:var(--s4); padding:clamp(20px, 3vw, 32px); background:var(--card); border:1px solid var(--rule); border-radius:var(--r); }
+.qn-sec__title { display:flex; align-items:baseline; gap:12px; margin:0; font-size:1.25rem; outline:none; scroll-margin-top:calc(var(--hdr-h) + 90px); }
+.qn-sec__no { font-family:var(--mono); font-size:.75rem; letter-spacing:.1em; color:var(--tx-3); }
+.qn-q { margin:0; padding:0; border:0; min-width:0; display:grid; gap:8px; }
+.qn-q[hidden] { display:none; }
+.qn-q__label { display:flex; flex-wrap:wrap; align-items:center; gap:6px 10px; padding:0; font-size:1rem; font-weight:700; color:var(--ink); line-height:1.6; }
+.qn-req, .qn-opt-tag, .qn-multi { display:inline-block; padding:0 8px; border-radius:2px; font-size:.75rem; font-weight:400; line-height:1.8; letter-spacing:.04em; }
+.qn-req { background:var(--act); color:#fff; }
+.qn-opt-tag { border:1px solid var(--rule); color:var(--tx-3); }
+.qn-multi { color:var(--tx-3); }
+.qn-q__help { margin:0; font-size:.875rem; line-height:1.8; color:var(--tx-2); }
+.qn-input { width:100%; min-height:48px; padding:10px 14px; border:1px solid var(--rule-strong); border-radius:var(--r); background:#fffef9; color:var(--ink); font:inherit; font-size:1rem; line-height:1.7; }
+textarea.qn-input { min-height:96px; resize:vertical; }
+.qn-input:focus-visible { outline:3px solid var(--focus); outline-offset:2px; }
+.qn-select { appearance:auto; }
+.qn-choices { display:flex; flex-wrap:wrap; gap:8px 10px; }
+.qn-choice { display:inline-flex; align-items:center; gap:10px; min-height:44px; padding:8px 14px; border:1px solid var(--rule); border-radius:var(--r); background:#fffef9; cursor:pointer; font-size:.9375rem; line-height:1.5; }
+.qn-choice:has(input:checked) { border-color:var(--act); background:color-mix(in srgb, var(--act) 9%, #fffef9); }
+.qn-choice input { width:18px; height:18px; margin:0; accent-color:var(--act); flex:none; }
+.qn-choice:has(input:focus-visible) { outline:3px solid var(--focus); outline-offset:2px; }
+.qn-choice--consent { font-weight:700; }
+.qn-other { margin-top:4px; }
+.qn-q__err { margin:0; min-height:0; font-size:.875rem; font-weight:700; color:#a3341f; }
+.qn-q.is-error .qn-input, .qn-q.is-error .qn-choice { border-color:#a3341f; }
+.qn-hp { position:absolute !important; left:-9999px; width:1px; height:1px; overflow:hidden; }
+.qn-errors { margin:0; padding:12px 16px; border-left:3px solid #a3341f; background:#fbefe9; color:#7a2414; font-size:.9375rem; }
+.qn-nav { display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; }
+.qn-nav [data-qn-review-btn], .qn-nav [data-qn-next] { margin-left:auto; }
+.qn-nav .btn { min-height:48px; min-width:9em; }
+.qn-review, .qn-done { display:grid; gap:var(--s4); }
+.qn-review h2, .qn-done h2 { margin:0; font-size:1.5rem; outline:none; scroll-margin-top:calc(var(--hdr-h) + 20px); }
+.qn-review__list { display:grid; gap:var(--s4); }
+.qn-review__sec { padding:clamp(18px, 2.4vw, 26px); background:var(--card); border:1px solid var(--rule); border-radius:var(--r); }
+.qn-review__head { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:8px; }
+.qn-review__head h3 { margin:0; font-size:1.0625rem; }
+.qn-review__edit { min-height:44px; padding:6px 14px; border:1px solid var(--rule-strong); border-radius:var(--r); background:transparent; color:var(--ink); font:inherit; font-size:.875rem; cursor:pointer; }
+.qn-review__sec dl { margin:0; }
+.qn-review__sec dl > div { display:grid; grid-template-columns:minmax(10em, 34%) 1fr; gap:4px 16px; padding:10px 0; border-top:1px solid var(--rule-fine); }
+.qn-review__sec dt { font-size:.875rem; color:var(--tx-2); }
+.qn-review__sec dd { margin:0; white-space:pre-wrap; overflow-wrap:anywhere; }
+.qn-review__sec dd.is-empty { color:var(--tx-3); }
+@media (max-width:640px) { .qn-review__sec dl > div { grid-template-columns:1fr; } }
+.qn-send { padding:clamp(20px, 3vw, 30px); border:1px solid var(--act); border-radius:var(--r); background:var(--surface); }
+.qn-send h3 { margin:0 0 8px; font-size:1.125rem; }
+.qn-send__to { margin:0 0 14px; font-size:.9375rem; }
+.qn-send__actions { display:flex; flex-wrap:wrap; gap:10px 12px; }
+.qn-send__actions .btn { min-height:48px; }
+.qn-send__msg { margin:12px 0 0; font-size:.9375rem; color:var(--ink); }
+/* アンケートでは、スクロール直後のタップも必ず受け付ける（ホバー停止の対象から外す） */
+html.is-scrolling .qn, html.is-scrolling .qn *, html.is-scrolling .qn-review *, html.is-scrolling .qn-done *,
+html.is-scrolling .qn-progress *, html.is-scrolling .qn-draft * { pointer-events: auto !important; }
+.qn-q.is-fixed .qn-q__err { min-height:1.6em; }   /* 直したあとも高さを保ち、押そうとしたボタンをずらさない */

@@ -283,24 +283,17 @@
     });
   });
 
-  /* ------------------- 相談フォームリンク -------------------
-     URLが設定済みなら差し込む。未設定でも、サイト内の相談ページへ行けるリンクは
-     生かしたままにする（押せない状態にするのは行き先が外部フォームしかない場合だけ）。 */
-  var cfg = window.CREW_CONFIG || {};
-  /* data-form-link="hearing" は事前ヒアリングフォーム（イメージが固まっている方）。
-     それ以外は相談フォーム（イメージがまだ固まっていない方） */
+  /* ------------------- 相談アンケートへのリンク -------------------
+     data-form-link       … 相談アンケート（サイトのイメージがまだ固まっていない方）
+     data-form-link="hearing" … 事前ヒアリング（イメージが固まっている方）
+     どちらもサイト内のページ。診断結果から来たとき（?type=）は、そのタイプを引き継ぐ。 */
+  var typeParam = (location.search.match(/[?&]type=([a-z0-9-]+)/) || [])[1];
   Array.prototype.forEach.call(document.querySelectorAll('[data-form-link]'), function (a) {
-    var url = a.getAttribute('data-form-link') === 'hearing' ? cfg.hearingFormUrl : cfg.googleFormUrl;
-    if (url && url !== 'PUBLISH_BLOCKER') {
-      a.href = url;
-      a.setAttribute('target', '_blank');
-      a.setAttribute('rel', 'noopener');
-    } else {
-      var raw = a.getAttribute('href') || '';
-      if (!raw || raw === '#') a.setAttribute('aria-disabled', 'true');
-    }
-    a.addEventListener('click', function (e) {
-      if (a.getAttribute('aria-disabled') === 'true') { e.preventDefault(); return; }
+    var page = a.getAttribute('data-form-link') === 'hearing' ? 'hearing-form.html' : 'consult-form.html';
+    a.href = page + (typeParam ? '?type=' + typeParam : '');
+    a.removeAttribute('aria-disabled');
+    a.removeAttribute('target');
+    a.addEventListener('click', function () {
       window.crewTrack('contact_form_open', { source_page: document.body.getAttribute('data-page') || '', form: a.getAttribute('data-form-link') || 'consult' });
     });
   });
@@ -363,6 +356,7 @@
   var ERASE_LABEL = [
     ['crewAscentDiagnosis', '途中まで答えた回答'],
     ['crewAscentResult', '診断の結果'],
+    ['crewAscentQuestionnaire', '相談アンケートの下書き'],
   ];
   function crewStoredKeys() {
     var out = [];

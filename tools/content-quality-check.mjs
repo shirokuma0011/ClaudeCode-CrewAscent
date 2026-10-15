@@ -61,13 +61,17 @@ const htmlFiles = fs.readdirSync(root).filter((file) => file.endsWith('.html'));
 const publicHtmlFiles = htmlFiles.filter((file) => !file.startsWith('_'));
 /* 期待件数は固定値にしない。タイプが増えればページも増えるため、
    「コアページ + タイプ一覧 + タイプ数」から数える。 */
-/* コア21 + 36タイプ一覧 + 業種から探す + タイプ36 */
+/* コア21 + 36タイプ一覧 + 業種から探す + 相談アンケート2 + タイプ36 */
 const CORE_PAGES = 21;
 const HUB_PAGES = 2;
-const expectedHtml = CORE_PAGES + HUB_PAGES + TYPES.length;
+const FORM_PAGES = ['consult-form.html', 'hearing-form.html'];
+const expectedHtml = CORE_PAGES + HUB_PAGES + FORM_PAGES.length + TYPES.length;
 const typePages = publicHtmlFiles.filter((file) => file.startsWith('type-'));
 check(publicHtmlFiles.length === expectedHtml,
-  `HTMLは ${expectedHtml}ページ（コア${CORE_PAGES} + 一覧・業種${HUB_PAGES} + タイプ${TYPES.length}）`);
+  `HTMLは ${expectedHtml}ページ（コア${CORE_PAGES} + 一覧・業種${HUB_PAGES} + アンケート${FORM_PAGES.length} + タイプ${TYPES.length}）`);
+for (const f of FORM_PAGES) {
+  check(publicHtmlFiles.includes(f), `相談アンケート ${f} がある`);
+}
 check(typePages.length === TYPES.length, `タイプ個別ページが ${TYPES.length}件そろっている`);
 for (const type of TYPES) {
   check(publicHtmlFiles.includes(`type-${type.slug}.html`), `${type.id}: type-${type.slug}.html がある`);
@@ -102,6 +106,11 @@ for (const [file, html] of htmlByFile) {
 
 check(/<meta name="robots" content="noindex,follow">/.test(htmlByFile.get('result.html')), '診断結果はnoindex');
 check(/<meta name="robots" content="noindex,follow">/.test(htmlByFile.get('works.html')), '未掲載の見本ページはnoindex');
+for (const f of ['consult-form.html', 'hearing-form.html']) {
+  const h = htmlByFile.get(f) || '';
+  check(/<meta name="robots" content="noindex,follow">/.test(h), `${f}: 相談アンケートは検索に出さない（noindex）`);
+  check(!/<form[^>]*\saction=/.test(h), `${f}: フォームに送信先（action）を書かない（送り方は確認画面で選ぶ）`);
+}
 
 /* sitemap は「いま index,follow にしているページ」とちょうど同じであること。
    固定の件数や日付を期待するのはやめた（段階公開で増減するため）。 */

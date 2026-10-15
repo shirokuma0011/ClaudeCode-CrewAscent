@@ -52,8 +52,10 @@ window.CREW_CONFIG = {
   businessDays: 'PUBLISH_BLOCKER',
   replyEstimate: 'PUBLISH_BLOCKER',
   serviceArea: 'PUBLISH_BLOCKER',
-  googleFormUrl: 'PUBLISH_BLOCKER',      // 相談フォームURL（サイトのイメージがまだ固まっていない方）
-  hearingFormUrl: 'PUBLISH_BLOCKER',     // 事前ヒアリングフォームURL（サイトのイメージが固まっている方）
+  // 相談アンケート（consult-form.html / hearing-form.html）の送り方。
+  // 空のあいだは「メールアプリで送る」（宛先は上の email）。自前のサーバーで受ける場合だけ、
+  // server/README.md の手順で置いたファイルのURLを書く（例: '/api/questionnaire-mail.php'）。
+  formEndpoint: '',
   officialLineUrl: '',
   socialUrls: [],
   taxMode: 'PUBLISH_BLOCKER',            // 'included' | 'excluded' 等

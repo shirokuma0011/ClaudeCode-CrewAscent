@@ -45,8 +45,6 @@ const MAP = {
   '返信目安': 'replyEstimate',
   '対応地域': 'serviceArea',
   '公開ドメイン': 'canonicalOrigin',
-  'GoogleフォームURL': 'googleFormUrl',
-  '事前ヒアリングフォームURL': 'hearingFormUrl',
   '税込総額または税抜+税込併記': 'taxDisplayNote',
   '消費税の表示方針': 'taxDisplayShort',
   '負担者': 'transferFeeBearer',
@@ -142,7 +140,7 @@ for (const p of plan) {
 /* 6. site-config.js */
 let cfg = rd('assets/js/site-config.js');
 const CFG_KEYS = ['canonicalOrigin', 'legalBusinessName', 'responsiblePerson', 'postalAddress',
-  'telephone', 'email', 'businessDays', 'replyEstimate', 'serviceArea', 'googleFormUrl', 'hearingFormUrl',
+  'telephone', 'email', 'businessDays', 'replyEstimate', 'serviceArea',
   'domainFeePolicy'];
 for (const k of CFG_KEYS) {
   if (!has(k)) continue;

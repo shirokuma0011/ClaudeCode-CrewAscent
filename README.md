@@ -37,6 +37,7 @@ npm run types        # 36タイプの個別ページと一覧を作り直す
 npm run sitemap      # index にしているページだけで sitemap を作り直す
 npm run atelier      # トップの36タイプ空間のデータを data/types.json・occupations.json から作り直す
 npm run sample-prompts # 見本サイト10件の制作用プロンプト（ZIP）を dist/sample-prompts/ に作る
+npm run questionnaires # 相談アンケート2ページを data/questionnaires.json から作り直す
 ```
 
 `site/` の中で**手で編集してよいのは、生成対象でないページだけ**です。
@@ -104,10 +105,12 @@ Webサイトで何を先にするかを整理するための目安で、成果�
 - 見本には必ずクルーアセントの枠（上の帯・下の案内・見本ダイアログ・設計メモ）を入れ、すべて `noindex`。事業・価格はすべて架空です
 - 一覧への載せ方は `docs/WORKS_連携手順.md`
 
-## 相談フォーム
+## 相談アンケート
 
-- 2種類（イメージがまだ固まっていない方＝相談フォーム／固まっている方＝事前ヒアリングフォーム）。設問案は `docs/CONTACT_FORM_SETUP.md`
-- URLは `data/publish-values.json` の `googleFormUrl` と `hearingFormUrl`
+- サイト内の2ページ: `consult-form.html`（イメージがまだ固まっていない方・15問）と `hearing-form.html`（固まっている方・16段階）
+- 設問の正本は `data/questionnaires.json`。直したら `npm run questionnaires`
+- 回答は確認画面のあと「メールアプリで送る」（宛先は `email`）。PHPが動くサーバーなら `server/` の受け口で直接届けることもできる（任意）
+- 詳しくは `docs/CONTACT_FORM_SETUP.md`
 
 ## 守っていること
 

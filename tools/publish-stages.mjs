@@ -27,7 +27,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-export const NEVER_INDEX = ['result.html', '404.html', 'works.html'];
+export const NEVER_INDEX = ['result.html', '404.html', 'works.html', 'consult-form.html', 'hearing-form.html'];
 export const LEGAL_CORE = ['privacy.html', 'terms.html', 'commercial-transactions.html', 'contact.html'];
 export const TYPE_BODY_MIN = 2000;
 
