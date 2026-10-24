@@ -12,11 +12,12 @@
 
 | ディレクトリ | 中身 | 公開 |
 |---|---|---|
-| `site/` | 公開するファイル。HTML 59ページ、CSS 5本、JS 12本、画像、書体 | **する** |
+| `site/` | 公開するファイル。HTML 61ページ、CSS、JS、画像、書体 | **する** |
 | `data/` | 正本。設問、36タイプ、業種の対応表、公開用の確定値 | しない |
 | `tools/` | 生成器と検査。ここから `site/` を作る | しない |
 | `docs/` | 改修の記録、公開前チェックリスト、監査 | しない |
 | `tests/` | 診断エンジンの自動テスト | しない |
+| `server/` | 相談アンケートの受け口（PHP、任意）。使うときだけ公開サーバーの `api/` に置く | 任意 |
 
 **公開するのは `site/` だけ**です。道具と下書きは web 上に置きません。
 
@@ -29,7 +30,7 @@ npm install          # 検査用に playwright を入れる（公開物には含
 
 npm run serve        # http://127.0.0.1:8899 で site/ を配信
 npm run check        # 正本との一致 + 内容検査 + sitemap・トップのタイプデータの整合（約6,300件）
-npm run check:browser # 59ページ × 4画面幅を実際に開いて検査
+npm run check:browser # 61ページ × 4画面幅を実際に開いて検査
 npm test             # 診断エンジンのテスト
 
 npm run data         # data/questions.tsv などから診断データを作り直す
@@ -64,18 +65,20 @@ Webサイトで何を先にするかを整理するための目安で、成果�
 
 ## 公開までの手順
 
-1. `docs/PUBLISH_INPUT_SHEET.md` を読み、`data/publish-values.json` に確定値を書く
+1. `docs/PUBLISH_INPUT_SHEET.md` を読み、`data/publish-values.json` に確定値を書く（25項目。ドメインは記入済み）
 2. `npm run publish:dry` で何が変わるか確認する
-3. `npm run publish:apply` で、印の置き換え・canonical・OGP・sitemap・index解禁までを反映する
+3. `npm run publish:apply` で、印の置き換え・「公開準備中」の注記の削除・canonical・OGP・sitemap・index解禁までを反映する
 4. `npm run publish:ready` で残りを確認する
+5. 法務3ページ（特定商取引法の表記・プライバシーポリシー・サイト利用条件）を運用に合わせて見直し、専門家の確認を受ける。
+   済んだら `_switches.legalReviewed` を `true` にして 3 → 4 をもう一度
 
 **index は一度に全ページを外しません。** 基準は `tools/publish-stages.mjs` にあります。
 
 | 段階 | ページ | 条件 |
 |---|---|---|
-| 1 | 基本19ページ | 公開ドメインが決定／法務コア4ページと当該ページに「公開前に確定」の印が残っていない |
+| 1 | 基本19ページ | 公開ドメインが決定／法務コア4ページと当該ページに「公開前に確定」の印が残っていない／`_switches.legalReviewed` が `true` |
 | 2 | タイプ37ページ | 段階1に加えて、本文2,000字以上と `_switches.indexTypePages` が `true` |
-| — | `result.html` `404.html` `works.html` | 公開後も載せない |
+| — | `result.html` `404.html` `works.html` `consult-form.html` `hearing-form.html` | 公開後も載せない |
 
 `sitemap.xml` は、その時点で `index,follow` のページだけで作られます。
 
