@@ -1,0 +1,68 @@
+{
+  "as_of": "2026-10-25 Asia/Tokyo",
+  "business": "クルーアセント / CREW ASCENT",
+  "statement": "決める前に、整理するところから。",
+  "repo": "https://github.com/shirokuma0011/ClaudeCode-CrewAscent",
+  "refs": [
+    {
+      "name": "main",
+      "ref": "origin/main",
+      "commit": "c513e02fb1fcfecc915379eb9cba7828bbfc5aff"
+    },
+    {
+      "name": "privacy-proposal",
+      "ref": "origin/claude/project-thread-xva7xm",
+      "commit": "2e3c8e06e63fb702dcc676b5888577774326df71"
+    },
+    {
+      "name": "uiux-2027",
+      "ref": "origin/codex/uiux-2027",
+      "commit": "e82cd9d6a598a51a89d586618f4788358ea2c0b9"
+    }
+  ],
+  "type_count": 36,
+  "industry_categories": 13,
+  "industry_count": 102,
+  "question_count_main": 48,
+  "question_count_uiux": 84,
+  "quick_count": 16,
+  "type_axis": {
+    "X": "brand - practical",
+    "Y": "modern - trust"
+  },
+  "plans": [
+    {
+      "name": "はじめて",
+      "base_yen": 80000,
+      "pages": "1"
+    },
+    {
+      "name": "シンプル",
+      "base_yen": 120000,
+      "pages": "3前後"
+    },
+    {
+      "name": "標準",
+      "base_yen": 150000,
+      "pages": "5前後"
+    },
+    {
+      "name": "おまかせ",
+      "base_yen": 220000,
+      "pages": "5前後＋準備"
+    }
+  ],
+  "unresolved": [
+    "税区分",
+    "管理料金体系",
+    "正式事業者情報",
+    "支払方式",
+    "法務確認",
+    "本番接続・公開確認"
+  ],
+  "pr1": {
+    "state": "open",
+    "draft": true,
+    "merged": false
+  }
+}
