@@ -46,7 +46,7 @@
   "transferFeeBearer": "",
   "domainFeeInclusion": "",
   "domainFeePolicy": "",
-  "invoiceStatus": "",
+  "invoiceStatus": "登録していないため発行できません",
 
   "cancelContactMethod": "",
   "monthlyRefundPolicy": "",
