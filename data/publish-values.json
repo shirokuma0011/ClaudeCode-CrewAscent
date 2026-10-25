@@ -44,13 +44,11 @@
   "taxDisplayShort": "",
   "paymentMethods": "",
   "transferFeeBearer": "",
-  "domainFeeInclusion": "",
-  "domainFeePolicy": "",
+  "domainFeeInclusion": "公開・管理プランは.comドメイン1件分を含む（管理プランを利用しない場合は別途）",
+  "domainFeePolicy": "公開・管理プランに.comドメイン1件の取得・更新費を含みます。登録名義はお客様で、取得・更新・DNS設定を代行します",
   "invoiceStatus": "登録していないため発行できません",
 
-  "cancelContactMethod": "",
-  "monthlyRefundPolicy": "",
-  "yearlyNoticeDeadline": "",
+  "expiryHandling": "",
   "jurisdictionCourt": "",
   "browserSupport": "",
 
