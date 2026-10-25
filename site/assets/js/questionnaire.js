@@ -1,8 +1,10 @@
 /* =====================================================================
-   相談アンケート（consult-form.html / hearing-form.html）
+   ヒアリング（consult-form.html＝はじめての方 / hearing-form.html＝本格）
 
    ・設問はHTMLにある（tools/build-questionnaires.mjs が data/questionnaires.json から作る）
-   ・表示の条件: data-show-if='{"q":"b4","in":[…]}' / '{"q":"b17","notIn":[…]}'
+   ・表示の条件: data-show-if='{"q":"b4","in":[…]}' / '{"q":"b17","notIn":[…]}' / '{"q":"b60","filled":true}' / '{"any":[…]}'
+   ・受付番号: 確認画面を開いたときに作り（CA-月日-4桁）、件名と本文に入れる。完了画面で公式LINEへ案内する
+   ・Web診断36の結果: この端末に結果があっても自動では入れない。本人が「この結果を送る」を押したときだけ入れる
    ・段階表示（data-qn-mode="steps"）: 1段階ずつ表示し、進み具合を出す
    ・下書き: この端末の localStorage にだけ保存（30日）。送る操作をするまで外部へ送らない
    ・確認画面 → 送り方:
@@ -18,13 +20,16 @@
   var track = window.crewTrack || function () {};
   var FORM = form.getAttribute('data-qn');
   var STEPS = form.getAttribute('data-qn-mode') === 'steps';
-  var KEY = 'crewAscentQuestionnaire:v1:' + FORM;
+  /* v2: 2026-10-25 設問を作り直した（旧IDの下書きは別の設問を指すため読まない） */
+  var KEY = 'crewAscentQuestionnaire:v2:' + FORM;
   var TTL = 30 * 24 * 60 * 60 * 1000;
   var startedAt = Date.now();
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
   var sections = $$('[data-qn-section]', form);
   var questions = $$('[data-qn-q]', form);
+  var notes = $$('[data-qn-note]', form);
+  var receipt = '';
   var review = $('[data-qn-review]'), done = $('[data-qn-done]'), progress = $('[data-qn-progress]');
   var step = 0, saveTimer = 0;
   var blocked = function (v) { return !v || v === 'PUBLISH_BLOCKER'; };
@@ -34,15 +39,27 @@
   function inputs(id) { return $$('[name="' + id + '"]', form); }
   function values(id) {
     var els = inputs(id);
+    var q = form.querySelector('[data-qn-q="' + id + '"]');
+    if (q && q.hasAttribute('data-qn-pairs')) {
+      return $$('.qn-pair', q).map(function (row) {
+        var picked = row.querySelector('input:checked');
+        return picked ? row.getAttribute('aria-label') + '：' + picked.value : '';
+      }).filter(Boolean);
+    }
     if (!els.length) return [];
+    var det = form.querySelector('[name="' + id + '__detail"]');
+    var withDetail = function (list) {
+      var t = det && !det.disabled ? det.value.trim() : '';
+      return t ? (list.length ? list : ['（未選択）']).concat(['補足: ' + t]) : list;
+    };
     if (els[0].type === 'radio' || els[0].type === 'checkbox') {
-      return els.filter(function (e) { return e.checked; }).map(function (e) {
+      return withDetail(els.filter(function (e) { return e.checked; }).map(function (e) {
         if (e.hasAttribute('data-qn-other-toggle')) {
           var o = form.querySelector('[name="' + id + '__other"]');
           return o && o.value.trim() ? 'その他（' + o.value.trim() + '）' : 'その他';
         }
         return e.value;
-      });
+      }));
     }
     var v = els[0].value.trim();
     return v ? [v] : [];
@@ -56,17 +73,22 @@
   }
 
   /* ---------- 表示の条件 ---------- */
+  function test(c) {
+    if (c.any) return c.any.some(test);
+    var v = values(c.q);
+    if (c.filled) return v.length > 0;
+    if (c.in) return c.in.some(function (x) { return v.indexOf(x) >= 0; });
+    if (c.notIn) return !c.notIn.some(function (x) { return v.indexOf(x) >= 0; });
+    return true;
+  }
   function cond(el) {
     var raw = el.getAttribute('data-show-if');
     if (!raw) return true;
-    try {
-      var c = JSON.parse(raw), v = values(c.q);
-      if (c.in) return c.in.some(function (x) { return v.indexOf(x) >= 0; });
-      if (c.notIn) return !c.notIn.some(function (x) { return v.indexOf(x) >= 0; });
-    } catch (e) { /* 条件が読めないときは表示する */ }
+    try { return test(JSON.parse(raw)); } catch (e) { /* 条件が読めないときは表示する */ }
     return true;
   }
   function applyConditions() {
+    notes.forEach(function (n) { n.hidden = !cond(n); });
     sections.concat(questions).forEach(function (el) {
       var on = cond(el);
       el.setAttribute('data-qn-on', on ? '1' : '0');
@@ -128,7 +150,8 @@
         if (q.hidden) { setError(q, ''); return; }
         var id = q.getAttribute('data-qn-q'), v = values(id), first = $('input, textarea, select', q);
         var msg = '';
-        if (first && first.required && !v.length) msg = first.type === 'checkbox' ? '内容を確認し、同意にチェックを入れてください。' : '入力してください。';
+        var need = (first && first.required) || q.hasAttribute('data-qn-required');
+        if (need && !v.length) msg = first && first.type === 'checkbox' && first.required ? '内容を確認し、同意にチェックを入れてください。' : (first && first.type === 'radio' ? '選んでください。' : '入力してください。');
         else if (first && first.type === 'email' && v.length && !EMAIL.test(v[0])) msg = 'メールアドレスの形を確かめてください（例: name@example.com）。';
         setError(q, msg);
         if (msg) bad.push({ q: q, s: s, label: labelOf(q) });
@@ -160,7 +183,7 @@
   function writeDraft() {
     clearTimeout(saveTimer); saveTimer = 0;
     if (!done.hidden) return;   /* 送り終えたあとは保存し直さない */
-    try { localStorage.setItem(KEY, JSON.stringify({ v: 1, savedAt: Date.now(), step: step, data: snapshot() })); } catch (e) { /* 保存できなくても入力は続けられる */ }
+    try { localStorage.setItem(KEY, JSON.stringify({ v: 2, savedAt: Date.now(), step: step, receipt: receipt, data: snapshot() })); } catch (e) { /* 保存できなくても入力は続けられる */ }
   }
   function save(now) {
     if (now) { writeDraft(); return; }
@@ -172,7 +195,7 @@
   function restore() {
     var raw = null;
     try { raw = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { raw = null; }
-    if (!raw || raw.v !== 1 || !raw.data) return false;
+    if (!raw || raw.v !== 2 || !raw.data) return false;
     if (Date.now() - raw.savedAt > TTL) { try { localStorage.removeItem(KEY); } catch (e) {} return false; }
     Object.keys(raw.data).forEach(function (name) {
       var v = raw.data[name];
@@ -182,6 +205,7 @@
       });
     });
     step = raw.step || 0;
+    if (typeof raw.receipt === 'string' && /^CA-\d{4}-\d{4}$/.test(raw.receipt)) receipt = raw.receipt;
     var d = new Date(raw.savedAt);
     var box = $('[data-qn-draft]');
     if (box) {
@@ -192,32 +216,47 @@
   }
   function clearDraft() {
     try { localStorage.removeItem(KEY); } catch (e) {}
-    form.reset(); step = 0;
+    form.reset(); step = 0; receipt = '';
     var box = $('[data-qn-draft]'); if (box) box.hidden = true;
-    review.hidden = true; done.hidden = true; form.hidden = false;
+    review.hidden = true; done.hidden = true; form.hidden = false; intro(true);
     prefillType(); applyConditions(); render(false);
     window.scrollTo(0, 0);
   }
 
-  /* 診断の結果（URLの ?type= か、この端末に残る結果）をタイプ欄へ */
+  /* 診断の結果（URLの ?type= か、この端末に残る結果）があれば「この結果を送る」を出す。
+     結果は端末の中にだけ置く約束なので、本人が押すまでは回答に入れない */
   function prefillType() {
-    var sel = $('[data-qn-types]', form);
-    if (!sel || sel.value) return;
+    var sel = $('[data-qn-types]', form), found = $('[data-qn-shindan-found]', form);
+    if (!sel || !found) return;
     var m = location.search.match(/[?&]type=([a-z0-9-]+)/);
     var slug = m ? m[1] : null;
     if (!slug) { try { var r = JSON.parse(localStorage.getItem('crewAscentResult:v1') || 'null'); if (r && typeof r.slug === 'string') slug = r.slug; } catch (e) {} }
-    if (!slug) return;
-    var opt = $('option[data-slug="' + slug + '"]', sel);
-    if (opt) sel.value = opt.value;
+    var opt = slug ? $('option[data-slug="' + slug + '"]', sel) : null;
+    found.hidden = !opt || sel.value === opt.value;
+    if (!opt) return;
+    $('[data-qn-shindan-name]', found).textContent = opt.value;
+    $('[data-qn-shindan-use]', found).onclick = function () {
+      sel.value = opt.value; found.hidden = true; applyConditions(); save(true); sel.focus();
+    };
+  }
+
+  /* 受付番号: CA-月日-4桁。LINEの宛名とフォームの回答を結びつけるためのもの（個人を表す情報は入れない） */
+  function makeReceipt() {
+    if (receipt) return receipt;
+    var d = new Date(), n = 0;
+    try { var a = new Uint16Array(1); crypto.getRandomValues(a); n = a[0] % 10000; } catch (e) { n = Math.floor(Math.random() * 10000); }
+    receipt = 'CA-' + String(d.getMonth() + 1).padStart(2, '0') + String(d.getDate()).padStart(2, '0') + '-' + String(n).padStart(4, '0');
+    return receipt;
   }
 
   /* ---------- 確認画面 ---------- */
   function compose() {
     var lines = [], name = values(questions[0].getAttribute('data-qn-q'))[0] || '';
     var org = values(questions[1].getAttribute('data-qn-q'))[0] || '';
-    var subject = form.getAttribute('data-qn-subject') + (org ? org + ' ' : '') + (name ? name + '様' : '');
+    var subject = form.getAttribute('data-qn-subject') + receipt + ' ' + (org ? org + ' ' : '') + (name ? name + '様' : '');
     var now = new Date();
     lines.push(form.getAttribute('data-qn-title') + '（クルーアセント）');
+    lines.push('受付番号: ' + receipt);
     lines.push('記入日時: ' + now.getFullYear() + '年' + (now.getMonth() + 1) + '月' + now.getDate() + '日 ' + now.getHours() + ':' + String(now.getMinutes()).padStart(2, '0'));
     lines.push('');
     liveSections().forEach(function (s) {
@@ -237,6 +276,8 @@
     return { subject: subject, text: lines.join('\n'), replyTo: reply };
   }
   function showReview() {
+    makeReceipt(); save(true);
+    var pv = $('[data-qn-receipt-preview]'); if (pv) pv.textContent = receipt;
     var list = $('[data-qn-review-list]');
     list.innerHTML = '';
     liveSections().forEach(function (s, idx) {
@@ -258,12 +299,13 @@
     });
     buildSend();
     form.hidden = true; if (progress) progress.hidden = true;
-    review.hidden = false; done.hidden = true;
+    review.hidden = false; done.hidden = true; intro(false);
     var t = $('#qn-review-title'); t.focus(); t.scrollIntoView({ block: 'start' }); window.scrollBy(0, -90);
     track('questionnaire_review', { form: FORM });
   }
+  function intro(on) { $$('[data-qn-intro], [data-qn-draft]').forEach(function (el) { if (!on) el.hidden = true; else if (el.hasAttribute('data-qn-intro')) el.hidden = false; }); }
   function back(idx) {
-    review.hidden = true; form.hidden = false;
+    review.hidden = true; form.hidden = false; intro(true);
     if (STEPS) { step = typeof idx === 'number' ? idx : step; render(true); }
     else { var s = liveSections()[idx || 0]; if (s) { var h = s.querySelector('.qn-sec__title'); h.focus(); h.scrollIntoView({ block: 'start' }); window.scrollBy(0, -90); } }
   }
@@ -282,9 +324,15 @@
       try { document.execCommand('copy') ? ok() : ng(); } catch (e) { ng(e); } finally { t.remove(); }
     });
   }
-  function showDone(text) {
-    review.hidden = true; done.hidden = false;
-    if (text) $('[data-qn-done-text]').textContent = text;
+  function showDone() {
+    review.hidden = true; done.hidden = false; intro(false);
+    $('[data-qn-receipt]').textContent = receipt;
+    /* はじめての方で、確認PDFをメールで受け取る方 */
+    if (values('a3').indexOf('メール') >= 0) {
+      var after = $('[data-qn-after]');
+      if (after) after.textContent = '足りない内容をメール（必要なら Zoom）で伺い、そろったら確認PDFをメールでお送りします。LINEを追加していただいた場合は、LINEでも受け付けます。';
+    }
+    track('questionnaire_done', { form: FORM });
     var t = $('#qn-done-title'); t.focus(); t.scrollIntoView({ block: 'start' }); window.scrollBy(0, -90);
   }
   function buildSend() {
@@ -299,12 +347,12 @@
         var b = e.currentTarget; b.disabled = true; msg('送信しています…');
         fetch(endpoint, {
           method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'same-origin',
-          body: JSON.stringify({ form: FORM, subject: c.subject, text: c.text, replyTo: c.replyTo, website: (form.website || {}).value || '', elapsed: Math.round((Date.now() - startedAt) / 1000) })
+          body: JSON.stringify({ form: FORM, receipt: receipt, subject: c.subject, text: c.text, replyTo: c.replyTo, website: (form.website || {}).value || '', elapsed: Math.round((Date.now() - startedAt) / 1000) })
         }).then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { if (!r.ok || !j.ok) throw new Error(j.error || r.status); }); })
           .then(function () {
             track('questionnaire_send', { form: FORM, method: 'endpoint' });
             try { localStorage.removeItem(KEY); } catch (e2) {}
-            showDone('送信しました。内容を確認し、メールでご連絡します。');
+            showDone();
           })
           .catch(function () { b.disabled = false; msg('送信できませんでした。下の「メールアプリで送る」か「回答をコピー」をお使いください。'); });
       }));
@@ -323,7 +371,7 @@
       window.location.href = href;
       msg((note ? note + ' ' : '') + 'メールアプリが開きます。送信が済んだら「送りました」を押してください。');
       if (!$('[data-qn-sent]', box)) {
-        var sent = button('送りました', 'btn--line', function () { try { localStorage.removeItem(KEY); } catch (e) {} showDone('ありがとうございました。内容を確認し、メールでご連絡します。'); });
+        var sent = button('送りました', 'btn--line', function () { try { localStorage.removeItem(KEY); } catch (e) {} showDone(); });
         sent.setAttribute('data-qn-sent', ''); box.appendChild(sent);
       }
     });
@@ -382,6 +430,12 @@
   }
   $$('[data-qn-clear]').forEach(function (b) { b.addEventListener('click', clearDraft); });
   $('[data-qn-back]').addEventListener('click', function () { back(STEPS ? step : 0); });
+  $('[data-qn-receipt-copy]').addEventListener('click', function () {
+    copyText(receipt).then(function () { $('[data-qn-receipt-msg]').textContent = 'コピーしました。LINEのトークに貼り付けて送ってください。'; },
+      function () { $('[data-qn-receipt-msg]').textContent = 'コピーできませんでした。番号を書き写してください。'; });
+  });
+  var lineBtn = $('[data-qn-line]');
+  if (lineBtn) lineBtn.addEventListener('click', function () { track('line_add_click', { form: FORM }); });
 
   var restored = restore();
   prefillType();

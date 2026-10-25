@@ -719,3 +719,45 @@ textarea.qn-input { min-height:96px; resize:vertical; }
 html.is-scrolling .qn, html.is-scrolling .qn *, html.is-scrolling .qn-review *, html.is-scrolling .qn-done *,
 html.is-scrolling .qn-progress *, html.is-scrolling .qn-draft * { pointer-events: auto !important; }
 .qn-q.is-fixed .qn-q__err { min-height:1.6em; }   /* 直したあとも高さを保ち、押そうとしたボタンをずらさない */
+
+/* ヒアリング 2026-10-25: 選択肢の補足・3択の対・診断結果・受付番号と公式LINE */
+.qn-choices--stack { flex-direction:column; align-items:stretch; }
+.qn-choice--note span { display:grid; gap:2px; }
+.qn-choice small { font-size:.8125rem; color:var(--tx-2); line-height:1.6; }
+.qn-detail { margin-top:4px; }
+.qn-pairs { display:grid; gap:8px; }
+.qn-pair { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:8px; }
+.qn-pair .qn-choice { justify-content:center; text-align:center; }
+.qn-sec__hint { margin:-8px 0 0; font-size:.875rem; color:var(--tx-2); }
+.qn-note { margin:0; padding:10px 14px; border-left:3px solid #829a76; background:var(--surface); font-size:.875rem; line-height:1.8; }
+.qn-shindan__found { display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; padding:10px 14px; border:1px solid var(--act); border-radius:var(--r); background:var(--surface); font-size:.9375rem; }
+.qn-shindan__found[hidden] { display:none; }
+.qn-shindan__found p { margin:0; }
+.qn-receipt { display:grid; justify-items:start; gap:6px; padding:clamp(18px, 2.4vw, 26px); border:1px solid var(--act); border-radius:var(--r); background:var(--surface); }
+.qn-receipt p { margin:0; }
+.qn-receipt__label { font-size:.8125rem; color:var(--tx-2); letter-spacing:.06em; }
+.qn-receipt__no { font-family:var(--mono); font-size:clamp(1.5rem, 4vw, 2rem); letter-spacing:.06em; color:var(--ink); }
+.qn-receipt__msg { font-size:.875rem; }
+.qn-line { display:grid; gap:16px; padding:clamp(18px, 2.4vw, 26px); background:var(--card); border:1px solid var(--rule); border-radius:var(--r); }
+.qn-line h3, .qn-next h3 { margin:0 0 8px; font-size:1.125rem; }
+.qn-line__body p { margin:0 0 10px; font-size:.9375rem; line-height:1.8; }
+.qn-line__hours { font-size:.875rem !important; color:var(--tx-2); }
+.qn-line__btn { min-height:48px; }
+.qn-line__qr { display:none; margin:0; text-align:center; }
+.qn-line__qr img { display:block; width:160px; height:160px; margin:0 auto 6px; }
+.qn-line__qr figcaption { font-size:.8125rem; color:var(--tx-2); max-width:12em; }
+@media (min-width:760px) { .qn-line { grid-template-columns:1fr auto; align-items:center; } .qn-line__qr { display:block; } }
+.qn-next ol { margin:0 0 10px; padding-left:1.4em; font-size:.9375rem; line-height:1.8; }
+.qn-next__note { margin:0; font-size:.875rem; color:var(--tx-2); line-height:1.8; }
+.qn-done__links { display:flex; flex-wrap:wrap; align-items:center; gap:12px 20px; margin:0; }
+/* 入口: 2つのヒアリングと公式LINE */
+.intake-flow { display:grid; gap:8px; margin:var(--s4) 0 0; padding:0; list-style:none; counter-reset:intake; }
+@media (min-width:760px) { .intake-flow { grid-template-columns:repeat(4, minmax(0, 1fr)); } }
+.intake-flow li { counter-increment:intake; padding:12px 14px; border-top:2px solid var(--act); background:var(--card); font-size:.875rem; line-height:1.7; }
+.intake-flow li::before { content:counter(intake, decimal-leading-zero); display:block; font-family:var(--mono); font-size:.75rem; color:var(--tx-3); }
+.intake-flow b { display:block; font-size:.9375rem; color:var(--ink); }
+.intake-line { display:grid; gap:14px; margin-top:var(--s4); padding:clamp(18px, 2.4vw, 26px); border:1px solid var(--rule); border-radius:var(--r); background:var(--card); }
+.intake-line p { margin:0; font-size:.875rem; line-height:1.8; }
+.intake-line h3 { margin:0; font-size:1.125rem; }
+.intake-line img { display:none; width:120px; height:120px; }
+@media (min-width:760px) { .intake-line { grid-template-columns:1fr auto; align-items:center; } .intake-line img { display:block; } }

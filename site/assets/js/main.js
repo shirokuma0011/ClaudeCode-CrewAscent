@@ -356,7 +356,7 @@
   var ERASE_LABEL = [
     ['crewAscentDiagnosis', '途中まで答えた回答'],
     ['crewAscentResult', '診断の結果'],
-    ['crewAscentQuestionnaire', '相談アンケートの下書き'],
+    ['crewAscentQuestionnaire', 'ヒアリングの下書き'],
   ];
   function crewStoredKeys() {
     var out = [];

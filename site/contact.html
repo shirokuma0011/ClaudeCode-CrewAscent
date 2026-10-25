@@ -24,12 +24,12 @@
   <link rel="stylesheet" href="assets/css/styles.css?v=20260817r9">
   <link rel="stylesheet" href="assets/css/base.css?v=20260817r9">
   <link rel="stylesheet" href="assets/css/system.css?v=20260817r9">
-  <link rel="stylesheet" href="assets/css/crew.css?v=20261015d">
+  <link rel="stylesheet" href="assets/css/crew.css?v=20261025a">
   <script>document.documentElement.className += ' js';</script>
-  <script src="assets/js/site-config.js?v=20261015d"></script>
+  <script src="assets/js/site-config.js?v=20261025a"></script>
   <script defer src="assets/js/top.js?v=20260817r9"></script>
   <script defer src="assets/js/scroll-steady.js?v=20260817r9"></script>
-  <script defer src="assets/js/main.js?v=20261015d"></script>
+  <script defer src="assets/js/main.js?v=20261025a"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"index.html"},{"@type":"ListItem","position":2,"name":"無料相談・お問い合わせ","item":"contact.html"}]}</script>
   <script>/* 動きの入り切り。?motion=off と、動きを減らす設定で外れる。
      site-config.js の motion:'off' は main.js が後から外します。 */
@@ -142,7 +142,7 @@
   <main id="main">
 
   <section class="ah ah--trust">
-      <div class="wrap ah__inner"><p class="eyebrow ">無料相談・お問い合わせ</p><h1>プランが決まっていなくても、<br>相談できます。</h1><p class="ah__lead">プラン、原稿、写真、公開時期がすべて決まっていなくても大丈夫です。アンケートに分かる範囲でご記入ください。内容を確認し、まずメールでご連絡します。</p></div>
+      <div class="wrap ah__inner"><p class="eyebrow ">無料相談・お問い合わせ</p><h1>プランが決まっていなくても、<br>相談できます。</h1><p class="ah__lead">プラン、原稿、写真、公開時期がすべて決まっていなくても大丈夫です。2つのヒアリングのどちらかに分かる範囲で答えてください。そのあとは公式LINEでやり取りします。</p></div>
       <div class="ah__band"><dl class="ah__facts ah__facts--row">
       <div><dt>相談料</dt><dd class="ah__facts__txt">無料</dd></div>
       <div><dt>返信の目安</dt><dd class="ah__facts__txt"><span class="blocker-inline" title="公開前に確定する項目">（公開前に確定: 返信目安）</span></dd></div>
@@ -160,37 +160,46 @@
           <div class="c5-6 rv rv-d1"><p class="sec-lead"></p></div>
         </div>
       </div>
-      <div class="contact-steps">
-        <div><b>フォームを送る</b><span>分かる範囲で構いません。希望プランは「未定」を選べます。</span></div>
-        <div><b>メールで確認</b><span>不足情報や実現方法を確認します。ご希望があればLINEやSNSでの連絡も選べます。</span></div>
-        <div><b>見積もりの提示</b><span>範囲・料金・納期をご案内します。送信だけで契約にはなりません。</span></div>
-      </div>
+      <ol class="intake-flow">
+        <li><b>ヒアリングに答える</b>分かる範囲で構いません。送信すると受付番号が出ます。</li>
+        <li><b>公式LINEで受付番号を送る</b>足りない内容をLINEで伺います。必要なら Zoom でも。</li>
+        <li><b>確認PDFを受け取る</b>「こう理解しました」をまとめたPDFを、LINEでお送りします。</li>
+        <li><b>見積もり</b>PDFの内容が合っていることを確かめてから。送信だけで契約にはなりません。</li>
+      </ol>
     </div>
   </section>
 
   <section class="sec sec--paper2">
     <div class="wrap container--mid">
       <div class="external-cta">
-        <h2 style="font-size:1.25rem">2つのアンケートから、近いほうを選んでください</h2>
-        <p class="caption">どちらもこのサイトの中のページです。分かる範囲で答え、確認画面のあとメールで送ります。入力の途中はこの端末に下書きとして残ります。どちらを選んでも相談は無料で、送信は契約の申し込みではありません。迷ったら左の相談アンケートで構いません。</p>
+        <h2 style="font-size:1.25rem">2つのヒアリングから、近いほうを選んでください</h2>
+        <p class="caption">どちらもこのサイトの中のページで、相談は無料です。入力の途中はこの端末に下書きとして残ります。どちらから始めても、最後は公式LINEで内容を確かめてから確認PDFをお送りします。迷ったら、はじめての方ヒアリングで構いません。</p>
         <div class="form-choice">
           <div class="form-choice__item">
-            <p class="form-choice__who">サイトのイメージが、まだ固まっていない方</p>
-            <h3>相談アンケート</h3>
-            <p>事業のこと、困っていること、決まっていることを分かる範囲で。15問・目安は5分ほどです。内容を見て、決める順番から一緒に整理します。</p>
-            <a class="btn btn--primary btn--block" href="consult-form.html" data-form-link>相談アンケートを開く</a>
+            <p class="form-choice__who">何から決めればよいか、まだ分からない方</p>
+            <h3>はじめての方ヒアリング</h3>
+            <p>どんなサイトが合いそうかを、選ぶだけで答えられる15問で伺います。約3分・必須は2問です。詳しいことは、送信後に公式LINEで伺います。</p>
+            <a class="btn btn--primary btn--block" href="consult-form.html" data-form-link>はじめての方ヒアリングを開く</a>
           </div>
           <div class="form-choice__item">
-            <p class="form-choice__who">サイトのイメージが、固まっている方</p>
-            <h3>事前ヒアリング</h3>
-            <p>ページ構成、掲載内容、デザインの希望、ドメインや公開時期まで、制作に必要なことを16の段階に分けて伺います。目安は20〜30分です。分からない項目は空欄のまま送れます。</p>
-            <a class="btn btn--secondary btn--block" href="hearing-form.html" data-form-link="hearing">事前ヒアリングを開く</a>
+            <p class="form-choice__who">作りたいサイトが、ある程度決まっている方</p>
+            <h3>本格ヒアリング</h3>
+            <p>ページ、原稿、デザイン、写真の受け渡し、プランの選択まで、制作と見積もりに必要なことを最大14の段階で伺います。約25〜40分。分からない項目は空欄のまま送れます。</p>
+            <a class="btn btn--secondary btn--block" href="hearing-form.html" data-form-link="hearing">本格ヒアリングを開く</a>
           </div>
+        </div>
+        <div class="intake-line">
+          <div>
+            <h3>公式LINE</h3>
+            <p>ヒアリングを送ったあとのやり取りは、公式LINEで行います。返信する時間は 日・月〜金 10:00〜18:00（土曜は休み）です。確認PDFと見積もりは、内容がそろってから2週間以内にお送りします。</p>
+            <p><a class="alink" href="https://lin.ee/ND8Ou2Q" target="_blank" rel="noopener">公式LINEを追加する（新しいタブ）</a></p>
+          </div>
+          <img src="assets/img/line-qr.jpg" width="120" height="120" alt="クルーアセント公式LINEの友だち追加用QRコード" loading="lazy">
         </div>
       </div>
       <div class="contact-ways">
         <div class="contact-ways__item">
-          <h3>アンケートを使わずに相談したいとき</h3>
+          <h3>フォームやLINEを使わずに相談したいとき</h3>
           <p>メール <span class="blocker-inline" title="公開前に確定する項目">（公開前に確定: メール）</span> でも受け付けます。件名に「Web制作の相談」と書いて、分かる範囲でお送りください。</p>
         </div>
         <div class="contact-ways__item">
@@ -208,7 +217,7 @@
         </div>
       </div>
       <div class="stack" style="margin-top:var(--s5)">
-        <p class="note"><b>入力していただく主な項目</b> — お名前、事業名、メールアドレス、業種、Webサイトの目的、掲載したい内容、素材の有無、希望納期、予算感、診断結果タイプ、自由記入。分かる範囲で構いません。</p>
+        <p class="note"><b>入力していただく主な項目</b> — お名前、事業名、連絡方法、業種、Webサイトの目的、見てほしいお客さん、素材の有無、希望の時期、気になるプラン、診断結果のタイプ（送ると選んだときだけ）、自由記入。分かる範囲で構いません。</p>
         <p class="note note--info"><b>送信＝契約ではありません</b> — フォーム送信は契約の申込み確定ではありません。内容確認と見積もり・制作条件への同意後に契約となります。</p>
         <p class="note note--calm"><b>個人情報の利用目的</b> — 入力いただいた情報は、お問い合わせへの回答、見積もり、制作内容の確認、契約・連絡のために利用します。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご確認ください。</p>
       </div>

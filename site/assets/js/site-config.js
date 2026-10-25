@@ -52,11 +52,12 @@ window.CREW_CONFIG = {
   businessDays: 'PUBLISH_BLOCKER',
   replyEstimate: 'PUBLISH_BLOCKER',
   serviceArea: 'PUBLISH_BLOCKER',
-  // 相談アンケート（consult-form.html / hearing-form.html）の送り方。
-  // 空のあいだは「メールアプリで送る」（宛先は上の email）。自前のサーバーで受ける場合だけ、
-  // server/README.md の手順で置いたファイルのURLを書く（例: '/api/questionnaire-mail.php'）。
+  // ヒアリング（consult-form.html / hearing-form.html）の送り方。
+  // 空のあいだは「メールアプリで送る」（宛先は上の email）。XServer に server/ の受け口を置いたら、
+  // そのURLを書く（例: '/api/questionnaire-mail.php'。手順は server/README.md）。
   formEndpoint: '',
-  officialLineUrl: '',
+  // 公式LINEの友だち追加URL（2026-10-25 本人確認済み）。完了画面の案内は data/questionnaires.json の line が正本
+  officialLineUrl: 'https://lin.ee/ND8Ou2Q',
   socialUrls: [],
   taxMode: 'PUBLISH_BLOCKER',            // 'included' | 'excluded' 等
   paymentMethods: ['PUBLISH_BLOCKER'],

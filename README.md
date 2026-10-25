@@ -38,7 +38,7 @@ npm run types        # 36タイプの個別ページと一覧を作り直す
 npm run sitemap      # index にしているページだけで sitemap を作り直す
 npm run atelier      # トップの36タイプ空間のデータを data/types.json・occupations.json から作り直す
 npm run sample-prompts # 見本サイト10件の制作用プロンプト（ZIP）を dist/sample-prompts/ に作る
-npm run questionnaires # 相談アンケート2ページを data/questionnaires.json から作り直す
+npm run questionnaires # ヒアリング2ページを data/questionnaires.json から作り直す
 ```
 
 `site/` の中で**手で編集してよいのは、生成対象でないページだけ**です。
@@ -108,11 +108,13 @@ Webサイトで何を先にするかを整理するための目安で、成果�
 - 見本には必ずクルーアセントの枠（上の帯・下の案内・見本ダイアログ・設計メモ）を入れ、すべて `noindex`。事業・価格はすべて架空です
 - 一覧への載せ方は `docs/WORKS_連携手順.md`
 
-## 相談アンケート
+## ヒアリング（2026-10-25 作り直し）
 
-- サイト内の2ページ: `consult-form.html`（イメージがまだ固まっていない方・15問）と `hearing-form.html`（固まっている方・16段階）
-- 設問の正本は `data/questionnaires.json`。直したら `npm run questionnaires`
-- 回答は確認画面のあと「メールアプリで送る」（宛先は `email`）。PHPが動くサーバーなら `server/` の受け口で直接届けることもできる（任意）
+- サイト内の2ページ: `consult-form.html`（はじめての方ヒアリング・15問・必須2問）と `hearing-form.html`（本格ヒアリング・最大14段階。ネットショップの段はECを選んだ方だけ）
+- 設問と公式LINEの案内（URL・QR・返信時間）の正本は `data/questionnaires.json`。直したら `npm run questionnaires`
+- 送信すると受付番号（CA-月日-4桁）を出し、公式LINEの友だち追加へ案内する。受付番号で、LINEの宛名とフォームの回答をつなぐ
+- Web診断36の結果は、本人が「この結果を送る」を押したときだけ回答に入る（自動では入れない）
+- 回答は確認画面のあと「メールアプリで送る」（宛先は `email`）。XServer に `server/` の受け口を置けば、そこから直接届く
 - 詳しくは `docs/CONTACT_FORM_SETUP.md`
 
 ## 守っていること
