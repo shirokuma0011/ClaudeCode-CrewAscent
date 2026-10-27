@@ -28,7 +28,9 @@
   (function(d){var r=d.documentElement;r.classList.remove('no-js');
    var off=/[?&]motion=off/.test(location.search)||
      (window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-   if(!off)r.classList.add('motion');})(document);</script>
+   if(!off)r.classList.add('motion');
+   /* 比較案B（ABeam寄り）の確認用。?look=b のときだけ切り替える */
+   if(/[?&]look=b/.test(location.search))r.dataset.look='b';})(document);</script>
   <script defer src="assets/js/site-config.js?v=20261025a"></script>
   <script defer src="assets/js/top.js?v=20261027a"></script>
   <script defer src="assets/js/main.js?v=20261025a"></script>
