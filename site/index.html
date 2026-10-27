@@ -7,7 +7,7 @@
   <title>小規模事業者のためのWebサイト制作｜Web診断36｜クルーアセント</title>
   <meta name="description" content="Webサイトで何を優先するかを無料の「Web診断36」で整理してから、1〜5ページ前後の小規模サイトを買い切り8万〜22万円で制作します。">
   <meta name="robots" content="noindex,follow">
-  <meta name="theme-color" content="#f6f4ed">
+  <meta name="theme-color" content="#0b2047">
   <meta property="og:title" content="小規模事業者のためのWebサイト制作｜Web診断36｜クルーアセント">
   <meta property="og:description" content="Webサイトで何を優先するかを無料の「Web診断36」で整理してから、1〜5ページ前後の小規模サイトを買い切り8万〜22万円で制作します。">
   <meta property="og:type" content="website">
@@ -20,12 +20,9 @@
   <link rel="apple-touch-icon" href="assets/brand/icon-180.png">
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CASans-700.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CASans-400.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CAMono-700.woff2" crossorigin>
-  <link rel="preload" as="image" href="assets/img/atelier.webp">
-  <link rel="stylesheet" href="assets/css/base.css?v=20260817r9">
-  <link rel="stylesheet" href="assets/css/system.css?v=20260817r9">
-  <link rel="stylesheet" href="assets/css/crew.css?v=20261027b">
-  <link rel="stylesheet" href="assets/css/atelier-top.css?v=20261027c">
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CAMono-400.woff2" crossorigin>
+  <!-- 第8版: 骨組みから作り直したトップ。スタイルはこの1ファイルだけ（旧 base/system/crew/atelier-top は読まない） -->
+  <link rel="stylesheet" href="assets/css/site.css?v=20261027a">
   <script>/* 動きの入り切り。?motion=off と、動きを減らす設定で外れる。
      site-config.js の motion:'off' は main.js が後から外します。 */
   (function(d){var r=d.documentElement;r.classList.remove('no-js');
@@ -35,87 +32,83 @@
   <script defer src="assets/js/site-config.js?v=20261025a"></script>
   <script defer src="assets/js/top.js?v=20261027a"></script>
   <script defer src="assets/js/main.js?v=20261025a"></script>
-  <script defer src="assets/js/scroll-steady.js?v=20260817r9"></script>
   <script defer src="assets/js/atelier-types.js?v=20261015"></script>
   <script defer src="assets/js/atelier-app.js?v=20261027a"></script>
   <script defer src="assets/js/atelier-spatial.js?v=20261015"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"クルーアセント","alternateName":"CREW ASCENT"}</script>
 </head>
-<body class="pg-atelier">
+<body class="pg-home">
 
 <a class="skip-link" href="#main">本文へスキップ</a>
 
 <svg width="0" height="0" aria-hidden="true" focusable="false" class="sr-only">
   <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 5 12 6.5l4.5 4.5H4v2h12.5L12 17.5 13.5 19l7-7z"/></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.4 15.05L5.5 12l1.5-1.5 3.6 3.55 6-6L18.1 9.5z"/></symbol>
-  <symbol id="i-minus" viewBox="0 0 24 24"><path fill="currentColor" d="M6 11h12v2H6z"/></symbol>
-  <symbol id="i-info" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-6h2zm0-8h-2V7h2z"/></symbol>
-  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2 4 5v6.1c0 4.6 3.4 8.9 8 10.9 4.6-2 8-6.3 8-10.9V5zm-1 13-3.5-3.5 1.4-1.4L11 12.2l4.1-4.1 1.4 1.4z"/></symbol>
+  <symbol id="logo" viewBox="0 0 128 120"><path d="M64 82.2A28 28 0 1 1 64 33.8" fill="none" stroke="#1562f6" stroke-width="14"/><path fill="currentColor" d="M82 16 118 104H46Z"/><path fill="var(--logo-cut,#fff)" d="M82 50 94 80H70Z"/></symbol>
 </svg>
 
 <header class="hdr" id="hdr">
   <div class="wrap hdr__in">
     <a class="brand" href="index.html" aria-label="クルーアセント ホームへ">
-      <span class="brand__mark" aria-hidden="true"></span>
+      <svg class="brand__mark" aria-hidden="true"><use href="#logo"></use></svg>
       <span class="brand__tx"><span class="brand__ja">クルーアセント</span><span class="brand__en">CREW ASCENT</span></span>
     </a>
     <nav class="gnav" aria-label="メインメニュー">
       <ul class="gnav__list">
-        <li class="gnav__item"><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-service">サービス<span class="gnav__caret" aria-hidden="true"></span></button></li>
-        <li class="gnav__item"><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-diagnosis">診断<span class="gnav__caret" aria-hidden="true"></span></button></li>
-        <li class="gnav__item"><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-first">はじめての方へ<span class="gnav__caret" aria-hidden="true"></span></button></li>
-        <li class="gnav__item"><a class="gnav__link" href="about.html">クルーアセントについて</a></li>
-        <li class="gnav__item"><a class="gnav__link" href="contact.html">相談</a></li>
+        <li><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-service">サービス</button></li>
+        <li><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-diagnosis">診断</button></li>
+        <li><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-first">はじめての方へ</button></li>
+        <li><a class="gnav__link" href="about.html">クルーアセントについて</a></li>
+        <li><a class="gnav__link" href="contact.html">相談</a></li>
       </ul>
     </nav>
-    <a class="btn btn--primary btn--sm hdr-cta" href="diagnosis.html">無料診断を始める<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+    <a class="hdr-cta" href="diagnosis.html">無料診断を始める<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
     <button class="burger" type="button" aria-expanded="false" aria-controls="drawer">
       <span class="burger__label">メニュー</span>
-      <span class="burger__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="burger__bars" aria-hidden="true"><span></span><span></span></span>
     </button>
   </div>
 
   <div class="mega" id="mega-service" hidden>
-    <div class="wrap mega__in"><div class="g6">
-      <div class="mega__intro c1-2"><p class="mega__h">サービス</p><p>何を作り、何を整え、公開後に何を続けるのか。対応範囲と料金を先に開示しています。</p></div>
-      <ul class="mega__list c3-6">
+    <div class="wrap mega__in">
+      <div class="mega__intro"><p class="mega__h">サービス</p><p>何を作り、何を整え、公開後に何を続けるのか。対応範囲と料金を先に開示しています。</p></div>
+      <ul class="mega__list">
         <li><a href="services.html"><span class="mega__ttl">Web制作サービス</span><span class="mega__note">何を作り、何を整えるか</span></a></li>
         <li><a href="plans.html"><span class="mega__ttl">4つのプラン・料金</span><span class="mega__note">8万〜22万円の買い切り</span></a></li>
         <li><a href="process.html"><span class="mega__ttl">制作の流れ</span><span class="mega__note">相談から公開までの9段階</span></a></li>
         <li><a href="management.html"><span class="mega__ttl">公開・管理</span><span class="mega__note">公開後に必要な範囲だけ</span></a></li>
       </ul>
-    </div></div>
+    </div>
   </div>
 
   <div class="mega" id="mega-diagnosis" hidden>
-    <div class="wrap mega__in"><div class="g6">
-<div class="mega__intro c1-2"><p class="mega__h">Web診断36</p><p>2軸 × 6段階で36通り。Webサイトで何を優先するかを整理するための、無料の入口です。</p></div>
-      <ul class="mega__list c3-6">
+    <div class="wrap mega__in">
+      <div class="mega__intro"><p class="mega__h">Web診断36</p><p>2軸 × 6段階で36通り。Webサイトで何を優先するかを整理するための、無料の入口です。</p></div>
+      <ul class="mega__list">
         <li><a href="diagnosis.html"><span class="mega__ttl">無料診断を始める</span><span class="mega__note">16問または48問</span></a></li>
         <li><a href="diagnosis-guide.html"><span class="mega__ttl">Web診断36の仕組み</span><span class="mega__note">四つの視点と二つの軸</span></a></li>
         <li><a href="types.html"><span class="mega__ttl">36タイプ一覧</span><span class="mega__note">4つの領域・36の方向</span></a></li>
         <li><a href="industries.html"><span class="mega__ttl">業種からタイプを探す</span><span class="mega__note">13分類・102の業種</span></a></li>
         <li><a href="result.html?type=helpful-guidance"><span class="mega__ttl">結果サンプルを見る</span><span class="mega__note">実際の結果画面</span></a></li>
       </ul>
-    </div></div>
+    </div>
   </div>
 
   <div class="mega" id="mega-first" hidden>
-    <div class="wrap mega__in"><div class="g6">
-      <div class="mega__intro c1-2"><p class="mega__h">はじめての方へ</p><p>制作会社へ相談する前に読んでも使える形で、判断に必要なことを整理しています。</p></div>
-      <ul class="mega__list c3-6">
+    <div class="wrap mega__in">
+      <div class="mega__intro"><p class="mega__h">はじめての方へ</p><p>制作会社へ相談する前に読んでも使える形で、判断に必要なことを整理しています。</p></div>
+      <ul class="mega__list">
         <li><a href="website-guide.html"><span class="mega__ttl">Webサイトの役割</span><span class="mega__note">SNSとの使い分け</span></a></li>
         <li><a href="guide.html"><span class="mega__ttl">Webサイトづくりガイド</span><span class="mega__note">決める前に読む記事</span></a></li>
         <li><a href="faq.html"><span class="mega__ttl">よくある質問</span><span class="mega__note">料金・制作・契約</span></a></li>
       </ul>
-    </div></div>
+    </div>
   </div>
 
   <nav class="drawer" id="drawer" aria-label="メインメニュー（モバイル）" hidden>
     <div class="wrap">
       <ul class="drawer__list">
         <li>
-          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-1">サービス<span class="drawer__caret" aria-hidden="true"></span></button>
+          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-1">サービス</button>
           <ul class="drawer__sub" id="dr-1" hidden>
             <li><a href="services.html">Web制作サービス<span>何を作り、何を整えるか</span></a></li>
             <li><a href="plans.html">4つのプラン・料金<span>8万〜22万円の買い切り</span></a></li>
@@ -124,17 +117,17 @@
           </ul>
         </li>
         <li>
-          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-2">診断<span class="drawer__caret" aria-hidden="true"></span></button>
+          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-2">診断</button>
           <ul class="drawer__sub" id="dr-2" hidden>
             <li><a href="diagnosis.html">無料診断を始める<span>16問または48問</span></a></li>
             <li><a href="diagnosis-guide.html">Web診断36の仕組み<span>四つの視点と二つの軸</span></a></li>
             <li><a href="types.html">36タイプ一覧<span>4つの領域・36の方向</span></a></li>
-              <li><a href="industries.html">業種からタイプを探す<span>13分類・102の業種</span></a></li>
+            <li><a href="industries.html">業種からタイプを探す<span>13分類・102の業種</span></a></li>
             <li><a href="result.html?type=helpful-guidance">結果サンプルを見る<span>実際の結果画面</span></a></li>
           </ul>
         </li>
         <li>
-          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-3">はじめての方へ<span class="drawer__caret" aria-hidden="true"></span></button>
+          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-3">はじめての方へ</button>
           <ul class="drawer__sub" id="dr-3" hidden>
             <li><a href="website-guide.html">Webサイトの役割<span>SNSとの使い分け</span></a></li>
             <li><a href="guide.html">Webサイトづくりガイド<span>決める前に読む記事</span></a></li>
@@ -145,89 +138,168 @@
         <li><a class="drawer__row" href="contact.html">相談</a></li>
       </ul>
       <div class="drawer__foot">
-        <a class="btn btn--primary btn--block" href="diagnosis.html">無料診断を始める<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-        <a class="btn btn--line btn--block" href="plans.html">4つのプランを見る</a>
+        <a class="btn btn--primary" href="diagnosis.html">無料診断を始める<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+        <a class="btn btn--line" href="plans.html">4つのプランを見る</a>
       </div>
     </div>
   </nav>
 </header>
 
-<main id="main" class="atl">
-    <section class="atl-room" aria-labelledby="hero-title" data-room="atelier">
-      <div class="atl-room-backdrop" aria-hidden="true"></div>
-      <div class="atl-hero-copy">
-        <p class="atl-eyebrow">小規模事業者向けのWeb制作事務所</p>
-        <h1 id="hero-title">らしさを見つけ、<br><span>伝わるサイトへ。</span></h1>
-        <p class="atl-hero-description">Web診断36で、サイトに必要なことを整理。<br>伝える内容から一緒に考える、小さな事業のWeb制作。</p>
-        <a class="atl-primary-cta" href="diagnosis.html?mode=quick"><span>16問で、サイトの方向性を整理する<small>無料・登録不要 ／ 約2〜3分</small></span><span class="atl-cta-arrow" aria-hidden="true">↗</span></a>
-        <a class="atl-secondary-cta" href="contact.html">診断せずに相談する <span aria-hidden="true">→</span></a>
-        <dl class="atl-hero-facts" aria-label="料金と範囲の目安"><div><dt>制作費</dt><dd><b>80,000</b>円〜<span>最大220,000円・買い切り</span></dd></div><div><dt>ページ数</dt><dd><b>1〜5</b>ページ<span>必要な範囲だけ</span></dd></div><div><dt>公開後の管理</dt><dd><b>任意</b><span>6か月34,000円〜・前払い</span></dd></div></dl>
-        <p class="atl-hero-facts-note">税表示: <span class="blocker-inline" title="公開前に確定する項目">（公開前に確定: 消費税の表示方針）</span><a href="plans.html">4つのプランを比べる <span aria-hidden="true">→</span></a></p>
-      </div>
-      <div class="atl-direction-workbench" aria-label="Web診断36が整理する設計方向の紹介">
-        <div class="atl-direction-map-wrap"><div class="atl-workbench-heading"><span>36 <small>通りの伝え方</small></span><span>WEB診断36</span></div><p class="atl-map-instruction" id="map-instruction">ひとつ選んで、伝え方の違いにふれてみる。</p>
-          <div class="atl-stage-toolbar">
-          <div class="atl-arrangement-controls" role="group" aria-label="36タイプの並び替え"><span>並べ方</span><button type="button" data-arrange="coord" aria-pressed="true">座標</button><button type="button" data-arrange="regions" aria-pressed="false">4つの領域</button><button type="button" data-arrange="industry" aria-pressed="false">業種</button><button type="button" id="spatial-motion" aria-pressed="true" aria-label="立体的な動きを切り替える">立体 ON</button></div>
-          <button type="button" class="atl-selection-peek" id="selection-detail" aria-haspopup="dialog"><span id="selection-name">CA09 / 洗練集客型サイト</span><span>詳細 →</span></button></div>
-          <div class="atl-spatial-stage" data-arrangement="coord"><div class="atl-spatial-plane"><div class="atl-stage-labels" aria-hidden="true"></div><div class="atl-priority-grid" id="type-map" role="group" aria-label="36の設計方向。矢印キーで移動できます" aria-describedby="map-instruction arrangement-note axis-description"></div></div></div>
-          <p class="atl-map-caption" id="arrangement-note" role="status">36の位置から、伝え方のバランスを探せます。</p>
-          <p class="atl-stage-help">CA01〜CA36は36タイプの番号です。タイルを選ぶと、名前と設計方針を下に表示します（矢印キーでも移動できます）。説明付きの<a href="types.html">36タイプ一覧</a>と、<a href="industries.html">業種から探す</a>ページもあります。</p>
-          <details class="atl-axis-help"><summary>座標と色の見方</summary><p id="axis-description">横軸は左が実用・情報、右がブランド・魅力。縦軸は下が王道・信頼、上が先進・新しさです。色は4つの領域を表し、位置は優劣や料金を意味しません。タイルのドットは元の座標を示します。</p></details>
+<main id="main">
+
+  <!-- 1. ファーストビュー: 左に見出し・行動・料金の事実、右に紺の面と立体の36の地図 -->
+  <section class="hero atl-room" aria-labelledby="hero-title">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="kicker">小規模事業者向けのWeb制作事務所</p>
+        <h1 id="hero-title" class="hero__title">らしさを見つけ、<br>伝わるサイトへ。</h1>
+        <p class="hero__lead">Web診断36で、サイトに必要なことを整理。<br>伝える内容から一緒に考える、小さな事業のWeb制作。</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="diagnosis.html?mode=quick"><span>16問で、サイトの方向性を整理する<small>無料・登録不要 ／ 約2〜3分</small></span><svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+          <a class="tlink" href="contact.html">診断せずに相談する<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
         </div>
-        <div class="atl-direction-preview"><p class="atl-eyebrow" id="direction-id">設計の方向 / CA09</p><h2 id="direction-name" aria-live="polite">洗練集客型サイト</h2><p id="direction-summary">分かりやすさを土台に、洗練された印象と相談までの流れを整えるタイプです。</p><div class="atl-priority-guidance"><span>サイトづくりで大切にすること</span><p id="direction-keywords">情報の整理 ／ 読みやすさ ／ 相談への流れ</p></div><p class="atl-direction-industries"><span>よく挙がる業種</span><span id="direction-industries">経営コンサル、人材紹介・採用支援、Web制作、設計事務所</span></p><button type="button" class="atl-direction-detail" id="direction-detail" aria-haspopup="dialog">この方向の設計ポイントを見る <span>↗</span></button><p class="atl-preview-note">閲覧用の例です。ここでの選択は診断結果ではありません。</p></div>
+        <dl class="facts" aria-label="料金と範囲の目安">
+          <div><dt>制作費</dt><dd><b>80,000</b>円〜<span>最大220,000円・買い切り</span></dd></div>
+          <div><dt>ページ数</dt><dd><b>1〜5</b>ページ<span>必要な範囲だけ</span></dd></div>
+          <div><dt>公開後の管理</dt><dd><b>任意</b><span>6か月34,000円〜・前払い</span></dd></div>
+        </dl>
+        <p class="facts__note">税表示: <span class="blocker-inline" title="公開前に確定する項目">（公開前に確定: 消費税の表示方針）</span><a class="tlink" href="plans.html">4つのプランを比べる<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a></p>
       </div>
-      <div class="atl-room-caption"><span>決める前に、整理するところから。</span><a href="#idea">クルーアセントのサイトづくり <span>↓</span></a></div>
-      <noscript><p class="atl-no-js">設計方向の切り替えにはJavaScriptが必要です。<a href="types.html">36タイプの一覧はこちら</a></p></noscript>
-    </section>
 
-    <section class="atl-intro" id="idea">
-      <div class="atl-section-index"><span>進め方</span></div>
-      <div class="atl-intro-heading"><p class="atl-eyebrow">見た目を決める、その前に。</p><h2>伝えたいことが見えると、<br>必要なサイトが見えてくる。</h2></div>
-      <div class="atl-intro-text"><p>「何を載せたらいい？」「自分の事業には何が必要？」<br>クルーアセントは、その整理からお手伝いします。</p><p>診断で優先順位を言葉にし、<br>ページの構成、文章、問い合わせまでの流れへ。<br>見た目と中身を、つなげて考えるWeb制作です。</p><a class="atl-text-link" href="diagnosis.html">Web診断36で整理してみる <span>↗</span></a></div>
-      <div class="atl-value-chain"><article><span>01 / 見つける</span><h3>優先順位を、見つける。</h3><p>16問・48問の診断で、情報・魅力・信頼・新しさのバランスを整理。</p></article><article><span>02 / 言葉にする</span><h3>伝わる設計に、つなげる。</h3><p>タイプ名だけで終わらず、向くページ構成や言葉、案内の流れの考え方へ。</p></article><article><span>03 / 形にする</span><h3>必要な範囲で、つくる。</h3><p>小さな事業に合う制作範囲を相談。公開後の管理も、必要に応じて。</p></article></div>
-    </section>
-
-    <section class="atl-service-section" id="service" aria-labelledby="service-title">
-      <div class="atl-section-index"><span>診断から制作へ</span></div>
-      <div class="atl-service-lead"><div><p class="atl-eyebrow">診断の、その先も。</p><h2 id="service-title">見つけた方向を、<br>事業のWebサイトへ。</h2></div><p>診断結果は、完成形を決めつけるものではありません。<br>伝える順番、言葉、見た目、相談までの道筋。<br>事業のお話を聞きながら、一つずつ形にします。</p></div>
-      <div class="atl-service-steps"><article><span>01 / 相談</span><h3>目的と制作範囲を、確認。</h3><p>誰に何を伝えたいか、必要なページ、ご用意できる素材を確認。事業に合う制作範囲を相談します。</p></article><article><span>02 / 設計</span><h3>構成とデザインを、具体化。</h3><p>掲載する内容と順番、文章、写真、問い合わせへの流れを整理。診断も参考に、画面の形へ落とし込みます。</p></article><article><span>03 / 制作と確認</span><h3>表示と案内の流れを確かめて、公開へ。</h3><p>スマートフォンでの表示やリンク、問い合わせまでの操作を確認。公開後の管理は必要に応じて相談できます。</p></article></div>
-      <div class="atl-service-links"><a href="plans.html"><small>料金</small><strong>4つの制作プランを比べる</strong><span>↗</span></a><a href="process.html"><small>制作の流れ</small><strong>相談から公開までの流れ</strong><span>↗</span></a></div>
-    </section>
-
-    <section class="atl-consultation" aria-labelledby="consultation-title">
-      <div><p class="atl-eyebrow">相談について</p><h2 id="consultation-title">まだ、まとまっていなくても。</h2><p>「何から決めればいい？」というところから。<br>診断結果があっても、なくても、お話を整理する入口をご用意します。</p></div>
-      <div class="atl-consultation-action">
-        <!-- 下の注記は、確定値が全部そろうと tools/apply-publish-values.mjs が data-published の文に差し替える --><a class="atl-primary-cta" href="contact.html">相談の進め方・受付状況を見る <span>↗</span></a><p data-published="相談は無料です。分かる範囲で答えられる相談アンケートから送れます。">現在は制作プレビューです。<br>正式な相談先は準備中のため、このページから送信はできません。</p></div>
-    </section>
-    <section class="atl-faq-section" aria-labelledby="faq-title"><p class="atl-eyebrow">はじめる前に</p><h2 id="faq-title">はじめに、よくある疑問。</h2><details><summary>診断結果のデザインにしないといけませんか？</summary><p>いいえ。診断は設計の優先順位を整理するための目安です。好みや顧客、運用方法に合わせて調整します。</p></details><details><summary>同じ業種なら、同じタイプになりますか？</summary><p>業種だけでは決まりません。同じ業種でも、顧客や伝えたい価値、サイトの目的によって合う方向性は変わります。</p></details><details><summary>診断だけでも利用できますか？</summary><p>はい。無料・登録不要で利用できます。診断を受けるだけで、制作の申し込みになることはありません。</p></details><a class="atl-text-link atl-faq-more" href="faq.html">よくある質問をすべて見る <span>↗</span></a></section>
-
-    <details class="atl-design-review" hidden><summary>制作確認用：2つの空間デザインを比較する</summary><section class="atl-direction-lab" aria-labelledby="direction-title">
-      <div class="atl-lab-heading"><div><p class="atl-eyebrow">DESIGN REVIEW</p><h2 id="direction-title">アトリエの空気を、選ぶ。</h2></div><p>制作確認用の2つの表現案です。<br>選択すると、上の空間が切り替わります。</p></div>
-      <div class="atl-direction-options">
-        <button class="atl-direction-card" data-direction="atelier" aria-pressed="true"><img src="assets/img/atelier.webp" loading="lazy" alt="柔らかな日差しと木のテーブルのアトリエ" width="600" height="338"><span class="atl-direction-meta"><span><small>01 / RECOMMENDED</small><strong>Warm Atelier</strong><span>木と紙、午後の光。親しみのある洗練。</span></span><span class="atl-direction-check" aria-hidden="true">✓</span></span></button>
-        <button class="atl-direction-card" data-direction="gallery" aria-pressed="false"><img src="assets/img/atelier-gallery.webp" loading="lazy" alt="石のテーブルとシルバーを基調にしたギャラリー" width="600" height="338"><span class="atl-direction-meta"><span><small>02 / ALTERNATIVE</small><strong>Quiet Gallery</strong><span>石とシルバー、澄んだ光。静かな先進性。</span></span><span class="atl-direction-check" aria-hidden="true">↗</span></span></button>
+      <div class="bench" aria-label="Web診断36が整理する設計方向の紹介">
+        <div class="bench__head">
+          <p class="bench__title"><b>36</b>通りの伝え方<span>WEB診断36</span></p>
+          <p class="bench__hint" id="map-instruction">ひとつ選んで、伝え方の違いにふれてみる。</p>
+        </div>
+        <div class="bench__tools">
+          <div class="seg" role="group" aria-label="36タイプの並び替え"><span class="seg__label">並べ方</span><button type="button" data-arrange="coord" aria-pressed="true">座標</button><button type="button" data-arrange="regions" aria-pressed="false">4つの領域</button><button type="button" data-arrange="industry" aria-pressed="false">業種</button></div>
+          <button type="button" class="seg__toggle" id="spatial-motion" aria-pressed="true" aria-label="立体的な動きを切り替える">立体 ON</button>
+        </div>
+        <div class="bench__body">
+          <div class="bench__map">
+            <div class="atl-spatial-stage" data-arrangement="coord"><div class="atl-spatial-plane"><div class="atl-stage-labels" aria-hidden="true"></div><div class="atl-priority-grid" id="type-map" role="group" aria-label="36の設計方向。矢印キーで移動できます" aria-describedby="map-instruction arrangement-note axis-description"></div></div></div>
+            <p class="bench__note" id="arrangement-note" role="status">36の位置から、伝え方のバランスを探せます。</p>
+          </div>
+          <div class="bench__preview">
+            <button type="button" class="bench__peek" id="selection-detail" aria-haspopup="dialog"><span id="selection-name">CA09 / 洗練集客型サイト</span><span>詳細 →</span></button>
+            <p class="bench__id" id="direction-id">設計の方向 / CA09</p>
+            <h2 class="bench__name" id="direction-name" aria-live="polite">洗練集客型サイト</h2>
+            <p class="bench__summary" id="direction-summary">分かりやすさを土台に、洗練された印象と相談までの流れを整えるタイプです。</p>
+            <div class="bench__meta"><span>サイトづくりで大切にすること</span><p id="direction-keywords">情報の整理 ／ 読みやすさ ／ 相談への流れ</p></div>
+            <div class="bench__meta"><span>よく挙がる業種</span><p id="direction-industries">経営コンサル、人材紹介・採用支援、Web制作、設計事務所</p></div>
+            <button type="button" class="bench__more" id="direction-detail" aria-haspopup="dialog">この方向の設計ポイントを見る<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></button>
+            <p class="bench__small">閲覧用の例です。ここでの選択は診断結果ではありません。</p>
+          </div>
+        </div>
+        <div class="bench__foot">
+          <p>CA01〜CA36は36タイプの番号です。タイルを選ぶと、名前と設計方針を表示します（矢印キーでも移動できます）。説明付きの<a href="types.html">36タイプ一覧</a>と、<a href="industries.html">業種から探す</a>ページもあります。</p>
+          <details><summary>座標と色の見方</summary><p id="axis-description">横軸は左が実用・情報、右がブランド・魅力。縦軸は下が王道・信頼、上が先進・新しさです。色は4つの領域を表し、位置は優劣や料金を意味しません。タイルのドットは元の座標を示します。</p></details>
+        </div>
+        <noscript><p class="bench__nojs">設計方向の切り替えにはJavaScriptが必要です。<a href="types.html">36タイプの一覧はこちら</a></p></noscript>
       </div>
-      <p class="atl-lab-note" id="direction-status" aria-live="polite">現在：Warm Atelier。空間は生成したコンセプト画像です。</p>
-    </section></details>
-  </main>
+    </div>
+    <div class="wrap hero__bar">
+      <p>決める前に、整理するところから。</p>
+      <a href="#idea">クルーアセントのサイトづくり <span aria-hidden="true">↓</span></a>
+    </div>
+  </section>
+
+  <!-- 2. 進め方: 左に章の札と見出し、右に本文。下に3つの段階を罫線で区切る -->
+  <section class="sec" id="idea" aria-labelledby="idea-title">
+    <div class="wrap">
+      <div class="sec__head rv">
+        <p class="sec__no"><span>01</span>進め方</p>
+        <div>
+          <p class="kicker">見た目を決める、その前に。</p>
+          <h2 class="sec__title" id="idea-title">伝えたいことが見えると、<br>必要なサイトが見えてくる。</h2>
+        </div>
+        <div class="sec__text">
+          <p>「何を載せたらいい？」「自分の事業には何が必要？」<br>クルーアセントは、その整理からお手伝いします。</p>
+          <p>診断で優先順位を言葉にし、<br>ページの構成、文章、問い合わせまでの流れへ。<br>見た目と中身を、つなげて考えるWeb制作です。</p>
+          <a class="tlink" href="diagnosis.html">Web診断36で整理してみる<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+        </div>
+      </div>
+      <ol class="cols rv">
+        <li><span class="cols__no">01 / 見つける</span><h3>優先順位を、見つける。</h3><p>16問・48問の診断で、情報・魅力・信頼・新しさのバランスを整理。</p></li>
+        <li><span class="cols__no">02 / 言葉にする</span><h3>伝わる設計に、つなげる。</h3><p>タイプ名だけで終わらず、向くページ構成や言葉、案内の流れの考え方へ。</p></li>
+        <li><span class="cols__no">03 / 形にする</span><h3>必要な範囲で、つくる。</h3><p>小さな事業に合う制作範囲を相談。公開後の管理も、必要に応じて。</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 3. 診断から制作へ: 紺の面。段階は横一行ずつ、料金と流れへの導線は大きな行リンク -->
+  <section class="sec sec--ink" id="service" aria-labelledby="service-title">
+    <div class="wrap">
+      <div class="sec__head rv">
+        <p class="sec__no"><span>02</span>診断から制作へ</p>
+        <div>
+          <p class="kicker">診断の、その先も。</p>
+          <h2 class="sec__title" id="service-title">見つけた方向を、<br>事業のWebサイトへ。</h2>
+        </div>
+        <div class="sec__text">
+          <p>診断結果は、完成形を決めつけるものではありません。<br>伝える順番、言葉、見た目、相談までの道筋。<br>事業のお話を聞きながら、一つずつ形にします。</p>
+        </div>
+      </div>
+      <ol class="rows rv">
+        <li><span class="rows__no">01 / 相談</span><h3>目的と制作範囲を、確認。</h3><p>誰に何を伝えたいか、必要なページ、ご用意できる素材を確認。事業に合う制作範囲を相談します。</p></li>
+        <li><span class="rows__no">02 / 設計</span><h3>構成とデザインを、具体化。</h3><p>掲載する内容と順番、文章、写真、問い合わせへの流れを整理。診断も参考に、画面の形へ落とし込みます。</p></li>
+        <li><span class="rows__no">03 / 制作と確認</span><h3>表示と案内の流れを確かめて、公開へ。</h3><p>スマートフォンでの表示やリンク、問い合わせまでの操作を確認。公開後の管理は必要に応じて相談できます。</p></li>
+      </ol>
+      <div class="biglinks rv">
+        <a href="plans.html"><small>料金</small><strong>4つの制作プランを比べる</strong><svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+        <a href="process.html"><small>制作の流れ</small><strong>相談から公開までの流れ</strong><svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 相談: ロゴの青の帯 -->
+  <section class="cta" aria-labelledby="consultation-title">
+    <div class="wrap cta__in rv">
+      <div>
+        <p class="kicker">相談について</p>
+        <h2 class="cta__title" id="consultation-title">まだ、まとまっていなくても。</h2>
+        <p>「何から決めればいい？」というところから。<br>診断結果があっても、なくても、お話を整理する入口をご用意します。</p>
+      </div>
+      <div class="cta__action">
+        <!-- 下の注記は、確定値が全部そろうと tools/apply-publish-values.mjs が data-published の文に差し替える --><a class="btn btn--white btn--lg" href="contact.html"><span>相談の進め方・受付状況を見る</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a><p data-published="相談は無料です。分かる範囲で答えられる相談アンケートから送れます。">現在は制作プレビューです。<br>正式な相談先は準備中のため、このページから送信はできません。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. よくある疑問: 左に見出し、右に開閉 -->
+  <section class="sec sec--faq" aria-labelledby="faq-title">
+    <div class="wrap faq rv">
+      <div>
+        <p class="kicker">はじめる前に</p>
+        <h2 class="sec__title" id="faq-title">はじめに、よくある疑問。</h2>
+        <a class="tlink" href="faq.html">よくある質問をすべて見る<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+      </div>
+      <div class="faq__list">
+        <details><summary>診断結果のデザインにしないといけませんか？</summary><p>いいえ。診断は設計の優先順位を整理するための目安です。好みや顧客、運用方法に合わせて調整します。</p></details>
+        <details><summary>同じ業種なら、同じタイプになりますか？</summary><p>業種だけでは決まりません。同じ業種でも、顧客や伝えたい価値、サイトの目的によって合う方向性は変わります。</p></details>
+        <details><summary>診断だけでも利用できますか？</summary><p>はい。無料・登録不要で利用できます。診断を受けるだけで、制作の申し込みになることはありません。</p></details>
+      </div>
+    </div>
+  </section>
+</main>
 
 <dialog id="direction-dialog" class="atl-dialog" aria-labelledby="detail-title">
-    <button type="button" class="atl-dialog-close" aria-label="設計方針を閉じる">✕</button>
-    <div class="atl-dialog-visual"><p class="atl-eyebrow">優先順位 → ページの構成</p><div class="atl-dialog-position" id="dialog-position"></div><div class="atl-layout-study"><p class="atl-eyebrow">サイトに必要な情報の例</p><div id="layout-preview"></div><p>掲載項目の例です。完成デザインではありません。</p></div></div>
-    <div class="atl-dialog-copy"><p class="atl-eyebrow" id="detail-id"></p><h2 id="detail-title"></h2><p class="atl-detail-one" id="detail-one"></p><div class="atl-detail-tags" id="detail-tags"></div><p class="atl-detail-industries"><span>よく挙がる業種</span><span id="detail-industries"></span></p><div class="atl-detail-rule"></div><p class="atl-detail-label">このタイプが大切にすること</p><p id="detail-summary"></p><p class="atl-detail-label">設計するときの注意点</p><p id="detail-tradeoff"></p><a class="atl-primary-cta atl-detail-link" id="detail-link" href="types.html">設計方針を詳しく見る <span aria-hidden="true">↗</span></a><a class="atl-dialog-diagnosis" href="diagnosis.html?mode=quick">自分に合う方向性を診断する →</a><p class="atl-detail-disclaimer">業種だけで決まる分類ではありません。事業の目的に合わせて調整します。</p></div>
-  </dialog>
+  <button type="button" class="atl-dialog-close" aria-label="設計方針を閉じる">✕</button>
+  <div class="atl-dialog-visual"><p class="kicker">優先順位 → ページの構成</p><div class="atl-dialog-position" id="dialog-position"></div><div class="atl-layout-study"><p class="kicker">サイトに必要な情報の例</p><div id="layout-preview"></div><p>掲載項目の例です。完成デザインではありません。</p></div></div>
+  <div class="atl-dialog-copy"><p class="kicker" id="detail-id"></p><h2 id="detail-title"></h2><p class="atl-detail-one" id="detail-one"></p><div class="atl-detail-tags" id="detail-tags"></div><p class="atl-detail-industries"><span>よく挙がる業種</span><span id="detail-industries"></span></p><p class="atl-detail-label">このタイプが大切にすること</p><p id="detail-summary"></p><p class="atl-detail-label">設計するときの注意点</p><p id="detail-tradeoff"></p><a class="btn btn--primary atl-detail-link" id="detail-link" href="types.html">設計方針を詳しく見る<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a><a class="atl-dialog-diagnosis" href="diagnosis.html?mode=quick">自分に合う方向性を診断する →</a><p class="atl-detail-disclaimer">業種だけで決まる分類ではありません。事業の目的に合わせて調整します。</p></div>
+</dialog>
 
 <footer class="ftr">
   <div class="wrap">
-    <div class="g6">
-      <div class="c1-2">
+    <div class="ftr__grid">
+      <div>
         <div class="ftr__brand">
-          <span class="brand__mark" aria-hidden="true"></span>
+          <svg class="brand__mark" aria-hidden="true"><use href="#logo"></use></svg>
           <span><span class="ftr__ja">クルーアセント</span><span class="ftr__en">CREW ASCENT</span></span>
         </div>
         <p class="ftr__note">診断で方向を整理してから始める、小規模事業者向けのWeb制作事務所です。検索順位や問い合わせ件数を保証するサービスではありません。</p>
       </div>
-      <div class="c3-4">
+      <div>
         <h2>サイト</h2>
         <ul>
           <li><a href="diagnosis.html">Web診断36</a></li>
@@ -237,7 +309,7 @@
           <li><a href="services.html">Web制作サービス</a></li>
         </ul>
       </div>
-      <div class="c5-6">
+      <div>
         <h2>知る・相談する</h2>
         <ul>
           <li><a href="about.html">クルーアセントについて</a></li>
@@ -250,6 +322,7 @@
         </ul>
       </div>
     </div>
+    <p class="ftr__word" aria-hidden="true">CREW ASCENT</p>
     <div class="ftr__bottom">
       <span>© <span data-year>2026</span> クルーアセント（CREW ASCENT）</span>
       <span data-prepublish>このサイトは公開準備中です。確定前の項目があります。</span>
