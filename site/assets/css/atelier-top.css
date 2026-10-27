@@ -514,3 +514,9 @@ body.atl-dialog-open { overflow: hidden; }
   .atl-room-caption { padding-block:18px; }
   .atl-workbench-heading > span:first-child { font-size:40px; }
 }
+/* 立体ON（オーナーが気に入っている表現）: タイルの厚みと面の影を紺系で残す */
+.atl-spatial-stage[data-motion=on] .atl-spatial-plane:before { box-shadow:14px 30px 40px -12px #0b204733; }
+.atl-spatial-stage[data-motion=on] .atl-map-cell { background:linear-gradient(135deg,#ffffff,#eef2f8); box-shadow:0 3px 0 #c9d2e0, 6px 14px 16px #0b20471f; }
+.atl-spatial-stage[data-motion=on] .atl-map-cell:hover,
+.atl-spatial-stage[data-motion=on] .atl-map-cell:focus-visible { background:#fff; box-shadow:0 3px 0 #9fb3d6, 8px 20px 22px #0b204733; }
+.atl-spatial-stage[data-motion=on] .atl-map-cell[aria-pressed=true] { background:linear-gradient(135deg,#1d3b78,#0b2047); box-shadow:0 3px 0 #061430, 8px 22px 24px #0b204766; }
