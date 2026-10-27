@@ -1,6 +1,6 @@
 # 相談アンケートの受け口（任意）
 
-`site/consult-form.html`（相談アンケート）と `site/hearing-form.html`（事前ヒアリング）は、
+`site/consult-form.html`（はじめての方ヒアリング）と `site/hearing-form.html`（本格ヒアリング）は、
 **このフォルダのファイルを置かなくても使えます。** その場合、確認画面のあとに
 「メールアプリで送る」「回答をコピーする」「テキストで保存する」が出ます（宛先は `data/publish-values.json` の `email`）。
 

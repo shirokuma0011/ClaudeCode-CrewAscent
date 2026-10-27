@@ -1,8 +1,9 @@
 <?php
 /* =====================================================================
-   クルーアセント 相談アンケートの受け口（任意）  questionnaire-mail.php  v2026-10-15
+   クルーアセント 相談アンケートの受け口（任意）  questionnaire-mail.php  v2026-10-25
 
-   site/consult-form.html と site/hearing-form.html の回答を、決めたメールアドレスへ1通送るだけ。
+   site/consult-form.html（はじめての方ヒアリング）と site/hearing-form.html（本格ヒアリング）の回答を、
+   決めたメールアドレスへ1通送るだけ。受付番号（CA-月日-4桁）は画面側で作り、件名と本文に入る。
    ・保存しない（サーバーにもデータベースにも残さない）
    ・自動返信しない（他人のアドレスを入れて迷惑メールを送らせる悪用を防ぐ）
    ・置き場所と設定は server/README.md
@@ -53,13 +54,15 @@ if (!is_array($data)) reply(400, ['ok' => false, 'error' => 'json']);
 /* ボット対策: 見えない欄に入力がある／開いてから5秒未満 → 送らずに成功だけ返す */
 if ((string)($data['website'] ?? '') !== '' || (int)($data['elapsed'] ?? 0) < 5) reply(200, ['ok' => true]);
 
-$forms = ['consult' => '【相談アンケート】', 'hearing' => '【事前ヒアリング】'];
+$forms = ['consult' => '【はじめての方ヒアリング】', 'hearing' => '【本格ヒアリング】'];
 $form = (string)($data['form'] ?? '');
 if (!isset($forms[$form])) reply(400, ['ok' => false, 'error' => 'form']);
 $text = body_text((string)($data['text'] ?? ''), 20000);
 if (mb_strlen(trim($text)) < 10) reply(400, ['ok' => false, 'error' => 'empty']);
 $subject = one_line((string)($data['subject'] ?? ''), 100);
 if (strpos($subject, $forms[$form]) !== 0) $subject = $forms[$form] . $subject;
+$receipt = (string)($data['receipt'] ?? '');
+if (!preg_match('/^CA-\d{4}-\d{4}$/', $receipt)) $receipt = '';
 $replyTo = one_line((string)($data['replyTo'] ?? ''), 254);
 if ($replyTo !== '' && !filter_var($replyTo, FILTER_VALIDATE_EMAIL)) $replyTo = '';
 
@@ -74,7 +77,7 @@ if (count($hits) >= $limit) reply(429, ['ok' => false, 'error' => 'rate']);
 $hits[] = $now;
 @file_put_contents($stamp, json_encode($hits), LOCK_EX);
 
-$body = $text . "\n\n---\n受信: " . date('Y-m-d H:i') . "\n送信元のブラウザ: " . one_line((string)($_SERVER['HTTP_USER_AGENT'] ?? ''), 200) . "\n";
+$body = $text . "\n\n---\n受付番号: " . ($receipt !== '' ? $receipt : '（なし）') . "\n受信: " . date('Y-m-d H:i') . "\n送信元のブラウザ: " . one_line((string)($_SERVER['HTTP_USER_AGENT'] ?? ''), 200) . "\n";
 mb_language('Japanese');
 mb_internal_encoding('UTF-8');
 $headers = 'From: ' . $from;
