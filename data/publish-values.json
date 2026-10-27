@@ -48,7 +48,7 @@
   "domainFeePolicy": "公開・管理プランに.comドメイン1件の取得・更新費を含みます。登録名義はお客様で、取得・更新・DNS設定を代行します",
   "invoiceStatus": "登録していないため発行できません",
 
-  "expiryHandling": "期間満了と同時に終了します",
+  "expiryHandling": "満了日に最終のお知らせをお送りし、満了日の翌日にサイトの公開を停止します。停止から30日間はデータを保管し、その間に入金を確認できれば再公開します。30日を過ぎたデータはサーバーから削除します。データの引き渡しをご希望の場合は、満了日までにご連絡ください",
   "jurisdictionCourt": "東京地方裁判所または東京簡易裁判所",
   "browserSupport": "納品時点における最新版およびその1世代前のGoogle Chrome、Microsoft Edge、Mozilla Firefox、Safari。スマートフォンは同条件のiOS版SafariおよびAndroid版Google Chrome。LINE・Instagram等のアプリ内ブラウザは動作保証の対象外とし、可能な範囲で基本表示を確認します。Internet Explorerには対応しません",
 
