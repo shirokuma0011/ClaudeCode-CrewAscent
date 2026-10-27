@@ -49,11 +49,10 @@
     }
   }
 
-  /* 狭い画面では、分類の見出しだけを並べ、押して開く。広い画面は最初から全部開いている。
-     位置指定（#c-…）で来たときは、その分類だけ開いた状態にする */
+  /* どの画面幅でも、分類の見出しだけを並べ、押して開く（全部開くとPCで13,000pxを超えるため）。
+     位置指定（#c-…）で来たときは、その分類だけ開いた状態にする。JSが無いときは全部開いたまま */
   var folds = Array.prototype.slice.call(document.querySelectorAll('details.occ-fold'));
-  var narrow = window.matchMedia && window.matchMedia('(max-width: 759px)').matches;
-  if (narrow && folds.length) {
+  if (folds.length) {
     folds.forEach(function (d) { d.open = false; });
     var all = document.querySelector('[data-fold-all]');
     if (all) all.textContent = 'すべて開く';

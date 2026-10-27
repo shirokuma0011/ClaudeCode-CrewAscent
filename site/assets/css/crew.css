@@ -761,3 +761,50 @@ html.is-scrolling .qn-progress *, html.is-scrolling .qn-draft * { pointer-events
 .intake-line h3 { margin:0; font-size:1.125rem; }
 .intake-line img { display:none; width:120px; height:120px; }
 @media (min-width:760px) { .intake-line { grid-template-columns:1fr auto; align-items:center; } .intake-line img { display:block; } }
+
+/* ============================== 第7版 段階1（2026-10-27） ==============================
+   色と書体は第6版のまま。見出しの強さ・本文の大きさ・余白だけを直す。
+   ・見出しは太字（書体は 400 と 700 しか持たないので 700）。字間は少し詰める
+   ・区切りの上下余白を詰めて、ページの縦の長さを減らす
+   ・読ませる文（注記・図の説明・補足）は 13px 以上。12px はラベルだけ */
+:root {
+  --sec-y: clamp(44px, 5vw, 76px);
+  --fs-h1: clamp(1.75rem, 3.1vw, 2.75rem);
+  --fs-h2: clamp(1.375rem, 2.2vw, 2rem);
+  --fs-h3: clamp(1.0625rem, 1.25vw, 1.1875rem);
+}
+h1, h2, h3, .rs-mast__name, .ah__brand { font-weight:700; letter-spacing:.02em; }
+h1 { line-height:1.45; }
+h2 { line-height:1.5; }
+h3 { line-height:1.6; }
+.ftr h2 { font-weight:400; }
+.sec--tight { padding-block:clamp(36px, 4vw, 60px); }
+.opener { margin-bottom:clamp(22px, 2.6vw, 34px); padding-top:16px; }
+.opener__body { margin-top:clamp(14px, 1.8vw, 24px); }
+.pg-sub .ah { padding-top:clamp(28px, 3.4vw, 56px); }
+figcaption, .spx__note, .erase__note { font-size:.8125rem; }
+.mcta { padding-block:8px calc(8px + env(safe-area-inset-bottom)); }
+.mcta .btn { min-height:44px; padding-block:8px; }
+/* 料金: 作業の中身（旧「文章整理と画像準備」「おまかせに含まれるもの」を1つに） */
+.scope-grid { display:grid; gap:28px 32px; }
+@media (min-width:760px) { .scope-grid { grid-template-columns:repeat(2, minmax(0, 1fr)); } }
+@media (min-width:1180px) { .scope-grid { grid-template-columns:repeat(4, minmax(0, 1fr)); } }
+.scope-grid > div { padding-top:16px; border-top:2px solid var(--act); }
+.scope-grid h3 { margin:0 0 8px; font-size:1.125rem; }
+.scope-grid h3 small { display:block; margin-top:2px; font-size:.8125rem; font-weight:400; color:var(--tx-3); }
+.scope-grid p { margin:0 0 10px; font-size:.9375rem; line-height:1.85; }
+.scope-grid .marker-list { margin:0 0 10px; }
+.scope-grid .hint { font-size:.8125rem; }
+.plan-entries { margin-top:clamp(28px, 3vw, 44px); }
+.plan-entries__h { font-size:var(--fs-h3); margin:0 0 6px; }
+/* 制作の流れ: PCでは段階の説明と「用意・作業・確認」を横に並べ、高さを半分ほどにする */
+.timeline > li { padding-block:clamp(16px, 1.8vw, 24px); }
+@media (min-width:960px) {
+  .timeline--wide > li:not(.tl-phase) > div { display:grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1.3fr); column-gap:36px; align-items:start; }
+  .timeline--wide > li:not(.tl-phase) > div > :not(.timeline__roles) { grid-column:1; }
+  .timeline--wide > li:not(.tl-phase) .timeline__roles { grid-column:2; grid-row:1 / span 3; margin-top:4px; }
+}
+.plan-entries .plan-fold { margin-top:0; }
+.plan-entries .plan-fold .fold__sum { padding:14px 0; }
+.words-fold > summary { cursor:pointer; padding:12px 0; min-height:44px; font-size:.9375rem; color:var(--act); text-decoration:underline; text-underline-offset:4px; }
+.fig figcaption, .dgm figcaption, .ah__facts dd p, .ftr__bottom, .ftr__bottom span { font-size:.8125rem; }

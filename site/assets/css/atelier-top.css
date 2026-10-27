@@ -408,3 +408,37 @@ body.atl-dialog-open { overflow: hidden; }
   .atl-direction-card-purpose, .atl-stage-help, .atl-map-caption, .atl-map-instruction, .atl-preview-note { font-size: 13px; }
   .atl-primary-cta small, .atl-hero-copy .atl-primary-cta { font-size: 13px; }
 }
+
+/* ============================== 第7版 段階1（2026-10-27） ==============================
+   トップだけの直し。見出しを太く、読ませる文を 13px 以上、余白を詰める。
+   36タイプの一覧（.atl-archive）は types.html にあるので、トップからは外した */
+.atl-hero-copy h1 { font-weight:700; line-height:1.4; letter-spacing:.02em; margin-bottom:20px; }
+.atl-hero-copy .atl-eyebrow { margin-bottom:22px; }
+.atl-secondary-cta { display:inline-flex; align-items:center; gap:10px; min-height:44px; margin:10px 0 0 18px; font-size:14px; color:var(--atl-ink); border-bottom:1px solid currentColor; }
+.atl-room { padding-top:116px; min-height:0; }
+.atl-intro h2, .atl-service-lead h2, .atl-consultation h2, .atl-faq-section h2, .atl-direction-preview h2, .atl-dialog-copy h2 { font-weight:700; line-height:1.5; }
+.atl-intro h2, .atl-service-lead h2 { font-size:clamp(24px, 2.4vw, 34px); }
+.atl-consultation h2 { font-size:clamp(22px, 2.2vw, 30px); }
+.atl-faq-section h2 { font-size:clamp(22px, 2vw, 28px); }
+.atl-value-chain h3, .atl-service-steps h3 { font-weight:700; }
+.atl-intro { padding:64px 5% 56px; gap:28px 7%; }
+.atl-value-chain article { padding:22px 26px 22px 0; }
+.atl-service-section { padding:60px max(calc((100% - 1170px)/2),5%); }
+.atl-service-section .atl-section-index { margin-bottom:28px; }
+.atl-service-steps h3 { margin:14px 0 10px; }
+.atl-service-links a { padding:18px 0; }
+.atl-consultation { padding:52px max(calc((100% - 1170px)/2),5%); }
+.atl-faq-section { padding:56px 45px; }
+.atl-faq-section h2 { margin:12px 0 18px; }
+.atl-faq-section summary { padding:16px 0; }
+.atl-map-instruction, .atl-map-caption, .atl-stage-help, .atl-axis-help, .atl-preview-note, .atl-detail-disclaimer, .atl-layout-study>p:last-child, .atl-position-description, .atl-hero-facts-note { font-size:13px; }
+.atl-primary-cta small { font-size:13px; }
+@media (max-width: 760px) {
+  .atl-room { padding-top:96px; }
+  .atl-hero-copy .atl-primary-cta { font-size:14px; }
+  .atl-secondary-cta { margin:14px 0 0; }
+  .atl-intro { padding:48px 6% 40px; }
+  .atl-service-section { padding:48px 6%; }
+  .atl-faq-section { padding:44px 6%; }
+  .atl-consultation { padding:44px 6%; }
+}
