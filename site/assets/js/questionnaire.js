@@ -272,7 +272,7 @@
     });
     lines.push('（未回答の項目は省いています）');
     var reply = '';
-    questions.some(function (q) { var i = $('input[type="email"]', q); if (i && EMAIL.test(i.value.trim())) { reply = i.value.trim(); return true; } return false; });
+    questions.some(function (q) { var i = $('input[type="email"]', q); if (i && !i.disabled && EMAIL.test(i.value.trim())) { reply = i.value.trim(); return true; } return false; });
     return { subject: subject, text: lines.join('\n'), replyTo: reply };
   }
   function showReview() {
