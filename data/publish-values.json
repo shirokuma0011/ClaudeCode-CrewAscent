@@ -35,7 +35,7 @@
   "postalAddress": "",
   "telephone": "",
   "email": "",
-  "businessDays": "日・月〜金 10:00〜18:00（土曜は休み）",
+  "businessDays": "日・月〜金 10:00〜18:00（土曜・祝日は休み）",
   "replyEstimate": "通常3営業日以内",
   "serviceArea": "日本全国（オンライン対応）",
   "ownerProfile": "クルーアセントは、小規模事業者向けのWebサイト制作事務所です。無料の「Web診断36」とヒアリングを通じて、Webサイトで誰に何を伝えるかを整理し、構成・デザイン・制作を進めます。",
