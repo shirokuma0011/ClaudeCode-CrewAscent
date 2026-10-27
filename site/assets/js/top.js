@@ -336,7 +336,7 @@
 
   /* ---------------- 8. モバイル固定CTA ---------------- */
   function mobileCta() {
-    var bar = $('.mcta'), hero = $('.hero'), ftr = $('.ftr');
+    var bar = $('.mcta'), hero = $('.hero, .atl-room, .ah'), ftr = $('.ftr');
     if (!bar) return;
 
     /* フッターに達したかは IntersectionObserver に任せる。

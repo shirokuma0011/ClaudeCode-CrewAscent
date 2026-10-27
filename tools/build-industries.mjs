@@ -101,7 +101,7 @@ const jsonld = JSON.stringify({
 const html = HEAD_TOP + `  <title>${esc(title)}</title>\n  <meta name="description" content="${esc(desc)}">\n`
   + AFTER_DESC.replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${esc(title)}">`)
               .replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${esc(desc)}">`)
-  + `<script defer src="assets/js/industries.js?v=20260909b"></script>\n`
+  + `<script defer src="assets/js/industries.js?v=20261027a"></script>\n`
   + `<script type="application/ld+json">${jsonld}</script>\n</head>\n<body data-page="industries">\n`
   + HEADER
   + `<nav class="breadcrumb" aria-label="現在地"><div class="wrap"><ol>
