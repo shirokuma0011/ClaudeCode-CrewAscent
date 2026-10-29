@@ -3,6 +3,7 @@
 同梱書体（CSS上の呼び名 → 実体）
   CA Sans 400/700  →  CASans-400.woff2 / CASans-700.woff2   （Noto Sans JP）
   CA Mono 400/700  →  CAMono-400.woff2 / CAMono-700.woff2   （JetBrains Mono）
+  CA Serif 700     →  CASerif-700.woff2                     （Noto Serif JP。2026-10-27 追加、見出しに使う（B案を採用））
 
   CSSでは "CA Sans" / "CA Mono" という総称で参照している。
   将来ライセンス書体へ差し替える場合、base.css の @font-face の
