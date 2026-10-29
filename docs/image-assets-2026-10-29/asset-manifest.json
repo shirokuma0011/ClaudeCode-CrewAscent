@@ -1,0 +1,218 @@
+{
+  "date": "2026-10-29",
+  "tool": "built-in image_gen",
+  "reference_palette": [
+    "#000000",
+    "#7B6B5A",
+    "#EEE9E1"
+  ],
+  "still_variants": 22,
+  "fallback_frames": 6,
+  "poster": 1,
+  "video_created": false,
+  "files": [
+    {
+      "file": "01-dot-wave-a.png",
+      "width": 2100,
+      "height": 900,
+      "bytes": 510393,
+      "sha256": "d826afc03f7dfad4f6aee3617f78f5b7109721538bae3a4873efb3c31c872722"
+    },
+    {
+      "file": "01-dot-wave-b.png",
+      "width": 2100,
+      "height": 900,
+      "bytes": 517247,
+      "sha256": "8f6f76adc4df37f16a86f911f69e09fff27b38fa4ded0104055ec6cb142c79e2"
+    },
+    {
+      "file": "02-tiles-6x6-a.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2357301,
+      "sha256": "475f106ee67b91a7434be9daa7e3e0f7653a7da444b3b1107d0833aef3d73d42"
+    },
+    {
+      "file": "02-tiles-6x6-b.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2733448,
+      "sha256": "2cc0bf81ccb0a7ccd60b17200050c129c6faac475aaac019d77f1ca671fb45f2"
+    },
+    {
+      "file": "03-wireframe-sketch-a.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2369540,
+      "sha256": "d7bbda7ab0846a163452630d71df1c78265ed4b8d9d376a228442142f204df86"
+    },
+    {
+      "file": "03-wireframe-sketch-b.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2736167,
+      "sha256": "ed3de919844acf6b97b77ae9a4d4b18f19f856a8aa0038dcc8d1020c085dc62a"
+    },
+    {
+      "file": "04-tracing-layers-a.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 1988852,
+      "sha256": "00750cc277fb5ce26e463b2d27a83a7871c61aad97baf5b0ebbe140dc519f667"
+    },
+    {
+      "file": "04-tracing-layers-b.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2377109,
+      "sha256": "afdde38c74cdc47b3ec1d4014d7f43d8fdab11e14e543d6c47bbfceb92a44f24"
+    },
+    {
+      "file": "05-index-cards-a.png",
+      "width": 2400,
+      "height": 800,
+      "bytes": 2045698,
+      "sha256": "206859a6c00aff8dc54ff0dea597414ff579beb9bd8d5c043d91dc69f63b940b"
+    },
+    {
+      "file": "05-index-cards-b.png",
+      "width": 2400,
+      "height": 800,
+      "bytes": 2658037,
+      "sha256": "1b09750dfe5cfec0e78fea6588b191fd56b98bda4d04147cbc6c6717d9630fa2"
+    },
+    {
+      "file": "06-stone-key-a.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2064103,
+      "sha256": "59fd16136850fe6953b329a5cd07936604c8f7a532350d2e42ba6d924d6054fd"
+    },
+    {
+      "file": "06-stone-key-b.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2132292,
+      "sha256": "dc6cd594f762a13c7a457120e8dd79a3b667ed2b398730fbf3794c9350051281"
+    },
+    {
+      "file": "07-open-notebook-a.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2447163,
+      "sha256": "b1ec61da33e3d9af27a408ea24471b035e393c3e7ee00b2ab97ec268d09a5d2a"
+    },
+    {
+      "file": "07-open-notebook-b.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2433227,
+      "sha256": "98a52bda2b8c96bf3b729a43743e8692b80b81c988bb07fbed2f6c77d8778bde"
+    },
+    {
+      "file": "08-envelope-a.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2456800,
+      "sha256": "7489c7c7c741760369963262a4f05e74fbb6e882f19a91b524cd1efb6d3b7bf7"
+    },
+    {
+      "file": "08-envelope-b.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2300156,
+      "sha256": "6627c8b554689c5d4956ecea00ba7bd96a398708843344ffa089cca283849b65"
+    },
+    {
+      "file": "09-desk-overhead-a.png",
+      "width": 1800,
+      "height": 1200,
+      "bytes": 3348885,
+      "sha256": "6330123014d75d364b7d9025b512f2d45fce9fd456498a474390582d96156ad9"
+    },
+    {
+      "file": "09-desk-overhead-b.png",
+      "width": 1800,
+      "height": 1200,
+      "bytes": 2763211,
+      "sha256": "e625156ea7c7d0db5454339025341eaea6d4a319d82406c1c80fa1446eb9cdb3"
+    },
+    {
+      "file": "10-og-top-a.png",
+      "width": 1200,
+      "height": 630,
+      "bytes": 199259,
+      "sha256": "2d09bc58eb9ce7a4ed6c62938af8d5032230016af9c31f4fa1f4d046cf0c2bfa"
+    },
+    {
+      "file": "10-og-top-b.png",
+      "width": 1200,
+      "height": 630,
+      "bytes": 227346,
+      "sha256": "c7b2c3ba451793f859c9b9262114b98b09e64292e0fd981ba22d149481de9841"
+    },
+    {
+      "file": "11-og-plans-a.png",
+      "width": 1200,
+      "height": 630,
+      "bytes": 1069116,
+      "sha256": "22089728bdc95df262983dea7de30dd3e1769b95ba731727346df159c46e4001"
+    },
+    {
+      "file": "11-og-plans-b.png",
+      "width": 1200,
+      "height": 630,
+      "bytes": 1034887,
+      "sha256": "8a44290afeba9a70aa8c2abbd71210a1d1e592bb0d7f7a327861bcca0674142d"
+    },
+    {
+      "file": "12-frame-1.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2357301,
+      "sha256": "475f106ee67b91a7434be9daa7e3e0f7653a7da444b3b1107d0833aef3d73d42"
+    },
+    {
+      "file": "12-frame-2.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2108300,
+      "sha256": "d6edd731741acde6f5ccb5b9a95ac62af6aa737fae361f41d30c478d0d338348"
+    },
+    {
+      "file": "12-frame-3.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2138082,
+      "sha256": "821a49abab091bd829ec7af749004eb0378ca6ba0dc0e9f878569c576ea82c82"
+    },
+    {
+      "file": "12-frame-4.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2142129,
+      "sha256": "e64b89abcd9b3298db1ffee868785a2e151a683a7c25cd6ac1f2a7134dec8612"
+    },
+    {
+      "file": "12-frame-5.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2201456,
+      "sha256": "ccb331652fe867f24231e92ce635aaf4d8fa8dc48e26bd6b9d44fd4bf6dc9445"
+    },
+    {
+      "file": "12-frame-6.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2118092,
+      "sha256": "4fd064577f8934f9585bab000a2bfcd993694e99fb620351c40cf704d33a8e9e"
+    },
+    {
+      "file": "12-video-tiles-poster.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2357301,
+      "sha256": "475f106ee67b91a7434be9daa7e3e0f7653a7da444b3b1107d0833aef3d73d42"
+    }
+  ]
+}
