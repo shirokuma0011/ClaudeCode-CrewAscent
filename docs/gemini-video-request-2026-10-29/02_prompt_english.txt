@@ -1,0 +1,15 @@
+Generate one actual downloadable MP4 video using the attached photograph as the authoritative composition reference. Do not substitute production advice, code, a storyboard, or a sequence of still images for the requested video.
+
+DELIVERY: 8 seconds, landscape16:9, silent, ideally1920x1080, filename12-video-tiles.mp4. Seamless looping website background.
+
+LOCK THE SCENE: Match the reference black stone plinth, exactly SIX columns by SIX rows of square paper tiles:35 ivory tiles and ONE muted brown tile. Lock camera position, angle, focal length, framing, plinth position, grid spacing, and all horizontal tile positions throughout. Preserve the dark negative space on the left. No pan, zoom, orbit, shake, or parallax.
+
+MOTION: A narrow soft warm band of upper-left window light passes slowly from left to right across the grid.35 ivory tiles remain completely still. Only the brown tile rises very slightly, by a few millimeters, as the light reaches it, then gently settles back to its exact original position, angle, and height. Vertical movement only: no lateral drift, rotation, scaling, swapping, or color changes.
+
+TIMELINE:0–0.5s: begin in the reference state.0.5–6.5s: the light travels steadily left to right; the brown tile rises and returns as the light passes.6.5–7.5s: the light exits right and illumination smoothly returns to the reference state.7.5–8s: hold the same composition and illumination as the beginning, so the loop has no jump or flash.
+
+LOOK: Quiet premium editorial still-life photography. Predominantly black#000000 and deep charcoal; muted brown#7B6B5A and ivory paper#EEE9E1. Tactile natural paper and matte stone. Keep exposure stable; do not brighten or darken the whole frame in pulses. No neon, bloom, excessive gloss, or CGI appearance.
+
+EXCLUDE: People, hands, faces, bodies, words, letters, digits, logos, engravings, screens, plants, cups, extra objects, tile-count changes, warped rows, melting paper, changing stone geometry, appended black panels, camera movement.
+
+CHECK BEFORE DELIVERY: Exactly36 tiles in6×6, only one brown tile; stationary camera/plinth/35 ivory tiles; subtle vertical rise and exact return of the brown tile; matching beginning and ending;8 seconds;silent;16:9. State any tool limitation honestly. Do not present a prompt or code alone as a completed video.

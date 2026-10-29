@@ -1,0 +1,19 @@
+{
+  "duration_seconds": 8,
+  "frames": 240,
+  "fps": 30,
+  "size": [
+    1920,
+    1080
+  ],
+  "audio": false,
+  "raw_first_last_identical": true,
+  "mean_brightness_range": [
+    48.73413483796296,
+    48.87416618441358
+  ],
+  "max_brown_tile_lift_px": 4.931100495364582,
+  "camera": "Fixed source, no pan, zoom or rotation",
+  "generation_method": "Programmatic animation of supplied photograph, not generative video AI",
+  "mp4_bytes": 1223465
+}
