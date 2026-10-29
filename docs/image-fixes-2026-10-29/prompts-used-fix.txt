@@ -1,0 +1,34 @@
+動画生成モデルが利用できないため、指定された代替静止画6枚を納品。構図固定のため元画像を再生成せず、FFmpegの画素ごとの照明処理を使用。
+
+IMAGE GENERATION: built-in image_gen. No API/CLI image generation.
+
+
+FILE: 04-tracing-layers-a.png
+Premium restrained editorial still-life photograph for Crew Ascent, black/deep charcoal with muted brown #7B6B5A and ivory #EEE9E1. Warm soft upper-left window light, rich shadows, tactile real materials. No people, hands, text, numbers, logos, screens, plants, cups or unrequested props. Single full-bleed photograph, no borders, no appended black panels. Create a NEW composition inspired by the attached material reference, not its exact camera angle. 1920x1080 16:9. EXACTLY FIVE separate translucent tracing-paper sheets standing parallel spaced front to back, confined to LEFT HALF. Show all FIVE distinct top edges and five bottom edges; absolutely no sixth sheet. Each of the FIVE sheets has faint fine grid lines and exactly ONE small hollow brown rectangular OUTLINE, never a filled rectangle. The outlines occupy slightly different positions on each sheet and all five should be discernible. View from a higher oblique angle, different from reference. Right HALF remains the natural photographed dark background with continuous lighting and faint texture, no pasted black strip. Count five sheets before rendering.
+
+
+FILE: 05-index-cards-a.png
+Premium restrained editorial still-life photograph for Crew Ascent, black/deep charcoal with muted brown #7B6B5A and ivory #EEE9E1. Warm soft upper-left window light, rich shadows, tactile real materials. No people, hands, text, numbers, logos, screens, plants, cups or unrequested props. Single full-bleed photograph, no borders, no appended black panels. 2400x800 aspect3:1. True orthographic top-down overhead view. Exactly NINE blank ivory horizontal landscape rectangular paper cards, all nine fully visible, in ONE straight equally spaced row on empty matte black tabletop. One thin muted brown thread passes through a tiny hole on ONLY cards ONE,TWO,THREE from left. The thread exits the THIRD card, turns downward into the empty foreground, then loosely extends toward the right BELOW cards four through nine, without touching or piercing them. Cards FOUR through NINE have NO holes, NO thread across them. All card faces entirely blank. No stones, metal discs, wood fragments or other objects anywhere, including corners. Reference is only for thread routing and materials; make cards horizontal.
+
+REVISION:
+Precise-object-edit. Preserve exactly the nine blank horizontal paper cards, their count and top-down geometry, lighting, black tabletop and overall 3:1 composition. Change ONLY the thread routing after the hole in the THIRD card. The thread MUST turn straight DOWN while it is still over card THREE, exit the BOTTOM EDGE of card THREE, then curve gently right in the empty foreground BELOW the entire row. It must not cross ANY part of card FOUR or any later card, not even its bottom-left corner. Cards FOUR to NINE must have completely clear faces and clear edges untouched by string. Only first three cards have thread or holes. No other changes. Native full bleed 2400x800, no added panels.
+
+
+FILE: 11-og-plans-a.png
+Premium restrained editorial still-life photograph for Crew Ascent, black/deep charcoal with muted brown #7B6B5A and ivory #EEE9E1. Warm soft upper-left window light, rich shadows, tactile real materials. No people, hands, text, numbers, logos, screens, plants, cups or unrequested props. Single full-bleed photograph, no borders, no appended black panels. Exactly1200x630 aspect1.91:1, full-bleed dark charcoal wooden desk photographed overhead. HARD COMPOSITION REQUIREMENT: ALL objects must fit entirely within the RIGHTMOST THIRD: x=840 to1190 on a1200-wide image, leave a40px margin from right edge. LEFT TWO THIRDS x=0..800 must contain nothing at all except continuous dark natural desk texture, suitable for overlaid text. A SMALL group of THREE overlapping ivory paper sheets with pencil wireframe boxes and bundles of straight horizontal placeholder lines, one very slender matte brass ruler with unnumbered line ticks, and one pencil. Entire paper stack only220px wide in the1200px frame. Do not enlarge subjects to fill frame. Nothing crosses x=800. No glyphs, words, letters or numbers on papers or ruler.
+
+REVISION:
+Precise composition correction. Full-bleed dark charcoal wood desk, 1200x630 aspect1.91:1. All paper/ruler/pencil must be SMALLER and MOVED RIGHT. Entire group, including every sheet corner and all ruler/pencil tips, must fit in rightmost QUARTER of frame (x>=900 on1200-wide canvas), with 30px margin on right. This stricter rightmost-quarter placement ensures it is safely inside the requested rightmost third. LEFT75% contains ONLY empty dark continuous desk. Three small overlapping ivory sheets with glyph-free wireframe rectangles/horizontal lines, one slender matte brass unnumbered ruler, one pencil. Keep same tactile photo mood. Do not append black or move texture discontinuously. No text, people or extra objects.
+
+
+LIGHTING SEQUENCE SPEC (English):
+Use exactly the supplied reference photograph. Fix the camera, stone plinth and all 36 tiles in every frame. Keep one brown tile. Frame 1 matches the source before the moving light; later frames change only a soft warm band moving left to right. Do not shift, warp or regenerate geometry. No text or people. Poster equals frame 1.
+
+IMPLEMENTATION:
+FFmpeg scale to1920x1080 once; same base reused in all six frames. Pixel coordinates remain unchanged. Brown tile does not move in the fallback still sequence, as specified.
+Frame1: source unchanged. Frames2-6: upper-left-slanted Gaussian light-band centers x=[850, 1080, 1300, 1510, 1750]
+r='clip(r(X,Y)*(1+0.14*exp(-pow((X-850-0.10*(Y-540))/110,2))),0,255)':g='clip(g(X,Y)*(1+0.125*exp(-pow((X-850-0.10*(Y-540))/110,2))),0,255)':b='clip(b(X,Y)*(1+0.1*exp(-pow((X-850-0.10*(Y-540))/110,2))),0,255)'
+r='clip(r(X,Y)*(1+0.14*exp(-pow((X-1080-0.10*(Y-540))/110,2))),0,255)':g='clip(g(X,Y)*(1+0.125*exp(-pow((X-1080-0.10*(Y-540))/110,2))),0,255)':b='clip(b(X,Y)*(1+0.1*exp(-pow((X-1080-0.10*(Y-540))/110,2))),0,255)'
+r='clip(r(X,Y)*(1+0.14*exp(-pow((X-1300-0.10*(Y-540))/110,2))),0,255)':g='clip(g(X,Y)*(1+0.125*exp(-pow((X-1300-0.10*(Y-540))/110,2))),0,255)':b='clip(b(X,Y)*(1+0.1*exp(-pow((X-1300-0.10*(Y-540))/110,2))),0,255)'
+r='clip(r(X,Y)*(1+0.14*exp(-pow((X-1510-0.10*(Y-540))/110,2))),0,255)':g='clip(g(X,Y)*(1+0.125*exp(-pow((X-1510-0.10*(Y-540))/110,2))),0,255)':b='clip(b(X,Y)*(1+0.1*exp(-pow((X-1510-0.10*(Y-540))/110,2))),0,255)'
+r='clip(r(X,Y)*(1+0.14*exp(-pow((X-1750-0.10*(Y-540))/110,2))),0,255)':g='clip(g(X,Y)*(1+0.125*exp(-pow((X-1750-0.10*(Y-540))/110,2))),0,255)':b='clip(b(X,Y)*(1+0.1*exp(-pow((X-1750-0.10*(Y-540))/110,2))),0,255)'

@@ -1,0 +1,116 @@
+{
+  "frames": [
+    {
+      "frame": 1,
+      "size": [
+        1920,
+        1080
+      ],
+      "mean_luma": 48.75737188143004,
+      "max_abs_change": 0.0
+    },
+    {
+      "frame": 2,
+      "size": [
+        1920,
+        1080
+      ],
+      "mean_luma": 49.12026427469136,
+      "max_abs_change": 31.0
+    },
+    {
+      "frame": 3,
+      "size": [
+        1920,
+        1080
+      ],
+      "mean_luma": 49.73092946244856,
+      "max_abs_change": 31.0
+    },
+    {
+      "frame": 4,
+      "size": [
+        1920,
+        1080
+      ],
+      "mean_luma": 49.76936165766461,
+      "max_abs_change": 31.0
+    },
+    {
+      "frame": 5,
+      "size": [
+        1920,
+        1080
+      ],
+      "mean_luma": 49.705814364711934,
+      "max_abs_change": 31.0
+    },
+    {
+      "frame": 6,
+      "size": [
+        1920,
+        1080
+      ],
+      "mean_luma": 49.209015239197534,
+      "max_abs_change": 29.0
+    }
+  ],
+  "geometry": "Single base; RGB pointwise relighting only, no per-frame spatial transforms.",
+  "files": [
+    {
+      "file": "04-tracing-layers-a.png",
+      "bytes": 4188285,
+      "sha256": "61b3949f11addeca24a59050c7005e54c976a277fa20490874c62ed2322df74c"
+    },
+    {
+      "file": "05-index-cards-a.png",
+      "bytes": 2648811,
+      "sha256": "f6d41293403d3e2fd27a879952a9ccdcf9a909441d8fe5a8ea5c625a73fbdf12"
+    },
+    {
+      "file": "11-og-plans-a.png",
+      "bytes": 1288276,
+      "sha256": "2916e30cd73c163cb3785b6b009f03be6157ecb3147b68349683cbd0c6e62741"
+    },
+    {
+      "file": "12-frame-1.png",
+      "bytes": 2032485,
+      "sha256": "53e550eccf125fa301853a332a43923230fa85dcaa4c79410577481655a8b2bd"
+    },
+    {
+      "file": "12-frame-2.png",
+      "bytes": 2119317,
+      "sha256": "54d3e2f9a51a4ecca21aaaefe1d8544d3a2fc4563c05b727b205164ea015d097"
+    },
+    {
+      "file": "12-frame-3.png",
+      "bytes": 2194769,
+      "sha256": "e48615bd88bf2c91f12d3373b08ed77a32b17ca7907d244c44ee675bb8e4f2e0"
+    },
+    {
+      "file": "12-frame-4.png",
+      "bytes": 2211677,
+      "sha256": "378c06ce7a9060f068f802957fa4938c77848adcb8497b982d94a1d55988e9ae"
+    },
+    {
+      "file": "12-frame-5.png",
+      "bytes": 2197837,
+      "sha256": "b45d2ad598f5cfcb211f7f4b588a811a3b89b9958822c0e6f045807d325ab4ff"
+    },
+    {
+      "file": "12-frame-6.png",
+      "bytes": 2133656,
+      "sha256": "8446c75feb50d00ec3ffd767aa16893fbd387987dd01911fa4fd0d821c003a1d"
+    },
+    {
+      "file": "12-video-tiles-poster.png",
+      "bytes": 2032485,
+      "sha256": "53e550eccf125fa301853a332a43923230fa85dcaa4c79410577481655a8b2bd"
+    },
+    {
+      "file": "prompts-used-fix.txt",
+      "bytes": 6915,
+      "sha256": "ba8bc7ba13586eb8417609b1a90a107866cc670fffccab8107ce4bbf0f828243"
+    }
+  ]
+}
