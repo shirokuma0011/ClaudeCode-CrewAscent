@@ -676,17 +676,12 @@ html .sec--cream { background: var(--paper-2); }
   .pg-sub .mlist li { padding-block: 6px; }
 }
 
-/* 14. 画像: トップの相談の帯に36枚のタイル（生成画像 tiles-light-1〜6。光だけが移ろう） */
+/* 14. 動画: トップの相談の帯に36枚のタイル（生成画像から作った8秒の繰り返し。光が移ろい、茶色の1枚が浮いて戻る） */
 .cta--photo { position: relative; overflow: hidden; }
 .cta__photo { position: absolute; inset: 0 0 0 auto; width: 44%; background: #0d0c0b; }
-.cta__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 72% 50%; opacity: 0; animation: tiles-light 24s ease-in-out infinite both; }
-.cta__photo img:first-child { opacity: 1; animation: none; }
-.cta__photo img:nth-child(2) { animation-delay: 4s; }
-.cta__photo img:nth-child(3) { animation-delay: 8s; }
-.cta__photo img:nth-child(4) { animation-delay: 12s; }
-.cta__photo img:nth-child(5) { animation-delay: 16s; }
-.cta__photo img:nth-child(6) { animation-delay: 20s; }
-@keyframes tiles-light { 0% { opacity: 0; } 6% { opacity: 1; } 17% { opacity: 1; } 23%, 100% { opacity: 0; } }
+.cta__photo img, .cta__photo video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 72% 50%; }
+.cta__photo video { opacity: 0; transition: opacity .6s ease; }
+.cta__photo video.is-playing { opacity: 1; }
 .cta--photo .cta__in { position: relative; grid-template-columns: minmax(0, 1fr); gap: 16px; padding-block: 44px; }
 .cta--photo .cta__in > * { max-width: min(720px, calc(56vw - var(--gut) - 40px)); }
 .cta--photo .cta__action { display: flex; align-items: center; gap: 24px; }
@@ -694,16 +689,14 @@ html .sec--cream { background: var(--paper-2); }
 .cta--photo .cta__action p { margin-top: 0; }
 @media (max-width: 860px) {
   .cta__photo { position: relative; width: 100%; aspect-ratio: 16 / 9; }
-  .cta__photo img { object-position: 70% 50%; }
+  .cta__photo img, .cta__photo video { object-position: 70% 50%; }
   .cta--photo .cta__in { padding-block: 40px 56px; }
   .cta--photo .cta__in > * { max-width: none; }
   .cta--photo .cta__action { display: block; }
   .cta--photo .cta__action .btn { width: 100%; }
   .cta--photo .cta__action p { margin-top: 12px; }
 }
-@media (prefers-reduced-motion: reduce) {
-  .cta__photo img:not(:first-child) { display: none; }
-}
+@media (prefers-reduced-motion: reduce) { .cta__photo video { display: none; } }
 
 /* 15. 画像: 「診断から制作へ」の黒い面の右下に点描の波（生成画像 dot-wave。ABeam の点描の波に倣う） */
 #service { background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("../img/dot-wave.webp") right bottom / min(1300px, 90%) auto no-repeat, var(--navy); }

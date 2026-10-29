@@ -618,6 +618,22 @@
     else window.addEventListener('load', start);
   }
 
+  /* ---------------- 12. 相談の帯の動画（見えている間だけ再生。動きを減らす設定では静止画のまま） ---------------- */
+  function ctaVideo() {
+    var v = $('[data-cta-video]');
+    if (!v || reduce || !('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          if (v.preload === 'none') v.preload = 'auto';
+          var p = v.play();
+          if (p && p.then) p.then(function () { v.classList.add('is-playing'); }).catch(function () {});
+        } else { v.pause(); }
+      });
+    }, { rootMargin: '200px 0px' });
+    io.observe(v);
+  }
+
   function year() { $$('[data-year]').forEach(function (el) { el.textContent = String(new Date().getFullYear()); }); }
 
   /* 結果ページのように、あとからJSで組み立てる節にも効かせるため外へ出す */
@@ -625,7 +641,7 @@
 
   function init() {
     header(); mega(); drawer(); tabs(); typeMap(); miniQuiz(); reveal();
-    heroCross(); heroIn(); chapterIndex(); countUp(); mobileCta(); year();
+    heroCross(); heroIn(); chapterIndex(); countUp(); mobileCta(); ctaVideo(); year();
     predecodeImages();   /* ← 呼び出しが抜けていた。画像の展開がスクロール中に走っていた原因 */
   }
 
