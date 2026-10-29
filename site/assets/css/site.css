@@ -704,3 +704,7 @@ html .sec--cream { background: var(--paper-2); }
 @media (prefers-reduced-motion: reduce) {
   .cta__photo img:not(:first-child) { display: none; }
 }
+
+/* 15. 画像: 「診断から制作へ」の黒い面の右下に点描の波（生成画像 dot-wave。ABeam の点描の波に倣う） */
+#service { background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("../img/dot-wave.webp") right bottom / min(1300px, 90%) auto no-repeat, var(--navy); }
+@media (max-width: 860px) { #service { background-size: auto, 200% auto; background-position: 0 0, 70% bottom; } }
