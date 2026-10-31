@@ -1,0 +1,71 @@
+﻿{
+  "archive": "crewascent-gemini-video-request-checked-20261031.zip",
+  "date": "2026-10-31",
+  "files": [
+    {
+      "name": "00_README.html",
+      "bytes": 12925,
+      "sha256": "de0c6f03a74b820ee77b74e2c22bc4ae260ab936670eae5ce6d3c6e9f147d4d7",
+      "bom": true,
+      "strict_utf8_decode": "PASS"
+    },
+    {
+      "name": "00_README.txt",
+      "bytes": 3219,
+      "sha256": "6645051539cbd55c6302f3c2c894789ada34efead83ea769885c63201a045ccb",
+      "bom": true,
+      "strict_utf8_decode": "PASS"
+    },
+    {
+      "name": "01_prompt_ja.txt",
+      "bytes": 2886,
+      "sha256": "264f10e75b1692dbef8ae1387216fb8ed9533afd9a6b3a4d0cf82f53ee0edb9f",
+      "bom": true,
+      "strict_utf8_decode": "PASS"
+    },
+    {
+      "name": "02_prompt_en.txt",
+      "bytes": 2357,
+      "sha256": "07598513650e6c864bf5cd13513e700b50073eb24a6066f2adbee9bfdc7f2dd1",
+      "bom": true,
+      "strict_utf8_decode": "PASS"
+    },
+    {
+      "name": "03_revision_prompts_ja.txt",
+      "bytes": 1986,
+      "sha256": "d60b26011db62875b95c0d0cd62e212ae451f75fe117d181abe82e77981a5863",
+      "bom": true,
+      "strict_utf8_decode": "PASS"
+    },
+    {
+      "name": "04_checklist_ja.txt",
+      "bytes": 1422,
+      "sha256": "45cb5dcfd0729b53534016b8454259d6a1888b360defc1e816f3ca0192f628da",
+      "bom": true,
+      "strict_utf8_decode": "PASS"
+    },
+    {
+      "name": "12-video-tiles-poster.png",
+      "bytes": 2032485,
+      "sha256": "53e550eccf125fa301853a332a43923230fa85dcaa4c79410577481655a8b2bd",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "name": "reference-tiles.png",
+      "bytes": 2032485,
+      "sha256": "53e550eccf125fa301853a332a43923230fa85dcaa4c79410577481655a8b2bd",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    }
+  ],
+  "text_encoding": "UTF-8 with BOM",
+  "filenames": "ASCII only",
+  "crc": "PASS",
+  "sha256": "3160ad0ae314c33ed7bb7806fadd16889ccb6279eab0f9183f32c9fdb56db72a",
+  "archive_bytes": 4077795
+}
