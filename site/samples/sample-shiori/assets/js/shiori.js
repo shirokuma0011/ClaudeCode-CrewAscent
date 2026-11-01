@@ -70,6 +70,8 @@
             var want = li.getAttribute('data-' + k);
             return !want || !val[k] || want.split(' ').indexOf(val[k]) > -1;
           });
+          /* まだ何も選んでいないときは、全員に共通の項目だけを出す */
+          if (!Object.keys(val).length && (li.hasAttribute('data-s') || li.hasAttribute('data-b') || li.hasAttribute('data-q'))) ok = false;
           li.hidden = !ok;
           li.classList.remove('in');
           if (ok && animate && !reduce) { li.style.setProperty('--i', i++); void li.offsetWidth; li.classList.add('in'); }
@@ -77,7 +79,7 @@
       });
       if (sit) {
         var parts = Object.keys(val).map(function (k) { return LABEL[k][val[k]]; });
-        sit.textContent = parts.length ? 'あなたの状況: ' + parts.join('／') : 'まだ選ばれていません。すべての項目を表示しています。';
+        sit.textContent = parts.length ? 'あなたの状況: ' + parts.join('／') : 'まだ選ばれていません。いまは、どの状況にも共通の項目だけを表示しています。';
       }
     };
     form.addEventListener('change', function () { apply(true); });

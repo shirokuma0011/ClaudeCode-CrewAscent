@@ -273,3 +273,190 @@ p { margin: 0 0 1.1em; }
   .js .rakkan { opacity: 1; transform: none; }
   .js .sec__head .ln, .js .sec__head .sec__kick { opacity: 1; transform: none; }
 }
+
+/* =====================================================================
+   v2: 人の目で一目で読める大きさと密度へ（文字・余白・章の高さを詰める）
+   ===================================================================== */
+body { line-height: 1.85; }
+p { margin-bottom: .8em; }
+.site-head .wrap { min-height: 72px; }
+.hero { padding: 28px 0 48px; }
+.hero__title { height: 470px; min-height: 0; }
+.hero h1 { font-size: clamp(32px, 3vw, 42px); line-height: 1.4; letter-spacing: .18em; }
+.hero h1 span + span { margin-top: 1.2em; }
+.hero__sub { font-size: 15px; padding-top: 3em; }
+.hero__main { padding-top: 8px; }
+.hero__stroke { margin-bottom: 14px; max-width: 760px; }
+.hero__lead { font-size: 16px; line-height: 1.85; }
+.hero__facts { margin: 16px 0 20px; }
+.hero__facts li { padding: 8px 14px 8px 0; }
+.hero__facts b { font-size: 16px; }
+.btn { min-height: 52px; font-size: 16px; padding: 10px 24px; }
+.assure { margin-top: 12px; }
+.band img { height: clamp(180px, 22vw, 320px); object-position: 50% 60%; }
+
+.sec { padding: 76px 0 0; }
+.sec > .wrap { gap: 0 48px; }
+.sec h2 { font-size: clamp(22px, 2vw, 27px); line-height: 1.5; letter-spacing: .2em; }
+.sec h2 .ln + .ln { margin-top: 1.2em; }
+.sec__seal, .sec__seal svg { width: 30px; height: 30px; }
+.prose { font-size: 16px; line-height: 1.85; }
+
+.kuse-wrap { grid-template-columns: minmax(0, 1fr) minmax(0, 300px); gap: 20px 40px; align-items: center; }
+.kuse { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 22px; border-bottom: 1px solid var(--usuzumi); }
+.kuse li { grid-template-columns: 1fr; gap: 6px; padding: 14px 18px 12px 0; border-bottom: 0; align-items: start; }
+.kuse li + li { padding-left: 18px; border-left: 1px solid var(--usuzumi); }
+.kuse svg { width: 90px; height: 45px; }
+.kuse h3 { font-size: 17px; }
+.kuse p { font-size: 14.5px; line-height: 1.75; }
+
+.courses { grid-template-columns: minmax(0, 300px) 1fr 1fr; align-items: start; }
+.course__img { margin: 18px 28px 16px 0; }
+.course, .course + .course { padding: 20px 0 16px 28px; border-left: 1px solid var(--usuzumi); }
+.course h3 { font-size: 20px; }
+.course .meta { margin-bottom: 8px; font-size: 14.5px; }
+.course ul { font-size: 15px; line-height: 1.8; }
+
+.flow { height: 300px; }
+.flow b { font-size: 19px; }
+.flow p { font-size: 15px; line-height: 1.75; }
+.flow .t { margin-bottom: 10px; font-size: 13px; }
+
+.price th, .price td { padding: 10px 12px 10px 0; font-size: 15px; }
+.price tbody th { font-size: 18px; }
+.price .yen { font-size: 23px; }
+.price-note { margin-top: 10px; font-size: 13.5px; line-height: 1.8; }
+.cta-row { margin-top: 22px; padding: 16px 0; }
+
+.sched th, .sched td { padding: 8px 10px; }
+.sched thead th { font-size: 18px; }
+
+.dougu { grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: 24px 40px; }
+.dougu dl div { padding: 9px 0; }
+.dougu dd { font-size: 15px; line-height: 1.75; }
+.dougu dt { font-size: 16px; }
+
+.access svg { max-height: 300px; }
+.access dl div { padding: 8px 0; }
+
+.faq summary { min-height: 52px; padding: 12px 0; font-size: 16px; }
+.faq details > div { font-size: 15px; line-height: 1.85; }
+
+.apply { padding: 80px 0 72px; }
+.apply__img { margin-bottom: 36px; }
+.apply__img img { height: clamp(160px, 18vw, 260px); }
+.apply__grid { gap: 24px 44px; }
+.form .row { margin-bottom: 10px; }
+.form input[type="text"], .form input[type="email"], .form select { min-height: 46px; }
+.site-foot { padding: 44px 0 32px; }
+
+@media (max-width: 960px) {
+  .courses { grid-template-columns: 1fr 1fr; }
+  .course__img { grid-column: 1 / -1; margin: 16px 0 0; max-width: 420px; }
+  .course { padding-left: 0; border-left: 0; }
+  .course + .course { padding-left: 20px; border-left: 1px solid var(--usuzumi); }
+}
+@media (max-width: 720px) {
+  body { font-size: 15px; }
+  .hero { padding: 20px 0 36px; }
+  .hero__title { height: auto; max-height: 330px; }
+  .hero h1 { font-size: 28px; }
+  .hero__sub { font-size: 13px; padding-top: 2em; }
+  .hero__facts b { font-size: 15px; }
+  .hero__acts { gap: 10px; }
+  .band img { height: 200px; }
+  .sec { padding-top: 48px; }
+  .sec > .wrap { gap: 16px 0; }
+  /* 狭い画面では章見出しを横書きの1行に短くし、本文を広く使う（縦書きは最初の画面に残す） */
+  .sec__head { writing-mode: horizontal-tb; flex-direction: row; align-items: center; justify-self: start !important; gap: 0 12px; }
+  .sec__seal { margin: 0; }
+  .sec h2 { font-size: 21px; letter-spacing: .1em; line-height: 1.4; }
+  .sec h2 .ln { display: inline; }
+  .sec h2 .ln + .ln { margin: 0; }
+  .js .sec__head .ln { transform: translateX(-8px); }
+  .kuse-wrap { grid-template-columns: 1fr; }
+  .kuse-wrap figure { display: none; }
+  .kuse { grid-template-columns: 1fr; margin-top: 8px; }
+  .kuse li, .kuse li + li { grid-template-columns: 70px 1fr; gap: 0 12px; padding: 10px 0; border-left: 0; border-top: 1px solid var(--usuzumi); }
+  .kuse svg { width: 70px; height: 35px; }
+  .kuse h3 { font-size: 16px; }
+  .kuse p { font-size: 14px; }
+  .courses { grid-template-columns: 1fr 1fr; }
+  .course__img { display: none; }
+  .course, .course + .course { padding: 14px 0; border-top: 0; }
+  .course + .course { padding-left: 12px; }
+  .course h3 { font-size: 17px; letter-spacing: .08em; }
+  .course .meta { font-size: 13px; }
+  .course ul { font-size: 14px; padding-left: 1em; line-height: 1.65; }
+  .flow li, .flow li:last-child { padding-bottom: 10px; }
+  .flow b { font-size: 17px; }
+  .flow p { font-size: 14px; }
+  .price tr { padding: 8px 0; display: grid; grid-template-columns: 1fr auto; gap: 0 12px; align-items: baseline; }
+  .price tbody th { grid-column: 1; font-size: 17px; }
+  .price td:nth-child(2) { grid-column: 1; grid-row: 2; font-size: 13.5px; }
+  .price td:nth-child(3) { grid-column: 2; grid-row: 1 / span 2; }
+  .price .yen { font-size: 21px; }
+  .dougu figure { display: none; }
+  .dougu dl div { grid-template-columns: 5em 1fr; gap: 0 10px; padding: 8px 0; }
+  .dougu dt { font-size: 15px; }
+  .dougu dd { font-size: 14px; }
+  .access dl div { padding: 6px 0; }
+  .faq summary { font-size: 15px; }
+  .apply { padding: 48px 0 48px; }
+  .apply__img img { height: 150px; }
+  .apply__img { margin-bottom: 24px; }
+  .apply__text .prose + .prose { display: none; }
+  .site-foot { padding: 32px 0 20px; }
+  .site-foot .wrap { gap: 12px; }
+}
+@media (max-width: 960px) { .dougu, .access, .kuse-wrap { grid-template-columns: 1fr; } }
+.hero__title { height: 520px; }
+.hero h1 span + span { margin-top: .8em; }
+.flow { height: 290px; overflow-y: visible; }
+.sec { padding-top: 64px; }
+.apply { padding-top: 72px; }
+.apply__grid { grid-template-columns: minmax(0, 4fr) minmax(0, 6fr) auto; }
+.form .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 14px; }
+.form fieldset { margin-bottom: 6px; }
+@media (max-width: 960px) { .apply__grid { grid-template-columns: minmax(0, 1fr) auto; } }
+@media (max-width: 720px) {
+  .hero__title { height: auto; }
+  .form .grid2 { grid-template-columns: 1fr; }
+  .apply__grid { grid-template-columns: 1fr; }
+  .sec { padding-top: 44px; }
+}
+.band img { height: clamp(170px, 18vw, 260px); }
+.apply__img img { height: clamp(140px, 14vw, 200px); }
+.apply__img { margin-bottom: 28px; }
+.kuse { margin-top: 14px; }
+.sec { padding-top: 60px; }
+@media (max-width: 720px) {
+  .hero h1 { font-size: 26px; }
+  .hero__title { max-height: 290px; }
+  .hero__stroke { margin-bottom: 8px; }
+  .band img { height: 170px; }
+  .access svg { max-height: 220px; }
+  .cta-row { margin-top: 14px; padding: 12px 0; }
+  .cta-row p { font-size: 14.5px; }
+  .price-note { font-size: 13px; }
+  .sec { padding-top: 40px; }
+}
+.sec { padding-top: 54px; }
+.hero { padding-bottom: 36px; }
+.kuse-wrap { grid-template-columns: minmax(0, 1fr) minmax(0, 260px); }
+@media (max-width: 720px) { .sec { padding-top: 38px; } .access dl div { padding: 4px 0; } }
+@media (max-width: 960px) { .kuse-wrap { grid-template-columns: 1fr; } }
+@media (max-width: 720px) {
+  .flow { height: auto; }
+  .hero__title { max-height: 330px; }
+  .flow li, .flow li:last-child { padding-bottom: 6px; }
+  .flow p { line-height: 1.6; }
+}
+@media (max-width: 720px) {
+  .price th, .price td { line-height: 1.45; }
+  .price tr { padding: 10px 0; row-gap: 2px; }
+  .flow b { font-size: 16px; }
+  .flow .t { font-size: 13px; margin-right: .3em; }
+  .flow li, .flow li:last-child { padding-bottom: 4px; }
+}
+@media (max-width: 720px) { .apply__text .assure { display: none; } .apply__text .prose { margin-bottom: 0; } }

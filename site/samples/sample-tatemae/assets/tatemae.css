@@ -380,3 +380,122 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   .kv h1 { margin-bottom: 14px; }
   .kv__lead { margin-bottom: 20px; }
 }
+
+/* =====================================================================
+   v2: 文字と余白を詰め、章ごとに「見出し＋図＋要点」を横に並べる
+   ===================================================================== */
+body { line-height: 1.75; }
+.sec { padding-block: clamp(40px, 5vw, 72px); }
+.sumi { margin-bottom: 18px; }
+.kicker { margin-bottom: 6px; font-size: 13px; }
+.h-sec, .two > .head .h-sec { font-size: clamp(22px, 2.1vw, 30px); line-height: 1.4; letter-spacing: .04em; margin-bottom: 10px; }
+.h-sub { font-family: var(--f-min); font-weight: 700; font-size: 19px; color: var(--ai); line-height: 1.45; margin: 0 0 6px; }
+.lede { font-size: 15px; }
+.btn { min-height: 48px; font-size: 15px; padding: 0 22px; }
+.btn--main { padding: 0 24px; }
+.two > .head { top: 96px; }
+/* KV */
+.kv__in { padding-block: clamp(28px, 3.6vw, 52px) clamp(20px, 2.4vw, 32px); }
+.kv h1 { font-size: clamp(26px, 3.1vw, 44px); line-height: 1.35; margin-bottom: 14px; }
+.kv__lead { font-size: 16px; margin-bottom: 20px; }
+.kv__fig svg { max-height: 430px; }
+.facts div { padding: 12px 16px 12px; }
+/* 帳場 */
+.ledger tbody th, .ledger td { padding: 14px 14px 14px 0; font-size: 15px; }
+.ledger tbody th { font-size: 19px; }
+.ledger td.cost { font-size: 18px; }
+/* 物差し */
+.ruler { margin: 28px 0 0; }
+.ruler li { padding-top: 16px; font-size: 14px; }
+.legend { margin-top: 18px; }
+/* 考え方: 2列 */
+.ways { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px clamp(28px, 4vw, 56px); margin-top: 20px; }
+.way { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+.way figure { margin: 0; }
+.way figure img { border: 1.5px solid var(--sumi); }
+.way figcaption { font-size: 13px; color: var(--tx-2); margin-top: 6px; }
+.way p { margin: 0 0 8px; font-size: 15px; }
+.estimate { padding: 18px 16px 10px; }
+.estimate h3 { font-size: 17px; }
+.estimate .stamp { right: 10px; top: 10px; font-size: 12px; }
+.estimate table { font-size: 13px; margin-top: 8px; }
+.estimate th, .estimate td { padding: 5px 0; }
+@media (max-width: 1100px) { .ways { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .way { grid-template-columns: 1fr; } }
+/* 地域 */
+.area { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.area svg { max-height: 360px; }
+.area ul { margin-top: 14px; }
+.area li { padding: 8px 0; font-size: 15px; }
+/* FAQ */
+.faq summary { min-height: 52px; padding: 8px 0; font-size: 15px; }
+.faq .a { padding-bottom: 14px; font-size: 15px; }
+/* 相談の章 */
+.ask__img { height: clamp(120px, 14vw, 200px); }
+.ask__in { padding-block: clamp(32px, 4.4vw, 56px); }
+.ask h2 { font-size: clamp(22px, 2.3vw, 30px); margin-bottom: 8px; }
+.ask .assure { margin-top: 12px; }
+/* 下層ページ */
+.ph__in { padding-block: clamp(28px, 3.6vw, 52px) clamp(24px, 3vw, 40px); }
+.ph h1 { font-size: clamp(26px, 3vw, 42px); line-height: 1.35; margin-bottom: 10px; }
+.ph figure img { max-height: 280px; width: 100%; object-fit: cover; }
+.crumb { margin-bottom: 4px; }
+.svc { padding-block: 24px; gap: 14px clamp(28px, 4vw, 64px); }
+.svc h3 { font-size: 20px; }
+.svc .price { font-size: 22px; margin-top: 4px; }
+.spec dt, .spec dd { padding: 8px 0; font-size: 15px; }
+.conds li { padding: 12px 0; font-size: 15px; }
+.nots li { padding: 8px 0 8px 28px; font-size: 15px; }
+.nots li::before, .nots li::after { top: 21px; }
+.step { padding-bottom: 26px; }
+.step h3 { font-size: 20px; margin-top: 2px; }
+.step p { font-size: 15px; margin-bottom: 8px; }
+.step dt, .step dd { padding: 6px 0; font-size: 15px; }
+.step dl { grid-template-columns: 7.5em minmax(0, 1fr); }
+.tag { width: 56px; height: 72px; }
+.tag .num { font-size: 19px; }
+.steps::before { left: 27px; }
+.step { grid-template-columns: 56px minmax(0, 1fr); }
+.money { margin-bottom: 6px; padding: 2px 10px; }
+.paytable th, .paytable td, .contact-ways dt, .contact-ways dd, .outline th, .outline td { padding-block: 10px; font-size: 15px; }
+.checkups { margin-top: 20px; }
+.checkups b { font-size: 18px; }
+.team { max-height: 300px; }
+.prep li { padding: 12px 0; }
+.form .row { margin-bottom: 14px; }
+.reply dt { font-size: 18px; }
+.ft { padding-block: 36px 28px; }
+@media (max-width: 900px) {
+  .kv__fig svg { max-height: 260px; }
+  .area svg { max-height: none; }
+}
+@media (max-width: 560px) {
+  .kv h1 { font-size: 27px; }
+  .h-sec, .two > .head .h-sec { font-size: 22px; }
+  .ph h1 { font-size: 27px; }
+  .ask h2 { font-size: 22px; }
+  .sec { padding-block: 40px; }
+  .kv__fig svg { max-height: 190px; }
+  .step dl { grid-template-columns: 6.5em minmax(0, 1fr); }
+  .step dt { border-bottom: 1px solid var(--rule); padding-bottom: 6px; }
+  .step dd { padding-top: 6px; }
+  .step { grid-template-columns: 44px minmax(0, 1fr); gap: 12px; padding-bottom: 20px; }
+  .tag { width: 44px; height: 60px; }
+  .tag .num { font-size: 16px; }
+  .steps::before { left: 21px; }
+  .svc { padding-block: 18px; }
+  .ph figure img { max-height: 180px; }
+  .ledger tbody tr { padding: 12px 0; }
+}
+@media (max-width: 520px) {
+  .facts { grid-template-columns: 1fr 1fr; }
+  .facts div { display: block; padding: 10px 10px 10px 0; font-size: 15px; }
+  .facts div:nth-child(odd) { border-right: 1px solid var(--rule); }
+  .facts div:nth-child(even) { padding-left: 12px; }
+  .facts div:nth-child(-n+2) { border-top: 0; }
+  .ledger tbody th { font-size: 18px; }
+  .ledger td { font-size: 15px; }
+  .ruler li { padding-bottom: 12px; }
+}
+@media (max-width: 900px) { .area { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .ledger td[data-l="範囲"] { display: none; } .area ul { margin-top: 8px; } }

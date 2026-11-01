@@ -351,3 +351,125 @@ main { overflow-x: clip; }
 }
 figure > svg.onlabel { position: absolute; inset: 0; width: 100%; height: 100%; }
 .timetable th { width: 7.5em; white-space: nowrap; }
+
+/* =====================================================================
+   v2: 文字と余白を詰め、一目で分かる密度に（オーナー指摘への対応）
+   ===================================================================== */
+body { line-height: 1.75; }
+h1.display { font-size: clamp(30px, 3.6vw, 52px); line-height: 1.28; }
+h2.display { font-size: clamp(21px, 2.1vw, 30px); line-height: 1.32; }
+.page-head h1, .page-head h1.display { font-size: clamp(28px, 3.2vw, 46px); }
+.lead { font-size: 16px; }
+.kicker { margin-bottom: 10px; font-size: 12px; }
+.btn { min-height: 48px; padding: 0 22px; font-size: 15px; }
+.age { margin-top: 12px; }
+.hero { min-height: 0; padding: 20px var(--gut) 40px; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); max-width: 1320px; }
+.hero__text .lead { margin: 16px 0 20px; }
+.hero__kv { max-width: 480px; width: 100%; justify-self: center; }
+.hero-facts { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 0; margin: 22px 0 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.hero-facts > div { padding: 10px 22px 10px 0; }
+.hero-facts > div + div { padding-left: 22px; border-left: 1px solid var(--line); }
+.hero-facts dt { font-size: 12px; color: var(--lantern); font-weight: 700; letter-spacing: .1em; }
+.hero-facts dd { margin: 0; font-size: 15px; font-weight: 700; }
+.sec { padding: clamp(44px, 6vw, 80px) 0; }
+.sec__head { margin-bottom: 24px; gap: 12px 40px; }
+.tap { grid-template-columns: 88px minmax(0, 1fr) minmax(0, 1.4fr) auto; gap: 10px 28px; padding: 14px 0; }
+.tap__lbl { width: 88px; }
+.tap__name { font-size: clamp(20px, 1.8vw, 24px); }
+.tap__style { margin-top: 2px; font-size: 12px; }
+.tap__abv { font-size: clamp(22px, 2vw, 28px); }
+.tap__price { margin-top: 4px; }
+.scene { min-height: 0; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
+.scene__img { max-height: 480px; }
+.scene__text { padding: 36px var(--gut) 36px 32px; }
+.tate { font-size: clamp(22px, 2.1vw, 30px); height: 7.6em; margin-bottom: 18px; }
+.scene__text p { margin: 0 0 10px; }
+.season { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 24px 56px; }
+.bottles { max-height: 440px; }
+.seasons { margin: 20px 0; }
+.seasons b { font-size: 18px; }
+.room { gap: 24px 56px; }
+.room__photo img { max-height: 420px; width: 100%; object-fit: cover; }
+.hours { margin: 14px 0; }
+.hours__days { font-size: clamp(20px, 2vw, 26px); letter-spacing: .2em; }
+.hours__time { font-size: clamp(28px, 3vw, 42px); }
+.news li { padding: 16px 0; grid-template-columns: 180px minmax(0, 1fr) auto; }
+.news h3 { font-size: 19px; margin-bottom: 2px; }
+.news time, .news .when { font-size: 14px; }
+.last { padding: 48px var(--gut) 64px; }
+.last__lamp { width: 64px; margin-bottom: 16px; }
+.last .acts { margin-top: 20px; }
+.page-head { padding: clamp(28px, 4vw, 56px) var(--gut) 20px; max-width: 1320px; gap: 12px 48px; }
+/* 銘柄: 2列の台帳に */
+.compare { gap: 24px 56px; }
+.chart svg { max-width: 420px; margin-inline: auto; }
+.flight img { max-height: 280px; width: 100%; object-fit: cover; }
+table.scores { margin-top: 14px; }
+.scores th, .scores td { padding: 6px 8px; }
+.beers { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 48px; border-top: 1px solid var(--line); }
+.beer { grid-template-columns: 140px minmax(0, 1fr); gap: 20px 24px; padding: 32px 0; align-items: start; border-top: 0; border-bottom: 1px solid var(--line); }
+.beer:nth-of-type(even) { grid-template-columns: 140px minmax(0, 1fr); }
+.beer:nth-of-type(even) .beer__lbl { order: 0; }
+.beer__lbl { max-width: 140px; }
+.beer h2 { font-size: clamp(24px, 2.2vw, 30px); }
+.beer .kicker { margin-bottom: 6px; }
+.beer p[style] { margin-top: 8px !important; font-size: 15px; }
+.beer .spec { margin-top: 12px; grid-template-columns: 6.5em minmax(0, 1fr); font-size: 15px; }
+.beer .spec dt, .beer .spec dd { padding: 6px 0; }
+.beer .big { font-size: 17px; }
+.cal th, .cal td { height: 42px; }
+/* 醸造所 */
+.fullimg { height: min(46vh, 420px); }
+.story { gap: 16px 56px; }
+.story p { margin-bottom: .8em; }
+.trio { gap: 24px 56px; }
+.trio svg { max-width: 340px; justify-self: center; }
+.trio dt { font-size: 18px; margin-top: 12px; }
+.steps-text { margin-top: 12px; gap: 16px; }
+.steps-text b { font-size: 17px; }
+.pair { margin-top: 32px !important; }
+.pair img { height: 280px; width: 100%; object-fit: cover; }
+.vows li { padding: 18px 0; gap: 8px 48px; }
+.vows h3 { font-size: clamp(19px, 1.8vw, 24px); }
+/* イベント・アクセス */
+.tour li { padding-top: 54px; font-size: 15px; }
+.tour b { font-size: 18px; }
+.map { gap: 24px 48px; }
+.map svg { max-height: 440px; }
+.timetable th, .timetable td { padding: 10px 8px; }
+.buy > div { padding: 22px 28px 22px 0; }
+.buy > div + div { padding-left: 28px; }
+.buy h3 { font-size: 21px; }
+.notice { padding: 20px 24px; }
+.notice__mark { width: 56px; height: 56px; font-size: 18px; }
+.site-foot { padding: 40px var(--gut) 32px; }
+@media (max-width: 900px) {
+  .hero { padding-bottom: 28px; }
+  .hero__kv { max-width: 320px; }
+  .scene__img { max-height: none; }
+  .tate { height: auto; }
+  .beers { grid-template-columns: 1fr; }
+  .news li { grid-template-columns: 1fr; gap: 4px; }
+  .pair img { height: 200px; }
+}
+@media (max-width: 560px) {
+  .sec { padding: 40px 0; }
+  .hero-facts { grid-template-columns: 1fr; }
+  .hero-facts > div, .hero-facts > div + div { padding: 6px 0; border-left: 0; }
+  .hero-facts > div + div { border-top: 1px solid var(--line); }
+  .tap { grid-template-columns: 64px minmax(0, 1fr); }
+  .tap__lbl { width: 64px; }
+  .beer { grid-template-columns: 96px minmax(0, 1fr); }
+  .beer:nth-of-type(even) { grid-template-columns: 96px minmax(0, 1fr); }
+  .beer__lbl { max-width: 96px; }
+  .beer .spec { grid-column: 1 / -1; }
+  .last { padding: 40px var(--gut) 48px; }
+  .scene__img { aspect-ratio: 16 / 10; }
+  .bottles { max-height: none; }
+}
+.hero { max-width: calc(1280px + 2 * var(--gut)); }
+@media (min-width: 901px) { .tate { height: 8.8em; } }
+.page-head { max-width: calc(1280px + 2 * var(--gut)); }
+.cal tbody th { white-space: nowrap; width: 7.5em; font-size: 15px; }
+@media (max-width: 900px) { .hero { grid-template-columns: 1fr; } .hero__kv { max-width: 300px; } }
+@media (max-width: 900px) { .scene, .season { grid-template-columns: 1fr; } .scene__text { padding: 24px var(--gut) 36px; } }

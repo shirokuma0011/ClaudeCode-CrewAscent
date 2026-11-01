@@ -324,3 +324,128 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   .ph__img img { width: 100%; max-height: 44vh; object-fit: cover; }
   .dodont > div:first-child { padding-right: 0; }
 }
+
+/* =====================================================================
+   v2: 文字と余白を詰め、章ごとに「見出し＋図＋要点」を横に並べる
+   ===================================================================== */
+body { line-height: 1.75; }
+.eyebrow { margin-bottom: 12px; }
+.h-sec { font-size: clamp(22px, 2.1vw, 30px); line-height: 1.4; letter-spacing: .08em; margin-bottom: 12px; }
+.lede { font-size: 15px; }
+.sec { padding-block: clamp(44px, 6vw, 80px); }
+.sec__head { margin-bottom: clamp(20px, 3vw, 32px); }
+.btn { min-height: 48px; padding: 0 24px; font-size: 15px; }
+/* KV */
+.kv__in { grid-template-columns: 1.2fr .8fr; gap: clamp(24px, 4vw, 64px); align-items: center; padding-block: clamp(32px, 4.4vw, 64px) clamp(36px, 4.4vw, 60px); }
+.kv h1 { font-size: clamp(28px, 3.5vw, 50px); line-height: 1.3; margin-bottom: 16px; }
+.kv__lead { font-size: 16px; margin-bottom: 20px; }
+.kv__facts { margin: 0 0 24px; padding: 14px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); gap: 6px 28px; }
+.kv__facts dd { font-size: 16px; }
+.mirror { width: min(100%, 360px); }
+.mirror__rings { width: 140px; height: 140px; left: -52px; bottom: -28px; }
+/* 横並びの章 */
+.split { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: 24px clamp(32px, 5vw, 72px); align-items: start; }
+.side-fig { margin: 20px 0 0; }
+.side-fig img { border-radius: 14px; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+@media (max-width: 860px) { .split { grid-template-columns: 1fr; } .side-fig { display: none; } }
+/* 時間割 */
+.day__bar { height: 52px; }
+.day__ticks { margin-bottom: 18px; }
+.day__rows li { grid-template-columns: 7.5em 9em minmax(0, 1fr); gap: 4px 20px; padding: 14px 0; }
+.day__rows h3 { font-size: 19px; letter-spacing: .06em; }
+.day__rows p { font-size: 15px; }
+/* メニュー抜粋 */
+.picks { margin-bottom: 24px; }
+.picks li { padding: 16px 0; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.3fr) 7.5em; gap: 4px 24px; }
+.picks h3 { font-size: 20px; letter-spacing: .06em; }
+.picks .inc { font-size: 13px; }
+.price { font-size: 22px; }
+/* 考え方 */
+.idea { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(28px, 5vw, 72px); }
+.idea figure img { max-height: 400px; object-fit: cover; }
+.idea__pts { margin-top: 16px; }
+.idea__pts li { padding: 10px 0 10px 36px; font-size: 15px; }
+.idea__pts li::before { top: 17px; }
+/* 空間 */
+.room { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 24px clamp(28px, 5vw, 64px); align-items: center; }
+.room__fig { margin: 0; }
+.room__img { border-radius: 18px; }
+.room__facts { grid-template-columns: 1fr; border: 0; border-top: 1px solid var(--graphite); border-radius: 0; background: transparent; margin: 8px 0 10px; }
+.room__facts div, .room__facts div:first-child { border: 0; border-bottom: 1px solid var(--rule); padding: 12px 0; display: grid; grid-template-columns: 7em 1fr; align-items: baseline; }
+.room__facts dd { font-size: 18px; margin: 0; }
+@media (max-width: 860px) { .room { grid-template-columns: 1fr; } }
+/* 営業時間・地図 */
+.info { gap: clamp(28px, 5vw, 64px); align-items: center; }
+.hours th, .hours td { padding: 10px 0; font-size: 15px; }
+.map { max-width: 520px; justify-self: end; width: 100%; }
+/* 予約 */
+.book { padding-block: clamp(52px, 6.4vw, 88px); }
+.book h2 { font-size: clamp(22px, 2.4vw, 30px); margin-bottom: 10px; }
+.book p { margin-bottom: 22px; }
+.book ul { margin-top: 22px; }
+.book__rings { width: min(820px, 160vw); }
+/* 下層ページ */
+.ph { padding-block: clamp(36px, 4.4vw, 60px) clamp(28px, 3.4vw, 44px); }
+.ph h1 { font-size: clamp(28px, 3vw, 44px); line-height: 1.3; margin-bottom: 12px; }
+.ph__img img { max-height: 300px; width: 100%; object-fit: cover; }
+.mtable tbody th, .mtable td { padding: 14px 0; }
+.mtable tbody th b { font-size: 19px; }
+.mtable td.p { font-size: 18px; }
+.tag { margin-top: 4px; }
+.rules h3, .dodont h3 { font-size: 20px; }
+.rules dl div, .rules ol li { padding: 10px 0; font-size: 15px; }
+.dodont > div { padding: 20px 0; }
+.dodont li { padding: 8px 0 8px 28px; font-size: 15px; }
+.dodont .do li::before { top: 15px; }
+.dodont .dont li::before { top: 22px; }
+.faq summary { min-height: 52px; padding: 8px 0; }
+.faq details p { margin-bottom: 16px; font-size: 15px; }
+.ft { padding-block: 40px 32px; }
+@media (max-width: 760px) {
+  .day__rows li { grid-template-columns: 6.5em 1fr; }
+  .day__rows li p { grid-column: 1 / -1; }
+}
+@media (max-width: 640px) {
+  .kv h1 { font-size: 30px; letter-spacing: .06em; }
+  .h-sec { font-size: 22px; }
+  .book h2 { font-size: 22px; }
+  .ph h1 { font-size: 28px; }
+  .sec { padding-block: 44px; }
+  .kv__in { padding-block: 24px 40px; gap: 20px; }
+  .mirror__img { aspect-ratio: 16 / 9; }
+  .kv__facts div { grid-template-columns: 7.5em 1fr; }
+  .picks li { padding: 12px 0; }
+  .ph__img img { max-height: 200px; }
+  .book { padding-block: 52px; }
+}
+.side-fig img { aspect-ratio: 16 / 9; }
+.day__rows li { grid-template-columns: 7em 10.5em minmax(0, 1fr); }
+.idea figure img { max-height: 340px; }
+.sec { padding-block: clamp(40px, 5vw, 72px); }
+@media (max-width: 760px) { .day__rows li { grid-template-columns: 6.5em 1fr; } }
+@media (max-width: 860px) {
+  .kv__in { grid-template-columns: 1fr; }
+  .mirror { width: 100%; justify-self: stretch; }
+  .idea { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .picks li { grid-template-columns: minmax(0, 1fr) auto; }
+}
+@media (max-width: 640px) {
+  .mtable tbody tr { padding: 12px 0; }
+  .mtable tbody th { padding-bottom: 4px; }
+  .mtable tbody th b { font-size: 18px; }
+  .mtable tbody th span { font-size: 13px; margin-top: 0; }
+  .mtable td.p { font-size: 17px; }
+  .filter .chip { min-height: 44px; padding: 0 16px; font-size: 14px; }
+}
+.dur__line { flex: none; }
+@media (max-width: 640px) {
+  .mtable tbody th { grid-column: 1; grid-row: 1; }
+  .mtable td.p { grid-column: 2; grid-row: 1; padding-left: 12px; }
+  .mtable td.t { grid-column: 1 / -1; grid-row: 2; }
+  .mtable td.t .dur { width: 100%; }
+  .mtable td.t .dur__line { margin-top: 0; }
+}
+@media (max-width: 640px) { .mtable td.t { display: block; width: 100%; padding-top: 6px; } .mtable td.t .dur { display: flex; } }
+.dur__line { width: calc(var(--min) / 120 * (100% - 6em)); }
