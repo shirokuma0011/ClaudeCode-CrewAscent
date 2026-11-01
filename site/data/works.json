@@ -25,14 +25,78 @@
       "typeName": "未来情報設計型サイト",
       "plan": "標準",
       "pages": "5ページ",
-      "summary": "形のないサービスを、操作する前に図で理解できるようにした5ページの見本です。",
+      "summary": "問い合わせ・予約・在庫を1つの表で扱う台帳を、最初の画面で実物のように見せた5ページの見本です。",
       "points": [
-        "散らばった記録が1つの表に並ぶ図を最初の画面に",
-        "困りごとで機能を絞り込めるフィルター",
+        "台帳の画面そのものを最初の画面の主役に",
+        "できること・できないことを並べる",
         "総額と含まれる範囲が分かる料金表とシミュレーター"
       ],
       "thumb": "assets/img/works/sample-kotowake.jpg",
       "url": "samples/sample-kotowake/index.html"
+    },
+    {
+      "id": "sample-tebikisha",
+      "name": "小さなお店のレジと予約の導入代行 てびき舎（架空）",
+      "industry": "業務システム導入",
+      "typeId": "CA02",
+      "typeName": "先進案内型サイト",
+      "pages": "TOPページのみ",
+      "summary": "小さなお店が、どこから替えればよいかを最初の画面で選べるようにしたTOPページの見本です。",
+      "points": [
+        "対象・頼めること・料金の入口を3行に",
+        "相談から本番までの4段階を最初の画面の下端に",
+        "追加費用が出る条件を表で"
+      ],
+      "thumb": "assets/img/works/sample-tebikisha.jpg",
+      "url": "samples/sample-tebikisha/index.html"
+    },
+    {
+      "id": "sample-noborizaka",
+      "name": "週2回で体力をつくる パーソナルジム のぼりざか（架空）",
+      "industry": "パーソナルジム",
+      "typeId": "CA03",
+      "typeName": "成長サービス型サイト",
+      "pages": "TOPページのみ",
+      "summary": "通い方と料金を前置きなしで言い切った、パーソナルジムのTOPページの見本です。",
+      "points": [
+        "週2回・50分と月額を最初の画面に",
+        "すること・しないことを左右に並べる",
+        "3か月の進め方を坂の線で"
+      ],
+      "thumb": "assets/img/works/sample-noborizaka.jpg",
+      "url": "samples/sample-noborizaka/index.html"
+    },
+    {
+      "id": "sample-mirume",
+      "name": "目で見る検品のための画像認識 ミルメ（架空）",
+      "industry": "AI・先端技術",
+      "typeId": "CA04",
+      "typeName": "先進ブランド型サイト",
+      "pages": "TOPページのみ",
+      "summary": "人の検品を手伝う画像認識を、撮影台の写真1枚で伝えるTOPページの見本です。",
+      "points": [
+        "サービスと考え方を一文の見出しに",
+        "用意するものと4つの段階を具体的に",
+        "試験運用の費用の入口を最初の画面に"
+      ],
+      "thumb": "assets/img/works/sample-mirume.jpg",
+      "url": "samples/sample-mirume/index.html"
+    },
+    {
+      "id": "sample-usuakari",
+      "name": "光を通す植物素材の研究所 うすあかり研究所（架空）",
+      "industry": "研究開発",
+      "typeId": "CA05",
+      "typeName": "未来感ブランド型サイト",
+      "pages": "TOPページのみ",
+      "summary": "光を通す素材そのものを主役の一枚にした、研究所のTOPページの見本です。",
+      "points": [
+        "逆光の膜の写真を画面いっぱいに",
+        "いま受けられる試作の範囲を明記",
+        "問い合わせ前に確かめられることを整理"
+      ],
+      "thumb": "assets/img/works/sample-usuakari.jpg",
+      "url": "samples/sample-usuakari/index.html"
     },
     {
       "id": "sample-yoiyami",
@@ -42,14 +106,78 @@
       "typeName": "ファン化ブランド型サイト",
       "plan": "おまかせ",
       "pages": "5ページ",
-      "summary": "夕暮れから夜へ変わる空と円形ラベルで、季節の銘柄を待ちたくなる世界観をつくった5ページの見本です。",
+      "summary": "宵の一杯の写真を主役に、今月の銘柄とタップルームへの行き方まで迷わず進める5ページの見本です。",
       "points": [
-        "スクロールで夕暮れから宵へ変わる背景",
-        "銘柄ごとに生成する円形ラベルと味わいチャート",
-        "年齢の注意と購入案内を各ページに"
+        "全幅の宵の写真と、宣言としての見出し",
+        "今月の3銘柄と季節の限定を写真で",
+        "20歳未満の飲酒禁止の表示と購入案内を各ページに"
       ],
       "thumb": "assets/img/works/sample-yoiyami.jpg",
       "url": "samples/sample-yoiyami/index.html"
+    },
+    {
+      "id": "sample-korogari",
+      "name": "ベアリングと空圧部品の専門商社 ころがり商会（架空）",
+      "industry": "専門商社",
+      "typeId": "CA07",
+      "typeName": "先進情報型サイト",
+      "pages": "TOPページのみ",
+      "summary": "品番が分からなくても仕様から探せることを示す、専門商社のTOPページの見本です。",
+      "points": [
+        "分類の色帯と細い罫の条件表",
+        "取り寄せ日数・最小数量・送料を一覧に",
+        "当日出荷の締め時刻と更新日を明記"
+      ],
+      "thumb": "assets/img/works/sample-korogari.jpg",
+      "url": "samples/sample-korogari/index.html"
+    },
+    {
+      "id": "sample-hanashiba",
+      "name": "小学生と大人の少人数英会話 はなしば英会話（架空）",
+      "industry": "語学",
+      "typeId": "CA08",
+      "typeName": "今らしい案内型サイト",
+      "pages": "TOPページのみ",
+      "summary": "スマートフォンで3つ確かめてから相談できる、英会話教室のTOPページの見本です。",
+      "points": [
+        "クラス・初回の流れ・月謝の3つの入口",
+        "追加費用の条件を短く",
+        "スマートフォンを先に設計"
+      ],
+      "thumb": "assets/img/works/sample-hanashiba.jpg",
+      "url": "samples/sample-hanashiba/index.html"
+    },
+    {
+      "id": "sample-aorishajo",
+      "name": "中小企業の商品撮影と採用動画 アオリ写場（架空）",
+      "industry": "写真・映像制作",
+      "typeId": "CA09",
+      "typeName": "洗練集客型サイト",
+      "pages": "TOPページのみ",
+      "summary": "撮れるもの・撮れないものと料金の目安を問い合わせ前に示す、撮影スタジオのTOPページの見本です。",
+      "points": [
+        "料金の目安を最初の画面の近くに",
+        "撮れるもの・撮れないものを並べる",
+        "納品までの流れと追加費用を表で"
+      ],
+      "thumb": "assets/img/works/sample-aorishajo.jpg",
+      "url": "samples/sample-aorishajo/index.html"
+    },
+    {
+      "id": "sample-nokishita",
+      "name": "小さな住まいと店舗の設計事務所 ノキシタ設計室（架空）",
+      "industry": "設計事務所",
+      "typeId": "CA10",
+      "typeName": "洗練ブランド型サイト",
+      "pages": "TOPページのみ",
+      "summary": "素材と光の考え方から設計料まで一枚で読める、設計事務所のTOPページの見本です。",
+      "points": [
+        "写真を大きく、言葉は少なく",
+        "相談から設計契約までの4段階",
+        "初回相談の費用と設計料の考え方"
+      ],
+      "thumb": "assets/img/works/sample-nokishita.jpg",
+      "url": "samples/sample-nokishita/index.html"
     },
     {
       "id": "sample-minamo",
@@ -69,6 +197,38 @@
       "url": "samples/sample-minamo/index.html"
     },
     {
+      "id": "sample-shimawo",
+      "name": "縞だけを編む靴下 シマヲ（架空）",
+      "industry": "D2Cブランド",
+      "typeId": "CA12",
+      "typeName": "印象記憶ブランド型サイト",
+      "pages": "TOPページのみ",
+      "summary": "縞の靴下だけを編むブランドを、縞そのもので覚えてもらうTOPページの見本です。",
+      "points": [
+        "4色の糸と縞の幅の決め方",
+        "1足と3足組の値段（税込）",
+        "贈り物とまとめ買いの相談の入口"
+      ],
+      "thumb": "assets/img/works/sample-shimawo.jpg",
+      "url": "samples/sample-shimawo/index.html"
+    },
+    {
+      "id": "sample-karimonoya",
+      "name": "説明会と地域行事の機材レンタル カリモノ屋（架空）",
+      "industry": "機材レンタル・リース",
+      "typeId": "CA13",
+      "typeName": "クリア情報型サイト",
+      "pages": "TOPページのみ",
+      "summary": "何を・何日・いくらで借りられるかを表で確かめられる、機材レンタルのTOPページの見本です。",
+      "points": [
+        "品目ごとの料金表",
+        "配送・設置・返却の条件",
+        "追加費用が出る条件"
+      ],
+      "thumb": "assets/img/works/sample-karimonoya.jpg",
+      "url": "samples/sample-karimonoya/index.html"
+    },
+    {
       "id": "sample-tsumiki",
       "name": "個別指導 つみき塾（架空）",
       "industry": "学習塾",
@@ -76,10 +236,10 @@
       "typeName": "成長案内型サイト",
       "plan": "シンプル",
       "pages": "3ページ",
-      "summary": "保護者と生徒の両方が、入塾までの段階と費用の総額を先に確かめられる3ページの見本です。",
+      "summary": "つまずいた所まで戻って進む塾の考え方と、入塾までの4段を先に見せる3ページの見本です。",
       "points": [
-        "積み木が積み上がる最初の画面と章番号",
-        "学年と目的から選べるコース早見",
+        "明朝の見出しと教室の写真の最初の画面",
+        "無料体験から入塾までの4段と、各段で渡すもの",
         "月謝以外の費用も含めた年間総額の例"
       ],
       "thumb": "assets/img/works/sample-tsumiki.jpg",
@@ -103,6 +263,70 @@
       "url": "samples/sample-shinari/index.html"
     },
     {
+      "id": "sample-hitoune",
+      "name": "朝どり野菜の農園と直売所 ひとうね農園（架空）",
+      "industry": "農園・直売所",
+      "typeId": "CA16",
+      "typeName": "新鮮魅力型サイト",
+      "pages": "TOPページのみ",
+      "summary": "朝どり野菜の3つの買い方と今週の野菜を一目で分かるようにした、農園のTOPページの見本です。",
+      "points": [
+        "直売所・野菜箱・飲食店向けの3つの買い方",
+        "今週の野菜と営業日",
+        "値段（税込）をそれぞれの入口に"
+      ],
+      "thumb": "assets/img/works/sample-hitoune.jpg",
+      "url": "samples/sample-hitoune/index.html"
+    },
+    {
+      "id": "sample-yuzuriyu",
+      "name": "町の銭湯とサウナ ゆずり湯（架空）",
+      "industry": "銭湯・サウナ",
+      "typeId": "CA17",
+      "typeName": "魅力発信型サイト",
+      "pages": "TOPページのみ",
+      "summary": "薪で沸かす銭湯の読みものと、初めての人の案内を両立したTOPページの見本です。",
+      "points": [
+        "季節の湯と薪の話を読みもので",
+        "初めての人のための入り方",
+        "料金（税込）と営業時間"
+      ],
+      "thumb": "assets/img/works/sample-yuzuriyu.jpg",
+      "url": "samples/sample-yuzuriyu/index.html"
+    },
+    {
+      "id": "sample-mura",
+      "name": "傷とムラを残す革工房 ムラ（架空）",
+      "industry": "工房（陶芸・ガラス・革）",
+      "typeId": "CA18",
+      "typeName": "個性発信型サイト",
+      "pages": "TOPページのみ",
+      "summary": "傷とムラを革の履歴として見せる、革工房のTOPページの見本です。",
+      "points": [
+        "革の表情を大きな写真で",
+        "名刺入れ・小銭入れ・ペンケースの値段",
+        "オーダーの流れ・期間・費用の考え方"
+      ],
+      "thumb": "assets/img/works/sample-mura.jpg",
+      "url": "samples/sample-mura/index.html"
+    },
+    {
+      "id": "sample-iemachi",
+      "name": "家で過ごすための訪問看護ステーション いえまち（架空）",
+      "industry": "訪問看護・訪問介護",
+      "typeId": "CA19",
+      "typeName": "安心情報型サイト",
+      "pages": "TOPページのみ",
+      "summary": "家で訪問看護を受けられるかを確かめるための、やさしい案内のTOPページの見本です。",
+      "points": [
+        "保険の種類ごとの対象条件と料金の目安",
+        "利用開始までの4つの段階",
+        "対応地域"
+      ],
+      "thumb": "assets/img/works/sample-iemachi.jpg",
+      "url": "samples/sample-iemachi/index.html"
+    },
+    {
       "id": "sample-shiori",
       "name": "税理士 しおり会計事務所（架空）",
       "industry": "税理士・会計",
@@ -118,6 +342,22 @@
       ],
       "thumb": "assets/img/works/sample-shiori.jpg",
       "url": "samples/sample-shiori/index.html"
+    },
+    {
+      "id": "sample-kotsubu",
+      "name": "犬と猫の町の病院 こつぶ動物病院（架空）",
+      "industry": "動物病院",
+      "typeId": "CA21",
+      "typeName": "親切案内型サイト",
+      "pages": "TOPページのみ",
+      "summary": "初めての来院の不安を減らす、町の動物病院のTOPページの見本です。",
+      "points": [
+        "診療時間を最初の画面に",
+        "料金の目安と追加費用が出る条件",
+        "持ち物と、猫と犬で分けた待合"
+      ],
+      "thumb": "assets/img/works/sample-kotsubu.jpg",
+      "url": "samples/sample-kotsubu/index.html"
     },
     {
       "id": "sample-madonohi",
@@ -137,6 +377,54 @@
       "url": "samples/sample-madonohi/index.html"
     },
     {
+      "id": "sample-shizuri",
+      "name": "完全予約制のフェイシャルとボディ サロン しずり（架空）",
+      "industry": "エステ・リラクゼーション",
+      "typeId": "CA23",
+      "typeName": "上質魅力型サイト",
+      "pages": "TOPページのみ",
+      "summary": "一日四名までのサロンの静けさと、勧誘しない方針を伝えるTOPページの見本です。",
+      "points": [
+        "メニュー・所要時間・料金（税込）",
+        "勧誘をしない方針を明記",
+        "民家の離れの写真で空気を伝える"
+      ],
+      "thumb": "assets/img/works/sample-shizuri.jpg",
+      "url": "samples/sample-shizuri/index.html"
+    },
+    {
+      "id": "sample-nekko",
+      "name": "森で過ごす小さな保育 野あそび保育 ねっこ（架空）",
+      "industry": "自然保育・オルタナティブ教育",
+      "typeId": "CA24",
+      "typeName": "共感ブランド型サイト",
+      "pages": "TOPページのみ",
+      "summary": "森で過ごす保育の考え方と安全の考え方を、写真で伝えるTOPページの見本です。",
+      "points": [
+        "雨の日も外で過ごす理由",
+        "一日の流れと持ち物",
+        "月の費用（税込）と見学の申し込み"
+      ],
+      "thumb": "assets/img/works/sample-nekko.jpg",
+      "url": "samples/sample-nekko/index.html"
+    },
+    {
+      "id": "sample-tsubusa",
+      "name": "業務用空調と給排水の定期点検 つぶさ設備（架空）",
+      "industry": "設備メンテナンス・点検",
+      "typeId": "CA25",
+      "typeName": "信頼情報型サイト",
+      "pages": "TOPページのみ",
+      "summary": "点検の種類・頻度・料金と報告書の中身を表で示す、設備点検のTOPページの見本です。",
+      "points": [
+        "点検の種類と頻度の表",
+        "報告書の中身を見せる",
+        "追加費用が出る条件"
+      ],
+      "thumb": "assets/img/works/sample-tsubusa.jpg",
+      "url": "samples/sample-tsubusa/index.html"
+    },
+    {
       "id": "sample-tatemae",
       "name": "木組みの家 たてまえ工務店（架空）",
       "industry": "工務店",
@@ -144,14 +432,78 @@
       "typeName": "王道サービス型サイト",
       "plan": "標準",
       "pages": "5ページ",
-      "summary": "家づくりの段取りと、費用が決まるタイミングを先に見せる5ページの見本です。",
+      "summary": "家づくりの段取りと、費用が決まる時期を先に見せる5ページの見本です。",
       "points": [
-        "スクロールで骨組みが組み上がるタイムライン",
+        "写真を主役にした最初の画面と、段取りの一文",
         "段階ごとに決めること・用意するもの",
-        "項目別の費用の目安と対応できないこと"
+        "項目別の費用の目安と、支払いの割合の表"
       ],
       "thumb": "assets/img/works/sample-tatemae.jpg",
       "url": "samples/sample-tatemae/index.html"
+    },
+    {
+      "id": "sample-nugui",
+      "name": "台所と浴室のハウスクリーニング ぬぐい（架空）",
+      "industry": "清掃",
+      "typeId": "CA27",
+      "typeName": "誠実集客型サイト",
+      "pages": "TOPページのみ",
+      "summary": "どこまで掃除するかと料金の目安を確かめられる、ハウスクリーニングのTOPページの見本です。",
+      "points": [
+        "場所ごとの作業範囲",
+        "料金の目安（税込）と追加費用の条件",
+        "電話とフォームの受付時間"
+      ],
+      "thumb": "assets/img/works/sample-nugui.jpg",
+      "url": "samples/sample-nugui/index.html"
+    },
+    {
+      "id": "sample-hagatame",
+      "name": "家族で通う町の歯医者 はがため歯科（架空）",
+      "industry": "歯科",
+      "typeId": "CA28",
+      "typeName": "安心ブランド型サイト",
+      "pages": "TOPページのみ",
+      "summary": "治療前の説明を大切にする町の歯医者を、落ち着いた構成で伝えるTOPページの見本です。",
+      "points": [
+        "模型と手鏡で説明すること",
+        "初診の流れ",
+        "保険診療と自費診療の費用の考え方"
+      ],
+      "thumb": "assets/img/works/sample-hagatame.jpg",
+      "url": "samples/sample-hagatame/index.html"
+    },
+    {
+      "id": "sample-hitoyo",
+      "name": "一日三組の山あいの宿 ひとよ（架空）",
+      "industry": "旅館・ホテル",
+      "typeId": "CA29",
+      "typeName": "上質ブランド型サイト",
+      "pages": "TOPページのみ",
+      "summary": "一日三組の宿の静けさと、料金に含まれるものを最初の画面で伝えるTOPページの見本です。",
+      "points": [
+        "縦書きの見出しと全幅の写真",
+        "宿泊料金に含まれるものを下の帯に",
+        "滞在を時刻の線で"
+      ],
+      "thumb": "assets/img/works/sample-hitoyo.jpg",
+      "url": "samples/sample-hitoyo/index.html"
+    },
+    {
+      "id": "sample-harenoma",
+      "name": "二十人までの結婚式場 ハレノマ（架空）",
+      "industry": "ブライダル",
+      "typeId": "CA30",
+      "typeName": "選ばれる魅力型サイト",
+      "pages": "TOPページのみ",
+      "summary": "二十人までの式を、長いテーブル一つを囲む考え方で伝えるTOPページの見本です。",
+      "points": [
+        "招待状のような中央の軸",
+        "二十席の席の図",
+        "人数ごとの基本料金と追加費用の条件"
+      ],
+      "thumb": "assets/img/works/sample-harenoma.jpg",
+      "url": "samples/sample-harenoma/index.html"
     },
     {
       "id": "sample-orime",
@@ -171,6 +523,38 @@
       "url": "samples/sample-orime/index.html"
     },
     {
+      "id": "sample-toomi",
+      "name": "司法書士・土地家屋調査士 とおみ事務所（架空）",
+      "industry": "司法書士・土地家屋調査士",
+      "typeId": "CA32",
+      "typeName": "正統案内型サイト",
+      "pages": "TOPページのみ",
+      "summary": "相続の登記と境界の確認を、順番どおりに案内する手引き書型のTOPページの見本です。",
+      "points": [
+        "3つの入口を最初の画面に",
+        "相談の流れと用意するもの",
+        "報酬の目安と追加費用の条件を表で"
+      ],
+      "thumb": "assets/img/works/sample-toomi.jpg",
+      "url": "samples/sample-toomi/index.html"
+    },
+    {
+      "id": "sample-wadachi",
+      "name": "車検と整備の町工場 わだち自動車（架空）",
+      "industry": "自動車整備・販売",
+      "typeId": "CA33",
+      "typeName": "信頼獲得型サイト",
+      "pages": "TOPページのみ",
+      "summary": "交換する部品を見せて説明する町工場を、整備記録票の形で伝えるTOPページの見本です。",
+      "points": [
+        "対応できる・できない作業を最初の画面に",
+        "車の大きさ別の車検費用の比較表",
+        "追加費用が出る条件"
+      ],
+      "thumb": "assets/img/works/sample-wadachi.jpg",
+      "url": "samples/sample-wadachi/index.html"
+    },
+    {
       "id": "sample-sumiakari",
       "name": "書の教室 墨灯（架空）",
       "industry": "和の教室（着物・茶道など）",
@@ -186,6 +570,38 @@
       ],
       "thumb": "assets/img/works/sample-sumiakari.jpg",
       "url": "samples/sample-sumiakari/index.html"
+    },
+    {
+      "id": "sample-fumiishi",
+      "name": "ものづくり企業の特許・意匠・商標 ふみいし特許事務所（架空）",
+      "industry": "特許・知財事務所",
+      "typeId": "CA35",
+      "typeName": "高信頼ブランド型サイト",
+      "pages": "TOPページのみ",
+      "summary": "試作品から出願までの道筋を、章の順番で示す特許事務所のTOPページの見本です。",
+      "points": [
+        "章の順番を示す踏み石の帯",
+        "相談時に必要な情報",
+        "事務所の手数料と特許庁の費用の内訳"
+      ],
+      "thumb": "assets/img/works/sample-fumiishi.jpg",
+      "url": "samples/sample-fumiishi/index.html"
+    },
+    {
+      "id": "sample-nekase",
+      "name": "木桶で二夏寝かせる醤油蔵 ねかせ醤油（架空）",
+      "industry": "酒蔵・醸造",
+      "typeId": "CA36",
+      "typeName": "価値伝達ブランド型サイト",
+      "pages": "TOPページのみ",
+      "summary": "木桶で二夏寝かせる醤油を、物語の章立てで伝えるTOPページの見本です。",
+      "points": [
+        "二年の工程を一本の線で",
+        "布で搾る工程を写真の上の文章で",
+        "3つの買い方と送料・最小数量"
+      ],
+      "thumb": "assets/img/works/sample-nekase.jpg",
+      "url": "samples/sample-nekase/index.html"
     }
   ]
 }

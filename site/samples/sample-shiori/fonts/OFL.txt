@@ -94,12 +94,12 @@ FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
 
 
-===== dmmono =====
-Copyright 2020 The DM Mono Project Authors (https://www.github.com/googlefonts/dm-mono)
+===== spectral =====
+Copyright 2017 The Spectral Project Authors (https://github.com/productiontype/Spectral)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
-http://scripts.sil.org/OFL
+https://openfontlicense.org
 
 
 -----------------------------------------------------------

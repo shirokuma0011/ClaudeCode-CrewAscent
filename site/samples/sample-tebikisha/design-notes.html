@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>設計メモ｜小さなお店のレジと予約の導入代行 てびき舎（見本・架空）｜クルーアセント</title>
+<meta name="description" content="架空の事業「小さなお店のレジと予約の導入代行 てびき舎」の見本サイトを、Web診断36のCA02 先進案内型サイトの方針でどう設計したかの記録です。">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="../../assets/brand/icon-32.png" sizes="32x32">
+<link rel="stylesheet" href="../_shared/crew-frame.css?v=20261015">
+<script defer src="../_shared/crew-frame.js?v=20261015"></script>
+</head>
+<body class="ca-notes">
+<div class="ca-ribbon" role="note" aria-label="見本サイトについて">
+  <a class="ca-ribbon__brand" href="../../index.html" aria-label="クルーアセント（制作）"><img src="../../assets/brand/logo-onink.webp" width="360" height="278" alt=""><span class="ca-ribbon__long">クルーアセント</span></a>
+  <p class="ca-ribbon__text"><b>見本サイト・架空</b><span class="ca-ribbon__long">架空の事業を想定した制作イメージです。事業・価格・住所はすべて架空です。</span></p>
+  <p class="ca-ribbon__links"><a href="../../type-advanced-guidance.html">CA02<span class="ca-ribbon__long"> 先進案内型サイト</span></a><a href="design-notes.html"><span class="ca-ribbon__long">この見本の</span>設計メモ</a></p>
+</div>
+<main id="main">
+  <p><a href="index.html">← 見本サイトに戻る</a></p>
+  <h1>「小さなお店のレジと予約の導入代行 てびき舎」の設計メモ</h1>
+  <p class="ca-lead">この見本は架空の事業です。Web診断36の <a href="../../type-advanced-guidance.html">CA02 先進案内型サイト</a> の方針を、業務システム導入の事業に当てはめるとどうなるかを示すために作りました。</p>
+
+  <h2><small>01</small>このタイプの方針</h2>
+  <p>新しいサービスの使い方を、迷いの少ない案内で届けるタイプです。内容は新しいが、利用者には分かりやすく説明する必要がある事業に向きます。ステップ、対象者別の入口、デモ、FAQを組み合わせ、未知のサービスへの不安を減らします。</p>
+  <table><tbody>
+    <tr><th>位置</th><td>実用・情報 × 先進・新しさ<br>横軸 2 / 6（情報寄り）— 分かりやすい案内<br>縦軸 6 / 6（もっとも先進寄り）— 未来感と実験性</td></tr>
+    <tr><th>デザインの言葉</th><td><span class="ca-chip">クリーン</span><span class="ca-chip">ナビゲーション重視</span><span class="ca-chip">ラインモーション</span><span class="ca-chip">明るい先進色</span><span class="ca-chip">整った余白</span></td></tr>
+  </tbody></table>
+
+  <h2><small>02</small>最初の画面の4つの役割と、この見本での答え</h2>
+  <table><thead><tr><th>方針</th><th>この見本では</th></tr></thead><tbody>
+    <tr><th>見出しの役割<br><small>誰のための、何を助けるサービスかを平易な言葉で伝える</small></th><td>「レジと予約を、お店の順番で入れ替える。」の一文で、誰のための（小さなお店）、何を助けるサービスか（レジと予約の入れ替え）を、専門用語を使わずに言い切りました。見出しの上に「小さなお店の、レジと予約の導入代行」と業種名を添えています。</td></tr>
+    <tr><th>添える情報<br><small>対応内容、相談方法、料金の入口を短く示す</small></th><td>見出しの下に、対象（小さな食堂・雑貨店・習い事教室）／頼めること（機種選び・設定・操作の説明）／料金（相談は無料、設定作業は1回ごと）の3行だけを、細い罫で区切って並べました。</td></tr>
+    <tr><th>裏づけ<br><small>受付の流れ、対応範囲、よくある質問など、依頼前に確認できる事実を置く</small></th><td>最初の画面の下端に「相談から本番まで」の4つの駅（相談・機種の提案・設置と設定・練習と本番）を、所要の目安つきで置きました。各駅は、4章の同じ段階へのリンクです。</td></tr>
+    <tr><th>主な行動<br><small>「相談の流れを見る」を主要な行動として置き、その近くに現在対応できる範囲、相談の流れ、決まっていない段階でも相談できることを添える</small></th><td>「相談の流れを見る」をピンクのボタンにして、見出しの下・ヘッダー・スマホ下部の固定バーに置きました。すぐ下に「決まっていない段階でも相談できます。いま対応しているのは、レジ・カード決済・ネット予約の3つです」と、対応範囲を添えています。2つめの行動「相談フォームへ進む」は控えめな文字リンクです。</td></tr>
+  </tbody></table>
+
+  <h2><small>03</small>情報の優先順位と、置いた場所</h2>
+  <table><thead><tr><th>優先順位（方針）</th><th>この見本で置いた場所</th></tr></thead><tbody>
+    <tr><th>1. どんな人のためのサービスか</th><td>最初の画面の見出しと3行の事実。2章「どんなお店のための支援か」で、食堂・雑貨店・教室の3つの入口に分けました</td></tr>
+    <tr><th>2. 何を依頼できるか</th><td>3章「依頼できること・まだできないこと」。できること4つと、まだできないこと3つ（記帳の代行・機器の販売・常駐）を左右に並べています</td></tr>
+    <tr><th>3. 初めて利用する時の流れ</th><td>最初の画面の下端の4つの駅と、4章「はじめての導入の流れ」。各段階で「お店が用意するもの」を1行ずつ添え、相談の前に手元にあると早いものを絵と一緒に示しました</td></tr>
+    <tr><th>4. これから実現したいこと</th><td>2章の入口ごとの「入れ替えの順番」（1番目・2番目・3番目）。いきなり全部を替えず、どこから始めると無理がないかを業態ごとに示しています</td></tr>
+    <tr><th>5. 現在提供できること</th><td>最初の画面の「いま対応しているのは、レジ・カード決済・ネット予約の3つ」と、3章のできること</td></tr>
+    <tr><th>6. 費用の考え方</th><td>5章「費用の考え方」。相談0円・設定作業16,500円〜・機器の月額は機器会社と直接契約、の3つを大きな数字で並べ、追加の費用が出る条件（出張の距離・データの件数・練習の回数）を表にしました</td></tr>
+    <tr><th>7. 問い合わせの方法と、その前に確認できること</th><td>6章「よくある質問と相談の方法」。オンライン相談の進め方（フォーム→2営業日以内に日時の候補→30分）と、返信の目安を、相談フォームへの入口の直前に置いています</td></tr>
+  </tbody></table>
+
+  <h2><small>04</small>見た目の判断</h2>
+  <table><tbody>
+    <tr><th>配色</th><td><span class="ca-swatch" style="background:#F7F9FC"></span>#F7F9FC 地の色（青みのある白）<br><span class="ca-swatch" style="background:#14213D"></span>#14213D 紺: 文字・罫線・費用の章の地<br><span class="ca-swatch" style="background:#3A86FF"></span>#3A86FF 案内の青: 図の主役（ページ内では小さな青い文字に #1E5BC6 を使う）<br><span class="ca-swatch" style="background:#FF4D8D"></span>#FF4D8D 行動のピンク: 主な行動のボタンと、手引きの点線だけ<br><span class="ca-swatch" style="background:#E3ECFA"></span>#E3ECFA 淡い青: 最初の画面の下端の帯だけ</td></tr>
+    <tr><th>書体</th><td>見出しは Noto Sans JP（Medium 500、小見出しだけ Bold 700）。SIL Open Font License の書体を、このページで使う文字だけに絞って fonts/ に置いています（2ウェイト合計 約53KB、ライセンス文は fonts/OFL.txt）。外部の書体サービスは読み込みません。本文はOSのゴシックのままです。丸ゴシックや極太の見出しは使わず、端正なゴシックの中くらいの太さで「新しいけれど落ち着いた道具」に見せています</td></tr>
+    <tr><th>署名モチーフ</th><td>「手引きの点線」: 丸い粒が並ぶピンクの点線。最初の画面の下端の駅の並び、各章の見出しの下線、PCでページの左を縦に通る「路線」、2章の入れ替えの順番、4章の4つの段階、ボタンの矢印をすべてこの点線で描いています。色はピンク1色だけで、太さも一定です</td></tr>
+    <tr><th>骨格</th><td>「路線図」。ページの左に縦の点線が通り、各章の見出しが小さな駅（輪）としてその上に並びます。最初の画面は左に見出し、右に大きな等角のイラスト。その下に4つの駅の帯 → 対象の3業態（絵と、業態ごとの入れ替えの順番の表）→ できる・できない（2列の一覧と絵）→ 4段階の横の路線と用意するもの → 紺の費用の章 → 質問とオンライン相談、の順です。カードや色面を並べず、罫線と余白で区切っています</td></tr>
+    <tr><th>署名の動き</th><td>章が画面に入ると、左の縦の点線が上から下へ1回だけ伸びて、次の駅へつながります（clip-path、1.4秒、1回）。ほかは動かしません</td></tr>
+    <tr><th>動きを減らす設定では</th><td>点線ははじめからすべて描かれた状態です。JavaScriptが動かない環境でも同じです</td></tr>
+    <tr><th>方針からの調整</th><td>方針の「白または濃色を主役に」は、青みのある白を主役にし、費用の章だけ紺の地にして対比を作りました。ピンクは文字色としては読みにくいため、ボタンの地と点線にだけ使い、ボタンの文字は紺にしています（コントラスト5.5:1）。案内の青も白地の小さな文字には足りないため、同じ色相を濃くした #1E5BC6 を使っています。1ページの見本のため、ページの高さはPCで約4,800px、スマホで約6,800pxに収めました。</td></tr>
+  </tbody></table>
+
+  <h2><small>05</small>あえて避けたこと</h2>
+  <ul>
+    <li>問い合わせ前に必要な情報が書かれていない</li>
+    <li>メニュー名が英語だけで意味を推測しにくい</li>
+    <li>構想の説明が先に立ち、いま何を頼めるのかが分からない</li>
+    <li>掲載できる事実がないまま、実績や利用者の声を作って載せる</li>
+    <li>実在のレジ・決済端末・予約サービスの名前や画面に見える表現</li>
+    <li>「必ず売上が上がる」などの効果の断定</li>
+    <li>丸ゴシックの極太見出しや、厚い影のボタンで「親しみやすさ」を演出すること</li>
+  </ul>
+
+  <h2><small>06</small>実際の制作で変わること</h2>
+  <ul>
+    <li>図版: 見本の絵（お店のカウンター・3つの業態・設定の作業机・用意するもの・オンライン相談）は<strong>AI生成のイメージ</strong>で、実在の店舗や製品ではありません。人物は描いていません。実際の制作では、事業者が撮影した写真や、許可を得た図版に差し替えます。ロゴの印と点線はSVGとCSSで描いています</li>
+    <li>ロゴ: 実際の制作では、事業者のロゴを使います（この見本の「てびき舎」のロゴは見本用の簡易なものです）</li>
+    <li>価格・受付時間・対応範囲: 事業者が確定した値を載せます。機器会社の月額は、機器会社の公開情報へのリンクで示します</li>
+    <li>相談フォーム: 事業者が使っているフォームへつなぎます（見本ではダイアログを出すだけです）</li>
+    <li>書体: Noto Sans JP は OFL の書体を使う文字だけに絞ってサイト内に置いています（外部の書体サービスには接続しません）。文章を直したら、文字の絞り込みを作り直します</li>
+    <li>所在地・電話番号: 見本のため載せていません</li>
+  </ul>
+
+  <h2><small>07</small>この見本の規模</h2>
+  <p>TOPページのみの見本です（1ページ）。見本の規模は参考で、特定のプランをおすすめするものではありません。</p>
+
+  <h2><small>08</small>あなたの事業なら</h2>
+  <p>同じ業種でも、顧客や売り方が違えば合うタイプは変わります。16問の診断で、あなたの事業の方向を確かめられます。</p>
+  <p><a href="../../diagnosis.html?mode=quick">16問で診断する（無料・登録不要）</a>　／　<a href="../../works.html">ほかの見本を見る</a>　／　<a href="../../contact.html">相談する</a></p>
+</main>
+<aside class="ca-credit" aria-labelledby="ca-credit-title">
+  <p class="ca-credit__label">この見本サイトについて</p>
+  <h2 id="ca-credit-title">Web診断36「CA02 先進案内型サイト」の設計方針で、クルーアセントが制作した見本です。</h2>
+  <p>「小さなお店のレジと予約の導入代行 てびき舎」は架空の事業です。掲載している価格・営業時間・住所・数値はすべて見本用の設定で、実在の店舗・人物・お客様の声は載せていません。</p>
+  <div class="ca-credit__actions">
+    <a class="ca-btn ca-btn--primary" href="../../diagnosis.html?mode=quick">あなたの事業の方向を診断する（16問・無料）</a>
+    <a class="ca-btn" href="design-notes.html">この見本の設計メモ</a>
+    <a class="ca-link" href="../../works.html">見本サイトの一覧</a>
+  </div>
+  <p class="ca-credit__fine">TOPページのみの見本です。見本の規模は参考で、特定のプランをおすすめするものではありません。</p>
+  <a class="ca-credit__brand" href="../../index.html"><img src="../../assets/brand/logo.webp" width="360" height="278" alt="">クルーアセント（CREW ASCENT）</a>
+</aside>
+<dialog class="ca-dialog" id="ca-sample-dialog" aria-labelledby="ca-dialog-title">
+  <h2 id="ca-dialog-title">これは見本サイトです</h2>
+  <p data-ca-dialog-text>この操作は、見本のため実際には行われません。</p>
+  <div class="ca-dialog__actions">
+    <a class="ca-btn" href="../../contact.html">クルーアセントに相談する</a>
+    <button type="button" data-ca-close>閉じる</button>
+  </div>
+</dialog>
+</body>
+</html>

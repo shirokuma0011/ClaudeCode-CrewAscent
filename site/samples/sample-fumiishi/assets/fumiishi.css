@@ -1,0 +1,170 @@
+/* =====================================================================
+   ものづくり企業の特許・意匠・商標 ふみいし特許事務所（架空）見本  fumiishi.css
+   高信頼ブランド: 濃紺の展示室に試作品を置き、重心を低く。章の順番は「踏み石」で示す。
+   見出し Noto Serif JP 600／番号 Marcellus（どちらもサブセット）。古金は行動の合図だけ。
+   クルーアセントの枠（.ca-*）は上書きしない。
+   ===================================================================== */
+@font-face { font-family: "Fumiishi Serif"; src: url("../fonts/fumiishi-notoserif-600.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Fumiishi Marcellus"; src: url("../fonts/fumiishi-marcellus.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+
+:root {
+  --kinari: #f5f3ef;  /* 地の色 */
+  --navy: #121a24;    /* 文字・暗い面 */
+  --ai: #2b3a4f;      /* 面・見出しの帯 */
+  --gold: #8a7653;    /* 行動の合図だけ */
+  --navy-2: #49525e;  /* 補足の文字（明るい地） */
+  --on-dark: #f5f3ef;
+  --on-dark-2: #c3c9d2;
+  --rule: #d6d2c8;
+  --rule-dark: #354357;
+  --f-d: "Fumiishi Serif", "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
+  --f-m: "Fumiishi Marcellus", "Optima", "Georgia", serif;
+  --f-b: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", "Noto Sans JP", system-ui, sans-serif;
+  --gut: max(24px, calc((100% - 1200px) / 2));
+}
+*, *::before, *::after { box-sizing: border-box; }
+main h1, main h2, main h3 { text-wrap: balance; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--kinari); color: var(--navy); font-family: var(--f-b); font-size: 15px; line-height: 1.95; letter-spacing: .03em; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-underline-offset: 4px; }
+a:focus-visible, button:focus-visible { outline: 3px solid #5b9bf0; outline-offset: 3px; }
+h1, h2, h3 { margin: 0; }
+p, ul, ol, dl, dd, figure { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+.ff-d, main h1, main h2 { font-family: var(--f-d); font-weight: 600; font-feature-settings: "palt"; letter-spacing: .06em; }
+.mc { font-family: var(--f-m); font-weight: 400; letter-spacing: .08em; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: absolute; left: 8px; top: -60px; z-index: 60; padding: 10px 16px; background: var(--navy); color: #fff; }
+.skip:focus { top: 8px; }
+.no { font-size: 15px; color: #6b5a3c; margin-bottom: 10px; display: flex; align-items: center; gap: 12px; }
+.no::after { content: ""; width: 44px; height: 10px; border-radius: 4px; border: 1px solid currentColor; }
+
+/* ボタン: 細い古金の枠。影なし */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 14px; min-height: 52px; padding: 0 26px; background: var(--navy); color: var(--on-dark); border: 1px solid var(--gold); font-size: 15px; letter-spacing: .08em; text-decoration: none; transition: background-color .3s; }
+.btn::after { content: ""; width: 22px; height: 1px; background: var(--gold); }
+.btn:hover { background: var(--ai); }
+.btn--line { background: transparent; border-color: rgba(245, 243, 239, .5); }
+.btn--line::after { background: currentColor; }
+
+/* ---------- ヘッダー ---------- */
+.head { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 76px; padding: 0 var(--gut); background: var(--navy); color: var(--on-dark); }
+.logo { display: flex; align-items: baseline; gap: 18px; color: var(--on-dark); text-decoration: none; min-height: 44px; align-items: center; }
+.logo__name { font-size: 21px; letter-spacing: .14em; }
+.logo__sub { font-size: 12px; letter-spacing: .12em; color: var(--on-dark-2); }
+.head__cta { display: inline-flex; align-items: center; min-height: 44px; padding: 0 2px; color: var(--on-dark); text-decoration: none; border-bottom: 1px solid var(--gold); font-size: 14px; letter-spacing: .12em; }
+
+/* ---------- 1. 最初の画面: 重心を低く ---------- */
+.hero { position: relative; background: var(--navy); color: var(--on-dark); min-height: 620px; display: flex; align-items: flex-end; }
+.hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 70% 50%; }
+.hero__copy { position: relative; padding: 0 var(--gut) 56px; width: 100%; background: linear-gradient(0deg, rgba(18, 26, 36, .85), rgba(18, 26, 36, 0)); padding-top: 120px; }
+.hero h1 { font-size: clamp(32px, 3.6vw, 52px); line-height: 1.5; color: var(--on-dark); }
+.hero__what { margin-top: 14px; font-size: 16px; color: var(--on-dark-2); }
+.hero__act { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 36px; margin-top: 28px; }
+.hero__assure { display: flex; flex-wrap: wrap; gap: 4px 24px; font-size: 13px; color: var(--on-dark-2); }
+.hero__assure li::before { content: ""; display: inline-block; width: 10px; height: 5px; border-radius: 3px; background: var(--gold); margin-right: 8px; vertical-align: middle; }
+.hero__credit { position: absolute; right: 16px; top: 14px; font-size: 12px; color: var(--on-dark-2); }
+
+/* ---------- 踏み石 ---------- */
+.stones { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; padding: 18px var(--gut) 20px; background: var(--ai); }
+.stones a { display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 18px; border-radius: 10px; background: rgba(245, 243, 239, .06); border: 1px solid var(--rule-dark); color: var(--on-dark); text-decoration: none; font-size: 14px; letter-spacing: .08em; }
+.stones a:hover { border-color: var(--gold); }
+.stones .mc { color: #d3c29d; font-size: 13px; }
+
+/* ---------- 2. 何を提供しているか ---------- */
+.offer { padding: 80px var(--gut) 64px; }
+.offer__head { display: grid; grid-template-columns: auto 1fr; gap: 0 56px; align-items: end; margin-bottom: 40px; }
+.offer__head .no { grid-column: 1 / -1; }
+.offer h2, .room h2, .need h2, .fee h2, .office h2 { font-size: clamp(25px, 2.4vw, 34px); line-height: 1.55; }
+.offer__head > p:last-child { max-width: 30em; font-size: 15px; color: var(--navy-2); }
+.offer__pair { display: grid; grid-template-columns: 5fr 6fr; gap: 40px; align-items: end; }
+.ex img { width: 100%; object-fit: cover; }
+.ex--a img { aspect-ratio: 4 / 3; }
+.ex--b img { aspect-ratio: 3 / 2; }
+.ex figcaption { display: grid; grid-template-columns: auto 1fr; gap: 0 18px; padding-top: 16px; border-bottom: 1px solid var(--rule); padding-bottom: 16px; }
+.ex__no { grid-row: span 2; font-size: 14px; color: #6b5a3c; padding-top: 4px; }
+.ex h3 { font-size: 20px; font-weight: 600; letter-spacing: .08em; }
+.ex p { font-size: 14px; color: var(--navy-2); line-height: 1.85; }
+.offer__tm { margin-top: 24px; font-size: 14px; color: var(--navy-2); }
+.offer__tm b { font-family: var(--f-d); font-weight: 600; color: var(--navy); margin-right: 1em; font-size: 16px; }
+.offer__tm span { float: right; font-size: 12px; }
+
+/* ---------- 3. 相談の場（濃紺） ---------- */
+.room { display: grid; grid-template-columns: 5fr 6fr; gap: 64px; align-items: end; padding: 72px var(--gut); background: var(--navy); color: var(--on-dark); }
+.room h2 { color: var(--on-dark); }
+.room__flow { margin-top: 24px; border-top: 1px solid var(--rule-dark); }
+.room__flow li { display: grid; grid-template-columns: 40px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--rule-dark); }
+.room__flow .mc { font-size: 22px; color: #d3c29d; line-height: 1.3; }
+.room__flow h3 { font-size: 15px; font-weight: 700; letter-spacing: .08em; }
+.room__flow p { font-size: 14px; color: var(--on-dark-2); line-height: 1.8; }
+.room__photo img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.room__photo figcaption { font-size: 12px; color: var(--on-dark-2); margin-top: 8px; }
+
+/* ---------- 4. 相談時に必要な情報 ---------- */
+.need { display: grid; grid-template-columns: 4fr 6fr; gap: 64px; align-items: center; padding: 80px var(--gut) 72px; }
+.need__photo img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.need__list { margin-top: 22px; border-top: 1px solid var(--navy); }
+.need__list li { padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: 14px; color: var(--navy-2); line-height: 1.8; }
+.need__list b { display: block; font-size: 16px; color: var(--navy); font-family: var(--f-d); font-weight: 600; letter-spacing: .06em; }
+.need__note { margin-top: 16px; padding-left: 14px; border-left: 2px solid var(--gold); font-size: 14px; }
+
+/* ---------- 5. 費用 ---------- */
+.fee { padding: 64px var(--gut) 72px; background: #ebe8e1; }
+.fee__head { display: grid; grid-template-columns: auto 1fr; gap: 0 56px; align-items: end; margin-bottom: 32px; }
+.fee__head .no { grid-column: 1 / -1; }
+.fee__head > p:last-child { font-size: 14px; color: var(--navy-2); max-width: 32em; }
+.fee__tbl { width: 100%; border-collapse: collapse; }
+.fee__tbl th, .fee__tbl td { padding: 16px 16px 16px 0; text-align: left; border-bottom: 1px solid var(--rule); font-size: 14px; vertical-align: baseline; }
+.fee__tbl thead th { font-size: 12px; font-weight: 400; letter-spacing: .14em; color: var(--navy-2); border-bottom: 1px solid var(--navy); padding-top: 0; }
+.fee__tbl tbody th { font-size: 20px; font-weight: 600; letter-spacing: .1em; }
+.fee__tbl td small { display: block; font-size: 12px; color: var(--navy-2); }
+.fee__tbl .yen { font-family: var(--f-m); font-size: 26px; letter-spacing: .02em; white-space: nowrap; }
+.fee__tbl .yen small { display: inline; font-family: var(--f-b); font-size: 13px; margin-left: 4px; }
+.fee__fine { font-size: 13px; color: var(--navy-2); margin-top: 16px; }
+
+/* ---------- 6. 事務所 ---------- */
+.office { background: var(--ai); color: var(--on-dark); }
+.office__in { padding: 64px var(--gut) 72px; }
+.office h2 { color: var(--on-dark); margin-bottom: 24px; }
+.office__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+.office__dl div { display: grid; grid-template-columns: 5em 1fr; gap: 16px; padding: 10px 0; border-bottom: 1px solid #44536b; font-size: 14px; }
+.office__dl dt { color: var(--on-dark-2); }
+.office__cta > p:first-child { font-size: 15px; color: var(--on-dark-2); }
+.office__btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+
+.foot { padding: 32px var(--gut) 40px; background: var(--navy); color: var(--on-dark-2); font-size: 13px; line-height: 1.9; }
+.foot__name { font-size: 18px; color: var(--on-dark); letter-spacing: .14em; margin-bottom: 4px; }
+
+/* ---------- 画面幅ごと ---------- */
+@media (max-width: 1000px) {
+  .stones { grid-template-columns: repeat(3, 1fr); }
+  .offer__head, .fee__head { grid-template-columns: 1fr; gap: 12px; }
+}
+@media (max-width: 860px) {
+  .logo__sub { display: none; }
+  .hero { min-height: 560px; }
+  .hero__img { object-position: 74% 40%; }
+  .hero__copy { padding: 160px 20px 36px; }
+  .hero__act { flex-direction: column; align-items: stretch; gap: 14px; }
+  .hero__assure { flex-direction: column; }
+  .stones { grid-template-columns: 1fr 1fr; padding: 14px 16px; gap: 8px; }
+  .stones a { padding: 0 14px; font-size: 13px; }
+  .offer, .need, .fee { padding: 52px 20px 48px; }
+  .offer__pair { grid-template-columns: 1fr; gap: 28px; }
+  .room { grid-template-columns: 1fr; gap: 28px; padding: 52px 20px; }
+  .need { grid-template-columns: 1fr; gap: 24px; }
+  .need__photo { width: 60%; }
+  .fee__tbl thead { display: none; }
+  .fee__tbl, .fee__tbl tbody, .fee__tbl tr { display: block; }
+  .fee__tbl tr { display: grid; grid-template-columns: auto 1fr; gap: 0 16px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+  .fee__tbl th, .fee__tbl td { border: 0; padding: 0; }
+  .fee__tbl tbody th { grid-row: span 3; }
+  .fee__tbl .yen { font-size: 22px; }
+  .office__in { padding: 52px 20px; }
+  .office__grid { grid-template-columns: 1fr; gap: 28px; }
+  .office__btns .btn { width: 100%; }
+  .offer__tm span { float: none; display: block; }
+  .foot { padding: 28px 20px 32px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+.room .no, .office .no { color: #d3c29d; }

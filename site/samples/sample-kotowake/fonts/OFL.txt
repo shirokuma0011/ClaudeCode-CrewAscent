@@ -1,6 +1,8 @@
-このフォルダの書体は SIL Open Font License 1.1 で配布されているものを、このサイトで使う文字だけにサブセット化したものです。
+このフォルダの書体は SIL Open Font License 1.1 で配布されているものを、このサイトで使う文字だけにサブセットしたものです。
+・kotowake-zkgn-700.woff2 … Zen Kaku Gothic New Bold（著作権表示とライセンスは下記）
+・kotowake-plexmono-500.woff2 … IBM Plex Mono Medium（著作権表示とライセンスは下記）
 
-===== ZenKakuGothicNew =====
+===== Zen Kaku Gothic New =====
 Copyright 2022 The Zen Kaku Gothic Project Authors (https://github.com/googlefonts/zen-kakugothic)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
@@ -95,7 +97,7 @@ DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
 
-===== IBMPlexMono =====
+===== IBM Plex Mono =====
 Copyright © 2017 IBM Corp. with Reserved Font Name "Plex"
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
@@ -189,5 +191,3 @@ INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
 DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
-
-

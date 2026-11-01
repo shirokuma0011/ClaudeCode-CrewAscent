@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>町の銭湯とサウナ ゆずり湯｜薪で沸かす湯と、季節の読みもの・入浴520円（見本・架空）</title>
+<meta name="description" content="薪で沸かす下町の銭湯と、木のサウナ。季節の湯や薪の話を読みものでお届けしつつ、初めての人のための入り方と料金を同じページにまとめています（架空の事業の見本サイト）。">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="../../assets/brand/icon-32.png" sizes="32x32">
+<link rel="preload" href="fonts/yuzuriyu-tokumin-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../_shared/crew-frame.css?v=20261015">
+<script defer src="../_shared/crew-frame.js?v=20261015"></script>
+<link rel="stylesheet" href="assets/yuzuriyu.css?v=1">
+<script>document.documentElement.classList.add('js');</script>
+<script defer src="assets/yuzuriyu.js?v=1"></script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+<div class="ca-ribbon" role="note" aria-label="見本サイトについて">
+  <a class="ca-ribbon__brand" href="../../index.html" aria-label="クルーアセント（制作）"><img src="../../assets/brand/logo-onink.webp" width="360" height="278" alt=""><span class="ca-ribbon__long">クルーアセント</span></a>
+  <p class="ca-ribbon__text"><b>見本サイト・架空</b><span class="ca-ribbon__long">架空の事業を想定した制作イメージです。事業・価格・住所はすべて架空です。</span></p>
+  <p class="ca-ribbon__links"><a href="../../type-appeal-communication.html">CA17<span class="ca-ribbon__long"> 魅力発信型サイト</span></a><a href="design-notes.html"><span class="ca-ribbon__long">この見本の</span>設計メモ</a></p>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- 署名モチーフ「タイルの目地」: 小さな四角いタイルの目地の格子 -->
+    <pattern id="yz-grout" width="12" height="12" patternUnits="userSpaceOnUse">
+      <path d="M12 0 H0 V12" fill="none" stroke="currentColor" stroke-width="1"/>
+    </pattern>
+    <symbol id="yz-mark" viewBox="0 0 36 36">
+      <rect x="1" y="1" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M12.3 1 V35 M23.7 1 V35 M1 12.3 H35 M1 23.7 H35" stroke="currentColor" stroke-width="1"/>
+      <rect x="12.3" y="12.3" width="11.4" height="11.4" fill="#3e7cb1"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="head">
+  <a class="logo" href="#top" aria-label="町の銭湯とサウナ ゆずり湯（ページの先頭へ）">
+    <svg width="30" height="30" aria-hidden="true" focusable="false"><use href="#yz-mark"/></svg>
+    <span class="logo__name fd">ゆずり湯</span>
+  </a>
+  <nav class="head__nav" aria-label="ページ内の案内">
+    <a href="#read">読みもの</a><a href="#sauna">サウナ</a><a href="#first">入り方と料金</a><a href="#contact">お問い合わせ</a>
+  </nav>
+  <p class="head__hours"><span>営業</span>15:00–24:00</p>
+</header>
+
+<main id="main">
+  <!-- 1. 最初の画面（主役の一枚）: 雑誌の表紙。全幅の浴室の写真＋目次の帯 -->
+  <section class="cover" id="top" aria-labelledby="hero-title">
+    <div class="cover__mast">
+      <p>町の銭湯とサウナ</p>
+      <p class="cover__issue fd">十一月の湯 ── 薪と柚子のころ</p>
+      <p>月曜休み・日曜は朝湯 8:00から</p>
+    </div>
+    <div class="cover__photo">
+      <img src="assets/img/01-hero.webp" width="1536" height="864" alt="青いタイルの浴室、湯気の立つ湯船と縁に並ぶ木の桶、高窓からの光の筋" fetchpriority="high">
+      <div class="cover__copy">
+        <h1 id="hero-title" class="fd"><span class="nw">湯気の向こうに、</span><br><span class="nw">町の朝。</span></h1>
+        <p class="cover__lead">薪で沸かす町の銭湯と、木のサウナ。<br>入浴は大人520円、タオルは借りられます。</p>
+        <div class="cover__act">
+          <a class="btn" href="#first">詳しく見る（入り方と料金）</a>
+          <a class="more" href="#contact">お問い合わせ</a>
+        </div>
+        <p class="cover__note">営業 15:00–24:00（最終受付 23:30）。お問い合わせは2日以内に返信します。予約は要りません。</p>
+      </div>
+      <p class="credit">画像はAI生成のイメージです</p>
+    </div>
+    <nav class="toc" aria-label="この号の目次">
+      <a href="#read"><span class="toc__no">01</span><b class="fd">冬至の柚子湯</b><span>今週の湯</span></a>
+      <a href="#read"><span class="toc__no">02</span><b class="fd">薪の話</b><span>釜場から</span></a>
+      <a href="#sauna"><span class="toc__no">03</span><b class="fd">サウナの使い方</b><span>約90℃・水風呂16℃</span></a>
+      <a href="#first"><span class="toc__no">04</span><b class="fd">初めての方へ</b><span>入り方と料金</span></a>
+    </nav>
+  </section>
+
+  <!-- 2. 今週の湯と、読みもの: 可変グリッド（目地の線で区切る） -->
+  <section class="read" id="read" aria-labelledby="read-title">
+    <div class="sec-head">
+      <h2 id="read-title" class="fd">今週の湯と、読みもの</h2>
+      <p>季節の湯と、釜場の話を、月に数本お届けしています。</p>
+    </div>
+    <div class="bento">
+      <article class="art art--lead" aria-labelledby="art1">
+        <img src="assets/img/02-yuzu.webp" width="1200" height="900" alt="湯船に浮かぶたくさんの柚子の接写" loading="lazy">
+        <div class="art__body">
+          <p class="art__cat"><span>季節の湯</span><time datetime="2026-11-01">11.01</time></p>
+          <h3 id="art1" class="fd"><span class="nw">冬至の柚子湯は、</span><br><span class="nw">12月21日と22日</span>の2日間。</h3>
+          <p>近くの農家から届く柚子を、毎日入れ替えて浮かべます。香りがいちばん立つのは、開店してすぐの時間です。</p>
+          <a class="read-more" href="#read" data-sample-action="記事を読む">続きを読む</a>
+        </div>
+      </article>
+      <article class="art art--side" aria-labelledby="art2">
+        <img src="assets/img/04-firewood.webp" width="1200" height="900" alt="釜場に積まれた薪の山と、釜の焚き口" loading="lazy">
+        <div class="art__body">
+          <p class="art__cat"><span>釜場から</span><time datetime="2026-10-24">10.24</time></p>
+          <h3 id="art2" class="fd">湯を沸かす薪は、<br><span class="nw">町の解体材と</span><span class="nw">間伐材。</span></h3>
+          <a class="read-more" href="#read" data-sample-action="記事を読む">続きを読む</a>
+        </div>
+      </article>
+      <div class="art art--plan" aria-labelledby="art3">
+        <p class="art__cat"><span>今月の湯</span></p>
+        <h3 id="art3" class="fd">十一月の替わり湯</h3>
+        <table class="plan">
+          <tbody>
+            <tr><th scope="row">1日〜</th><td>りんご湯</td></tr>
+            <tr><th scope="row">8日〜</th><td>生姜湯</td></tr>
+            <tr><th scope="row">15日〜</th><td>よもぎ湯</td></tr>
+            <tr><th scope="row">22日〜</th><td>みかんの皮の湯</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="fine">記事と日付は見本用の設定です。</p>
+  </section>
+
+  <!-- 3. サウナ（墨の章） -->
+  <section class="sauna" id="sauna" aria-labelledby="sauna-title">
+    <div class="sauna__in">
+      <figure class="sauna__photo">
+        <img src="assets/img/03-sauna.webp" width="1536" height="1024" alt="木のサウナ室のベンチとストーブの石、木桶とひしゃく" loading="lazy">
+      </figure>
+      <div class="sauna__body">
+        <h2 id="sauna-title" class="fd">木のサウナと、<br>井戸水の水風呂。</h2>
+        <dl class="temps">
+          <div><dt>サウナ室</dt><dd><b>90</b>℃前後</dd></div>
+          <div><dt>水風呂</dt><dd><b>16</b>℃前後</dd></div>
+          <div><dt>定員</dt><dd><b>8</b>人</dd></div>
+        </dl>
+        <ol class="steps">
+          <li><span>1</span>体を洗って、湯船で温まってから入る</li>
+          <li><span>2</span>8〜10分を目安に。砂時計が中にあります</li>
+          <li><span>3</span>汗を流して水風呂へ。そのあと外気浴の椅子で休む</li>
+        </ol>
+        <p class="sauna__price">サウナは入浴料に<b class="fd">＋300円</b>。番台でリストバンドを受け取ります。<span>税込・見本用の架空価格／温度は見本上の設定</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 他と比べたときの違い -->
+  <section class="diff" id="diff" aria-labelledby="diff-title">
+    <h2 id="diff-title" class="fd">変えずに、続けていること。</h2>
+    <div class="diff__cols">
+      <div class="diff__item">
+        <svg class="diff__tile" viewBox="0 0 96 96" aria-hidden="true" focusable="false"><rect width="96" height="96" fill="url(#yz-grout)" style="color:#9fb3c2"/><rect x="36" y="48" width="12" height="12" fill="#3e7cb1"/><path d="M0 95.5 H96 M95.5 0 V96" stroke="#9fb3c2"/></svg>
+        <h3 class="fd">薪で沸かす</h3>
+        <p>ガスの釜に替えず、毎日11時から薪をくべています。続けているのは、町の解体材や間伐材を、燃やして使い切れるからです。</p>
+      </div>
+      <div class="diff__item">
+        <svg class="diff__tile" viewBox="0 0 96 96" aria-hidden="true" focusable="false"><rect width="96" height="96" fill="url(#yz-grout)" style="color:#9fb3c2"/><rect x="24" y="24" width="48" height="48" fill="none" stroke="#3e7cb1" stroke-width="2"/><path d="M0 95.5 H96 M95.5 0 V96" stroke="#9fb3c2"/></svg>
+        <h3 class="fd">タイルの浴室を残す</h3>
+        <p>割れたタイルは、一枚ずつ同じ青に近いものを探して張り替えます。壁の絵はなく、青いタイルだけの浴室です。</p>
+      </div>
+      <div class="diff__cta">
+        <p>はじめての方は、入り方と料金から。</p>
+        <a class="btn" href="#first">詳しく見る（入り方と料金）</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 初めての人へ: 入り方と料金 -->
+  <section class="first" id="first" aria-labelledby="first-title">
+    <div class="first__text">
+      <h2 id="first-title" class="fd">初めての方へ<br><span class="sub">入り方と料金</span></h2>
+      <ol class="flow">
+        <li><b class="fd">下足札</b>靴を下足箱に入れて、木の札を抜く</li>
+        <li><b class="fd">番台</b>入浴料を払う。タオルもここで</li>
+        <li><b class="fd">脱衣所</b>ロッカーの鍵は手首に</li>
+        <li><b class="fd">かけ湯</b>体を洗ってから湯船へ</li>
+      </ol>
+      <table class="fees">
+        <caption>料金（税込・見本用の架空価格）</caption>
+        <tbody>
+          <tr><th scope="row">大人（中学生以上）</th><td class="fd">520円</td></tr>
+          <tr><th scope="row">小学生</th><td class="fd">200円</td></tr>
+          <tr><th scope="row">未就学</th><td class="fd">100円</td></tr>
+          <tr><th scope="row">サウナ（入浴料に追加）</th><td class="fd">＋300円</td></tr>
+          <tr><th scope="row">貸しタオル（大・小）</th><td class="fd">100円</td></tr>
+        </tbody>
+      </table>
+      <p class="fine">石けんとシャンプーは備え付けがあります。手ぶらで来ても、合計620円から入れます。</p>
+    </div>
+    <figure class="first__photo">
+      <img src="assets/img/05-entrance.webp" width="1536" height="1024" alt="銭湯の入口の木の下足箱と、無地ののれん" loading="lazy">
+    </figure>
+  </section>
+
+  <!-- 6. 問い合わせの方法 -->
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title" class="fd">お問い合わせ</h2>
+    <dl class="contact__list">
+      <div><dt>電話</dt><dd>14:00–23:00（営業日）。貸し切りや撮影のご相談も</dd></div>
+      <div><dt>休業日</dt><dd>月曜（祝日の場合は翌日）。臨時休業は読みもので先にお知らせします</dd></div>
+      <div><dt>フォーム</dt><dd>2日以内に返信します。決まっていない段階のご相談でもどうぞ</dd></div>
+    </dl>
+    <div class="contact__act">
+      <a class="btn" href="#contact" data-sample-action="お問い合わせ">お問い合わせ</a>
+      <a class="btn btn--line" href="#contact" data-sample-action="電話する">電話する</a>
+    </div>
+    <p class="fine contact__fine">電話番号と所在地は、見本のため載せていません。</p>
+  </section>
+</main>
+
+<footer class="foot">
+  <p class="foot__name fd">ゆずり湯</p>
+  <p>町の銭湯とサウナ（架空の事業）／15:00–24:00・日曜朝湯 8:00–12:00・月曜休み（見本上の設定）</p>
+</footer>
+
+<aside class="ca-credit" aria-labelledby="ca-credit-title">
+  <p class="ca-credit__label">この見本サイトについて</p>
+  <h2 id="ca-credit-title">Web診断36「CA17 魅力発信型サイト」の設計方針で、クルーアセントが制作した見本です。</h2>
+  <p>「町の銭湯とサウナ ゆずり湯」は架空の事業です。掲載している価格・営業時間・住所・数値はすべて見本用の設定で、実在の店舗・人物・お客様の声は載せていません。</p>
+  <div class="ca-credit__actions">
+    <a class="ca-btn ca-btn--primary" href="../../diagnosis.html?mode=quick">あなたの事業の方向を診断する（16問・無料）</a>
+    <a class="ca-btn" href="design-notes.html">この見本の設計メモ</a>
+    <a class="ca-link" href="../../works.html">見本サイトの一覧</a>
+  </div>
+  <p class="ca-credit__fine">TOPページのみの見本です。見本の規模は参考で、特定のプランをおすすめするものではありません。</p>
+  <a class="ca-credit__brand" href="../../index.html"><img src="../../assets/brand/logo.webp" width="360" height="278" alt="">クルーアセント（CREW ASCENT）</a>
+</aside>
+
+<dialog class="ca-dialog" id="ca-sample-dialog" aria-labelledby="ca-dialog-title">
+  <h2 id="ca-dialog-title">これは見本サイトです</h2>
+  <p data-ca-dialog-text>この操作は、見本のため実際には行われません。</p>
+  <div class="ca-dialog__actions">
+    <a class="ca-btn" href="../../contact.html">クルーアセントに相談する</a>
+    <button type="button" data-ca-close>閉じる</button>
+  </div>
+</dialog>
+</body>
+</html>

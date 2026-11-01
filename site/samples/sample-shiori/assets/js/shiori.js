@@ -1,5 +1,5 @@
-/* しおり会計事務所（架空）見本 v3
-   1) 署名の動き「栞の現在地」: 目次の横の栞が、読んでいる章まで下りる（transform のみ）
+/* しおり会計事務所（架空）見本 v4
+   1) 署名の動き「栞が下りる」は CSS のみ（最初の画面の写真に、赤い栞が一度だけ下りる）
    2) 状況の質問: 答えに合う「聞くこと」「用意するもの」だけを1行ずつ出す（送信しない・端末の中だけ）
    3) 印刷: 結果・持ち物リストだけを印刷用に整える（print CSS）
    JSが動かないときは、すべての項目がそのまま表示される */
@@ -8,45 +8,6 @@
   var doc = document.documentElement;
   doc.classList.add('js');
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  /* ---- 1) 栞の現在地 ---- */
-  var toc = document.querySelector('.toc');
-  if (toc && 'IntersectionObserver' in window) {
-    var links = Array.prototype.slice.call(toc.querySelectorAll('ol a[href^="#"]'));
-    var ribbon = toc.querySelector('.toc__ribbon');
-    var here = toc.querySelector('.here');
-    var setCurrent = function (id) {
-      links.forEach(function (a) {
-        var on = a.getAttribute('href') === '#' + id;
-        if (on) {
-          a.setAttribute('aria-current', 'true');
-          if (ribbon) ribbon.style.setProperty('--y', a.offsetTop + 'px');
-          if (here) here.textContent = a.textContent;
-        } else {
-          a.removeAttribute('aria-current');
-        }
-      });
-    };
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { if (e.isIntersecting) setCurrent(e.target.id); });
-    }, { rootMargin: '-30% 0px -62% 0px' });
-    links.forEach(function (a) {
-      var t = document.getElementById(a.getAttribute('href').slice(1));
-      if (t) io.observe(t);
-      a.addEventListener('click', function () {
-        var d = toc.querySelector('details');
-        if (d && window.innerWidth <= 1040) d.open = false;
-      });
-    });
-    if (links[0]) setCurrent(links[0].getAttribute('href').slice(1));
-    /* 広い画面では目次を開いたままにする */
-    var det = toc.querySelector('details');
-    var sync = function () { if (det) det.open = window.innerWidth > 1040; };
-    sync();
-    window.addEventListener('resize', function () { if (det && window.innerWidth > 1040) det.open = true; });
-    /* 広い画面では目次の見出しを押しても閉じない */
-    if (det) det.querySelector('summary').addEventListener('click', function (e) { if (window.innerWidth > 1040) e.preventDefault(); });
-  }
 
   /* ---- 2) 状況で絞り込む（質問チャート・持ち物リスト共通） ---- */
   var LABEL = {

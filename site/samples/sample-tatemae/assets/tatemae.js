@@ -1,24 +1,11 @@
-/* 木組みの家 たてまえ工務店（架空）— 見本サイトの動き
-   署名の動き「上棟」: 段取りの一覧を読み進めると、段階に合わせて家の骨組みが組み上がる（トップと家づくりの流れ）
-   補助の動き: 墨付けの目盛りが左から引かれる（章の頭・最初の画面の帯）
-   動きを減らす設定・JSなし: 骨組みは完成形、目盛りも描画済みで静止。 */
+/* 木組みの家 たてまえ工務店（架空）— 見本サイトの動き v4
+   署名の動き「上棟」: 家づくりの流れのページで、段取りの一覧を読み進めると、
+   右の線画の家が段階に合わせて組み上がる。
+   動きを減らす設定・JSなし: 線画は完成形で静止。 */
 (function () {
   'use strict';
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var hasIO = 'IntersectionObserver' in window;
-
-  /* 墨付けの目盛り: 画面に入ったら一度だけ */
-  var once = document.querySelectorAll('.sumi[data-draw]');
-  if (reduce || !hasIO) {
-    once.forEach(function (el) { el.classList.add('is-drawn'); });
-  } else {
-    var io = new IntersectionObserver(function (es) {
-      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-drawn'); io.unobserve(e.target); } });
-    }, { rootMargin: '0px 0px -10% 0px' });
-    once.forEach(function (el) { io.observe(el); });
-  }
-
-  /* 上棟: 段階に合わせて組み上がる */
   var fig = document.querySelector('.frame[data-build="stage"]');
   var steps = Array.prototype.slice.call(document.querySelectorAll('.step[data-stage]'));
   if (!fig || !steps.length) return;

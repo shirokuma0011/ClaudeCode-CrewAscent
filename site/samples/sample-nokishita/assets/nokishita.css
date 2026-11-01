@@ -1,0 +1,227 @@
+/* =====================================================================
+   ノキシタ設計室（架空）見本  nokishita.css  v1
+   洗練ブランド型: 漆喰の地・墨の文字・石灰の罫。鉄平石の青灰は主な行動と小さな強調だけ。
+   署名モチーフは「軒の影」: 画像と章の上辺にかかる、斜めのやわらかい影のグラデーション。
+   非対称のグリッドで、画像は左右の端に寄せる。
+   見出し Sawarabi Mincho（サブセット）／数字 Tenor Sans（サブセット）／本文はOSのゴシック。
+   クルーアセントの枠（.ca-*）は上書きしない。
+   ===================================================================== */
+@font-face { font-family: "Sawarabi Mincho"; src: url("../fonts/nokishita-sawarabi.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Tenor Sans"; src: url("../fonts/nokishita-tenor.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+
+:root {
+  --plaster: #f2efe9;  /* 漆喰: 地の色 */
+  --ink: #272523;      /* 墨: 文字 */
+  --slate: #5c6f7b;    /* 鉄平石: 主な行動と小さな強調 */
+  --lime: #c9c3b8;     /* 石灰: 罫線・面 */
+  --ink-2: #57524c;    /* 補足の文字（墨を漆喰に寄せた色） */
+  --plaster-2: #e8e3da;/* 漆喰と石灰の中間の面 */
+  --slate-down: #4a5a64;
+  --shade: rgb(39 37 35 / .26);
+  --f-d: "Sawarabi Mincho", "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
+  --f-n: "Tenor Sans", "Optima", "Gill Sans", "Helvetica Neue", sans-serif;
+  --f-body: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", "Noto Sans JP", system-ui, sans-serif;
+  --pad: max(40px, calc((100% - 1240px) / 2));
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 76px; }
+body { margin: 0; background: var(--plaster); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 2; letter-spacing: .04em; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--ink); text-underline-offset: 6px; text-decoration-thickness: 1px; text-decoration-color: var(--slate); }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid #1d64bd; outline-offset: 3px; }
+h1, h2, h3 { margin: 0; font-weight: 400; font-family: var(--f-d); letter-spacing: .12em; line-height: 1.7; font-feature-settings: "palt"; word-break: keep-all; overflow-wrap: anywhere; }
+p, ul, ol, dl, dd, figure { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+.ff-d { font-family: var(--f-d); font-weight: 400; }
+.ff-n { font-family: var(--f-n); font-weight: 400; letter-spacing: .04em; font-variant-numeric: lining-nums; }
+.sp { display: none; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: absolute; left: 8px; top: -60px; z-index: 60; padding: 10px 16px; background: var(--ink); color: #fff; }
+.skip:focus { top: 8px; }
+.fine { font-size: 13px; color: var(--ink-2); }
+
+/* ---------- 軒の影 ---------- */
+.eave { position: relative; overflow: hidden; }
+.eave::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(166deg, var(--shade) 0%, rgb(39 37 35 / .08) 26%, transparent 46%); }
+.js .eave::before { opacity: 0; transform: translate(-6%, -8%); transition: opacity 1.4s ease, transform 1.8s cubic-bezier(.2, .7, .2, 1); }
+.js .eave.is-in::before { opacity: 1; transform: none; }
+
+/* ---------- ボタン（四角・細い枠・影なし） ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 16px; min-height: 52px; padding: 0 30px; border: 1px solid var(--ink); border-radius: 0; background: transparent; color: var(--ink); font-family: var(--f-body); font-size: 15px; letter-spacing: .14em; text-decoration: none; cursor: pointer; transition: background-color .25s, color .25s; }
+.btn--act { background: var(--slate); border-color: var(--slate); color: #fff; }
+.btn--act::after { content: ""; width: 22px; height: 1px; background: currentColor; }
+.btn--act:hover { background: var(--slate-down); }
+.btn--line:hover { background: var(--plaster-2); }
+.btn--head { min-height: 44px; padding: 0 20px; font-size: 14px; }
+.more { display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; }
+
+/* ---------- ヘッダー ---------- */
+.site-head { position: sticky; top: 0; z-index: 30; display: flex; align-items: center; gap: 32px; padding: 10px var(--pad); background: rgb(242 239 233 / .95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--lime); }
+.logo { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; text-decoration: none; }
+.logo__name { font-size: 19px; letter-spacing: .24em; }
+.head-nav { display: flex; gap: 6px; margin-left: auto; }
+.head-nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; font-size: 14px; letter-spacing: .16em; text-decoration: none; }
+.head-nav a:hover { text-decoration: underline; }
+
+/* 章のラベル */
+.label { display: flex; align-items: baseline; gap: 14px; margin-bottom: 18px; font-size: 13px; letter-spacing: .16em; color: var(--ink-2); }
+.label .ff-n { font-size: 14px; color: var(--slate); }
+.label .ff-n::after { content: ""; display: inline-block; width: 28px; height: 1px; margin-left: 12px; background: var(--lime); vertical-align: middle; }
+main h2 { font-size: clamp(24px, 2.3vw, 32px); }
+
+/* ---------- 1. 最初の画面（非対称） ---------- */
+.hero { display: grid; grid-template-columns: var(--pad) repeat(12, minmax(0, 1fr)); column-gap: 0; padding-top: 40px; }
+.hero__pic { grid-column: 5 / -1; grid-row: 1; }
+.hero__pic img { width: 100%; height: min(64vh, 540px); min-height: 420px; object-fit: cover; object-position: 50% 50%; }
+.hero__pic figcaption { position: absolute; z-index: 2; right: 16px; bottom: 10px; font-size: 12px; color: var(--ink); background: rgb(242 239 233 / .85); padding: 0 8px; }
+.hero__copy { grid-column: 2 / 8; grid-row: 1; align-self: end; justify-self: start; width: max-content; max-width: 100%; position: relative; z-index: 2; margin-bottom: -28px; padding: 40px 48px 36px 0; background: var(--plaster); }
+.hero__kicker { font-size: 13px; letter-spacing: .2em; color: var(--ink-2); }
+.hero h1 { margin-top: 18px; font-size: clamp(32px, 3vw, 44px); line-height: 1.7; letter-spacing: .12em; white-space: nowrap; }
+.hero__facts { grid-column: 2 / -2; display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: 32px 56px; align-items: end; margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--lime); }
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.facts dt { font-size: 12px; letter-spacing: .16em; color: var(--ink-2); }
+.facts dd { margin-top: 6px; font-size: 15px; line-height: 1.85; }
+.facts .ff-n { font-size: 20px; }
+.hero__act { display: grid; gap: 12px; justify-items: start; }
+.hero__act p { font-size: 13px; line-height: 1.8; color: var(--ink-2); }
+
+/* ---------- 2. 何をする事務所か ---------- */
+.work { display: grid; grid-template-columns: var(--pad) repeat(12, minmax(0, 1fr)) var(--pad); margin-top: 72px; align-items: center; }
+.work__pic { grid-column: 1 / 8; }
+.work__pic img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.work__body { grid-column: 9 / 14; }
+.work h2 { margin-bottom: 18px; }
+.work__body > p:not(.label) { font-size: 15px; color: var(--ink-2); }
+.scope { margin-top: 22px; border-top: 1px solid var(--lime); }
+.scope li { display: grid; grid-template-columns: 10.5em 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--lime); font-size: 14px; color: var(--ink-2); }
+.scope .ff-d { font-size: 16px; color: var(--ink); letter-spacing: .1em; }
+
+/* ---------- 3. 考え方 ---------- */
+.idea { display: grid; grid-template-columns: var(--pad) repeat(12, minmax(0, 1fr)) var(--pad); margin-top: 72px; align-items: start; }
+.idea__body { grid-column: 3 / 8; padding-top: 24px; }
+.rule-pair + .rule-pair { margin-top: 40px; }
+.rule-pair h3 { display: flex; align-items: baseline; gap: 20px; font-size: clamp(22px, 2.1vw, 30px); letter-spacing: .14em; }
+.kanji { min-width: 1.6em; font-size: 17px; color: var(--slate); letter-spacing: 0; }
+.rule-pair p { margin: 12px 0 0 calc(1.6em + 20px); max-width: 30em; font-size: 15px; color: var(--ink-2); }
+.idea__pic { grid-column: 9 / 14; margin-top: 0; }
+.idea__pic img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+
+/* ---------- 4. 進め方 ---------- */
+.process { position: relative; margin-top: 72px; display: grid; grid-template-columns: var(--pad) repeat(12, minmax(0, 1fr)) var(--pad); }
+.process__pic { grid-column: 1 / 10; grid-row: 1; }
+.process__pic img { width: 100%; height: 540px; object-fit: cover; object-position: 30% 50%; }
+.process__panel { grid-column: 8 / 14; grid-row: 1; align-self: center; position: relative; z-index: 2; padding: 44px 44px 36px; background: var(--plaster); }
+.process h2 { margin-bottom: 22px; }
+.steps { border-top: 1px solid var(--lime); }
+.steps li { display: grid; grid-template-columns: 34px 1fr; gap: 10px; padding: 14px 0; border-bottom: 1px solid var(--lime); }
+.steps__n { font-size: 20px; line-height: 1.4; color: var(--slate); }
+.steps h3 { font-size: 17px; letter-spacing: .12em; line-height: 1.6; }
+.steps p { font-size: 14px; line-height: 1.8; color: var(--ink-2); }
+
+/* ---------- 5. 今の取り組み ---------- */
+.now { display: grid; grid-template-columns: var(--pad) repeat(12, minmax(0, 1fr)) var(--pad); margin-top: 72px; align-items: end; }
+.now__body { grid-column: 2 / 6; padding-bottom: 12px; }
+.now h2 { margin-bottom: 16px; }
+.now__body > p:not(.label) { font-size: 15px; color: var(--ink-2); }
+.now__body .more { margin-top: 10px; }
+.now__pic { grid-column: 7 / 15; }
+.now__pic img { width: 100%; aspect-ratio: 2 / 1; object-fit: cover; }
+
+/* ---------- 6. 費用と問い合わせ ---------- */
+.fee { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 48px 64px; margin: 72px var(--pad) 0; padding-top: 48px; border-top: 1px solid var(--ink); }
+.fee h2 { margin-bottom: 12px; }
+.fees { width: 100%; border-collapse: collapse; }
+.fees th, .fees td { padding: 16px 8px; border-bottom: 1px solid var(--lime); text-align: left; vertical-align: baseline; font-weight: 400; }
+.fees tr:first-child th, .fees tr:first-child td { border-top: 1px solid var(--lime); }
+.fees th { font-size: 17px; letter-spacing: .1em; width: 34%; }
+.fees td { font-size: 14px; color: var(--ink-2); }
+.fees td:last-child { text-align: right; white-space: nowrap; color: var(--ink); font-size: 14px; }
+.fees td .ff-n { font-size: 26px; margin-right: 4px; }
+.contact { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 32px 64px; margin: 56px var(--pad) 0; padding: 40px 56px; background: var(--plaster-2); }
+.contact h2 { margin-bottom: 14px; }
+.contact__body p { font-size: 15px; color: var(--ink-2); }
+.form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 22px; }
+.form__row { display: grid; gap: 4px; margin: 0; padding: 0; border: 0; min-width: 0; }
+.form__wide { grid-column: 1 / -1; }
+.form label, .form legend { font-size: 13px; letter-spacing: .1em; color: var(--ink-2); padding: 0; }
+.form input[type="text"], .form input[type="email"], .form textarea { width: 100%; min-height: 48px; padding: 10px 12px; border: 1px solid #b3ac9f; border-radius: 0; background: var(--plaster); font: inherit; color: var(--ink); }
+.form__pick { display: flex; flex-wrap: wrap; gap: 0 26px; }
+.form__pick legend { width: 100%; margin-bottom: 2px; }
+.form__pick label { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-size: 15px; color: var(--ink); cursor: pointer; }
+.form__pick input { width: 24px; height: 24px; margin: 0; accent-color: var(--slate); }
+.form .btn { grid-column: 1 / -1; justify-self: start; }
+
+/* ---------- フッター ---------- */
+.site-foot { margin-top: 56px; padding: 28px var(--pad) 34px; border-top: 1px solid var(--lime); font-size: 13px; color: var(--ink-2); }
+.site-foot .ff-d { color: var(--ink); font-size: 16px; letter-spacing: .24em; }
+.dock { display: none; }
+
+/* ---------- 画面幅ごとの調整 ---------- */
+@media (max-width: 1080px) {
+  .hero__copy { grid-column: 2 / 9; }
+  .hero__facts { grid-template-columns: 1fr; }
+  .process__panel { grid-column: 6 / 14; }
+}
+@media (max-width: 860px) {
+  .head-nav { display: none; }
+  .btn--head { margin-left: auto; }
+  .hero, .work, .idea, .process, .now { display: block; }
+  .hero { padding-top: 0; }
+  .hero__pic img { height: 380px; min-height: 0; }
+  .hero__pic figcaption { top: 8px; bottom: auto; right: 8px; }
+  .hero__copy { width: auto; margin: -48px 48px 0 16px; padding: 24px 20px 4px 0; padding-left: 0; }
+  .hero__facts { margin: 28px 16px 0; padding-top: 22px; }
+  .work, .idea, .process, .now { margin-top: 72px; }
+  .work__body, .idea__body, .now__body { padding: 28px 16px 0; }
+  .idea__pic { margin: 28px 16px 0 30%; }
+  .process__panel { margin: -56px 16px 0; padding: 28px 20px 20px; }
+  .process__pic img { height: 300px; }
+  .now__pic { margin-top: 24px; }
+  .fee, .contact { grid-template-columns: 1fr; gap: 20px; }
+  .fee { margin: 72px 16px 0; padding-top: 36px; }
+  .contact { margin: 48px 0 0; padding: 36px 16px; }
+}
+@media (max-width: 640px) {
+  .pc { display: none; }
+  .sp { display: inline; }
+  .site-head { padding: 6px 16px; }
+  .logo__name { font-size: 17px; }
+  .btn--head { display: none; }
+  .hero__pic img { height: 300px; }
+  .hero h1 { font-size: 27px; letter-spacing: .08em; white-space: normal; }
+  .facts { grid-template-columns: 1fr; gap: 0; }
+  .facts > div { display: grid; grid-template-columns: 88px 1fr; padding: 8px 0; border-bottom: 1px solid var(--lime); }
+  .facts dd { margin: 0; font-size: 14px; }
+  .facts dt { padding-top: 3px; }
+  .hero__act { margin-top: 8px; }
+  .hero__act .btn { width: 100%; }
+  .scope li { grid-template-columns: 1fr; gap: 0; padding: 8px 0; }
+  .rule-pair p { margin-left: 0; }
+  .work, .idea, .process, .now { margin-top: 56px; }
+  .work__pic img { aspect-ratio: 16 / 10; }
+  .idea__pic { margin-left: 40%; }
+  .process__pic img { height: 220px; }
+  .steps p { font-size: 13px; }
+  .now__pic img { aspect-ratio: 16 / 10; }
+  .fee { margin-top: 56px; }
+  .fees, .fees tbody, .fees tr { display: block; }
+  .fees tr { display: grid; grid-template-columns: 1fr auto; padding: 10px 0; border-bottom: 1px solid var(--lime); }
+  .fees tr:first-child { border-top: 1px solid var(--lime); }
+  .fees th, .fees td { padding: 0; border: 0 !important; width: auto; }
+  .fees th { font-size: 16px; }
+  .fees td:nth-child(2) { grid-row: 2; grid-column: 1 / -1; font-size: 13px; }
+  .fees td:last-child { grid-row: 1; grid-column: 2; }
+  .fees td .ff-n { font-size: 22px; }
+  .form { grid-template-columns: 1fr; }
+  .form .btn { width: 100%; }
+  .site-foot { margin-top: 48px; padding-bottom: 96px; }
+  .dock { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 8px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; padding: 8px 12px calc(8px + env(safe-area-inset-bottom)); background: var(--plaster); border-top: 1px solid var(--lime); }
+  .dock .btn { min-height: 48px; padding: 0 10px; font-size: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .eave::before { opacity: 1; transform: none; }
+}
+@media print { .site-head { position: static; } .dock { display: none; } }
+@media (max-width: 360px) { .hero h1 { font-size: 24px; letter-spacing: .04em; } }

@@ -3,7 +3,7 @@
   'use strict';
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* 署名の動き（レーン整列）と、言い分け線を描く動き。画面に入ったら1回だけ */
+  /* 台帳の行を順に表示する動きと、導入の流れの線が伸びる動き。画面に入ったら1回だけ */
   var targets = document.querySelectorAll('.app, .draw');
   function done(el) { el.classList.add(el.classList.contains('app') ? 'is-aligned' : 'is-drawn'); }
   if (reduce || !('IntersectionObserver' in window)) {
@@ -14,7 +14,7 @@
         if (!e.isIntersecting) return;
         var el = e.target;
         io.unobserve(el);
-        /* 最初の画面の台帳は、散った札を一瞬見せてから列へ並べる */
+        /* 最初の画面の台帳は、行を上から順に静かに表示する */
         setTimeout(function () { done(el); }, el.classList.contains('app') ? 350 : 0);
       });
     }, { threshold: 0.2 });

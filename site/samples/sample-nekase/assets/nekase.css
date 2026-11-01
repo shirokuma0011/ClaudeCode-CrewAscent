@@ -1,0 +1,184 @@
+/* =====================================================================
+   木桶で二夏寝かせる醤油蔵 ねかせ醤油（架空）見本  nekase.css
+   価値伝達ブランド: 暗い蔵と麹の白を章ごとに切り替え、物語を一場面ずつ。宣言の上下に「箍（たが）」。
+   見出し Zen Antique（サブセット）／本文はOSのゴシック。もろみ色は行動の合図だけ。
+   クルーアセントの枠（.ca-*）は上書きしない。
+   ===================================================================== */
+@font-face { font-family: "Nekase Antique"; src: url("../fonts/nekase-zenantique.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+
+:root {
+  --koji: #f4eee3;    /* 地の色 */
+  --sumi: #191411;    /* 文字・暗い面 */
+  --moromi: #6e3b1f;  /* 強調の一色・主な行動 */
+  --sugi: #9c8b6e;    /* 罫線・面 */
+  --sumi-2: #4f463e;  /* 補足の文字（明るい地） */
+  --on-dark: #f4eee3;
+  --on-dark-2: #cfc4b2;
+  --moromi-dark: #56301a;
+  --rule: #d8cdb9;
+  --f-d: "Nekase Antique", "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
+  --f-b: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", "Noto Sans JP", system-ui, sans-serif;
+  --gut: max(24px, calc((100% - 1200px) / 2));
+}
+*, *::before, *::after { box-sizing: border-box; }
+main h1, main h2, main h3 { text-wrap: balance; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--koji); color: var(--sumi); font-family: var(--f-b); font-size: 15px; line-height: 1.95; letter-spacing: .04em; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-underline-offset: 4px; }
+a:focus-visible, button:focus-visible { outline: 3px solid #5b9bf0; outline-offset: 3px; }
+h1, h2, h3 { margin: 0; font-weight: 400; }
+p, ul, ol, dl, dd, figure { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+.ff-d, main h1, main h2 { font-family: var(--f-d); font-weight: 400; font-feature-settings: "palt"; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: absolute; left: 8px; top: -60px; z-index: 60; padding: 10px 16px; background: var(--sumi); color: #fff; }
+.skip:focus { top: 8px; }
+.note { font-size: 12px; color: var(--sumi-2); margin-top: 14px; }
+.note--light { color: var(--on-dark-2); }
+
+/* 署名モチーフ「箍（たが）」: 細い横帯の重なり */
+.taga { display: block; width: 100%; max-width: 520px; height: 9px; background: repeating-linear-gradient(180deg, var(--sugi) 0 1px, transparent 1px 4px); opacity: .9; }
+.ch { display: flex; align-items: center; gap: 14px; font-size: 22px; color: var(--moromi); margin-bottom: 14px; }
+.ch::after { content: ""; width: 56px; height: 9px; background: repeating-linear-gradient(180deg, currentColor 0 1px, transparent 1px 4px); }
+
+/* ボタン: 四角・影なし */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 14px; min-height: 52px; padding: 0 28px; background: var(--moromi); color: var(--on-dark); border: 1px solid var(--moromi); font-size: 15px; letter-spacing: .1em; text-decoration: none; transition: background-color .3s; }
+.btn::after { content: ""; width: 20px; height: 5px; border-top: 1px solid currentColor; border-bottom: 1px solid currentColor; }
+.btn:hover { background: var(--moromi-dark); }
+.btn--line { background: transparent; border-color: rgba(244, 238, 227, .55); }
+.btn--line:hover { background: rgba(244, 238, 227, .08); }
+
+/* ---------- ヘッダー ---------- */
+.head { display: flex; align-items: center; gap: 28px; min-height: 76px; padding: 0 var(--gut); background: var(--sumi); color: var(--on-dark); }
+.logo { display: flex; align-items: center; gap: 16px; color: var(--on-dark); text-decoration: none; min-height: 44px; }
+.logo__name { font-size: 25px; letter-spacing: .16em; }
+.logo__sub { font-size: 12px; letter-spacing: .12em; color: var(--on-dark-2); }
+.head__nav { display: flex; margin-left: auto; }
+.head__nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 13px; color: var(--on-dark); text-decoration: none; font-size: 14px; letter-spacing: .1em; }
+.head__nav a:hover { text-decoration: underline; }
+
+/* ---------- 1. 最初の画面 ---------- */
+.hero { position: relative; min-height: 640px; display: flex; align-items: center; background: var(--sumi); color: var(--on-dark); }
+.hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% 50%; }
+.hero__copy { position: relative; padding: 48px var(--gut); max-width: calc(var(--gut) + 620px); }
+.hero h1 { font-size: clamp(44px, 5vw, 72px); line-height: 1.3; letter-spacing: .14em; margin: 18px 0; color: var(--on-dark); white-space: nowrap; }
+.hero__what { margin-top: 22px; font-size: 16px; color: var(--on-dark); }
+.hero__act { margin-top: 26px; }
+.hero__assure { margin-top: 18px; font-size: 13px; color: var(--on-dark-2); line-height: 1.9; }
+.hero__assure li::before { content: ""; display: inline-block; width: 12px; height: 1px; background: var(--sugi); vertical-align: middle; margin-right: 10px; }
+.hero__credit { position: absolute; right: 16px; bottom: 12px; font-size: 12px; color: var(--on-dark-2); }
+
+/* ---------- 2. 考え方 ---------- */
+.idea { padding: 80px var(--gut) 64px; }
+.idea__head { display: grid; grid-template-columns: auto 1fr; gap: 0 72px; align-items: end; }
+.idea__head .ch { grid-column: 1 / -1; }
+.idea h2, .press h2, .buy h2, .kura h2, .terms h2 { font-size: clamp(26px, 2.6vw, 36px); line-height: 1.5; letter-spacing: .08em; }
+.idea__head > p:last-child { max-width: 34em; font-size: 15px; color: var(--sumi-2); }
+.years { display: grid; grid-template-columns: 1fr 1.6fr 1fr 1.6fr 1fr; margin: 44px 0 36px; border-top: 1px solid var(--sumi); }
+.years li { position: relative; padding: 14px 14px 0 0; font-size: 13px; color: var(--sumi-2); line-height: 1.6; }
+.years li span { display: block; font-size: 20px; color: var(--sumi); }
+.years li::before { content: ""; position: absolute; left: 0; top: -5px; width: 1px; height: 9px; background: var(--sumi); }
+.years .is-summer { background: linear-gradient(180deg, rgba(110, 59, 31, .1), rgba(110, 59, 31, 0) 70%); padding-left: 12px; }
+.years .is-summer span { color: var(--moromi); }
+.idea__photos { display: grid; grid-template-columns: 5fr 6fr; gap: 32px; align-items: end; }
+.ph img { width: 100%; object-fit: cover; }
+.ph--moromi img { aspect-ratio: 1 / .82; }
+.ph--koji img { aspect-ratio: 4 / 3; }
+.ph figcaption { display: flex; align-items: baseline; gap: 14px; margin-top: 10px; font-size: 14px; color: var(--sumi-2); }
+.ph figcaption b { font-size: 20px; font-weight: 400; color: var(--sumi); }
+.idea .note { text-align: right; }
+
+/* ---------- 3. 搾り ---------- */
+.press { position: relative; min-height: 560px; display: flex; align-items: center; justify-content: flex-end; background: var(--sumi); color: var(--on-dark); overflow: hidden; }
+.press__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 30% 50%; }
+.press__txt { position: relative; width: min(520px, 44%); margin-right: var(--gut); padding: 48px 0; }
+.press .ch { color: #c79a74; }
+.press h2 { color: var(--on-dark); }
+.press__steps { margin-top: 24px; border-top: 1px solid rgba(207, 196, 178, .4); }
+.press__steps li { display: grid; grid-template-columns: 4.5em 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgba(207, 196, 178, .4); font-size: 14px; color: var(--on-dark-2); line-height: 1.8; }
+.press__steps b { font-size: 20px; font-weight: 400; color: var(--on-dark); line-height: 1.4; }
+
+/* ---------- 4. 商品と買い方 ---------- */
+.buy { padding: 80px var(--gut) 64px; }
+.buy__top { display: grid; grid-template-columns: 6fr 6fr; gap: 56px; align-items: center; }
+.goods { width: 100%; border-collapse: collapse; margin-top: 24px; }
+.goods th, .goods td { padding: 14px 0; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; font-weight: 400; }
+.goods tr:first-child th, .goods tr:first-child td { border-top: 1px solid var(--sumi); }
+.goods th .ff-d { display: block; font-size: 21px; letter-spacing: .08em; }
+.goods th small { font-size: 13px; color: var(--sumi-2); }
+.goods td { text-align: right; font-size: 15px; white-space: nowrap; padding-left: 20px; }
+.buy__photo img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.ways { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 44px; border-top: 1px solid var(--sumi); border-bottom: 1px solid var(--rule); }
+.ways li { padding: 18px 24px 20px 0; }
+.ways li + li { padding-left: 24px; border-left: 1px solid var(--rule); }
+.ways h3 { font-size: 20px; letter-spacing: .08em; }
+.ways p { font-size: 14px; color: var(--sumi-2); margin-top: 4px; line-height: 1.8; }
+
+/* ---------- 5. 蔵の案内 ---------- */
+.kura { display: grid; grid-template-columns: auto 1fr; gap: 0 72px; align-items: start; padding: 56px var(--gut); background: #ebe2d2; }
+.kura .ch { grid-column: 1 / -1; }
+.kura__dl { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.kura__dl dt { font-size: 13px; letter-spacing: .14em; color: var(--moromi); padding-bottom: 4px; border-bottom: 1px solid var(--sugi); margin-bottom: 6px; }
+.kura__dl dd { font-size: 14px; line-height: 1.85; }
+
+/* ---------- 6. 送料と条件 ---------- */
+.terms { background: var(--sumi); color: var(--on-dark); }
+.terms__in { display: grid; grid-template-columns: 7fr 4fr; gap: 64px; padding: 72px var(--gut); }
+.terms .ch { color: #c79a74; }
+.terms h2 { color: var(--on-dark); margin-bottom: 22px; }
+.ship { width: 100%; border-collapse: collapse; }
+.ship th, .ship td { text-align: left; padding: 12px 0; border-bottom: 1px solid rgba(207, 196, 178, .3); font-size: 14px; vertical-align: top; font-weight: 400; }
+.ship th { width: 10em; color: var(--on-dark-2); padding-right: 16px; }
+.terms__cta { align-self: end; border-left: 1px solid rgba(207, 196, 178, .3); padding-left: 40px; }
+.terms__cta h3 { font-size: 22px; letter-spacing: .08em; }
+.terms__cta > p:not(.terms__btns) { font-size: 14px; color: var(--on-dark-2); margin-top: 8px; }
+.terms__btns { display: flex; flex-direction: column; gap: 12px; margin-top: 22px; }
+
+.foot { padding: 32px var(--gut) 40px; font-size: 13px; color: var(--sumi-2); line-height: 1.9; }
+.foot__name { font-size: 22px; letter-spacing: .16em; color: var(--sumi); }
+
+/* ---------- 画面幅ごと ---------- */
+@media (max-width: 1080px) {
+  .head__nav { display: none; }
+}
+@media (max-width: 860px) {
+  .logo__sub { display: none; }
+  .hero { min-height: 600px; align-items: flex-end; }
+  .hero__img { object-position: 70% 50%; }
+  .hero__copy { padding: 140px 20px 40px; background: linear-gradient(0deg, rgba(14, 11, 9, .92) 60%, rgba(14, 11, 9, 0)); max-width: none; width: 100%; }
+  .hero h1 { font-size: 44px; letter-spacing: .1em; }
+  .hero__credit { top: 12px; bottom: auto; }
+  .idea, .buy { padding: 52px 20px 44px; }
+  .idea__head { grid-template-columns: 1fr; gap: 14px; }
+  .years { grid-template-columns: 1fr 1fr; margin: 28px 0 24px; border-top: 0; }
+  .years li { border-top: 1px solid var(--sumi); padding-bottom: 12px; }
+  .years li:last-child { grid-column: 1 / -1; }
+  .idea__photos { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .ph figcaption { flex-direction: column; gap: 0; font-size: 13px; }
+  .press { min-height: 0; display: block; }
+  .press__bg { position: static; height: 240px; }
+  .press__txt { width: auto; margin: 0; padding: 36px 20px 44px; }
+  .buy__top { grid-template-columns: 1fr; gap: 24px; }
+  .buy__photo { order: -1; }
+  .buy__photo img { aspect-ratio: 16 / 8; }
+  .ways { grid-template-columns: 1fr; margin-top: 28px; }
+  .ways li, .ways li + li { padding: 14px 0; border-left: 0; }
+  .ways li + li { border-top: 1px solid var(--rule); }
+  .kura { grid-template-columns: 1fr; padding: 44px 20px; gap: 12px; }
+  .kura__dl { grid-template-columns: 1fr; gap: 16px; }
+  .terms__in { grid-template-columns: 1fr; gap: 32px; padding: 52px 20px; }
+  .terms__cta { border-left: 0; padding-left: 0; border-top: 1px solid rgba(207, 196, 178, .3); padding-top: 28px; }
+  .ship tr, .ship th, .ship td { display: block; width: auto; }
+  .ship th { border-bottom: 0; padding: 12px 0 0; font-size: 13px; }
+  .ship td { padding: 2px 0 12px; }
+  .terms__btns .btn { width: 100%; padding: 0 16px; letter-spacing: .04em; font-size: 14px; }
+  .foot { padding: 28px 20px 32px; }
+}
+@media (max-width: 400px) {
+  .hero h1 { font-size: 36px; letter-spacing: .06em; }
+}
+@media (max-width: 340px) {
+  .hero h1 { font-size: 32px; letter-spacing: .04em; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }

@@ -9,10 +9,10 @@
 <link rel="icon" href="../../assets/brand/icon-32.png" sizes="32x32">
 <link rel="stylesheet" href="../_shared/crew-frame.css?v=20261015">
 <script defer src="../_shared/crew-frame.js?v=20261015"></script>
-<link rel="preload" href="fonts/tsumiki-maru-900.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/tsumiki.css?v=3">
+<link rel="preload" href="fonts/tsumiki-notoserif-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/tsumiki.css?v=v4">
 <script>document.documentElement.classList.add('js');</script>
-<script defer src="assets/tsumiki.js?v=3"></script>
+<script defer src="assets/tsumiki.js?v=v4"></script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ移動</a>
@@ -22,230 +22,212 @@
   <p class="ca-ribbon__links"><a href="../../type-growth-guidance.html">CA14<span class="ca-ribbon__long"> 成長案内型サイト</span></a><a href="design-notes.html"><span class="ca-ribbon__long">この見本の</span>設計メモ</a></p>
 </div>
 <header class="site-head">
-  <div class="wrap">
-    <a class="logo" href="index.html"><svg viewBox="0 0 236 56" width="236" height="56" role="img" aria-label="個別指導 つみき塾"><g class="lb" style="--i:0"><path d="M2 38h22l5 -4h-22z" fill="#3d5cb0"/><path d="M24 38l5 -4v16l-5 4z" fill="#1a3070"/><rect x="2" y="38" width="22" height="16" fill="#23408e"/></g><g class="lb" style="--i:0"><path d="M30 24h22l5 -4h-22z" fill="#ffe27a"/><path d="M52 24l5 -4v30l-5 4z" fill="#d9ac12"/><rect x="30" y="24" width="22" height="30" fill="#ffd23f"/></g><g class="lb" style="--i:0"><path d="M58 8h22l5 -4h-22z" fill="#73b98a"/><path d="M80 8l5 -4v46l-5 4z" fill="#3a7b50"/><rect x="58" y="8" width="22" height="46" fill="#4f9d69"/></g><text x="95" y="21" font-size="12" font-weight="700" letter-spacing="3.5" fill="#23408e" data-font="maru700" font-family="TsumikiMaru, Hiragino Maru Gothic ProN, Hiragino Sans, Yu Gothic, sans-serif">個別指導</text><text x="93" y="52" font-size="29" font-weight="900" letter-spacing="1.5" fill="#23408e" data-font="maru900" font-family="TsumikiMaru, Hiragino Maru Gothic ProN, Hiragino Sans, Yu Gothic, sans-serif">つみき塾</text></svg></a>
+  <div class="wrap site-head__in">
+    <a class="logo" href="index.html"><svg class="logo__mark" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true" focusable="false"><path d="M2 37H38M4 37V27H14V37M14 37V17H24V37M24 37V7H34V37" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="24" y="7" width="10" height="5" class="logo__top"/></svg><span class="logo__txt"><span class="logo__small">個別指導</span><span class="logo__name">つみき塾</span></span></a>
     <nav class="gnav" aria-label="サイト内"><a href="index.html" aria-current="page">トップ</a><a href="course.html">コース・料金</a><a href="guide.html">入塾までの流れ</a></nav>
     <a class="btn btn--main btn--sm" href="index.html#apply">無料体験<span class="sr-only">の申し込みへ</span></a>
   </div>
 </header>
 <main id="main">
-
 <section class="hero" aria-labelledby="h1">
-  <div class="wrap hero__grid">
-    <div class="blk blk--blue hero__main">
-      <p class="kick"><span>結ノ浦駅前・小学5年〜中学3年の<span class="nw">個別指導（架空）</span></span></p>
-      <h1 id="h1"><span class="ln">分からなかった所まで</span><span class="ln">戻って、<span class="mk" data-mk>一段ずつ。</span></span></h1>
+  <div class="hero__grid">
+    <div class="hero__copy">
+      <p class="kick">結ノ浦駅前<span aria-hidden="true">｜</span>小学5年〜中学3年の個別指導（架空）</p>
+      <h1 id="h1"><span class="ln">分からなかった所まで、</span><span class="ln">戻って<span class="mk" data-mk>一段ずつ。</span></span></h1>
       <p class="hero__lead">講師1人に生徒2人までの席で、つまずいた単元まで戻ってから進みます。体験のあとに、学習の計画と費用の総額を紙でお渡しします。</p>
       <div class="acts">
         <a class="btn btn--main" href="#apply" data-sample-action="無料体験を申し込む">無料体験を申し込む（見本）</a>
-        <a class="btn btn--ghost" href="course.html">コースと料金を見る <span class="arw" aria-hidden="true">→</span></a>
+        <a class="btn btn--line" href="course.html">コースと料金を見る<span class="arw" aria-hidden="true">→</span></a>
       </div>
-      <ul class="assure"><li>体験は1回60分・無料</li><li>入塾を勧める電話はしません</li></ul>
+      <p class="assure">体験は1回60分・無料<span aria-hidden="true">／</span>入塾を勧める電話はしません</p>
     </div>
-    <figure class="blk blk--photo hero__photo">
-      <img src="assets/img/desk.webp" width="1100" height="825" alt="方眼のノートに、鉛筆で三角形と円を書いている手元">
-      <figcaption>AI生成のイメージ</figcaption>
+    <figure class="hero__photo">
+      <img src="assets/img/hero-desk.webp" width="1536" height="864" alt="明るい窓辺の机で、方眼のノートに鉛筆で図形を書く生徒の手元と、指で示す講師の手元（AI生成のイメージ）" fetchpriority="high">
     </figure>
-    <div class="blk blk--yellow tile">
-      <p class="lbl"><span>月謝</span><span>税込</span></p>
-      <p class="big">12,100<small>円から</small></p>
-      <p>小学生コース・週1回60分<br>税込・見本用の架空価格</p>
-    </div>
-    <div class="blk blk--green tile">
-      <p class="lbl"><span>無料体験</span></p>
-      <p class="big">60<small>分</small></p>
-      <p>講師1人に生徒2人まで<br>平日 16:30〜21:30</p>
-    </div>
   </div>
   <div class="wrap">
+    <dl class="facts">
+      <div><dt>月謝</dt><dd><span class="serif">12,100</span>円から<small>小学生コース・週1回60分。税込・見本用の架空価格</small></dd></div>
+      <div><dt>無料体験</dt><dd><span class="serif">60</span>分<small>いつもの授業と同じ席で</small></dd></div>
+      <div><dt>席の形</dt><dd>講師1人に<span class="serif">2</span>人まで<small>となりの問題は見えにくい並び</small></dd></div>
+      <div><dt>時間</dt><dd>平日 <span class="serif">16:30</span>〜<span class="serif">21:30</span><small>土曜 10:00〜17:00</small></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sec steps-sec" aria-labelledby="s0">
+  <div class="wrap steps-grid">
+    <div class="ch">
+      <p class="ch__no">入塾までの流れ</p>
+      <h2 id="s0">入塾まで、<br>4つの段。</h2>
+      <p class="ch__lead">どの段でも、止まって考えられます。<a href="guide.html">各段で用意するもの</a></p>
+    </div>
     <ol class="stairs drop" aria-label="入塾までの4段">
-      <li><div class="blk blk--sky"><p class="step"><em>1段目</em>無料体験</p><p class="sub">60分・いつもの席で</p></div></li>
-      <li><div class="blk blk--yellow"><p class="step"><em>2段目</em>面談</p><p class="sub">30分・保護者の方と</p></div></li>
-      <li><div class="blk blk--green"><p class="step"><em>3段目</em>計画書と費用</p><p class="sub">紙1枚でお渡し</p></div></li>
-      <li><svg class="flag" viewBox="0 0 66 110" width="66" height="110" aria-hidden="true" focusable="false"><rect x="4" y="4" width="5" height="106" fill="#23408e"/><path d="M9 6h52l-12 18 12 18h-52z" fill="#ffd23f" stroke="#23408e" stroke-width="3" stroke-linejoin="round"/></svg><div class="blk blk--blue"><p class="step"><em>4段目</em>入塾</p><p class="sub"><a href="guide.html">各段で用意するもの</a></p></div></li>
+      <li><span class="stairs__n">1段目</span><b>無料体験</b><span>60分・いつもの席で</span></li>
+      <li><span class="stairs__n">2段目</span><b>面談</b><span>30分・保護者の方と</span></li>
+      <li><span class="stairs__n">3段目</span><b>計画書と費用</b><span>紙1枚ずつでお渡し</span></li>
+      <li><span class="stairs__n">4段目</span><b>入塾</b><span>最初の授業から連絡帳</span></li>
     </ol>
   </div>
 </section>
 
-<section class="sec" aria-labelledby="s1">
+<section class="sec sec--fit" aria-labelledby="s1">
   <div class="wrap fit">
-    <div>
-      <div class="ch"><svg class="stk " viewBox="0 -2 56 27" width="56" height="27" aria-hidden="true" focusable="false"><g class="b" style="--i:0"><path d="M4 8h40l8 -6h-40z" fill="#3d5cb0"/><path d="M44 8l8 -6v17l-8 6z" fill="#1a3070"/><rect x="4" y="8" width="40" height="17" fill="#23408e"/></g></svg><p class="ch__no">第1段</p><h2 id="s1">こんな子に、<br class="pc">向いています</h2><p class="tags"><span class="tag">保護者の方へ</span></p></div>
-      <p class="blk blk--yellow kid-note"><span class="tag tag--kid">生徒のみんなへ</span><br>「分からない」と言っていい場所です。そこから一緒に戻ります。</p>
-    </div>
-    <div class="checks">
-      <h3>向いている子</h3>
-      <ul>
-        <li><svg viewBox="0 0 30 30" width="26" height="26" aria-hidden="true" focusable="false"><rect x="2" y="4" width="22" height="22" fill="#fbfbf6" stroke="#23408e" stroke-width="2.5"/><path d="M7 14l6 6L28 3" fill="none" stroke="#4f9d69" stroke-width="4" stroke-linecap="square"/></svg><span>どこから分からなくなったのか、本人にも分からない</span></li>
-        <li><svg viewBox="0 0 30 30" width="26" height="26" aria-hidden="true" focusable="false"><rect x="2" y="4" width="22" height="22" fill="#fbfbf6" stroke="#23408e" stroke-width="2.5"/><path d="M7 14l6 6L28 3" fill="none" stroke="#4f9d69" stroke-width="4" stroke-linecap="square"/></svg><span>集団の授業だと、質問できずに置いていかれる</span></li>
-        <li><svg viewBox="0 0 30 30" width="26" height="26" aria-hidden="true" focusable="false"><rect x="2" y="4" width="22" height="22" fill="#fbfbf6" stroke="#23408e" stroke-width="2.5"/><path d="M7 14l6 6L28 3" fill="none" stroke="#4f9d69" stroke-width="4" stroke-linecap="square"/></svg><span>宿題はやるのに、テストになると手が止まる</span></li>
-        <li><svg viewBox="0 0 30 30" width="26" height="26" aria-hidden="true" focusable="false"><rect x="2" y="4" width="22" height="22" fill="#fbfbf6" stroke="#23408e" stroke-width="2.5"/><path d="M7 14l6 6L28 3" fill="none" stroke="#4f9d69" stroke-width="4" stroke-linecap="square"/></svg><span>前の学年の内容に、穴がありそうだと感じている</span></li>
+    <figure class="fit__photo"><img src="assets/img/pencil.webp" width="1000" height="750" loading="lazy" alt="方眼のノートに、黄色い鉛筆で三角形と円を書いている生徒の手元（AI生成のイメージ）"></figure>
+    <div class="fit__body">
+      <div class="ch">
+        <p class="ch__no"><span class="serif">1</span>保護者の方へ</p>
+        <h2 id="s1">こんな子に、<br>向いています。</h2>
+      </div>
+      <ul class="yes">
+        <li>どこから分からなくなったのか、本人にも分からない</li>
+        <li>集団の授業だと、質問できずに置いていかれる</li>
+        <li>宿題はやるのに、テストになると手が止まる</li>
+        <li>前の学年の内容に、穴がありそうだと感じている</li>
       </ul>
-    </div>
-    <div class="blk blk--sky nofit">
-      <h3>向いていないかもしれない子</h3>
-      <ul>
-        <li>まわりと競い合う集団授業の方が、やる気が出る</li>
-        <li>中学受験の専用講座を探している（用意していません）</li>
-        <li>毎日、長い時間の自習席を使いたい</li>
-      </ul>
-      <p class="fine">合わないと思ったら、体験のあとに遠慮なくお断りください。</p>
+      <div class="nofit">
+        <h3>向いていないかもしれない子</h3>
+        <ul>
+          <li>まわりと競い合う集団授業の方が、やる気が出る</li>
+          <li>中学受験の専用講座を探している（用意していません）</li>
+          <li>毎日、長い時間の自習席を使いたい</li>
+        </ul>
+        <p class="fine">合わないと思ったら、体験のあとに遠慮なくお断りください。</p>
+      </div>
+      <p class="kid-note"><span class="who">生徒のみんなへ</span>「分からない」と言っていい場所です。そこから一緒に戻ります。</p>
     </div>
   </div>
 </section>
 
-<section class="sec sec--yellow" aria-labelledby="s2">
+<section class="sec sec--tone" aria-labelledby="s2">
   <div class="wrap">
     <div class="back">
-      <div>
-        <div class="ch"><svg class="stk " viewBox="0 -2 56 44" width="56" height="44" aria-hidden="true" focusable="false"><g class="b" style="--i:0"><path d="M4 25h40l8 -6h-40z" fill="#3d5cb0"/><path d="M44 25l8 -6v17l-8 6z" fill="#1a3070"/><rect x="4" y="25" width="40" height="17" fill="#23408e"/></g><g class="b" style="--i:1"><path d="M7 8h40l8 -6h-40z" fill="#ffe27a"/><path d="M47 8l8 -6v17l-8 6z" fill="#d9ac12"/><rect x="7" y="8" width="40" height="17" fill="#ffd23f"/></g></svg><p class="ch__no">第2段</p><h2 id="s2">授業の進め方は、<br class="pc">戻って確かめること</h2><p class="tags"><span class="tag">保護者の方へ</span><span class="tag tag--kid">生徒のみんなへ</span></p></div>
-        <p class="lead" style="margin-top:14px">中2の「一次関数」でつまずいたら、中1の「比例」、小6の「比」まで戻ります。どこまで戻るかは、体験と面談で一人ずつ決めます。</p>
+      <div class="ch">
+        <p class="ch__no"><span class="serif">2</span>授業の進め方</p>
+        <h2 id="s2">戻って、<br>確かめてから進む。</h2>
+        <p class="ch__lead">中2の「一次関数」でつまずいたら、中1の「比例」、小6の「比」まで戻ります。どこまで戻るかは、体験と面談で一人ずつ決めます。</p>
       </div>
-      <ol class="back__route" aria-label="戻る単元の例">
-        <li class="blk blk--blue"><span><b>中学2年</b>一次関数</span><em>ここで止まった</em></li>
-        <li class="blk blk--sky"><span><b>中学1年</b>比例・反比例</span></li>
-        <li class="blk blk--paper"><span><b>小学6年</b>比と割合</span><em>ここは解けた</em></li>
+      <ol class="route" aria-label="戻る単元の例">
+        <li><span class="route__g">中学2年</span><b>一次関数</b><em>ここで止まった</em></li>
+        <li><span class="route__g">中学1年</span><b>比例・反比例</b></li>
+        <li class="is-ok"><span class="route__g">小学6年</span><b>比と割合</b><em>ここは解けた</em></li>
       </ol>
-      <figure class="blk blk--paper back__fig">
-        <img src="assets/img/goback.webp" width="900" height="675" loading="lazy" alt="右の緑の積み木から、黄色い矢印が左の青い積み木へ戻っているイラスト">
-        <figcaption>分かる所まで戻って、一段ずつ今の単元へ。（AI生成のイメージ）</figcaption>
-      </figure>
     </div>
-    <div class="route">
-      <svg class="line" viewBox="0 0 1000 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 34H226L256 66H737L767 34H1000" fill="none" stroke="#23408e" stroke-width="4" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg>
-      <ol>
-        <li><h3><small>見つける</small>どこで止まったか</h3><p>最初の10分の確かめ問題で、手が止まった単元を探します。</p></li>
-        <li><h3><small>戻る</small>分かる所まで</h3><p>自分で解ける単元まで、学年をさかのぼります。</p></li>
-        <li><h3><small>確かめる</small>自分の手で</h3><p>同じ形の問題を、講師が手を出さずに解きます。</p></li>
-        <li><h3><small>積み直す</small>今の単元へ</h3><p>一段ずつ今の単元へ。進み具合は毎回の連絡帳でお知らせします。</p></li>
-      </ol>
+    <ol class="process">
+      <li><span class="process__n serif">01</span><h3>見つける</h3><p>最初の10分の確かめ問題で、手が止まった単元を探します。</p></li>
+      <li><span class="process__n serif">02</span><h3>戻る</h3><p>自分で解ける単元まで、学年をさかのぼります。</p></li>
+      <li><span class="process__n serif">03</span><h3>確かめる</h3><p>同じ形の問題を、講師が手を出さずに解きます。</p></li>
+      <li><span class="process__n serif">04</span><h3>積み直す</h3><p>一段ずつ今の単元へ。進み具合は毎回の連絡帳でお知らせします。</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec sec--ink on-dark" aria-labelledby="s3">
+  <div class="wrap pick finder" data-finder>
+    <div class="pick__side">
+      <div class="ch">
+        <p class="ch__no"><span class="serif">3</span>コースと料金</p>
+        <h2 id="s3">学年と目的から、<br>コースを選ぶ。</h2>
+      </div>
+      <fieldset>
+        <legend>学年</legend>
+        <div class="seg">
+          <label><input type="radio" name="grade" value="e" checked><span>小5・小6</span></label>
+          <label><input type="radio" name="grade" value="j12"><span>中1・中2</span></label>
+          <label><input type="radio" name="grade" value="j3"><span>中3</span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>いちばん困っていること</legend>
+        <div class="seg seg--wrap">
+          <label><input type="radio" name="purpose" value="back" checked><span>戻って直したい</span></label>
+          <label><input type="radio" name="purpose" value="test"><span>定期テストに備えたい</span></label>
+          <label><input type="radio" name="purpose" value="exam"><span>高校受験の計画を立てたい</span></label>
+        </div>
+      </fieldset>
+      <p class="finder__out" data-finder-out aria-live="polite">選ぶと、合うコースに印が付きます（何も送信されません）。</p>
+    </div>
+    <div class="pick__main">
+      <div class="courses">
+        <article class="course" id="c-sho">
+          <p class="course__pick">合うコース</p>
+          <h3>小学生コース</h3>
+          <dl><dt>対象</dt><dd>小学5・6年</dd><dt>回数</dt><dd>週1回・60分</dd><dt>席</dt><dd>講師1人に生徒2人まで</dd></dl>
+          <p class="price"><span class="lbl">月謝（税込）</span><span class="serif">12,100</span>円</p>
+        </article>
+        <article class="course" id="c-chu">
+          <p class="course__pick">合うコース</p>
+          <h3>中学生コース</h3>
+          <dl><dt>対象</dt><dd>中学1〜3年</dd><dt>回数</dt><dd>週2回・80分</dd><dt>席</dt><dd>講師1人に生徒2人まで</dd></dl>
+          <p class="price"><span class="lbl">月謝（税込）</span><span class="serif">22,000</span>円</p>
+        </article>
+      </div>
+      <div class="extra" id="c-extra">
+        <p>入塾金（入塾時のみ）<b>11,000円</b></p>
+        <p>教材費（年1回）<b>8,800円</b></p>
+        <p>テスト前の追加授業<b>1回80分 3,300円</b></p>
+      </div>
+      <p class="fine">金額はすべて税込・見本用の架空価格です。追加授業は申し込んだときだけ。<a href="course.html#total">1年間の総額の例を見る</a></p>
     </div>
   </div>
 </section>
 
-<section class="sec sec--blue on-dark" aria-labelledby="s3">
-  <div class="wrap">
-    <div class="pick finder" data-finder>
-      <div>
-        <div class="ch"><svg class="stk " viewBox="0 -2 56 61" width="56" height="61" aria-hidden="true" focusable="false"><g class="b" style="--i:0"><path d="M4 42h40l8 -6h-40z" fill="#3d5cb0"/><path d="M44 42l8 -6v17l-8 6z" fill="#1a3070"/><rect x="4" y="42" width="40" height="17" fill="#23408e"/></g><g class="b" style="--i:1"><path d="M7 25h40l8 -6h-40z" fill="#ffe27a"/><path d="M47 25l8 -6v17l-8 6z" fill="#d9ac12"/><rect x="7" y="25" width="40" height="17" fill="#ffd23f"/></g><g class="b" style="--i:2"><path d="M3 8h40l8 -6h-40z" fill="#73b98a"/><path d="M43 8l8 -6v17l-8 6z" fill="#3a7b50"/><rect x="3" y="8" width="40" height="17" fill="#4f9d69"/></g></svg><p class="ch__no">第3段</p><h2 id="s3">学年と目的から、コースを選ぶ</h2><p class="tags"><span class="tag">保護者の方へ</span></p></div>
-        <fieldset>
-          <legend>学年</legend>
-          <div class="chips">
-            <label class="chip"><input type="radio" name="grade" value="e" checked><span>小5・小6</span></label>
-            <label class="chip"><input type="radio" name="grade" value="j12"><span>中1・中2</span></label>
-            <label class="chip"><input type="radio" name="grade" value="j3"><span>中3</span></label>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend>いちばん困っていること</legend>
-          <div class="chips">
-            <label class="chip"><input type="radio" name="purpose" value="back" checked><span>戻って直したい</span></label>
-            <label class="chip"><input type="radio" name="purpose" value="test"><span>定期テストに備えたい</span></label>
-            <label class="chip"><input type="radio" name="purpose" value="exam"><span>高校受験の計画を立てたい</span></label>
-          </div>
-        </fieldset>
-        <p class="finder__out" data-finder-out aria-live="polite">選ぶと、合うコースが持ち上がります（何も送信されません）。</p>
+<section class="sec week-sec" aria-labelledby="s4">
+  <div class="wrap week">
+    <figure class="week__photo">
+      <img src="assets/img/classroom.webp" width="1200" height="900" loading="lazy" alt="窓の明るい教室。木の机に紺の椅子が並び、壁に本棚とホワイトボードがある（AI生成のイメージ）">
+      <figcaption>講師1人に、生徒2人までの席。結ノ浦駅の北口から歩いて3分（教室はAI生成のイメージ、場所は見本上の設定）。</figcaption>
+    </figure>
+    <div class="week__body">
+      <div class="ch">
+        <p class="ch__no"><span class="serif">4</span>生徒のみんなへ</p>
+        <h2 id="s4">1週間の、<br>通い方の例。</h2>
+        <p class="ch__lead">授業のある日は塾で、ない日は家で15分だけ。続けられる量から始めます。</p>
       </div>
-      <div>
-        <div class="courses">
-          <article class="blk blk--yellow course" id="c-sho">
-            <div class="course__top"><svg class="stk " viewBox="0 -2 56 27" width="56" height="27" aria-hidden="true" focusable="false"><g class="b" style="--i:0"><path d="M4 8h40l8 -6h-40z" fill="#3d5cb0"/><path d="M44 8l8 -6v17l-8 6z" fill="#1a3070"/><rect x="4" y="8" width="40" height="17" fill="#23408e"/></g></svg><span class="course__pick">合うコース</span></div>
-            <h3>小学生コース</h3>
-            <dl><dt>対象</dt><dd>小学5・6年</dd><dt>回数</dt><dd>週1回・60分</dd><dt>席</dt><dd>講師1人に生徒2人まで</dd></dl>
-            <div class="price"><p class="lbl">月謝（税込）</p><p class="big">12,100<small>円</small></p></div>
-          </article>
-          <article class="blk blk--green course" id="c-chu">
-            <div class="course__top"><svg class="stk " viewBox="0 -2 56 44" width="56" height="44" aria-hidden="true" focusable="false"><g class="b" style="--i:0"><path d="M4 25h40l8 -6h-40z" fill="#3d5cb0"/><path d="M44 25l8 -6v17l-8 6z" fill="#1a3070"/><rect x="4" y="25" width="40" height="17" fill="#23408e"/></g><g class="b" style="--i:1"><path d="M7 8h40l8 -6h-40z" fill="#ffe27a"/><path d="M47 8l8 -6v17l-8 6z" fill="#d9ac12"/><rect x="7" y="8" width="40" height="17" fill="#ffd23f"/></g></svg><span class="course__pick">合うコース</span></div>
-            <h3>中学生コース</h3>
-            <dl><dt>対象</dt><dd>中学1〜3年</dd><dt>回数</dt><dd>週2回・80分</dd><dt>席</dt><dd>講師1人に生徒2人まで</dd></dl>
-            <div class="price"><p class="lbl">月謝（税込）</p><p class="big">22,000<small>円</small></p></div>
-          </article>
-        </div>
-        <div class="extra" id="c-extra">
-          <p>入塾金（入塾時のみ）<b>11,000円</b></p>
-          <p>教材費（年1回）<b>8,800円</b></p>
-          <p>テスト前の追加授業<b>1回80分 3,300円</b></p>
-        </div>
-        <p class="fine extra-note">金額はすべて税込・見本用の架空価格です。追加授業は申し込んだときだけ。<a href="course.html#total">1年間の総額の例を見る</a></p>
-        <div class="pick__cta"><a class="btn btn--main" href="#apply" data-sample-action="無料体験を申し込む">無料体験を申し込む（見本）</a><p>迷ったら、体験のときにご相談ください。体験は1回60分・無料、入塾を勧める電話はしません。</p></div>
-      </div>
-    </div>
-    
-  </div>
-</section>
-
-<figure class="band">
-  <img src="assets/img/room.webp" width="1200" height="630" loading="lazy" alt="窓の明るい教室。木の机にノートが置かれ、壁に本棚とホワイトボードがある">
-  <figcaption class="blk blk--yellow band__note"><p class="d7">講師1人に、生徒2人までの席。<br>結ノ浦駅の北口から歩いて3分。</p><small>教室のイメージ（AI生成）。場所は見本上の設定です。</small></figcaption>
-</figure>
-
-<section class="sec sec--week" aria-labelledby="s4">
-  <div class="wrap week-sec">
-    <div>
-      <div class="ch"><svg class="stk " viewBox="0 -2 56 78" width="56" height="78" aria-hidden="true" focusable="false"><g class="b" style="--i:0"><path d="M4 59h40l8 -6h-40z" fill="#3d5cb0"/><path d="M44 59l8 -6v17l-8 6z" fill="#1a3070"/><rect x="4" y="59" width="40" height="17" fill="#23408e"/></g><g class="b" style="--i:1"><path d="M7 42h40l8 -6h-40z" fill="#ffe27a"/><path d="M47 42l8 -6v17l-8 6z" fill="#d9ac12"/><rect x="7" y="42" width="40" height="17" fill="#ffd23f"/></g><g class="b" style="--i:2"><path d="M3 25h40l8 -6h-40z" fill="#73b98a"/><path d="M43 25l8 -6v17l-8 6z" fill="#3a7b50"/><rect x="3" y="25" width="40" height="17" fill="#4f9d69"/></g><g class="b" style="--i:3"><path d="M6 8h40l8 -6h-40z" fill="#e2e9f5"/><path d="M46 8l8 -6v17l-8 6z" fill="#a7b7d8"/><rect x="6" y="8" width="40" height="17" fill="#c9d4ea"/></g></svg><p class="ch__no">第4段</p><h2 id="s4">1週間の通い方の例</h2><p class="tags"><span class="tag tag--kid">生徒のみんなへ</span></p></div>
-      <p class="lead" style="margin-top:14px">授業のある日は塾で、ない日は家で15分だけ。続けられる量から始めます。</p>
-    </div>
-    <div class="blk blk--paper week-panel">
       <div class="scroll" tabindex="0" role="region" aria-label="1週間の通い方の例（横に動かせます）">
         <table class="cal">
           <caption class="sr-only">中学2年と小学6年の、1週間の通い方の例</caption>
           <thead><tr><th scope="col"><span class="sr-only">学年の例</span></th><th scope="col">月</th><th scope="col">火</th><th scope="col">水</th><th scope="col">木</th><th scope="col">金</th><th scope="col">土</th></tr></thead>
           <tbody>
-            <tr><th scope="row">中学2年<br>の例</th>
-              <td><span class="slot slot--home">家で15分</span></td>
-              <td><span class="slot slot--class">塾<br>18:45〜20:05</span></td>
-              <td><span class="slot slot--home">家で15分</span></td>
-              <td></td>
-              <td><span class="slot slot--class">塾<br>18:45〜20:05</span></td>
-              <td><span class="slot slot--test">テスト前は追加授業も</span></td></tr>
-            <tr><th scope="row">小学6年<br>の例</th>
-              <td></td>
-              <td><span class="slot slot--home">家で15分</span></td>
-              <td><span class="slot slot--class">塾<br>17:40〜18:40</span></td>
-              <td><span class="slot slot--home">家で15分</span></td>
-              <td></td>
-              <td></td></tr>
+            <tr><th scope="row">中学2年</th><td><span class="slot slot--home">家 15分</span></td><td><span class="slot slot--class">塾<br>18:45</span></td><td><span class="slot slot--home">家 15分</span></td><td></td><td><span class="slot slot--class">塾<br>18:45</span></td><td><span class="slot slot--test">テスト前</span></td></tr>
+            <tr><th scope="row">小学6年</th><td></td><td><span class="slot slot--home">家 15分</span></td><td><span class="slot slot--class">塾<br>17:40</span></td><td><span class="slot slot--home">家 15分</span></td><td></td><td></td></tr>
           </tbody>
         </table>
       </div>
-      <ul class="legend"><li><i style="background:var(--blue)"></i>塾の授業</li><li><i style="background:var(--yellow)"></i>家で15分（連絡帳の問題）</li><li><i style="background:var(--sky)"></i>テスト前の追加授業</li></ul>
-      <p class="fine" style="margin-top:8px">時間割は一例です（見本上の設定）。曜日と時間は、空いている席から選べます。<a href="course.html#timetable">時間割の全体を見る</a></p>
+      <ul class="legend"><li><i class="k-class"></i>塾の授業</li><li><i class="k-home"></i>家で15分（連絡帳の問題）</li><li><i class="k-test"></i>テスト前の追加授業</li></ul>
+      <p class="fine">時間割は一例です（見本上の設定）。<a href="course.html#timetable">時間割の全体を見る</a></p>
     </div>
   </div>
 </section>
 
-<section class="sec sec--green on-dark" aria-labelledby="s5">
+<section class="sec sec--tone" aria-labelledby="s5">
   <div class="wrap promise">
-    <div>
-      <div class="ch"><svg class="stk " viewBox="0 -2 56 95" width="56" height="95" aria-hidden="true" focusable="false"><g class="b" style="--i:0"><path d="M4 76h40l8 -6h-40z" fill="#3d5cb0"/><path d="M44 76l8 -6v17l-8 6z" fill="#1a3070"/><rect x="4" y="76" width="40" height="17" fill="#23408e"/></g><g class="b" style="--i:1"><path d="M7 59h40l8 -6h-40z" fill="#ffe27a"/><path d="M47 59l8 -6v17l-8 6z" fill="#d9ac12"/><rect x="7" y="59" width="40" height="17" fill="#ffd23f"/></g><g class="b" style="--i:2"><path d="M3 42h40l8 -6h-40z" fill="#73b98a"/><path d="M43 42l8 -6v17l-8 6z" fill="#3a7b50"/><rect x="3" y="42" width="40" height="17" fill="#4f9d69"/></g><g class="b" style="--i:3"><path d="M6 25h40l8 -6h-40z" fill="#e2e9f5"/><path d="M46 25l8 -6v17l-8 6z" fill="#a7b7d8"/><rect x="6" y="25" width="40" height="17" fill="#c9d4ea"/></g><g class="b" style="--i:4"><path d="M4 8h40l8 -6h-40z" fill="#3d5cb0"/><path d="M44 8l8 -6v17l-8 6z" fill="#1a3070"/><rect x="4" y="8" width="40" height="17" fill="#23408e"/></g></svg><p class="ch__no">第5段</p><h2 id="s5">保護者の方への、3つのお約束</h2><p class="tags"><span class="tag">保護者の方へ</span></p></div>
-      <ol class="tower">
-        <li class="blk blk--yellow"><h3><small>連絡</small>毎回、連絡帳で</h3><p>戻った単元・できたこと・次回の予定を、授業のたびに書いてお渡しします。</p></li>
-        <li class="blk blk--sky"><h3><small>費用</small>総額を先に</h3><p>入塾金・教材費を含めた1年間の費用を、入塾の前に紙でお見せします。</p></li>
-        <li class="blk blk--paper"><h3><small>勧誘</small>電話はしません</h3><p>体験のあと、入塾を勧める電話はしません。お返事はいつでも構いません。</p></li>
-      </ol>
+    <div class="ch">
+      <p class="ch__no"><span class="serif">5</span>保護者の方へ</p>
+      <h2 id="s5">保護者の方への、<br>3つのお約束。</h2>
     </div>
-    <figure class="promise__fig">
-      <div class="blk blk--photo"><img src="assets/img/papers.webp" width="1000" height="750" loading="lazy" alt="机の上に、紺の表紙のファイルと書類、電卓と鉛筆が置かれている"></div>
-      <figcaption>「学習の計画」と「1年間の費用」は、それぞれ紙1枚にまとめてお渡しします。（写真はAI生成のイメージ）</figcaption>
-    </figure>
+    <ol class="vows">
+      <li><span class="vows__k">連絡</span><h3>毎回、連絡帳で</h3><p>戻った単元・できたこと・次回の予定を、授業のたびに書いてお渡しします。</p></li>
+      <li><span class="vows__k">費用</span><h3>総額を先に</h3><p>入塾金・教材費を含めた1年間の費用を、入塾の前に紙でお見せします。</p></li>
+      <li><span class="vows__k">勧誘</span><h3>電話はしません</h3><p>体験のあと、入塾を勧める電話はしません。お返事はいつでも構いません。</p></li>
+    </ol>
+    <figure class="promise__photo"><img src="assets/img/papers.webp" width="1000" height="750" loading="lazy" alt="机の上で、紺の表紙のファイルを開き書類を確かめる手元。電卓と鉛筆が置かれている（AI生成のイメージ）"><figcaption>「学習の計画」と「1年間の費用」は、それぞれ紙1枚にまとめてお渡しします。</figcaption></figure>
   </div>
 </section>
 
 <section class="apply" id="apply" aria-labelledby="s6">
-  <div class="apply__band"><img src="assets/img/stairs.webp" width="1536" height="640" loading="lazy" alt="明るい光の中、白い階段が上へ続いているイラスト"></div>
   <div class="wrap apply__grid">
-    <div class="blk blk--blue apply__head">
-      <svg class="stk stk--sm" viewBox="0 -2 56 112" width="56" height="112" aria-hidden="true" focusable="false"><g class="b" style="--i:0"><path d="M4 93h40l8 -6h-40z" fill="#3d5cb0"/><path d="M44 93l8 -6v17l-8 6z" fill="#1a3070"/><rect x="4" y="93" width="40" height="17" fill="#23408e"/></g><g class="b" style="--i:1"><path d="M7 76h40l8 -6h-40z" fill="#ffe27a"/><path d="M47 76l8 -6v17l-8 6z" fill="#d9ac12"/><rect x="7" y="76" width="40" height="17" fill="#ffd23f"/></g><g class="b" style="--i:2"><path d="M3 59h40l8 -6h-40z" fill="#73b98a"/><path d="M43 59l8 -6v17l-8 6z" fill="#3a7b50"/><rect x="3" y="59" width="40" height="17" fill="#4f9d69"/></g><g class="b" style="--i:3"><path d="M6 42h40l8 -6h-40z" fill="#e2e9f5"/><path d="M46 42l8 -6v17l-8 6z" fill="#a7b7d8"/><rect x="6" y="42" width="40" height="17" fill="#c9d4ea"/></g><g class="b" style="--i:4"><path d="M4 25h40l8 -6h-40z" fill="#3d5cb0"/><path d="M44 25l8 -6v17l-8 6z" fill="#1a3070"/><rect x="4" y="25" width="40" height="17" fill="#23408e"/></g><g class="b" style="--i:5"><path d="M7 8h40l8 -6h-40z" fill="#ffe27a"/><path d="M47 8l8 -6v17l-8 6z" fill="#d9ac12"/><rect x="7" y="8" width="40" height="17" fill="#ffd23f"/></g></svg>
-      <h2 id="s6">「できた」を、<br><span class="mk" data-mk>ひとつ積む。</span></h2>
+    <div class="apply__head">
+      <h2 id="s6">「できた」を、<br>ひとつ積む。</h2>
       <p>まずは60分の無料体験から。どこまで戻るかの計画と、1年間の費用の総額を紙でお渡しします。</p>
-      <ul class="assure"><li>体験は1回60分・無料</li><li>入塾を勧める電話はしません</li><li>体験のあと、計画と費用を紙でお渡し</li></ul>
+      <ul class="ticks"><li>体験は1回60分・無料</li><li>入塾を勧める電話はしません</li><li>体験のあと、計画と費用を紙でお渡し</li></ul>
       <p class="fine">申し込む前に、<a href="guide.html">入塾までの流れ</a>と<a href="course.html">コース・料金</a>を確かめられます。</p>
     </div>
-    <form class="blk blk--paper form" data-sample-form="無料体験の申し込み" aria-label="無料体験の申し込み（見本）">
+    <form class="form" data-sample-form="無料体験の申し込み" aria-label="無料体験の申し込み（見本）">
       <div class="grid2"><div class="row"><label for="f-grade">学年<span class="req">必須</span></label>
-        <select id="f-grade" name="grade"><option>小学5年</option><option>小学6年</option><option>中学1年</option><option>中学2年</option><option>中学3年</option></select></div>
+      <select id="f-grade" name="grade"><option>小学5年</option><option>小学6年</option><option>中学1年</option><option>中学2年</option><option>中学3年</option></select></div>
       <div class="row"><label for="f-day">体験の希望曜日</label>
-        <select id="f-day" name="day"><option>曜日は相談</option><option>月</option><option>火</option><option>水</option><option>木</option><option>金</option><option>土</option></select></div></div>
+      <select id="f-day" name="day"><option>曜日は相談</option><option>月</option><option>火</option><option>水</option><option>木</option><option>金</option><option>土</option></select></div></div>
       <div class="grid2"><div class="row"><label for="f-name">保護者のお名前<span class="req">必須</span></label><input id="f-name" name="name" autocomplete="off"></div>
       <div class="row"><label for="f-tel">電話番号またはメール<span class="req">必須</span></label><input id="f-tel" name="contact" autocomplete="off"></div></div>
       <span class="ca-form-note">見本のため送信できません。押すと、見本であることの案内が出ます。</span>
@@ -253,12 +235,11 @@
     </form>
   </div>
 </section>
-
 </main>
 <footer class="site-foot">
-  <div class="wrap">
+  <div class="wrap site-foot__grid">
     <div>
-      <a class="logo" href="index.html"><svg viewBox="0 0 236 56" width="236" height="56" role="img" aria-label="個別指導 つみき塾"><g class="lb" style="--i:0"><path d="M2 38h22l5 -4h-22z" fill="#e2e9f5"/><path d="M24 38l5 -4v16l-5 4z" fill="#a7b7d8"/><rect x="2" y="38" width="22" height="16" fill="#c9d4ea"/></g><g class="lb" style="--i:0"><path d="M30 24h22l5 -4h-22z" fill="#ffe27a"/><path d="M52 24l5 -4v30l-5 4z" fill="#d9ac12"/><rect x="30" y="24" width="22" height="30" fill="#ffd23f"/></g><g class="lb" style="--i:0"><path d="M58 8h22l5 -4h-22z" fill="#73b98a"/><path d="M80 8l5 -4v46l-5 4z" fill="#3a7b50"/><rect x="58" y="8" width="22" height="46" fill="#4f9d69"/></g><text x="95" y="21" font-size="12" font-weight="700" letter-spacing="3.5" fill="#ffffff" data-font="maru700" font-family="TsumikiMaru, Hiragino Maru Gothic ProN, Hiragino Sans, Yu Gothic, sans-serif">個別指導</text><text x="93" y="52" font-size="29" font-weight="900" letter-spacing="1.5" fill="#ffffff" data-font="maru900" font-family="TsumikiMaru, Hiragino Maru Gothic ProN, Hiragino Sans, Yu Gothic, sans-serif">つみき塾</text></svg></a>
+      <a class="logo" href="index.html"><svg class="logo__mark" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true" focusable="false"><path d="M2 37H38M4 37V27H14V37M14 37V17H24V37M24 37V7H34V37" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="24" y="7" width="10" height="5" class="logo__top"/></svg><span class="logo__txt"><span class="logo__small">個別指導</span><span class="logo__name">つみき塾</span></span></a>
       <p>架空県結ノ浦市 結ノ浦駅 北口から歩いて3分（見本上の設定）<br>平日 16:30〜21:30 ／ 土曜 10:00〜17:00<br>対象: 小学5年〜中学3年</p>
     </div>
     <ul>
@@ -268,7 +249,7 @@
       <li><a href="index.html#apply">無料体験の申し込み（見本）</a></li>
     </ul>
     <div>
-      <p class="fine">料金はすべて税込・見本用の架空価格です。<br>写真・イラストはAI生成のイメージで、実在の教室・教材ではありません。<br>継続して通う契約のため、実際のサイトでは特定商取引法にもとづく表記のページを用意します。</p>
+      <p class="fine">料金はすべて税込・見本用の架空価格です。<br>写真はAI生成のイメージで、実在の教室・教材ではありません。<br>継続して通う契約のため、実際のサイトでは特定商取引法にもとづく表記のページを用意します。</p>
       <p class="fine">© 個別指導 つみき塾（架空の事業）</p>
     </div>
   </div>

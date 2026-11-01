@@ -1,0 +1,176 @@
+/* はがため歯科（見本・架空） — 安心ブランド型
+   骨格: 短い編集文と、角を大きく丸めた大きな写真を左右交互に。初診の流れは「飛び石」（丸い石を一列に置いた道）で一本に示す
+   モチーフ「やわらかい丸」: 角をすべて大きく丸めた四角と、小さな丸い石のような点。写真の角とボタンの形をそろえる */
+@font-face { font-family: "Hagatame Antique"; src: url("../fonts/hagatame-zkga-500.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+
+:root {
+  --paper: #fbf8f3; --white: #ffffff; --ink: #34312d; --ink-2: #5b554e; --sky: #7fa7c9; --sky-l: #dce8f2; --sky-d: #5f89ae; --wood: #eadccb; --wood-2: #f3ebe0; --rule: #e0d4c4; --rule-2: #cdbca6;
+  --r: 22px; --r-s: 12px;
+  --fd: "Hagatame Antique", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", sans-serif;
+  --fs: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", "Noto Sans JP", system-ui, sans-serif;
+  --gut: clamp(18px, 4.6vw, 68px);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--fs); font-size: 15.5px; line-height: 1.9; letter-spacing: .03em; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--fd); font-weight: 500; margin: 0; line-height: 1.5; letter-spacing: .05em; text-wrap: balance; }
+.fd { font-family: var(--fd); font-weight: 500; }
+p { margin: 0; }
+.skip { position: absolute; left: -9999px; top: 0; z-index: 100; background: var(--ink); color: #fff; padding: 12px 16px; }
+.skip:focus { left: 8px; top: 8px; }
+:focus-visible { outline: 2px solid var(--sky-d); outline-offset: 3px; }
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.fine { font-size: 13px; color: var(--ink-2); margin-top: 16px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 10px 26px; background: var(--sky); color: var(--ink); border: 1px solid var(--sky); border-radius: var(--r-s); text-decoration: none; font-size: 15px; font-weight: 600; letter-spacing: .04em; transition: background .25s; }
+.btn:hover { background: #95b7d5; }
+.btn--s { min-height: 44px; padding: 6px 18px; font-size: 14px; }
+.btn--line { background: transparent; border-color: var(--ink); }
+.btn--line:hover { background: var(--white); }
+.link { display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; text-underline-offset: 6px; }
+h2 { font-size: clamp(25px, 2.3vw, 32px); }
+figcaption { font-size: 13px; color: var(--ink-2); margin-top: 10px; }
+/* 丸い石の点 */
+.dots { list-style: none; margin: 0; padding: 0; }
+.dots li { position: relative; padding: 9px 0 9px 26px; border-bottom: 1px solid var(--rule); font-size: 15px; }
+.dots li::before { content: ""; position: absolute; left: 2px; top: 1.15em; width: 10px; height: 9px; border-radius: 50% 46% 52% 48% / 54% 50% 50% 46%; background: var(--sky); }
+
+/* ---------- 頭 ---------- */
+.head { display: flex; align-items: center; gap: 24px; padding: 10px var(--gut); }
+.logo { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; min-height: 44px; }
+.logo__mark { width: 32px; height: 32px; color: var(--ink); }
+.logo__name { font-size: 22px; letter-spacing: .1em; }
+.head__nav { display: flex; margin-left: auto; }
+.head__nav a { text-decoration: none; font-size: 14px; padding: 8px 12px; min-height: 44px; display: inline-flex; align-items: center; border-radius: var(--r-s); }
+.head__nav a:hover { background: var(--wood-2); }
+
+/* ---------- 1. 最初の画面 ---------- */
+.hero { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 0 clamp(28px, 4vw, 60px); padding: 18px var(--gut) 72px; align-items: center; }
+.hero__kicker { font-size: 13px; color: var(--ink-2); letter-spacing: .1em; margin-bottom: 18px; }
+.hero h1 { font-size: clamp(36px, 3.7vw, 54px); line-height: 1.42; letter-spacing: .06em; }
+.hero__lead { margin-top: 20px; max-width: 28em; }
+.hero__facts { margin: 22px 0 0; background: var(--wood-2); border-radius: var(--r-s); padding: 6px 18px; }
+.hero__facts div { display: grid; grid-template-columns: 6.5em 1fr; gap: 10px; padding: 8px 0; }
+.hero__facts div + div { border-top: 1px solid var(--rule); }
+.hero__facts dt { font-size: 13px; color: var(--ink-2); padding-top: 2px; }
+.hero__facts dd { margin: 0; font-size: 15px; }
+.hero__acts { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; margin-top: 26px; }
+.hero__note { margin-top: 14px; font-size: 13.5px; color: var(--ink-2); max-width: 30em; }
+.hero__photo { margin: 0; position: relative; }
+.hero__photo img { width: 100%; aspect-ratio: 4 / 3.3; object-fit: cover; object-position: 62% 50%; border-radius: var(--r); }
+.hero__photo figcaption { position: absolute; right: 14px; bottom: 14px; margin: 0; font-size: 12px; background: var(--paper); color: var(--ink); padding: 0 10px; border-radius: 8px; }
+
+/* ---------- 2. 考え方 ---------- */
+.policy { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(32px, 5vw, 80px); padding: 72px var(--gut); align-items: center; background: var(--white); }
+.policy__text > p { margin-top: 18px; max-width: 34em; }
+.vows { list-style: none; counter-reset: v; margin: 26px 0 0; padding: 0; border-top: 1px solid var(--rule); }
+.vows li { counter-increment: v; position: relative; padding: 12px 0 12px 44px; border-bottom: 1px solid var(--rule); font-size: 14.5px; color: var(--ink-2); }
+.vows li::before { content: counter(v); position: absolute; left: 0; top: 13px; width: 28px; height: 28px; border-radius: 10px; background: var(--sky-l); color: var(--ink); font-family: var(--fd); font-size: 15px; display: grid; place-items: center; line-height: 1; }
+.vows b { display: block; color: var(--ink); font-weight: 600; font-size: 15.5px; }
+.policy__photo { margin: 0; }
+.policy__photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r); }
+
+/* ---------- 3. 診療と初診の流れ ---------- */
+.care { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 0 clamp(32px, 5vw, 80px); padding: 72px var(--gut) 64px; align-items: center; }
+.care__photo { margin: 0; }
+.care__photo img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--r); }
+.areas { margin: 22px 0 0; border-top: 1px solid var(--ink); }
+.areas div { display: grid; grid-template-columns: 6.5em 1fr; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--rule); }
+.areas dt { font-family: var(--fd); font-size: 17px; }
+.areas dd { margin: 0; font-size: 15px; padding-top: 1px; }
+.areas__not { margin-top: 12px; font-size: 13.5px; color: var(--ink-2); }
+.stones { grid-column: 1 / -1; list-style: none; margin: 48px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; position: relative; }
+.stones::before { content: ""; position: absolute; top: 21px; left: 22px; right: 12%; border-top: 2px dotted var(--rule-2); }
+.stones li { position: relative; font-size: 14px; color: var(--ink-2); padding-top: 58px; }
+.stone { position: absolute; top: 0; left: 0; width: 46px; height: 42px; border-radius: 52% 48% 46% 54% / 56% 52% 48% 44%; background: var(--wood); border: 1px solid var(--rule-2); }
+.stones li:nth-child(4) .stone { background: var(--sky-l); border-color: var(--sky); }
+.stones b { display: block; color: var(--ink); font-family: var(--fd); font-weight: 500; font-size: 17px; }
+.stones .t { display: inline-block; font-size: 13px; color: var(--ink); background: var(--white); border: 1px solid var(--rule); border-radius: 8px; padding: 0 8px; margin: 2px 0 6px; }
+.stones small { display: block; font-size: 13.5px; line-height: 1.7; }
+.js .stones li { opacity: 0; transform: translateY(8px); transition: opacity .7s ease, transform .7s ease; }
+.js .stones.is-in li { opacity: 1; transform: none; }
+.js .stones.is-in li:nth-child(2) { transition-delay: .15s; }
+.js .stones.is-in li:nth-child(3) { transition-delay: .3s; }
+.js .stones.is-in li:nth-child(4) { transition-delay: .45s; }
+
+/* ---------- 4. 家族 ---------- */
+.family { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(32px, 5vw, 80px); padding: 64px var(--gut); align-items: center; background: var(--wood); }
+.family .dots { margin-top: 20px; border-top: 1px solid var(--rule-2); }
+.family .dots li { border-color: var(--rule-2); }
+.family .dots li::before { background: var(--white); border: 1.5px solid var(--sky-d); width: 11px; height: 10px; }
+.family__photo { margin: 0; }
+.family__photo img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: var(--r); max-height: 440px; }
+.family__photo figcaption { color: var(--ink); }
+
+/* ---------- 5. 費用 ---------- */
+.fee { padding: 72px var(--gut) 64px; }
+.fee__head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px 48px; align-items: end; margin-bottom: 28px; }
+.fee__head p { color: var(--ink-2); max-width: 32em; }
+.fee__cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.fee__col { background: var(--white); border-radius: var(--r); padding: 26px 28px 22px; border: 1px solid var(--rule); }
+.fee__col h3 { font-size: 21px; display: flex; align-items: center; gap: 12px; }
+.fee__col h3::before { content: ""; width: 12px; height: 11px; border-radius: 50% 46% 52% 48%; background: var(--sky); }
+.fee__col:nth-child(2) h3::before { background: var(--wood); border: 1px solid var(--rule-2); }
+.fee__desc { margin: 8px 0 14px; font-size: 14.5px; color: var(--ink-2); }
+.yen { margin: 0; border-top: 1px solid var(--ink); }
+.yen div { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+.yen dt { font-size: 14.5px; }
+.yen dd { margin: 0; font-family: var(--fd); font-size: 19px; white-space: nowrap; }
+.fee__fine { margin-top: 12px; font-size: 13px; color: var(--ink-2); }
+
+/* ---------- 6. 来院 ---------- */
+.visit { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(32px, 5vw, 80px); padding: 64px var(--gut) 72px; background: var(--white); align-items: start; }
+.hours { border-collapse: separate; border-spacing: 0; width: 100%; margin-top: 22px; background: var(--paper); border-radius: var(--r-s); overflow: hidden; border: 1px solid var(--rule); }
+.hours caption { text-align: left; font-size: 13px; color: var(--ink-2); padding-bottom: 6px; }
+.hours th, .hours td { padding: 10px 6px; text-align: center; font-size: 15px; border-bottom: 1px solid var(--rule); }
+.hours tbody tr:last-child th, .hours tbody tr:last-child td { border-bottom: 0; }
+.hours thead th { font-family: var(--fd); font-weight: 500; background: var(--wood-2); }
+.hours tbody th { text-align: left; padding-left: 16px; font-weight: 500; white-space: nowrap; }
+.hours td { color: var(--sky-d); }
+.hours td.off { color: var(--ink-2); font-size: 13px; }
+.hours__note { font-size: 13.5px; color: var(--ink-2); margin: 8px 0 14px; }
+.dots--s li { font-size: 14.5px; padding: 7px 0 7px 26px; }
+.visit__acts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.visit__fine { margin-top: 10px; font-size: 13px; color: var(--ink-2); }
+.visit__photo { margin: 0; }
+.visit__photo img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--r); }
+.hours td { color: #4b7194; }
+
+.foot { padding: 26px var(--gut) 30px; font-size: 13px; color: var(--ink-2); border-top: 1px solid var(--rule); }
+.foot b { font-size: 18px; color: var(--ink); margin-right: 14px; letter-spacing: .08em; }
+
+/* ---------- 狭い画面 ---------- */
+@media (max-width: 1080px) { .head__nav { display: none; } .head .btn--s { margin-left: auto; } }
+@media (max-width: 860px) {
+  .hero, .policy, .care, .family, .fee__head, .fee__cols, .visit { grid-template-columns: minmax(0, 1fr); }
+  .hero { padding-bottom: 48px; }
+  .hero__photo { order: -1; margin-bottom: 26px; }
+  .hero__photo img { aspect-ratio: 16 / 10; }
+  .policy, .care, .family, .fee, .visit { padding-top: 52px; padding-bottom: 52px; gap: 26px; }
+  .policy__photo { order: -1; }
+  .policy__photo img, .care__photo img { aspect-ratio: 16 / 9; }
+  .family__photo img { aspect-ratio: 16 / 10; }
+  .stones { margin-top: 10px; grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .stones::before { top: 10px; bottom: 30px; left: 22px; right: auto; border-top: 0; border-left: 2px dotted var(--rule-2); }
+  .stones li { padding: 4px 0 16px 64px; min-height: 64px; }
+  .stones b { display: inline; margin-right: 8px; }
+  .stones small { margin-top: 2px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 15px; }
+  .logo__name { font-size: 19px; }
+  .hero h1 { font-size: 34px; }
+  .hero__kicker { margin-bottom: 10px; }
+  .fee__col { padding: 20px 18px 16px; }
+  .yen div { flex-direction: column; gap: 0; align-items: flex-start; }
+  .hours th, .hours td { padding: 8px 2px; font-size: 14px; }
+  .hours tbody th { padding-left: 10px; font-size: 13px; }
+  .hours td.off { font-size: 12px; }
+}
+@media (max-width: 360px) { .hero h1 { font-size: 29px; } h2 { font-size: 21.5px; } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .stones li { opacity: 1 !important; transform: none !important; }
+  * { transition: none !important; }
+}

@@ -1,0 +1,197 @@
+/* =====================================================================
+   二十人までの結婚式場 ハレノマ（架空）見本  harenoma.css
+   選ばれる魅力: 白の地・中央の軸・結びの線。細いゴシックの宣言と、斜体のセリフの数字。
+   見出し Zen Kaku Gothic Antique Light 300／数字・欧文 Bodoni Moda Italic（どちらもサブセット）。
+   クルーアセントの枠（.ca-*）は上書きしない。
+   ===================================================================== */
+@font-face { font-family: "Harenoma Antique"; src: url("../fonts/harenoma-zkga-300.woff2") format("woff2"); font-weight: 300; font-display: swap; }
+@font-face { font-family: "Harenoma Bodoni"; src: url("../fonts/harenoma-bodoni-italic.woff2") format("woff2"); font-weight: 500; font-style: italic; font-display: swap; }
+
+:root {
+  --white: #fffefb;   /* 地の色 */
+  --sumi: #2a2928;    /* 文字 */
+  --sakura: #c79a9a;  /* 強調の一色・主な行動 */
+  --mint: #edefea;    /* 面 */
+  --leaf: #7c8c74;    /* 罫線・小さな印 */
+  --sumi-2: #55524f;  /* 補足の文字 */
+  --sakura-dark: #b88a8a;
+  --rule: #d9ddd4;
+  --f-d: "Harenoma Antique", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  --f-n: "Harenoma Bodoni", "Bodoni 72", "Didot", "Times New Roman", serif;
+  --f-b: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", "Noto Sans JP", system-ui, sans-serif;
+  --gut: max(24px, calc((100% - 1160px) / 2));
+}
+*, *::before, *::after { box-sizing: border-box; }
+main h1, main h2, main h3 { text-wrap: balance; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--white); color: var(--sumi); font-family: var(--f-b); font-size: 15px; line-height: 1.95; letter-spacing: .04em; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--sumi); text-underline-offset: 4px; }
+a:focus-visible, button:focus-visible { outline: 3px solid #1d64bd; outline-offset: 3px; }
+h1, h2, h3 { margin: 0; font-weight: 300; }
+p, ul, ol, dl, dd, figure { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+.ff-d, main h1, main h2 { font-family: var(--f-d); font-weight: 300; font-feature-settings: "palt"; word-break: keep-all; overflow-wrap: anywhere; }
+.num { font-family: var(--f-n); font-style: italic; font-weight: 500; letter-spacing: .01em; }
+.sp { display: none; }
+.pc-i { display: inline; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: absolute; left: 8px; top: -60px; z-index: 60; padding: 10px 16px; background: var(--sumi); color: #fff; }
+.skip:focus { top: 8px; }
+
+/* 署名モチーフ「結びの線」 */
+.knot { display: block; width: 160px; height: 16px; color: var(--leaf); margin-bottom: 22px; }
+.knot--c { margin-left: auto; margin-right: auto; }
+.js .knot path { stroke-dasharray: 300; stroke-dashoffset: 300; transition: stroke-dashoffset 1.8s ease-out; }
+.js .knot circle { opacity: 0; transition: opacity .6s 1s; }
+.js .knot.is-in path { stroke-dashoffset: 0; }
+.js .knot.is-in circle { opacity: 1; }
+
+/* ボタン: 細い角の矩形。影なし */
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 34px; background: var(--sakura); color: var(--sumi); border: 1px solid var(--sakura); font-size: 15px; letter-spacing: .12em; text-decoration: none; transition: background-color .3s; }
+.btn:hover { background: var(--sakura-dark); }
+.btn--line { background: transparent; border-color: var(--sumi); }
+.btn--line:hover { background: var(--white); }
+
+/* ---------- ヘッダー ---------- */
+.head { display: flex; align-items: center; gap: 32px; min-height: 80px; padding: 0 var(--gut); }
+.logo { display: flex; align-items: baseline; gap: 14px; color: var(--sumi); text-decoration: none; min-height: 44px; align-items: center; }
+.logo__en { font-family: var(--f-n); font-style: italic; font-size: 30px; letter-spacing: .02em; }
+.logo__jp { font-size: 12px; letter-spacing: .14em; color: var(--sumi-2); }
+.head__nav { display: flex; margin-left: auto; }
+.head__nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; color: var(--sumi); text-decoration: none; font-size: 14px; letter-spacing: .12em; }
+.head__nav a:hover { color: var(--leaf); }
+.head__cta { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border: 1px solid var(--sumi); color: var(--sumi); text-decoration: none; font-size: 14px; letter-spacing: .1em; }
+
+/* ---------- 1. 最初の画面 ---------- */
+.hero { position: relative; margin: 0 var(--gut); }
+.hero__img { width: 100%; height: clamp(440px, 42vw, 600px); object-fit: cover; object-position: 70% 50%; }
+.hero__copy { position: absolute; left: clamp(28px, 5vw, 72px); top: 50%; transform: translateY(-50%); max-width: 46%; }
+.hero__num { font-family: var(--f-n); font-style: italic; font-size: clamp(88px, 10vw, 150px); line-height: .9; color: var(--sakura-dark); margin-bottom: 6px; letter-spacing: -.02em; }
+.hero h1 { font-size: clamp(32px, 3.6vw, 50px); line-height: 1.55; letter-spacing: .1em; }
+.hero__what { margin-top: 18px; font-size: 16px; letter-spacing: .08em; }
+.hero__credit { position: absolute; right: 16px; bottom: 12px; font-size: 12px; color: var(--sumi-2); background: rgba(255, 254, 251, .85); padding: 0 8px; }
+
+.vow { display: flex; flex-direction: column; align-items: center; gap: 28px; padding: 36px var(--gut) 40px; text-align: center; }
+.vow__list { display: grid; grid-template-columns: repeat(3, 1fr); width: 100%; max-width: 980px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.vow__list li { padding: 18px 24px; font-size: 14px; line-height: 1.8; color: var(--sumi-2); }
+.vow__list li + li { border-left: 1px solid var(--rule); }
+.vow__list b { display: block; font-weight: 400; color: var(--sumi); font-size: 13px; letter-spacing: .2em; margin-bottom: 4px; }
+
+/* ---------- 2. 考え方 ---------- */
+.idea__band { position: relative; }
+.idea__band img { width: 100%; height: clamp(240px, 24vw, 360px); object-fit: cover; }
+.idea__line { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); padding: 18px 40px; background: rgba(255, 254, 251, .94); font-size: clamp(22px, 2.2vw, 30px); letter-spacing: .2em; white-space: nowrap; }
+.idea__body { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; padding: 48px var(--gut) 52px; }
+.idea h2, .table h2, .venue h2, .price h2, .contact h2 { font-size: clamp(24px, 2.3vw, 32px); line-height: 1.6; letter-spacing: .1em; }
+.idea__text p { margin-top: 18px; max-width: 30em; }
+.idea__small { font-size: 14px; color: var(--sumi-2); }
+.seats svg { width: 100%; height: auto; }
+.seats figcaption { font-size: 13px; color: var(--sumi-2); margin-top: 10px; text-align: center; }
+
+/* ---------- 3. 料理と装花 ---------- */
+.table { background: var(--mint); padding: 56px var(--gut) 48px; text-align: center; }
+.table__grid { display: grid; grid-template-columns: 7fr 5fr; gap: 48px; max-width: 1000px; margin: 32px auto 0; text-align: left; align-items: start; }
+.dish img { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
+.flower { margin-top: 56px; }
+.flower img { aspect-ratio: 1; object-fit: cover; width: 100%; }
+.table figcaption { display: grid; grid-template-columns: auto 1fr; gap: 16px; padding-top: 16px; }
+.table figcaption h3 { font-size: 20px; letter-spacing: .2em; line-height: 1.6; }
+.table figcaption p { font-size: 14px; line-height: 1.85; color: var(--sumi-2); }
+.table__note { font-size: 12px; color: var(--sumi-2); margin: 14px auto 0; max-width: 1000px; text-align: right; }
+
+/* ---------- 4. 会場と流れ ---------- */
+.venue { display: grid; grid-template-columns: 5fr 6fr; gap: 64px; align-items: center; padding: 60px var(--gut); }
+.flow { margin-top: 24px; }
+.flow li { display: grid; grid-template-columns: 52px 1fr; gap: 12px; padding: 12px 0; border-top: 1px solid var(--rule); }
+.flow li:last-child { border-bottom: 1px solid var(--rule); }
+.flow__n { font-family: var(--f-n); font-style: italic; font-size: 34px; line-height: 1.2; color: var(--sakura-dark); }
+.flow h3 { font-family: var(--f-b); font-size: 15px; font-weight: 700; letter-spacing: .12em; }
+.flow p { font-size: 14px; line-height: 1.8; color: var(--sumi-2); }
+.venue__photo img { aspect-ratio: 3 / 2; object-fit: cover; width: 100%; }
+.venue__photo figcaption { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 14px; font-size: 13px; line-height: 1.8; color: var(--sumi-2); }
+
+/* ---------- 5. 料金 ---------- */
+.price { background: var(--mint); padding: 56px var(--gut) 56px; }
+.price__head { text-align: center; max-width: 720px; margin: 0 auto 36px; }
+.price__head .knot { margin: 0 auto 22px; }
+.price__head p { margin-top: 12px; font-size: 14px; color: var(--sumi-2); }
+.price__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.base { width: 100%; border-collapse: collapse; }
+.base th, .base td { padding: 14px 0; border-bottom: 1px solid var(--rule); text-align: left; font-weight: 400; }
+.base thead th { font-size: 12px; letter-spacing: .2em; color: var(--sumi-2); border-bottom-color: var(--sumi); padding-top: 0; }
+.base td { text-align: right; }
+.base thead th:last-child { text-align: right; }
+.base tbody th { font-size: 15px; }
+.base tbody th .num { font-size: 34px; margin-right: 6px; }
+.base td .num { font-size: 34px; margin-right: 4px; }
+.add h3 { font-family: var(--f-b); font-size: 15px; font-weight: 700; letter-spacing: .12em; margin-bottom: 6px; }
+.add table { width: 100%; border-collapse: collapse; }
+.add th, .add td { padding: 10px 0; border-bottom: 1px solid var(--rule); font-size: 14px; text-align: left; font-weight: 400; }
+.add td { text-align: right; white-space: nowrap; padding-left: 16px; }
+.price__fine { margin-top: 20px; font-size: 13px; color: var(--sumi-2); text-align: center; }
+.price__act { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 24px; }
+.price__act span { font-size: 14px; color: var(--sumi-2); }
+
+/* ---------- 6. 問い合わせ ---------- */
+.contact { padding: 60px var(--gut) 56px; text-align: center; }
+.contact__lead { margin-top: 14px; color: var(--sumi-2); }
+.contact__btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 28px; }
+.contact__facts { display: grid; grid-template-columns: repeat(3, 1fr); max-width: 880px; margin: 36px auto 0; border-top: 1px solid var(--rule); }
+.contact__facts div { padding: 16px 12px; }
+.contact__facts div + div { border-left: 1px solid var(--rule); }
+.contact__facts dt { font-size: 12px; letter-spacing: .2em; color: var(--sumi-2); }
+.contact__facts dd { font-size: 14px; margin-top: 2px; }
+
+.foot { padding: 36px var(--gut) 44px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--sumi-2); text-align: center; line-height: 1.9; }
+.foot__en { font-family: var(--f-n); font-style: italic; font-size: 26px; color: var(--sumi); }
+
+/* ---------- 画面幅ごと ---------- */
+@media (max-width: 960px) {
+  .head__nav { display: none; }
+  .head { justify-content: space-between; }
+  .idea__body, .venue { grid-template-columns: 1fr; gap: 36px; }
+  .price__grid { grid-template-columns: 1fr; gap: 36px; }
+}
+@media (max-width: 720px) {
+  .sp { display: inline; }
+  .pc-i { display: none; }
+  .logo__jp { display: none; }
+  .head { min-height: 68px; padding: 0 16px; gap: 12px; }
+  .logo { flex-direction: column; align-items: flex-start; gap: 0; line-height: 1.3; }
+  .logo__en { font-size: 24px; }
+  .head__cta { padding: 0 12px; font-size: 13px; }
+  .hero { margin: 0; }
+  .hero__img { height: 520px; object-position: 78% 50%; }
+  .hero__copy { left: 20px; right: 20px; top: auto; bottom: 0; transform: none; max-width: none; padding: 80px 0 40px; background: linear-gradient(0deg, rgba(255, 254, 251, .96) 55%, rgba(255, 254, 251, 0)); }
+  .hero__copy { left: 0; right: 0; padding: 70px 20px 36px; }
+  .hero__num { font-size: 72px; }
+  .hero h1 { font-size: 30px; }
+  .hero__what { font-size: 15px; margin-top: 10px; }
+  .hero__credit { top: 12px; bottom: auto; right: 12px; }
+  .vow { padding: 28px 20px 44px; }
+  .vow__list { grid-template-columns: 1fr; }
+  .vow__list li { padding: 12px 4px; text-align: left; }
+  .vow__list li + li { border-left: 0; border-top: 1px solid var(--rule); }
+  .idea__band img { height: 200px; }
+  .idea__line { padding: 12px 18px; font-size: 18px; letter-spacing: .12em; }
+  .idea__body, .venue { padding: 40px 20px 48px; }
+  .table, .price, .contact { padding: 48px 20px; }
+  .table__grid { grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
+  .flower { margin-top: 40px; }
+  .table figcaption { grid-template-columns: 1fr; gap: 2px; }
+  .table figcaption h3 { font-size: 18px; }
+  .table figcaption p { font-size: 13px; }
+  .venue__photo figcaption { grid-template-columns: 1fr; gap: 6px; }
+  .base tbody th .num, .base td .num { font-size: 28px; }
+  .contact__facts { grid-template-columns: 1fr; }
+  .contact__facts div + div { border-left: 0; border-top: 1px solid var(--rule); }
+  .contact__btns .btn { width: 100%; }
+  .foot { padding: 28px 20px 36px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .knot path { stroke-dashoffset: 0; transition: none; }
+  .js .knot circle { opacity: 1; transition: none; }
+  .btn { transition: none; }
+}
