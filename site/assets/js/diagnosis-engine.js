@@ -351,7 +351,7 @@ function parseStoredState(raw, nowMs) {
   const updated = Date.parse(data.updatedAt || data.startedAt || '');
   if (Number.isFinite(updated) && nowMs - updated > STORAGE_MAX_AGE_MS) return null;
 
-  const maxIndex = data.mode === 'quick' ? 16 : 84;
+  const maxIndex = data.mode === 'quick' ? 16 : 48;
   const currentIndex = Math.min(data.currentIndex, maxIndex);
 
   return {
