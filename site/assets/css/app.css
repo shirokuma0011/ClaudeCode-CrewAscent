@@ -53,3 +53,13 @@ body[data-page="result"] .sec--tight .wrap--mid{max-width:calc(860px + var(--gut
 .rs-mast{background:#000!important;color:#fff;border:0}.rs-mast::before,.rs-mast::after{display:none}.rs-mast__label{color:#b9b2a8!important}.rs-mast__id{background:#7b6b5a;color:#fff}.rs-mast__name{font-family:var(--serif)!important;color:#fff!important}.rs-mast__oneliner{color:#d8d2c9!important}.rs-mast .alink,.rs-mast__go{color:#fff!important}.rs-coords{background:transparent!important;border-color:rgba(255,255,255,.25)!important}.rs-coords > div{background:transparent!important;border-color:rgba(255,255,255,.2)!important}.rs-coords dt{color:#b9b2a8!important}.rs-coords dd{color:#fff!important}.rs-mast .note{background:#1a1a1a;color:#e9e4dc;border-color:#7b6b5a}
 /* 結果ページの band--ink は明るい地で読ませる（黒地前提の淡い文字色を戻す） */
 .band--ink{background:var(--paper-2,#efe9e1)}.band--ink .idx-head__no{color:#7b6b5a!important}.band--ink .idx-head p,.band--ink .caption{color:var(--tx-2)!important}.band--ink .idx-head{border-top-color:var(--rule)}
+/* 第9版「人の目線」: アプリ系ページの大きすぎる文字を締める */
+.ah__brand{font-size:clamp(24px,2.4vw,34px)!important;line-height:1.4!important}
+.ah--product .num,.ah .num{font-size:clamp(24px,2.2vw,30px)!important}
+.rs-mast__name,.ah--type h1,body[data-page^="type-"] .ah h1,.ah h1{font-size:clamp(24px,2.4vw,34px)!important;line-height:1.45!important}
+.h-sm{font-size:16px!important}
+.sr-demo__id{font-size:24px!important}.sr-demo__name{font-size:18px!important}
+body[data-page="industries"] .idx-head h2{font-size:clamp(18px,1.6vw,21px)!important}
+@media (max-width:760px){.ah__brand{font-size:24px!important}.ah h1,.rs-mast__name{font-size:clamp(22px,6.4vw,28px)!important}.ah .num{font-size:26px!important}}
+.idx-head__no,.tp-list__id{color:#6c5c4a}.sec--ink .idx-head__no,.band--ink .idx-head__no{color:#ebeef3}
+.ah .eyebrow,.ah__eyebrow,.ah .lbl,.ah--product .lbl{color:#d9cbb6!important}

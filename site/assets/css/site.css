@@ -455,7 +455,7 @@ body.atl-dialog-open { overflow: hidden; }
    ===================================================================== */
 :root {
   --navy: #000; --navy-2: #1c1c1c; --navy-3: #1f1f1f;
-  --blue: #7b6b5a; --blue-dark: #5f5244;
+  --blue: #6c5c4a; --blue-dark: #5f5244;
   --ink: #1a1a1a; --tx-2: #45403a; --tx-3: #6a6157;
   --paper-2: #eee9e1; --rule: #d5cdc1; --rule-ink: #3a3631;
   --on-ink: #ece8e2; --on-ink-2: #b5aca0;
@@ -1121,3 +1121,107 @@ html .sec--paper2 { background: var(--paper-2); }
 .figure-band--stack{grid-template-columns:1fr!important;gap:var(--s5)}.figure-band--stack > div{order:-1;max-width:760px}.figure-band--stack .fig{max-width:1100px}
 .nw{display:inline-block}
 .ah__band > .ah__facts{width:100%;max-width:calc(var(--max) + var(--gut) * 2);margin-inline:auto;padding-inline:var(--gut);box-sizing:border-box}
+
+/* =====================================================================
+   18. 第9版「人の目線」: 文字を締め、枠を短く、写真を目印にする（2026-11-01）
+   参考サイトの実測（古川製作所・中川政七商店・KESIKI・ALGO ARTIS）:
+   章見出し15〜24px、本文14〜16px、1画面の3〜9割が写真。写真＋短い名前で行き先が分かる。
+   ===================================================================== */
+:root { --sec: 72px; }
+.pg-sub { --sec: 56px; }
+/* 見出しの大きさ（PC） */
+.hero__title, html .hero__title { font-size: clamp(30px, 3vw, 42px); line-height: 1.4; margin: 14px 0 16px; }
+.hero__lead { font-size: 15px; line-height: 1.85; }
+.ah h1, .phead__title, .article__head h1 { font-size: clamp(26px, 2.4vw, 34px); line-height: 1.45; margin: 8px 0 12px; }
+.ah--utility h1 { font-size: clamp(24px, 2.2vw, 30px); }
+.ah__h1sub { font-size: 15px; }
+.ah__lead { font-size: 14.5px; line-height: 1.85; }
+.ah__inner { padding-block: 36px 40px; }
+.sec__title, .sec-title, .ed h2, .split h2, .closing h2, .cta__title, .pg-sub main h2:not([class]), .faq-group__ja, .tl-phase__ja, .external-cta h2, .article__sec h2, .compare-3__col h3, .form-choice__item h3 { font-size: clamp(20px, 1.8vw, 24px) !important; line-height: 1.5; }
+.cols h3, .rows h3, .numbered h3, .spec-card h3, .qa-grid__item h3, .timeline h3, .scope h3, .intake-line h3, .contact-ways__item h3, .prose h3, .article__sec h3, .pg-sub main h3:not([class]), .atl-dialog-copy h2, .mgmt-card h2 { font-size: 16px !important; line-height: 1.6; }
+.prose h2 { font-size: 19px; }
+.article-list__title { font-size: 17px; }
+.biglinks strong { font-size: 18px; }
+.lead, .sec-lead { font-size: 15px; line-height: 1.85; }
+.fold > summary { min-height: 56px; padding: 10px 0; }
+.fold__t b { font-size: 16px; }
+.rows li { padding-block: 16px; }
+.numbered > li { padding-block: 14px; }
+.sec--tight { padding-block: 56px; }
+.sec__head { gap: 12px 40px; }
+
+/* 章の見出し（短い1行＋説明1行） */
+.shead { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 24px; margin-bottom: 24px; padding-top: 14px; border-top: 2px solid var(--ink); }
+.shead__t { font: 700 clamp(20px, 1.8vw, 24px)/1.5 var(--serif); letter-spacing: .03em; color: var(--ink); }
+.shead__d { flex-basis: 100%; font-size: 14px; color: var(--tx-2); }
+.sec--ink .shead { border-top-color: #fff; }
+.sec--ink .shead__t { color: #fff; }
+
+/* 写真つきの入口（写真→名前→1行→小さな事実） */
+.sec--pics { padding-block: 56px 64px; }
+.pics { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px 24px; }
+.pic { display: grid; gap: 4px; color: var(--ink); text-decoration: none; }
+.pic__img { display: block; aspect-ratio: 3 / 2; overflow: hidden; background: #e9e4dc; margin-bottom: 10px; }
+.pic__img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.pic:hover .pic__img img { transform: scale(1.03); }
+.pic__t { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 16px; font-weight: 700; }
+.pic__t .ico { width: 16px; height: 16px; flex: none; transition: transform .2s; }
+.pic:hover .pic__t .ico { transform: translateX(3px); }
+.pic__d { font-size: 14px; line-height: 1.7; color: var(--tx-2); }
+.pic__m { font: 700 13px/1.5 var(--font); color: #7b6b5a; }
+.pic:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+
+/* 3段階を横一列で */
+.sec--steps { padding-block: 48px 56px; }
+.steps3 { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--rule-ink); }
+.steps3 li { display: grid; grid-template-columns: auto 1fr; gap: 2px 14px; padding: 18px 24px 18px 0; }
+.steps3 li + li { padding-left: 24px; border-left: 1px solid var(--rule-ink); }
+.steps3__no { grid-row: span 2; font: 700 28px/1 var(--serif); color: #c9a77e; }
+.steps3 b { font-size: 16px; color: #fff; }
+.steps3 p { font-size: 14px; line-height: 1.7; color: var(--on-ink); }
+.sec--steps .tlink { color: #fff; }
+
+/* 相談の帯を低く */
+.cta__in { padding-block: 48px; }
+.cta__title { margin: 6px 0 10px; }
+
+/* 下層ページの見出し写真を、新しい写真に差し替え（色のある写真で行き先を見分ける） */
+.ah::after { width: 42%; filter: none; }
+[data-page="services"] .ah::after { background-image: url("../img/n-structure.webp"); background-position: 50% 50%; }
+[data-page="process"] .ah::after { background-image: url("../img/n-ribbon.webp"); background-position: 50% 50%; }
+[data-page="management"] .ah::after { background-image: url("../img/n-garden.webp"); background-position: 50% 50%; }
+[data-page="website-guide"] .ah::after { background-image: url("../img/n-town.webp"); background-position: 50% 50%; }
+[data-page="guide"] .ah::after { background-image: url("../img/n-fork.webp"); background-position: 50% 50%; }
+:is([data-page="contact"]) .ah::after { background-image: url("../img/n-lighthouse.webp"); background-position: 50% 40%; }
+:is([data-page="consult-form"], [data-page="hearing-form"]) .ah::after { background-image: url("../img/n-knot.webp"); background-position: 50% 50%; }
+[data-page="about"] .ah::after { background-image: url("../img/n-rivers.webp"); background-position: 50% 50%; }
+[data-page="diagnosis"] .ah::after { background-image: url("../img/n-tidal.webp"); background-position: 50% 50%; }
+[data-page="diagnosis-guide"] .ah::after { background-image: url("../img/n-prism.webp"); background-position: 40% 50%; }
+[data-page="faq"] .ah::after { background-image: url("../img/n-geode.webp"); background-position: 50% 50%; }
+[data-page="types"] .ah::after { background-image: url("../img/n-marble.webp"); background-position: 50% 50%; }
+[data-page="industries"] .ah::after { background-image: url("../img/n-shop.webp"); background-position: 50% 50%; }
+
+@media (max-width: 900px) {
+  .pics { grid-template-columns: 1fr 1fr; gap: 24px 14px; }
+  .steps3 { grid-template-columns: 1fr; }
+  .steps3 li, .steps3 li + li { padding: 14px 0; border-left: 0; border-bottom: 1px solid var(--rule-ink); }
+}
+@media (max-width: 760px) {
+  :root { --sec: 48px; }
+  .pg-sub { --sec: 40px; }
+  .hero__title, html .hero__title { font-size: clamp(26px, 7.4vw, 32px); }
+  .ah h1, .phead__title, .article__head h1 { font-size: clamp(22px, 6.4vw, 28px); }
+  .sec__title, .sec-title, .ed h2, .split h2, .closing h2, .cta__title, .pg-sub main h2:not([class]), .faq-group__ja, .tl-phase__ja, .external-cta h2, .article__sec h2, .shead__t { font-size: 19px !important; }
+  .pic__t { font-size: 15px; }
+  .pic__d { font-size: 13px; }
+  .sec--pics { padding-block: 40px 48px; }
+}
+@media (max-width: 420px) {
+  .pics { gap: 20px 12px; }
+  .pic__m { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .pic__img img, .pic__t .ico { transition: none; } .pic:hover .pic__img img { transform: none; } }
+/* 黒地の中の説明文・数字を読める明るさに */
+.sec--ink p:not([class]), .sec--ink .numbered p, .sec--ink li p { color: var(--on-ink); }
+.sec--ink dd, .sec--ink .num, .sec--ink .num__unit { color: #fff; }
+.pic__m { color: #66563f; }
