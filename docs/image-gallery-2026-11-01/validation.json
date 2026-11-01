@@ -1,0 +1,26 @@
+﻿{
+  "date": "2026-11-01",
+  "archive": "crewascent-all-images-explained-20261101.zip",
+  "archive_bytes": 107214034,
+  "sha256": "513972f8f97a1bc01fb3379abdfd6ff58377309d90a90cf1c378d7fc76f34ac2",
+  "image_files": 57,
+  "unique_file_contents": 50,
+  "all_files": 63,
+  "groups": {
+    "01-current": 22,
+    "02-archive": 3,
+    "03-fixed-frames": 6,
+    "04-original-frames": 6,
+    "05-video-references": 2,
+    "06-posters": 3,
+    "07-composited-review": 5,
+    "08-gemini-review": 6,
+    "09-contact-sheets": 4
+  },
+  "zip_crc": "PASS",
+  "source_copy_integrity": "PASS",
+  "image_decode_validation": "PASS",
+  "gallery_image_links": 57,
+  "text_encoding": "UTF-8 with BOM",
+  "filenames": "ASCII only"
+}
