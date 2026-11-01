@@ -52,7 +52,9 @@ if (errs.length) { console.error('正本に問題があります:\n  - ' + errs.
 /* ---------- 骨組みは相談ページから借りる ---------- */
 const base = rd('contact.html');
 const HEAD_TOP = base.slice(0, base.indexOf('  <title>'));
-const AFTER_DESC = base.slice(base.indexOf('  <meta name="robots"'), base.indexOf('</head>'));
+const AFTER_DESC = base.slice(base.indexOf('  <meta name="robots"'), base.indexOf('</head>'))
+  /* フォームの部品は app.css にある（相談ページ自体は読まない） */
+  .replace(/(  <link rel="stylesheet" href="assets\/css\/site\.css[^"]*">\n)/, '$1  <link rel="stylesheet" href="assets/css/app.css?v=20261101">\n');
 const HEADER = base.slice(base.indexOf('<a class="skip-link'), base.indexOf('<nav class="breadcrumb'));
 const FOOTER = base.slice(base.indexOf('<footer'));
 
