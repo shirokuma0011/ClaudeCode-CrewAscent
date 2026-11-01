@@ -1,4 +1,4 @@
-/* しなり（架空）見本  shinari.js
+/* しなり（架空）見本  shinari.js  v3
    1) 最初の画面のしなる線を描く（1回）
    2) 章の区切りの線が、画面に入ったときに1回しなって戻る（署名の動き）
    3) 受付時間の表で、今日の行を強調する（ローカル時刻）
@@ -8,7 +8,7 @@
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* 1) 最初の画面の線 */
-  var curve = document.querySelector('.hero__curve');
+  var curve = document.querySelector('.hero__edge');
   if (curve) requestAnimationFrame(function () { curve.classList.add('is-drawn'); });
 
   /* 2) 章の区切り */

@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="../_shared/crew-frame.css?v=20261015">
 <script defer src="../_shared/crew-frame.js?v=20261015"></script>
 <script>document.documentElement.classList.add("js")</script>
+<link rel="preload" href="fonts/tatemae-zom-900.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/tatemae.css">
 <script defer src="assets/tatemae.js"></script>
 </head>
@@ -21,145 +22,156 @@
   <p class="ca-ribbon__links"><a href="../../type-classic-service.html">CA26<span class="ca-ribbon__long"> 王道サービス型サイト</span></a><a href="design-notes.html"><span class="ca-ribbon__long">この見本の</span>設計メモ</a></p>
 </div>
 <header class="hd">
-  <div class="wrap hd__in">
-    <a class="logo" href="index.html" aria-current="page"><svg viewBox="0 0 244 60" role="img" aria-label="木組みの家 たてまえ工務店">
-<g fill="none" stroke="#2a2a28" stroke-width="2.4" stroke-linecap="square"><path d="M6 32 28 13l22 19"/><path d="M12 27v23M44 27v23M8 50h40"/><path d="M12 36h32" stroke="#8a5a3b"/></g>
-<g stroke="#2a2a28" stroke-width="1.2"><path d="M16 50v-4M20 50v-4M24 50v-6M28 50v-4M32 50v-4M36 50v-6M40 50v-4"/></g>
-<rect x="25" y="9" width="6" height="6" transform="rotate(45 28 12)" fill="#c99a2e"/>
-<text x="62" y="32" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, serif" font-weight="700" font-size="24" fill="#2c3e66" letter-spacing="1">たてまえ工務店</text>
-<text x="63" y="51" font-family="Hiragino Sans, Yu Gothic, Noto Sans JP, sans-serif" font-size="12" fill="#8a5a3b" letter-spacing="4">木組みの家・灯町</text>
-</svg></a>
+  <div class="hd__in">
+    <a class="logo" href="index.html" aria-current="page"><svg viewBox="0 0 244 60" role="img" aria-label="木組みの家 たてまえ工務店"><g fill="none" stroke="#2a2a28" stroke-width="2.4" stroke-linecap="square"><path d="M6 32 28 13l22 19"/><path d="M12 27v23M44 27v23M8 50h40"/><path d="M12 36h32" stroke="#8a5a3b"/></g><g stroke="#2a2a28" stroke-width="1.2"><path d="M16 50v-4M20 50v-4M24 50v-6M28 50v-4M32 50v-4M36 50v-6M40 50v-4"/></g><rect x="25" y="9" width="6" height="6" transform="rotate(45 28 12)" fill="#c99a2e"/><text class="fd" x="61" y="33" font-family="'Tatemae Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', serif" font-weight="900" font-size="25" fill="#2c3e66" letter-spacing="1.5">たてまえ工務店</text><text x="63" y="51" font-family="Hiragino Sans, Yu Gothic, Noto Sans JP, sans-serif" font-size="11.5" fill="#8a5a3b" letter-spacing="4" font-weight="700">木組みの家・灯町</text></svg></a>
     <nav class="nav" aria-label="サイト内"><a href="services.html">できること</a><a href="process.html">家づくりの流れ</a><a href="company.html">会社について</a><a href="contact.html">相談・見積もり</a></nav>
-    <a class="btn btn--main" href="#" data-sample-action="相談・見積もりを依頼する">相談・見積もり<span class="sr-only">を依頼する（見本）</span></a>
+    <a class="btn btn--main btn--sm" href="#" data-sample-action="相談・見積もりを依頼する">相談・見積もり<span class="sr-only">を依頼する（見本）</span></a>
   </div>
 </header>
 <main id="main">
-
 <section class="kv" aria-labelledby="kv-t">
-  <div class="wrap">
-    <div class="kv__in">
-      <div>
-        <p class="kicker">灯町の工務店（架空）　新築・リフォーム・修繕</p>
-        <h1 id="kv-t"><span class="ln">段取りが見えると、</span><span class="ln">家づくりは怖くない。</span></h1>
-        <p class="kv__lead">木の軸組の家の新築・リフォーム・修繕を、設計から点検まで同じ会社で。<b>何を、いつ決めて、いつ払うか</b>を最初の相談でお見せします。</p>
-        <div class="acts">
-          <a class="btn btn--main" href="#" data-sample-action="相談・見積もりを依頼する">相談・見積もりを依頼する（見本）</a>
-          <a class="btn" href="process.html">家づくりの流れを見る</a>
-        </div>
-        <ul class="assure"><li>相談は無料</li><li>見積もりは項目ごと</li><li>しつこい営業はしません</li></ul>
+  <div class="kv__pano"><img src="assets/img/pano.webp" width="1536" height="640" alt="山と水辺を背に、木の柱と梁が組み上がった家の骨組みを描いたパノラマのイラスト" fetchpriority="high"></div>
+  <div class="kv__rule" aria-hidden="true"></div>
+  <div class="kv__in">
+    <div class="kv__panel">
+      <p class="kicker"><span class="kn">灯町の工務店</span>新築・リフォーム・小さな修繕（架空）</p>
+      <h1 id="kv-t" class="kv__h"><span>段取りが見えると、</span><span>家づくりは怖くない。</span></h1>
+      <p class="kv__lead">木の軸組の家を、設計から引き渡し後の点検まで同じ会社で。<b>何を、いつ決めて、いつ払うか</b>を、最初の相談でお見せします。</p>
+      <div class="acts">
+        <a class="btn btn--main" href="#" data-sample-action="相談・見積もりを依頼する">相談・見積もりを依頼する（見本）</a>
+        <a class="btn" href="process.html">家づくりの流れを見る</a>
       </div>
-      <figure class="kv__fig">
-        <svg class="frame" data-build="load" viewBox="-368 -324 852 695" role="img" aria-label="木造軸組の骨組みの図。土台、柱、梁、屋根の骨組み（棟木と垂木）の順に組み上がる。"><g><polygon class="grid" points="-7.6,-66.0 419.2,180.4 114.3,356.4 -312.5,110.0"/><path class="grid" d="M38.1 -22.0L-236.3 136.4"/><path class="grid" d="M114.3 22.0L-160.0 180.4"/><path class="grid" d="M190.5 66.0L-83.8 224.4"/><path class="grid" d="M266.7 110.0L-7.6 268.4"/><path class="grid" d="M342.9 154.0L68.6 312.4"/><path class="grid" d="M-45.7 -26.4L350.6 202.4"/><path class="grid" d="M-141.0 28.6L255.3 257.4"/><path class="grid" d="M-236.3 83.6L160.0 312.4"/></g><g class="edge-g"><path class="dim" pathLength="1" style="--d:.1s" d="M-243.9 140.8L61.0 316.8"/><path class="dim" d="M-243.9 136.3v9"/><path class="dim" d="M-205.8 160.3v5"/><path class="dim" d="M-167.7 180.3v9"/><path class="dim" d="M-129.6 204.3v5"/><path class="dim" d="M-91.5 224.3v9"/><path class="dim" d="M-53.3 248.3v5"/><path class="dim" d="M-15.2 268.3v9"/><path class="dim" d="M22.9 292.3v5"/><path class="dim" d="M61.0 312.3v9"/></g><g><path class="m back" pathLength="1" style="--d:0.30s" d="M0.0 0.0L304.8 176.0"/><path class="m back" pathLength="1" style="--d:0.34s" d="M0.0 0.0L-190.5 110.0"/><path class="m" pathLength="1" style="--d:0.39s" d="M304.8 176.0L114.3 286.0"/><path class="m" pathLength="1" style="--d:0.43s" d="M-190.5 110.0L114.3 286.0"/><path class="m" pathLength="1" style="--d:0.48s" d="M152.4 88.0L-38.1 198.0"/></g><g><path class="m back" pathLength="1" style="--d:1.00s" d="M0.0 0.0L0.0 -132.0"/><path class="m back" pathLength="1" style="--d:1.04s" d="M-190.5 110.0L-190.5 -22.0"/><path class="m back" pathLength="1" style="--d:1.09s" d="M76.2 44.0L76.2 -88.0"/><path class="m" pathLength="1" style="--d:1.14s" d="M-114.3 154.0L-114.3 22.0"/><path class="m back" pathLength="1" style="--d:1.18s" d="M152.4 88.0L152.4 -44.0"/><path class="m" pathLength="1" style="--d:1.23s" d="M-38.1 198.0L-38.1 66.0"/><path class="m back" pathLength="1" style="--d:1.27s" d="M228.6 132.0L228.6 0.0"/><path class="m" pathLength="1" style="--d:1.31s" d="M38.1 242.0L38.1 110.0"/><path class="m back" pathLength="1" style="--d:1.36s" d="M304.8 176.0L304.8 44.0"/><path class="m" pathLength="1" style="--d:1.41s" d="M114.3 286.0L114.3 154.0"/><path class="m back" pathLength="1" style="--d:1.45s" d="M-95.3 55.0L-95.3 -77.0"/><path class="m" pathLength="1" style="--d:1.50s" d="M209.6 231.0L209.6 99.0"/></g><g><path class="m back" pathLength="1" style="--d:1.75s" d="M0.0 -132.0L304.8 44.0"/><path class="m" pathLength="1" style="--d:1.79s" d="M-190.5 -22.0L114.3 154.0"/><path class="m back" pathLength="1" style="--d:1.84s" d="M0.0 -132.0L-190.5 -22.0"/><path class="m" pathLength="1" style="--d:1.89s" d="M76.2 -88.0L-114.3 22.0"/><path class="m" pathLength="1" style="--d:1.93s" d="M152.4 -44.0L-38.1 66.0"/><path class="m" pathLength="1" style="--d:1.98s" d="M228.6 0.0L38.1 110.0"/><path class="m" pathLength="1" style="--d:2.02s" d="M304.8 44.0L114.3 154.0"/></g><g><path class="m back" pathLength="1" style="--d:2.45s" d="M-95.3 -77.0L-95.3 -169.4"/><path class="m" pathLength="1" style="--d:2.50s" d="M-19.1 -33.0L-19.1 -125.4"/><path class="m" pathLength="1" style="--d:2.54s" d="M57.2 11.0L57.2 -81.4"/><path class="m" pathLength="1" style="--d:2.58s" d="M133.4 55.0L133.4 -37.4"/><path class="m" pathLength="1" style="--d:2.63s" d="M209.6 99.0L209.6 6.6"/><path class="m" pathLength="1" style="--d:2.68s" d="M-95.3 -169.4L209.6 6.6"/><path class="m back" pathLength="1" style="--d:2.72s" d="M19.1 -125.4L-95.3 -169.4"/><path class="m back" pathLength="1" style="--d:2.77s" d="M-209.6 6.6L-95.3 -169.4"/><path class="m" pathLength="1" style="--d:2.81s" d="M95.3 -81.4L-19.1 -125.4"/><path class="m" pathLength="1" style="--d:2.85s" d="M-133.4 50.6L-19.1 -125.4"/><path class="m" pathLength="1" style="--d:2.90s" d="M171.5 -37.4L57.2 -81.4"/><path class="m" pathLength="1" style="--d:2.95s" d="M-57.2 94.6L57.2 -81.4"/><path class="m" pathLength="1" style="--d:2.99s" d="M247.7 6.6L133.4 -37.4"/><path class="m" pathLength="1" style="--d:3.04s" d="M19.1 138.6L133.4 -37.4"/><path class="m" pathLength="1" style="--d:3.08s" d="M323.9 50.6L209.6 6.6"/><path class="m" pathLength="1" style="--d:3.12s" d="M95.3 182.6L209.6 6.6"/></g><rect class="ridge-mark" style="--d:3.2s" x="203.6" y="0.6" width="12" height="12" transform="rotate(45 209.6 6.6)"/><path class="edge" pathLength="1" style="--d:0.9s" d="M114.3 286.0l34 22"/><text class="lab" style="--d:0.9s" x="152.3" y="312.0" text-anchor="start">土台</text><path class="edge" pathLength="1" style="--d:1.6s" d="M209.6 160.6l40 0"/><text class="lab" style="--d:1.6s" x="253.6" y="164.6" text-anchor="start">柱</text><path class="edge" pathLength="1" style="--d:2.3s" d="M-190.5 -22.0l-36 16"/><text class="lab" style="--d:2.3s" x="-230.5" y="-2.0" text-anchor="end">梁</text><path class="edge" pathLength="1" style="--d:3.2s" d="M-95.3 -169.4l-36 -14"/><text class="lab" style="--d:3.2s" x="-135.3" y="-179.4" text-anchor="end">棟木</text></svg>
-        <figcaption>木造軸組（もくぞうじくぐみ）＝柱と梁を組んで建てる、日本の木の家の工法</figcaption>
-      </figure>
+      <ul class="assure"><li>相談は無料</li><li>見積もりは項目ごと</li><li>しつこい営業はしません</li></ul>
     </div>
-    <dl class="facts">
-      <div><dt>頼めること</dt><dd>新築・リフォーム・小さな修繕</dd></div>
-      <div><dt>対応地域</dt><dd>灯町と周辺の3市町</dd></div>
-      <div><dt>相談の受付</dt><dd>平日・土曜 <span class="num">9:00–18:00</span></dd></div>
-      <div><dt>引き渡し後</dt><dd>1・5・10年目の点検（無料）</dd></div>
-    </dl>
-    <p class="fine" style="margin:0;padding:6px 0 18px">地域・時間などはすべて見本上の設定です。</p>
+    <div>
+      <dl class="kv__facts">
+        <div><dt>頼めること</dt><dd>新築・リフォーム・小さな修繕</dd></div>
+        <div><dt>費用の目安</dt><dd>修繕 1万円〜／新築 2,800万円〜</dd></div>
+        <div><dt>対応地域</dt><dd>灯町と周辺の3市町</dd></div>
+        <div><dt>相談の受付</dt><dd>平日・土曜 9:00〜18:00</dd></div>
+      </dl>
+      <p class="kv__cap">費用は税込・見本用の架空価格（新築は土地代別）。地域・時間は見本上の設定です。イラストはAI生成のイメージです。</p>
+    </div>
   </div>
 </section>
 
-<section class="sec" aria-labelledby="svc-t">
+<section class="svc" aria-labelledby="svc-t">
   <div class="wrap">
     <div class="sumi" data-draw aria-hidden="true"></div>
-    <div class="two">
-      <div class="head">
-        <p class="kicker"><span class="num">01</span>頼めること</p>
-        <h2 class="h-sec" id="svc-t"><span class="ln">新築から、</span><span class="ln">建具ひとつの調整まで。</span></h2>
-        <p class="lede">大きな工事も小さな修繕も、同じ大工と現場監督が受け持ちます。</p>
+    <div class="svc__head">
+      <div><p class="kicker"><span class="kn">一</span>頼めること</p><h2 class="h2" id="svc-t">新築から、建具ひとつの調整まで。</h2></div>
+      <p class="lede">大きな工事も小さな修繕も、同じ大工と現場監督が受け持ちます。「ここまで含みます」という範囲と、期間・費用の目安を並べています。</p>
+    </div>
+    <figure class="svc__fig"><img src="assets/img/town.webp" width="1100" height="500" loading="lazy" alt="骨組みが立ち上がった新築の家、仕上がった家、足場をかけて改修中の家が並ぶ町のイラスト"></figure>
+    <div class="svc__cols">
+      <div class="svc__col">
+        <h3>新築<small>木造軸組</small></h3>
+        <p>設計・確認申請・施工・外構の一部まで。延床30坪の例。</p>
+        <p class="svc__price"><b>2,800万円〜</b><span>土地代別</span></p>
+        <p class="svc__term"><b>期間</b>相談から約8〜10か月</p>
       </div>
-      <div>
-        <table class="ledger">
-          <caption class="sr-only">サービスと費用の目安（見本用の架空価格・税込）</caption>
-          <thead><tr><th scope="col">内容</th><th scope="col">ここまで含みます</th><th scope="col">期間の目安</th><th scope="col">費用の目安</th></tr></thead>
+      <div class="svc__col">
+        <h3>リフォーム<small>水回り・内装・外壁</small></h3>
+        <p>現地調査・プラン・解体・施工・廃材の処分まで。</p>
+        <p class="svc__price"><b>50万円〜</b></p>
+        <p class="svc__term"><b>期間</b>約2週間〜3か月</p>
+      </div>
+      <div class="svc__col">
+        <h3>小さな修繕<small>建具・雨漏りの点検</small></h3>
+        <p>訪問・点検と、その場でできる調整。ほかの会社が建てた家も。</p>
+        <p class="svc__price"><b>1万円〜</b></p>
+        <p class="svc__term"><b>期間</b>1日〜</p>
+      </div>
+    </div>
+    <div class="svc__foot">
+      <p class="note">費用はすべて税込・見本用の架空価格です。新築の諸費用（登記・ローン手数料など）の扱いは<a href="services.html#cost">費用が変わる条件</a>に書いています。</p>
+      <a class="btn" href="services.html">できることを詳しく見る</a>
+    </div>
+  </div>
+</section>
+
+<section class="flow on-ai" aria-labelledby="flow-t">
+  <div class="wrap flow__in">
+    <div class="flow__left">
+      <div class="sumi" data-draw aria-hidden="true"></div>
+      <p class="kicker"><span class="kn">二</span>家づくりの流れ（新築の場合）</p>
+      <h2 class="h2" id="flow-t">10の段取りと、<br>費用が決まる地点。</h2>
+      <p class="lede">読み進めると、図の家が段階に合わせて組み上がります。金額が決まるのは「契約」です。</p>
+      <ul class="legend"><li><i></i>費用が決まる地点</li><li><i class="dot"></i>お支払いの時期</li></ul>
+    <figure class="flow__fig">
+      <div class="sheet">
+        <svg class="frame" data-build="stage" viewBox="-332 -314 772 695" role="img" aria-label="家づくりの段階に合わせて組み上がる家の図"><g data-s="1"><polygon class="grid" points="-7.6,-66.0 419.2,180.4 114.3,356.4 -312.5,110.0"/></g><g data-s="2"><path class="grid" d="M38.1 -22.0L-236.3 136.4"/><path class="grid" d="M114.3 22.0L-160.0 180.4"/><path class="grid" d="M190.5 66.0L-83.8 224.4"/><path class="grid" d="M266.7 110.0L-7.6 268.4"/><path class="grid" d="M342.9 154.0L68.6 312.4"/><path class="grid" d="M-45.7 -26.4L350.6 202.4"/><path class="grid" d="M-141.0 28.6L255.3 257.4"/><path class="grid" d="M-236.3 83.6L160.0 312.4"/><path class="dim" pathLength="1" style="--d:.1s" d="M-243.9 140.8L61.0 316.8"/><path class="dim" d="M-243.9 136.3v9"/><path class="dim" d="M-205.8 160.3v5"/><path class="dim" d="M-167.7 180.3v9"/><path class="dim" d="M-129.6 204.3v5"/><path class="dim" d="M-91.5 224.3v9"/><path class="dim" d="M-53.3 248.3v5"/><path class="dim" d="M-15.2 268.3v9"/><path class="dim" d="M22.9 292.3v5"/><path class="dim" d="M61.0 312.3v9"/></g><g data-s="3"><path d="M-95.3 55.0L57.2 143.0" stroke="#2c3e66" stroke-width="2"/><path d="M228.6 132.0L38.1 242.0" stroke="#2c3e66" stroke-width="2"/><path d="M-19.1 99.0L-114.3 154.0" stroke="#2c3e66" stroke-width="2"/></g><g data-s="4"><rect x="48.2" y="134.0" width="18" height="18" transform="rotate(45 57.2 143.0)" fill="#c99a2e"/></g><g data-s="5"><polygon points="0.0,0.0 304.8,176.0 114.3,286.0 -190.5,110.0" fill="none" stroke="#2a2a28" stroke-width="2"/></g><g data-s="6"><path class="m back" pathLength="1" style="--d:0.30s" d="M0.0 0.0L304.8 176.0"/><path class="m back" pathLength="1" style="--d:0.34s" d="M0.0 0.0L-190.5 110.0"/><path class="m" pathLength="1" style="--d:0.39s" d="M304.8 176.0L114.3 286.0"/><path class="m" pathLength="1" style="--d:0.43s" d="M-190.5 110.0L114.3 286.0"/><path class="m" pathLength="1" style="--d:0.48s" d="M152.4 88.0L-38.1 198.0"/></g><g data-s="7"><path class="m back" pathLength="1" style="--d:1.00s" d="M0.0 0.0L0.0 -132.0"/><path class="m back" pathLength="1" style="--d:1.04s" d="M-190.5 110.0L-190.5 -22.0"/><path class="m back" pathLength="1" style="--d:1.09s" d="M76.2 44.0L76.2 -88.0"/><path class="m" pathLength="1" style="--d:1.14s" d="M-114.3 154.0L-114.3 22.0"/><path class="m back" pathLength="1" style="--d:1.18s" d="M152.4 88.0L152.4 -44.0"/><path class="m" pathLength="1" style="--d:1.23s" d="M-38.1 198.0L-38.1 66.0"/><path class="m back" pathLength="1" style="--d:1.27s" d="M228.6 132.0L228.6 0.0"/><path class="m" pathLength="1" style="--d:1.31s" d="M38.1 242.0L38.1 110.0"/><path class="m back" pathLength="1" style="--d:1.36s" d="M304.8 176.0L304.8 44.0"/><path class="m" pathLength="1" style="--d:1.41s" d="M114.3 286.0L114.3 154.0"/><path class="m back" pathLength="1" style="--d:1.45s" d="M-95.3 55.0L-95.3 -77.0"/><path class="m" pathLength="1" style="--d:1.50s" d="M209.6 231.0L209.6 99.0"/></g><g data-s="7"><path class="m back" pathLength="1" style="--d:1.75s" d="M0.0 -132.0L304.8 44.0"/><path class="m" pathLength="1" style="--d:1.79s" d="M-190.5 -22.0L114.3 154.0"/><path class="m back" pathLength="1" style="--d:1.84s" d="M0.0 -132.0L-190.5 -22.0"/><path class="m" pathLength="1" style="--d:1.89s" d="M76.2 -88.0L-114.3 22.0"/><path class="m" pathLength="1" style="--d:1.93s" d="M152.4 -44.0L-38.1 66.0"/><path class="m" pathLength="1" style="--d:1.98s" d="M228.6 0.0L38.1 110.0"/><path class="m" pathLength="1" style="--d:2.02s" d="M304.8 44.0L114.3 154.0"/></g><g data-s="7"><path class="m back" pathLength="1" style="--d:2.45s" d="M-95.3 -77.0L-95.3 -169.4"/><path class="m" pathLength="1" style="--d:2.50s" d="M-19.1 -33.0L-19.1 -125.4"/><path class="m" pathLength="1" style="--d:2.54s" d="M57.2 11.0L57.2 -81.4"/><path class="m" pathLength="1" style="--d:2.58s" d="M133.4 55.0L133.4 -37.4"/><path class="m" pathLength="1" style="--d:2.63s" d="M209.6 99.0L209.6 6.6"/><path class="m" pathLength="1" style="--d:2.68s" d="M-95.3 -169.4L209.6 6.6"/><path class="m back" pathLength="1" style="--d:2.72s" d="M19.1 -125.4L-95.3 -169.4"/><path class="m back" pathLength="1" style="--d:2.77s" d="M-209.6 6.6L-95.3 -169.4"/><path class="m" pathLength="1" style="--d:2.81s" d="M95.3 -81.4L-19.1 -125.4"/><path class="m" pathLength="1" style="--d:2.85s" d="M-133.4 50.6L-19.1 -125.4"/><path class="m" pathLength="1" style="--d:2.90s" d="M171.5 -37.4L57.2 -81.4"/><path class="m" pathLength="1" style="--d:2.95s" d="M-57.2 94.6L57.2 -81.4"/><path class="m" pathLength="1" style="--d:2.99s" d="M247.7 6.6L133.4 -37.4"/><path class="m" pathLength="1" style="--d:3.04s" d="M19.1 138.6L133.4 -37.4"/><path class="m" pathLength="1" style="--d:3.08s" d="M323.9 50.6L209.6 6.6"/><path class="m" pathLength="1" style="--d:3.12s" d="M95.3 182.6L209.6 6.6"/></g><rect class="ridge-mark" style="--d:3.2s" x="203.6" y="0.6" width="12" height="12" transform="rotate(45 209.6 6.6)" data-s="7"/><g data-s="8"><polygon points="19.1,-125.4 323.9,50.6 209.6,6.6 -95.3,-169.4" fill="#2c3e66" opacity=".75"/><polygon points="304.8,176.0 114.3,286.0 114.3,154.0 209.6,6.6 304.8,44.0" fill="#efebe2" stroke="#2a2a28"/><polygon points="-190.5,110.0 114.3,286.0 114.3,154.0 -190.5,-22.0" fill="#fffdf8" stroke="#2a2a28"/><polygon points="-160.0,79.2 -114.3,105.6 -114.3,52.8 -160.0,26.4" fill="#dfe3ea" stroke="#2a2a28"/><polygon points="-91.5,118.8 -45.7,145.2 -45.7,92.4 -91.5,66.0" fill="#dfe3ea" stroke="#2a2a28"/><polygon points="30.5,189.2 76.2,215.6 76.2,162.8 30.5,136.4" fill="#dfe3ea" stroke="#2a2a28"/><polygon points="-209.6,6.6 95.3,182.6 209.6,6.6 -95.3,-169.4" fill="#2c3e66" stroke="#2a2a28"/></g><g data-s="9"><polygon points="-26.7,204.6 11.4,226.6 11.4,134.2 -26.7,112.2" fill="#8a5a3b" stroke="#2a2a28"/></g><g data-s="10"><g transform="translate(-288 -214)"><circle r="16" fill="#fffdf8" stroke="#2a2a28" stroke-width="1.5"/><path d="M-6 0l4 5 8-10" fill="none" stroke="#c99a2e" stroke-width="2.6"/><text y="34" text-anchor="middle">1年</text></g><g transform="translate(-230 -214)"><circle r="16" fill="#fffdf8" stroke="#2a2a28" stroke-width="1.5"/><path d="M-6 0l4 5 8-10" fill="none" stroke="#c99a2e" stroke-width="2.6"/><text y="34" text-anchor="middle">5年</text></g><g transform="translate(-172 -214)"><circle r="16" fill="#fffdf8" stroke="#2a2a28" stroke-width="1.5"/><path d="M-6 0l4 5 8-10" fill="none" stroke="#c99a2e" stroke-width="2.6"/><text y="34" text-anchor="middle">10年</text></g></g></svg>
+        <dl class="titleblock" aria-hidden="true"><dt>図名</dt><dd>上棟までの段取り</dd><dt>縮尺</dt><dd>なし（見本の図）</dd></dl>
+      </div>
+      <figcaption class="flow__now" data-now-out>段階に合わせて、家が組み上がる図です。</figcaption>
+    </figure>
+    </div>
+    <div>
+      <ol class="steps">
+        <li class="step" data-stage="1" data-now="いま: 相談 — 敷地の外形をとらえるところから"><span class="no">01</span><div><h3>相談</h3><p>困りごとと予算をうかがい、流れと費用の目安をお見せします。</p></div></li>
+        <li class="step" data-stage="2" data-now="いま: 現地調査 — 敷地に通り芯（基準の線）を引く"><span class="no">02</span><div><h3>現地調査</h3><p>土地や今の建物を見て、寸法を測ります。</p></div></li>
+        <li class="step" data-stage="3" data-now="いま: プラン — 地面に間取りの線を描く"><span class="no">03</span><div><h3>プラン</h3><p>間取りと仕様を、図面と模型で決めます。</p></div></li>
+        <li class="step" data-stage="4" data-now="いま: 見積もり — 費用の中心を決める"><span class="no">04</span><div><h3>見積もり</h3><p>項目ごとに。どこを変えるといくら変わるかも。</p></div></li>
+        <li class="step is-fix" data-stage="5" data-now="いま: 契約 — 建物の位置を墨で確定"><span class="no">05</span><div><h3>契約</h3><p>この時点で金額が決まります。</p></div><span class="money fix">費用が決まる</span></li>
+        <li class="step" data-stage="6" data-now="いま: 着工 — 基礎の上に土台を据える"><span class="no">06</span><div><h3>着工</h3><p>基礎をつくり、土台を据えます。</p></div><span class="money">支払い</span></li>
+        <li class="step" data-stage="7" data-now="いま: 上棟 — 柱・梁・棟木が組み上がる"><span class="no">07</span><div><h3>上棟</h3><p>上棟（じょうとう）＝柱と梁を組み上げ、棟木を載せること。</p></div><span class="money">支払い</span></li>
+        <li class="step" data-stage="8" data-now="いま: 完成 — 屋根と壁がつく"><span class="no">08</span><div><h3>完成</h3><p>屋根・壁・内装を仕上げ、検査を受けます。</p></div></li>
+        <li class="step" data-stage="9" data-now="いま: 引き渡し — 玄関の戸がつき、鍵をお渡し"><span class="no">09</span><div><h3>引き渡し</h3><p>立ち会いで確認し、鍵と図面一式をお渡しします。</p></div><span class="money">支払い</span></li>
+        <li class="step" data-stage="10" data-now="いま: 点検 — 1年・5年・10年目に伺う"><span class="no">10</span><div><h3>点検</h3><p>1・5・10年目に、同じ会社が伺います（無料）。</p></div></li>
+      </ol>
+      <p class="note" style="color:var(--on-ai-2);margin-top:12px">期間・支払いの時期は見本上の設定です。</p>
+      <div class="acts"><a class="btn" href="process.html">段階ごとに決めること・払うこと</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="way" aria-labelledby="way-t">
+  <div class="wrap way__in">
+    <div class="way__fig">
+      <img src="assets/img/estimate.webp" width="720" height="900" loading="lazy" alt="机の上に重ねた見積書の用紙と、ペン立てのイラスト">
+      <div class="estimate" role="img" aria-label="項目ごとに分けた見積書の形の見本。基礎工事、木工事、屋根・板金、設備工事、諸経費の行がある。">
+        <span class="stamp" aria-hidden="true">見本</span>
+        <h3 aria-hidden="true">御見積書</h3>
+        <table aria-hidden="true">
+          <thead><tr><th>項目</th><th>内容</th><th>金額</th></tr></thead>
           <tbody>
-            <tr><th scope="row">新築<small>木造軸組</small></th><td data-l="範囲">設計・確認申請・施工・外構の一部</td><td data-l="期間">約8〜10か月</td><td class="cost num" data-l="費用">2,800万円〜<small>延床30坪の例・土地代別</small></td></tr>
-            <tr><th scope="row">リフォーム<small>水回り・内装・外壁</small></th><td data-l="範囲">現地調査・プラン・解体・施工・廃材処分</td><td data-l="期間">約2週間〜3か月</td><td class="cost num" data-l="費用">50万円〜</td></tr>
-            <tr><th scope="row">小さな修繕<small>建具の調整・雨漏りの点検</small></th><td data-l="範囲">訪問・点検・その場でできる調整</td><td data-l="期間">1日〜</td><td class="cost num" data-l="費用">1万円〜</td></tr>
+            <tr><td>基礎工事</td><td>べた基礎</td><td>―</td></tr>
+            <tr><td>木工事</td><td>構造材・造作</td><td>―</td></tr>
+            <tr><td>屋根・板金</td><td>ガルバリウム</td><td>―</td></tr>
+            <tr><td>設備工事</td><td>水回り・電気</td><td>―</td></tr>
+            <tr><td>諸経費</td><td>申請・保険</td><td>―</td></tr>
           </tbody>
         </table>
-        <p class="fine">費用はすべて見本用の架空価格（税込）です。新築の諸費用（登記・ローン手数料など）の扱いは、<a href="services.html#cost">費用が変わる条件</a>に書いています。</p>
-        <div class="acts" style="margin-top:24px">
-          <a class="btn btn--main" href="#" data-sample-action="相談・見積もりを依頼する">相談・見積もりを依頼する（見本）</a>
-          <a class="btn" href="services.html">できることを詳しく見る</a>
-        </div>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="sec sec--deep" aria-labelledby="flow-t">
-  <div class="wrap">
-    <div class="sumi" data-draw aria-hidden="true"></div>
-    <p class="kicker"><span class="num">02</span>家づくりの流れ</p>
-    <h2 class="h-sec" id="flow-t"><span class="ln">10の段取りと、</span><span class="ln">費用が決まる地点。</span></h2>
-    <p class="lede">新築の場合。黄土色の印がお金にかかわる地点で、いちばん大きな「契約」で金額が決まります。</p>
-    <div class="ruler" data-draw-host><ol><li class=""><span class="num">01</span>相談<small>無料</small></li><li class=""><span class="num">02</span>現地調査<small>土地・建物を見る</small></li><li class=""><span class="num">03</span>プラン<small>間取りと仕様</small></li><li class=""><span class="num">04</span>見積もり<small>項目ごと</small></li><li class="fix pulse"><span class="num">05</span>契約<small>費用が決まる</small></li><li class="pay"><span class="num">06</span>着工<small>基礎・土台</small></li><li class="pay"><span class="num">07</span>上棟<small>骨組みを組む</small></li><li class=""><span class="num">08</span>完成<small>仕上げ・検査</small></li><li class="pay"><span class="num">09</span>引き渡し<small>鍵を渡す</small></li><li class=""><span class="num">10</span>点検<small>1・5・10年</small></li></ol></div>
-    <ul class="legend"><li><i class="big"></i>費用が決まる地点</li><li><i></i>お支払いの時期</li></ul>
-    <p style="margin-top:28px"><a class="btn" href="process.html">段階ごとに決めること・払うことを見る</a></p>
-  </div>
-</section>
-
-<section class="sec" aria-labelledby="way-t">
-  <div class="wrap">
-    <div class="sumi" data-draw aria-hidden="true"></div>
-    <p class="kicker"><span class="num">03</span>たてまえの考え方</p>
-    <h2 class="h-sec" id="way-t"><span class="ln">見積もりは項目ごとに。</span><span class="ln">建てたあとも同じ顔ぶれで。</span></h2>
-    <div class="ways">
-      <div class="way">
-        <div class="estimate" aria-label="項目別の見積書の形（見本）">
-          <span class="stamp">見本</span>
-          <h3>御見積書</h3>
-          <table>
-            <thead><tr><th scope="col">項目</th><th scope="col">内容</th><th scope="col">金額</th></tr></thead>
-            <tbody>
-              <tr><td>基礎工事</td><td>べた基礎</td><td>―</td></tr>
-              <tr><td>木工事</td><td>構造材・造作</td><td>―</td></tr>
-              <tr><td>屋根・板金</td><td>ガルバリウム</td><td>―</td></tr>
-              <tr><td>設備工事</td><td>水回り・電気</td><td>―</td></tr>
-              <tr><td>諸経費</td><td>申請・保険</td><td>―</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div>
-          <h3 class="h-sub">「一式」にしない見積もり</h3>
-          <p>項目ごとに分けるので、どこを変えるといくら変わるかが見え、相見積もりとも比べられます。</p>
-          <p class="fine">見積書の形の見本です。金額は入れていません。</p>
-        </div>
-      </div>
-      <div class="way">
-        <figure><img src="assets/img/tsugite.webp" width="1000" height="750" loading="lazy" alt="角材どうしを組み合わせる継手（つぎて）の仕組みを描いたイラスト"><figcaption>継手（つぎて）＝木と木をつなぐ刻み。イラストはAI生成のイメージです。</figcaption></figure>
-        <div>
-          <h3 class="h-sub">設計・施工・点検を一つの会社で</h3>
-          <p>図面を描いた人、刻んだ大工、点検に伺う人が同じ会社。引き渡し後も窓口は変わりません。</p>
-          <p><a href="company.html">体制と点検の考え方</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="sec sec--deep" aria-labelledby="area-h">
-  <div class="wrap">
-    <div class="sumi" data-draw aria-hidden="true"></div>
-    <div class="area">
+    <div class="way__blocks">
       <div>
-        <p class="kicker"><span class="num">04</span>対応地域</p>
-        <h2 class="h-sec" id="area-h">灯町と、周りの3つの市町</h2>
-        <p class="lede">工事中も点検でも、すぐ駆けつけられる範囲に絞っています。</p>
-        <ul>
-          <li>灯町<span>事務所・作業場</span></li>
-          <li>北灯市<span>車で約25分</span></li>
-          <li>港見町<span>車で約30分</span></li>
-          <li>杉沢町<span>車で約20分</span></li>
-        </ul>
-        <p class="fine">地名・時間は見本上の設定です。</p>
+        <div class="sumi" data-draw aria-hidden="true"></div>
+        <p class="kicker"><span class="kn">三</span>たてまえの考え方</p>
+        <h2 class="h2" id="way-t">見積もりは、項目ごとに。</h2>
+        <p>「一式」にはしません。どこを変えるといくら変わるかが見え、ほかの会社の見積もりとも項目を並べて比べられます。</p>
+        <p class="note">見積書の形は見本です（金額は入れていません）。イラストはAI生成のイメージです。</p>
       </div>
-      <svg viewBox="0 0 600 420" role="img" aria-labelledby="area-t area-d">
+      <div>
+        <h2 class="h2">建てたあとも、同じ顔ぶれで。</h2>
+        <p>図面を描いた人、刻んだ大工、点検に伺う人が同じ会社。引き渡し後も窓口は変わりません。</p>
+        <div class="care">
+          <ol>
+            <li><b>引き渡し</b>説明書・図面一式</li>
+            <li class="y"><b>1年</b>建具・設備の調整</li>
+            <li class="y"><b>5年</b>外壁・屋根・床下</li>
+            <li class="y"><b>10年</b>構造・雨漏り</li>
+          </ol>
+        </div>
+        <p class="note" style="margin-top:12px">点検は無料（見本上の設定）。<a href="company.html">体制と点検の考え方</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="area" aria-labelledby="area-h">
+  <div class="wrap area__in">
+    <div class="area__map"><svg viewBox="0 0 600 420" role="img" aria-labelledby="area-t area-d">
 <title id="area-t">対応地域の略図（架空）</title>
 <desc id="area-d">灯町を中心に、北灯市・港見町・杉沢町の3市町が対応地域。いずれも灯町の事務所から車で30分前後（見本上の設定）。</desc>
 <path d="M-10 300C120 270 200 330 300 300S470 250 610 286" fill="none" stroke="#2c3e66" stroke-width="10" opacity=".35"/>
@@ -175,68 +187,76 @@
 <circle cx="470" cy="120" r="7" fill="#fffdf8" stroke="#2a2a28" stroke-width="1.5"/><text x="470" y="102" text-anchor="middle">港見町</text>
 <circle cx="180" cy="352" r="7" fill="#fffdf8" stroke="#2a2a28" stroke-width="1.5"/><text x="196" y="390" text-anchor="middle">杉沢町</text></g>
 <text x="20" y="408" font-size="13" fill="#4a4a45" font-family="Hiragino Sans, Yu Gothic, sans-serif">略図・縮尺なし（架空の地名）</text>
-</svg>
+</svg></div>
+    <div>
+      <p class="kicker"><span class="kn">四</span>対応地域</p>
+      <h2 class="h2" id="area-h">灯町と、周りの3つの市町。</h2>
+      <p class="lede" style="margin-bottom:18px">工事中も点検でも、すぐ駆けつけられる範囲に絞っています。</p>
+      <ul class="towns">
+        <li>灯町<span>事務所・作業場</span></li>
+        <li>北灯市<span>車で約25分</span></li>
+        <li>港見町<span>車で約30分</span></li>
+        <li>杉沢町<span>車で約20分</span></li>
+      </ul>
+      <p class="note" style="margin-top:10px">地名・時間は見本上の設定です。</p>
     </div>
   </div>
 </section>
 
-<section class="sec" aria-labelledby="faq-t">
-  <div class="wrap two">
-    <div class="head">
+<section class="faqsec" aria-labelledby="faq-t">
+  <div class="wrap faqsec__in">
+    <div>
       <div class="sumi" data-draw aria-hidden="true"></div>
-      <p class="kicker"><span class="num">05</span>よくある質問</p>
-      <h2 class="h-sec" id="faq-t"><span class="ln">相談の前に、</span><span class="ln">よく聞かれること。</span></h2>
+      <p class="kicker"><span class="kn">五</span>よくある質問</p>
+      <h2 class="h2" id="faq-t">相談の前に、<br>よく聞かれること。</h2>
       <a class="btn btn--main" href="#" data-sample-action="相談・見積もりを依頼する">相談・見積もりを依頼する（見本）</a>
     </div>
     <div class="faq">
       <details><summary>新築かリフォームか、まだ決めていません。</summary><div class="a"><p>決めていなくて大丈夫です。今の家の状態と予算をうかがい、両方の費用と期間を並べてお見せします。相談だけで終わっても費用はかかりません。</p></div></details>
       <details><summary>ほかの会社と相見積もりをしてもいいですか？</summary><div class="a"><p>どうぞ比べてください。項目ごとの見積もりなので、ほかの会社の見積もりと項目を並べて比べられます。</p></div></details>
-      <details><summary>見積もりのあとで、追加の費用は出ますか？</summary><div class="a"><p>契約のあとに追加が出るのは、お客さまのご希望で仕様を変えたときと、解体して初めて分かる傷み（リフォーム）が見つかったときです。どちらも、工事の前に金額をお伝えしてから進めます。</p></div></details>
+      <details><summary>見積もりのあとで、追加の費用は出ますか？</summary><div class="a"><p>契約のあとに追加が出るのは、ご希望で仕様を変えたときと、解体して初めて分かる傷み（リフォーム）が見つかったときです。どちらも、工事の前に金額をお伝えしてから進めます。</p></div></details>
       <details><summary>断ったあとに、営業の電話は来ますか？</summary><div class="a"><p>こちらから続けて連絡することはしません。点検の時期のお知らせも、ご希望の方だけにお送りします（見本上の設定）。</p></div></details>
     </div>
   </div>
 </section>
 
 <section class="ask" aria-labelledby="ask-t">
-  <img class="ask__img" src="assets/img/jotou.webp" width="1536" height="640" loading="lazy" alt="山と水辺を背に、木の骨組みが組み上がった家のイラスト">
-  <p class="cap">イラストはAI生成のイメージです。</p>
-  <div class="wrap ask__in">
-    <div>
-      <h2 id="ask-t">まずは、段取りの話から。</h2>
-      <p>相談の場では、まだ何も決めなくて大丈夫です。いまの住まいの困りごとと、だいたいの予算をうかがい、家づくりの流れと費用の目安をお見せします。</p>
-      <ul class="assure">
-        <li>相談は無料</li><li>見積もりは項目ごと</li><li>しつこい営業はしません</li><li>相談だけでも大丈夫</li>
-      </ul>
-      <p class="fine" style="margin-top:12px">いずれも見本上の設定です。</p>
-    </div>
-    <div class="acts">
-      <a class="btn btn--main" href="#" data-sample-action="相談・見積もりを依頼する">相談・見積もりを依頼する（見本）</a>
-      <a class="btn" href="contact.html">相談の前に準備するもの</a>
+  <div class="ask__img"><img src="assets/img/bench.webp" width="1200" height="500" loading="lazy" alt="作業台の上に、かんな・のみ・差し金と、削りくずの出た角材が並ぶイラスト"></div>
+  <p class="cap">イラストはAI生成のイメージです</p>
+  <div class="ask__panel">
+    <div class="ask__box on-ai">
+      <div>
+        <h2 class="h2" id="ask-t">まずは、段取りの話から。</h2>
+        <p>相談の場では、まだ何も決めなくて大丈夫です。いまの住まいの困りごとと、だいたいの予算をうかがい、流れと費用の目安をお見せします。</p>
+        <ul class="assure"><li>相談は無料</li><li>見積もりは項目ごと</li><li>しつこい営業はしません</li></ul>
+        <p class="note">いずれも見本上の設定です。</p>
+      </div>
+      <div class="acts">
+        <a class="btn btn--main" href="#" data-sample-action="相談・見積もりを依頼する">相談・見積もりを依頼する（見本）</a>
+        <a class="btn" href="contact.html">相談の前に準備するもの</a>
+      </div>
     </div>
   </div>
 </section>
-
 </main>
 <footer class="ft">
-  <div class="wrap ft__in">
-    <div>
-      <a class="logo" href="index.html"><svg viewBox="0 0 244 60" role="img" aria-label="木組みの家 たてまえ工務店">
-<g fill="none" stroke="#2a2a28" stroke-width="2.4" stroke-linecap="square"><path d="M6 32 28 13l22 19"/><path d="M12 27v23M44 27v23M8 50h40"/><path d="M12 36h32" stroke="#8a5a3b"/></g>
-<g stroke="#2a2a28" stroke-width="1.2"><path d="M16 50v-4M20 50v-4M24 50v-6M28 50v-4M32 50v-4M36 50v-6M40 50v-4"/></g>
-<rect x="25" y="9" width="6" height="6" transform="rotate(45 28 12)" fill="#c99a2e"/>
-<text x="62" y="32" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, serif" font-weight="700" font-size="24" fill="#2c3e66" letter-spacing="1">たてまえ工務店</text>
-<text x="63" y="51" font-family="Hiragino Sans, Yu Gothic, Noto Sans JP, sans-serif" font-size="12" fill="#8a5a3b" letter-spacing="4">木組みの家・灯町</text>
-</svg></a>
-      <p>木組みの家 たてまえ工務店（架空）<br>架空県灯町（見本上の設定）<br>建設業許可番号: 見本のため非表示</p>
+  <div class="ft__in">
+    <div class="ft__brand">
+      <a class="logo" href="index.html"><svg viewBox="0 0 244 60" role="img" aria-label="木組みの家 たてまえ工務店"><g fill="none" stroke="#2a2a28" stroke-width="2.4" stroke-linecap="square"><path d="M6 32 28 13l22 19"/><path d="M12 27v23M44 27v23M8 50h40"/><path d="M12 36h32" stroke="#8a5a3b"/></g><g stroke="#2a2a28" stroke-width="1.2"><path d="M16 50v-4M20 50v-4M24 50v-6M28 50v-4M32 50v-4M36 50v-6M40 50v-4"/></g><rect x="25" y="9" width="6" height="6" transform="rotate(45 28 12)" fill="#c99a2e"/><text class="fd" x="61" y="33" font-family="'Tatemae Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', serif" font-weight="900" font-size="25" fill="#2c3e66" letter-spacing="1.5">たてまえ工務店</text><text x="63" y="51" font-family="Hiragino Sans, Yu Gothic, Noto Sans JP, sans-serif" font-size="11.5" fill="#8a5a3b" letter-spacing="4" font-weight="700">木組みの家・灯町</text></svg></a>
+      <p>木組みの家 たてまえ工務店（架空）<br>架空県灯町・建設業許可番号：見本のため非表示</p>
     </div>
-    <div><p><b>相談の受付</b><br>平日・土曜 9:00〜18:00<br>対応地域: 灯町と周辺の3市町<br><span class="fine">（いずれも見本上の設定）</span></p></div>
-    <ul>
+    <dl class="ft__info">
+      <div><dt>相談の受付</dt><dd>平日・土曜 9:00〜18:00</dd></div>
+      <div><dt>対応地域</dt><dd>灯町と周辺の3市町</dd></div>
+      <div><dt>引き渡し後</dt><dd>1・5・10年目の点検（無料）</dd></div>
+    </dl>
+    <ul class="ft__nav">
       <li><a href="services.html">できること</a></li>
       <li><a href="process.html">家づくりの流れ</a></li>
       <li><a href="company.html">会社について</a></li>
       <li><a href="contact.html">相談・見積もり</a></li>
     </ul>
-    <p class="fine">費用はすべて見本用の架空価格（税込）です。新築の費用に土地代は含みません。イラストはAI生成のイメージで、実在の施工事例ではありません。</p>
+    <p class="ft__fine">住所・受付時間・費用などはすべて見本用の設定です（費用は税込の架空価格。新築の費用に土地代は含みません）。イラストはAI生成のイメージで、実在の施工事例ではありません。</p>
   </div>
 </footer>
 <aside class="ca-credit" aria-labelledby="ca-credit-title">

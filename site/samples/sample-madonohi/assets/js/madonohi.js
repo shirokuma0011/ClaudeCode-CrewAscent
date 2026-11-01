@@ -45,7 +45,7 @@
   /* 営業時間の窓と曜日に「いま」を付ける */
   var slot = h >= 8 && h < 10 ? 'morning' : (h >= 10 && h < 15 ? 'noon' : (h >= 15 && h < 18 ? 'evening' : ''));
   if (open && slot) {
-    var li = document.querySelector('.hours li[data-slot="' + slot + '"]');
+    var li = document.querySelector('.slots li[data-slot="' + slot + '"]');
     if (li) { li.classList.add('is-now'); var tag = li.querySelector('.now'); if (tag) tag.hidden = false; }
   }
   var wd = document.querySelector('.week li[data-day="' + day + '"]');

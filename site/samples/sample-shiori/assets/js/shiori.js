@@ -1,4 +1,4 @@
-/* しおり会計事務所（架空）見本
+/* しおり会計事務所（架空）見本 v3
    1) 署名の動き「栞の現在地」: 目次の横の栞が、読んでいる章まで下りる（transform のみ）
    2) 状況の質問: 答えに合う「聞くこと」「用意するもの」だけを1行ずつ出す（送信しない・端末の中だけ）
    3) 印刷: 結果・持ち物リストだけを印刷用に整える（print CSS）
@@ -20,7 +20,7 @@
         var on = a.getAttribute('href') === '#' + id;
         if (on) {
           a.setAttribute('aria-current', 'true');
-          if (ribbon) ribbon.style.setProperty('--y', (a.offsetTop + a.offsetHeight - 4) + 'px');
+          if (ribbon) ribbon.style.setProperty('--y', a.offsetTop + 'px');
           if (here) here.textContent = a.textContent;
         } else {
           a.removeAttribute('aria-current');
@@ -35,15 +35,17 @@
       if (t) io.observe(t);
       a.addEventListener('click', function () {
         var d = toc.querySelector('details');
-        if (d && window.innerWidth <= 960) d.open = false;
+        if (d && window.innerWidth <= 1040) d.open = false;
       });
     });
     if (links[0]) setCurrent(links[0].getAttribute('href').slice(1));
     /* 広い画面では目次を開いたままにする */
     var det = toc.querySelector('details');
-    var sync = function () { if (det) det.open = window.innerWidth > 960; };
+    var sync = function () { if (det) det.open = window.innerWidth > 1040; };
     sync();
-    window.addEventListener('resize', function () { if (det && window.innerWidth > 960) det.open = true; });
+    window.addEventListener('resize', function () { if (det && window.innerWidth > 1040) det.open = true; });
+    /* 広い画面では目次の見出しを押しても閉じない */
+    if (det) det.querySelector('summary').addEventListener('click', function (e) { if (window.innerWidth > 1040) e.preventDefault(); });
   }
 
   /* ---- 2) 状況で絞り込む（質問チャート・持ち物リスト共通） ---- */

@@ -4,8 +4,8 @@
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* 署名の動き（レーン整列）と、言い分け線を描く動き。画面に入ったら1回だけ */
-  var targets = document.querySelectorAll('.kv, .draw');
-  function done(el) { el.classList.add(el.classList.contains('kv') ? 'is-aligned' : 'is-drawn'); }
+  var targets = document.querySelectorAll('.app, .draw');
+  function done(el) { el.classList.add(el.classList.contains('app') ? 'is-aligned' : 'is-drawn'); }
   if (reduce || !('IntersectionObserver' in window)) {
     targets.forEach(done);
   } else {
@@ -14,11 +14,26 @@
         if (!e.isIntersecting) return;
         var el = e.target;
         io.unobserve(el);
-        /* 最初の画面の図は、散った状態を一瞬見せてから並べる */
-        setTimeout(function () { done(el); }, el.classList.contains('kv') ? 450 : 0);
+        /* 最初の画面の台帳は、散った札を一瞬見せてから列へ並べる */
+        setTimeout(function () { done(el); }, el.classList.contains('app') ? 350 : 0);
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.2 });
     targets.forEach(function (el) { io.observe(el); });
+  }
+
+  /* 下層の目次: いま読んでいる章に印を付ける */
+  var railLinks = document.querySelectorAll('.rail a[href^="#"]');
+  if (railLinks.length && 'IntersectionObserver' in window) {
+    var map = {};
+    railLinks.forEach(function (a) { var t = document.getElementById(a.getAttribute('href').slice(1)); if (t) map[t.id] = a; });
+    var rio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        railLinks.forEach(function (a) { a.classList.remove('is-here'); });
+        if (map[e.target.id]) map[e.target.id].classList.add('is-here');
+      });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+    Object.keys(map).forEach(function (id) { rio.observe(document.getElementById(id)); });
   }
 
   /* 機能: 困りごとで絞り込む（ページの中だけで処理） */

@@ -13,8 +13,8 @@
   window.addEventListener('scroll', onScrollHd, { passive: true });
   onScrollHd();
 
-  /* 1) 線がわずかに流れる */
-  var drifts = Array.prototype.slice.call(document.querySelectorAll('.kv__drift'));
+  /* 1) 線がわずかに流れる（表紙の水色の面の中だけ） */
+  var drifts = Array.prototype.slice.call(document.querySelectorAll('.drift'));
   if (!reduce && drifts.length) {
     var host = drifts[0].closest('section');
     var visible = true, ticking = false;
@@ -26,7 +26,7 @@
       if (!visible) return;
       var y = Math.min(window.scrollY, 900);
       drifts.forEach(function (g, i) {
-        g.style.transform = 'translate3d(' + (-y * 0.06) + 'px,' + (y * 0.04 * (i % 2 ? 1 : 0.6)) + 'px,0)';
+        g.style.transform = 'translate3d(' + (-y * 0.05) + 'px,' + (y * 0.035 * (i % 2 ? 1 : 0.6)) + 'px,0)';
       });
     };
     window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(apply); } }, { passive: true });

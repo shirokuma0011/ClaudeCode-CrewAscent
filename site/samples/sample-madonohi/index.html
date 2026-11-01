@@ -10,8 +10,9 @@
 <link rel="stylesheet" href="../_shared/crew-frame.css?v=20261015">
 <script defer src="../_shared/crew-frame.js?v=20261015"></script>
 <script>document.documentElement.classList.add('js');</script>
-<link rel="stylesheet" href="assets/css/madonohi.css?v=20261101">
-<script defer src="assets/js/madonohi.js?v=20261101"></script>
+<link rel="preload" href="fonts/zen-old-mincho-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/madonohi.css?v=20261101b">
+<script defer src="assets/js/madonohi.js?v=20261101b"></script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ移動</a>
@@ -20,257 +21,198 @@
   <p class="ca-ribbon__text"><b>見本サイト・架空</b><span class="ca-ribbon__long">架空の事業を想定した制作イメージです。事業・価格・住所はすべて架空です。</span></p>
   <p class="ca-ribbon__links"><a href="../../type-friendly-brand.html">CA22<span class="ca-ribbon__long"> 親しみブランド型サイト</span></a><a href="design-notes.html"><span class="ca-ribbon__long">この見本の</span>設計メモ</a></p>
 </div>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <symbol id="arch" viewBox="0 0 24 28"><path d="M2 27V12A10 10 0 0 1 22 12V27Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 3V27M2 16H22" stroke="currentColor" stroke-width="1.6"/></symbol>
-  <symbol id="cup" viewBox="0 0 24 24"><path d="M4 10H17V14A6 6 0 0 1 11 20H10A6 6 0 0 1 4 14Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M17 11H19A2.5 2.5 0 0 1 19 16H16.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 3C7 5 9 6 8 8M12 3C11 5 13 6 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
-  <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7V12L15.5 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-  <symbol id="seat" viewBox="0 0 24 24"><path d="M6 4V13H18M6 13V20M18 13V20M6 9H15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-  <symbol id="pin" viewBox="0 0 24 24"><path d="M12 21C12 21 5 14 5 9.5A7 7 0 0 1 19 9.5C19 14 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></symbol>
-</svg>
-
 <header class="head">
   <div class="wrap head__in">
-    <a class="logo" href="#main" aria-label="珈琲と焼き菓子 マドノヒ（ページの先頭へ）">
-      <svg viewBox="0 0 230 46" aria-hidden="true" focusable="false"><g fill="none" stroke="#4a2e22" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M3 44V20A14 14 0 0 1 31 20V44Z" fill="#ffe2a8" stroke-width="3"/><path d="M17 7V44M3 28H31" stroke-width="2.4"/>
-        <g transform="translate(44 3)"><path d="M5 8H35C33 18 27 24 19 29M15 22L27 37"/></g>
-        <g transform="translate(90 3)"><path d="M15 3V41M15 17L32 25M30 3L32 9M36 2L38 8"/></g>
-        <g transform="translate(136 3)"><path d="M33 5C30 25 20 34 6 40"/></g>
-        <g transform="translate(182 3)"><path d="M10 5V33C10 37 13 38 18 38H36M10 21L32 12"/></g>
-      </g><circle cx="10" cy="22" r="3" fill="#d9774b"/></svg>
-      <span>珈琲と<br>焼き菓子</span>
-    </a>
-    <span class="open-state" id="open-state" aria-live="polite">8:00〜18:00・水曜定休</span>
-    <nav class="nav" aria-label="ページ内">
-      <a href="#menu">メニュー</a><a href="#stay">過ごし方</a><a href="#hours">営業時間</a><a href="#access">場所</a>
-    </nav>
+    <a class="logo" href="#main" aria-label="珈琲と焼き菓子 マドノヒ"><svg class="logo-svg" viewBox="0 -840 4800 900" role="img" aria-label="マドノヒ"><g class="logo-mark"><path d="M30 20V-500A250 250 0 0 1 530 -500V20Z" fill="none" stroke="currentColor" stroke-width="56"/><path d="M280 -740V20M30 -330H530" stroke="currentColor" stroke-width="30"/><path class="logo-light" d="M58 -10V-500A222 222 0 0 1 252 -718V-358H58Z" /></g><g class="logo-type" transform="translate(620 0)"><path d="M651 -84Q624 -71 605 -103Q575 -152 532 -200Q490 -248 441 -289Q392 -330 342 -358Q340 -364 343 -370Q346 -375 351 -376Q404 -363 462 -340Q520 -318 569 -287Q594 -315 622 -351Q649 -387 674 -422Q698 -456 710 -479Q725 -508 695 -508Q664 -507 615 -503Q566 -499 511 -492Q456 -485 406 -478Q357 -471 326 -464Q276 -452 249 -438Q222 -424 200 -423Q177 -423 155 -440Q133 -458 118 -484Q103 -509 99 -532Q101 -539 107 -541Q113 -543 118 -540Q138 -520 162 -516Q187 -513 235 -518Q257 -520 304 -524Q350 -528 408 -533Q465 -538 521 -542Q577 -547 620 -551Q664 -555 682 -556Q704 -558 717 -564Q730 -571 741 -580Q761 -595 779 -583Q792 -574 811 -558Q830 -542 848 -525Q867 -508 877 -495Q888 -483 880 -466Q872 -449 854 -450Q834 -452 817 -445Q800 -438 788 -425Q765 -401 733 -372Q701 -342 667 -314Q633 -286 602 -264Q649 -228 671 -187Q690 -155 681 -124Q672 -93 651 -84Z"/><path d="M1570 40Q1557 40 1542 27Q1526 14 1516 -6Q1505 -25 1507 -42Q1509 -57 1511 -99Q1513 -141 1516 -202Q1519 -262 1520 -332Q1522 -403 1522 -476Q1522 -493 1522 -508Q1522 -524 1522 -538Q1522 -619 1521 -654Q1520 -689 1513 -704Q1511 -721 1502 -728Q1494 -736 1476 -739Q1468 -751 1479 -759Q1506 -764 1542 -758Q1578 -753 1607 -734Q1620 -727 1624 -714Q1628 -701 1618 -689Q1610 -680 1606 -657Q1601 -634 1600 -590Q1598 -547 1597 -474Q1646 -467 1696 -453Q1746 -439 1788 -418Q1829 -397 1850 -367Q1873 -336 1869 -306Q1865 -276 1847 -264Q1835 -256 1822 -257Q1809 -258 1799 -272Q1760 -331 1708 -376Q1655 -420 1597 -442V-433Q1597 -366 1598 -294Q1600 -222 1602 -159Q1605 -96 1606 -54Q1608 -11 1608 -3Q1608 16 1597 28Q1586 40 1570 40ZM1893 -554Q1883 -551 1873 -555Q1863 -559 1855 -575Q1839 -610 1815 -642Q1791 -673 1756 -697Q1751 -711 1766 -715Q1795 -709 1826 -695Q1856 -681 1880 -662Q1904 -642 1912 -618Q1920 -594 1914 -576Q1907 -559 1893 -554ZM2001 -663Q1992 -657 1980 -658Q1969 -660 1958 -673Q1933 -702 1903 -726Q1873 -750 1833 -764Q1830 -769 1832 -775Q1833 -781 1838 -783Q1866 -784 1898 -778Q1931 -773 1959 -761Q1987 -749 2002 -729Q2016 -710 2014 -690Q2013 -670 2001 -663Z"/><path d="M2429 -34Q2422 -36 2418 -42Q2414 -47 2416 -54Q2473 -92 2533 -146Q2593 -201 2650 -267Q2706 -333 2752 -404Q2799 -476 2829 -546Q2840 -572 2844 -588Q2848 -605 2848 -621Q2847 -633 2842 -642Q2836 -650 2822 -660Q2817 -674 2831 -679Q2865 -676 2904 -656Q2944 -636 2967 -607Q2993 -575 2962 -551Q2949 -541 2937 -526Q2925 -512 2908 -480Q2851 -375 2772 -291Q2694 -207 2606 -143Q2517 -79 2429 -34Z"/><path d="M3809 -43Q3726 -43 3678 -76Q3630 -110 3630 -189V-595Q3630 -618 3628 -634Q3626 -650 3618 -657Q3610 -666 3588 -671Q3584 -676 3584 -682Q3585 -688 3589 -691Q3618 -696 3656 -687Q3695 -678 3721 -661Q3738 -650 3738 -636Q3738 -623 3730 -612Q3721 -598 3716 -566Q3710 -534 3708 -490Q3705 -447 3704 -399Q3744 -412 3792 -431Q3840 -450 3884 -472Q3929 -494 3957 -516Q3973 -529 3978 -542Q3983 -555 3972 -574Q3972 -580 3976 -584Q3981 -588 3987 -587Q4012 -574 4040 -546Q4067 -519 4082 -497Q4095 -477 4090 -460Q4085 -444 4064 -445Q4050 -446 4034 -443Q4017 -440 4000 -435Q3961 -424 3908 -410Q3855 -396 3801 -383Q3747 -370 3703 -361V-206Q3703 -159 3729 -141Q3755 -123 3809 -123Q3857 -123 3904 -128Q3950 -132 3988 -140Q4025 -147 4047 -154Q4064 -160 4082 -153Q4101 -146 4114 -137Q4128 -128 4137 -118Q4152 -100 4146 -81Q4139 -62 4102 -57Q4071 -54 4021 -50Q3971 -47 3916 -45Q3860 -43 3809 -43Z"/></g></svg><span class="logo__sub">珈琲と焼き菓子</span></a>
+    <nav class="gnav" aria-label="ページ内"><a href="#menu">メニュー</a><a href="#stay">過ごし方</a><a href="#hours">営業時間</a><a href="#access">場所</a></nav>
+    <p class="open-state" id="open-state">8:00〜18:00・水曜定休</p>
   </div>
 </header>
 
 <main id="main">
-<section class="hero" aria-labelledby="hero-title">
-  <div class="wrap hero__grid">
-    <div class="hero__text">
-      <p class="hero__label"><svg aria-hidden="true"><use href="#arch"/></svg>風見坂の小さな喫茶店（架空）</p>
-      <h1 id="hero-title">窓辺の席で、<br><span class="hand">焼きたて</span>と一杯。</h1>
-      <p class="hero__lead">浅く煎った珈琲と、その朝に焼いた菓子だけを出しています。窓の大きな店で、席の半分以上がひとりで座れるカウンターです。</p>
-      <p class="hero__price">珈琲 <span class="yen">550</span>円・焼き菓子 <span class="yen">300</span>円から<span class="small">（税込・見本用の架空価格）</span></p>
-      <div class="hero__acts">
-        <a class="btn btn--go" href="#access"><svg aria-hidden="true"><use href="#pin"/></svg>お店の場所を見る</a>
-        <a class="btn btn--soft" href="#menu">メニューを見る</a>
+<section class="cover" aria-labelledby="hero-title">
+  <div class="wrap cover__grid">
+    <div class="cover__photo">
+      <figure class="arch-photo">
+        <img src="assets/img/window-room.webp" width="760" height="900" fetchpriority="high" alt="大きなアーチ窓に沿ったカウンターと木の椅子。窓の外に木々と家並みが見える喫茶店の店内（AI生成のイメージ）">
+        <span class="light" aria-hidden="true"></span>
+      </figure>
+      <figure class="cup-photo">
+        <img src="assets/img/cup-steam.webp" width="560" height="560" alt="木のテーブルで湯気の立つ白いカップの珈琲（AI生成のイメージ）">
+        <svg class="steam" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><path d="M44 110C34 90 56 78 46 56C38 40 52 26 48 8"/><path d="M66 112C58 92 80 82 70 60C62 44 76 30 72 12"/></svg>
+      </figure>
+      <div class="times js-only" role="group" aria-labelledby="times-l">
+        <p id="times-l" class="times__l">窓の光を見比べる</p>
+        <div class="times__btns">
+          <label><input type="radio" name="time" value="morning"><span>朝 8時</span></label>
+          <label><input type="radio" name="time" value="noon" checked><span>昼 12時</span></label>
+          <label><input type="radio" name="time" value="evening"><span>夕 16時</span></label>
+        </div>
+        <p class="times__note" id="win-note" aria-live="polite"></p>
       </div>
-      <ul class="facts" aria-label="お店の基本">
-        <li><svg aria-hidden="true"><use href="#clock"/></svg><span><b>8:00〜18:00</b>・水曜定休</span></li>
-        <li><svg aria-hidden="true"><use href="#seat"/></svg><span>カウンター<b>6席</b>・テーブル<b>2卓</b></span></li>
-        <li><svg aria-hidden="true"><use href="#cup"/></svg><span>ひとりでも、ふらりと</span></li>
-      </ul>
-      <p class="small" style="margin-top:6px">営業時間・席の数は見本上の設定です。</p>
     </div>
-    <div class="hero__fig">
-      <div class="win-wrap">
-        <figure class="win" style="margin:0 auto">
-          <img src="assets/img/window-seat.webp" width="1536" height="864" fetchpriority="high" alt="アーチ窓のそばの木のテーブルに、珈琲とスコーンが置かれている様子（AI生成のイメージ）">
-          <svg class="win__frame" viewBox="0 0 400 500" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-            <path d="M200 0V500M0 210H400" stroke="#fffaf1" stroke-width="7" opacity=".92"/>
-          </svg>
-        </figure>
+    <h1 id="hero-title" class="cover__title"><span>窓辺の席で、</span><span>焼きたてと一杯。</span></h1>
+    <div class="cover__side">
+      <p class="hand hand--lg">朝8時、<br>焼き菓子の香りから。</p>
+      <p class="cover__lead">風見坂の住宅街にある、窓の大きな小さな喫茶店です（架空）。浅く煎った珈琲と、その朝に焼いた菓子だけを出しています。</p>
+      <p class="cover__price"><span>珈琲 <b class="yen">550</b>円</span><span>焼き菓子 <b class="yen">300</b>円から</span><small>税込・見本用の架空価格</small></p>
+      <div class="acts">
+        <a class="btn btn--go" href="#access"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 21C12 21 5 14 5 9.5A7 7 0 0 1 19 9.5C19 14 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></svg>お店の場所を見る</a>
+        <a class="btn btn--line" href="#menu">メニューを見る</a>
       </div>
-      <fieldset class="times js-only">
-        <legend>朝・昼・夕の窓を見比べる</legend>
-        <label><input type="radio" name="time" value="morning"><span>朝 8時</span></label>
-        <label><input type="radio" name="time" value="noon" checked><span>昼 12時</span></label>
-        <label><input type="radio" name="time" value="evening"><span>夕 16時</span></label>
-      </fieldset>
-      <p class="win-note js-only" id="win-note" aria-live="polite"></p>
-      <p class="small" style="text-align:center;margin:6px 0 0">写真はAI生成のイメージで、実在の店舗ではありません。</p>
+      <dl class="cover__facts">
+        <div><dt>営業</dt><dd>8:00〜18:00・水曜定休</dd></div>
+        <div><dt>席</dt><dd>カウンター6席・テーブル2卓</dd></div>
+        <div><dt>ひとりで</dt><dd>席の半分以上が窓向きのカウンター</dd></div>
+      </dl>
+      <p class="fine">営業時間・席の数は見本上の設定です。写真はAI生成のイメージで、実在の店舗ではありません。</p>
     </div>
   </div>
 </section>
 
 <section class="first" aria-labelledby="first-title">
   <div class="wrap first__in">
-    <h2 id="first-title">はじめての方へ<small>入ってから帰るまで、この順番です</small></h2>
-    <ol>
-      <li><svg viewBox="0 0 34 34" aria-hidden="true"><path d="M5 31V14A12 12 0 0 1 29 14V31Z" fill="#ffe2a8" stroke="#4a2e22" stroke-width="2"/><path d="M12 22H22" stroke="#4a2e22" stroke-width="2" stroke-linecap="round"/></svg><span><b>入口のカウンターで注文</b>黒板のメニューから選び、先にお会計をします。</span></li>
-      <li><svg viewBox="0 0 34 34" aria-hidden="true"><path d="M8 8V20H24M8 20V30M24 20V30M8 14H20" fill="none" stroke="#4a2e22" stroke-width="2" stroke-linecap="round"/></svg><span><b>空いている席へ</b>席は自由です。ひとりなら窓向きのカウンターがおすすめです。</span></li>
-      <li><svg viewBox="0 0 34 34" aria-hidden="true"><path d="M7 16H24V20A8 8 0 0 1 16 28H15A8 8 0 0 1 7 20Z" fill="#fffaf1" stroke="#4a2e22" stroke-width="2"/><path d="M13 6C12 9 15 10 13 13M18 6C17 9 20 10 18 13" fill="none" stroke="#d9774b" stroke-width="2" stroke-linecap="round"/></svg><span><b>席までお持ちします</b>帰るときは、器をそのまま置いておいてください。</span></li>
+    <h2 id="first-title" class="first__h"><span class="hand">はじめての方へ</span>入ってから帰るまで、この順番です。</h2>
+    <ol class="first__steps">
+      <li><span class="hand first__n">その一</span><b>入口のカウンターで注文</b><span>黒板のメニューから選び、先にお会計をします。</span></li>
+      <li><span class="hand first__n">その二</span><b>空いている席へ</b><span>席は自由です。ひとりなら窓向きのカウンターへ。</span></li>
+      <li><span class="hand first__n">その三</span><b>席までお持ちします</b><span>帰るときは、器をそのまま置いておいてください。</span></li>
     </ol>
   </div>
 </section>
 
-<section class="sec" id="menu" aria-labelledby="menu-title">
-  <div class="wrap">
-    <div class="sec-title sec-title--row">
-      <div><span class="eyebrow"><svg aria-hidden="true"><use href="#arch"/></svg>メニューと値段</span>
-      <h2 id="menu-title">一杯と、ひとつの菓子。</h2></div>
-      <p>値段はすべて税込・見本用の架空価格です。</p>
-    </div>
-    <div class="menu-grid">
-      <article class="today" id="today" aria-labelledby="today-name">
-        <figure class="arch today__img"><img src="assets/img/financier.webp" width="900" height="675" loading="lazy" alt="皿にのった2本のフィナンシェ。ひとつは割って中が見えている（AI生成のイメージ）"></figure>
-        <div class="today__body">
-          <span class="today__day" data-t="day">日替わりの例</span>
-          <h3 id="today-name"><span class="hand" data-t="en">けさ焼いた</span><span data-t="name">フィナンシェ</span></h3>
-          <p data-t="text">焦がしバターの香りが立つ、焼き上がりから半日がいちばんの菓子。浅煎りの酸味とよく合います。</p>
-          <span class="yen"><span data-t="price">300</span><small>円（税込）</small></span>
-          <p class="small" style="margin:6px 0 0">売り切れたらその日はおしまい。曜日ごとのおすすめは見本上の設定です。</p>
-        </div>
-      </article>
-      <div class="menu-cards">
-        <section class="menu-card" aria-labelledby="m-coffee">
+<section class="menu" id="menu" aria-labelledby="menu-title">
+  <div class="wrap menu__grid">
+    <div class="sheet">
+      <p class="sheet__top hand" aria-hidden="true">お品書き</p>
+      <h2 id="menu-title">一杯と、ひとつの菓子。</h2>
+      <p class="sheet__sub">値段はすべて税込・見本用の架空価格です。</p>
+      <div class="sheet__cols">
+        <section aria-labelledby="m-coffee">
           <h3 id="m-coffee">珈琲</h3>
-          <dl>
-            <div class="row"><dt>本日の珈琲<small>浅煎り・中煎り</small></dt><dd><span class="yen">550</span>円</dd></div>
-            <div class="row"><dt>カフェオレ<small>温・冷</small></dt><dd><span class="yen">650</span>円</dd></div>
-            <div class="row"><dt>おかわり<small>同じ日の2杯目</small></dt><dd><span class="yen">300</span>円</dd></div>
+          <dl class="items">
+            <div><dt>本日の珈琲<small>浅煎り・中煎りから</small></dt><dd><b class="yen">550</b>円</dd></div>
+            <div><dt>カフェオレ<small>温・冷</small></dt><dd><b class="yen">650</b>円</dd></div>
+            <div><dt>おかわり<small>同じ日の2杯目</small></dt><dd><b class="yen">300</b>円</dd></div>
           </dl>
         </section>
-        <section class="menu-card" aria-labelledby="m-bake">
-          <h3 id="m-bake">焼き菓子<small class="small" style="font-weight:400">（日替わり）</small></h3>
-          <dl>
-            <div class="row"><dt>スコーン</dt><dd><span class="yen">300</span>円</dd></div>
-            <div class="row"><dt>フィナンシェ</dt><dd><span class="yen">300</span>円</dd></div>
-            <div class="row"><dt>バナナブレッド</dt><dd><span class="yen">350</span>円</dd></div>
-            <div class="row"><dt>季節のタルト<small>土曜のみ</small></dt><dd><span class="yen">480</span>円</dd></div>
+        <section aria-labelledby="m-bake">
+          <h3 id="m-bake">焼き菓子<small>日替わり</small></h3>
+          <dl class="items">
+            <div><dt>スコーン</dt><dd><b class="yen">300</b>円</dd></div>
+            <div><dt>フィナンシェ</dt><dd><b class="yen">300</b>円</dd></div>
+            <div><dt>バナナブレッド</dt><dd><b class="yen">350</b>円</dd></div>
+            <div><dt>季節のタルト<small>土曜のみ</small></dt><dd><b class="yen">480</b>円</dd></div>
           </dl>
         </section>
-        <section class="menu-card menu-card--wide" aria-labelledby="m-morning">
-          <div><h3 id="m-morning">朝のセット<small class="small" style="font-weight:400">　8:00〜10:00</small></h3><p class="small" style="margin:2px 0 0">本日の珈琲と、好きな焼き菓子ひとつ</p></div>
-          <p style="margin:0"><span class="yen" style="font-size:1.5em">780</span>円</p>
-        </section>
-        <p class="menu-note">原材料とアレルギーは店頭の表でご確認いただけます。持ち帰りは焼き菓子のみ（見本上の設定）。</p>
       </div>
+      <div class="sheet__set">
+        <p><span class="hand">朝のセット</span><b>8:00〜10:00</b>本日の珈琲と、好きな焼き菓子ひとつ</p>
+        <p class="sheet__setp"><b class="yen">780</b>円</p>
+      </div>
+      <p class="sheet__note">原材料とアレルギーは店頭の表でご確認いただけます。持ち帰りは焼き菓子のみ（見本上の設定）。</p>
+    </div>
+    <div class="menu__photo">
+      <figure class="table-photo"><img src="assets/img/table-overhead.webp" width="960" height="720" loading="lazy" alt="木のテーブルを真上から見たところ。珈琲、スコーン、2本のフィナンシェが白い皿にのっている（AI生成のイメージ）"></figure>
+      <article class="today" id="today" aria-labelledby="today-name" data-font-for="MD Mincho|600" data-font-extra="スコーンフィナンシェバナナブレッド季節のタルト今日明日定休日のおすすめ（）月火水木金土日。">
+        <p class="today__day" data-t="day" data-font-for="MD Hand|600" data-font-extra="今日明日定休日のおすすめ（）月火水木金土日。けさ焼いた土曜だけ">日替わりの例</p>
+        <h3 id="today-name"><span class="hand today__en" data-t="en">けさ焼いた</span><span data-t="name">フィナンシェ</span></h3>
+        <p class="today__text" data-t="text">焦がしバターの香りが立つ、焼き上がりから半日がいちばんの菓子。浅煎りの酸味とよく合います。</p>
+        <p class="today__price"><b class="yen" data-t="price">300</b>円</p>
+        <p class="today__fine">売り切れたらおしまい。曜日ごとのおすすめは見本上の設定です。</p>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="sec think" aria-labelledby="think-title">
-  <div class="wrap think__grid">
-    <div class="steam-wrap">
-      <svg class="steam" viewBox="0 0 120 80" aria-hidden="true" focusable="false"><path d="M40 78C30 60 52 50 40 30C34 20 42 12 40 4"/><path d="M60 78C50 58 72 48 60 28C54 18 62 10 60 2"/><path d="M80 78C70 60 92 50 80 30C74 20 82 12 80 4"/></svg>
-      <figure class="arch arch--wide"><img src="assets/img/cup.webp" width="900" height="675" loading="lazy" alt="窓辺のテーブルで湯気の立つ白いカップの珈琲（AI生成のイメージ）"></figure>
-    </div>
-    <div class="think__text">
-      <span class="eyebrow-s"><svg aria-hidden="true"><use href="#arch"/></svg>店の考え方</span>
-      <h2 id="think-title">浅く煎ること。朝に焼くこと。</h2>
-      <dl class="think__pts">
-        <div><dt>豆は浅めに</dt><dd>果物のような酸味が残るところで火を止めます。苦めが好きな方には中煎りも。</dd></div>
-        <div><dt>菓子はその朝に</dt><dd>前の日の残りは出しません。早い時間ほど、選べる種類が多くなります。</dd></div>
-      </dl>
-    </div>
+<section class="think" aria-labelledby="think-title">
+  <figure class="think__photo"><img src="assets/img/pour-over.webp" width="760" height="760" loading="lazy" alt="白いドリッパーに細口のケトルでお湯を注ぎ、ガラスのサーバーに珈琲が落ちている（AI生成のイメージ）"></figure>
+  <div class="think__text">
+    <p class="hand think__k">店の考え方</p>
+    <h2 id="think-title">浅く煎ること。<br>朝に焼くこと。</h2>
+    <dl class="think__pts">
+      <div><dt>豆は浅めに</dt><dd>果物のような酸味が残るところで火を止めます。苦めが好きな方には中煎りも用意しています。</dd></div>
+      <div><dt>菓子はその朝に</dt><dd>前の日の残りは出しません。早い時間ほど、選べる種類が多くなります。</dd></div>
+    </dl>
   </div>
 </section>
 
-<section class="sec" id="stay" aria-labelledby="stay-title">
+<section class="stay" id="stay" aria-labelledby="stay-title">
   <div class="wrap">
-    <div class="sec-title">
-      <span class="eyebrow"><svg aria-hidden="true"><use href="#arch"/></svg>過ごし方</span>
-      <h2 id="stay-title">ひとりでも、ふらりと。</h2>
-      
+    <div class="stay__top">
+      <figure class="stay__photo"><img src="assets/img/window-counter.webp" width="1280" height="533" loading="lazy" alt="窓に沿った木のカウンターに、珈琲カップがひとつ置かれている。窓の外は緑（AI生成のイメージ）"></figure>
+      <h2 id="stay-title" class="stay__title"><span>ひとりでも、</span><span>ふらりと。</span></h2>
     </div>
-    <div class="stay-grid">
-      <div>
-        <figure class="plan">
-          <svg viewBox="0 0 520 330" role="img" aria-label="店内の見取り図。窓に沿ってカウンター6席が並び、その奥にテーブル2卓、右下に入口と注文カウンターがある">
+    <div class="stay__grid">
+      <figure class="plan">
+        <svg viewBox="0 0 520 330" role="img" aria-label="店内の見取り図。窓に沿ってカウンター6席が並び、その奥にテーブル2卓、右下に入口と注文カウンターがある">
             <rect x="10" y="10" width="500" height="310" rx="10" fill="#fbf3e6" stroke="#4a2e22" stroke-width="2"/>
             <g fill="#ffe2a8" stroke="#4a2e22" stroke-width="2">
               <path d="M50 30V18A28 18 0 0 1 150 18V30Z"/><path d="M210 30V18A28 18 0 0 1 310 18V30Z"/><path d="M370 30V18A28 18 0 0 1 470 18V30Z"/>
             </g>
-            <text x="260" y="52" text-anchor="middle" style="font-size:13px">窓</text>
+            <text x="260" y="52" text-anchor="middle">窓</text>
             <rect x="40" y="62" width="440" height="26" rx="4" fill="#c99b73"/>
             <g fill="#fffaf1" stroke="#4a2e22" stroke-width="2">
               <circle cx="80" cy="112" r="13"/><circle cx="152" cy="112" r="13"/><circle cx="224" cy="112" r="13"/><circle cx="296" cy="112" r="13"/><circle cx="368" cy="112" r="13"/><circle cx="440" cy="112" r="13"/>
             </g>
             <g fill="#d9774b"><circle cx="116" cy="75" r="5"/><circle cx="260" cy="75" r="5"/><circle cx="404" cy="75" r="5"/></g>
-            <text x="40" y="150" style="font-size:14px">カウンター6席（窓向き）</text>
-            <text x="300" y="150" style="font-size:13px" fill="#a4471f">● 電源（3口）</text>
+            <text x="40" y="150">カウンター6席（窓向き）</text>
+            <text x="300" y="150" fill="#a4471f">● 電源（3口）</text>
             <g fill="#e9d3b4" stroke="#4a2e22" stroke-width="2"><rect x="70" y="200" width="70" height="70" rx="6"/><rect x="200" y="200" width="70" height="70" rx="6"/></g>
             <g fill="#fffaf1" stroke="#4a2e22" stroke-width="2"><circle cx="105" cy="185" r="11"/><circle cx="105" cy="285" r="11"/><circle cx="235" cy="185" r="11"/><circle cx="235" cy="285" r="11"/></g>
-            <text x="170" y="315" text-anchor="middle" style="font-size:14px">テーブル2卓（各2〜3人）</text>
+            <text x="170" y="315" text-anchor="middle">テーブル2卓（各2〜3人）</text>
             <rect x="340" y="196" width="130" height="34" rx="4" fill="#6f8f5a"/>
-            <text x="405" y="252" text-anchor="middle" style="font-size:13px">注文・お会計</text>
+            <text x="405" y="252" text-anchor="middle">注文・お会計</text>
             <path d="M440 320V296M420 306L440 290L460 306" fill="none" stroke="#a4471f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            <text x="400" y="296" text-anchor="end" style="font-size:13px">入口</text>
+            <text x="400" y="296" text-anchor="end">入口</text>
           </svg>
-          <figcaption>店内の見取り図（見本上の設定）</figcaption>
-        </figure>
-        
+        <figcaption>店内の見取り図</figcaption>
+      </figure>
+      <dl class="stay__list">
+        <div><dt>席</dt><dd>カウンター6席・テーブル2卓。予約なし</dd></div>
+        <div><dt>ひとりで</dt><dd>席の半分以上が窓向きのカウンター</dd></div>
+        <div><dt>電源</dt><dd>カウンターに3口。ご自由に</dd></div>
+        <div><dt>Wi-Fi</dt><dd>ありません</dd></div>
+        <div><dt>子ども連れ</dt><dd>テーブル席へ。子ども椅子1脚・ベビーカー置き場あり</dd></div>
+        <div><dt>長く過ごす</dt><dd>決まりなし。満席時のみ90分が目安</dd></div>
+        <div><dt>支払い</dt><dd>現金・カード・電子マネー</dd></div>
+        <div><dt>動物</dt><dd>店内は不可（テラス席なし）</dd></div>
+      </dl>
+    </div>
+    <p class="fine">席・設備・支払い方法はすべて見本上の設定です。</p>
+    <div class="faq" aria-labelledby="faq-title">
+      <h3 id="faq-title" class="faq__h"><span class="hand">よく聞かれること</span></h3>
+      <div class="faq__list">
+        <details><summary>珈琲が苦手でも、飲めるものはありますか。</summary><p>カフェオレ（650円）は、ミルクを多めにできます。紅茶やジュースは置いていません。</p></details>
+        <details><summary>焼き菓子だけ、持ち帰れますか。</summary><p>持ち帰れます。紙の袋に入れてお渡しします。電話やSNSでの取り置きは受けていません。</p></details>
+        <details><summary>ひとりで長く座っていても大丈夫ですか。</summary><p>大丈夫です。席が埋まっているときだけ、90分を目安にお願いしています。</p></details>
+        <details><summary>駐車場はありますか。</summary><p>ありません。自転車は店の前に2台まで置けます。</p></details>
       </div>
-      <ul class="stay-list">
-        <li><b>席</b><span>カウンター6席・テーブル2卓。予約なし</span></li>
-        <li><b>ひとりで</b><span>席の半分以上が窓向きのカウンター</span></li>
-        <li><b>電源</b><span>カウンターに3口。ご自由に</span></li>
-        <li><b>Wi-Fi</b><span>ありません</span></li>
-        <li><b>子ども連れ</b><span>テーブル席へ。子ども椅子1脚・ベビーカー置き場あり</span></li>
-        <li><b>長く過ごす</b><span>決まりなし。満席時のみ90分が目安</span></li>
-        <li><b>支払い</b><span>現金・カード・電子マネー</span></li>
-        <li><b>動物</b><span>店内は不可（テラス席なし）</span></li>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="hours" aria-labelledby="hours-title">
+  <div class="wrap visit__grid">
+    <div class="hours">
+      <p class="hand hours__k">営業時間と定休日</p>
+      <h2 id="hours-title" class="hours__big"><span class="yen">8:00</span><span class="hours__dash" aria-hidden="true"></span><span class="sr-only">から</span><span class="yen">18:00</span><span class="sr-only">まで</span></h2>
+      <p class="hours__sub">水曜はお休み。ラストオーダーは17:30。</p>
+      <ul class="week" aria-label="曜日ごとの営業">
+        <li data-day="1"><b>月</b>営業</li><li data-day="2"><b>火</b>営業</li><li data-day="3" class="off"><b>水</b>定休</li><li data-day="4"><b>木</b>営業</li><li data-day="5"><b>金</b>営業</li><li data-day="6"><b>土</b>営業</li><li data-day="0"><b>日</b>営業</li>
       </ul>
+      <ol class="slots">
+        <li data-slot="morning"><b>朝の窓</b><span class="t">8:00〜10:00</span><span>朝のセット780円。菓子がいちばんそろう時間。</span><em class="now" hidden>いまの時間</em></li>
+        <li data-slot="noon"><b>昼の窓</b><span class="t">10:00〜15:00</span><span>土日の11時台はテーブル席が埋まることも。</span><em class="now" hidden>いまの時間</em></li>
+        <li data-slot="evening"><b>夕の窓</b><span class="t">15:00〜18:00</span><span>西日のカウンター。菓子は残り分だけ。</span><em class="now" hidden>いまの時間</em></li>
+      </ol>
+      <p class="fine">祝日も営業します。年末年始の休みはSNSでお知らせします（いずれも見本上の設定）。</p>
     </div>
-    <p class="small" style="margin-top:20px">席・設備・支払い方法はすべて見本上の設定です。</p>
-  </div>
-</section>
-
-<section class="sec" id="hours" aria-labelledby="hours-title" style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-title">
-      <span class="eyebrow"><svg aria-hidden="true"><use href="#clock"/></svg>営業時間と定休日</span>
-      <h2 id="hours-title">8時から18時まで。水曜はお休み。</h2>
-      
-    </div>
-    <ol class="hours">
-      <li data-slot="morning">
-        <div class="pane"><svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><linearGradient id="g-m" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fffdf6"/><stop offset="1" stop-color="#ffeac6"/></linearGradient></defs><rect width="300" height="400" fill="url(#g-m)"/><circle cx="80" cy="250" r="34" fill="#fff3d6" stroke="#ffe2a8" stroke-width="6"/><path d="M0 300C70 270 140 290 300 260V400H0Z" fill="#8fab78"/><path d="M0 330C90 310 190 330 300 300V400H0Z" fill="#6f8f5a"/><path d="M150 0V400M0 170H300" stroke="#fffaf1" stroke-width="10"/></svg></div>
-        <h3>朝の窓</h3><span class="t">8:00〜10:00</span><p>朝のセット780円。菓子がいちばんそろう時間。</p><span class="now" hidden>いまの時間</span>
-      </li>
-      <li data-slot="noon">
-        <div class="pane"><svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><linearGradient id="g-n" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe2a8"/><stop offset="1" stop-color="#fff3d6"/></linearGradient></defs><rect width="300" height="400" fill="url(#g-n)"/><circle cx="210" cy="90" r="34" fill="#fff6dc" stroke="#ffd27a" stroke-width="6"/><path d="M0 300C70 270 140 290 300 260V400H0Z" fill="#8fab78"/><path d="M0 330C90 310 190 330 300 300V400H0Z" fill="#6f8f5a"/><path d="M150 0V400M0 170H300" stroke="#fffaf1" stroke-width="10"/></svg></div>
-        <h3>昼の窓</h3><span class="t">10:00〜15:00</span><p>土日の11時台はテーブル席が埋まることも。</p><span class="now" hidden>いまの時間</span>
-      </li>
-      <li data-slot="evening">
-        <div class="pane"><svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><linearGradient id="g-e" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3a173"/><stop offset="1" stop-color="#ffd9a8"/></linearGradient></defs><rect width="300" height="400" fill="url(#g-e)"/><circle cx="220" cy="262" r="36" fill="#ffe2a8"/><path d="M0 300C70 270 140 290 300 260V400H0Z" fill="#7d7b4e"/><path d="M0 330C90 310 190 330 300 300V400H0Z" fill="#5d6b40"/><path d="M150 0V400M0 170H300" stroke="#fffaf1" stroke-width="10"/></svg></div>
-        <h3>夕の窓</h3><span class="t">15:00〜18:00</span><p>西日のカウンター。菓子は残り分だけ。L.O. 17:30。</p><span class="now" hidden>いまの時間</span>
-      </li>
-    </ol>
-    <ul class="week" aria-label="曜日ごとの営業">
-      <li data-day="1"><b>月</b>8–18</li><li data-day="2"><b>火</b>8–18</li><li data-day="3" class="off"><b>水</b>定休</li><li data-day="4"><b>木</b>8–18</li><li data-day="5"><b>金</b>8–18</li><li data-day="6"><b>土</b>8–18</li><li data-day="0"><b>日</b>8–18</li>
-    </ul>
-    <p class="small hours-note">祝日も営業します。年末年始の休みは、SNSでお知らせします（いずれも見本上の設定）。</p>
-  </div>
-</section>
-
-<section class="sec" id="faq" aria-labelledby="faq-title" style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-title">
-      <span class="eyebrow"><svg aria-hidden="true"><use href="#arch"/></svg>よくある質問</span>
-      <h2 id="faq-title">はじめての方から、よく聞かれること。</h2>
-    </div>
-    <div class="faq-grid">
-    <div class="faq">
-      <details><summary>珈琲が苦手でも、飲めるものはありますか。</summary><p>カフェオレ（650円）は、ミルクを多めにできます。紅茶やジュースは置いていません。</p></details>
-      <details><summary>焼き菓子だけ、持ち帰れますか。</summary><p>持ち帰れます。紙の袋に入れてお渡しします。電話やSNSでの取り置きは受けていません。</p></details>
-      <details><summary>ひとりで長く座っていても大丈夫ですか。</summary><p>大丈夫です。席が埋まっているときだけ、90分を目安にお願いしています。</p></details>
-      <details><summary>駐車場はありますか。</summary><p>ありません。自転車は店の前に2台まで置けます。近くの駐車場は「場所」の欄をご覧ください。</p></details>
-    </div>
-    <figure class="faq-photo"><img src="assets/img/counter-seats.webp" width="1000" height="750" loading="lazy" alt="アーチ窓に沿ったカウンター席と木の椅子が並ぶ店内（AI生成のイメージ）"><figcaption class="small">窓向きのカウンター席（AI生成のイメージ）</figcaption></figure>
-    </div>
-    <div class="cta-line">
-      <p>8:00〜18:00・水曜定休・カウンター6席とテーブル2卓。ひとりでも、そのまま入れます（見本上の設定）。</p>
-      <a class="btn btn--go" href="#access"><svg aria-hidden="true"><use href="#pin"/></svg>お店の場所を見る</a>
-    </div>
-  </div>
-</section>
-
-<section class="sec access" id="access" aria-labelledby="access-title">
-  <div class="wrap">
-    <div class="sec-title">
-      <span class="eyebrow"><svg aria-hidden="true"><use href="#pin"/></svg>場所</span>
+    <div class="access" id="access" aria-labelledby="access-title">
+      <p class="hand hours__k">場所</p>
       <h2 id="access-title">坂の途中の、窓の大きな店。</h2>
-      <p>架空駅の北口から徒歩6分。白い壁にアーチの窓が目印です。</p>
-    </div>
-    <div class="access-grid">
-      <figure class="map">
-        <svg viewBox="0 0 640 420" role="img" aria-label="架空の地図。架空駅の北口から風見坂をのぼり、公園の角を右に曲がった先にマドノヒがある。徒歩およそ6分">
+      <div class="access__map">
+        <figure class="map"><svg viewBox="0 0 640 420" role="img" aria-label="架空の地図。架空駅の北口から風見坂をのぼり、公園の角を右に曲がった先にマドノヒがある。徒歩およそ6分">
           <rect width="640" height="420" fill="#fbf3e6"/>
           <g fill="#ede0c8"><rect x="30" y="30" width="150" height="110" rx="6"/><rect x="220" y="30" width="120" height="90" rx="6"/><rect x="470" y="40" width="140" height="120" rx="6"/><rect x="400" y="230" width="210" height="80" rx="6"/><rect x="30" y="200" width="130" height="80" rx="6"/></g>
           <path d="M210 170C230 140 300 140 330 170C350 195 330 230 290 236C240 242 196 214 210 170Z" fill="#c5d4b4"/>
@@ -283,36 +225,31 @@
           <rect x="478" y="96" width="110" height="34" rx="17" fill="#a4471f"/><text x="533" y="119" text-anchor="middle" style="font-size:15px;fill:#fffaf1">マドノヒ</text>
           <text x="272" y="296" style="font-size:13px" fill="#a4471f" transform="rotate(-28 272 296)">徒歩 約6分</text>
           <g transform="translate(590 380)"><path d="M0 -22L8 6L0 0L-8 6Z" fill="#4a2e22"/><text x="0" y="22" text-anchor="middle" style="font-size:12px">北</text></g>
-        </svg>
-      </figure>
-      <div>
-        <dl class="addr">
-          <div><dt>住所</dt><dd>架空県風見坂3丁目</dd></div>
-          <div><dt>行き方</dt><dd>架空駅 北口から徒歩6分。風見坂をのぼり、公園の角を右へ</dd></div>
-          <div><dt>営業</dt><dd>8:00〜18:00（L.O. 17:30）・水曜定休</dd></div>
-          <div><dt>駐車場</dt><dd>なし。坂の下に有料の駐車場があります。自転車は2台まで</dd></div>
-          <div><dt>入口</dt><dd>段差が1段あります。ベビーカーや車いすの方は、声をかけてください</dd></div>
-        </dl>
-        <p class="small" style="margin-top:12px">住所・道順・地図はすべて架空です（見本上の設定）。</p>
-        <div class="btns">
-          <a class="btn btn--go" href="#" data-sample-action="地図アプリで開く"><svg aria-hidden="true"><use href="#pin"/></svg>地図アプリで開く（見本）</a>
-          <a class="btn btn--soft" href="#" data-sample-action="電話をかける">電話する（見本）</a>
-        </div>
+        </svg></figure>
+        <figure class="front"><img src="assets/img/front.webp" width="600" height="600" loading="lazy" alt="白い壁にアーチ形の窓と木の扉がある小さな店の外観（AI生成のイメージ）"></figure>
+      </div>
+      <dl class="addr">
+        <div><dt>住所</dt><dd>架空県風見坂3丁目</dd></div>
+        <div><dt>行き方</dt><dd>架空駅 北口から徒歩6分。風見坂をのぼり、公園の角を右へ</dd></div>
+        <div><dt>駐車場</dt><dd>なし。坂の下に有料の駐車場があります。自転車は2台まで</dd></div>
+        <div><dt>入口</dt><dd>段差が1段あります。ベビーカーや車いすの方は、声をかけてください</dd></div>
+      </dl>
+      <p class="fine">住所・道順・地図はすべて架空です。</p>
+      <div class="acts">
+        <a class="btn btn--go" href="#" data-sample-action="地図アプリで開く">地図アプリで開く（見本）</a>
+        <a class="btn btn--line" href="#" data-sample-action="電話をかける">電話する（見本）</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="sec sns" aria-labelledby="sns-title">
-  <div class="wrap">
-    <div class="sns__box">
-      <svg width="44" height="44" style="margin:0 auto;color:#a4471f" aria-hidden="true"><use href="#cup"/></svg>
-      <div><h2 id="sns-title">今日の焼き菓子は、朝9時ごろにお知らせします。</h2>
-      <p>焼き上がりの写真と臨時のお休みをSNSに載せています（投稿の文面は見本のため載せていません）。</p></div>
-      <div class="btns">
-        <a class="btn btn--soft" href="#" data-sample-action="写真のSNSを見る">写真のSNSを見る（見本）</a>
-        <a class="btn btn--soft" href="#" data-sample-action="お知らせのSNSを見る">お知らせのSNSを見る（見本）</a>
-      </div>
+<section class="sns" aria-labelledby="sns-title">
+  <div class="wrap sns__in">
+    <h2 id="sns-title"><span class="hand">今日の焼き菓子は、</span>朝9時ごろにお知らせします。</h2>
+    <p>焼き上がりの写真と、臨時のお休みをSNSに載せています（投稿の文面は見本のため載せていません）。</p>
+    <div class="acts">
+      <a class="btn btn--cream" href="#" data-sample-action="写真のSNSを見る">写真のSNS（見本）</a>
+      <a class="btn btn--cream" href="#" data-sample-action="お知らせのSNSを見る">お知らせのSNS（見本）</a>
     </div>
   </div>
 </section>
@@ -321,21 +258,13 @@
 <footer class="foot">
   <div class="wrap foot__grid">
     <div>
-      <a class="logo" href="#main" aria-label="珈琲と焼き菓子 マドノヒ（ページの先頭へ）">
-        <svg viewBox="0 0 230 46" aria-hidden="true" focusable="false"><g fill="none" stroke="#fbf3e6" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M3 44V20A14 14 0 0 1 31 20V44Z" fill="#a4471f" stroke-width="3"/><path d="M17 7V44M3 28H31" stroke-width="2.4"/>
-          <g transform="translate(44 3)"><path d="M5 8H35C33 18 27 24 19 29M15 22L27 37"/></g>
-          <g transform="translate(90 3)"><path d="M15 3V41M15 17L32 25M30 3L32 9M36 2L38 8"/></g>
-          <g transform="translate(136 3)"><path d="M33 5C30 25 20 34 6 40"/></g>
-          <g transform="translate(182 3)"><path d="M10 5V33C10 37 13 38 18 38H36M10 21L32 12"/></g>
-        </g></svg>
-      </a>
-      <p style="margin-top:12px">珈琲と焼き菓子 マドノヒ（架空の喫茶店）</p>
+      <a class="logo logo--inv" href="#main" aria-label="マドノヒ（ページの先頭へ）"><svg class="logo-svg" viewBox="0 -840 4800 900" aria-hidden="true" focusable="false"><g class="logo-mark"><path d="M30 20V-500A250 250 0 0 1 530 -500V20Z" fill="none" stroke="currentColor" stroke-width="56"/><path d="M280 -740V20M30 -330H530" stroke="currentColor" stroke-width="30"/><path class="logo-light" d="M58 -10V-500A222 222 0 0 1 252 -718V-358H58Z" /></g><g class="logo-type" transform="translate(620 0)"><path d="M651 -84Q624 -71 605 -103Q575 -152 532 -200Q490 -248 441 -289Q392 -330 342 -358Q340 -364 343 -370Q346 -375 351 -376Q404 -363 462 -340Q520 -318 569 -287Q594 -315 622 -351Q649 -387 674 -422Q698 -456 710 -479Q725 -508 695 -508Q664 -507 615 -503Q566 -499 511 -492Q456 -485 406 -478Q357 -471 326 -464Q276 -452 249 -438Q222 -424 200 -423Q177 -423 155 -440Q133 -458 118 -484Q103 -509 99 -532Q101 -539 107 -541Q113 -543 118 -540Q138 -520 162 -516Q187 -513 235 -518Q257 -520 304 -524Q350 -528 408 -533Q465 -538 521 -542Q577 -547 620 -551Q664 -555 682 -556Q704 -558 717 -564Q730 -571 741 -580Q761 -595 779 -583Q792 -574 811 -558Q830 -542 848 -525Q867 -508 877 -495Q888 -483 880 -466Q872 -449 854 -450Q834 -452 817 -445Q800 -438 788 -425Q765 -401 733 -372Q701 -342 667 -314Q633 -286 602 -264Q649 -228 671 -187Q690 -155 681 -124Q672 -93 651 -84Z"/><path d="M1570 40Q1557 40 1542 27Q1526 14 1516 -6Q1505 -25 1507 -42Q1509 -57 1511 -99Q1513 -141 1516 -202Q1519 -262 1520 -332Q1522 -403 1522 -476Q1522 -493 1522 -508Q1522 -524 1522 -538Q1522 -619 1521 -654Q1520 -689 1513 -704Q1511 -721 1502 -728Q1494 -736 1476 -739Q1468 -751 1479 -759Q1506 -764 1542 -758Q1578 -753 1607 -734Q1620 -727 1624 -714Q1628 -701 1618 -689Q1610 -680 1606 -657Q1601 -634 1600 -590Q1598 -547 1597 -474Q1646 -467 1696 -453Q1746 -439 1788 -418Q1829 -397 1850 -367Q1873 -336 1869 -306Q1865 -276 1847 -264Q1835 -256 1822 -257Q1809 -258 1799 -272Q1760 -331 1708 -376Q1655 -420 1597 -442V-433Q1597 -366 1598 -294Q1600 -222 1602 -159Q1605 -96 1606 -54Q1608 -11 1608 -3Q1608 16 1597 28Q1586 40 1570 40ZM1893 -554Q1883 -551 1873 -555Q1863 -559 1855 -575Q1839 -610 1815 -642Q1791 -673 1756 -697Q1751 -711 1766 -715Q1795 -709 1826 -695Q1856 -681 1880 -662Q1904 -642 1912 -618Q1920 -594 1914 -576Q1907 -559 1893 -554ZM2001 -663Q1992 -657 1980 -658Q1969 -660 1958 -673Q1933 -702 1903 -726Q1873 -750 1833 -764Q1830 -769 1832 -775Q1833 -781 1838 -783Q1866 -784 1898 -778Q1931 -773 1959 -761Q1987 -749 2002 -729Q2016 -710 2014 -690Q2013 -670 2001 -663Z"/><path d="M2429 -34Q2422 -36 2418 -42Q2414 -47 2416 -54Q2473 -92 2533 -146Q2593 -201 2650 -267Q2706 -333 2752 -404Q2799 -476 2829 -546Q2840 -572 2844 -588Q2848 -605 2848 -621Q2847 -633 2842 -642Q2836 -650 2822 -660Q2817 -674 2831 -679Q2865 -676 2904 -656Q2944 -636 2967 -607Q2993 -575 2962 -551Q2949 -541 2937 -526Q2925 -512 2908 -480Q2851 -375 2772 -291Q2694 -207 2606 -143Q2517 -79 2429 -34Z"/><path d="M3809 -43Q3726 -43 3678 -76Q3630 -110 3630 -189V-595Q3630 -618 3628 -634Q3626 -650 3618 -657Q3610 -666 3588 -671Q3584 -676 3584 -682Q3585 -688 3589 -691Q3618 -696 3656 -687Q3695 -678 3721 -661Q3738 -650 3738 -636Q3738 -623 3730 -612Q3721 -598 3716 -566Q3710 -534 3708 -490Q3705 -447 3704 -399Q3744 -412 3792 -431Q3840 -450 3884 -472Q3929 -494 3957 -516Q3973 -529 3978 -542Q3983 -555 3972 -574Q3972 -580 3976 -584Q3981 -588 3987 -587Q4012 -574 4040 -546Q4067 -519 4082 -497Q4095 -477 4090 -460Q4085 -444 4064 -445Q4050 -446 4034 -443Q4017 -440 4000 -435Q3961 -424 3908 -410Q3855 -396 3801 -383Q3747 -370 3703 -361V-206Q3703 -159 3729 -141Q3755 -123 3809 -123Q3857 -123 3904 -128Q3950 -132 3988 -140Q4025 -147 4047 -154Q4064 -160 4082 -153Q4101 -146 4114 -137Q4128 -128 4137 -118Q4152 -100 4146 -81Q4139 -62 4102 -57Q4071 -54 4021 -50Q3971 -47 3916 -45Q3860 -43 3809 -43Z"/></g></svg></a>
+      <p class="foot__name">珈琲と焼き菓子 マドノヒ（架空の喫茶店）</p>
     </div>
     <dl>
-      <dt>住所</dt><dd>架空県風見坂3丁目</dd>
-      <dt>営業</dt><dd>8:00〜18:00・水曜定休</dd>
-      <dt>席</dt><dd>カウンター6席・テーブル2卓</dd>
+      <div><dt>住所</dt><dd>架空県風見坂3丁目</dd></div>
+      <div><dt>営業</dt><dd>8:00〜18:00・水曜定休</dd></div>
+      <div><dt>席</dt><dd>カウンター6席・テーブル2卓</dd></div>
     </dl>
     <p class="foot__fine">価格はすべて税込・見本用の架空価格です。営業時間・住所・席数は見本上の設定です。写真はAI生成のイメージで、実在の店舗・商品ではありません。</p>
   </div>

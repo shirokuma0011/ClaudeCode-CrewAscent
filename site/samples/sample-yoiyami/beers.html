@@ -3,15 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>銘柄｜よいやみ醸造（見本・架空）</title>
-<meta name="description" content="宵ノ口・灯影・夜更と季節の限定。香り・苦味・コクの3つの物差しで比べ、季節のカレンダーでいつ何が飲めるかを確かめられます（見本の架空銘柄）。">
+<title>銘柄と季節のカレンダー｜よいやみ醸造（見本・架空）</title>
+<meta name="description" content="よいやみ醸造（架空）の銘柄を、香り・苦味・コクの3つの物差しで比べられます。度数、合う料理、1杯の価格、季節ごとに飲める銘柄のカレンダー。">
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#141a33">
 <link rel="icon" href="../../assets/brand/icon-32.png" sizes="32x32">
 <link rel="stylesheet" href="../_shared/crew-frame.css?v=20261015">
 <script defer src="../_shared/crew-frame.js?v=20261015"></script>
-<link rel="stylesheet" href="assets/css/yoiyami.css">
-<script defer src="assets/js/yoiyami.js"></script>
+<link rel="preload" href="fonts/yoi-dela.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/yoiyami.css?v=3">
+<script defer src="assets/js/yoiyami.js?v=3"></script>
 </head>
 <body>
 <div class="ca-ribbon" role="note" aria-label="見本サイトについて">
@@ -20,226 +21,138 @@
   <p class="ca-ribbon__links"><a href="../../type-fan-brand.html">CA06<span class="ca-ribbon__long"> ファン化ブランド型サイト</span></a><a href="design-notes.html"><span class="ca-ribbon__long">この見本の</span>設計メモ</a></p>
 </div>
 <a class="skip" href="#main">本文へ移動</a>
-<div class="sky" aria-hidden="true"><svg class="sky__stars" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice" fill="#f5ecd7"><circle cx="238" cy="113" r="1.5" opacity="0.73"/><circle cx="66" cy="6" r="1.0" opacity="0.49"/><circle cx="996" cy="220" r="1.3" opacity="0.73"/><circle cx="151" cy="309" r="1.4" opacity="0.79"/><circle cx="671" cy="27" r="1.5" opacity="0.53"/><circle cx="31" cy="229" r="1.7" opacity="0.88"/><circle cx="714" cy="204" r="1.8" opacity="0.62"/><circle cx="936" cy="48" r="0.8" opacity="0.48"/><circle cx="965" cy="153" r="1.1" opacity="0.65"/><circle cx="386" cy="115" r="1.5" opacity="0.89"/><circle cx="682" cy="446" r="2.1" opacity="0.75"/><circle cx="163" cy="465" r="2.0" opacity="0.69"/><circle cx="714" cy="98" r="1.5" opacity="0.52"/><circle cx="63" cy="473" r="0.7" opacity="0.83"/><circle cx="410" cy="25" r="1.8" opacity="0.87"/><circle cx="44" cy="15" r="1.7" opacity="0.55"/><circle cx="881" cy="278" r="2.1" opacity="0.54"/><circle cx="77" cy="11" r="0.9" opacity="0.59"/><circle cx="610" cy="4" r="1.9" opacity="0.54"/><circle cx="959" cy="190" r="1.3" opacity="0.66"/><circle cx="644" cy="187" r="1.5" opacity="0.91"/><circle cx="507" cy="174" r="1.0" opacity="0.53"/><circle cx="978" cy="160" r="0.6" opacity="0.60"/><circle cx="580" cy="7" r="1.5" opacity="0.39"/><circle cx="627" cy="177" r="1.1" opacity="0.77"/><circle cx="738" cy="1" r="1.6" opacity="0.93"/><circle cx="251" cy="151" r="1.1" opacity="0.57"/><circle cx="313" cy="123" r="1.1" opacity="0.58"/><circle cx="772" cy="9" r="1.7" opacity="0.54"/><circle cx="223" cy="107" r="0.9" opacity="0.61"/><circle cx="698" cy="18" r="1.1" opacity="0.85"/><circle cx="438" cy="81" r="1.1" opacity="0.74"/><circle cx="885" cy="57" r="0.8" opacity="0.67"/><circle cx="191" cy="379" r="0.9" opacity="0.52"/><circle cx="807" cy="290" r="1.1" opacity="0.43"/><circle cx="292" cy="121" r="1.1" opacity="0.60"/><circle cx="420" cy="211" r="0.8" opacity="0.35"/><circle cx="943" cy="486" r="1.3" opacity="0.92"/><circle cx="927" cy="93" r="1.9" opacity="0.75"/><circle cx="519" cy="55" r="0.9" opacity="0.39"/><circle cx="589" cy="130" r="0.7" opacity="0.89"/><circle cx="694" cy="464" r="1.9" opacity="0.70"/><circle cx="13" cy="72" r="1.0" opacity="0.75"/><circle cx="525" cy="218" r="1.5" opacity="0.55"/><circle cx="252" cy="230" r="1.8" opacity="0.56"/><circle cx="197" cy="245" r="0.9" opacity="0.83"/><circle cx="922" cy="372" r="0.6" opacity="0.73"/><circle cx="863" cy="8" r="1.0" opacity="0.67"/><circle cx="423" cy="206" r="0.6" opacity="0.38"/><circle cx="127" cy="5" r="2.1" opacity="0.86"/><circle cx="86" cy="89" r="1.1" opacity="0.56"/><circle cx="647" cy="119" r="0.9" opacity="0.55"/><circle cx="124" cy="223" r="1.2" opacity="0.40"/><circle cx="179" cy="126" r="1.8" opacity="0.58"/><circle cx="801" cy="151" r="1.2" opacity="0.65"/><circle cx="703" cy="163" r="1.3" opacity="0.50"/><circle cx="536" cy="28" r="1.2" opacity="0.61"/><circle cx="880" cy="196" r="1.9" opacity="0.82"/><circle cx="262" cy="32" r="1.8" opacity="0.75"/><circle cx="887" cy="296" r="1.7" opacity="0.69"/><circle cx="103" cy="2" r="0.8" opacity="0.81"/><circle cx="44" cy="5" r="1.9" opacity="0.46"/><circle cx="23" cy="57" r="1.9" opacity="0.75"/><circle cx="836" cy="309" r="1.8" opacity="0.37"/><circle cx="767" cy="205" r="0.8" opacity="0.80"/><circle cx="935" cy="11" r="1.4" opacity="0.85"/><circle cx="242" cy="25" r="1.5" opacity="0.80"/><circle cx="394" cy="82" r="1.1" opacity="0.60"/><circle cx="83" cy="273" r="1.2" opacity="0.80"/><circle cx="161" cy="293" r="1.6" opacity="0.66"/></svg></div>
-<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
-<symbol id="label-yoinokuchi" viewBox="0 0 200 200">
-<defs><clipPath id="c-yoinokuchi"><circle cx="100" cy="100" r="70"/></clipPath><path id="r-yoinokuchi" d="M100 100 m-82 0 a82 82 0 1 1 164 0 a82 82 0 1 1 -164 0"/></defs>
-<circle cx="100" cy="100" r="98" fill="#f2a541"/>
-<circle cx="100" cy="100" r="92" fill="none" stroke="#141a33" stroke-width="1.2" opacity=".7"/>
-<circle cx="100" cy="100" r="71" fill="none" stroke="#141a33" stroke-width="1.6"/>
-<text font-family="ui-monospace,Menlo,Consolas,monospace" font-size="9.2" letter-spacing="1.6" fill="#141a33"><textPath href="#r-yoinokuchi">YOI-NO-KUCHI · PALE ALE · ABV 5.0% · YOIYAMI BREWING · AKARIMACHI ·</textPath></text>
-<g clip-path="url(#c-yoinokuchi)"><path d="M100 100 L170.0 100.0 A70 70 0 0 1 169.6 107.3Z" fill="#141a33" opacity=".16"/><path d="M100 100 L167.6 118.1 A70 70 0 0 1 165.4 125.1Z" fill="#141a33" opacity=".16"/><path d="M100 100 L160.6 135.0 A70 70 0 0 1 156.6 141.1Z" fill="#141a33" opacity=".16"/><path d="M100 100 L149.5 149.5 A70 70 0 0 1 144.1 154.4Z" fill="#141a33" opacity=".16"/><path d="M100 100 L135.0 160.6 A70 70 0 0 1 128.5 163.9Z" fill="#141a33" opacity=".16"/><path d="M100 100 L118.1 167.6 A70 70 0 0 1 111.0 169.1Z" fill="#141a33" opacity=".16"/><path d="M100 100 L100.0 170.0 A70 70 0 0 1 92.7 169.6Z" fill="#141a33" opacity=".16"/><path d="M100 100 L81.9 167.6 A70 70 0 0 1 74.9 165.4Z" fill="#141a33" opacity=".16"/><path d="M100 100 L65.0 160.6 A70 70 0 0 1 58.9 156.6Z" fill="#141a33" opacity=".16"/><path d="M100 100 L50.5 149.5 A70 70 0 0 1 45.6 144.1Z" fill="#141a33" opacity=".16"/><path d="M100 100 L39.4 135.0 A70 70 0 0 1 36.1 128.5Z" fill="#141a33" opacity=".16"/><path d="M100 100 L32.4 118.1 A70 70 0 0 1 30.9 111.0Z" fill="#141a33" opacity=".16"/><path d="M100 100 L30.0 100.0 A70 70 0 0 1 30.4 92.7Z" fill="#141a33" opacity=".16"/><path d="M100 100 L32.4 81.9 A70 70 0 0 1 34.6 74.9Z" fill="#141a33" opacity=".16"/><path d="M100 100 L39.4 65.0 A70 70 0 0 1 43.4 58.9Z" fill="#141a33" opacity=".16"/><path d="M100 100 L50.5 50.5 A70 70 0 0 1 55.9 45.6Z" fill="#141a33" opacity=".16"/><path d="M100 100 L65.0 39.4 A70 70 0 0 1 71.5 36.1Z" fill="#141a33" opacity=".16"/><path d="M100 100 L81.9 32.4 A70 70 0 0 1 89.0 30.9Z" fill="#141a33" opacity=".16"/><path d="M100 100 L100.0 30.0 A70 70 0 0 1 107.3 30.4Z" fill="#141a33" opacity=".16"/><path d="M100 100 L118.1 32.4 A70 70 0 0 1 125.1 34.6Z" fill="#141a33" opacity=".16"/><path d="M100 100 L135.0 39.4 A70 70 0 0 1 141.1 43.4Z" fill="#141a33" opacity=".16"/><path d="M100 100 L149.5 50.5 A70 70 0 0 1 154.4 55.9Z" fill="#141a33" opacity=".16"/><path d="M100 100 L160.6 65.0 A70 70 0 0 1 163.9 71.5Z" fill="#141a33" opacity=".16"/><path d="M100 100 L167.6 81.9 A70 70 0 0 1 169.1 89.0Z" fill="#141a33" opacity=".16"/></g>
-<circle cx="100" cy="100" r="34" fill="#f2a541" stroke="#141a33" stroke-width="1.2"/>
-<text x="100" y="107" text-anchor="middle" font-family="'Hiragino Maru Gothic ProN','Zen Maru Gothic','Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" font-weight="700" font-size="18" fill="#141a33">宵ノ口</text>
-</symbol>
-<symbol id="label-hokage" viewBox="0 0 200 200">
-<defs><clipPath id="c-hokage"><circle cx="100" cy="100" r="70"/></clipPath><path id="r-hokage" d="M100 100 m-82 0 a82 82 0 1 1 164 0 a82 82 0 1 1 -164 0"/></defs>
-<circle cx="100" cy="100" r="98" fill="#5b3a6b"/>
-<circle cx="100" cy="100" r="92" fill="none" stroke="#f5ecd7" stroke-width="1.2" opacity=".7"/>
-<circle cx="100" cy="100" r="71" fill="none" stroke="#f5ecd7" stroke-width="1.6"/>
-<text font-family="ui-monospace,Menlo,Consolas,monospace" font-size="9.2" letter-spacing="1.6" fill="#f5ecd7"><textPath href="#r-hokage">HOKAGE · AMBER ALE · ABV 5.5% · YOIYAMI BREWING · AKARIMACHI ·</textPath></text>
-<g clip-path="url(#c-hokage)"><circle cx="100" cy="128" r="18" fill="none" stroke="#f2a541" stroke-width="1.6" opacity=".45"/><circle cx="100" cy="128" r="26" fill="none" stroke="#f2a541" stroke-width="1.6" opacity=".45"/><circle cx="100" cy="128" r="34" fill="none" stroke="#f2a541" stroke-width="1.6" opacity=".45"/><circle cx="100" cy="128" r="42" fill="none" stroke="#f2a541" stroke-width="1.6" opacity=".45"/><circle cx="100" cy="128" r="50" fill="none" stroke="#f2a541" stroke-width="1.6" opacity=".45"/><circle cx="100" cy="128" r="58" fill="none" stroke="#f2a541" stroke-width="1.6" opacity=".45"/><circle cx="100" cy="128" r="66" fill="none" stroke="#f2a541" stroke-width="1.6" opacity=".45"/></g>
-<circle cx="100" cy="100" r="34" fill="#5b3a6b" stroke="#f2a541" stroke-width="1.2"/>
-<text x="100" y="106" text-anchor="middle" font-family="'Hiragino Maru Gothic ProN','Zen Maru Gothic','Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" font-weight="700" font-size="22" fill="#f2a541">灯影</text>
-</symbol>
-<symbol id="label-yofuke" viewBox="0 0 200 200">
-<defs><clipPath id="c-yofuke"><circle cx="100" cy="100" r="70"/></clipPath><path id="r-yofuke" d="M100 100 m-82 0 a82 82 0 1 1 164 0 a82 82 0 1 1 -164 0"/></defs>
-<circle cx="100" cy="100" r="98" fill="#141a33"/>
-<circle cx="100" cy="100" r="92" fill="none" stroke="#f2a541" stroke-width="1.2" opacity=".7"/>
-<circle cx="100" cy="100" r="71" fill="none" stroke="#f2a541" stroke-width="1.6"/>
-<text font-family="ui-monospace,Menlo,Consolas,monospace" font-size="9.2" letter-spacing="1.6" fill="#f2a541"><textPath href="#r-yofuke">YOFUKE · STOUT · ABV 6.5% · YOIYAMI BREWING · AKARIMACHI ·</textPath></text>
-<g clip-path="url(#c-yofuke)"><circle cx="87.8" cy="124.4" r="1.6" fill="#f5ecd7" opacity=".7"/><circle cx="141.1" cy="120.1" r="1.2" fill="#f5ecd7" opacity=".7"/><circle cx="141.4" cy="115.8" r="0.7" fill="#f5ecd7" opacity=".7"/><circle cx="78.6" cy="109.5" r="0.7" fill="#f5ecd7" opacity=".7"/><circle cx="46.9" cy="127.3" r="0.8" fill="#f5ecd7" opacity=".7"/><circle cx="108.4" cy="149.4" r="2.1" fill="#f5ecd7" opacity=".7"/><circle cx="65.5" cy="81.8" r="2.2" fill="#f5ecd7" opacity=".7"/><circle cx="158.6" cy="117.7" r="1.1" fill="#f5ecd7" opacity=".7"/><circle cx="115.8" cy="120.2" r="1.1" fill="#f5ecd7" opacity=".7"/><circle cx="111.6" cy="73.8" r="1.5" fill="#f5ecd7" opacity=".7"/><circle cx="75.7" cy="71.0" r="1.5" fill="#f5ecd7" opacity=".7"/><circle cx="121.1" cy="108.8" r="0.9" fill="#f5ecd7" opacity=".7"/><circle cx="82.8" cy="63.3" r="1.1" fill="#f5ecd7" opacity=".7"/><circle cx="64.1" cy="78.6" r="1.1" fill="#f5ecd7" opacity=".7"/><circle cx="114.7" cy="48.5" r="1.0" fill="#f5ecd7" opacity=".7"/><circle cx="59.6" cy="79.6" r="2.0" fill="#f5ecd7" opacity=".7"/><circle cx="95.6" cy="66.5" r="2.2" fill="#f5ecd7" opacity=".7"/><circle cx="129.5" cy="127.1" r="1.8" fill="#f5ecd7" opacity=".7"/><circle cx="125.1" cy="135.5" r="0.7" fill="#f5ecd7" opacity=".7"/><circle cx="72.1" cy="50.6" r="1.5" fill="#f5ecd7" opacity=".7"/><circle cx="124.9" cy="75.3" r="1.7" fill="#f5ecd7" opacity=".7"/><circle cx="60.3" cy="73.3" r="1.3" fill="#f5ecd7" opacity=".7"/><circle cx="135.0" cy="44.8" r="1.4" fill="#f5ecd7" opacity=".7"/><circle cx="88.2" cy="80.3" r="1.7" fill="#f5ecd7" opacity=".7"/><circle cx="59.2" cy="46.0" r="1.9" fill="#f5ecd7" opacity=".7"/><circle cx="91.7" cy="137.6" r="1.7" fill="#f5ecd7" opacity=".7"/><circle cx="141.7" cy="106.0" r="0.9" fill="#f5ecd7" opacity=".7"/><circle cx="116.9" cy="115.3" r="1.8" fill="#f5ecd7" opacity=".7"/><circle cx="121.9" cy="123.2" r="1.2" fill="#f5ecd7" opacity=".7"/><circle cx="116.5" cy="82.7" r="1.3" fill="#f5ecd7" opacity=".7"/><circle cx="40.6" cy="80.9" r="1.9" fill="#f5ecd7" opacity=".7"/><circle cx="121.9" cy="74.8" r="1.3" fill="#f5ecd7" opacity=".7"/><circle cx="60.6" cy="148.4" r="2.1" fill="#f5ecd7" opacity=".7"/><circle cx="116.6" cy="123.1" r="1.0" fill="#f5ecd7" opacity=".7"/><path d="M132 58a20 20 0 1 0 14 30a16 16 0 1 1 -14 -30z" fill="#f2a541"/></g>
-<circle cx="100" cy="100" r="34" fill="#141a33" stroke="#f5ecd7" stroke-width="1.2"/>
-<text x="100" y="106" text-anchor="middle" font-family="'Hiragino Maru Gothic ProN','Zen Maru Gothic','Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" font-weight="700" font-size="22" fill="#f5ecd7">夜更</text>
-</symbol>
-<symbol id="label-kisetsu" viewBox="0 0 200 200">
-<defs><clipPath id="c-kisetsu"><circle cx="100" cy="100" r="70"/></clipPath><path id="r-kisetsu" d="M100 100 m-82 0 a82 82 0 1 1 164 0 a82 82 0 1 1 -164 0"/></defs>
-<circle cx="100" cy="100" r="98" fill="#8fae4a"/>
-<circle cx="100" cy="100" r="92" fill="none" stroke="#141a33" stroke-width="1.2" opacity=".7"/>
-<circle cx="100" cy="100" r="71" fill="none" stroke="#141a33" stroke-width="1.6"/>
-<text font-family="ui-monospace,Menlo,Consolas,monospace" font-size="9.2" letter-spacing="1.6" fill="#141a33"><textPath href="#r-kisetsu">SEASONAL LIMITED · ONE BEER EACH SEASON · YOIYAMI BREWING · AKARIMACHI ·</textPath></text>
-<g clip-path="url(#c-kisetsu)"><path d="M10 14 Q20 30 30 14" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M30 14 Q40 30 50 14" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M50 14 Q60 30 70 14" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M70 14 Q80 30 90 14" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M90 14 Q100 30 110 14" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M110 14 Q120 30 130 14" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M130 14 Q140 30 150 14" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M150 14 Q160 30 170 14" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M170 14 Q180 30 190 14" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M0 30 Q10 46 20 30" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M20 30 Q30 46 40 30" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M40 30 Q50 46 60 30" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M60 30 Q70 46 80 30" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M80 30 Q90 46 100 30" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M100 30 Q110 46 120 30" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M120 30 Q130 46 140 30" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M140 30 Q150 46 160 30" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M160 30 Q170 46 180 30" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M10 46 Q20 62 30 46" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M30 46 Q40 62 50 46" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M50 46 Q60 62 70 46" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M70 46 Q80 62 90 46" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M90 46 Q100 62 110 46" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M110 46 Q120 62 130 46" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M130 46 Q140 62 150 46" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M150 46 Q160 62 170 46" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M170 46 Q180 62 190 46" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M0 62 Q10 78 20 62" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M20 62 Q30 78 40 62" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M40 62 Q50 78 60 62" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M60 62 Q70 78 80 62" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M80 62 Q90 78 100 62" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M100 62 Q110 78 120 62" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M120 62 Q130 78 140 62" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M140 62 Q150 78 160 62" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M160 62 Q170 78 180 62" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M10 78 Q20 94 30 78" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M30 78 Q40 94 50 78" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M50 78 Q60 94 70 78" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M70 78 Q80 94 90 78" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M90 78 Q100 94 110 78" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M110 78 Q120 94 130 78" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M130 78 Q140 94 150 78" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M150 78 Q160 94 170 78" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M170 78 Q180 94 190 78" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M0 94 Q10 110 20 94" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M20 94 Q30 110 40 94" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M40 94 Q50 110 60 94" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M60 94 Q70 110 80 94" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M80 94 Q90 110 100 94" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M100 94 Q110 110 120 94" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M120 94 Q130 110 140 94" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M140 94 Q150 110 160 94" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M160 94 Q170 110 180 94" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M10 110 Q20 126 30 110" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M30 110 Q40 126 50 110" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M50 110 Q60 126 70 110" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M70 110 Q80 126 90 110" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M90 110 Q100 126 110 110" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M110 110 Q120 126 130 110" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M130 110 Q140 126 150 110" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M150 110 Q160 126 170 110" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M170 110 Q180 126 190 110" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M0 126 Q10 142 20 126" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M20 126 Q30 142 40 126" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M40 126 Q50 142 60 126" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M60 126 Q70 142 80 126" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M80 126 Q90 142 100 126" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M100 126 Q110 142 120 126" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M120 126 Q130 142 140 126" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M140 126 Q150 142 160 126" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M160 126 Q170 142 180 126" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M10 142 Q20 158 30 142" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M30 142 Q40 158 50 142" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M50 142 Q60 158 70 142" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M70 142 Q80 158 90 142" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M90 142 Q100 158 110 142" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M110 142 Q120 158 130 142" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M130 142 Q140 158 150 142" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M150 142 Q160 158 170 142" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/><path d="M170 142 Q180 158 190 142" fill="none" stroke="#141a33" stroke-width="1.4" opacity=".35"/></g>
-<circle cx="100" cy="100" r="34" fill="#8fae4a" stroke="#141a33" stroke-width="1.2"/>
-<text x="100" y="106" text-anchor="middle" font-family="'Hiragino Maru Gothic ProN','Zen Maru Gothic','Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" font-weight="700" font-size="22" fill="#141a33">季節</text>
-</symbol>
-<symbol id="lantern" viewBox="0 0 40 40">
-<defs><clipPath id="lc"><circle cx="20" cy="20" r="17"/></clipPath></defs>
-<circle cx="20" cy="20" r="17" fill="#f2a541"/>
-<g clip-path="url(#lc)"><rect x="0" y="24" width="40" height="20" fill="#5b3a6b"/>
-<path d="M3 13 Q20 9 37 13 M3 20 Q20 17 37 20" fill="none" stroke="#141a33" stroke-width="1.6" opacity=".55"/></g>
-<rect x="15" y="1" width="10" height="3.4" rx="1.2" fill="currentColor"/><rect x="15" y="35.6" width="10" height="3.4" rx="1.2" fill="currentColor"/>
-</symbol>
-</svg>
 <header class="site-head">
-  <a class="brand" href="index.html"><svg viewBox="-5 0 210 68" role="img" aria-label="よいやみ醸造（架空）"><g fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M0 6 L13 26 L26 6 M13 26 V46"/><path d="M78 6 V46"/><path d="M88 6 L101 26 L114 6 M101 26 V46"/><path d="M122 46 L135 6 L148 46 M127.5 32 H142.5"/><path d="M157 46 V6 L171 30 L185 6 V46"/><path d="M196 6 V46"/></g><use href="#lantern" x="31" y="5" width="42" height="42"/><text x="100" y="65" text-anchor="middle" fill="currentColor" font-size="11.5" letter-spacing="5.2" font-family="'Hiragino Maru Gothic ProN','Zen Maru Gothic','Hiragino Sans','Noto Sans JP',sans-serif" font-weight="700">よいやみ醸造・灯町</text></svg></a>
-  <nav aria-label="サイト内"><ul class="nav"><li><a href="beers.html" aria-current="page">銘柄</a></li><li><a href="brewery.html">醸造所</a></li><li><a href="events.html">イベント</a></li><li><a href="visit.html">アクセス・購入</a></li><li><a class="nav__cta" href="index.html#taps">今月の銘柄</a></li></ul></nav>
+  <div class="site-head__in">
+    <a class="brand" href="index.html"><svg viewBox="0 0 438 84" role="img" aria-label="よいやみ醸造"><g transform="translate(0 2)"><defs><clipPath id="lc-h"><circle cx="40" cy="40" r="34.4"/></clipPath></defs><circle cx="40" cy="40" r="34.4" fill="#f2a541"/><g clip-path="url(#lc-h)"><rect x="0" y="43.2" width="80" height="40" fill="#5b3a6b"/><path d="M0 24.8 Q40 19.2 80 24.8 M0 36.0 Q40 31.2 80 36.0" fill="none" stroke="#141a33" stroke-width="2.4" opacity=".5"/></g><rect x="24.8" y="0" width="30.4" height="8.0" rx="2.4" fill="currentColor"/><rect x="24.8" y="72.0" width="30.4" height="8.0" rx="2.4" fill="currentColor"/></g><path transform="translate(96 4) scale(0.56)" fill="currentColor" d="M91.5 106.4 88.9 114.5Q74.8 105.8 64 100.4Q58.9 116.7 37.7 116.7Q27.1 116.7 19.7 114Q12.2 111.3 8.3 106.4Q4.4 101.6 4.4 95.2Q4.4 74.6 32.3 74.6Q36.5 74.6 41.7 75.1V39.2H65.7V50H95V70.1H65.7V79.8Q77.7 83.2 96.7 91.1Q95.4 94.4 91.5 106.4ZM41.7 91.8Q37.7 91 34.8 91Q32 91 30.6 91.8Q29.2 92.5 29.2 93.7Q29.2 94.9 30.9 95.8Q32.6 96.7 35.9 96.7Q39 96.7 40.4 95.8Q41.7 95 41.7 92.5Z M173.5 107.6Q171.2 87.6 166.6 73.2Q162 58.9 154.7 46.4L178.1 42.9Q186.3 55.5 191.3 68.6Q196.3 81.7 200.4 101.5ZM123 114.8Q118.4 114.8 114.3 112.7Q110.3 110.6 107.7 105.9Q105 101.3 104.9 94.1Q104.8 84 106.1 75.7Q107.4 67.3 110.6 53.1L112.4 45.2L139.2 46.4Q135.7 58.4 134 65.7Q132.3 73 130.8 83.7Q130.6 85.5 130.6 86Q130.6 88.1 131.6 88.1Q133 88.1 136.7 84.2Q140.3 80.3 147.7 71Q148.9 80 150.9 86.2Q153 92.5 156.4 97.7Q150.3 104.8 140.8 109.8Q131.2 114.8 123 114.8Z M280.5 49.9Q290.2 52.1 296 58Q301.8 63.9 301.8 72.6Q301.8 85.6 293.6 91.8Q285.3 98 270.6 98Q263 98 254.3 96.5L253.7 94.2Q252.2 88 250.6 83.2Q249.1 78.4 246.3 73.5Q263.7 76.5 269.4 76.5Q273.1 76.5 274.8 75.5Q276.4 74.6 276.4 72.5Q276.4 69.7 274.4 68.4Q272.4 67.2 267.5 67.2Q258.4 67.2 244.8 71.3Q250.6 95.9 258.7 114.7L233.7 118.1Q228.3 102.4 222.4 79.7L212.9 84.1L210.6 85.2Q209 77.5 207.4 72.5Q205.9 67.4 202.8 61.8L206.2 60.9Q214 58.7 216.7 58.1Q214.2 48.5 212.4 42.5L238.4 39.9Q239.1 44 240.7 52.2Q249.2 50.4 257.1 49.5L254.6 39.6L278.9 38.8Z M401.8 97.1Q397.4 94.2 393.4 92.1Q390.8 101 386.6 106.3Q382.4 111.7 375.2 117.2Q367.6 114.5 361.7 112.6Q355.8 110.7 348.3 108.9Q358.8 102.8 364.1 97.3Q369.5 91.8 371.9 83.4Q366.9 82.1 362.5 81.4Q357.7 95.4 349.5 103.7Q341.3 111.9 329.8 111.9Q319 111.9 313.1 106.3Q307.2 100.7 307.2 91.1Q307.2 83.5 312 76.8Q316.9 70.2 325.5 65.9Q334.1 61.6 345 60.9L345.3 59Q335.1 59.2 328.5 59.4Q321.8 59.7 315.7 60.4Q315.7 53.4 315.5 49.1Q315.4 44.8 314.7 40.6H368.6Q368.6 51.9 367 62.2Q370.7 62.8 374.5 63.7Q374.7 57.9 374.7 54.5Q374.7 51.5 374.5 43.9Q384.3 46.1 397.6 47.2V51.6Q397.6 62.1 397 70.4Q399.6 71.4 404.8 73.6ZM340 80.3Q336.2 81.1 333.4 82.8Q330.6 84.4 329.4 86.3Q328.3 88 328.3 89.3Q328.3 91 330.5 91Q332.9 91 335.4 88.2Q337.8 85.4 340 80.3Z M502.5 116.9Q495.5 114 488.3 108.2V113.5Q475.4 115.7 457.1 117.1Q456.4 110.7 454.4 105.4L462.7 105V103.3L456.7 104.8Q455.9 99.8 453.5 95.4V115.8H440.3V114.7H424.8V115.8H412V56.6H420.1V54.6H411.2V41H453.5V54.6H445.2V56.6H453.5V93.1Q463.9 92.8 469.7 91.2H455V83.1H463.1V81.4H455.8V74.3H463.1V72.6H455.5V64.8H463.1V63.5L457.9 63.7Q456.8 59.6 454.5 54.8Q461 54.6 467.9 53.3H455.5V42H472V39.4H489.1V42H505.6V53.3H492.8Q499.7 54.6 506.4 54.8Q504.1 59.6 502.8 63.7L497.8 63.5V64.8H505.6V72.6H497.8V74.3H505.1V81.4H497.8V83.1H505.7V91.2H498.3L505.3 95Q502.8 97.3 500.7 99.6Q503.4 100.3 507 100.3Q505.1 104.1 504.1 108Q503.2 112 502.5 116.9ZM480.3 56.9 482.2 53.3H478.4ZM435.3 54.6H430.5V56.6H435.3ZM477.5 62.9V64.8H483.6V62.9H490.5Q484.9 62.1 480.3 60.2Q475.8 62.1 470.2 62.9ZM424.8 69.3V81.7Q426.1 79.1 426.5 76.6Q426.8 74.2 426.9 69.3ZM431.7 69.3Q431.7 76.9 431.1 81.6Q430.6 86.2 428.4 89H440.3V86.9Q439.1 87.4 437.1 87.4Q435.1 87.4 434.2 86.8Q433.4 86.1 433.4 84.3L433.5 74.9Q433.5 71 433.4 69.3ZM437.5 69.3V78.4Q437.5 79 438.3 79Q439 79 439 75.8L440.3 76.5V69.3ZM483.6 72.6H477.5V74.3H483.6ZM483.6 81.4H477.5V83.1H483.6ZM424.8 89H427.9Q425.9 87.2 424.8 86.4ZM494.1 91.2H488.5Q489.6 92.7 491.1 94.2Q492.8 92.8 494.1 91.2ZM477.8 103.4 482.2 102.5Q480.2 100.3 478 97.5H477.8ZM424.8 99V101H440.3V99Z M538.7 65.2Q525 61.3 511.6 59L517.5 41.7Q532.8 45.5 542.3 48.6Q543.7 46.2 544.4 44.2Q545.1 42.3 545.7 39.2L561.6 40.2L561.3 43.6H563.6V39.3H583.8V43.6H605.3V57.1H583.8V58.9H607.8V71.3H542.1V58.9H549.5Q545.8 57.4 541.7 56ZM563.6 58.9V57.1H557.6L556.6 58.9ZM609.5 96.6Q607.2 100.8 606.4 104.8Q605.6 108.7 605.1 114.9Q587.1 115.6 574.9 115.6Q558.2 115.6 548.2 114Q538.2 112.4 530.7 108.8Q525.9 112 516.3 116.6L515.8 114.6Q514.1 107.3 512.8 102.8Q511.5 98.2 509.7 94.1Q512.2 93.5 514.4 92.5Q516.6 91.5 517.9 90.5V83.2H511.9L512 66.7H539.2V94.9Q551.5 97.6 573.6 97.6Q590.9 97.6 609.5 96.6ZM604.1 73.1V95.5H543.2V73.1ZM582.2 82.3H565.3V85.2H582.2Z"/></svg></a>
+    <nav class="gnav" aria-label="サイト内"><a href="beers.html" aria-current="page">銘柄</a><a href="brewery.html">醸造所</a><a href="events.html">イベント</a><a href="visit.html">アクセス・購入</a><a class="btn btn--lantern btn--sm" href="beers.html">今月の銘柄</a></nav>
+    <details class="menu"><summary><i aria-hidden="true"></i>メニュー</summary><ul><li><a href="index.html">トップ</a></li><li><a href="beers.html" aria-current="page">銘柄</a></li><li><a href="brewery.html">醸造所</a></li><li><a href="events.html">イベント</a></li><li><a href="visit.html">アクセス・購入</a></li></ul></details>
+  </div>
 </header>
 <main id="main">
-<div class="page-head">
-  <div>
-    <p class="kicker">Beers</p>
-    <h1 class="display">香り、苦味、コク。<br>三つの物差しで選ぶ。</h1>
+<section class="phero" aria-labelledby="h1">
+  <img src="assets/img/flight.webp" width="1200" height="900" alt="木の板に並んだ、色の違う3杯のビール" fetchpriority="high" style="object-position:50% 62%">
+  <div class="wrap phero__in">
+    <div><ol class="crumb"><li><a href="index.html">トップ</a></li><li>銘柄</li></ol><h1 id="h1">香り、苦味、コク。<br>三つの物差しで選ぶ。</h1></div>
+    <div><p>よいやみの銘柄は、どれも香りが穏やかです。違いは、香りの立ち方と、苦味の長さ、口に残るコクの重さ。迷ったら、外がまだ明るいうちは宵ノ口から。</p><p class="age"><b aria-hidden="true">20</b>20歳未満の飲酒は法律で禁止されています。お酒は適量を。</p></div>
   </div>
-  <p class="lead">よいやみの銘柄は、どれも香りが穏やかです。違いは、香りの立ち方と、苦味の長さ、口に残るコクの重さ。迷ったら、外がまだ明るいうちは宵ノ口から。</p>
-</div>
+  <p class="cap">写真はAI生成のイメージです</p>
+</section>
 
-<section class="sec" style="padding-top:24px" aria-labelledby="chart-title">
+<section class="sec on-light" aria-labelledby="cmp">
   <div class="wrap compare">
-    <div class="chart" data-chart>
-      <h2 class="sr-only" id="chart-title">味わいの比較</h2>
-      <svg viewBox="0 0 500 420" role="img" aria-labelledby="chart-desc">
-        <desc id="chart-desc">3銘柄の香り・苦味・コクを5段階で比べた三角形のチャート。数値は下の表と同じです。</desc>
-        <g class="axis">
-          <polygon points="250,70 405.9,340 94.1,340"/><polygon points="250,106 374.7,322 125.3,322"/><polygon points="250,142 343.5,304 156.5,304"/><polygon points="250,178 312.4,286 187.6,286"/><polygon points="250,214 281.2,268 218.8,268"/>
-          <path d="M250 250 L250 70 M250 250 L405.9 340 M250 250 L94.1 340"/>
-        </g>
-        <polygon class="tri tri--hokage" points="250,142 312.4,286 125.3,322" fill="#f5ecd7" stroke="#f5ecd7" stroke-dasharray="10 6"/>
-        <polygon class="tri tri--yofuke" points="250,106 343.5,304 94.1,340" fill="#8fae4a" stroke="#8fae4a" stroke-dasharray="2 6" stroke-linecap="round"/>
-        <polygon class="tri tri--yoinokuchi" points="250,70 343.5,304 187.6,286" fill="#f2a541" stroke="#f2a541"/>
-        <circle cx="250" cy="250" r="5" fill="#f5ecd7"/>
-        <text x="250" y="52" text-anchor="middle" font-weight="700">香り</text>
-        <text x="424" y="368" text-anchor="middle" font-weight="700">苦味</text>
-        <text x="76" y="368" text-anchor="middle" font-weight="700">コク</text>
-      </svg>
-      <ul class="chart-keys" aria-label="強調する銘柄を選ぶ">
-        <li><button type="button" data-focus-key="yoinokuchi" aria-pressed="false"><span class="legend-line" style="--c:#f2a541"></span>宵ノ口</button></li>
-        <li><button type="button" data-focus-key="hokage" aria-pressed="false"><span class="legend-line" style="--c:#f5ecd7;border-top-style:dashed"></span>灯影</button></li>
-        <li><button type="button" data-focus-key="yofuke" aria-pressed="false"><span class="legend-line" style="--c:#8fae4a;border-top-style:dotted"></span>夜更</button></li>
-      </ul>
-    </div>
+    <div class="chart" data-chart><svg viewBox="0 0 400 400" role="img" aria-label="香り・苦味・コクの3軸で、3銘柄の味わいを重ねた図。数値は右の表と同じです"><polygon points="200.0,180.0 226.0,225.0 174.0,225.0" fill="none" stroke="#141a33" stroke-opacity="0.12"/><polygon points="200.0,150.0 252.0,240.0 148.0,240.0" fill="none" stroke="#141a33" stroke-opacity="0.12"/><polygon points="200.0,120.0 277.9,255.0 122.1,255.0" fill="none" stroke="#141a33" stroke-opacity="0.12"/><polygon points="200.0,90.0 303.9,270.0 96.1,270.0" fill="none" stroke="#141a33" stroke-opacity="0.12"/><polygon points="200.0,60.0 329.9,285.0 70.1,285.0" fill="none" stroke="#141a33" stroke-opacity="0.4"/><line x1="200" y1="210" x2="200.0" y2="60.0" stroke="#141a33" stroke-opacity=".3"/><line x1="200" y1="210" x2="329.9" y2="285.0" stroke="#141a33" stroke-opacity=".3"/><line x1="200" y1="210" x2="70.1" y2="285.0" stroke="#141a33" stroke-opacity=".3"/><g class="poly poly-a"><polygon points="200.0,60.0 277.9,255.0 148.0,240.0" fill="#f2a541" fill-opacity=".22" stroke="#c97a10" stroke-width="3"/><circle cx="200.0" cy="60.0" r="5" fill="#c97a10"/><circle cx="277.9" cy="255.0" r="5" fill="#c97a10"/><circle cx="148.0" cy="240.0" r="5" fill="#c97a10"/></g><g class="poly poly-b"><polygon points="200.0,120.0 252.0,240.0 96.1,270.0" fill="#5b3a6b" fill-opacity=".22" stroke="#5b3a6b" stroke-width="3"/><circle cx="200.0" cy="120.0" r="5" fill="#5b3a6b"/><circle cx="252.0" cy="240.0" r="5" fill="#5b3a6b"/><circle cx="96.1" cy="270.0" r="5" fill="#5b3a6b"/></g><g class="poly poly-c"><polygon points="200.0,90.0 277.9,255.0 70.1,285.0" fill="#141a33" fill-opacity=".22" stroke="#141a33" stroke-width="3"/><circle cx="200.0" cy="90.0" r="5" fill="#141a33"/><circle cx="277.9" cy="255.0" r="5" fill="#141a33"/><circle cx="70.1" cy="285.0" r="5" fill="#141a33"/></g><text x="200" y="39" text-anchor="middle" font-size="18" font-weight="700" fill="#141a33">香り</text><text x="353" y="304" text-anchor="middle" font-size="18" font-weight="700" fill="#141a33">苦味</text><text x="47" y="304" text-anchor="middle" font-size="18" font-weight="700" fill="#141a33">コク</text></svg></div>
     <div>
-      <figure class="flight" style="margin:0">
-        <img src="assets/img/flight.webp" width="1200" height="900" alt="木の板に並んだ、淡い金色・琥珀色・黒の3つのグラス">
-        <span class="img-note">画像はAI生成のイメージです</span>
-      </figure>
-      <table class="scores">
-        <caption class="sr-only">味わいの比較（5段階・見本の設定）</caption>
+      <p class="eyebrow">味わいの比べ方</p>
+      <h2 class="h2" id="cmp">三つを重ねると、違いが見える。</h2>
+      <div class="keys" role="group" aria-label="強調する銘柄">
+        <button class="key" type="button" data-focus-key="a" aria-pressed="false" hidden><i style="background:#f2a541"></i>宵ノ口</button>
+        <button class="key" type="button" data-focus-key="b" aria-pressed="false" hidden><i style="background:#5b3a6b"></i>灯影</button>
+        <button class="key" type="button" data-focus-key="c" aria-pressed="false" hidden><i style="background:#141a33"></i>夜更</button>
+      </div>
+      <table class="vals"><caption>5段階の目安。造り手の感じ方を数にしたもので、見本の設定です。</caption>
         <thead><tr><th scope="col">銘柄</th><th scope="col">香り</th><th scope="col">苦味</th><th scope="col">コク</th></tr></thead>
+        <tbody><tr><th scope="row">宵ノ口</th><td>5</td><td>3</td><td>2</td></tr><tr><th scope="row">灯影</th><td>3</td><td>2</td><td>4</td></tr><tr><th scope="row">夜更</th><td>4</td><td>3</td><td>5</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-label="銘柄ごとの説明" style="padding-top:24px">
+  <div class="wrap">
+    <article class="spread will-spin" id="beer-a">
+      <div class="spread__label"><svg class="label " viewBox="0 0 200 200" role="img" aria-label="宵ノ口のラベル" focusable="false"><defs><clipPath id="cl-pa"><circle cx="100" cy="100" r="71"/></clipPath><path id="tp-pa" d="M100 100 m-83 0 a83 83 0 1 1 166 0 a83 83 0 1 1 -166 0"/></defs><circle cx="100" cy="100" r="98" fill="#141a33"/><g class="spin"><text font-size="11.5" fill="#f5ecd7" letter-spacing="1.6" dy="4"><textPath href="#tp-pa" textLength="512" lengthAdjust="spacing">YOIYAMI BREWING · PALE ALE · No.01 · AKARIMACHI · </textPath></text></g><circle cx="100" cy="100" r="72" fill="#f2a541"/><g clip-path="url(#cl-pa)"><g class="spin"><g stroke="#141a33" stroke-width="1.3" opacity=".28"><line x1="100" y1="150" x2="208.3" y2="130.9"/><line x1="100" y1="150" x2="202.0" y2="108.8"/><line x1="100" y1="150" x2="191.2" y2="88.5"/><line x1="100" y1="150" x2="176.4" y2="70.9"/><line x1="100" y1="150" x2="158.3" y2="56.7"/><line x1="100" y1="150" x2="137.6" y2="46.6"/><line x1="100" y1="150" x2="115.3" y2="41.1"/><line x1="100" y1="150" x2="92.3" y2="40.3"/><line x1="100" y1="150" x2="69.7" y2="44.3"/><line x1="100" y1="150" x2="48.4" y2="52.9"/><line x1="100" y1="150" x2="29.3" y2="65.7"/><line x1="100" y1="150" x2="13.3" y2="82.3"/><line x1="100" y1="150" x2="1.1" y2="101.8"/><line x1="100" y1="150" x2="-6.7" y2="123.4"/><line x1="100" y1="150" x2="-9.9" y2="146.2"/></g><circle cx="100" cy="150" r="30" fill="#141a33" opacity=".14"/><line x1="20" y1="150" x2="180" y2="150" stroke="#141a33" stroke-width="1.5" opacity=".35"/></g></g><circle cx="100" cy="100" r="72" fill="none" stroke="#141a33" stroke-width="2" stroke-dasharray="2 4"/><text x="100" y="74" text-anchor="middle" font-size="12" font-style="italic" fill="#141a33">No.01</text><text class="lb-name" x="100" y="111" text-anchor="middle" font-size="30" fill="#141a33" letter-spacing="2">宵ノ口</text><text x="100" y="138" text-anchor="middle" font-size="12" letter-spacing="1.5" fill="#141a33">ABV 5.0%</text></svg></div>
+      <div>
+        <h2>宵ノ口<span class="kana">よいのくち</span></h2>
+        <p class="style it">Pale Ale</p>
+        <p>仕事終わりの最初の一杯のために造りました。グラスを近づけると、柑橘の皮のような香り。苦味は短く切れ、次のひと口を急かしません。</p>
+        <dl class="spec"><div><dt>度数</dt><dd><span class="big">5.0<small>%</small></span></dd></div><div><dt>1杯（税込）</dt><dd><span class="big">800<small>円</small></span></dd></div><div><dt>香り／合う料理</dt><dd>柑橘の皮、白い花／揚げたての芋、塩で食べる焼き鳥</dd></div></dl>
+      </div>
+    </article>
+    <article class="spread will-spin" id="beer-b">
+      <div class="spread__label"><svg class="label " viewBox="0 0 200 200" role="img" aria-label="灯影のラベル" focusable="false"><defs><clipPath id="cl-pb"><circle cx="100" cy="100" r="71"/></clipPath><path id="tp-pb" d="M100 100 m-83 0 a83 83 0 1 1 166 0 a83 83 0 1 1 -166 0"/></defs><circle cx="100" cy="100" r="98" fill="#f2a541"/><g class="spin"><text font-size="11.5" fill="#141a33" letter-spacing="1.6" dy="4"><textPath href="#tp-pb" textLength="512" lengthAdjust="spacing">YOIYAMI BREWING · AMBER ALE · No.02 · AKARIMACHI · </textPath></text></g><circle cx="100" cy="100" r="72" fill="#5b3a6b"/><g clip-path="url(#cl-pb)"><g class="spin"><circle cx="100" cy="100" r="22" fill="none" stroke="#f5ecd7" stroke-width="0.8" opacity="0.30"/><circle cx="100" cy="100" r="31" fill="none" stroke="#f5ecd7" stroke-width="1.4" opacity="0.27"/><circle cx="100" cy="100" r="40" fill="none" stroke="#f5ecd7" stroke-width="0.8" opacity="0.24"/><circle cx="100" cy="100" r="49" fill="none" stroke="#f5ecd7" stroke-width="1.4" opacity="0.21"/><circle cx="100" cy="100" r="58" fill="none" stroke="#f5ecd7" stroke-width="0.8" opacity="0.18"/><circle cx="100" cy="100" r="67" fill="none" stroke="#f5ecd7" stroke-width="1.4" opacity="0.15"/><circle cx="100" cy="100" r="16" fill="#f2a541" opacity=".5"/></g></g><circle cx="100" cy="100" r="72" fill="none" stroke="#f2a541" stroke-width="2" stroke-dasharray="2 4"/><text x="100" y="74" text-anchor="middle" font-size="12" font-style="italic" fill="#f5ecd7">No.02</text><text class="lb-name" x="100" y="112" text-anchor="middle" font-size="34" fill="#f5ecd7" letter-spacing="2">灯影</text><text x="100" y="138" text-anchor="middle" font-size="12" letter-spacing="1.5" fill="#f5ecd7">ABV 5.5%</text></svg></div>
+      <div>
+        <h2>灯影<span class="kana">ほかげ</span></h2>
+        <p class="style it">Amber Ale</p>
+        <p>窓に灯りがともるころの色をしたビールです。焼いた麦の甘みと、カラメルのような香り。苦味は控えめで、食事と合わせやすい一杯です。</p>
+        <dl class="spec"><div><dt>度数</dt><dd><span class="big">5.5<small>%</small></span></dd></div><div><dt>1杯（税込）</dt><dd><span class="big">850<small>円</small></span></dd></div><div><dt>香り／合う料理</dt><dd>焼いた麦、カラメル／きのこのソテー、甘めのたれの料理</dd></div></dl>
+      </div>
+    </article>
+    <article class="spread will-spin" id="beer-c">
+      <div class="spread__label"><svg class="label " viewBox="0 0 200 200" role="img" aria-label="夜更のラベル" focusable="false"><defs><clipPath id="cl-pc"><circle cx="100" cy="100" r="71"/></clipPath><path id="tp-pc" d="M100 100 m-83 0 a83 83 0 1 1 166 0 a83 83 0 1 1 -166 0"/></defs><circle cx="100" cy="100" r="98" fill="#5b3a6b"/><g class="spin"><text font-size="11.5" fill="#f5ecd7" letter-spacing="1.6" dy="4"><textPath href="#tp-pc" textLength="512" lengthAdjust="spacing">YOIYAMI BREWING · STOUT · No.03 · AKARIMACHI · </textPath></text></g><circle cx="100" cy="100" r="72" fill="#141a33"/><g clip-path="url(#cl-pc)"><g class="spin"><g fill="#f5ecd7" opacity=".7"><circle cx="75.3" cy="51.1" r="1.3"/><circle cx="40.1" cy="105.0" r="1.0"/><circle cx="38.1" cy="101.0" r="0.6"/><circle cx="90.7" cy="39.8" r="0.7"/><circle cx="89.4" cy="145.8" r="0.7"/><circle cx="61.3" cy="117.8" r="1.5"/><circle cx="110.8" cy="85.5" r="1.6"/><circle cx="36.5" cy="150.2" r="0.9"/><circle cx="50.2" cy="46.5" r="0.9"/><circle cx="144.3" cy="55.3" r="1.2"/><circle cx="119.4" cy="82.1" r="1.1"/><circle cx="38.8" cy="38.3" r="0.8"/><circle cx="125.3" cy="89.9" r="0.9"/><circle cx="112.0" cy="93.4" r="0.9"/><circle cx="141.2" cy="127.9" r="0.8"/><circle cx="110.4" cy="103.5" r="1.5"/><circle cx="132.1" cy="70.3" r="1.6"/><circle cx="46.5" cy="88.5" r="1.4"/><circle cx="51.3" cy="98.5" r="0.6"/><circle cx="123.6" cy="137.0" r="1.2"/><circle cx="152.6" cy="73.9" r="1.3"/><circle cx="113.2" cy="111.2" r="1.1"/><circle cx="147.6" cy="162.3" r="1.1"/><circle cx="123.0" cy="38.5" r="1.3"/><circle cx="120.6" cy="169.0" r="1.4"/><circle cx="69.8" cy="84.0" r="1.3"/><circle cx="33.2" cy="94.6" r="0.8"/><circle cx="46.4" cy="38.3" r="1.4"/><circle cx="48.1" cy="64.7" r="1.0"/><circle cx="152.0" cy="41.3" r="1.0"/><circle cx="106.9" cy="153.7" r="1.4"/><circle cx="151.0" cy="69.0" r="1.0"/><circle cx="80.2" cy="153.8" r="1.6"/><circle cx="51.1" cy="54.7" r="0.8"/></g><path d="M138 46 a20 20 0 1 0 14 34 a16 16 0 1 1 -14 -34z" fill="#f2a541"/></g></g><circle cx="100" cy="100" r="72" fill="none" stroke="#5b3a6b" stroke-width="2" stroke-dasharray="2 4"/><text x="100" y="74" text-anchor="middle" font-size="12" font-style="italic" fill="#f5ecd7">No.03</text><text class="lb-name" x="100" y="112" text-anchor="middle" font-size="34" fill="#f5ecd7" letter-spacing="2">夜更</text><text x="100" y="138" text-anchor="middle" font-size="12" letter-spacing="1.5" fill="#f5ecd7">ABV 6.5%</text></svg></div>
+      <div>
+        <h2>夜更<span class="kana">よふけ</span><span class="badge">冬季限定</span></h2>
+        <p class="style it">Stout</p>
+        <p>冬の長い夜のためのスタウトです。深く焙煎した麦の香りと、ゆっくり残るコク。冷やしすぎず、少し温度が上がってからの香りも楽しめます。</p>
+        <dl class="spec"><div><dt>度数</dt><dd><span class="big">6.5<small>%</small></span></dd></div><div><dt>1杯（税込）</dt><dd><span class="big">900<small>円</small></span></dd></div><div><dt>香り／飲める時期</dt><dd>焙煎した麦、カカオ／11月〜2月</dd></div></dl>
+      </div>
+    </article>
+    <article class="spread will-spin" id="beer-d">
+      <div class="spread__label"><svg class="label " viewBox="0 0 200 200" role="img" aria-label="季節のラベル" focusable="false"><defs><clipPath id="cl-pd"><circle cx="100" cy="100" r="71"/></clipPath><path id="tp-pd" d="M100 100 m-83 0 a83 83 0 1 1 166 0 a83 83 0 1 1 -166 0"/></defs><circle cx="100" cy="100" r="98" fill="#8fae4a"/><g class="spin"><text font-size="11.5" fill="#141a33" letter-spacing="1.6" dy="4"><textPath href="#tp-pd" textLength="512" lengthAdjust="spacing">YOIYAMI BREWING · SEASONAL · No.04 · AKARIMACHI · </textPath></text></g><circle cx="100" cy="100" r="72" fill="#f5ecd7"/><g clip-path="url(#cl-pd)"><g class="spin"><g transform="translate(56 64) scale(0.75)" fill="none" stroke="#5f7d2c" stroke-width="2"><path d="M0 -26 C14 -18 16 4 0 26 C-16 4 -14 -18 0 -26z"/><path d="M-11 -10 Q0 -4 11 -10 M-13 2 Q0 9 13 2 M-9 14 Q0 20 9 14"/><path d="M0 -26 V-36"/></g><g transform="translate(146 62) scale(0.7)" fill="none" stroke="#5f7d2c" stroke-width="2"><path d="M0 -26 C14 -18 16 4 0 26 C-16 4 -14 -18 0 -26z"/><path d="M-11 -10 Q0 -4 11 -10 M-13 2 Q0 9 13 2 M-9 14 Q0 20 9 14"/><path d="M0 -26 V-36"/></g><g transform="translate(48 132) scale(0.6)" fill="none" stroke="#5f7d2c" stroke-width="2"><path d="M0 -26 C14 -18 16 4 0 26 C-16 4 -14 -18 0 -26z"/><path d="M-11 -10 Q0 -4 11 -10 M-13 2 Q0 9 13 2 M-9 14 Q0 20 9 14"/><path d="M0 -26 V-36"/></g><g transform="translate(152 134) scale(0.65)" fill="none" stroke="#5f7d2c" stroke-width="2"><path d="M0 -26 C14 -18 16 4 0 26 C-16 4 -14 -18 0 -26z"/><path d="M-11 -10 Q0 -4 11 -10 M-13 2 Q0 9 13 2 M-9 14 Q0 20 9 14"/><path d="M0 -26 V-36"/></g></g></g><circle cx="100" cy="100" r="72" fill="none" stroke="#8fae4a" stroke-width="2" stroke-dasharray="2 4"/><text x="100" y="74" text-anchor="middle" font-size="12" font-style="italic" fill="#141a33">No.04</text><text class="lb-name" x="100" y="112" text-anchor="middle" font-size="34" fill="#141a33" letter-spacing="2">季節</text><text x="100" y="138" text-anchor="middle" font-size="12" letter-spacing="1.5" fill="#141a33">LIMITED</text></svg></div>
+      <div>
+        <h2>季節の限定<span class="kana">きせつのげんてい</span></h2>
+        <p class="style it">Seasonal</p>
+        <p>季節ごとに1銘柄だけ仕込みます。名前とラベルは、最初の樽を開ける日に決めます。次は春。外の空気がやわらぐころの宵に合う、軽い一杯を考えています。</p>
+        <dl class="spec"><div><dt>度数</dt><dd>銘柄ごとに異なります</dd></div><div><dt>1杯</dt><dd><span class="big">時価</span></dd></div><div><dt>知らせ</dt><dd><a href="events.html#letters">新しい樽の知らせを受け取る</a></dd></div></dl>
+      </div>
+    </article>
+    <p class="note" style="margin-top:20px">銘柄はすべて見本の架空銘柄です。価格は税込・見本用の架空価格です。</p>
+  </div>
+</section>
+
+<section class="sec on-lantern" aria-labelledby="cal">
+  <div class="wrap">
+    <div class="ontap__head" style="margin-bottom:28px">
+      <div><p class="eyebrow">季節のカレンダー</p><h2 class="h2" id="cal">いつ、何が飲めるか。</h2></div>
+      <p>色の帯がある月に、タップルームで飲めます。季節の限定は、季節ごとに中身が変わります。</p>
+    </div>
+    <div class="cal-wrap" tabindex="0" role="region" aria-label="季節のカレンダー（横に動かせます）">
+      <table class="cal"><caption>見本の架空の予定です。仕込みの状態により変わることがあります。</caption>
+        <thead><tr><th scope="col"><span class="sr">銘柄</span></th><th scope="col">1<span class="sr">月</span></th><th scope="col">2<span class="sr">月</span></th><th scope="col">3<span class="sr">月</span></th><th scope="col">4<span class="sr">月</span></th><th scope="col">5<span class="sr">月</span></th><th scope="col">6<span class="sr">月</span></th><th scope="col">7<span class="sr">月</span></th><th scope="col">8<span class="sr">月</span></th><th scope="col">9<span class="sr">月</span></th><th scope="col">10<span class="sr">月</span></th><th scope="col">11<span class="sr">月</span></th><th scope="col">12<span class="sr">月</span></th></tr></thead>
         <tbody>
-          <tr><th scope="row">宵ノ口</th><td>5</td><td>3</td><td>2</td></tr>
-          <tr><th scope="row">灯影</th><td>3</td><td>2</td><td>4</td></tr>
-          <tr><th scope="row">夜更</th><td>4</td><td>3</td><td>5</td></tr>
+          <tr><th scope="row">宵ノ口</th><td class="on c-a"><span></span><span class="sr">飲める</span></td><td class="on c-a"><span></span><span class="sr">飲める</span></td><td class="on c-a"><span></span><span class="sr">飲める</span></td><td class="on c-a"><span></span><span class="sr">飲める</span></td><td class="on c-a"><span></span><span class="sr">飲める</span></td><td class="on c-a"><span></span><span class="sr">飲める</span></td><td class="on c-a"><span></span><span class="sr">飲める</span></td><td class="on c-a"><span></span><span class="sr">飲める</span></td><td class="on c-a"><span></span><span class="sr">飲める</span></td><td class="on c-a"><span></span><span class="sr">飲める</span></td><td class="on c-a"><span></span><span class="sr">飲める</span></td><td class="on c-a"><span></span><span class="sr">飲める</span></td></tr>
+          <tr><th scope="row">灯影</th><td class="on c-b"><span></span><span class="sr">飲める</span></td><td class="on c-b"><span></span><span class="sr">飲める</span></td><td class="on c-b"><span></span><span class="sr">飲める</span></td><td class="on c-b"><span></span><span class="sr">飲める</span></td><td class="on c-b"><span></span><span class="sr">飲める</span></td><td class="on c-b"><span></span><span class="sr">飲める</span></td><td class="on c-b"><span></span><span class="sr">飲める</span></td><td class="on c-b"><span></span><span class="sr">飲める</span></td><td class="on c-b"><span></span><span class="sr">飲める</span></td><td class="on c-b"><span></span><span class="sr">飲める</span></td><td class="on c-b"><span></span><span class="sr">飲める</span></td><td class="on c-b"><span></span><span class="sr">飲める</span></td></tr>
+          <tr><th scope="row">夜更</th><td class="on c-c"><span></span><span class="sr">飲める</span></td><td class="on c-c"><span></span><span class="sr">飲める</span></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class="on c-c"><span></span><span class="sr">飲める</span></td><td class="on c-c"><span></span><span class="sr">飲める</span></td></tr>
+          <tr><th scope="row">季節の限定</th><td class=""></td><td class=""></td><td class="on c-d"><span></span><span class="sr">飲める</span></td><td class="on c-d"><span></span><span class="sr">飲める</span></td><td class="on c-d"><span></span><span class="sr">飲める</span></td><td class="on c-d"><span></span><span class="sr">飲める</span></td><td class="on c-d"><span></span><span class="sr">飲める</span></td><td class="on c-d"><span></span><span class="sr">飲める</span></td><td class="on c-d"><span></span><span class="sr">飲める</span></td><td class="on c-d"><span></span><span class="sr">飲める</span></td><td class=""></td><td class=""></td></tr>
         </tbody>
       </table>
-      <p class="fine">数値は造り手の感じ方を5段階にした目安です（見本の設定）。</p>
     </div>
   </div>
 </section>
-
-<div class="wrap beers">
-  <article class="beer" id="yoinokuchi" aria-labelledby="b1">
-    <div class="beer__lbl"><svg class="spin" viewBox="0 0 200 200" aria-hidden="true"><use href="#label-yoinokuchi"/></svg><span class="bubbles" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div>
-    <div>
-      <p class="kicker">01 · Pale ale</p>
-      <h2 id="b1">宵ノ口<span class="ruby">よいのくち</span></h2>
-      <p style="margin-top:20px">仕事終わりの最初の一杯のために造りました。グラスを近づけると、柑橘の皮のような香り。苦味は短く切れ、次のひと口を急かしません。</p>
-      <dl class="spec">
-        <dt>度数</dt><dd class="big">ABV 5.0%</dd>
-        <dt>香り</dt><dd>柑橘の皮、白い花</dd>
-        <dt>合う料理</dt><dd>揚げたての芋、塩で食べる焼き鳥</dd>
-        <dt>価格</dt><dd><span class="mono">1杯 800円</span>（税込・見本用の架空価格）</dd>
-        <dt>飲める時期</dt><dd>通年</dd>
-      </dl>
-    </div>
-  </article>
-  <article class="beer" id="hokage" aria-labelledby="b2">
-    <div class="beer__lbl"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#label-hokage"/></svg><span class="bubbles" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div>
-    <div>
-      <p class="kicker">02 · Amber ale</p>
-      <h2 id="b2">灯影<span class="ruby">ほかげ</span></h2>
-      <p style="margin-top:20px">窓に灯りがともるころの色をしたビールです。焼いた麦の甘みと、カラメルのような香り。苦味は控えめで、食事と合わせやすい一杯です。</p>
-      <dl class="spec">
-        <dt>度数</dt><dd class="big">ABV 5.5%</dd>
-        <dt>香り</dt><dd>焼いた麦、カラメル</dd>
-        <dt>合う料理</dt><dd>きのこのソテー、甘めのたれの料理</dd>
-        <dt>価格</dt><dd><span class="mono">1杯 850円</span>（税込・見本用の架空価格）</dd>
-        <dt>飲める時期</dt><dd>通年</dd>
-      </dl>
-    </div>
-  </article>
-  <article class="beer" id="yofuke" aria-labelledby="b3">
-    <div class="beer__lbl"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#label-yofuke"/></svg><span class="bubbles" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div>
-    <div>
-      <p class="kicker">03 · Stout <span class="tag">冬季限定</span></p>
-      <h2 id="b3">夜更<span class="ruby">よふけ</span></h2>
-      <p style="margin-top:20px">冬の長い夜のためのスタウトです。深く焙煎した麦の香りと、ゆっくり残るコク。冷やしすぎず、少し温度が上がってからの香りも楽しめます。</p>
-      <dl class="spec">
-        <dt>度数</dt><dd class="big">ABV 6.5%</dd>
-        <dt>香り</dt><dd>焙煎した麦、カカオ</dd>
-        <dt>合う料理</dt><dd>煮込み料理、焼き菓子</dd>
-        <dt>価格</dt><dd><span class="mono">1杯 900円</span>（税込・見本用の架空価格）</dd>
-        <dt>飲める時期</dt><dd>11月〜2月</dd>
-      </dl>
-    </div>
-  </article>
-  <article class="beer" id="kisetsu" aria-labelledby="b4">
-    <div class="beer__lbl"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#label-kisetsu"/></svg><span class="bubbles" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div>
-    <div>
-      <p class="kicker">04 · Seasonal</p>
-      <h2 id="b4">季節の限定</h2>
-      <p style="margin-top:20px">季節ごとに1銘柄だけ仕込みます。名前とラベルは、最初の樽を開ける日に決めます。次は春。外の空気がやわらぐころの宵に合う、軽い一杯を考えています。</p>
-      <dl class="spec">
-        <dt>度数</dt><dd>銘柄ごとに異なります</dd>
-        <dt>価格</dt><dd>時価（見本）。樽を開ける日にお知らせします</dd>
-        <dt>知らせ</dt><dd><a href="events.html#signup">新しい銘柄の知らせを受け取る</a></dd>
-      </dl>
-    </div>
-  </article>
-</div>
-
-<section class="sec" id="calendar" aria-labelledby="cal-title">
-  <div class="wrap">
-    <div class="sec__head">
-      <div><p class="kicker">Calendar</p><h2 class="display" id="cal-title">いつ、何が飲めるか。</h2></div>
-      <p class="muted">色の帯がある月に、タップルームで飲めます。明るい列が今月です。季節の限定は、季節ごとに中身が変わります。</p>
-    </div>
-    <div class="cal-wrap">
-      <table class="cal">
-        <caption>見本の架空の予定です。仕込みの状態により変わることがあります。</caption>
-        <thead><tr><td></td><th scope="col">1月</th><th scope="col">2月</th><th scope="col">3月</th><th scope="col">4月</th><th scope="col">5月</th><th scope="col">6月</th><th scope="col">7月</th><th scope="col">8月</th><th scope="col">9月</th><th scope="col">10月</th><th scope="col" class="now">11月</th><th scope="col">12月</th></tr></thead>
-        <tbody>
-<tr style="--c:#f2a541"><th scope="row">宵ノ口</th><td class="on s"><span class="sr-only">飲める</span></td><td class="on"><span class="sr-only">飲める</span></td><td class="on"><span class="sr-only">飲める</span></td><td class="on"><span class="sr-only">飲める</span></td><td class="on"><span class="sr-only">飲める</span></td><td class="on"><span class="sr-only">飲める</span></td><td class="on"><span class="sr-only">飲める</span></td><td class="on"><span class="sr-only">飲める</span></td><td class="on"><span class="sr-only">飲める</span></td><td class="on"><span class="sr-only">飲める</span></td><td class="on now"><span class="sr-only">飲める</span></td><td class="on e"><span class="sr-only">飲める</span></td></tr>
-<tr style="--c:#f5ecd7"><th scope="row">灯影</th><td class="on s"><span class="sr-only">飲める</span></td><td class="on"><span class="sr-only">飲める</span></td><td class="on"><span class="sr-only">飲める</span></td><td class="on"><span class="sr-only">飲める</span></td><td class="on"><span class="sr-only">飲める</span></td><td class="on"><span class="sr-only">飲める</span></td><td class="on"><span class="sr-only">飲める</span></td><td class="on"><span class="sr-only">飲める</span></td><td class="on"><span class="sr-only">飲める</span></td><td class="on"><span class="sr-only">飲める</span></td><td class="on now"><span class="sr-only">飲める</span></td><td class="on e"><span class="sr-only">飲める</span></td></tr>
-<tr style="--c:color-mix(in srgb,var(--dusk) 45%,var(--foam))"><th scope="row">夜更</th><td class="on"><span class="sr-only">飲める</span></td><td class="on e"><span class="sr-only">飲める</span></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class="on s now"><span class="sr-only">飲める</span></td><td class="on"><span class="sr-only">飲める</span></td></tr>
-<tr style="--c:#8fae4a"><th scope="row">季節の限定</th><td class=""></td><td class=""></td><td class="on s"><span class="sr-only">飲める</span></td><td class="on"><span class="sr-only">飲める</span></td><td class="on e"><span class="sr-only">飲める</span></td><td class="on s"><span class="sr-only">飲める</span></td><td class="on"><span class="sr-only">飲める</span></td><td class="on e"><span class="sr-only">飲める</span></td><td class="on s"><span class="sr-only">飲める</span></td><td class="on e"><span class="sr-only">飲める</span></td><td class="now"></td><td class=""></td></tr>        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<section class="last" aria-labelledby="last-title">
-  <svg class="last__lamp" viewBox="0 0 40 40" aria-hidden="true"><use href="#lantern"/></svg>
-  <h2 class="display" id="last-title">どれにするかは、カウンターで。</h2>
-  <div class="acts">
-    <a class="btn btn--lantern" href="visit.html"><span class="dot" aria-hidden="true"></span>タップルームに行く（アクセス）</a>
-    <a class="btn btn--line" href="index.html#taps">今月の銘柄を見る</a>
-  </div>
-  <p class="age">20歳未満の飲酒は法律で禁止されています。お酒は適量を。</p>
-</section>
-
 </main>
+<section class="band band--right" aria-labelledby="endcta">
+  <img src="assets/img/bar-cta.webp" width="1536" height="640" alt="" loading="lazy">
+  <div class="wrap band__in">
+    <div class="band__txt">
+      <h2 class="h2" id="endcta">どれにするかは、カウンターで。</h2>
+      <div class="btns" style="margin-top:22px"><a class="btn btn--lantern" href="beers.html">今月の銘柄を見る</a><a class="btn" href="visit.html">タップルームに行く（アクセス）</a></div>
+      <p class="age"><b aria-hidden="true">20</b>20歳未満の飲酒は法律で禁止されています。お酒は適量を。</p>
+    </div>
+  </div>
+  <p class="cap">写真はAI生成のイメージに、ラベルの図を重ねています</p>
+</section>
 <footer class="site-foot">
-  <div class="site-foot__in">
-    <div>
-      <a class="brand" href="index.html"><svg viewBox="-5 0 210 68" role="img" aria-label="よいやみ醸造（架空）"><g fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M0 6 L13 26 L26 6 M13 26 V46"/><path d="M78 6 V46"/><path d="M88 6 L101 26 L114 6 M101 26 V46"/><path d="M122 46 L135 6 L148 46 M127.5 32 H142.5"/><path d="M157 46 V6 L171 30 L185 6 V46"/><path d="M196 6 V46"/></g><use href="#lantern" x="31" y="5" width="42" height="42"/><text x="100" y="65" text-anchor="middle" fill="currentColor" font-size="11.5" letter-spacing="5.2" font-family="'Hiragino Maru Gothic ProN','Zen Maru Gothic','Hiragino Sans','Noto Sans JP',sans-serif" font-weight="700">よいやみ醸造・灯町</text></svg></a>
-      <p style="margin-top:16px">灯町の古い倉庫を改装した、小さなクラフトビール醸造所（架空）。</p>
-      <p>架空県灯町 川端通り（見本上の住所）</p>
+  <div class="wrap">
+    <div class="site-foot__grid">
+      <div>
+        <a class="brand" href="index.html"><svg viewBox="0 0 401 100" role="img" aria-label="よいやみ醸造"><g transform="translate(0 4)"><defs><clipPath id="lc-f"><circle cx="40" cy="40" r="34.4"/></clipPath></defs><circle cx="40" cy="40" r="34.4" fill="#f2a541"/><g clip-path="url(#lc-f)"><rect x="0" y="43.2" width="80" height="40" fill="#5b3a6b"/><path d="M0 24.8 Q40 19.2 80 24.8 M0 36.0 Q40 31.2 80 36.0" fill="none" stroke="#141a33" stroke-width="2.4" opacity=".5"/></g><rect x="24.8" y="0" width="30.4" height="8.0" rx="2.4" fill="currentColor"/><rect x="24.8" y="72.0" width="30.4" height="8.0" rx="2.4" fill="currentColor"/></g><path transform="translate(96 2) scale(0.5)" fill="currentColor" d="M91.5 106.4 88.9 114.5Q74.8 105.8 64 100.4Q58.9 116.7 37.7 116.7Q27.1 116.7 19.7 114Q12.2 111.3 8.3 106.4Q4.4 101.6 4.4 95.2Q4.4 74.6 32.3 74.6Q36.5 74.6 41.7 75.1V39.2H65.7V50H95V70.1H65.7V79.8Q77.7 83.2 96.7 91.1Q95.4 94.4 91.5 106.4ZM41.7 91.8Q37.7 91 34.8 91Q32 91 30.6 91.8Q29.2 92.5 29.2 93.7Q29.2 94.9 30.9 95.8Q32.6 96.7 35.9 96.7Q39 96.7 40.4 95.8Q41.7 95 41.7 92.5Z M173.5 107.6Q171.2 87.6 166.6 73.2Q162 58.9 154.7 46.4L178.1 42.9Q186.3 55.5 191.3 68.6Q196.3 81.7 200.4 101.5ZM123 114.8Q118.4 114.8 114.3 112.7Q110.3 110.6 107.7 105.9Q105 101.3 104.9 94.1Q104.8 84 106.1 75.7Q107.4 67.3 110.6 53.1L112.4 45.2L139.2 46.4Q135.7 58.4 134 65.7Q132.3 73 130.8 83.7Q130.6 85.5 130.6 86Q130.6 88.1 131.6 88.1Q133 88.1 136.7 84.2Q140.3 80.3 147.7 71Q148.9 80 150.9 86.2Q153 92.5 156.4 97.7Q150.3 104.8 140.8 109.8Q131.2 114.8 123 114.8Z M280.5 49.9Q290.2 52.1 296 58Q301.8 63.9 301.8 72.6Q301.8 85.6 293.6 91.8Q285.3 98 270.6 98Q263 98 254.3 96.5L253.7 94.2Q252.2 88 250.6 83.2Q249.1 78.4 246.3 73.5Q263.7 76.5 269.4 76.5Q273.1 76.5 274.8 75.5Q276.4 74.6 276.4 72.5Q276.4 69.7 274.4 68.4Q272.4 67.2 267.5 67.2Q258.4 67.2 244.8 71.3Q250.6 95.9 258.7 114.7L233.7 118.1Q228.3 102.4 222.4 79.7L212.9 84.1L210.6 85.2Q209 77.5 207.4 72.5Q205.9 67.4 202.8 61.8L206.2 60.9Q214 58.7 216.7 58.1Q214.2 48.5 212.4 42.5L238.4 39.9Q239.1 44 240.7 52.2Q249.2 50.4 257.1 49.5L254.6 39.6L278.9 38.8Z M401.8 97.1Q397.4 94.2 393.4 92.1Q390.8 101 386.6 106.3Q382.4 111.7 375.2 117.2Q367.6 114.5 361.7 112.6Q355.8 110.7 348.3 108.9Q358.8 102.8 364.1 97.3Q369.5 91.8 371.9 83.4Q366.9 82.1 362.5 81.4Q357.7 95.4 349.5 103.7Q341.3 111.9 329.8 111.9Q319 111.9 313.1 106.3Q307.2 100.7 307.2 91.1Q307.2 83.5 312 76.8Q316.9 70.2 325.5 65.9Q334.1 61.6 345 60.9L345.3 59Q335.1 59.2 328.5 59.4Q321.8 59.7 315.7 60.4Q315.7 53.4 315.5 49.1Q315.4 44.8 314.7 40.6H368.6Q368.6 51.9 367 62.2Q370.7 62.8 374.5 63.7Q374.7 57.9 374.7 54.5Q374.7 51.5 374.5 43.9Q384.3 46.1 397.6 47.2V51.6Q397.6 62.1 397 70.4Q399.6 71.4 404.8 73.6ZM340 80.3Q336.2 81.1 333.4 82.8Q330.6 84.4 329.4 86.3Q328.3 88 328.3 89.3Q328.3 91 330.5 91Q332.9 91 335.4 88.2Q337.8 85.4 340 80.3Z M502.5 116.9Q495.5 114 488.3 108.2V113.5Q475.4 115.7 457.1 117.1Q456.4 110.7 454.4 105.4L462.7 105V103.3L456.7 104.8Q455.9 99.8 453.5 95.4V115.8H440.3V114.7H424.8V115.8H412V56.6H420.1V54.6H411.2V41H453.5V54.6H445.2V56.6H453.5V93.1Q463.9 92.8 469.7 91.2H455V83.1H463.1V81.4H455.8V74.3H463.1V72.6H455.5V64.8H463.1V63.5L457.9 63.7Q456.8 59.6 454.5 54.8Q461 54.6 467.9 53.3H455.5V42H472V39.4H489.1V42H505.6V53.3H492.8Q499.7 54.6 506.4 54.8Q504.1 59.6 502.8 63.7L497.8 63.5V64.8H505.6V72.6H497.8V74.3H505.1V81.4H497.8V83.1H505.7V91.2H498.3L505.3 95Q502.8 97.3 500.7 99.6Q503.4 100.3 507 100.3Q505.1 104.1 504.1 108Q503.2 112 502.5 116.9ZM480.3 56.9 482.2 53.3H478.4ZM435.3 54.6H430.5V56.6H435.3ZM477.5 62.9V64.8H483.6V62.9H490.5Q484.9 62.1 480.3 60.2Q475.8 62.1 470.2 62.9ZM424.8 69.3V81.7Q426.1 79.1 426.5 76.6Q426.8 74.2 426.9 69.3ZM431.7 69.3Q431.7 76.9 431.1 81.6Q430.6 86.2 428.4 89H440.3V86.9Q439.1 87.4 437.1 87.4Q435.1 87.4 434.2 86.8Q433.4 86.1 433.4 84.3L433.5 74.9Q433.5 71 433.4 69.3ZM437.5 69.3V78.4Q437.5 79 438.3 79Q439 79 439 75.8L440.3 76.5V69.3ZM483.6 72.6H477.5V74.3H483.6ZM483.6 81.4H477.5V83.1H483.6ZM424.8 89H427.9Q425.9 87.2 424.8 86.4ZM494.1 91.2H488.5Q489.6 92.7 491.1 94.2Q492.8 92.8 494.1 91.2ZM477.8 103.4 482.2 102.5Q480.2 100.3 478 97.5H477.8ZM424.8 99V101H440.3V99Z M538.7 65.2Q525 61.3 511.6 59L517.5 41.7Q532.8 45.5 542.3 48.6Q543.7 46.2 544.4 44.2Q545.1 42.3 545.7 39.2L561.6 40.2L561.3 43.6H563.6V39.3H583.8V43.6H605.3V57.1H583.8V58.9H607.8V71.3H542.1V58.9H549.5Q545.8 57.4 541.7 56ZM563.6 58.9V57.1H557.6L556.6 58.9ZM609.5 96.6Q607.2 100.8 606.4 104.8Q605.6 108.7 605.1 114.9Q587.1 115.6 574.9 115.6Q558.2 115.6 548.2 114Q538.2 112.4 530.7 108.8Q525.9 112 516.3 116.6L515.8 114.6Q514.1 107.3 512.8 102.8Q511.5 98.2 509.7 94.1Q512.2 93.5 514.4 92.5Q516.6 91.5 517.9 90.5V83.2H511.9L512 66.7H539.2V94.9Q551.5 97.6 573.6 97.6Q590.9 97.6 609.5 96.6ZM604.1 73.1V95.5H543.2V73.1ZM582.2 82.3H565.3V85.2H582.2Z"/><path transform="translate(97 80) scale(.5)" fill="currentColor" opacity=".8" d="M0.2 31.1V30.8L1 30.5Q1.6 30.3 1.9 29.9Q2.2 29.6 2.5 28.9L8.6 11.2H11.2L17.3 29.1Q17.5 29.7 17.8 30.1Q18.1 30.4 18.8 30.7L19.1 30.8V31.1H11.5V30.8L11.9 30.6Q12.6 30.4 12.7 30Q12.8 29.5 12.7 28.9L11.2 24.6H4.6L3.1 28.8Q2.9 29.5 3 29.9Q3.1 30.3 3.7 30.5L4.4 30.8V31.1ZM4.8 24H11.1L8 14.7Z M27.7 31.1V30.8L28.3 30.5Q28.9 30.3 29.1 30Q29.2 29.6 29.2 29V13.3Q29.2 12.8 29.1 12.4Q28.9 12 28.3 11.8L27.7 11.6V11.3H35.1V11.6L34.5 11.8Q34 12 33.8 12.4Q33.6 12.8 33.6 13.4V29.1Q33.6 29.7 33.8 30Q34 30.3 34.6 30.5L35.1 30.8V31.1ZM38.7 31.1V30.8L39.1 30.7Q39.7 30.5 39.8 30.1Q39.8 29.6 39.4 29.1L33.6 20.9L41.2 13.2Q41.6 12.8 41.7 12.4Q41.7 12 41.1 11.8L40.6 11.6V11.3H45V11.6L44.2 11.8Q43.5 12 43.1 12.3Q42.8 12.6 42.2 13.1L36.9 18.6L43.9 28.9Q44.4 29.6 44.8 30Q45.2 30.4 45.9 30.7L46.3 30.8V31.1Z M54.4 31.1V30.8L55.1 30.5Q55.7 30.3 56 29.9Q56.4 29.6 56.6 28.9L62.8 11.2H65.3L71.4 29.1Q71.6 29.7 71.9 30.1Q72.2 30.4 72.9 30.7L73.2 30.8V31.1H65.6V30.8L66.1 30.6Q66.7 30.4 66.8 30Q67 29.5 66.8 28.9L65.4 24.6H58.7L57.3 28.8Q57.1 29.5 57.1 29.9Q57.2 30.3 57.8 30.5L58.5 30.8V31.1ZM58.9 24H65.2L62.2 14.7Z M81.8 31.1V30.8L82.4 30.6Q83 30.4 83.2 30Q83.4 29.7 83.4 29V13.3Q83.4 12.8 83.2 12.4Q83 12.1 82.5 11.8L81.8 11.6V11.3H90.4Q93.9 11.3 95.8 12.6Q97.7 13.9 97.7 16.3Q97.7 17.6 96.7 19Q95.7 20.3 93.6 21L97.7 29.3Q98 29.8 98.4 30.1Q98.7 30.4 99.3 30.7L99.7 30.8V31.1H94.3L89.9 21.6H87.8V29Q87.8 29.6 88 30Q88.2 30.3 88.7 30.5L89.5 30.8V31.1ZM87.8 21H89.2Q91.4 21 92.4 19.9Q93.3 18.7 93.3 16.4Q93.3 14.1 92.4 13Q91.5 11.9 89.4 11.9H87.8Z M108.1 31.1V30.8L108.7 30.5Q109.3 30.3 109.5 30Q109.7 29.6 109.7 29V13.3Q109.7 12.8 109.5 12.4Q109.4 12 108.7 11.8L108.1 11.6V11.3H115.8V11.6L115.2 11.8Q114.6 12 114.4 12.4Q114.2 12.8 114.2 13.3V29Q114.2 29.6 114.4 30Q114.6 30.3 115.2 30.5L115.8 30.8V31.1Z M124.6 31.1V30.8L125.2 30.6Q126.2 30.2 126.2 28.9V13.5Q126.2 12.9 126.1 12.5Q125.9 12.2 125.4 11.9L124.6 11.6V11.3H130.4L135.9 25.8L141.2 11.3H147.1V11.6L146.6 11.8Q146 12 145.8 12.3Q145.6 12.7 145.6 13.3V29Q145.6 29.6 145.7 29.9Q145.9 30.3 146.5 30.5L147.1 30.8V31.1H139.6V30.8L140.2 30.5Q140.8 30.3 140.9 29.9Q141.1 29.6 141.1 29V22.3L141.2 13.7L134.9 31.1H133.4L126.8 13.9L126.9 21.4V28.9Q126.9 29.6 127.1 30Q127.3 30.4 127.9 30.6L128.6 30.8V31.1Z M155.5 31.1V30.8L156.2 30.5Q156.8 30.3 157.1 29.9Q157.5 29.6 157.7 28.9L163.9 11.2H166.4L172.5 29.1Q172.7 29.7 173 30.1Q173.3 30.4 174 30.7L174.3 30.8V31.1H166.7V30.8L167.2 30.6Q167.8 30.4 167.9 30Q168.1 29.5 167.9 28.9L166.5 24.6H159.8L158.4 28.8Q158.2 29.5 158.2 29.9Q158.3 30.3 158.9 30.5L159.6 30.8V31.1ZM160 24H166.3L163.3 14.7Z M193.2 31.6Q190.3 31.6 187.9 30.4Q185.6 29.2 184.2 26.9Q182.8 24.6 182.8 21.2Q182.8 18.6 183.7 16.6Q184.5 14.7 186 13.4Q187.4 12.1 189.3 11.4Q191.2 10.7 193.3 10.7Q195.1 10.7 196.5 11.1Q197.9 11.5 199.2 12.2L199.3 15.9H199L197.5 13.5Q197.2 12.9 196.9 12.5Q196.5 12 196 11.8Q195.5 11.6 195.1 11.4Q194.6 11.3 194 11.3Q192.2 11.3 190.8 12.3Q189.4 13.2 188.5 15.3Q187.7 17.5 187.7 21.2Q187.7 24.9 188.5 27Q189.3 29.2 190.7 30.1Q192.1 31 193.8 31Q194.8 31 195.4 30.9Q195.9 30.8 196.5 30.5Q197.1 30.2 197.4 29.8Q197.7 29.3 197.9 28.8L199.2 25.8H199.5L199.4 30.1Q198.2 30.8 196.6 31.2Q195.1 31.6 193.2 31.6Z M208.5 31.1V30.8L209.1 30.5Q209.7 30.3 209.9 30Q210.1 29.6 210.1 29V13.3Q210.1 12.8 209.9 12.4Q209.7 12 209.1 11.8L208.5 11.6V11.3H216.1V11.6L215.6 11.8Q215 12 214.8 12.3Q214.6 12.7 214.6 13.3V20.6H221.8V13.3Q221.8 12.7 221.6 12.3Q221.4 12 220.8 11.8L220.2 11.6V11.3H227.9V11.6L227.3 11.8Q226.7 12 226.5 12.4Q226.3 12.8 226.3 13.3V29Q226.3 29.6 226.5 30Q226.7 30.3 227.3 30.5L227.9 30.8V31.1H220.2V30.8L220.8 30.6Q221.4 30.4 221.6 30Q221.8 29.7 221.8 29.1V21.2H214.6V29.1Q214.6 30.2 215.6 30.6L216.1 30.8V31.1Z M236.7 31.1V30.8L237.3 30.5Q237.9 30.3 238.1 30Q238.3 29.6 238.3 29V13.3Q238.3 12.8 238.1 12.4Q237.9 12 237.3 11.8L236.7 11.6V11.3H244.4V11.6L243.8 11.8Q243.2 12 243 12.4Q242.8 12.8 242.8 13.3V29Q242.8 29.6 243 30Q243.2 30.3 243.8 30.5L244.4 30.8V31.1Z  M267.3 31.1V30.8L267.8 30.6Q268.4 30.3 268.6 30Q268.9 29.6 268.9 29V13.3Q268.9 12.7 268.6 12.4Q268.4 12 267.8 11.8L267.3 11.6V11.3H275.9Q279.5 11.3 281.2 12.6Q282.8 13.9 282.8 16Q282.8 17.5 281.6 18.8Q280.4 20 277.5 20.5Q280.8 20.9 282.4 22.2Q283.9 23.6 283.9 25.6Q283.9 26.5 283.5 27.5Q283.1 28.5 282 29.3Q281 30.1 279.3 30.6Q277.6 31.1 274.9 31.1ZM273.3 20.5H274.6Q276.6 20.5 277.5 19.6Q278.4 18.6 278.4 16.3Q278.4 13.9 277.6 12.9Q276.8 11.9 274.9 11.9H273.3ZM273.3 30.5H274.8Q277.1 30.5 278.1 29.3Q279.2 28.1 279.2 25.5Q279.2 23.1 278.2 22.1Q277.1 21.1 274.7 21.1H273.3Z M292.7 31.1V30.8L293.3 30.6Q293.9 30.4 294.1 30Q294.3 29.7 294.3 29V13.3Q294.3 12.8 294.1 12.4Q294 12.1 293.4 11.8L292.7 11.6V11.3H301.3Q304.8 11.3 306.7 12.6Q308.6 13.9 308.6 16.3Q308.6 17.6 307.6 19Q306.6 20.3 304.5 21L308.7 29.3Q308.9 29.8 309.3 30.1Q309.6 30.4 310.2 30.7L310.6 30.8V31.1H305.2L300.8 21.6H298.7V29Q298.7 29.6 298.9 30Q299.1 30.3 299.7 30.5L300.4 30.8V31.1ZM298.7 21H300.2Q302.3 21 303.3 19.9Q304.3 18.7 304.3 16.4Q304.3 14.1 303.4 13Q302.5 11.9 300.3 11.9H298.7Z M319.1 31.1V30.8L319.7 30.5Q320.2 30.3 320.4 30Q320.6 29.6 320.6 29V13.3Q320.6 12.8 320.5 12.4Q320.3 12.1 319.7 11.8L319.1 11.6V11.3H333.4L333.6 15.9H333.3L332 13.1Q331.7 12.5 331.4 12.2Q331.1 11.9 330.5 11.9H325.1V20.5H328.3Q328.9 20.5 329.3 20.2Q329.6 19.9 329.8 19.4L330.4 18.2H330.7V23.6H330.4L329.8 22.3Q329.6 21.8 329.2 21.5Q328.9 21.1 328.3 21.1H325.1V30.5H331.2Q331.8 30.5 332.1 30.2Q332.5 29.8 332.7 29.3L333.9 26.5H334.2L334 31.1Z M349.6 31.2 344.3 13.3Q344.1 12.6 343.9 12.3Q343.6 12 343 11.7L342.7 11.6V11.3H350.6V11.6L350 11.8Q349.3 12.1 349 12.5Q348.8 12.9 349 13.6L352.3 26L355.8 15.6L355.1 13.4Q354.9 12.8 354.7 12.5Q354.6 12.1 354.1 11.9L353.5 11.6V11.3H361V11.6L360.1 11.9Q359.5 12.1 359.4 12.6Q359.3 13 359.5 13.6L363.4 26.3L367 13.8Q367.2 13.1 367.1 12.6Q367 12 366.4 11.8L365.7 11.6V11.3H369.9V11.6L369.1 11.9Q368.5 12.1 368.3 12.5Q368 13 367.9 13.6L362.9 31.2H360.8L356.3 17.1L351.7 31.2Z M378.3 31.1V30.8L379 30.5Q379.5 30.3 379.7 30Q379.9 29.6 379.9 29V13.3Q379.9 12.8 379.8 12.4Q379.6 12.1 379 11.8L378.3 11.6V11.3H392.7L392.9 15.9H392.6L391.3 13.1Q391 12.5 390.7 12.2Q390.4 11.9 389.8 11.9H384.4V20.5H387.6Q388.2 20.5 388.5 20.2Q388.9 19.9 389.1 19.4L389.7 18.2H390V23.6H389.7L389.1 22.3Q388.8 21.8 388.5 21.5Q388.2 21.1 387.6 21.1H384.4V30.5H390.5Q391.1 30.5 391.4 30.2Q391.7 29.8 391.9 29.3L393.2 26.5H393.5L393.3 31.1Z M402.5 31.1V30.8L403.1 30.6Q403.7 30.4 403.9 30Q404.1 29.7 404.1 29V13.3Q404.1 12.8 403.9 12.4Q403.7 12.1 403.2 11.8L402.5 11.6V11.3H411.1Q414.6 11.3 416.5 12.6Q418.4 13.9 418.4 16.3Q418.4 17.6 417.4 19Q416.4 20.3 414.3 21L418.4 29.3Q418.7 29.8 419.1 30.1Q419.4 30.4 420 30.7L420.4 30.8V31.1H415L410.5 21.6H408.5V29Q408.5 29.6 408.7 30Q408.9 30.3 409.4 30.5L410.2 30.8V31.1ZM408.5 21H409.9Q412.1 21 413.1 19.9Q414 18.7 414 16.4Q414 14.1 413.1 13Q412.2 11.9 410.1 11.9H408.5Z M433.1 31.1V30.8L434 30.5Q435.1 30.2 435.1 29V23.3L430.1 13.3Q429.8 12.7 429.6 12.4Q429.4 12.1 428.9 11.8L428.4 11.6V11.3H436.4V11.6L435.9 11.8Q435.2 12.1 435.2 12.5Q435.1 13 435.4 13.7L439 21.5L442.9 13.4Q443.2 12.9 443.1 12.4Q443.1 11.9 442.5 11.7L442 11.6V11.3H445.6V11.6L445.1 11.8Q444.5 12 444.2 12.4Q444 12.8 443.7 13.3L439.6 22V29Q439.6 29.6 439.8 30Q440 30.4 440.6 30.5L441.5 30.8V31.1Z"/></svg></a>
+        <p style="margin-top:18px">灯町の古い倉庫を改装した、ちいさなクラフトビール醸造所（架空）。</p>
+        <p>架空県灯町 川端通り（見本上の住所）</p>
+      </div>
+      <div>
+        <h2>タップルーム</h2>
+        <p>金・土・日 16:00–22:00</p>
+        <p>月〜木は定休／見学は毎月第2土曜</p>
+        <p>営業日・時間は見本上の設定です。</p>
+      </div>
+      <nav aria-label="フッター">
+        <h2>ご案内</h2>
+        <ul><li><a href="beers.html">今月の銘柄と季節のカレンダー</a></li><li><a href="brewery.html">醸造所のこと</a></li><li><a href="events.html">イベントと見学</a></li><li><a href="visit.html">アクセス・瓶の購入</a></li></ul>
+      </nav>
     </div>
-    <div>
-      <p><b>タップルーム</b></p>
-      <p class="mono">金・土・日 16:00–22:00</p>
-      <p>月〜木は定休（見本上の設定）</p>
-      <p>見学は毎月第2土曜（見本上の設定）</p>
+    <div class="legal">
+      <p><strong>20歳未満の飲酒は法律で禁止されています。お酒は適量を。</strong>妊娠中・授乳期の飲酒は、胎児・乳児の発育に悪影響を与えるおそれがあります。</p>
+      <p>写真はAI生成のイメージで、実在の店舗・設備・商品ではありません。銘柄・価格・営業時間はすべて見本用の架空の設定です。</p>
     </div>
-    <ul>
-      <li><a href="index.html#taps">今月の銘柄</a></li>
-      <li><a href="beers.html">銘柄と季節のカレンダー</a></li>
-      <li><a href="brewery.html">醸造所のこと</a></li>
-      <li><a href="events.html">イベント</a></li>
-      <li><a href="visit.html">アクセス・購入</a></li>
-    </ul>
-    <p class="foot-age">20歳未満の飲酒は法律で禁止されています。お酒は適量を。妊娠中・授乳期の飲酒は、胎児・乳児の発育に悪影響を与えるおそれがあります。</p>
-    <p class="fine" style="grid-column:1/-1">写真はAI生成のイメージで、実在の店舗・設備ではありません。銘柄・価格・営業時間はすべて見本用の架空の設定です。</p>
   </div>
 </footer>
 <aside class="ca-credit" aria-labelledby="ca-credit-title">
@@ -262,6 +175,5 @@
     <button type="button" data-ca-close>閉じる</button>
   </div>
 </dialog>
-
 </body>
 </html>

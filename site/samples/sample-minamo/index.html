@@ -10,10 +10,11 @@
 <link rel="stylesheet" href="../_shared/crew-frame.css?v=20261015">
 <script defer src="../_shared/crew-frame.js?v=20261015"></script>
 <script>document.documentElement.classList.add("js")</script>
+<link rel="preload" href="fonts/minamo-hina.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/minamo.css">
 <script defer src="assets/minamo.js"></script>
 </head>
-<body>
+<body class="is-home">
 <a class="skip" href="#main">本文へ移動</a>
 <div class="ca-ribbon" role="note" aria-label="見本サイトについて">
   <a class="ca-ribbon__brand" href="../../index.html" aria-label="クルーアセント（制作）"><img src="../../assets/brand/logo-onink.webp" width="360" height="278" alt=""><span class="ca-ribbon__long">クルーアセント</span></a>
@@ -21,198 +22,170 @@
   <p class="ca-ribbon__links"><a href="../../type-modern-appeal.html">CA11<span class="ca-ribbon__long"> 今らしさ魅力型サイト</span></a><a href="design-notes.html"><span class="ca-ribbon__long">この見本の</span>設計メモ</a></p>
 </div>
 <header class="hd" data-hd>
-  <div class="wrap hd__in">
-    <a class="logo" href="index.html" aria-current="page"><svg viewBox="0 0 140 40" role="img" aria-label="ミナモ" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-<path d="M2 31V9l9 15 9-15v22M28 9v22M36 31V9l16 22V9M60 31l9-22 9 22M63.6 23h10.8M86 31V9l9 15 9-15v22"/>
-<circle cx="124" cy="20" r="11"/><circle cx="124" cy="20" r="5.5" stroke="#ff7a6b" stroke-width="1.8"/></svg><small>hair salon<br>風見坂</small></a>
+  <div class="hd__in">
+    <a class="logo" href="index.html" aria-current="page"><svg class="logo__svg" viewBox="0 0 172 44" role="img" aria-label="hair salon ミナモ"><g fill="none" stroke-width="1.2"><circle cx="21" cy="22" r="5" stroke="#ff7a6b" stroke-width="1.6"/><circle cx="21" cy="22" r="11" stroke="#2b2f33" stroke-opacity=".75"/><circle cx="21" cy="22" r="18" stroke="#2b2f33" stroke-opacity=".35"/></g><text x="46" y="27" font-family="'Minamo Cormorant', 'Cormorant Garamond', Georgia, serif" font-style="italic" font-size="27" fill="#2b2f33">Minamo</text><text x="47" y="40" font-family="'Minamo Cormorant', Georgia, serif" font-size="10.5" letter-spacing="2.6" fill="#2b2f33">HAIR SALON</text></svg></a>
     <nav class="nav" aria-label="サイト内"><a href="menu.html">メニュー・料金</a><a href="salon.html">サロンについて</a><a href="salon.html#access">アクセス</a></nav>
-    <a class="btn btn--book" href="#" data-sample-action="予約する">予約する<span class="sr-only">（見本）</span></a>
+    <a class="btn btn--book btn--sm" href="#" data-sample-action="予約する"><span>予約する</span><span class="sr-only">（見本）</span></a>
   </div>
 </header>
 <main id="main">
-
-<section class="kv" aria-labelledby="kv-t">
-  <div class="kv__lines" aria-hidden="true">
-<svg viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" fill="none" focusable="false">
-<defs><linearGradient id="gloss" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9fd3d0" stop-opacity=".35"/><stop offset=".45" stop-color="#9fd3d0" stop-opacity=".9"/><stop offset=".62" stop-color="#ffffff"/><stop offset=".8" stop-color="#9fd3d0"/><stop offset="1" stop-color="#9fd3d0" stop-opacity=".7"/></linearGradient></defs>
-<g class="kv__drift" data-drift="1"><path d="M-20 72C441 -189 953 441 1460 218" stroke="url(#gloss)" stroke-width="1.6" /><path d="M-20 95C404 -145 925 470 1460 262" stroke="url(#gloss)" stroke-width="1.1" /><path d="M-20 134C409 -110 958 544 1460 304" stroke="url(#gloss)" stroke-width="1.1" /><path d="M-20 167C461 -78 972 536 1460 326" stroke="url(#gloss)" stroke-width="1.6" /><path d="M-20 187C421 -22 931 570 1460 352" stroke="url(#gloss)" stroke-width="1.1" /><path d="M-20 229C435 -5 924 593 1460 393" stroke="url(#gloss)" stroke-width="1.1" /><path d="M-20 259C421 52 948 628 1460 428" stroke="url(#gloss)" stroke-width="1.6" /><path d="M-20 292C417 90 952 689 1460 469" stroke="url(#gloss)" stroke-width="1.1" /><path d="M-20 320C461 105 945 704 1460 491" stroke="url(#gloss)" stroke-width="1.1" /><path d="M-20 336C404 149 966 732 1460 531" stroke="url(#gloss)" stroke-width="1.6" /><path d="M-20 384C444 198 955 753 1460 559" stroke="url(#gloss)" stroke-width="1.1" /><path d="M-20 413C430 236 924 811 1460 611" stroke="url(#gloss)" stroke-width="1.1" /><path d="M-20 438C451 251 944 841 1460 646" stroke="url(#gloss)" stroke-width="1.6" /><path d="M-20 453C412 265 924 861 1460 664" stroke="url(#gloss)" stroke-width="1.1" /><path d="M-20 485C425 333 925 873 1460 692" stroke="url(#gloss)" stroke-width="1.1" /><g stroke="#2b2f33" stroke-opacity=".28" stroke-width=".9"><path d="M-20 95C404 -145 925 470 1460 262" /><path d="M-20 229C435 -5 924 593 1460 393" /><path d="M-20 336C404 149 966 732 1460 531" /><path d="M-20 453C412 265 924 861 1460 664" /></g></g>
-</svg>
-<svg class="kv__shine" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" fill="none" focusable="false"><g class="kv__drift" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round"><path d="M-20 72C441 -189 953 441 1460 218" /><path d="M-20 95C404 -145 925 470 1460 262" /><path d="M-20 134C409 -110 958 544 1460 304" /><path d="M-20 167C461 -78 972 536 1460 326" /><path d="M-20 187C421 -22 931 570 1460 352" /><path d="M-20 229C435 -5 924 593 1460 393" /><path d="M-20 259C421 52 948 628 1460 428" /><path d="M-20 292C417 90 952 689 1460 469" /><path d="M-20 320C461 105 945 704 1460 491" /><path d="M-20 336C404 149 966 732 1460 531" /><path d="M-20 384C444 198 955 753 1460 559" /><path d="M-20 413C430 236 924 811 1460 611" /><path d="M-20 438C451 251 944 841 1460 646" /><path d="M-20 453C412 265 924 861 1460 664" /><path d="M-20 485C425 333 925 873 1460 692" /></g></svg>
-</div>
-  <div class="wrap kv__in">
-    <div>
-      <p class="eyebrow"><svg class="" viewBox="0 0 24 24" fill="none" stroke-width="1" aria-hidden="true" focusable="false"><circle cx="12.0" cy="12.0" r="4.4" stroke="#ff7a6b" stroke-opacity="1.00"/><circle cx="12.0" cy="12.0" r="7.7" stroke="#2b2f33" stroke-opacity="0.65"/><circle cx="12.0" cy="12.0" r="11.0" stroke="#2b2f33" stroke-opacity="0.30"/></svg>hair salon minamo ／ 風見坂の美容室</p>
-      <h1 id="kv-t" class="sheen-text"><span>乾かすだけで、</span><span>水面のツヤ。</span></h1>
-      <p class="kv__lead">風見坂駅から徒歩4分、3席だけの美容室です（架空）。仕上がりと所要時間を先にお伝えしてから始めます。</p>
-      <dl class="kv__facts">
-        <div><dt>カット</dt><dd><span class="num">約60分</span>・<span class="num">5,500円</span></dd></div>
-        <div><dt>はじめての方</dt><dd>相談 +15分・無料</dd></div>
-        <div><dt>キャンセル</dt><dd>前日19時までに電話</dd></div>
-      </dl>
-      <div class="kv__act">
-        <a class="btn btn--book" href="#" data-sample-action="予約する">予約する（見本）</a>
-        <a class="textlink" href="menu.html">メニューと料金を見る</a>
-      </div>
+<section class="cover" aria-labelledby="cover-t">
+  <div class="cover__plane" aria-hidden="true"><svg class="lines" viewBox="0 0 860 700" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true" focusable="false"><defs><linearGradient id="gl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9fd3d0" stop-opacity=".25"/><stop offset=".5" stop-color="#9fd3d0"/><stop offset=".62" stop-color="#ffffff"/><stop offset=".78" stop-color="#9fd3d0"/><stop offset="1" stop-color="#9fd3d0" stop-opacity=".5"/></linearGradient></defs><g class="drift" stroke="url(#gl)"><path d="M-40 40C220 -220 520 340 900 130" stroke-width="1.6"/><path d="M-40 74C226 -178 516 374 900 161" stroke-width="1"/><path d="M-40 108C232 -136 512 408 900 192" stroke-width="1"/><path d="M-40 142C238 -94 508 442 900 223" stroke-width="1.6"/><path d="M-40 176C244 -52 504 476 900 254" stroke-width="1"/><path d="M-40 210C250 -10 500 510 900 285" stroke-width="1"/><path d="M-40 244C256 32 496 544 900 316" stroke-width="1.6"/><path d="M-40 278C262 74 492 578 900 347" stroke-width="1"/><path d="M-40 312C268 116 488 612 900 378" stroke-width="1"/><path d="M-40 346C274 158 484 646 900 409" stroke-width="1.6"/><path d="M-40 380C280 200 480 680 900 440" stroke-width="1"/><path d="M-40 414C286 242 476 714 900 471" stroke-width="1"/><path d="M-40 448C292 284 472 748 900 502" stroke-width="1.6"/><path d="M-40 482C298 326 468 782 900 533" stroke-width="1"/><path d="M-40 516C304 368 464 816 900 564" stroke-width="1"/><path d="M-40 550C310 410 460 850 900 595" stroke-width="1.6"/></g><g class="drift" stroke="#2b2f33" stroke-opacity=".16" stroke-width=".8"><path d="M-40 74C226 -178 516 374 900 161"/><path d="M-40 210C250 -10 500 510 900 285"/><path d="M-40 346C274 158 484 646 900 409"/><path d="M-40 482C298 326 468 782 900 533"/></g></svg></div>
+  <div class="cover__text">
+    <p class="cover__mast" aria-hidden="true">Minamo</p>
+    <p class="cover__kicker">風見坂の美容室<span>3席・駅から徒歩4分</span></p>
+    <h1 id="cover-t" class="cover__h sheen"><span>乾かすだけで、</span><span>水面のツヤ。</span></h1>
+    <p class="cover__lead">毛先の向きをそろえて切ると、家で乾かすだけで光がまとまります。はじめての方には、仕上がりと所要時間を先にお伝えしてから始めます（架空のサロンです）。</p>
+    <dl class="cover__facts">
+      <div><dt>カット</dt><dd><span class="en-num">60</span>分・<span class="en-num">5,500</span>円</dd></div>
+      <div><dt>はじめての方</dt><dd>相談<span class="en-num">15</span>分・無料</dd></div>
+      <div><dt>キャンセル</dt><dd>前日<span class="en-num">19</span>時まで</dd></div>
+    </dl>
+    <p class="cover__fine">料金は税込・見本用の架空価格です。</p>
+    <div class="acts">
+      <a class="btn btn--book" href="#" data-sample-action="予約する"><span>予約する（見本）</span></a>
+      <a class="tlink" href="menu.html">メニューと料金を見る</a>
     </div>
-    <figure class="mirror">
-      <div class="mirror__img"><img src="assets/img/space-mirror.webp" width="760" height="1018" alt="明るい店内。窓からの光の中に、コーラル色の椅子と丸い鏡が並ぶ" fetchpriority="high"></div>
-      <svg class="mirror__rings" viewBox="0 0 180 180" fill="none" stroke-width="1" aria-hidden="true" focusable="false"><circle cx="90.0" cy="90.0" r="33.6" stroke="#ff7a6b" stroke-opacity="1.00"/><circle cx="90.0" cy="90.0" r="52.1" stroke="#2b2f33" stroke-opacity="0.77"/><circle cx="90.0" cy="90.0" r="70.5" stroke="#2b2f33" stroke-opacity="0.53"/><circle cx="90.0" cy="90.0" r="89.0" stroke="#2b2f33" stroke-opacity="0.30"/></svg>
-      <figcaption>店内のイメージ（AI生成の画像です）</figcaption>
-    </figure>
+  </div>
+  <figure class="cover__photo">
+    <div class="cover__main gloss"><img src="assets/img/hero-hair.webp" width="680" height="850" alt="窓の光が入る明るい店内で、肩までの髪にツヤが流れる後ろ姿" fetchpriority="high"></div>
+    <div class="cover__sub"><img src="assets/img/hair-strands.webp" width="520" height="520" alt="水面の光の上を流れる髪の束を描いたイラスト"></div>
+    <figcaption class="vcap">写真・イラストはAI生成のイメージです</figcaption>
+  </figure>
+</section>
+
+<section class="first" aria-labelledby="first-t">
+  <figure class="first__photo"><img src="assets/img/counsel.webp" width="640" height="800" loading="lazy" alt="テーブルの上に並べた髪の色見本を、指で示しながら相談している手元"><figcaption class="vcap">イメージ（AI生成）</figcaption></figure>
+  <div class="first__body">
+    <div class="hgroup"><p class="en" aria-hidden="true">First visit</p><h2 id="first-t">はじめての日も、<br>仕上がりと時間を先に。</h2></div>
+    <p class="first__lead">カットなら、はじめての日は合計<b>約75分</b>。最初の15分で仕上がりと終わりの時間を決めてから、はさみを入れます。</p>
+    <div class="timeline">
+      <div class="timeline__bar" role="img" aria-label="カットの場合の時間配分。カウンセリング15分、カットとシャンプー約45分、仕上げと乾かし方のご案内約15分。">
+        <span class="s1">相談</span><span class="s2">カット・シャンプー</span><span class="s3">仕上げ</span>
+      </div>
+      <div class="timeline__ticks" aria-hidden="true"><span>0:00</span><span>0:15</span><span>1:00</span><span>1:15</span></div>
+    </div>
+    <ol class="steps">
+      <li><span class="steps__t">予約</span><div><h3>メニューを選ぶ</h3><p>終わりの時間まで先に出ます。迷ったら「カット」だけでも大丈夫です。</p></div></li>
+      <li><span class="steps__t">0:00</span><div><h3>カウンセリング 15分</h3><p>朝の乾かし方をうかがい、仕上がり・時間・料金を決めます。</p></div></li>
+      <li><span class="steps__t">1:00</span><div><h3>仕上げと乾かし方</h3><p>家で再現できるよう、ドライヤーの向きだけ短くお伝えします。</p></div></li>
+    </ol>
   </div>
 </section>
 
-<section class="sec" aria-labelledby="first-t">
-  <div class="wrap split">
-    <div class="split__side">
-      <p class="eyebrow"><svg class="" viewBox="0 0 24 24" fill="none" stroke-width="1" aria-hidden="true" focusable="false"><circle cx="12.0" cy="12.0" r="4.4" stroke="#ff7a6b" stroke-opacity="1.00"/><circle cx="12.0" cy="12.0" r="7.7" stroke="#2b2f33" stroke-opacity="0.65"/><circle cx="12.0" cy="12.0" r="11.0" stroke="#2b2f33" stroke-opacity="0.30"/></svg>first visit</p>
-      <h2 class="h-sec" id="first-t"><span class="ln">はじめての日も、</span><span class="ln">仕上がりと時間を先に。</span></h2>
-      <p class="lede">カットなら、はじめての日は合計約75分。終わりの時間が先に分かります。</p>
-      <figure class="side-fig"><img src="assets/img/counsel.webp" width="800" height="600" loading="lazy" alt="カルテと吹き出し、仕上がりのイメージ図を並べたイラスト。相談してから決める流れを表す"><figcaption class="cap">イラストはAI生成のイメージです。</figcaption></figure>
-    </div>
-    <div class="day">
-      <div class="day__bar" role="img" aria-label="カットの場合の時間配分。カウンセリング15分、カットとシャンプー約45分、仕上げと乾かし方のご案内約15分。">
-        <span>相談<b> 15分</b></span><span>カット・シャンプー 約45分</span><span>仕上げ<b> 15分</b></span>
-      </div>
-      <div class="day__ticks num" aria-hidden="true"><span>0:00</span><span>0:15</span><span><span>1:00</span><span>1:15</span></span></div>
-      <ol class="day__rows">
-        <li><span class="t num">来店まで</span><h3>予約する</h3><p>メニューを選ぶと、時間と料金が先に出ます。迷ったら「カット」だけでも。</p></li>
-        <li><span class="t num">0:00–0:15</span><h3>カウンセリング</h3><p>朝の乾かし方をうかがい、仕上がり・時間・料金を決めてから始めます。</p></li>
-        <li><span class="t num">1:00–1:15</span><h3>仕上げと乾かし方</h3><p>家で再現できる乾かし方を、ドライヤーの向きだけ短くお伝えします。</p></li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-<section class="sec sec--mist" aria-labelledby="menu-t">
-  <div class="wrap split">
-    <div class="split__side">
-      <p class="eyebrow"><svg class="" viewBox="0 0 24 24" fill="none" stroke-width="1" aria-hidden="true" focusable="false"><circle cx="12.0" cy="12.0" r="4.4" stroke="#ff7a6b" stroke-opacity="1.00"/><circle cx="12.0" cy="12.0" r="7.7" stroke="#2b2f33" stroke-opacity="0.65"/><circle cx="12.0" cy="12.0" r="11.0" stroke="#2b2f33" stroke-opacity="0.30"/></svg>menu</p>
-      <h2 class="h-sec" id="menu-t"><span class="ln">まず見てほしい、</span><span class="ln">3つのメニュー</span></h2>
-      <p class="lede">線の長さ＝所要時間。料金は税込（見本用の架空価格）。</p>
-      <figure class="side-fig"><img src="assets/img/tools.webp" width="1200" height="684" loading="lazy" alt="水色のタオルの上に置かれた、くしとはさみ"><figcaption class="cap">道具のイメージ（AI生成）</figcaption></figure>
-    </div>
-    <div>
-      <ul class="picks">
-        <li><h3>カット<span class="inc">シャンプー・ブロー込み</span></h3><span class="dur"><span class="dur__line" style="--min:60" aria-hidden="true"></span><span class="num">約60分</span></span><p class="price num">5,500<small>円</small></p></li>
-        <li><h3>カット＋カラー<span class="inc">色の相談・ブロー込み</span></h3><span class="dur"><span class="dur__line" style="--min:120" aria-hidden="true"></span><span class="num">約120分</span></span><p class="price num">11,000<small>円〜</small></p></li>
-        <li><h3>ツヤ髪トリートメント<span class="inc">単品でも、足しても</span></h3><span class="dur"><span class="dur__line" style="--min:30" aria-hidden="true"></span><span class="num">約30分</span></span><p class="price num">4,400<small>円</small></p></li>
+<section class="menu" aria-labelledby="menu-t">
+  <div class="menu__in">
+    <div class="menu__body">
+      <div class="hgroup"><p class="en" aria-hidden="true">Menu</p><h2 id="menu-t">まず見てほしい、3つのメニュー。</h2></div>
+      <ul class="plist">
+        <li><div class="plist__name"><h3>カット</h3><span>シャンプー・ブロー込み</span></div><span class="plist__dur"><i style="--m:60" aria-hidden="true"></i>約60分</span><p class="plist__price"><span class="en-num">5,500</span>円</p></li>
+        <li><div class="plist__name"><h3>カット＋カラー</h3><span>色の相談・ブロー込み</span></div><span class="plist__dur"><i style="--m:120" aria-hidden="true"></i>約120分</span><p class="plist__price"><span class="en-num">11,000</span>円〜</p></li>
+        <li><div class="plist__name"><h3>ツヤ髪トリートメント</h3><span>単品でも、足しても</span></div><span class="plist__dur"><i style="--m:30" aria-hidden="true"></i>約30分</span><p class="plist__price"><span class="en-num">4,400</span>円</p></li>
       </ul>
-      <div class="after-act">
-        <a class="btn btn--book" href="#" data-sample-action="予約する">予約する（見本）</a>
-        <a class="textlink" href="menu.html">全メニューと料金</a>
+      <p class="note">線の長さは所要時間。料金は税込・見本用の架空価格です。</p>
+      <div class="acts">
+        <a class="btn btn--book" href="#" data-sample-action="予約する"><span>予約する（見本）</span></a>
+        <a class="tlink" href="menu.html">全メニューと料金</a>
       </div>
     </div>
+    <figure class="menu__photo"><img src="assets/img/cut.webp" width="600" height="800" loading="lazy" alt="くしで髪をとり、はさみで毛先を整えている手元"><figcaption class="vcap">イメージ（AI生成）</figcaption></figure>
   </div>
 </section>
 
-<section class="sec" aria-labelledby="idea-t">
-  <div class="wrap idea">
-    <figure>
-      <img src="assets/img/ripple.webp" width="1200" height="900" loading="lazy" alt="水面に一本の髪が触れ、同心円の波紋が広がるイラスト">
-      <figcaption>イラストはAI生成のイメージです。</figcaption>
-    </figure>
-    <div>
-      <p class="eyebrow"><svg class="" viewBox="0 0 24 24" fill="none" stroke-width="1" aria-hidden="true" focusable="false"><circle cx="12.0" cy="12.0" r="4.4" stroke="#ff7a6b" stroke-opacity="1.00"/><circle cx="12.0" cy="12.0" r="7.7" stroke="#2b2f33" stroke-opacity="0.65"/><circle cx="12.0" cy="12.0" r="11.0" stroke="#2b2f33" stroke-opacity="0.30"/></svg>our way</p>
-      <h2 class="h-sec" id="idea-t"><span class="ln">まとまる髪は、</span><span class="ln">毎朝の5分をくれる。</span></h2>
-      <p>ツヤは、毛先の向きがそろうと生まれる光。サロンを出た翌朝、家で乾かしてもまとまる切り方を考えます。</p>
-      <ul class="idea__pts">
-        <li><b>乾かす向きまで決めて切る</b>生えぐせを見て、ドライヤーの方向が一つに決まる形に。</li>
-        <li><b>時間のかかる提案はしない</b>朝に使える時間の中で、続けられることだけ。</li>
-      </ul>
-    </div>
+<section class="idea" aria-labelledby="idea-t">
+  <figure class="idea__photo"><img src="assets/img/dry.webp" width="1000" height="667" loading="lazy" alt="ドライヤーとブラシで、肩までの髪を根元から乾かしている様子"></figure>
+  <div class="idea__body">
+    <div class="hgroup"><p class="en" aria-hidden="true">Our way</p><h2 id="idea-t">まとまる髪は、<br>毎朝の5分をくれる。</h2></div>
+    <p>ツヤは、毛先の向きがそろったときに生まれる光です。サロンを出た翌朝、家で乾かしてもまとまる切り方を考えます。</p>
+    <ul class="idea__pts">
+      <li><svg class="ring" viewBox="0 0 24 24" fill="none" stroke-width="1" aria-hidden="true" focusable="false"><circle cx="12.0" cy="12.0" r="4.0" stroke="#ff7a6b" stroke-opacity="1.00"/><circle cx="12.0" cy="12.0" r="7.5" stroke="#2b2f33" stroke-opacity="0.65"/><circle cx="12.0" cy="12.0" r="11.0" stroke="#2b2f33" stroke-opacity="0.30"/></svg><div><b>乾かす向きまで決めて切る</b>生えぐせを見て、ドライヤーの方向が一つに決まる形にします。</div></li>
+      <li><svg class="ring" viewBox="0 0 24 24" fill="none" stroke-width="1" aria-hidden="true" focusable="false"><circle cx="12.0" cy="12.0" r="4.0" stroke="#ff7a6b" stroke-opacity="1.00"/><circle cx="12.0" cy="12.0" r="7.5" stroke="#2b2f33" stroke-opacity="0.65"/><circle cx="12.0" cy="12.0" r="11.0" stroke="#2b2f33" stroke-opacity="0.30"/></svg><div><b>時間のかかる提案はしない</b>朝に使える時間の中で、続けられることだけをお伝えします。</div></li>
+    </ul>
+    <p class="idea__cap">写真はAI生成のイメージです。</p>
   </div>
 </section>
 
-<section class="sec sec--mist" aria-labelledby="room-t">
-  <div class="wrap room">
-    <figure class="room__fig">
-      <img class="room__img" src="assets/img/room.webp" width="1200" height="720" loading="lazy" alt="窓際に3つの椅子と丸い鏡が並ぶ、明るい店内のイメージ">
-      <figcaption class="cap">写真はAI生成のイメージです。</figcaption>
-    </figure>
-    <div>
-      <p class="eyebrow"><svg class="" viewBox="0 0 24 24" fill="none" stroke-width="1" aria-hidden="true" focusable="false"><circle cx="12.0" cy="12.0" r="4.4" stroke="#ff7a6b" stroke-opacity="1.00"/><circle cx="12.0" cy="12.0" r="7.7" stroke="#2b2f33" stroke-opacity="0.65"/><circle cx="12.0" cy="12.0" r="11.0" stroke="#2b2f33" stroke-opacity="0.30"/></svg>the room</p>
-      <h2 class="h-sec" id="room-t">3席だけの、明るい部屋</h2>
-      <dl class="room__facts">
-        <div><dt>席</dt><dd>3席・すべて窓側</dd></div>
-        <div><dt>個室</dt><dd>なし（席の間を広く）</dd></div>
-        <div><dt>お子さま連れ</dt><dd>ベビーカーのまま入店可</dd></div>
-      </dl>
-      <p class="fine">席数・設備は見本上の設定です。</p>
-    </div>
+<section class="room" aria-labelledby="room-t">
+  <div class="room__band"><img src="assets/img/room.webp" width="1440" height="600" loading="lazy" alt="窓際に、コーラル色の椅子と丸い鏡が並ぶ明るい店内"></div>
+  <div class="room__panel">
+    <div class="hgroup"><p class="en" aria-hidden="true">The room</p><h2 id="room-t">3席だけの、明るい部屋。</h2></div>
+    <dl class="room__facts">
+      <div><dt>席</dt><dd>3席。すべて窓側で、色を自然光で確かめられます</dd></div>
+      <div><dt>個室</dt><dd>なし。席の間を広く取っています</dd></div>
+      <div><dt>お子さま連れ</dt><dd>段差のない入口。ベビーカーのまま入れます</dd></div>
+    </dl>
+    <p class="note">席数・設備は見本上の設定です。写真はAI生成のイメージで、実在の店舗ではありません。</p>
   </div>
 </section>
 
-<section class="sec" aria-labelledby="access-t">
-  <div class="wrap info">
-    <div>
-      <p class="eyebrow"><svg class="" viewBox="0 0 24 24" fill="none" stroke-width="1" aria-hidden="true" focusable="false"><circle cx="12.0" cy="12.0" r="4.4" stroke="#ff7a6b" stroke-opacity="1.00"/><circle cx="12.0" cy="12.0" r="7.7" stroke="#2b2f33" stroke-opacity="0.65"/><circle cx="12.0" cy="12.0" r="11.0" stroke="#2b2f33" stroke-opacity="0.30"/></svg>hours &amp; access</p>
-      <h2 class="h-sec" id="access-t">駅から4分、住宅街の角に</h2>
-      <table class="hours">
-        <tbody>
-          <tr><th scope="row">営業時間</th><td><span class="num">10:00–19:00</span>（最終受付 <span class="num">17:30</span>）</td></tr>
-          <tr><th scope="row">定休日</th><td>火曜・第3水曜</td></tr>
-          <tr><th scope="row">場所</th><td>架空県風見坂 1-4-7・風見坂駅 南口から徒歩4分</td></tr>
-          <tr><th scope="row">お支払い</th><td>現金・クレジットカード</td></tr>
-        </tbody>
-      </table>
-      <p class="fine">営業時間・住所はすべて見本上の設定です。</p>
-      <a class="textlink" href="salon.html#access">道順とよくある質問</a>
-    </div>
-    <div class="map"><svg viewBox="0 0 560 380" role="img" aria-labelledby="map-t map-d">
+<section class="access" aria-labelledby="access-t">
+  <div class="access__body">
+    <div class="hgroup"><p class="en" aria-hidden="true">Hours &amp; Access</p><h2 id="access-t">駅から4分、住宅街の角に。</h2></div>
+    <dl class="hours">
+      <div><dt>営業時間</dt><dd><span class="en-num">10:00 – 19:00</span>（最終受付 <span class="en-num">17:30</span>）</dd></div>
+      <div><dt>定休日</dt><dd>火曜・第3水曜</dd></div>
+      <div><dt>場所</dt><dd>架空県風見坂 1-4-7<br>風見坂駅 南口から徒歩4分</dd></div>
+      <div><dt>お支払い</dt><dd>現金・クレジットカード</dd></div>
+    </dl>
+    <p class="note">営業時間・住所は見本上の設定です。</p>
+    <a class="tlink" href="salon.html#access">道順とよくある質問</a>
+  </div>
+  <div class="access__map">
+    <svg class="map" viewBox="0 0 640 400" role="img" aria-labelledby="map-t map-d">
 <title id="map-t">風見坂駅からサロンまでの略図（架空）</title>
 <desc id="map-d">風見坂駅の南口を出て、桜並木の通りを南へ進み、ポストのある角を右に曲がって2軒目。徒歩約4分。</desc>
-<rect width="560" height="380" fill="#fbfaf7"/>
-<path d="M0 300C140 280 220 340 360 318S520 290 560 300" stroke="#9fd3d0" stroke-width="22" fill="none" opacity=".55"/>
-<g stroke="#c9dcdb" stroke-width="14" fill="none" stroke-linecap="round"><path d="M40 92H520"/><path d="M196 92V360"/><path d="M196 236H470"/></g>
-<g stroke="#2b2f33" stroke-width="1" fill="none"><path d="M40 92H520" stroke-dasharray="2 6"/></g>
-<rect x="132" y="62" width="128" height="34" rx="17" fill="#2b2f33"/>
-<text x="196" y="85" text-anchor="middle" font-size="15" fill="#fbfaf7" font-family="Hiragino Sans, Yu Gothic, sans-serif">風見坂駅 南口</text>
-<path d="M196 104V228Q196 236 204 236H372" stroke="#ff7a6b" stroke-width="2.4" fill="none" stroke-dasharray="1 7" stroke-linecap="round"/>
-<g fill="#9fd3d0"><circle cx="182" cy="126" r="5"/><circle cx="182" cy="148" r="5"/><circle cx="182" cy="170" r="5"/><circle cx="182" cy="192" r="5"/><circle cx="182" cy="214" r="5"/></g>
-<text x="214" y="164" font-size="14" fill="#2b2f33" font-family="Hiragino Sans, Yu Gothic, sans-serif">桜並木の通り</text>
-<circle cx="210" cy="250" r="6" fill="#2b2f33"/><text x="222" y="270" font-size="13" fill="#2b2f33" font-family="Hiragino Sans, Yu Gothic, sans-serif">ポストの角を右へ</text>
-<g fill="none" stroke="#2b2f33"><circle cx="392" cy="236" r="10" stroke="#ff7a6b" stroke-width="2"/><circle cx="392" cy="236" r="20" stroke-opacity=".6"/><circle cx="392" cy="236" r="32" stroke-opacity=".3"/></g>
-<text x="392" y="196" text-anchor="middle" font-size="16" fill="#2b2f33" font-family="Hiragino Mincho ProN, Yu Mincho, serif">ミナモ</text>
-<text x="24" y="360" font-size="13" fill="#4d5459" font-family="Hiragino Sans, Yu Gothic, sans-serif">略図・縮尺なし（架空の地図）</text>
-</svg></div>
+<rect width="640" height="400" fill="#dfeeee"/>
+<path d="M0 330C150 300 250 372 400 344S580 312 640 326V400H0Z" fill="#9fd3d0" opacity=".45"/>
+<g stroke="#fbfaf7" stroke-width="18" fill="none" stroke-linecap="round"><path d="M30 92H610"/><path d="M210 92V380"/><path d="M210 246H560"/><path d="M440 92V246"/></g>
+<path d="M30 92H610" stroke="#2b2f33" stroke-width="1" stroke-dasharray="2 7" fill="none"/>
+<rect x="140" y="58" width="140" height="36" fill="#2b2f33"/>
+<text x="210" y="82" text-anchor="middle" font-size="15" fill="#fbfaf7" font-family="Hiragino Sans, Yu Gothic, sans-serif">風見坂駅 南口</text>
+<path d="M210 106V236Q210 246 220 246H392" stroke="#ff7a6b" stroke-width="2.6" fill="none" stroke-dasharray="1 8" stroke-linecap="round"/>
+<g fill="#2b2f33" fill-opacity=".22"><circle cx="190" cy="128" r="6"/><circle cx="190" cy="152" r="6"/><circle cx="190" cy="176" r="6"/><circle cx="190" cy="200" r="6"/><circle cx="190" cy="224" r="6"/></g>
+<text x="230" y="170" font-size="14" fill="#2b2f33" font-family="Hiragino Sans, Yu Gothic, sans-serif">桜並木の通り</text>
+<circle cx="224" cy="262" r="6" fill="#ff7a6b"/><text x="238" y="284" font-size="14" fill="#2b2f33" font-family="Hiragino Sans, Yu Gothic, sans-serif">ポストの角を右へ</text>
+<g fill="none" stroke="#2b2f33"><circle cx="414" cy="246" r="9" stroke="#ff7a6b" stroke-width="2.2"/><circle cx="414" cy="246" r="19" stroke-opacity=".6"/><circle cx="414" cy="246" r="31" stroke-opacity=".3"/><circle cx="414" cy="246" r="45" stroke-opacity=".15"/></g>
+<text class="fd" x="414" y="194" text-anchor="middle" font-size="22" fill="#2b2f33" font-family="'Minamo Hina', 'Hiragino Mincho ProN', serif">ミナモ</text>
+<text x="24" y="384" font-size="13" fill="#2b2f33" font-family="Hiragino Sans, Yu Gothic, sans-serif">略図・縮尺なし（架空の地図）</text>
+</svg>
+    <figure class="access__door"><img src="assets/img/door.webp" width="560" height="700" loading="lazy" alt="植栽に囲まれた、ガラス扉の入口"><figcaption>入口のイメージ（AI生成）</figcaption></figure>
   </div>
 </section>
 
 <section class="book" aria-labelledby="book-t">
-  <svg class="book__rings" viewBox="0 0 1000 1000" fill="none" stroke-width="1" aria-hidden="true" focusable="false"><circle cx="500.0" cy="500.0" r="147.6" stroke="#ff7a6b" stroke-opacity="1.00"/><circle cx="500.0" cy="500.0" r="206.1" stroke="#2b2f33" stroke-opacity="0.88"/><circle cx="500.0" cy="500.0" r="264.7" stroke="#2b2f33" stroke-opacity="0.77"/><circle cx="500.0" cy="500.0" r="323.3" stroke="#2b2f33" stroke-opacity="0.65"/><circle cx="500.0" cy="500.0" r="381.9" stroke="#2b2f33" stroke-opacity="0.53"/><circle cx="500.0" cy="500.0" r="440.4" stroke="#2b2f33" stroke-opacity="0.42"/><circle cx="500.0" cy="500.0" r="499.0" stroke="#2b2f33" stroke-opacity="0.30"/></svg>
-  <div class="wrap book__in">
-    <h2 id="book-t">予約は、空いている時間を選ぶだけ。</h2>
+  <img class="book__bg" src="assets/img/waves.webp" width="1440" height="600" loading="lazy" alt="">
+  <div class="book__panel">
+    <svg class="rings" viewBox="0 0 400 400" fill="none" stroke-width="1" aria-hidden="true" focusable="false"><circle cx="200.0" cy="200.0" r="40.0" stroke="#ff7a6b" stroke-opacity="1.00"/><circle cx="200.0" cy="200.0" r="71.8" stroke="#2b2f33" stroke-opacity="0.86"/><circle cx="200.0" cy="200.0" r="103.6" stroke="#2b2f33" stroke-opacity="0.72"/><circle cx="200.0" cy="200.0" r="135.4" stroke="#2b2f33" stroke-opacity="0.58"/><circle cx="200.0" cy="200.0" r="167.2" stroke="#2b2f33" stroke-opacity="0.44"/><circle cx="200.0" cy="200.0" r="199.0" stroke="#2b2f33" stroke-opacity="0.30"/></svg>
+    <h2 id="book-t">予約は、空いている時間を<br>選ぶだけ。</h2>
     <p>メニューを選ぶと、終わりの時間まで表示されます。</p>
-    <a class="btn btn--book" href="#" data-sample-action="予約する">予約する（見本）</a>
-    <ul>
-      <li>はじめての方は、カウンセリングに15分（無料）</li>
-      <li>所要時間は、予約の画面でメニューごとに表示</li>
+    <a class="btn btn--book" href="#" data-sample-action="予約する"><span>予約する（見本）</span></a>
+    <ul class="book__assure">
+      <li>はじめての方は、カウンセリング15分（無料）</li>
+      <li>所要時間は、メニューごとに表示</li>
       <li>キャンセル・変更は前日19時までにお電話で</li>
     </ul>
-    <p class="fine" style="margin:18px auto 0">いずれも見本上の設定です。実際の制作では、事業者が使う予約サービスへつなぎます。</p>
+    <p class="note">いずれも見本上の設定です。実際の制作では、事業者が使う予約サービスへつなぎます。</p>
   </div>
 </section>
-
 </main>
 <footer class="ft">
-  <div class="wrap ft__in">
-    <div>
-      <a class="logo" href="index.html"><svg viewBox="0 0 140 40" role="img" aria-label="ミナモ" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-<path d="M2 31V9l9 15 9-15v22M28 9v22M36 31V9l16 22V9M60 31l9-22 9 22M63.6 23h10.8M86 31V9l9 15 9-15v22"/>
-<circle cx="124" cy="20" r="11"/><circle cx="124" cy="20" r="5.5" stroke="#ff7a6b" stroke-width="1.8"/></svg></a>
-      <p>hair salon ミナモ（架空）<br>架空県風見坂 1-4-7（見本上の設定）<br>風見坂駅 南口から徒歩4分</p>
+  <div class="ft__in">
+    <div class="ft__brand">
+      <a class="logo" href="index.html"><svg class="logo__svg" viewBox="0 0 172 44" role="img" aria-label="hair salon ミナモ"><g fill="none" stroke-width="1.2"><circle cx="21" cy="22" r="5" stroke="#ff7a6b" stroke-width="1.6"/><circle cx="21" cy="22" r="11" stroke="#2b2f33" stroke-opacity=".75"/><circle cx="21" cy="22" r="18" stroke="#2b2f33" stroke-opacity=".35"/></g><text x="46" y="27" font-family="'Minamo Cormorant', 'Cormorant Garamond', Georgia, serif" font-style="italic" font-size="27" fill="#2b2f33">Minamo</text><text x="47" y="40" font-family="'Minamo Cormorant', Georgia, serif" font-size="10.5" letter-spacing="2.6" fill="#2b2f33">HAIR SALON</text></svg></a>
+      <p>乾かすだけで、水面のツヤ。<br>風見坂の住宅街にある、3席の美容室です（架空）。</p>
     </div>
-    <div>
-      <p><b>営業時間</b><br>10:00〜19:00（最終受付 17:30）<br>定休日 火曜・第3水曜<br><span class="fine">（いずれも見本上の設定）</span></p>
-    </div>
-    <ul>
+    <dl class="ft__info">
+      <div><dt>営業時間</dt><dd>10:00〜19:00（最終受付 17:30）</dd></div>
+      <div><dt>定休日</dt><dd>火曜・第3水曜</dd></div>
+      <div><dt>場所</dt><dd>架空県風見坂 1-4-7・風見坂駅 南口から徒歩4分</dd></div>
+    </dl>
+    <ul class="ft__nav">
       <li><a href="menu.html">メニュー・料金</a></li>
       <li><a href="salon.html">サロンについて</a></li>
       <li><a href="salon.html#access">アクセス</a></li>
       <li><a href="#" data-sample-action="予約する">予約する（見本）</a></li>
     </ul>
-    <p class="fine">掲載の価格はすべて見本用の架空価格（税込）です。写真・イラストはAI生成のイメージで、実在の店舗ではありません。</p>
+    <p class="ft__fine">営業時間・住所・価格はすべて見本用の設定（価格は税込の架空価格）です。写真・イラストはAI生成のイメージで、実在の店舗ではありません。</p>
   </div>
 </footer>
 <aside class="ca-credit" aria-labelledby="ca-credit-title">

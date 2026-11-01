@@ -7,11 +7,13 @@
 <meta name="description" content="切断・曲げ・溶接・試作の加工別に、板厚・最大寸法・公差の目安を表にしました。工程と材質で絞り込めます。設備は機種名ではなく能力で示しています（架空の事業の見本サイト）。">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="../../assets/brand/icon-32.png" sizes="32x32">
+<link rel="preload" href="fonts/zenkaku-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/barlow-cond-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../_shared/crew-frame.css?v=20261015">
 <script defer src="../_shared/crew-frame.js?v=20261015"></script>
-<link rel="stylesheet" href="assets/orime.css">
+<link rel="stylesheet" href="assets/orime.css?v=3">
 <script>document.documentElement.classList.add('js');</script>
-<script defer src="assets/orime.js"></script>
+<script defer src="assets/orime.js?v=3"></script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ移動</a>
@@ -23,7 +25,7 @@
 
 <header class="site-head">
   <div class="wrap">
-    <a class="logo" href="index.html" aria-label="精密板金 オリメ工業 トップへ"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M4 30 H24 V8" fill="none" stroke="#1f2328" stroke-width="5" stroke-linejoin="miter"/><path d="M24 8 H34" fill="none" stroke="#1f2328" stroke-width="5"/><path d="M4 36 H24" stroke="#2f5d8a" stroke-width="1"/><path d="M4 33 v6 M24 33 v6" stroke="#2f5d8a" stroke-width="1"/><path d="M24 30 l-6 -6" stroke="#ff6a13" stroke-width="2" stroke-dasharray="2 2"/></svg><span><b>オリメ工業</b><small>精密板金 / SHEET METAL</small></span></a>
+    <a class="logo" href="index.html" aria-label="精密板金 オリメ工業 トップへ"><svg viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M3 33 H18 V9 H38" fill="none" stroke="currentColor" stroke-width="5.5" stroke-linejoin="miter"/><path d="M12 39 L24 27 M12 15 L24 3" stroke="#ff6a13" stroke-width="1.6" stroke-dasharray="2.5 2"/></svg><span><b class="ff-d">オリメ工業</b><small>精密板金 ／ SHEET METAL</small></span></a>
     <nav class="gnav" aria-label="サイト内の案内"><ul><li><a href="index.html">トップ</a></li><li><a href="capabilities.html" aria-current="page">加工範囲・設備</a></li><li><a href="materials.html">材質と板厚</a></li><li><a href="process.html">見積もりから納品まで</a></li><li class="nav-cta"><a class="btn btn--act btn--small" href="contact.html">見積もり依頼</a></li></ul></nav>
     <details class="menu-toggle"><summary>メニュー</summary><nav class="gnav" aria-label="サイト内の案内（メニュー）"><ul><li><a href="index.html">トップ</a></li><li><a href="capabilities.html" aria-current="page">加工範囲・設備</a></li><li><a href="materials.html">材質と板厚</a></li><li><a href="process.html">見積もりから納品まで</a></li><li class="nav-cta"><a class="btn btn--act btn--small" href="contact.html">見積もり依頼</a></li></ul></nav></details>
   </div>
@@ -31,6 +33,7 @@
 
 <main id="main">
   <div class="ph">
+    <img class="ph__img" src="assets/img/floor.webp" width="1200" height="900" alt="" fetchpriority="high">
     <div class="wrap">
       <nav class="crumb" aria-label="現在の位置"><ol><li><a href="index.html">トップ</a></li><li aria-current="page">加工範囲・設備</li></ol></nav>
       <div class="ph__grid">
@@ -79,7 +82,7 @@
             <tr><th scope="row">測定具</th><td class="n" data-label="台数">—</td><td data-label="能力の目安">ノギス・ハイトゲージ・角度計・定盤での寸法検査</td></tr>
           </tbody>
         </table>
-        <figure class="photo"><img src="assets/img/press.webp" width="1200" height="900" alt="工場内に置かれた曲げ加工機と作業台" loading="lazy"><figcaption><b>PRESS BRAKE</b><span>画像はAI生成のイメージです</span></figcaption></figure>
+        <figure class="photo"><img src="assets/img/press.webp" width="1200" height="900" alt="工場内に置かれた曲げ加工機と作業台" loading="lazy"><figcaption><b>曲げの設備</b><span>画像はAI生成のイメージです</span></figcaption></figure>
       </div>
       <p class="note" style="margin-top:12px">設備の台数・能力は見本上の設定です。実際の制作では、事業者が確認した値を載せます。</p>
     </div>
@@ -108,26 +111,26 @@
 
 </main>
 
-<footer class="site-foot">
+<footer class="site-foot on-ink">
   <div class="wrap foot__grid">
     <div>
-      <a class="logo" href="index.html" aria-label="精密板金 オリメ工業 トップへ"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M4 30 H24 V8" fill="none" stroke="#1f2328" stroke-width="5" stroke-linejoin="miter"/><path d="M24 8 H34" fill="none" stroke="#1f2328" stroke-width="5"/><path d="M4 36 H24" stroke="#2f5d8a" stroke-width="1"/><path d="M4 33 v6 M24 33 v6" stroke="#2f5d8a" stroke-width="1"/><path d="M24 30 l-6 -6" stroke="#ff6a13" stroke-width="2" stroke-dasharray="2 2"/></svg><span><b>オリメ工業</b><small>精密板金 / SHEET METAL</small></span></a>
+      <a class="logo" href="index.html" aria-label="精密板金 オリメ工業 トップへ"><svg viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M3 33 H18 V9 H38" fill="none" stroke="currentColor" stroke-width="5.5" stroke-linejoin="miter"/><path d="M12 39 L24 27 M12 15 L24 3" stroke="#ff6a13" stroke-width="1.6" stroke-dasharray="2.5 2"/></svg><span><b class="ff-d">オリメ工業</b><small>精密板金 ／ SHEET METAL</small></span></a>
       <dl>
         <dt>事業</dt><dd>薄板の精密板金（切断・曲げ・溶接・試作）</dd>
         <dt>所在地</dt><dd>架空県結ノ浦市 工業団地内</dd>
         <dt>受付</dt><dd>平日 8:30〜17:30</dd>
         <dt>見積もり</dt><dd>返信は2営業日以内</dd>
       </dl>
-      <p class="note" style="margin-top:10px">架空の事業です。所在地・数値・時間はすべて見本上の設定です。</p>
+      <p class="note">架空の事業です。所在地・数値・時間はすべて見本上の設定です。</p>
     </div>
     <div>
-      <p class="eyebrow">ページ</p>
+      <p class="foot__h">ページ</p>
       <ul><li><a href="index.html">トップ</a></li><li><a href="capabilities.html">加工範囲・設備</a></li><li><a href="materials.html">材質と板厚</a></li><li><a href="process.html">見積もりから納品まで</a></li><li><a href="contact.html">見積もり依頼</a></li></ul>
     </div>
     <div>
-      <p class="eyebrow">図面の取り扱い</p>
-      <p class="note" style="font-size:14px">お預かりした図面は、見積もりと製作のためだけに使います。秘密保持契約の締結にも対応します（見本上の設定）。</p>
-      <p class="updated">更新日 2026-10-15</p>
+      <p class="foot__h">図面の取り扱い</p>
+      <p class="note">お預かりした図面は、見積もりと製作のためだけに使います。秘密保持契約の締結にも対応します（見本上の設定）。</p>
+      <p class="updated">更新日 2026.10.15</p>
     </div>
   </div>
 </footer>

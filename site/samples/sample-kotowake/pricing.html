@@ -3,15 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>料金と月額シミュレーター｜コトワケ（見本・架空）</title>
-<meta name="description" content="コトワケ（架空）の料金です。スタータープラン月額1,100円・スタンダードプラン月額3,300円・導入サポート1回11,000円（いずれも税込・見本用の架空価格）。人数と台帳の数から月額が分かるシミュレーターと、含まれないもの・解約の考え方を載せています。">
+<title>料金｜月額1,100円から・含まれる範囲と月額シミュレーター — コトワケ（見本・架空）</title>
+<meta name="description" content="コトワケ（架空）の料金。スタータープラン月額1,100円・スタンダードプラン月額3,300円・導入サポート1回11,000円（税込・見本用の架空価格）。人数から月額を出すシミュレーター、含まれないもの、解約と返金。">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="../../assets/brand/icon-32.png" sizes="32x32">
 <link rel="stylesheet" href="../_shared/crew-frame.css?v=20261015">
 <script defer src="../_shared/crew-frame.js?v=20261015"></script>
 <script>document.documentElement.classList.add('js');</script>
-<link rel="stylesheet" href="assets/css/kotowake.css?v=20261101">
-<script defer src="assets/js/kotowake.js?v=20261101"></script>
+<link rel="preload" href="fonts/zen-kaku-gothic-new-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/kotowake.css?v=20261101b">
+<script defer src="assets/js/kotowake.js?v=20261101b"></script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ移動</a>
@@ -22,65 +23,60 @@
 </div>
 <header class="site-head">
   <div class="wrap site-head__in">
-    <a class="logo" href="index.html"><svg class="logo-svg" viewBox="0 0 256 44" role="img" aria-label="コトワケ"><g fill="none" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter">
-<path d="M2 22H16" stroke="#1b1f24"/><path d="M16 22C26 22 26 7 36 7H52" stroke="#2a9d8f"/><path d="M16 22H52" stroke="#3d5a80"/><path d="M16 22C26 22 26 37 36 37H52" stroke="#b08b3e"/>
-<g stroke="#1b1f24" transform="translate(70 1)"><path d="M5 8H35V36H5"/></g>
-<g stroke="#1b1f24" transform="translate(116 1)"><path d="M14 3V41M14 17L33 26"/></g>
-<g stroke="#1b1f24" transform="translate(162 1)"><path d="M6 8V19M6 8H35V15C35 29 25 37 12 40"/></g>
-<g stroke="#1b1f24" transform="translate(208 1)"><path d="M15 3L4 22M10 14H38M28 14C28 30 20 37 10 40"/></g>
-</g></svg><span class="logo__sub">小さな事業のための<br>クラウド台帳</span></a>
-    <nav class="gnav" aria-label="サイト内">
-      <a href="features.html">機能</a><a href="pricing.html" aria-current="page">料金</a><a href="guide.html">はじめての方へ</a><a href="contact.html">資料請求・お問い合わせ</a>
-      <a class="btn btn--go btn--sm" href="#" data-sample-action="無料で試す">無料で試す<span class="arrow" aria-hidden="true">→</span></a>
-    </nav>
+    <a class="logo" href="index.html"><svg class="logo-svg" viewBox="0 -840 4560 940" role="img" aria-label="コトワケ"><g fill="none" stroke-width="120" stroke-linecap="butt"><path d="M0 -380H250" stroke="#1b1f24"/><path d="M250 -380C440 -380 420 -720 640 -720H760" stroke="#2a9d8f"/><path d="M250 -380H760" stroke="#3d5a80"/><path d="M250 -380C440 -380 420 -40 640 -40H760" stroke="#b08b3e"/></g><g class="logo-type" transform="translate(737 0)"><path d="M172 -108 163 -266Q197 -264 255 -264Q313 -263 384 -263Q454 -263 526 -264Q599 -265 663 -266V-486Q622 -486 570 -486Q517 -485 460 -484Q403 -484 348 -482Q293 -481 247 -479Q201 -477 171 -475L166 -631Q198 -629 250 -628Q301 -626 364 -626Q427 -625 494 -626Q560 -627 622 -628Q685 -629 736 -630Q788 -632 820 -633V-122Q727 -122 630 -121Q533 -120 444 -118Q356 -116 285 -114Q214 -111 172 -108Z"/>
+<path d="M1330 38V-783H1481V-478L1529 -547Q1553 -530 1594 -504Q1634 -477 1680 -450Q1727 -422 1770 -399Q1812 -376 1840 -366Q1824 -351 1806 -326Q1787 -301 1771 -275Q1755 -249 1745 -230Q1723 -242 1690 -262Q1656 -283 1618 -308Q1581 -332 1545 -356Q1509 -381 1481 -402V38Z"/>
+<path d="M2311 19Q2290 -10 2263 -42Q2236 -75 2204 -100Q2312 -147 2394 -222Q2477 -297 2530 -394Q2582 -491 2599 -605L2230 -592Q2231 -558 2232 -520Q2234 -483 2236 -448Q2237 -412 2239 -386Q2241 -359 2243 -348L2092 -341Q2093 -355 2092 -395Q2092 -435 2090 -486Q2089 -538 2086 -589Q2084 -640 2082 -680Q2079 -719 2077 -732Q2097 -730 2142 -729Q2186 -728 2245 -728Q2304 -729 2369 -731Q2434 -733 2494 -736Q2555 -738 2603 -741Q2651 -744 2675 -747L2761 -708Q2753 -537 2696 -398Q2638 -260 2540 -156Q2442 -51 2311 19Z"/>
+<path d="M3252 59Q3231 28 3200 -6Q3168 -40 3137 -59Q3257 -124 3322 -217Q3387 -310 3400 -434H3228Q3193 -391 3153 -354Q3113 -316 3069 -286Q3049 -310 3017 -340Q2985 -370 2954 -388Q3028 -437 3086 -504Q3145 -572 3186 -650Q3227 -727 3249 -804L3399 -760Q3370 -663 3324 -579H3791V-434H3556Q3543 -273 3467 -152Q3391 -32 3252 59Z"/></g></svg><span class="logo__sub">小さな事業の<br>クラウド台帳</span></a>
+    <nav class="gnav" aria-label="サイト内"><a href="features.html">機能</a><a href="pricing.html" aria-current="page">料金</a><a href="guide.html">はじめての方へ</a><a href="contact.html">資料請求・お問い合わせ</a></nav>
+    <a class="btn btn--go btn--sm site-head__cta" href="#" data-sample-action="無料で試す">無料で試す<span class="arrow" aria-hidden="true">→</span></a>
   </div>
 </header>
 <main id="main">
 <section class="page-head" aria-labelledby="ph">
   <div class="wrap page-head__grid">
-    <div class="page-head__text">
-      <p class="crumb"><a href="index.html">トップ</a> / 料金</p>
+    <div>
+      <p class="crumb"><a href="index.html">トップ</a> ／ 料金</p>
+      <p class="ref">料金と含まれる範囲</p>
       <h1 id="ph">総額と、<br>含まれる範囲を先に。</h1>
-      <svg class="split draw" viewBox="0 0 120 24" aria-hidden="true" focusable="false"><path class="ln s0" pathLength="1" d="M0 12H46"/><path class="ln s1" pathLength="1" d="M46 12C62 12 62 3 78 3H120"/><path class="ln s2" pathLength="1" d="M46 12H120"/><path class="ln s3" pathLength="1" d="M46 12C62 12 62 21 78 21H120"/></svg>
-      <p>月額のプランは2つです。表示はすべて税込で、見本用の架空価格です。14日間の無料期間（見本上の設定）のあと、続ける場合だけ料金がかかります。</p>
-      <nav class="toc" aria-label="このページの内容"><a href="#plans">3つの比較表</a><a href="#sim-title">月額シミュレーター</a><a href="#extra">含まれないもの</a><a href="#cancel">解約と返金</a></nav>
+      <p class="page-head__lead">月額のプランは2つ。表示はすべて税込・見本用の架空価格です。14日間の無料期間のあと、続ける場合だけ料金がかかります。</p>
     </div>
-    <figure class="page-head__fig figure-img"><img src="assets/img/three-paths.webp" width="1000" height="750" alt="朱・青緑・紺の3本の道が、それぞれ別の目的地へ延びているイラスト（AI生成のイメージ）"></figure>
+    <div class="mini" aria-hidden="true">
+      <p class="mini__h"><span>スタッフ4人・台帳2つの場合</span><span>税込</span></p>
+      <p class="mini__big"><span class="num">3,300</span><b>円／月</b></p>
+      <p class="mini__eq">1年間 39,600円 ／ 無料期間 0円</p>
+    </div>
   </div>
 </section>
-
-<section class="sec" id="plans" aria-labelledby="plans-title" style="padding-top:56px">
-  <div class="wrap">
-    <h2 id="plans-title" style="font-size:clamp(22px,2.6vw,30px);margin-bottom:8px">プランの比較表</h2>
-    <p class="note" style="margin-bottom:20px">価格は税込・見本用の架空価格です。</p>
-    <table class="plans">
-      <thead><tr><td></td>
-        <th scope="col"><h3>スタータープラン</h3><span class="price">1,100<small>円／月</small></span></th>
-        <th scope="col" class="pick"><h3>スタンダードプラン</h3><span class="price">3,300<small>円／月</small></span></th>
-        <th scope="col"><h3>導入サポート</h3><span class="price">11,000<small>円／1回</small></span></th></tr></thead>
-      <tbody>
-        <tr><th scope="row">価格（税込）</th><td data-label="スターター">月額 1,100円</td><td data-label="スタンダード" class="pick">月額 3,300円</td><td data-label="導入サポート">1回 11,000円</td></tr>
-        <tr><th scope="row">台帳の数</th><td data-label="スターター">1つ</td><td data-label="スタンダード" class="pick">5つまで</td><td data-label="導入サポート">—</td></tr>
-        <tr><th scope="row">利用者</th><td data-label="スターター">2人まで</td><td data-label="スタンダード" class="pick">10人まで</td><td data-label="導入サポート">—</td></tr>
-        <tr><th scope="row">問い合わせ・予約・在庫の列</th><td data-label="スターター">○</td><td data-label="スタンダード" class="pick">○</td><td data-label="導入サポート">—</td></tr>
-        <tr><th scope="row">予約受付ページ</th><td data-label="スターター">—</td><td data-label="スタンダード" class="pick">○</td><td data-label="導入サポート">—</td></tr>
-        <tr><th scope="row">CSVの取り込み・書き出し</th><td data-label="スターター">○</td><td data-label="スタンダード" class="pick">○</td><td data-label="導入サポート">取り込みを代行</td></tr>
-        <tr><th scope="row">向いている事業</th><td data-label="スターター">1人〜2人で記録している</td><td data-label="スタンダード" class="pick">スタッフと分担する・予約をWebで受けたい</td><td data-label="導入サポート">表計算のデータが多く、移す時間が取れない</td></tr>
-      </tbody>
-    </table>
-    <p class="note" style="margin-top:12px">導入サポートは、どちらのプランにも追加できます（無料期間中も申し込めます。見本上の設定）。</p>
-  </div>
-</section>
-
-<section class="sec" aria-labelledby="sim-title">
-  <div class="wrap sec__grid">
-    <div class="sec__head">
-      <p class="label">月額シミュレーター</p>
-      <h2 id="sim-title">人数と台帳の数から、<br>月額を出す。</h2>
-      <svg class="split draw" viewBox="0 0 120 24" aria-hidden="true" focusable="false"><path class="ln s0" pathLength="1" d="M0 12H46"/><path class="ln s1" pathLength="1" d="M46 12C62 12 62 3 78 3H120"/><path class="ln s2" pathLength="1" d="M46 12H120"/><path class="ln s3" pathLength="1" d="M46 12C62 12 62 21 78 21H120"/></svg>
-      <p>入力した数字はこのページの中で計算するだけで、どこにも送りません。</p>
-    </div>
-    <div class="sec__body">
+<div class="wrap doc">
+  <nav class="rail" aria-label="このページの内容">
+      <p>このページの内容</p>
+      <ol><li><a href="#plans"><span>01</span>プランの比較表</a></li><li><a href="#sim-title"><span>02</span>月額シミュレーター</a></li><li><a href="#extra"><span>03</span>含まれないもの</a></li><li><a href="#cancel"><span>04</span>解約と返金</a></li></ol>
+      <a class="btn btn--go btn--sm" href="#" data-sample-action="無料で試す">無料で試す（見本）<span class="arrow" aria-hidden="true">→</span></a>
+    </nav>
+  <div class="doc__body">
+    <section id="plans" aria-labelledby="plans-title">
+      <h2 id="plans-title">プランの比較表</h2>
+      <p class="doc__intro">導入サポートは、どちらのプランにも追加できます（無料期間中も申し込めます。見本上の設定）。</p>
+      <table class="plans">
+        <thead><tr><td></td>
+          <th scope="col"><h3>スタータープラン</h3><span class="price-n">1,100<small>円／月</small></span></th>
+          <th scope="col" class="pick"><h3>スタンダードプラン</h3><span class="price-n">3,300<small>円／月</small></span></th>
+          <th scope="col"><h3>導入サポート</h3><span class="price-n">11,000<small>円／1回</small></span></th></tr></thead>
+        <tbody>
+          <tr><th scope="row">価格（税込）</th><td data-label="スターター">月額 1,100円</td><td data-label="スタンダード" class="pick">月額 3,300円</td><td data-label="導入サポート">1回 11,000円</td></tr>
+          <tr><th scope="row">台帳の数</th><td data-label="スターター">1つ</td><td data-label="スタンダード" class="pick">5つまで</td><td data-label="導入サポート">—</td></tr>
+          <tr><th scope="row">利用者</th><td data-label="スターター">2人まで</td><td data-label="スタンダード" class="pick">10人まで</td><td data-label="導入サポート">—</td></tr>
+          <tr><th scope="row">問い合わせ・予約・在庫の列</th><td data-label="スターター">○</td><td data-label="スタンダード" class="pick">○</td><td data-label="導入サポート">—</td></tr>
+          <tr><th scope="row">予約受付ページ</th><td data-label="スターター">—</td><td data-label="スタンダード" class="pick">○</td><td data-label="導入サポート">—</td></tr>
+          <tr><th scope="row">CSVの取り込み・書き出し</th><td data-label="スターター">○</td><td data-label="スタンダード" class="pick">○</td><td data-label="導入サポート">取り込みを代行</td></tr>
+          <tr><th scope="row">向いている事業</th><td data-label="スターター">1人〜2人で記録している</td><td data-label="スタンダード" class="pick">スタッフと分担する・予約をWebで受けたい</td><td data-label="導入サポート">表計算のデータが多く、移す時間が取れない</td></tr>
+        </tbody>
+      </table>
+      <p class="note" style="margin-top:12px">価格はすべて税込・見本用の架空価格です。</p>
+    </section>
+    <section aria-labelledby="sim-title">
+      <h2 id="sim-title">人数と台帳の数から、月額を出す。</h2>
+      <p class="doc__intro">入力した数字はこのページの中で計算するだけで、どこにも送りません。</p>
       <div class="sim js-only" id="sim">
         <div class="sim__in">
           <div>
@@ -96,9 +92,9 @@
           <label class="opt"><input type="checkbox" id="sim-support"><span>導入サポート（表計算データの取り込み代行・1回 11,000円）を付ける</span></label>
         </div>
         <div class="sim__out" aria-live="polite">
-          <span class="label">合うプラン</span>
+          <span class="lbl">合うプラン</span>
           <output class="sim__plan" id="sim-plan" for="sim-users sim-books">スタータープラン</output>
-          <span class="label">月額（税込）</span>
+          <span class="lbl">月額（税込）</span>
           <p class="sim__big" style="margin:0"><output id="sim-month">1,100</output><small>円</small></p>
           <dl class="sim__rows">
             <div><dt>本契約の最初の月</dt><dd id="sim-first">1,100円</dd></div>
@@ -109,19 +105,10 @@
         </div>
       </div>
       <noscript><p class="note">シミュレーターはJavaScriptが有効なときに使えます。料金は上の比較表をご覧ください。</p></noscript>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="extra" aria-labelledby="extra-title">
-  <div class="wrap sec__grid">
-    <div class="sec__head">
-      <p class="label">追加費用</p>
+    </section>
+    <section id="extra" aria-labelledby="extra-title">
       <h2 id="extra-title">月額に含まれないもの。</h2>
-      <svg class="split draw" viewBox="0 0 120 24" aria-hidden="true" focusable="false"><path class="ln s0" pathLength="1" d="M0 12H46"/><path class="ln s1" pathLength="1" d="M46 12C62 12 62 3 78 3H120"/><path class="ln s2" pathLength="1" d="M46 12H120"/><path class="ln s3" pathLength="1" d="M46 12C62 12 62 21 78 21H120"/></svg>
-      <p>あとから分かる費用がないよう、含まれないものを並べます。</p>
-    </div>
-    <div class="sec__body">
+      <p class="doc__intro">あとから分かる費用がないよう、含まれないものを並べます。範囲は見本上の設定です。</p>
       <ul class="plain-list">
         <li><span>表計算データの取り込みの代行<small>ご自身で取り込む場合はかかりません</small></span><span>11,000円／1回</span></li>
         <li><span>紙の台帳・手帳の入力代行<small>扱っていません</small></span><span>—</span></li>
@@ -129,68 +116,44 @@
         <li><span>電話でのサポート<small>問い合わせはメールで受けています</small></span><span>—</span></li>
         <li><span>インターネット回線・端末の費用<small>お使いのものをそのまま使います</small></span><span>各自</span></li>
       </ul>
-      <p class="note" style="margin-top:12px">価格は税込・見本用の架空価格です。範囲は見本上の設定です。</p>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="cancel" aria-labelledby="cancel-title">
-  <div class="wrap sec__grid">
-    <div class="sec__head">
-      <p class="label">解約と返金</p>
-      <h2 id="cancel-title">解約しても、<br>データはあなたの手元に。</h2>
-      <svg class="split draw" viewBox="0 0 120 24" aria-hidden="true" focusable="false"><path class="ln s0" pathLength="1" d="M0 12H46"/><path class="ln s1" pathLength="1" d="M46 12C62 12 62 3 78 3H120"/><path class="ln s2" pathLength="1" d="M46 12H120"/><path class="ln s3" pathLength="1" d="M46 12C62 12 62 21 78 21H120"/></svg>
-    </div>
-    <div class="sec__body">
-      <dl class="terms" style="grid-template-columns:1fr">
+    </section>
+    <section id="cancel" aria-labelledby="cancel-title">
+      <h2 id="cancel-title">解約しても、データはあなたの手元に。</h2>
+      <p class="doc__intro">すべて見本上の設定です。実際の条件は、利用規約に書きます。</p>
+      <dl class="terms">
         <div><dt>解約の時期</dt><dd>いつでも、設定画面から解約できます。解約した月の末日まで使えます。</dd></div>
         <div><dt>返金</dt><dd>月の途中で解約しても、日割りの返金はありません。導入サポートは、作業を始める前なら全額返金します。</dd></div>
         <div><dt>データの書き出し</dt><dd>解約後30日間は、書き出しの画面だけ使えます。その後、データは削除されます。</dd></div>
         <div><dt>プランの変更</dt><dd>スタンダードからスターターへ下げる場合、台帳1つ・利用者2人の範囲に収まっている必要があります。</dd></div>
       </dl>
-      <p class="note" style="margin-top:12px">すべて見本上の設定です。実際の条件は、利用規約に書きます。</p>
+    </section>
+  </div>
+</div>
+<section class="cta" aria-labelledby="cta-title">
+  <div class="wrap cta__in">
+    <div>
+    <svg class="cta__mark draw" viewBox="0 0 240 100" aria-hidden="true" focusable="false"><path class="ln" pathLength="1" d="M0 50H80" stroke="#f4f6f3"/><path class="ln" pathLength="1" d="M80 50C130 50 120 10 170 10H240" stroke="#5cc4b6"/><path class="ln" pathLength="1" d="M80 50H240" stroke="#8fa9cf"/><path class="ln" pathLength="1" d="M80 50C130 50 120 90 170 90H240" stroke="#d9b56a"/></svg>
+    <h2 id="cta-title">14日間は0円。<br>続けるかは、そのあとで。</h2>
+    </div>
+    <div class="cta__act">
+      <a class="btn btn--go btn--lg" href="#" data-sample-action="無料で試す">無料で試す（見本）<span class="arrow" aria-hidden="true">→</span></a>
+      <ul class="assure assure--inv"><li>カード登録なし</li><li>自動で有料にならない</li><li>いつでも解約</li><li>CSVで書き出し</li></ul>
+      <p class="cta__fine">いずれも見本上の設定です。<a href="contact.html">料金の質問</a>も受けています。</p>
     </div>
   </div>
 </section>
-<section class="cta on-dark" aria-labelledby="cta-title">
-  <div class="wrap cta__grid">
-    <div class="cta__text">
-      <h2 id="cta-title">まず14日間、0円で。</h2>
-      <svg class="split draw" viewBox="0 0 120 24" aria-hidden="true" focusable="false"><path class="ln s0" pathLength="1" d="M0 12H46"/><path class="ln s1" pathLength="1" d="M46 12C62 12 62 3 78 3H120"/><path class="ln s2" pathLength="1" d="M46 12H120"/><path class="ln s3" pathLength="1" d="M46 12C62 12 62 21 78 21H120"/></svg>
-      <p style="margin-top:14px">14日間は無料で、3つの列をすべて使えます（見本上の設定）。</p>
-      <div class="hero__acts">
-        <a class="btn btn--go" href="#" data-sample-action="無料で試す">無料で試す（見本）<span class="arrow" aria-hidden="true">→</span></a>
-        <a class="btn btn--line" href="features.html">機能を比べる</a>
-      </div>
-      <ul class="assure assure--row">
-        <li>カード登録なし</li><li>自動で有料にならない</li><li>いつでも解約</li><li>CSVで書き出し</li>
-      </ul>
-    </div>
-    <figure class="cta__img"><img src="assets/img/into-ledger.webp" width="1536" height="640" loading="lazy" alt="色の違う3本の道が1冊の開いた台帳へ流れ込むイラスト（AI生成のイメージ）"></figure>
-  </div>
-</section>
-
 </main>
 <footer class="site-foot">
   <div class="wrap site-foot__grid">
     <div class="site-foot__brand">
-      <a class="logo" href="index.html"><svg class="logo-svg" viewBox="0 0 256 44" role="img" aria-label="コトワケ"><g fill="none" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter">
-<path d="M2 22H16" stroke="#1b1f24"/><path d="M16 22C26 22 26 7 36 7H52" stroke="#2a9d8f"/><path d="M16 22H52" stroke="#3d5a80"/><path d="M16 22C26 22 26 37 36 37H52" stroke="#b08b3e"/>
-<g stroke="#1b1f24" transform="translate(70 1)"><path d="M5 8H35V36H5"/></g>
-<g stroke="#1b1f24" transform="translate(116 1)"><path d="M14 3V41M14 17L33 26"/></g>
-<g stroke="#1b1f24" transform="translate(162 1)"><path d="M6 8V19M6 8H35V15C35 29 25 37 12 40"/></g>
-<g stroke="#1b1f24" transform="translate(208 1)"><path d="M15 3L4 22M10 14H38M28 14C28 30 20 37 10 40"/></g>
-</g></svg></a>
+      <a class="logo logo--inv" href="index.html"><svg class="logo-svg" viewBox="0 -840 4560 940" role="img" aria-label="コトワケ"><g fill="none" stroke-width="120" stroke-linecap="butt"><path d="M0 -380H250" stroke="#1b1f24"/><path d="M250 -380C440 -380 420 -720 640 -720H760" stroke="#2a9d8f"/><path d="M250 -380H760" stroke="#3d5a80"/><path d="M250 -380C440 -380 420 -40 640 -40H760" stroke="#b08b3e"/></g><g class="logo-type" transform="translate(737 0)"><path d="M172 -108 163 -266Q197 -264 255 -264Q313 -263 384 -263Q454 -263 526 -264Q599 -265 663 -266V-486Q622 -486 570 -486Q517 -485 460 -484Q403 -484 348 -482Q293 -481 247 -479Q201 -477 171 -475L166 -631Q198 -629 250 -628Q301 -626 364 -626Q427 -625 494 -626Q560 -627 622 -628Q685 -629 736 -630Q788 -632 820 -633V-122Q727 -122 630 -121Q533 -120 444 -118Q356 -116 285 -114Q214 -111 172 -108Z"/>
+<path d="M1330 38V-783H1481V-478L1529 -547Q1553 -530 1594 -504Q1634 -477 1680 -450Q1727 -422 1770 -399Q1812 -376 1840 -366Q1824 -351 1806 -326Q1787 -301 1771 -275Q1755 -249 1745 -230Q1723 -242 1690 -262Q1656 -283 1618 -308Q1581 -332 1545 -356Q1509 -381 1481 -402V38Z"/>
+<path d="M2311 19Q2290 -10 2263 -42Q2236 -75 2204 -100Q2312 -147 2394 -222Q2477 -297 2530 -394Q2582 -491 2599 -605L2230 -592Q2231 -558 2232 -520Q2234 -483 2236 -448Q2237 -412 2239 -386Q2241 -359 2243 -348L2092 -341Q2093 -355 2092 -395Q2092 -435 2090 -486Q2089 -538 2086 -589Q2084 -640 2082 -680Q2079 -719 2077 -732Q2097 -730 2142 -729Q2186 -728 2245 -728Q2304 -729 2369 -731Q2434 -733 2494 -736Q2555 -738 2603 -741Q2651 -744 2675 -747L2761 -708Q2753 -537 2696 -398Q2638 -260 2540 -156Q2442 -51 2311 19Z"/>
+<path d="M3252 59Q3231 28 3200 -6Q3168 -40 3137 -59Q3257 -124 3322 -217Q3387 -310 3400 -434H3228Q3193 -391 3153 -354Q3113 -316 3069 -286Q3049 -310 3017 -340Q2985 -370 2954 -388Q3028 -437 3086 -504Q3145 -572 3186 -650Q3227 -727 3249 -804L3399 -760Q3370 -663 3324 -579H3791V-434H3556Q3543 -273 3467 -152Q3391 -32 3252 59Z"/></g></svg></a>
       <p>問い合わせ・予約・在庫を、1つの台帳に言い分けるクラウドサービス（架空）。運営会社の情報は、見本のため表示していません。</p>
     </div>
-    <nav aria-label="フッター">
-      <ul>
-        <li><a href="index.html">トップ</a></li>
-        <li><a href="features.html">機能</a></li><li><a href="pricing.html">料金</a></li><li><a href="guide.html">はじめての方へ</a></li><li><a href="contact.html">資料請求・お問い合わせ</a></li>
-        <li><a href="design-notes.html">この見本の設計メモ</a></li>
-      </ul>
-    </nav>
-    <p class="site-foot__fine">価格はすべて税込・見本用の架空価格です。無料期間・解約・書き出しの条件は見本上の設定です。画像はAI生成のイメージで、実在のサービス画面ではありません。</p>
+    <nav aria-label="フッター"><ul><li><a href="index.html">トップ</a></li><li><a href="features.html">機能</a></li><li><a href="pricing.html">料金</a></li><li><a href="guide.html">はじめての方へ</a></li><li><a href="contact.html">資料請求・お問い合わせ</a></li><li><a href="design-notes.html">この見本の設計メモ</a></li></ul></nav>
+    <p class="site-foot__fine">価格はすべて税込・見本用の架空価格です。無料期間・解約・書き出しの条件は見本上の設定です。写真はAI生成のイメージで、画面の図は見本のために作ったものです。実在の店舗・サービス画面ではありません。</p>
   </div>
 </footer>
 <aside class="ca-credit" aria-labelledby="ca-credit-title">

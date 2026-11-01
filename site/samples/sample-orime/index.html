@@ -7,11 +7,13 @@
 <meta name="description" content="結ノ浦市の工業団地にある精密板金の町工場です。鉄・ステンレス・アルミ t0.5〜6.0mm、試作1個から500個まで。加工範囲と材質×板厚の対応を表で確かめられます（架空の事業の見本サイト）。">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="../../assets/brand/icon-32.png" sizes="32x32">
+<link rel="preload" href="fonts/zenkaku-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/barlow-cond-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../_shared/crew-frame.css?v=20261015">
 <script defer src="../_shared/crew-frame.js?v=20261015"></script>
-<link rel="stylesheet" href="assets/orime.css">
+<link rel="stylesheet" href="assets/orime.css?v=3">
 <script>document.documentElement.classList.add('js');</script>
-<script defer src="assets/orime.js"></script>
+<script defer src="assets/orime.js?v=3"></script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ移動</a>
@@ -23,137 +25,163 @@
 
 <header class="site-head">
   <div class="wrap">
-    <a class="logo" href="index.html" aria-label="精密板金 オリメ工業 トップへ"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M4 30 H24 V8" fill="none" stroke="#1f2328" stroke-width="5" stroke-linejoin="miter"/><path d="M24 8 H34" fill="none" stroke="#1f2328" stroke-width="5"/><path d="M4 36 H24" stroke="#2f5d8a" stroke-width="1"/><path d="M4 33 v6 M24 33 v6" stroke="#2f5d8a" stroke-width="1"/><path d="M24 30 l-6 -6" stroke="#ff6a13" stroke-width="2" stroke-dasharray="2 2"/></svg><span><b>オリメ工業</b><small>精密板金 / SHEET METAL</small></span></a>
+    <a class="logo" href="index.html" aria-label="精密板金 オリメ工業 トップへ"><svg viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M3 33 H18 V9 H38" fill="none" stroke="currentColor" stroke-width="5.5" stroke-linejoin="miter"/><path d="M12 39 L24 27 M12 15 L24 3" stroke="#ff6a13" stroke-width="1.6" stroke-dasharray="2.5 2"/></svg><span><b class="ff-d">オリメ工業</b><small>精密板金 ／ SHEET METAL</small></span></a>
     <nav class="gnav" aria-label="サイト内の案内"><ul><li><a href="index.html" aria-current="page">トップ</a></li><li><a href="capabilities.html">加工範囲・設備</a></li><li><a href="materials.html">材質と板厚</a></li><li><a href="process.html">見積もりから納品まで</a></li><li class="nav-cta"><a class="btn btn--act btn--small" href="contact.html">見積もり依頼</a></li></ul></nav>
     <details class="menu-toggle"><summary>メニュー</summary><nav class="gnav" aria-label="サイト内の案内（メニュー）"><ul><li><a href="index.html" aria-current="page">トップ</a></li><li><a href="capabilities.html">加工範囲・設備</a></li><li><a href="materials.html">材質と板厚</a></li><li><a href="process.html">見積もりから納品まで</a></li><li class="nav-cta"><a class="btn btn--act btn--small" href="contact.html">見積もり依頼</a></li></ul></nav></details>
   </div>
 </header>
 
 <main id="main">
+  <!-- 最初の画面: 工場の写真の上に、図面1枚と5つの数値 -->
   <section class="kv" aria-labelledby="kv-title">
-    <div class="wrap kv__grid">
-      <div>
-        <p class="eyebrow">薄板の精密板金 ／ 架空県結ノ浦市 工業団地</p>
+    <img class="kv__bg" src="assets/img/press.webp" width="1200" height="900" alt="" fetchpriority="high">
+    <div class="wrap kv__in">
+      <div class="kv__copy">
+        <p class="kv__eyebrow">薄板の精密板金 ／ 架空県結ノ浦市 工業団地</p>
         <h1 id="kv-title">図面を送る前に、<br>できることを表で。</h1>
         <p class="kv__lead">鉄・ステンレス・アルミの薄板を、試作1個から500個まで。切断・曲げ・溶接の対応範囲を、数値と表で載せています。</p>
         <div class="kv__acts">
           <a class="btn btn--act" href="contact.html">見積もりを依頼する（見本）<span class="arw" aria-hidden="true">→</span></a>
-          <a class="btn" href="capabilities.html">加工できる範囲を見る</a>
+          <a class="btn btn--ghost" href="capabilities.html">加工できる範囲を見る</a>
         </div>
-        <p class="assure">図面・数量・希望納期があれば見積もりできます。返信は2営業日以内。営業の電話はしていません。</p>
-        <table class="spec">
-          <caption>対応範囲の要点（見本上の設定・目安）</caption>
-          <tbody>
-            <tr><th scope="row">材質</th><td>鉄（SPCC・SS400・SECC）／ステンレス／アルミ</td></tr>
-            <tr><th scope="row">板厚</th><td class="mono">t0.5〜6.0 mm</td></tr>
-            <tr><th scope="row">数量</th><td class="mono">1〜500 個</td></tr>
-            <tr><th scope="row">料金</th><td>図面ごとの見積もり（無料）</td></tr>
-            <tr><th scope="row">更新日</th><td class="mono">2026-10-15</td></tr>
-          </tbody>
-        </table>
+        <p class="assure">図面・数量・希望納期があれば見積もりできます（無料・返信は2営業日以内）。営業の電話はしていません。</p>
       </div>
 
-        <div class="sheet" aria-labelledby="sheet-cap">
-          <div class="sheet__view">
-            <p class="sheet__label">ISO VIEW</p>
-            <p class="sheet__label sheet__label--r">2回曲げ / 1枚の板から</p>
-            <div class="fold" aria-hidden="true">
-              <div class="plate">
-                <div class="seg seg--a"><i class="hole"></i><i class="hole"></i><span class="d3">120</span>
-                  <div class="seg seg--b"><i class="hole"></i><span class="d3">80</span>
-                    <div class="seg seg--c"></div>
-                  </div>
+      <figure class="sheet" aria-labelledby="sheet-cap">
+        <div class="sheet__view">
+          <p class="sheet__label">ISO VIEW</p>
+          <p class="sheet__label sheet__label--r">1枚の板を2回曲げる</p>
+          <div class="fold" aria-hidden="true">
+            <div class="plate">
+              <div class="seg seg--a"><i class="hole"></i><i class="hole"></i><span class="d3">120</span>
+                <div class="seg seg--b"><i class="hole"></i><span class="d3">80</span>
+                  <div class="seg seg--c"></div>
                 </div>
               </div>
             </div>
-            <div class="side" aria-hidden="true">
-              <svg viewBox="0 0 150 110" focusable="false">
-                <text x="0" y="10" font-size="10" font-family="monospace" fill="#2f5d8a" font-weight="700">SECTION</text>
-                <path d="M14 96 H104 V30 H86" fill="none" stroke="#1f2328" stroke-width="3"/>
-                <path d="M104 96 l-7 -7" stroke="#ff6a13" stroke-width="1.5" stroke-dasharray="2 2"/>
-                <path d="M14 104 H104" stroke="#2f5d8a" stroke-width="1"/><path d="M14 100 v8 M104 100 v8" stroke="#2f5d8a"/>
-                <text x="59" y="102" font-size="10" font-family="monospace" fill="#2f5d8a" text-anchor="middle">120</text>
-                <path d="M118 30 V96" stroke="#2f5d8a" stroke-width="1"/><path d="M114 30 h8 M114 96 h8" stroke="#2f5d8a"/>
-                <text x="128" y="66" font-size="10" font-family="monospace" fill="#2f5d8a">80</text>
-                <text x="70" y="40" font-size="10" font-family="monospace" fill="#1f2328">R1.6</text>
-              </svg>
-            </div>
-            <p class="fold-note">材質 <b>SPCC</b>　板厚 <b>t1.6</b><br>曲げ 2箇所 ／ 穴 3箇所</p>
           </div>
+          <div class="side" aria-hidden="true">
+            <svg viewBox="0 0 150 110" focusable="false">
+              <text x="0" y="10" font-size="11" font-family="'Barlow Condensed', sans-serif" fill="#2f5d8a" font-weight="600">SECTION</text>
+              <path d="M14 96 H104 V30 H86" fill="none" stroke="#1f2328" stroke-width="3"/>
+              <path d="M104 96 l-7 -7" stroke="#ff6a13" stroke-width="1.5" stroke-dasharray="2 2"/>
+              <path d="M14 104 H104" stroke="#2f5d8a" stroke-width="1"/><path d="M14 100 v8 M104 100 v8" stroke="#2f5d8a"/>
+              <text x="59" y="102" font-size="11" font-family="'Barlow Condensed', sans-serif" fill="#2f5d8a" text-anchor="middle">120</text>
+              <path d="M118 30 V96" stroke="#2f5d8a" stroke-width="1"/><path d="M114 30 h8 M114 96 h8" stroke="#2f5d8a"/>
+              <text x="126" y="66" font-size="11" font-family="'Barlow Condensed', sans-serif" fill="#2f5d8a">80</text>
+              <text x="66" y="44" font-size="11" font-family="'Barlow Condensed', sans-serif" fill="#1f2328">R1.6</text>
+            </svg>
+          </div>
+        </div>
+        <figcaption>
           <dl class="titleblock" id="sheet-cap">
             <div><dt>図番</dt><dd class="mono">ORM-0001</dd></div>
             <div><dt>名称</dt><dd>L形ブラケット</dd></div>
-            <div><dt>尺度</dt><dd class="mono">NTS</dd></div>
+            <div><dt>材質・板厚</dt><dd class="mono">SPCC t1.6</dd></div>
             <div><dt>区分</dt><dd>見本の図</dd></div>
           </dl>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="kv__data">
+      <dl class="wrap data">
+        <div><dt>材質</dt><dd><span class="v v--s">Fe / SUS / AL</span><small>鉄・ステンレス・アルミ</small></dd></div>
+        <div><dt>板厚</dt><dd><span class="v">0.5–6.0</span><span class="u">mm</span></dd></div>
+        <div><dt>数量</dt><dd><span class="v">1–500</span><span class="u">個</span></dd></div>
+        <div><dt>見積もりの返信</dt><dd><span class="v">2</span><span class="u">営業日以内</span><small>見積もりは無料</small></dd></div>
+        <div><dt>更新日</dt><dd><span class="v v--s">2026.10.15</span></dd></div>
+      </dl>
+      <p class="wrap data__note">数値はすべて見本上の設定で、目安です。写真はAI生成のイメージです。</p>
+    </div>
+  </section>
+
+  <!-- 加工範囲の要約 -->
+  <section class="sec" aria-labelledby="cap-title">
+    <div class="wrap">
+      <div class="sec-h"><h2 id="cap-title">加工範囲の要約</h2><div class="dim" aria-hidden="true"><span>切断 / 曲げ / 溶接 / 試作</span></div></div>
+      <table class="tbl tbl--stack tbl--big">
+        <thead><tr><th scope="col">工程</th><th scope="col">対応範囲</th><th scope="col">板厚(mm)</th><th scope="col">最大寸法(mm)</th><th scope="col">数量</th><th scope="col"><span class="sr-only">詳細</span></th></tr></thead>
+        <tbody>
+          <tr><th scope="row">レーザー切断</th><td data-label="対応範囲">鉄・ステンレス・アルミ</td><td class="n" data-label="板厚(mm)">0.5–6.0</td><td class="n" data-label="最大寸法(mm)">1,200 × 2,400</td><td class="n" data-label="数量">1–500</td><td data-label="詳細"><a href="capabilities.html#specs">仕様表へ</a></td></tr>
+          <tr><th scope="row">曲げ</th><td data-label="対応範囲">V曲げ・L曲げ・Z曲げ・ヘミング</td><td class="n" data-label="板厚(mm)">0.5–3.2</td><td class="n" data-label="最大寸法(mm)">長さ 2,000</td><td class="n" data-label="数量">1–500</td><td data-label="詳細"><a href="capabilities.html#specs">仕様表へ</a></td></tr>
+          <tr><th scope="row">溶接</th><td data-label="対応範囲">TIG・スポット</td><td class="n" data-label="板厚(mm)">0.5–4.0</td><td class="n" data-label="最大寸法(mm)">1,000 × 1,000</td><td class="n" data-label="数量">1–500</td><td data-label="詳細"><a href="capabilities.html#specs">仕様表へ</a></td></tr>
+          <tr><th scope="row">試作</th><td data-label="対応範囲">図面1枚から、組立前の単品まで</td><td class="n" data-label="板厚(mm)">0.5–4.5</td><td class="n" data-label="最大寸法(mm)">上記の範囲</td><td class="n" data-label="数量">1〜</td><td data-label="詳細"><a href="process.html">流れへ</a></td></tr>
+        </tbody>
+      </table>
+      <p class="note tbl-note">寸法の単位は mm。数値は見本上の設定で、形状により変わる目安です。</p>
+    </div>
+    <div class="strip">
+      <figure><img src="assets/img/bend.webp" width="1100" height="825" alt="曲げ加工された薄い金属板の角の近接" loading="lazy"><figcaption><b>曲げ</b><span>内Rは板厚程度</span></figcaption></figure>
+      <figure><img src="assets/img/parts.webp" width="1100" height="825" alt="作業台に並んだ、切断と曲げを終えた金属部品" loading="lazy"><figcaption><b>切断・曲げ</b><span>平板から部品へ</span></figcaption></figure>
+      <figure><img src="assets/img/enclosure.webp" width="1000" height="750" alt="金属の箱と、ねじ穴のあるふた" loading="lazy"><figcaption><b>溶接・試作</b><span>箱物は組立前の単品まで</span></figcaption></figure>
+    </div>
+  </section>
+
+  <!-- 材質×板厚（濃い章） -->
+  <section class="sec sec--ink on-ink" aria-labelledby="mx-title">
+    <div class="wrap">
+      <div class="sec-h"><h2 id="mx-title">材質 × 板厚の対応（抜粋）</h2><div class="dim" aria-hidden="true"><span>t0.5 — t6.0</span></div></div>
+      <div class="mx">
+        <div class="mx__table">
+          <ul class="legend" aria-label="凡例"><li><span class="mk mk--ok" aria-hidden="true">○</span>対応</li><li><span class="mk mk--ask" aria-hidden="true">△</span>要相談（形状・数量による）</li><li><span class="mk mk--no" aria-hidden="true">×</span>不可</li></ul>
+          <table class="matrix" id="mx-mini" data-matrix="mx-mini-out" style="--n:4"><caption class="sr-only">材質と板厚の対応表。○対応、△要相談、×不可</caption><thead><tr><th scope="col">材質 ＼ 板厚(mm)</th><th scope="col"><button type="button" class="pick" aria-pressed="false">0.5</button></th><th scope="col"><button type="button" class="pick" aria-pressed="false">1.6</button></th><th scope="col"><button type="button" class="pick" aria-pressed="false">3.2</button></th><th scope="col"><button type="button" class="pick" aria-pressed="false">6.0</button></th></tr></thead><tbody><tr><th scope="row"><button type="button" class="pick" aria-pressed="false"><b>SPCC</b><small>鉄・冷間圧延鋼板</small></button></th><td data-label="t0.5" data-say="対応"><span class="mk mk--ok" aria-hidden="true">○</span><span class="sr-only">板厚0.5mm: 対応</span></td><td data-label="t1.6" data-say="対応"><span class="mk mk--ok" aria-hidden="true">○</span><span class="sr-only">板厚1.6mm: 対応</span></td><td data-label="t3.2" data-say="対応"><span class="mk mk--ok" aria-hidden="true">○</span><span class="sr-only">板厚3.2mm: 対応</span></td><td data-label="t6.0" data-say="不可"><span class="mk mk--no" aria-hidden="true">×</span><span class="sr-only">板厚6.0mm: 不可</span></td></tr><tr><th scope="row"><button type="button" class="pick" aria-pressed="false"><b>SUS304</b><small>ステンレス</small></button></th><td data-label="t0.5" data-say="対応"><span class="mk mk--ok" aria-hidden="true">○</span><span class="sr-only">板厚0.5mm: 対応</span></td><td data-label="t1.6" data-say="対応"><span class="mk mk--ok" aria-hidden="true">○</span><span class="sr-only">板厚1.6mm: 対応</span></td><td data-label="t3.2" data-say="対応"><span class="mk mk--ok" aria-hidden="true">○</span><span class="sr-only">板厚3.2mm: 対応</span></td><td data-label="t6.0" data-say="要相談"><span class="mk mk--ask" aria-hidden="true">△</span><span class="sr-only">板厚6.0mm: 要相談</span></td></tr><tr><th scope="row"><button type="button" class="pick" aria-pressed="false"><b>A5052</b><small>アルミ</small></button></th><td data-label="t0.5" data-say="要相談"><span class="mk mk--ask" aria-hidden="true">△</span><span class="sr-only">板厚0.5mm: 要相談</span></td><td data-label="t1.6" data-say="対応"><span class="mk mk--ok" aria-hidden="true">○</span><span class="sr-only">板厚1.6mm: 対応</span></td><td data-label="t3.2" data-say="対応"><span class="mk mk--ok" aria-hidden="true">○</span><span class="sr-only">板厚3.2mm: 対応</span></td><td data-label="t6.0" data-say="不可"><span class="mk mk--no" aria-hidden="true">×</span><span class="sr-only">板厚6.0mm: 不可</span></td></tr><tr><th scope="row"><button type="button" class="pick" aria-pressed="false"><b>C1100</b><small>銅</small></button></th><td data-label="t0.5" data-say="要相談"><span class="mk mk--ask" aria-hidden="true">△</span><span class="sr-only">板厚0.5mm: 要相談</span></td><td data-label="t1.6" data-say="要相談"><span class="mk mk--ask" aria-hidden="true">△</span><span class="sr-only">板厚1.6mm: 要相談</span></td><td data-label="t3.2" data-say="不可"><span class="mk mk--no" aria-hidden="true">×</span><span class="sr-only">板厚3.2mm: 不可</span></td><td data-label="t6.0" data-say="不可"><span class="mk mk--no" aria-hidden="true">×</span><span class="sr-only">板厚6.0mm: 不可</span></td></tr></tbody></table><p class="matrix-readout" id="mx-mini-out" aria-live="polite"></p>
         </div>
-    </div>
-  </section>
-
-  <section class="sec sec--paper on-paper" aria-labelledby="cap-title">
-    <div class="wrap">
-      <div class="sec-h"><h2 id="cap-title">加工範囲の要約</h2><div class="dim " aria-hidden="true"><span>切断 / 曲げ / 溶接 / 試作</span></div></div>
-      <div class="cap">
-        <table class="tbl tbl--stack">
-          <thead><tr><th scope="col">工程</th><th scope="col">対応範囲</th><th scope="col">目安</th><th scope="col">詳細</th></tr></thead>
-          <tbody>
-            <tr><th scope="row">レーザー切断</th><td data-label="対応範囲">鉄・ステンレス・アルミ</td><td class="n" data-label="目安">t0.5〜6.0 / 1,200×2,400</td><td data-label="詳細"><a href="capabilities.html#specs">仕様表</a></td></tr>
-            <tr><th scope="row">曲げ</th><td data-label="対応範囲">V曲げ・L曲げ・Z曲げ・ヘミング</td><td class="n" data-label="目安">最大長さ 2,000</td><td data-label="詳細"><a href="capabilities.html#specs">仕様表</a></td></tr>
-            <tr><th scope="row">溶接</th><td data-label="対応範囲">TIG・スポット</td><td class="n" data-label="目安">t0.5〜4.0</td><td data-label="詳細"><a href="capabilities.html#specs">仕様表</a></td></tr>
-            <tr><th scope="row">試作</th><td data-label="対応範囲">図面1枚から、組立前の単品まで</td><td class="n" data-label="目安">1個〜</td><td data-label="詳細"><a href="process.html">流れ</a></td></tr>
-          </tbody>
-        </table>
-        <figure class="photo"><img src="assets/img/bend.webp" width="1200" height="900" alt="曲げ加工された薄い金属板の角の近接" loading="lazy"><figcaption><b>BEND R</b><span>画像はAI生成のイメージです</span></figcaption></figure>
+        <div class="mx__side">
+          <figure class="mx__photo"><img src="assets/img/plates.webp" width="1000" height="750" alt="作業台に並んだ質感の異なる3枚の金属板" loading="lazy"></figure>
+          <p>材質名か板厚を押すと、その行と列が十字に強調されます。</p>
+          <p>全8材質・8板厚の表は <a href="materials.html">材質と板厚</a> にあります。</p>
+        </div>
       </div>
-      <p class="note" style="margin-top:12px">寸法の単位は mm。数値は見本上の設定で、形状により変わる目安です。</p>
     </div>
   </section>
 
-  <section class="sec" aria-labelledby="mx-title">
-    <div class="wrap">
-      <div class="sec-h"><h2 id="mx-title">材質 × 板厚の対応（抜粋）</h2><div class="dim " aria-hidden="true"><span>t0.5 — t6.0</span></div></div>
-      <p class="sec-lead">材質名か板厚を押すと、その行と列が十字に強調されます。全8材質・8板厚の表は<a href="materials.html">材質と板厚</a>にあります。</p>
-      <ul class="legend" aria-label="凡例"><li><span class="mk mk--ok" aria-hidden="true">○</span>対応</li><li><span class="mk mk--ask" aria-hidden="true">△</span>要相談（形状・数量による）</li><li><span class="mk mk--no" aria-hidden="true">×</span>不可</li></ul>
-      <div class="cap cap--mx"><div><table class="matrix" id="mx-mini" data-matrix="mx-mini-out" style="--n:4"><caption class="sr-only">材質と板厚の対応表。○対応、△要相談、×不可</caption><thead><tr><th scope="col">材質 ＼ 板厚(mm)</th><th scope="col"><button type="button" class="pick" aria-pressed="false">0.5</button></th><th scope="col"><button type="button" class="pick" aria-pressed="false">1.6</button></th><th scope="col"><button type="button" class="pick" aria-pressed="false">3.2</button></th><th scope="col"><button type="button" class="pick" aria-pressed="false">6.0</button></th></tr></thead><tbody><tr><th scope="row"><button type="button" class="pick" aria-pressed="false"><b>SPCC</b><small>鉄・冷間圧延鋼板</small></button></th><td data-label="t0.5" data-say="対応"><span class="mk mk--ok" aria-hidden="true">○</span><span class="sr-only">板厚0.5mm: 対応</span></td><td data-label="t1.6" data-say="対応"><span class="mk mk--ok" aria-hidden="true">○</span><span class="sr-only">板厚1.6mm: 対応</span></td><td data-label="t3.2" data-say="対応"><span class="mk mk--ok" aria-hidden="true">○</span><span class="sr-only">板厚3.2mm: 対応</span></td><td data-label="t6.0" data-say="不可"><span class="mk mk--no" aria-hidden="true">×</span><span class="sr-only">板厚6.0mm: 不可</span></td></tr><tr><th scope="row"><button type="button" class="pick" aria-pressed="false"><b>SUS304</b><small>ステンレス</small></button></th><td data-label="t0.5" data-say="対応"><span class="mk mk--ok" aria-hidden="true">○</span><span class="sr-only">板厚0.5mm: 対応</span></td><td data-label="t1.6" data-say="対応"><span class="mk mk--ok" aria-hidden="true">○</span><span class="sr-only">板厚1.6mm: 対応</span></td><td data-label="t3.2" data-say="対応"><span class="mk mk--ok" aria-hidden="true">○</span><span class="sr-only">板厚3.2mm: 対応</span></td><td data-label="t6.0" data-say="要相談"><span class="mk mk--ask" aria-hidden="true">△</span><span class="sr-only">板厚6.0mm: 要相談</span></td></tr><tr><th scope="row"><button type="button" class="pick" aria-pressed="false"><b>A5052</b><small>アルミ</small></button></th><td data-label="t0.5" data-say="要相談"><span class="mk mk--ask" aria-hidden="true">△</span><span class="sr-only">板厚0.5mm: 要相談</span></td><td data-label="t1.6" data-say="対応"><span class="mk mk--ok" aria-hidden="true">○</span><span class="sr-only">板厚1.6mm: 対応</span></td><td data-label="t3.2" data-say="対応"><span class="mk mk--ok" aria-hidden="true">○</span><span class="sr-only">板厚3.2mm: 対応</span></td><td data-label="t6.0" data-say="不可"><span class="mk mk--no" aria-hidden="true">×</span><span class="sr-only">板厚6.0mm: 不可</span></td></tr><tr><th scope="row"><button type="button" class="pick" aria-pressed="false"><b>C1100</b><small>銅</small></button></th><td data-label="t0.5" data-say="要相談"><span class="mk mk--ask" aria-hidden="true">△</span><span class="sr-only">板厚0.5mm: 要相談</span></td><td data-label="t1.6" data-say="要相談"><span class="mk mk--ask" aria-hidden="true">△</span><span class="sr-only">板厚1.6mm: 要相談</span></td><td data-label="t3.2" data-say="不可"><span class="mk mk--no" aria-hidden="true">×</span><span class="sr-only">板厚3.2mm: 不可</span></td><td data-label="t6.0" data-say="不可"><span class="mk mk--no" aria-hidden="true">×</span><span class="sr-only">板厚6.0mm: 不可</span></td></tr></tbody></table><p class="matrix-readout" id="mx-mini-out" aria-live="polite"></p></div><figure class="photo"><img src="assets/img/plates.webp" width="1200" height="900" alt="作業台に並んだ質感の異なる3枚の金属板" loading="lazy"><figcaption><b>MATERIAL</b><span>画像はAI生成のイメージです</span></figcaption></figure></div>
-    </div>
-  </section>
-
+  <!-- 見積もりの流れ -->
   <section class="sec sec--paper on-paper" aria-labelledby="flow-title">
     <div class="wrap">
-      <div class="sec-h"><h2 id="flow-title">見積もりの流れ</h2><div class="dim " aria-hidden="true"><span>問い合わせから 約2営業日</span></div></div>
+      <div class="sec-h"><h2 id="flow-title">見積もりの流れ</h2><div class="dim" aria-hidden="true"><span>問い合わせから 約2営業日</span></div></div>
       <ol class="chain">
-        <li><span class="span">当日</span><span class="st">STEP 1</span><h3>図面を送る</h3><p>フォームから図面と数量・希望納期を送ります。</p></li>
-        <li><span class="span">1営業日</span><span class="st">STEP 2</span><h3>図面を確認</h3><p>担当者が加工できるかを確かめ、不明点を質問します。</p></li>
-        <li><span class="span">2営業日以内</span><span class="st">STEP 3</span><h3>見積もりを回答</h3><p>金額・納期・できない点があればその理由を書きます。</p></li>
-        <li><span class="span">ご判断</span><span class="end" aria-hidden="true"></span><span class="st">STEP 4</span><h3>発注するか決める</h3><p>見積もりだけで終えても費用はかかりません。</p></li>
+        <li><span class="span">当日</span><span class="st">01</span><h3>図面を送る</h3><p>フォームから図面と数量・希望納期を送ります。</p></li>
+        <li><span class="span">1営業日</span><span class="st">02</span><h3>図面を確認</h3><p>担当者が加工できるかを確かめ、不明点を質問します。</p></li>
+        <li><span class="span">2営業日以内</span><span class="st">03</span><h3>見積もりを回答</h3><p>金額・納期・できない点があればその理由を書きます。</p></li>
+        <li><span class="span">ご判断</span><span class="end" aria-hidden="true"></span><span class="st">04</span><h3>発注するか決める</h3><p>見積もりだけで終えても費用はかかりません。</p></li>
       </ol>
       <dl class="need">
-        <div><dt>図面</dt><dd><b>PDF / DXF / STEP</b>。手書きの寸法図も相談可</dd></div>
+        <div><dt>図面</dt><dd><b>PDF / DXF / STEP</b>手書きの寸法図も相談可</dd></div>
         <div><dt>材質と板厚</dt><dd>未定なら用途を書いてください</dd></div>
-        <div><dt>数量</dt><dd><b>1〜500</b> 個。複数の数量での見積もりも可</dd></div>
+        <div><dt>数量</dt><dd><b>1–500</b>複数の数量での見積もりも可</dd></div>
         <div><dt>希望納期</dt><dd>「◯月中」など幅があってもかまいません</dd></div>
       </dl>
-      <p style="margin-top:22px"><a href="process.html">見積もりから納品までの手順書を見る →</a></p>
+      <p class="more-link"><a href="process.html">見積もりから納品までの手順書を見る<span aria-hidden="true"> →</span></a></p>
     </div>
   </section>
 
-  <section class="sec cant on-ink" aria-labelledby="cant-title">
-    <div class="wrap">
-      <div class="sec-h"><h2 id="cant-title">できないこと（先にお伝えします）</h2><div class="dim " aria-hidden="true"><span>範囲外 6 項目</span></div></div>
+  <!-- できないこと: 工場の写真の帯 -->
+  <section class="cant on-ink" aria-labelledby="cant-title">
+    <img class="cant__bg" src="assets/img/floor.webp" width="1200" height="900" alt="" loading="lazy">
+    <div class="wrap cant__in">
+      <div class="cant__head">
+        <h2 id="cant-title">できないことも、<br>先に書いてあります。</h2>
+        <p>範囲外の加工は、見積もりの前にお伝えします。合う加工先が分かる場合はご紹介します。</p>
+      </div>
       <ul class="cant__list">
-        <li><span class="mk mk--no" aria-hidden="true">×</span><div><b>板厚6mmを超える切断・曲げ</b><span>厚板・製缶は扱っていません。</span></div></li>
-        <li><span class="mk mk--no" aria-hidden="true">×</span><div><b>長さ2,000mmを超える曲げ</b><span>分割して溶接する案は相談できます。</span></div></li>
-        <li><span class="mk mk--no" aria-hidden="true">×</span><div><b>切削・旋盤加工、鋳物</b><span>板金の範囲だけを請け負います。</span></div></li>
-        <li><span class="mk mk--no" aria-hidden="true">×</span><div><b>塗装・めっきの自社施工</b><span>協力先へ手配します（<a href="materials.html#finish">表面処理</a>）。</span></div></li>
-        <li><span class="mk mk--no" aria-hidden="true">×</span><div><b>500個を超える継続量産</b><span>数量によっては他社をご紹介します。</span></div></li>
-        <li><span class="mk mk--no" aria-hidden="true">×</span><div><b>図面も寸法もない現物の複製</b><span>寸法の分かる資料をお願いしています。</span></div></li>
+        <li><span class="mk mk--no" aria-hidden="true">×</span><div><b>板厚6mmを超える切断・曲げ</b><span>厚板・製缶は扱っていません</span></div></li>
+        <li><span class="mk mk--no" aria-hidden="true">×</span><div><b>長さ2,000mmを超える曲げ</b><span>分割して溶接する案は相談できます</span></div></li>
+        <li><span class="mk mk--no" aria-hidden="true">×</span><div><b>切削・旋盤加工、鋳物</b><span>板金の範囲だけを請け負います</span></div></li>
+        <li><span class="mk mk--no" aria-hidden="true">×</span><div><b>塗装・めっきの自社施工</b><span>協力先へ手配します（<a href="materials.html#finish">表面処理</a>）</span></div></li>
+        <li><span class="mk mk--no" aria-hidden="true">×</span><div><b>500個を超える継続量産</b><span>数量によっては他社をご紹介します</span></div></li>
+        <li><span class="mk mk--no" aria-hidden="true">×</span><div><b>図面も寸法もない現物の複製</b><span>寸法の分かる資料をお願いしています</span></div></li>
       </ul>
     </div>
   </section>
 
+  <!-- よくある質問 -->
   <section class="sec" aria-labelledby="faq-title">
-    <div class="wrap">
-      <div class="sec-h"><h2 id="faq-title">よくある質問（抜粋）</h2><div class="dim " aria-hidden="true"><span>5 件</span></div></div>
+    <div class="wrap faq-wrap">
+      <div class="faq-wrap__h">
+        <h2 id="faq-title">よくある質問</h2>
+        <p>発注前によく聞かれる5件の抜粋です。</p>
+      </div>
       <div class="faq">
         <details><summary>1個だけの試作でも頼めますか？</summary><div><p>頼めます。1個からお受けしています。数量が少ないほど1個あたりの金額は上がるため、見積もりでは数量ごとの金額を並べてお出しすることもできます。</p></div></details>
         <details><summary>図面がCADデータでなくても大丈夫ですか？</summary><div><p>PDFや、寸法の入った手書きの図でも見積もりできます。DXFやSTEPがあれば、確認が早くなります。</p></div></details>
@@ -164,52 +192,52 @@
     </div>
   </section>
 
+  <!-- 見積もりの依頼 -->
   <section class="ask on-ink" aria-labelledby="ask-title">
+    <img class="ask__bg" src="assets/img/ubracket.webp" width="1400" height="583" alt="" loading="lazy">
     <div class="wrap ask__grid">
       <div>
-        <p class="eyebrow" style="color:#b8cbe0">見積もりの依頼</p>
         <h2 id="ask-title">図面・数量・希望納期。<br>3つあれば、見積もりできます。</h2>
-        <p>決まっていない項目があっても、そのまま送ってください。足りない情報は、こちらから質問します。営業の電話はしていません。</p>
+        <p>決まっていない項目があっても、そのまま送ってください。足りない情報は、こちらから質問します。</p>
         <div class="kv__acts">
           <a class="btn btn--act" href="contact.html">見積もりを依頼する（見本）<span class="arw" aria-hidden="true">→</span></a>
-          <a class="btn" href="process.html">見積もりから納品までを見る</a>
+          <a class="btn btn--ghost" href="process.html">見積もりから納品までを見る</a>
         </div>
       </div>
       <dl>
         <dt>図面の形式</dt><dd class="mono">PDF / DXF / STEP</dd>
-        <dt>数量</dt><dd class="mono">1〜500個</dd>
+        <dt>数量</dt><dd class="mono">1–500 個</dd>
         <dt>返信の目安</dt><dd>2営業日以内</dd>
         <dt>費用</dt><dd>見積もりは無料</dd>
       </dl>
     </div>
-    <p class="wrap note" style="color:#c9cfd6;margin-top:18px">数値はすべて見本上の設定で、目安です。</p>
   </section>
-
 </main>
 
-<footer class="site-foot">
+<footer class="site-foot on-ink">
   <div class="wrap foot__grid">
     <div>
-      <a class="logo" href="index.html" aria-label="精密板金 オリメ工業 トップへ"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M4 30 H24 V8" fill="none" stroke="#1f2328" stroke-width="5" stroke-linejoin="miter"/><path d="M24 8 H34" fill="none" stroke="#1f2328" stroke-width="5"/><path d="M4 36 H24" stroke="#2f5d8a" stroke-width="1"/><path d="M4 33 v6 M24 33 v6" stroke="#2f5d8a" stroke-width="1"/><path d="M24 30 l-6 -6" stroke="#ff6a13" stroke-width="2" stroke-dasharray="2 2"/></svg><span><b>オリメ工業</b><small>精密板金 / SHEET METAL</small></span></a>
+      <a class="logo" href="index.html" aria-label="精密板金 オリメ工業 トップへ"><svg viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M3 33 H18 V9 H38" fill="none" stroke="currentColor" stroke-width="5.5" stroke-linejoin="miter"/><path d="M12 39 L24 27 M12 15 L24 3" stroke="#ff6a13" stroke-width="1.6" stroke-dasharray="2.5 2"/></svg><span><b class="ff-d">オリメ工業</b><small>精密板金 ／ SHEET METAL</small></span></a>
       <dl>
         <dt>事業</dt><dd>薄板の精密板金（切断・曲げ・溶接・試作）</dd>
         <dt>所在地</dt><dd>架空県結ノ浦市 工業団地内</dd>
         <dt>受付</dt><dd>平日 8:30〜17:30</dd>
         <dt>見積もり</dt><dd>返信は2営業日以内</dd>
       </dl>
-      <p class="note" style="margin-top:10px">架空の事業です。所在地・数値・時間はすべて見本上の設定です。</p>
+      <p class="note">架空の事業です。所在地・数値・時間はすべて見本上の設定です。</p>
     </div>
     <div>
-      <p class="eyebrow">ページ</p>
+      <p class="foot__h">ページ</p>
       <ul><li><a href="index.html">トップ</a></li><li><a href="capabilities.html">加工範囲・設備</a></li><li><a href="materials.html">材質と板厚</a></li><li><a href="process.html">見積もりから納品まで</a></li><li><a href="contact.html">見積もり依頼</a></li></ul>
     </div>
     <div>
-      <p class="eyebrow">図面の取り扱い</p>
-      <p class="note" style="font-size:14px">お預かりした図面は、見積もりと製作のためだけに使います。秘密保持契約の締結にも対応します（見本上の設定）。</p>
-      <p class="updated">更新日 2026-10-15</p>
+      <p class="foot__h">図面の取り扱い</p>
+      <p class="note">お預かりした図面は、見積もりと製作のためだけに使います。秘密保持契約の締結にも対応します（見本上の設定）。</p>
+      <p class="updated">更新日 2026.10.15</p>
     </div>
   </div>
 </footer>
+
 <aside class="ca-credit" aria-labelledby="ca-credit-title">
   <p class="ca-credit__label">この見本サイトについて</p>
   <h2 id="ca-credit-title">Web診断36「CA31 堅実情報型サイト」の設計方針で、クルーアセントが制作した見本です。</h2>

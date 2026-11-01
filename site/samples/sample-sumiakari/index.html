@@ -9,9 +9,10 @@
 <link rel="icon" href="../../assets/brand/icon-32.png" sizes="32x32">
 <link rel="stylesheet" href="../_shared/crew-frame.css?v=20261015">
 <script defer src="../_shared/crew-frame.js?v=20261015"></script>
-<link rel="stylesheet" href="assets/sumiakari.css">
+<link rel="preload" href="fonts/sumiakari-min-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/sumiakari.css?v=3">
 <script>document.documentElement.classList.add('js');</script>
-<script defer src="assets/sumiakari.js"></script>
+<script defer src="assets/sumiakari.js?v=3"></script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ移動</a>
@@ -22,283 +23,245 @@
 </div>
 <header class="site-head">
   <div class="wrap">
-    <a class="logo" href="index.html"><svg viewBox="0 0 230 60" width="230" height="60" role="img" aria-label="書の教室 墨灯（すみあかり）"><rect x="2" y="4" width="52" height="52" rx="3" fill="#b7282e"/><rect x="7" y="9" width="42" height="42" fill="none" stroke="#f4efe4" stroke-width="1.2"/><text x="28" y="28" text-anchor="middle" font-size="18" fill="#f4efe4" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, Noto Serif CJK JP, IPAexMincho, IPAMincho, IPAGothic, serif">墨</text><text x="28" y="47" text-anchor="middle" font-size="18" fill="#f4efe4" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, Noto Serif CJK JP, IPAexMincho, IPAMincho, IPAGothic, serif">灯</text><text class="t" x="70" y="20" font-size="12" letter-spacing="4" fill="#1c1b19" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, Noto Serif CJK JP, IPAexMincho, IPAMincho, IPAGothic, serif">書の教室</text><text class="t" x="68" y="50" font-size="30" font-weight="600" letter-spacing="10" fill="#1c1b19" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, Noto Serif CJK JP, IPAexMincho, IPAMincho, IPAGothic, serif">墨灯</text><text class="t" x="150" y="49" font-size="11" letter-spacing="3" fill="#1c1b19" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, Noto Serif CJK JP, IPAexMincho, IPAMincho, IPAGothic, serif">すみあかり</text></svg></a>
-    <nav class="anav" aria-label="このページの中">
-      <a href="#kangae">考え方</a><a href="#keiko">稽古</a><a href="#fee">月謝</a><a href="#nittei">日程</a><a href="#dougu">道具</a><a href="#basho">場所</a><a href="#toi">質問</a>
-    </nav>
-    <div class="head-cta"><a class="btn btn--line" href="#apply" style="min-height:48px;padding:6px 18px;font-size:15px">体験の申し込み</a></div>
+    <a class="logo" href="index.html"><svg viewBox="0 0 220 58" width="220" height="58" role="img" aria-label="書の教室 墨灯（すみあかり）"><rect x="2" y="4" width="50" height="50" fill="#b7282e" transform="rotate(-3 27 29)"/><rect x="7" y="9" width="40" height="40" fill="none" stroke="#f4efe4" stroke-width="1.2" transform="rotate(-3 27 29)"/><text x="27" y="27" text-anchor="middle" font-size="17" font-weight="600" fill="#f4efe4" data-font="min600" font-family="SumiMincho, Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, serif" transform="rotate(-3 27 29)">墨</text><text x="27" y="46" text-anchor="middle" font-size="17" font-weight="600" fill="#f4efe4" data-font="min600" font-family="SumiMincho, Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, serif" transform="rotate(-3 27 29)">灯</text><text x="68" y="20" font-size="12" letter-spacing="5" fill="#1c1b19" data-font="min500" font-family="SumiMincho, Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, serif">書の教室</text><text x="66" y="51" font-size="29" font-weight="600" letter-spacing="10" fill="#1c1b19" data-font="min600" font-family="SumiMincho, Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, serif">墨灯</text><text x="146" y="50" font-size="11" letter-spacing="3" fill="#1c1b19" data-font="min500" font-family="SumiMincho, Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, serif">すみあかり</text></svg></a>
+    <nav class="gnav" aria-label="ページ内"><a href="#kangae">考え方</a><a href="#keiko">稽古</a><a href="#nagare">流れ</a><a href="#fee">月謝・日程</a><a href="#dougu">道具</a><a href="#basho">場所</a></nav>
+    <a class="btn btn--line head-cta" href="#apply">体験の申し込み</a>
   </div>
 </header>
 <main id="main">
 
 <section class="hero" aria-labelledby="h1">
-  <div class="wrap">
-    <div class="hero__title">
-      <h1 id="h1"><span>一筆に、</span><span>いまの自分が出る。</span></h1>
-      <p class="hero__sub">風見坂の古民家でひらく、書の教室</p>
-    </div>
-    <div class="hero__main">
-      <figure class="hero__stroke" style="margin-top:0"><svg viewBox="0 0 1000 300" width="1000" height="300" role="img" aria-labelledby="st-t">
-<title id="st-t">和紙の上に、左から右へ一本の太い墨の線が引かれ、線の終わりの右下に朱の落款が押されている</title>
+  <div class="wrap hero__grid">
+    <figure class="hero__stroke"><svg viewBox="0 0 1000 470" width="1000" height="470" role="img" aria-labelledby="st-t">
+<title id="st-t">和紙の上に、左から右上へ払う太い墨の一画。その墨の中に、障子から光の入る座敷と文机が見える。一画の終わりに朱の落款が押されている</title>
 <defs>
-  <filter id="nijimi" x="-5%" y="-20%" width="110%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.035 0.09" numOctaves="3" seed="7"/><feDisplacementMap in="SourceGraphic" scale="9"/></filter>
-  <filter id="hanko" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="2" seed="2"/><feDisplacementMap in="SourceGraphic" scale="2.4"/></filter>
-  <mask id="fude" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="300"><rect class="ink-reveal" x="0" y="0" width="1000" height="300" fill="#fff"/></mask>
+  <filter id="nijimi" x="-6%" y="-20%" width="112%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.022 0.06" numOctaves="3" seed="11"/><feDisplacementMap in="SourceGraphic" scale="16"/></filter>
+  <filter id="hanko" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="2.6"/></filter>
+  <path id="fude" d="M52 232 C58 150 150 116 262 126 C430 140 618 126 800 106 C880 97 948 84 996 66 C962 108 892 148 800 178 C622 238 432 326 272 368 C160 398 72 382 50 322 C44 292 46 260 52 232 Z"/>
+  <mask id="fude-m" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="470"><use href="#fude" fill="#fff" filter="url(#nijimi)"/></mask>
+  <linearGradient id="sumi-g" x1="0" x2="1" y1="0" y2="0"><stop offset=".42" stop-color="#1c1b19" stop-opacity="0"/><stop offset=".78" stop-color="#1c1b19" stop-opacity=".9"/><stop offset="1" stop-color="#1c1b19"/></linearGradient>
+  <mask id="reveal" maskUnits="userSpaceOnUse" x="-20" y="0" width="1040" height="470"><rect class="ink-reveal" x="-20" y="0" width="1040" height="470" fill="#fff"/></mask>
 </defs>
-<line x1="0" y1="262" x2="1000" y2="262" stroke="#a68a4a" stroke-width="1"/>
-<g mask="url(#fude)">
-  <g filter="url(#nijimi)" fill="#1c1b19">
-    <path d="M56 136 L98 104 C150 100 190 112 250 122 C330 134 420 136 520 132 C620 128 700 122 780 116 C850 111 910 108 960 110 L992 112 C960 118 920 124 870 130 C800 140 720 152 640 160 C540 170 440 172 340 172 C260 172 190 176 140 182 C100 186 66 178 62 150 Z"/>
-    <path d="M70 134 C84 112 110 104 140 106 C112 114 94 124 84 142 Z" opacity=".5"/>
-  </g>
-  <g fill="none" stroke="#f4efe4" stroke-linecap="round">
-    <path d="M520 140 C640 134 760 124 900 116" stroke-width="2.2" stroke-dasharray="30 18 70 12 90 40"/>
-    <path d="M560 152 C680 144 780 134 900 124" stroke-width="1.8" stroke-dasharray="50 22 40 30 120"/>
-    <path d="M600 160 C700 152 790 142 880 132" stroke-width="2.6" stroke-dasharray="80 16 30 24 60"/>
-    <path d="M460 160 C560 158 640 154 720 148" stroke-width="1.4" stroke-dasharray="20 40 60 30"/>
+<g mask="url(#reveal)">
+  <use href="#fude" fill="#1c1b19" stroke="#1c1b19" stroke-width="12" stroke-linejoin="round" filter="url(#nijimi)"/>
+  <g mask="url(#fude-m)">
+    <image href="assets/img/room.webp" x="-10" y="-150" width="1020" height="765" preserveAspectRatio="xMidYMid slice"/>
+    <rect x="0" y="0" width="1000" height="470" fill="url(#sumi-g)"/>
   </g>
   <g fill="none" stroke="#1c1b19" stroke-linecap="round" filter="url(#nijimi)">
-    <path d="M760 128 C840 120 900 114 996 112" stroke-width="3" stroke-dasharray="90 14 40 22 120 30" opacity=".85"/>
-    <path d="M620 168 C740 156 850 142 960 136" stroke-width="2.4" stroke-dasharray="60 26 140 18 30 40" opacity=".8"/>
-    <path d="M600 182 C720 172 820 160 930 150" stroke-width="2" stroke-dasharray="120 34 50 30" opacity=".7"/>
-    <path d="M660 140 C780 128 880 118 1000 116" stroke-width="1.6" stroke-dasharray="40 30 80 20" opacity=".7"/>
+    <path d="M560 184 C680 160 800 128 940 90" stroke-width="5" stroke-dasharray="70 18 120 26 60 40" opacity=".9"/>
+    <path d="M520 214 C650 190 780 154 920 110" stroke-width="3" stroke-dasharray="40 24 90 14 130" opacity=".8"/>
+    <path d="M610 230 C720 204 830 170 960 120" stroke-width="4" stroke-dasharray="110 30 50 22 80" opacity=".85"/>
   </g>
+  <g fill="#1c1b19"><circle cx="34" cy="214" r="5"/><circle cx="22" cy="246" r="3"/><circle cx="40" cy="352" r="4"/><circle cx="992" cy="52" r="3"/></g>
 </g>
-<g class="rakkan">
-  <rect x="860" y="166" width="72" height="72" rx="3" fill="#b7282e" filter="url(#hanko)" transform="rotate(-3 896 202)"/>
-  <rect x="867" y="173" width="58" height="58" fill="none" stroke="#f4efe4" stroke-width="1.6" transform="rotate(-3 896 202)"/>
-  <text x="896" y="198" text-anchor="middle" font-size="24" fill="#f4efe4" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, Noto Serif CJK JP, IPAexMincho, IPAMincho, IPAGothic, serif" transform="rotate(-3 896 202)">墨</text>
-  <text x="896" y="226" text-anchor="middle" font-size="24" fill="#f4efe4" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, Noto Serif CJK JP, IPAexMincho, IPAMincho, IPAGothic, serif" transform="rotate(-3 896 202)">灯</text>
+<g class="rakkan" transform="rotate(-4 900 300)">
+  <rect x="862" y="262" width="76" height="76" fill="#b7282e" filter="url(#hanko)"/>
+  <rect x="869" y="269" width="62" height="62" fill="none" stroke="#f4efe4" stroke-width="1.6"/>
+  <text x="900" y="296" text-anchor="middle" font-size="25" font-weight="600" fill="#f4efe4" data-font="min600" font-family="SumiMincho, Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, serif">墨</text>
+  <text x="900" y="325" text-anchor="middle" font-size="25" font-weight="600" fill="#f4efe4" data-font="min600" font-family="SumiMincho, Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, serif">灯</text>
 </g>
 </svg></figure>
-      <p class="hero__lead">手本をなぞる前に、自分の字の癖を知るところから始める書道教室です（架空）。筆を持ったことがない方も、久しぶりの方も。道具は教室でお貸しします。</p>
-      <ul class="hero__facts">
-        <li>大人の稽古<b>月2回・90分</b></li>
-        <li>子どもの稽古<b>月3回・60分</b></li>
-        <li>月謝<b>4,400円から</b></li>
-        <li>体験<b>90分・1,100円</b></li>
+    <div class="hero__title">
+      <h1 id="h1" class="tate"><span class="ln">一筆に、</span><span class="ln">いまの自分が出る。</span></h1>
+      <p class="hero__sub tate">風見坂の古民家でひらく、書の教室</p>
+    </div>
+    <p class="hero__lead">手本をなぞる前に、自分の字の癖を知るところから始める書道教室です（架空）。筆を持ったことがない方も、久しぶりの方も。道具は教室でお貸しします。</p>
+    <div class="hero__facts">
+      <ul class="facts">
+        <li>体験・90分<span class="yen">1,100<small>円</small></span></li>
+        <li>大人の稽古・月2回<span class="yen">6,600<small>円／月</small></span></li>
+        <li>子どもの稽古・月3回<span class="yen">4,400<small>円／月</small></span></li>
       </ul>
-      <div class="hero__acts">
-        <a class="btn btn--shu" href="#apply" data-sample-action="体験を申し込む"><span class="seal-dot" aria-hidden="true"></span>体験を申し込む（見本）</a>
-        <a class="btn btn--line" href="#fee">稽古の日程と月謝を見る</a>
-      </div>
-      <ul class="assure"><li>体験は90分・1,100円</li><li>道具は貸し出し、手ぶらで可</li><li>入会をお勧めすることはありません</li></ul>
-      <p class="price-note" style="margin-top:8px">料金は税込・見本用の架空価格です。<a href="#flow">一回の稽古の流れ</a>・<a href="#dougu">用意する道具</a>も先に確かめられます。</p>
+      <p class="fine" style="margin-top:8px">税込・見本用の架空価格。入会金 3,300円。<a href="#fee">月謝と日程の詳しい表</a></p>
+    </div>
+    <div class="hero__acts">
+      <a class="btn btn--shu" href="#apply" data-sample-action="体験を申し込む">体験を申し込む（見本）</a>
+      <a class="btn btn--line" href="#fee">稽古の日程と月謝を見る</a>
+      <ul class="assure"><li>道具は貸し出し、手ぶらで可</li><li>入会をお勧めすることはありません</li></ul>
     </div>
   </div>
 </section>
 
-<figure class="band">
-  <img src="assets/img/room.webp" width="1200" height="900" loading="lazy" alt="障子から光の入る畳の部屋に、低い文机が二つ。机の上に下敷き、半紙、硯、筆が置かれている">
-  <figcaption>稽古の部屋のイメージ。画像はAI生成のイメージで、実在の教室ではありません。</figcaption>
-</figure>
-
-<section class="sec" id="kangae" aria-labelledby="s1">
-  <div class="wrap">
-    <div class="sec__body">
-      <div class="kuse-wrap">
-        <div>
-          <p class="prose">最初の稽古では、手本を見ずに、いつもの字で名前を書いていただきます。そこに出る癖は、直すものというより知っておくもの。癖が分かると、手本のどこを見ればよいかが分かります。</p>
-        </div>
-        <figure style="margin:0">
-          <img src="assets/img/brush.webp" width="1200" height="900" loading="lazy" alt="陶器の筆置きに置かれた、穂先の長い筆">
-          <figcaption class="photo-cap">画像はAI生成のイメージです。</figcaption>
-        </figure>
-      </div>
-      <ol class="kuse" aria-label="よく見つかる癖の例"><li><svg viewBox="0 0 112 56" width="112" height="56" aria-hidden="true" focusable="false"><path d="M8 44 C30 38 70 22 104 12 L106 18 C72 30 34 46 10 52 Z" fill="#1c1b19"/></svg><div><h3>右上がりになる</h3><p>横画が右へ上がっていく癖。字全体が傾いて見えます。</p></div></li><li><svg viewBox="0 0 112 56" width="112" height="56" aria-hidden="true" focusable="false"><path d="M8 26 C40 22 76 22 96 24 C100 25 104 28 106 34 C98 30 72 30 10 34 Z" fill="#1c1b19"/><path d="M96 26 C106 36 110 44 108 52" stroke="#1c1b19" stroke-width="2" fill="none" stroke-linecap="round"/></svg><div><h3>止めが流れる</h3><p>止めるところで筆が止まらず、すっと抜けてしまう癖。</p></div></li><li><svg viewBox="0 0 112 56" width="112" height="56" aria-hidden="true" focusable="false"><rect x="14" y="10" width="34" height="36" fill="none" stroke="#1c1b19" stroke-width="4"/><rect x="52" y="10" width="34" height="36" fill="none" stroke="#1c1b19" stroke-width="4"/><path d="M90 28h16" stroke="#b7282e" stroke-width="2"/></svg><div><h3>字と字が詰まる</h3><p>一字ずつは整っていても、並べると息苦しく見える癖。</p></div></li></ol>
+<section class="sec dark" id="kangae" aria-labelledby="s1">
+  <div class="wrap kangae">
+    <figure class="kangae__photo"><img src="assets/img/write.webp" width="1100" height="825" loading="lazy" alt="黒い下敷きの上の半紙に、筆で線を書き始めている手元"><figcaption>稽古のイメージ（AI生成）</figcaption></figure>
+    <div class="kangae__body">
+      <p class="prose">最初の稽古では、手本を見ずに、いつもの字で名前を書いていただきます。そこに出る癖は、直すものというより知っておくもの。癖が分かると、手本のどこを見ればよいかが分かります。</p>
+      <ol class="kuse" aria-label="よく見つかる癖の例">
+        <li><svg viewBox="0 0 112 56" width="112" height="56" aria-hidden="true" focusable="false"><path d="M8 44 C30 38 70 22 104 12 L106 18 C72 30 34 46 10 52 Z" fill="#f4efe4"/><path d="M8 40 H106" stroke="#b7282e" stroke-width="1.5" stroke-dasharray="4 4"/></svg><div><h3>右上がりになる</h3><p>横画が右へ上がっていき、字全体が傾いて見える。</p></div></li>
+        <li><svg viewBox="0 0 112 56" width="112" height="56" aria-hidden="true" focusable="false"><path d="M8 26 C40 22 76 22 96 24 C100 25 104 28 106 34 C98 30 72 30 10 34 Z" fill="#f4efe4"/><path d="M96 26 C106 36 110 44 108 52" stroke="#f4efe4" stroke-width="2" fill="none" stroke-linecap="round"/></svg><div><h3>止めが流れる</h3><p>止めるところで筆が止まらず、すっと抜けてしまう。</p></div></li>
+        <li><svg viewBox="0 0 112 56" width="112" height="56" aria-hidden="true" focusable="false"><rect x="14" y="10" width="36" height="36" fill="none" stroke="#f4efe4" stroke-width="4"/><rect x="52" y="10" width="36" height="36" fill="none" stroke="#f4efe4" stroke-width="4"/><path d="M50 52h2" stroke="#b7282e" stroke-width="3"/></svg><div><h3>字と字が詰まる</h3><p>一字ずつは整っていても、並べると息苦しく見える。</p></div></li>
+      </ol>
     </div>
-    <div class="sec__head"><span class="sec__seal"><svg viewBox="0 0 34 34" width="34" height="34" aria-hidden="true" focusable="false"><rect x="1" y="1" width="32" height="32" rx="2" fill="#b7282e" filter="url(#hanko)"/><rect x="4" y="4" width="26" height="26" fill="none" stroke="#f4efe4" stroke-width="1"/><text x="17" y="24" text-anchor="middle" font-size="18" fill="#f4efe4" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, Noto Serif CJK JP, IPAexMincho, IPAMincho, IPAGothic, serif">一</text></svg></span><h2 id="s1"><span class="ln">自分の字の癖を、</span><span class="ln">まず知る。</span></h2><p class="sec__kick">教室の考え方</p></div>
+    <div class="ttl"><span class="seal" aria-hidden="true">一</span><h2 id="s1" class="tate"><span class="ln">自分の字の癖を、</span><span class="ln">まず知る。</span></h2><p class="kick tate">教室の考え方</p></div>
   </div>
 </section>
 
 <section class="sec" id="keiko" aria-labelledby="s2">
-  <div class="wrap">
-    <div class="sec__body">
+  <div class="wrap keiko">
+    <div class="ttl"><span class="seal" aria-hidden="true">二</span><h2 id="s2" class="tate"><span class="ln">手ぶらで、</span><span class="ln">はじめから。</span></h2><p class="kick tate">稽古の内容</p></div>
+    <div class="keiko__main">
+      <figure class="keiko__photo"><img src="assets/img/desks.webp" width="1100" height="825" loading="lazy" alt="障子の光が入る部屋の長机に、黒い下敷き・半紙・硯・筆が二人分そろえて置かれている"><figcaption class="cap">一回6名まで。机の上の道具は教室でそろえます。（AI生成のイメージ）</figcaption></figure>
       <div class="courses">
-        <figure class="course__img"><img src="assets/img/setup.webp" width="800" height="600" loading="lazy" alt="黒い下敷きの上に、半紙・文鎮・筆・硯がそろえて置かれている"><figcaption class="photo-cap">机の上の道具は教室でそろえます。（AI生成のイメージ）</figcaption></figure>
         <div class="course">
-          <h3>大人の稽古</h3>
-          <p class="meta">月2回・各90分・1回6名まで</p>
+          <h3>大人の稽古<small>月2回・各90分</small></h3>
           <ul>
             <li>はじめての方は、楷書の基本の線から</li>
             <li>再開の方は、書きたい書体から</li>
-            <li>火・木の夜か土曜の昼から、月に2回</li>
+            <li>火・木の夜か土曜の昼から、月に2回を選ぶ</li>
           </ul>
         </div>
         <div class="course">
-          <h3>子どもの稽古</h3>
-          <p class="meta">小学生・月3回・各60分・1回6名まで</p>
+          <h3>子どもの稽古<small>小学生・月3回・各60分</small></h3>
           <ul>
             <li>筆の持ち方と、とめ・はね・はらいから</li>
-            <li>学校の書写・書き初めの課題も</li>
+            <li>学校の書写や、書き初めの課題も</li>
             <li>土曜の午前、第1〜第3週</li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="sec__head"><span class="sec__seal"><svg viewBox="0 0 34 34" width="34" height="34" aria-hidden="true" focusable="false"><rect x="1" y="1" width="32" height="32" rx="2" fill="#b7282e" filter="url(#hanko)"/><rect x="4" y="4" width="26" height="26" fill="none" stroke="#f4efe4" stroke-width="1"/><text x="17" y="24" text-anchor="middle" font-size="18" fill="#f4efe4" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, Noto Serif CJK JP, IPAexMincho, IPAMincho, IPAGothic, serif">二</text></svg></span><h2 id="s2"><span class="ln">手ぶらで、</span><span class="ln">はじめから。</span></h2><p class="sec__kick">稽古の内容</p></div>
   </div>
 </section>
 
-<section class="sec" id="flow" aria-labelledby="s3">
-  <div class="wrap">
-    <div class="sec__body">
-      <ol class="flow" tabindex="0" aria-label="一回の稽古の流れ（大人・九十分）">
-        <li><span class="t">十分</span><b>墨をする</b><p>墨をすって、手を落ち着ける</p></li>
-        <li><span class="t">十分</span><b>手本を見る</b><p>筆の入りと抜きを一緒に見る</p></li>
-        <li><span class="t">二十分</span><b>いつもの字で書く</b><p>手本を横に置き、自分の字で</p></li>
-        <li><span class="t">十五分</span><b>癖を見つける</b><p>手本と並べ、違いを一つ</p></li>
-        <li><span class="t">三十分</span><b>もう一度書く</b><p>その一つだけを意識して</p></li>
+<section class="sec flow-sec" id="nagare" aria-labelledby="s3">
+  <div class="wrap flow-wrap">
+    <figure class="flow-photo"><img src="assets/img/brush.webp" width="1000" height="750" loading="lazy" alt="白い陶器の筆置きに、穂先の長い筆が置かれている"></figure>
+    <div>
+      <ol class="flow" aria-label="一回の稽古の流れ（大人・九十分）">
+        <li><span class="t">十分</span><b>墨をする</b><p>手を落ち着ける</p></li>
+        <li><span class="t">十分</span><b>手本を見る</b><p>筆の入りと抜きを</p></li>
+        <li><span class="t">二十分</span><b>いつもの字で</b><p>手本を横に置いて</p></li>
+        <li><span class="t">十五分</span><b>癖を見つける</b><p>違いを一つだけ</p></li>
+        <li><span class="t">三十分</span><b>もう一度書く</b><p>その一つを意識して</p></li>
         <li><span class="t">五分</span><b>片づける</b><p>今日の一枚を持ち帰る</p></li>
       </ol>
-      <p class="flow-note">大人の稽古（90分）の例です。子どもの稽古（60分）は、墨をする時間を短くして同じ順で進めます。</p>
+      <p class="fine flow-note">大人の稽古（90分）の例です。子どもの稽古（60分）は、墨をする時間を短くして同じ順で進めます。<span class="no-sp">筆の写真はAI生成のイメージです。</span></p>
     </div>
-    <div class="sec__head"><span class="sec__seal"><svg viewBox="0 0 34 34" width="34" height="34" aria-hidden="true" focusable="false"><rect x="1" y="1" width="32" height="32" rx="2" fill="#b7282e" filter="url(#hanko)"/><rect x="4" y="4" width="26" height="26" fill="none" stroke="#f4efe4" stroke-width="1"/><text x="17" y="24" text-anchor="middle" font-size="18" fill="#f4efe4" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, Noto Serif CJK JP, IPAexMincho, IPAMincho, IPAGothic, serif">三</text></svg></span><h2 id="s3"><span class="ln">静かな九十分を、</span><span class="ln">月に二度。</span></h2><p class="sec__kick">一回の稽古の流れ</p></div>
+    <div class="ttl"><span class="seal" aria-hidden="true">三</span><h2 id="s3" class="tate"><span class="ln">静かな九十分を、</span><span class="ln">月に二度。</span></h2><p class="kick tate">一回の稽古の流れ</p></div>
   </div>
 </section>
 
 <section class="sec" id="fee" aria-labelledby="s4">
   <div class="wrap">
-    <div class="sec__body">
-      <table class="price">
-        <caption class="sr-only">月謝と体験の料金（税込・見本用の架空価格）</caption>
-        <thead><tr><th scope="col">稽古</th><th scope="col">内容</th><th scope="col">料金（税込）</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">大人の稽古</th><td>月2回・各90分</td><td><span class="yen">6,600<small>円／月</small></span></td></tr>
-          <tr><th scope="row">子どもの稽古</th><td>月3回・各60分（小学生）</td><td><span class="yen">4,400<small>円／月</small></span></td></tr>
-          <tr><th scope="row">体験</th><td>90分・道具の貸し出し込み</td><td><span class="yen">1,100<small>円</small></span></td></tr>
-          <tr><th scope="row">入会金</th><td>入会時のみ</td><td><span class="yen">3,300<small>円</small></span></td></tr>
-        </tbody>
-      </table>
-      <p class="price-note">税込・見本用の架空価格。半紙と墨汁は月謝に含み、教材費はかかりません。<br>入会した月の例（大人）: 入会金 3,300円 ＋ 月謝 6,600円 ＝ 9,900円</p>
-      <div class="cta-row">
-        <p>まずは一度、90分の体験へ。道具はお貸しするので、手ぶらでお越しください。</p>
-        <a class="btn btn--shu" href="#apply" data-sample-action="体験を申し込む"><span class="seal-dot" aria-hidden="true"></span>体験を申し込む（見本）</a>
+    <div class="fee-head"><span class="seal" aria-hidden="true">四</span><h2 id="s4">月謝と、稽古の日。</h2><p class="kick">料金は横書きで、はっきりと</p></div>
+    <div class="fee">
+      <div>
+        <ul class="price" aria-label="月謝と体験の料金（税込）">
+          <li><b>大人の稽古</b><span>月2回・各90分</span><span class="yen">6,600<small>円／月</small></span></li>
+          <li><b>子どもの稽古</b><span>月3回・各60分（小学生）</span><span class="yen">4,400<small>円／月</small></span></li>
+          <li><b>体験</b><span>90分・道具の貸し出し込み</span><span class="yen">1,100<small>円</small></span></li>
+          <li><b>入会金</b><span>入会時のみ</span><span class="yen">3,300<small>円</small></span></li>
+        </ul>
+        <p class="fine price-note">すべて税込・見本用の架空価格。半紙と墨汁は月謝に含み、教材費はかかりません。入会した月の例（大人）: 入会金 3,300円 ＋ 月謝 6,600円 ＝ 9,900円。</p>
+      </div>
+      <div class="sched-wrap" id="nittei">
+        <h3>稽古の日</h3>
+        <table class="sched">
+          <caption class="sr-only">稽古日程（見本上の設定）</caption>
+          <thead><tr><th scope="col"><span class="sr-only">時間</span></th><th scope="col">火</th><th scope="col">木</th><th scope="col">土</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">10:00〜11:00</th><td class="off">—</td><td class="off">—</td><td><span class="k">子ども</span>第1〜3週</td></tr>
+            <tr><th scope="row">11:15〜12:45</th><td class="off">—</td><td class="off">—</td><td><span class="k">大人</span>毎週</td></tr>
+            <tr><th scope="row">18:30〜20:00</th><td><span class="k">大人</span>毎週</td><td><span class="k">大人</span>毎週</td><td class="off">—</td></tr>
+          </tbody>
+        </table>
+        <p class="fine" style="margin-top:10px">各回6名まで。大人はこの中から月に2回を選んで予約します。日程は見本上の設定です。</p>
       </div>
     </div>
-    <div class="sec__head"><span class="sec__seal"><svg viewBox="0 0 34 34" width="34" height="34" aria-hidden="true" focusable="false"><rect x="1" y="1" width="32" height="32" rx="2" fill="#b7282e" filter="url(#hanko)"/><rect x="4" y="4" width="26" height="26" fill="none" stroke="#f4efe4" stroke-width="1"/><text x="17" y="24" text-anchor="middle" font-size="18" fill="#f4efe4" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, Noto Serif CJK JP, IPAexMincho, IPAMincho, IPAGothic, serif">四</text></svg></span><h2 id="s4"><span class="ln">月謝と、</span><span class="ln">体験の料金。</span></h2><p class="sec__kick">料金</p></div>
   </div>
 </section>
 
-<section class="sec" id="nittei" aria-labelledby="s5">
-  <div class="wrap">
-    <div class="sec__body">
-      <div class="scroll" tabindex="0" role="region" aria-label="稽古日程の表（横に動かせます）">
-      <table class="sched">
-        <caption class="sr-only">稽古日程（見本上の設定）</caption>
-        <thead><tr><th scope="col">時間</th><th scope="col">火</th><th scope="col">木</th><th scope="col">土</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">10:00〜11:00</th><td class="off">—</td><td class="off">—</td><td><span class="k k--kid">子ども</span>第1〜第3週</td></tr>
-          <tr><th scope="row">11:15〜12:45</th><td class="off">—</td><td class="off">—</td><td><span class="k k--adult">大人</span>毎週</td></tr>
-          <tr><th scope="row">18:30〜20:00</th><td><span class="k k--adult">大人</span>毎週</td><td><span class="k k--adult">大人</span>毎週</td><td class="off">—</td></tr>
-        </tbody>
-      </table>
-      </div>
-      <p class="price-note">各回6名までです。大人は、この中から月に2回を選んで予約します。日程は見本上の設定です。</p>
+<section class="dougu" id="dougu" aria-labelledby="s5">
+  <img src="assets/img/tools.webp" width="1200" height="900" loading="lazy" alt="巻きすに収めた筆、硯、朱の紐、重ねた半紙が机に置かれている">
+  <p class="cap">道具のイメージ（AI生成）</p>
+  <div class="wrap" style="width:100%">
+    <div class="dougu__panel">
+      <dl>
+        <div><dt>体験</dt><dd>筆・硯・文鎮・下敷き・半紙を、すべてお貸しします。汚れてもよい服でお越しください。</dd></div>
+        <div><dt>入会後</dt><dd>教室の道具を続けて借りられます。貸し出しの費用はかかりません。</dd></div>
+        <div><dt>買う場合</dt><dd>筆・硯・文鎮・下敷きの一式で、5,500円前後が目安です（見本用の架空価格）。急いで揃える必要はありません。</dd></div>
+        <div><dt>持ち物</dt><dd>体験は手ぶらで構いません。続ける方は、書いた半紙を入れる袋があると便利です。</dd></div>
+      </dl>
+      <div class="ttl"><span class="seal" aria-hidden="true">五</span><h2 id="s5" class="tate"><span class="ln">道具は、</span><span class="ln">お貸しします。</span></h2><p class="kick tate">貸し出しと購入の目安</p></div>
     </div>
-    <div class="sec__head"><span class="sec__seal"><svg viewBox="0 0 34 34" width="34" height="34" aria-hidden="true" focusable="false"><rect x="1" y="1" width="32" height="32" rx="2" fill="#b7282e" filter="url(#hanko)"/><rect x="4" y="4" width="26" height="26" fill="none" stroke="#f4efe4" stroke-width="1"/><text x="17" y="24" text-anchor="middle" font-size="18" fill="#f4efe4" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, Noto Serif CJK JP, IPAexMincho, IPAMincho, IPAGothic, serif">五</text></svg></span><h2 id="s5"><span class="ln">稽古の日。</span></h2><p class="sec__kick">日程</p></div>
   </div>
 </section>
 
-<section class="sec" id="dougu" aria-labelledby="s6">
-  <div class="wrap">
-    <div class="sec__body">
-      <div class="dougu">
-        <figure style="margin:0">
-          <img src="assets/img/tools.webp" width="1200" height="900" loading="lazy" alt="巻きすに入った筆、硯、重ねた半紙">
-          <figcaption class="photo-cap">画像はAI生成のイメージです。</figcaption>
-        </figure>
-        <dl>
-          <div><dt>体験</dt><dd>筆・硯・文鎮・下敷き・半紙を、すべてお貸しします。汚れてもよい服でお越しください。</dd></div>
-          <div><dt>入会後</dt><dd>教室の道具を続けて借りられます。貸し出しの費用はかかりません。</dd></div>
-          <div><dt>買う場合</dt><dd>筆・硯・文鎮・下敷きの一式で、5,500円前後が目安です（見本用の架空価格）。急いで揃える必要はありません。</dd></div>
-          <div><dt>持ち物</dt><dd>体験は手ぶらで構いません。続ける方は、書いた半紙を入れる袋があると便利です。</dd></div>
-        </dl>
-      </div>
-    </div>
-    <div class="sec__head"><span class="sec__seal"><svg viewBox="0 0 34 34" width="34" height="34" aria-hidden="true" focusable="false"><rect x="1" y="1" width="32" height="32" rx="2" fill="#b7282e" filter="url(#hanko)"/><rect x="4" y="4" width="26" height="26" fill="none" stroke="#f4efe4" stroke-width="1"/><text x="17" y="24" text-anchor="middle" font-size="18" fill="#f4efe4" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, Noto Serif CJK JP, IPAexMincho, IPAMincho, IPAGothic, serif">六</text></svg></span><h2 id="s6"><span class="ln">道具のこと。</span></h2><p class="sec__kick">貸し出しと購入の目安</p></div>
-  </div>
-</section>
-
-<section class="sec" id="basho" aria-labelledby="s7">
-  <div class="wrap">
-    <div class="sec__body">
-      <div class="access">
-        <figure style="margin:0"><svg viewBox="0 0 640 400" width="640" height="400" role="img" aria-labelledby="map-t">
-<title id="map-t">架空の地図: 風見坂駅を出て、ゆるい坂道（風見坂）を上ること歩いて8分。坂の途中、二本目の角を左に入った古民家が教室</title>
-<rect width="640" height="400" fill="#ebe4d5"/>
-<path d="M0 330 C120 320 220 300 300 260 C380 220 460 150 640 110" fill="none" stroke="#f4efe4" stroke-width="34" stroke-linecap="round"/>
-<path d="M0 330 C120 320 220 300 300 260 C380 220 460 150 640 110" fill="none" stroke="#8c8a84" stroke-width="1"/>
-<path d="M410 196 L380 90" stroke="#f4efe4" stroke-width="20" stroke-linecap="round"/>
-<rect x="30" y="346" width="150" height="34" fill="#1c1b19"/>
-<text x="105" y="369" text-anchor="middle" font-size="17" fill="#f4efe4" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, Noto Serif CJK JP, IPAexMincho, IPAMincho, IPAGothic, serif">風見坂駅</text>
-<path d="M110 340 C200 318 270 292 330 248 C370 220 395 205 410 196 L390 118" fill="none" stroke="#1c1b19" stroke-width="2.4" stroke-dasharray="3 9" stroke-linecap="round"/>
-<text x="250" y="232" font-size="17" fill="#1c1b19" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, Noto Serif CJK JP, IPAexMincho, IPAMincho, IPAGothic, serif" transform="rotate(-24 250 232)">風見坂</text>
-<g transform="translate(330 40)"><path d="M0 46 L60 10 L120 46 Z" fill="#1c1b19"/><rect x="12" y="46" width="96" height="44" fill="#f4efe4" stroke="#1c1b19" stroke-width="2"/><rect x="40" y="58" width="40" height="32" fill="none" stroke="#1c1b19" stroke-width="1.5"/>
-<rect x="128" y="20" width="26" height="26" fill="#b7282e"/></g>
-<text x="500" y="76" font-size="17" fill="#1c1b19" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, Noto Serif CJK JP, IPAexMincho, IPAMincho, IPAGothic, serif">墨灯（古民家）</text>
-<text x="24" y="40" font-size="15" fill="#4a4640" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, Noto Serif CJK JP, IPAexMincho, IPAMincho, IPAGothic, serif">架空の地図（見本）</text>
-</svg><figcaption class="photo-cap">架空の地図です。実在の場所ではありません。</figcaption></figure>
+<div class="sec">
+  <div class="wrap two">
+    <section class="access" id="basho" aria-labelledby="s6">
+      <div>
+        <figure><svg viewBox="0 20 640 350" width="640" height="350" role="img" aria-labelledby="map-t">
+<title id="map-t">架空の地図: 風見坂駅を出て、ゆるい坂道（風見坂）を上ること歩いて8分。坂の途中の角を左に入った古民家が教室</title>
+<rect width="640" height="380" fill="#ebe4d5"/>
+<path d="M0 320 C120 310 220 290 300 250 C380 210 460 140 640 100" fill="none" stroke="#f4efe4" stroke-width="34" stroke-linecap="round"/>
+<path d="M0 320 C120 310 220 290 300 250 C380 210 460 140 640 100" fill="none" stroke="#8c8a84" stroke-width="1"/>
+<path d="M410 186 L380 92" stroke="#f4efe4" stroke-width="20" stroke-linecap="round"/>
+<rect x="30" y="330" width="150" height="36" fill="#1c1b19"/>
+<text x="105" y="354" text-anchor="middle" font-size="17" fill="#f4efe4" data-font="min500" font-family="SumiMincho, Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, serif">風見坂駅</text>
+<path d="M110 326 C200 306 270 282 330 240 C370 212 395 196 410 186 L390 118" fill="none" stroke="#1c1b19" stroke-width="2.4" stroke-dasharray="3 9" stroke-linecap="round"/>
+<text x="246" y="226" font-size="17" fill="#1c1b19" data-font="min500" font-family="SumiMincho, Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, serif" transform="rotate(-24 246 226)">風見坂</text>
+<g transform="translate(330 30)"><path d="M0 46 L60 10 L120 46 Z" fill="#1c1b19"/><rect x="12" y="46" width="96" height="44" fill="#f4efe4" stroke="#1c1b19" stroke-width="2"/><rect x="40" y="58" width="40" height="32" fill="none" stroke="#1c1b19" stroke-width="1.5"/><rect x="128" y="20" width="26" height="26" fill="#b7282e"/></g>
+<text x="492" y="66" font-size="17" fill="#1c1b19" data-font="min500" font-family="SumiMincho, Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, serif">墨灯（古民家）</text>
+<text x="24" y="36" font-size="15" fill="#4a4640" data-font="min500" font-family="SumiMincho, Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, serif">架空の地図（見本）</text>
+</svg></figure>
         <dl>
           <div><dt>場所</dt><dd>架空県風見坂 古民家の一室（見本上の設定）</dd></div>
           <div><dt>駅から</dt><dd>風見坂駅から坂を上って、歩いて8分</dd></div>
           <div><dt>車</dt><dd>駐車場はありません。近くの駐車場をご利用ください</dd></div>
-          <div><dt>お子さまの送り迎え</dt><dd>稽古の前後は、玄関の中でお待ちいただけます</dd></div>
+          <div><dt>送り迎え</dt><dd>お子さまの稽古の前後は、玄関の中でお待ちいただけます</dd></div>
         </dl>
       </div>
-    </div>
-    <div class="sec__head"><span class="sec__seal"><svg viewBox="0 0 34 34" width="34" height="34" aria-hidden="true" focusable="false"><rect x="1" y="1" width="32" height="32" rx="2" fill="#b7282e" filter="url(#hanko)"/><rect x="4" y="4" width="26" height="26" fill="none" stroke="#f4efe4" stroke-width="1"/><text x="17" y="24" text-anchor="middle" font-size="18" fill="#f4efe4" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, Noto Serif CJK JP, IPAexMincho, IPAMincho, IPAGothic, serif">七</text></svg></span><h2 id="s7"><span class="ln">坂の上の、</span><span class="ln">古民家で。</span></h2><p class="sec__kick">場所</p></div>
-  </div>
-</section>
-
-<section class="sec" id="toi" aria-labelledby="s8">
-  <div class="wrap">
-    <div class="sec__body faq">
-      <details><summary>字に自信がありません。それでも大丈夫ですか。</summary><div><p>大丈夫です。最初にいつもの字を書いていただくのは、上手下手を見るためではなく、癖を知るためです。うまく書ける人だけが来る場所ではありません。</p></div></details>
-      <details><summary>体験のあと、入会しなくても構いませんか。</summary><div><p>構いません。こちらから入会をお勧めすることはありません。続けるかどうかは、ゆっくり考えてからお知らせください。</p></div></details>
-      <details><summary>どのくらい通えば、上手になりますか。</summary><div><p>お約束はできません。通う回数や、家で書くかどうかで変わります。稽古では、毎回一つだけ癖に気づくことを大切にしています。</p></div></details>
-      <details><summary>子どもの稽古は、保護者が見学できますか。</summary><div><p>体験のときは、部屋の後ろで見学できます。入会後も、事前にお知らせいただければ見学できます。</p></div></details>
-      <details><summary>休んだ回は、別の日に振り替えられますか。</summary><div><p>大人は、同じ月の別の回に振り替えられます（空きがある場合）。子どもは、第4週の土曜に振替の時間を設けています（見本上の設定）。</p></div></details>
-    </div>
-    <div class="sec__head"><span class="sec__seal"><svg viewBox="0 0 34 34" width="34" height="34" aria-hidden="true" focusable="false"><rect x="1" y="1" width="32" height="32" rx="2" fill="#b7282e" filter="url(#hanko)"/><rect x="4" y="4" width="26" height="26" fill="none" stroke="#f4efe4" stroke-width="1"/><text x="17" y="24" text-anchor="middle" font-size="18" fill="#f4efe4" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, Noto Serif CJK JP, IPAexMincho, IPAMincho, IPAGothic, serif">八</text></svg></span><h2 id="s8"><span class="ln">よくある問い。</span></h2><p class="sec__kick">よくある質問</p></div>
-  </div>
-</section>
-
-<section class="apply" id="apply" aria-labelledby="s9">
-  <figure class="apply__img"><img src="assets/img/desk.webp" width="1536" height="640" loading="lazy" alt="文机の上に、黒い下敷きと白い半紙、硯と筆が整えて置かれている"></figure>
-  <div class="wrap">
-    <div class="apply__grid">
-      <div class="sec__head"><span class="sec__seal"><svg viewBox="0 0 34 34" width="34" height="34" aria-hidden="true" focusable="false"><rect x="1" y="1" width="32" height="32" rx="2" fill="#b7282e" filter="url(#hanko)"/><rect x="4" y="4" width="26" height="26" fill="none" stroke="#f4efe4" stroke-width="1"/><text x="17" y="24" text-anchor="middle" font-size="18" fill="#f4efe4" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, Noto Serif CJK JP, IPAexMincho, IPAMincho, IPAGothic, serif">九</text></svg></span><h2 id="s9"><span class="ln">まず一度、</span><span class="ln">筆を持ってみる。</span></h2><p class="sec__kick">体験の申し込み</p></div>
-      <div class="apply__text">
-        <p class="prose">体験は90分・1,100円（税込・見本用の架空価格）。大人は火・木の夜か土曜の昼、お子さまは土曜の午前から。お申し込みのあと、日時の確認をお送りします。</p>
-        <ul class="assure"><li>体験は90分・1,100円</li><li>道具は貸し出し、手ぶらで可</li><li>入会をお勧めすることはありません</li></ul>
+      <div class="ttl"><span class="seal" aria-hidden="true">六</span><h2 id="s6" class="tate"><span class="ln">坂の上の、</span><span class="ln">古民家で。</span></h2><p class="kick tate">場所</p></div>
+    </section>
+    <section class="faq" id="toi" aria-labelledby="s7">
+      <div>
+        <details><summary>字に自信がありません。それでも大丈夫ですか。</summary><div><p>大丈夫です。最初にいつもの字を書いていただくのは、上手下手を見るためではなく、癖を知るためです。</p></div></details>
+        <details><summary>体験のあと、入会しなくても構いませんか。</summary><div><p>構いません。こちらから入会をお勧めすることはありません。続けるかどうかは、ゆっくり考えてからお知らせください。</p></div></details>
+        <details><summary>どのくらい通えば、上手になりますか。</summary><div><p>お約束はできません。通う回数や、家で書くかどうかで変わります。稽古では、毎回一つだけ癖に気づくことを大切にしています。</p></div></details>
+        <details><summary>子どもの稽古は、保護者が見学できますか。</summary><div><p>体験のときは、部屋の後ろで見学できます。入会後も、事前にお知らせいただければ見学できます。</p></div></details>
+        <details><summary>休んだ回は、別の日に振り替えられますか。</summary><div><p>大人は、同じ月の別の回に振り替えられます（空きがある場合）。子どもは、第4週の土曜に振替の時間を設けています（見本上の設定）。</p></div></details>
       </div>
-      <form class="form" data-sample-form="体験の申し込み" aria-label="体験の申し込み（見本）">
-        <fieldset><legend>体験する方</legend>
-          <div class="opts"><label><input type="radio" name="who" checked><span>大人</span></label><label><input type="radio" name="who"><span>子ども（小学生）</span></label></div>
-        </fieldset>
-        <div class="row"><label for="f-day">希望の日<span class="req">必須</span></label>
-          <select id="f-day" name="day"><option>火曜 18:30〜</option><option>木曜 18:30〜</option><option>土曜 10:00〜（子ども）</option><option>土曜 11:15〜</option></select></div>
-        <div class="grid2"><div class="row"><label for="f-name">お名前<span class="req">必須</span></label><input type="text" id="f-name" name="name" autocomplete="off"></div>
-        <div class="row"><label for="f-mail">メールアドレス<span class="req">必須</span></label><input type="email" id="f-mail" name="mail" autocomplete="off"></div></div>
-        <span class="ca-form-note">見本のため送信できません。押すと、見本であることの案内が出ます。</span>
-        <button class="btn btn--shu" type="submit"><span class="seal-dot" aria-hidden="true"></span>体験を申し込む（見本）</button>
-      </form>
+      <div class="ttl"><span class="seal" aria-hidden="true">七</span><h2 id="s7" class="tate"><span class="ln">よくある</span><span class="ln">問い。</span></h2><p class="kick tate">よくある質問</p></div>
+    </section>
+  </div>
+</div>
+
+<section class="apply dark" id="apply" aria-labelledby="s8">
+  <div class="apply__band"><img src="assets/img/table.webp" width="1536" height="640" loading="lazy" alt="窓辺の文机に、黒い下敷きと白い半紙、硯と筆が整えて置かれている"></div>
+  <div class="wrap apply__grid">
+    <div class="ttl"><span class="seal" aria-hidden="true">八</span><h2 id="s8" class="tate"><span class="ln">まず一度、</span><span class="ln">筆を持ってみる。</span></h2><p class="kick tate">体験の申し込み</p></div>
+    <div class="apply__text">
+      <p class="prose">体験は90分・1,100円（税込・見本用の架空価格）。大人は火・木の夜か土曜の昼、お子さまは土曜の午前から。お申し込みのあと、日時の確認をお送りします。</p>
+      <ul class="assure"><li>道具は貸し出し、手ぶらで可</li><li>入会をお勧めすることはありません</li><li>汚れてもよい服でお越しください</li></ul>
+      <p class="cap" style="margin-top:22px">写真はAI生成のイメージで、実在の教室・道具ではありません。</p>
     </div>
+    <form class="form" data-sample-form="体験の申し込み" aria-label="体験の申し込み（見本）">
+      <fieldset><legend>体験する方</legend>
+        <div class="opts"><label><input type="radio" name="who" checked><span>大人</span></label><label><input type="radio" name="who"><span>子ども（小学生）</span></label></div>
+      </fieldset>
+      <div class="row"><label for="f-day">希望の日<span class="req">必須</span></label>
+        <select id="f-day" name="day"><option>火曜 18:30〜</option><option>木曜 18:30〜</option><option>土曜 10:00〜（子ども）</option><option>土曜 11:15〜</option></select></div>
+      <div class="grid2"><div class="row"><label for="f-name">お名前<span class="req">必須</span></label><input type="text" id="f-name" name="name" autocomplete="off"></div>
+      <div class="row"><label for="f-mail">メールアドレス<span class="req">必須</span></label><input type="email" id="f-mail" name="mail" autocomplete="off"></div></div>
+      <span class="ca-form-note">見本のため送信できません。押すと、見本であることの案内が出ます。</span>
+      <button class="btn btn--shu" type="submit">体験を申し込む（見本）</button>
+    </form>
   </div>
 </section>
 
 </main>
 <footer class="site-foot">
   <div class="wrap">
-    <a class="logo" href="index.html"><svg viewBox="0 0 230 60" width="230" height="60" role="img" aria-label="書の教室 墨灯（すみあかり）"><rect x="2" y="4" width="52" height="52" rx="3" fill="#b7282e"/><rect x="7" y="9" width="42" height="42" fill="none" stroke="#f4efe4" stroke-width="1.2"/><text x="28" y="28" text-anchor="middle" font-size="18" fill="#f4efe4" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, Noto Serif CJK JP, IPAexMincho, IPAMincho, IPAGothic, serif">墨</text><text x="28" y="47" text-anchor="middle" font-size="18" fill="#f4efe4" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, Noto Serif CJK JP, IPAexMincho, IPAMincho, IPAGothic, serif">灯</text><text class="t" x="70" y="20" font-size="12" letter-spacing="4" fill="#1c1b19" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, Noto Serif CJK JP, IPAexMincho, IPAMincho, IPAGothic, serif">書の教室</text><text class="t" x="68" y="50" font-size="30" font-weight="600" letter-spacing="10" fill="#1c1b19" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, Noto Serif CJK JP, IPAexMincho, IPAMincho, IPAGothic, serif">墨灯</text><text class="t" x="150" y="49" font-size="11" letter-spacing="3" fill="#1c1b19" font-family="Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, Noto Serif CJK JP, IPAexMincho, IPAMincho, IPAGothic, serif">すみあかり</text></svg></a>
+    <a class="logo" href="index.html"><svg viewBox="0 0 220 58" width="220" height="58" role="img" aria-label="書の教室 墨灯（すみあかり）"><rect x="2" y="4" width="50" height="50" fill="#b7282e" transform="rotate(-3 27 29)"/><rect x="7" y="9" width="40" height="40" fill="none" stroke="#f4efe4" stroke-width="1.2" transform="rotate(-3 27 29)"/><text x="27" y="27" text-anchor="middle" font-size="17" font-weight="600" fill="#f4efe4" data-font="min600" font-family="SumiMincho, Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, serif" transform="rotate(-3 27 29)">墨</text><text x="27" y="46" text-anchor="middle" font-size="17" font-weight="600" fill="#f4efe4" data-font="min600" font-family="SumiMincho, Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, serif" transform="rotate(-3 27 29)">灯</text><text x="68" y="20" font-size="12" letter-spacing="5" fill="#f4efe4" data-font="min500" font-family="SumiMincho, Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, serif">書の教室</text><text x="66" y="51" font-size="29" font-weight="600" letter-spacing="10" fill="#f4efe4" data-font="min600" font-family="SumiMincho, Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, serif">墨灯</text><text x="146" y="50" font-size="11" letter-spacing="3" fill="#f4efe4" data-font="min500" font-family="SumiMincho, Hiragino Mincho ProN, Yu Mincho, YuMincho, Noto Serif JP, serif">すみあかり</text></svg></a>
     <div>
       <p>架空県風見坂 古民家の一室（見本上の設定）／風見坂駅から歩いて8分</p>
       <p>稽古日: 火・木 18:30〜、土 10:00〜（見本上の設定）</p>
-      <p>料金はすべて税込・見本用の架空価格です。画像はAI生成のイメージで、実在の教室・道具ではありません。</p>
-      <p>© 書の教室 墨灯（架空の事業）</p>
+      <p class="fine">料金はすべて税込・見本用の架空価格です。写真はAI生成のイメージで、実在の教室・道具ではありません。<br>© 書の教室 墨灯（架空の事業）</p>
     </div>
-    <ul><li><a href="#fee">月謝</a></li><li><a href="#nittei">日程</a></li><li><a href="#apply">体験の申し込み（見本）</a></li></ul>
+    <ul><li><a href="#fee">月謝・日程</a></li><li><a href="#basho">場所</a></li><li><a href="#apply">体験の申し込み（見本）</a></li></ul>
   </div>
 </footer>
 <aside class="ca-credit" aria-labelledby="ca-credit-title">
