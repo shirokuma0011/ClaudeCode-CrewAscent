@@ -1116,3 +1116,4 @@ html .sec--paper2 { background: var(--paper-2); }
 }
 .pg-sub .ftr { padding-top: 48px; } .pg-sub .ftr__word { margin-top: 20px; }
 .pg-sub .phead__grid { padding-bottom: 28px; } .pg-sub .phead { padding-top: 36px; }
+.article-list__th img { object-position: 78% 50%; filter: none; }

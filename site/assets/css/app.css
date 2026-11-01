@@ -38,3 +38,9 @@
 .ah.ah--type h1{color:#fff}
 .occ__t{min-height:44px;display:inline-flex;align-items:center}
 .qn-toc summary{min-height:44px;display:flex;align-items:center}
+.ah .ah__brand,.ah--product h1 .ah__brand{color:#fff}
+.ah .ah__h1sub{color:var(--on-ink-2)}
+.ah__coords dd *{color:inherit}
+.ah .ah__coords>div{display:block!important;grid-template-columns:none!important}
+.ah .ah__coords dd{color:#fff!important;opacity:1!important}
+.ah h1 .ah__brand{font-family:var(--serif);font-weight:700}
