@@ -162,7 +162,22 @@
       mc.appendChild(sh);
     }
     mast.appendChild(mc);
+    /* 右に立体の36マス。このタイプのマスだけ茶色で高く浮く（上の段が先進、左の列が実用） */
+    var field = el('div', 'float36 float36--type');
+    field.setAttribute('data-float36', '');
+    field.setAttribute('aria-hidden', 'true');
+    var plane = el('div', 'float36__plane');
+    for (var r = 0; r < 6; r++) for (var c = 0; c < 6; c++) {
+      var on = r === 5 - type.yIndex && c === type.xIndex;
+      var tile = el('i', 'q-' + (r < 3 ? 't' : 'b') + (c < 3 ? 'l' : 'r') + (on ? ' is-on' : ''));
+      tile.style.setProperty('--d', String(r + c));
+      if (on) tile.appendChild(el('b', '', type.id));
+      plane.appendChild(tile);
+    }
+    field.appendChild(plane);
+    mast.appendChild(field);
     root.appendChild(mast);
+    if (window.CREW_FLOAT36) window.CREW_FLOAT36();
 
     /* ---------- 最初に見る要点 + 目次 ---------- */
     var D = type.detail || {};

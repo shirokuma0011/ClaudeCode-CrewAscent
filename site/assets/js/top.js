@@ -660,14 +660,33 @@
     update();
   }
 
+  /* ---------------- 14. 制作の流れ: 読んでいる段階をタイルの列に灯す ---------------- */
+  function stepRail() {
+    var rail = $('[data-steprail]');
+    if (!rail || !('IntersectionObserver' in window)) return;
+    var items = $$('li', rail);
+    var steps = items.map(function (li) { return document.querySelector(li.querySelector('a').getAttribute('href')); });
+    function mark(idx) {
+      items.forEach(function (li, i) { li.classList.toggle('is-done', i < idx); li.classList.toggle('is-now', i === idx); });
+    }
+    mark(0);
+    var io = new IntersectionObserver(function () {
+      var line = window.innerHeight * 0.45, cur = 0;
+      steps.forEach(function (st, i) { if (st && st.getBoundingClientRect().top < line) cur = i; });
+      mark(cur);
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+    steps.forEach(function (st) { if (st) io.observe(st); });
+  }
+
   function year() { $$('[data-year]').forEach(function (el) { el.textContent = String(new Date().getFullYear()); }); }
 
   /* 結果ページのように、あとからJSで組み立てる節にも効かせるため外へ出す */
   window.CREW_REVEAL = function () { reveal(); };
+  window.CREW_FLOAT36 = function () { float36(); };
 
   function init() {
     header(); mega(); drawer(); tabs(); typeMap(); miniQuiz(); reveal();
-    heroCross(); heroIn(); chapterIndex(); countUp(); mobileCta(); ctaVideo(); float36(); year();
+    heroCross(); heroIn(); chapterIndex(); countUp(); mobileCta(); ctaVideo(); float36(); stepRail(); year();
     predecodeImages();   /* ← 呼び出しが抜けていた。画像の展開がスクロール中に走っていた原因 */
   }
 

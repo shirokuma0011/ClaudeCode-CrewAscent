@@ -295,7 +295,7 @@ function page(t) {
     `<span><b>見せ方</b>${esc(spec.yModifier || '')}</span>` +
     `<span><b>座標</b>横${t.xIndex + 1} / 縦${t.yIndex + 1}</span></p>` +
     `<p class="ah__meta">この診断はWebサイトで何を先にするかの整理です。性格・能力・適性・成果を測るものではありません。</p>` +
-    `</div></div>\n    </section>\n` + body + closing + `\n\n  </main>\n  ` + FOOTER;
+    `</div></div>\n` + typeField(t) + `\n    </section>\n` + body + closing + `\n\n  </main>\n  ` + FOOTER;
 }
 
 /* 一覧ページ用のマップ。36マスすべてがリンク。名前も出して、番号だけに頼らない */
@@ -373,3 +373,15 @@ let n = 0;
 for (const t of TYPES) { fs.writeFileSync(path.join(ROOT, `type-${t.slug}.html`), page(t)); n++; }
 fs.writeFileSync(path.join(ROOT, 'types.html'), hub());
 console.log(`${n} タイプページ + 一覧1ページ を出力しました`);
+
+/* 見出しの右の立体の36マス。このタイプのマスだけが茶色で高く浮く（上の段が先進、左の列が実用） */
+function typeField(t) {
+  const row = 5 - t.yIndex, col = t.xIndex;
+  let tiles = '';
+  for (let r = 0; r < 6; r++) for (let c = 0; c < 6; c++) {
+    const q = (r < 3 ? 't' : 'b') + (c < 3 ? 'l' : 'r');
+    const on = r === row && c === col;
+    tiles += `<i class="q-${q}${on ? ' is-on' : ''}" style="--d:${r + c}">${on ? `<b>${esc(t.id)}</b>` : ''}</i>`;
+  }
+  return `    <div class="float36 float36--type" data-float36 aria-hidden="true"><div class="float36__plane">${tiles}</div></div>`;
+}

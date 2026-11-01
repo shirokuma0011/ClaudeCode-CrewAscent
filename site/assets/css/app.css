@@ -63,3 +63,18 @@ body[data-page="industries"] .idx-head h2{font-size:clamp(18px,1.6vw,21px)!impor
 @media (max-width:760px){.ah__brand{font-size:24px!important}.ah h1,.rs-mast__name{font-size:clamp(22px,6.4vw,28px)!important}.ah .num{font-size:26px!important}}
 .idx-head__no,.tp-list__id{color:#6c5c4a}.sec--ink .idx-head__no,.band--ink .idx-head__no{color:#ebeef3}
 .ah .eyebrow,.ah__eyebrow,.ah .lbl,.ah--product .lbl{color:#d9cbb6!important}
+/* タイプ別ページの目次: 箱の積み重ねをやめ、左半分に2列の番号つき一覧（右は立体の36マスがはみ出す場所） */
+.tp-toc{padding-block:28px 32px}
+.tp-toc .wrap{display:block}
+.tp-toc__l{display:grid!important;grid-template-columns:1fr 1fr;column-gap:28px;gap:0 28px;max-width:640px;margin-bottom:14px;counter-reset:none}
+.tp-toc__l a{display:flex!important;align-items:center;gap:12px;min-height:44px;padding:8px 0!important;border:0!important;border-bottom:1px solid var(--rule)!important;background:transparent!important;font-size:14px!important;color:var(--ink)!important;text-decoration:none}
+.tp-toc__l a span{color:#6c5c4a!important;font-weight:700;min-width:22px}
+.tp-toc__l a:hover{color:#6c5c4a!important;border-bottom-color:#6c5c4a!important}
+@media (max-width:640px){.tp-toc__l{grid-template-columns:1fr}}
+/* 結果ページの見出し: 左に文字、右に立体の36マス */
+.rs-mast{position:relative;overflow:visible}
+.rs-mast .rs-mast__inner{position:relative;z-index:3}
+.rs-mast .rs-mast__inner > *{max-width:600px}
+.rs-mast .float36--type{top:55%;width:min(520px,40vw);right:-4vw}
+.rs-mast ~ *{position:relative;z-index:3}
+@media (max-width:860px){.rs-mast{padding-bottom:240px}.rs-mast .float36--type{top:auto;bottom:-80px;right:-18vw;width:104vw}}

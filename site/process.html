@@ -22,10 +22,10 @@
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CASans-700.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CASerif-700.woff2" crossorigin>
   <!-- 第8版: スタイルは site.css の1ファイルだけ -->
-  <link rel="stylesheet" href="assets/css/site.css?v=20261101e">
+  <link rel="stylesheet" href="assets/css/site.css?v=20261101f">
   <script>document.documentElement.className += ' js';</script>
   <script src="assets/js/site-config.js?v=20261025a"></script>
-  <script defer src="assets/js/top.js?v=20261101"></script>
+  <script defer src="assets/js/top.js?v=20261101b"></script>
   <script defer src="assets/js/scroll-steady.js?v=20260817r9"></script>
   <script defer src="assets/js/main.js?v=20261025a"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"index.html"},{"@type":"ListItem","position":2,"name":"Web制作サービス","item":"services.html"},{"@type":"ListItem","position":3,"name":"制作の流れ","item":"process.html"}]}</script>
@@ -177,9 +177,10 @@
 
   <section class="sec">
     <div class="wrap">
+      <nav class="steprail" aria-label="9つの段階の位置" data-steprail><p class="steprail__h">いまの段階</p><ol><li data-ph="1"><a href="#st-1"><i aria-hidden="true"></i><span class="steprail__n">1</span><span class="steprail__t">無料診断</span></a></li><li data-ph="1"><a href="#st-2"><i aria-hidden="true"></i><span class="steprail__n">2</span><span class="steprail__t">ヒアリングに答える</span></a></li><li data-ph="1"><a href="#st-3"><i aria-hidden="true"></i><span class="steprail__n">3</span><span class="steprail__t">公式LINEで内容確認</span></a></li><li data-ph="2"><a href="#st-4"><i aria-hidden="true"></i><span class="steprail__n">4</span><span class="steprail__t">見積もりと制作条件</span></a></li><li data-ph="2"><a href="#st-5"><i aria-hidden="true"></i><span class="steprail__n">5</span><span class="steprail__t">申込みと着手金</span></a></li><li data-ph="3"><a href="#st-6"><i aria-hidden="true"></i><span class="steprail__n">6</span><span class="steprail__t">ヒアリング・素材提出</span></a></li><li data-ph="3"><a href="#st-7"><i aria-hidden="true"></i><span class="steprail__n">7</span><span class="steprail__t">制作・確認・修正</span></a></li><li data-ph="4"><a href="#st-8"><i aria-hidden="true"></i><span class="steprail__n">8</span><span class="steprail__t">残金と公開・納品</span></a></li><li data-ph="4"><a href="#st-9"><i aria-hidden="true"></i><span class="steprail__n">9</span><span class="steprail__t">公開後の管理</span></a></li></ol></nav>
       <div class="timeline-wrap">
         <ol class="timeline timeline--wide">
-          <li class="tl-phase"><span class="tl-phase__en">Consult</span><b class="tl-phase__ja">相談する</b><span class="tl-phase__no">01–03</span><span class="tl-phase__note">まだ費用は発生しません</span></li><li>
+          <li class="tl-phase"><span class="tl-phase__en">Consult</span><b class="tl-phase__ja">相談する</b><span class="tl-phase__no">01–03</span><span class="tl-phase__note">まだ費用は発生しません</span></li><li id="st-1">
             <div>
               <h3>無料診断</h3>
               <p class="caption mb-0">診断結果を相談時の共通言語として使えます。診断なしでも相談できます。</p>
@@ -189,7 +190,7 @@
                 <div class="timeline__role"><b>ご確認いただくこと</b><span>任意</span></div>
               </div>
             </div>
-          </li><li>
+          </li><li id="st-2">
             <div>
               <h3>ヒアリングに答える</h3>
               <p class="caption mb-0">はじめての方ヒアリング（約3分）か本格ヒアリング（約25〜40分）に答えます。送信すると受付番号が出ます。</p>
@@ -199,7 +200,7 @@
                 <div class="timeline__role"><b>ご確認いただくこと</b><span>プラン未定も可</span></div>
               </div>
             </div>
-          </li><li>
+          </li><li id="st-3">
             <div>
               <h3>公式LINEで内容確認</h3>
               <p class="caption mb-0">受付番号を公式LINEで送っていただき、足りない内容を伺います（必要なら Zoom）。そろったら確認PDFをお送りします。メールでのやり取りもできます。</p>
@@ -209,7 +210,7 @@
                 <div class="timeline__role"><b>ご確認いただくこと</b><span>確認PDFの内容</span></div>
               </div>
             </div>
-          </li><li class="tl-phase"><span class="tl-phase__en">Agree</span><b class="tl-phase__ja">条件を決める</b><span class="tl-phase__no">04–05</span><span class="tl-phase__note">着手金50%の入金で制作開始</span></li><li>
+          </li><li class="tl-phase"><span class="tl-phase__en">Agree</span><b class="tl-phase__ja">条件を決める</b><span class="tl-phase__no">04–05</span><span class="tl-phase__note">着手金50%の入金で制作開始</span></li><li id="st-4">
             <div>
               <h3>見積もりと制作条件</h3>
               <p class="caption mb-0">ページ数、範囲、料金、納期、修正回数、管理の有無を提示します。</p>
@@ -219,7 +220,7 @@
                 <div class="timeline__role"><b>ご確認いただくこと</b><span>内容のご確認</span></div>
               </div>
             </div>
-          </li><li>
+          </li><li id="st-5">
             <div>
               <h3>申込みと着手金</h3>
               <p class="caption mb-0">条件に同意後、着手金50%の入金をもって制作開始とします。</p>
@@ -229,7 +230,7 @@
                 <div class="timeline__role"><b>ご確認いただくこと</b><span>ご同意</span></div>
               </div>
             </div>
-          </li><li class="tl-phase"><span class="tl-phase__en">Build</span><b class="tl-phase__ja">つくる</b><span class="tl-phase__no">06–07</span><span class="tl-phase__note">素材がそろってから数えます</span></li><li>
+          </li><li class="tl-phase"><span class="tl-phase__en">Build</span><b class="tl-phase__ja">つくる</b><span class="tl-phase__no">06–07</span><span class="tl-phase__note">素材がそろってから数えます</span></li><li id="st-6">
             <div>
               <h3>ヒアリング・素材提出</h3>
               <p class="caption mb-0">原稿、写真、ロゴ等を準備します。プラン範囲内で文章や画像を整えます。</p>
@@ -239,7 +240,7 @@
                 <div class="timeline__role"><b>ご確認いただくこと</b><span>素材のご提出</span></div>
               </div>
             </div>
-          </li><li>
+          </li><li id="st-7">
             <div>
               <h3>制作・確認・修正</h3>
               <p class="caption mb-0">構成とデザインを制作し、確認期間内にまとめて修正点をご連絡いただきます。</p>
@@ -249,7 +250,7 @@
                 <div class="timeline__role"><b>ご確認いただくこと</b><span>初稿のご確認</span></div>
               </div>
             </div>
-          </li><li class="tl-phase"><span class="tl-phase__en">Publish</span><b class="tl-phase__ja">公開して、続ける</b><span class="tl-phase__no">08–09</span><span class="tl-phase__note">残金50%の入金後に公開</span></li><li>
+          </li><li class="tl-phase"><span class="tl-phase__en">Publish</span><b class="tl-phase__ja">公開して、続ける</b><span class="tl-phase__no">08–09</span><span class="tl-phase__note">残金50%の入金後に公開</span></li><li id="st-8">
             <div>
               <h3>残金と公開・納品</h3>
               <p class="caption mb-0">残金50%の入金確認後、公開または静的ファイルを納品します。</p>
@@ -259,7 +260,7 @@
                 <div class="timeline__role"><b>ご確認いただくこと</b><span>公開のご承認</span></div>
               </div>
             </div>
-          </li><li>
+          </li><li id="st-9">
             <div>
               <h3>公開後の管理</h3>
               <p class="caption mb-0">希望される場合は、6か月・12か月・24か月から選んだ公開・管理プランを開始します。</p>
