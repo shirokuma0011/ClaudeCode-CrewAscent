@@ -634,6 +634,32 @@
     io.observe(v);
   }
 
+  /* ---------------- 13. 立体の36マス（見えている間だけ浮き沈み。スクロールで面の傾きが変わる） ---------------- */
+  function float36() {
+    var els = $$('[data-float36]');
+    if (!els.length) return;
+    if (!reduce && 'IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { en.target.classList.toggle('is-run', en.isIntersecting); });
+      }, { rootMargin: '100px 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    }
+    if (reduce) return;
+    var ticking = false;
+    function update() {
+      ticking = false;
+      var vh = window.innerHeight;
+      els.forEach(function (el) {
+        var r = el.parentElement.getBoundingClientRect();
+        if (r.bottom < -200 || r.top > vh + 200) return;
+        var p = 1 - (r.top + r.height / 2) / (vh + r.height);
+        el.style.setProperty('--p', Math.max(0, Math.min(1, p)).toFixed(3));
+      });
+    }
+    window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    update();
+  }
+
   function year() { $$('[data-year]').forEach(function (el) { el.textContent = String(new Date().getFullYear()); }); }
 
   /* 結果ページのように、あとからJSで組み立てる節にも効かせるため外へ出す */
@@ -641,7 +667,7 @@
 
   function init() {
     header(); mega(); drawer(); tabs(); typeMap(); miniQuiz(); reveal();
-    heroCross(); heroIn(); chapterIndex(); countUp(); mobileCta(); ctaVideo(); year();
+    heroCross(); heroIn(); chapterIndex(); countUp(); mobileCta(); ctaVideo(); float36(); year();
     predecodeImages();   /* ← 呼び出しが抜けていた。画像の展開がスクロール中に走っていた原因 */
   }
 
