@@ -1307,3 +1307,7 @@ box-shadow: 0 0 0 1px rgba(0,0,0,.04) inset; }
 .ah__band { position: relative; z-index: 3; background: #000; }
 @media (max-width: 860px) { .ah { flex-direction: column; } .ah::after { order: -1; } }
 @media (max-width: 860px) { .ah__band { order: 1; } .ah__peek { order: 2; } }
+/* ロゴは原本の画像（青いC＋矢印のA＋つながる点）を使う。図形で描き直さない */
+img.brand__mark { display: block; width: auto; height: 38px; }
+.ftr__brand img.brand__mark { height: 44px; }
+@media (max-width: 760px) { img.brand__mark { height: 32px; } }

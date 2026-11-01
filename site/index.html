@@ -24,7 +24,7 @@
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CASans-400.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CASerif-700.woff2" crossorigin>
   <!-- 第8版: 骨組みから作り直したトップ。スタイルはこの1ファイルだけ（旧 base/system/crew/atelier-top は読まない） -->
-  <link rel="stylesheet" href="assets/css/site.css?v=20261101d">
+  <link rel="stylesheet" href="assets/css/site.css?v=20261101e">
   <script>/* 動きの入り切り。?motion=off と、動きを減らす設定で外れる。
      site-config.js の motion:'off' は main.js が後から外します。 */
   (function(d){var r=d.documentElement;r.classList.remove('no-js');
@@ -45,13 +45,12 @@
 
 <svg width="0" height="0" aria-hidden="true" focusable="false" class="sr-only">
   <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 5 12 6.5l4.5 4.5H4v2h12.5L12 17.5 13.5 19l7-7z"/></symbol>
-  <symbol id="logo" viewBox="0 0 128 120"><path d="M64 82.2A28 28 0 1 1 64 33.8" fill="none" stroke="#1562f6" stroke-width="14"/><path fill="currentColor" d="M82 16 118 104H46Z"/><path fill="var(--logo-cut,#fff)" d="M82 50 94 80H70Z"/></symbol>
 </svg>
 
 <header class="hdr" id="hdr">
   <div class="wrap hdr__in">
     <a class="brand" href="index.html" aria-label="クルーアセント ホームへ">
-      <svg class="brand__mark" aria-hidden="true"><use href="#logo"></use></svg>
+      <img class="brand__mark" src="assets/brand/logo-onink-h88.webp" srcset="assets/brand/logo-onink-h88.webp 1x, assets/brand/logo-onink-h176.webp 2x" width="49" height="38" alt="">
       <span class="brand__tx"><span class="brand__ja">クルーアセント</span><span class="brand__en">CREW ASCENT</span></span>
     </a>
     <nav class="gnav" aria-label="メインメニュー">
@@ -295,7 +294,7 @@
     <div class="ftr__grid">
       <div>
         <div class="ftr__brand">
-          <svg class="brand__mark" aria-hidden="true"><use href="#logo"></use></svg>
+          <img class="brand__mark" src="assets/brand/logo-onink-h88.webp" srcset="assets/brand/logo-onink-h88.webp 1x, assets/brand/logo-onink-h176.webp 2x" width="49" height="38" alt="">
           <span><span class="ftr__ja">クルーアセント</span><span class="ftr__en">CREW ASCENT</span></span>
         </div>
         <p class="ftr__note">診断で方向を整理してから始める、小規模事業者向けのWeb制作事務所です。検索順位や問い合わせ件数を保証するサービスではありません。</p>
