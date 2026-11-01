@@ -10,9 +10,182 @@
     "plan": "はじめて / シンプル / 標準 / おまかせ",
     "pages": "ページ数",
     "summary": "1〜2文。何を優先して作ったか",
-    "points": ["整えた点を3つまで"],
+    "points": [
+      "整えた点を3つまで"
+    ],
     "thumb": "assets/img/works/<id>.webp （1600x1000 推奨。未設定なら図版なしで組みます）",
     "url": "見本サイトへの相対パスまたは絶対URL。未設定ならリンクなしで表示"
   },
-  "items": []
+  "items": [
+    {
+      "id": "sample-kotowake",
+      "name": "小さな事業のためのクラウド台帳 コトワケ（架空）",
+      "industry": "SaaS・ITサービス",
+      "typeId": "CA01",
+      "typeName": "未来情報設計型サイト",
+      "plan": "標準",
+      "pages": "5ページ",
+      "summary": "形のないサービスを、操作する前に図で理解できるようにした5ページの見本です。",
+      "points": [
+        "散らばった記録が1つの表に並ぶ図を最初の画面に",
+        "困りごとで機能を絞り込めるフィルター",
+        "総額と含まれる範囲が分かる料金表とシミュレーター"
+      ],
+      "thumb": "assets/img/works/sample-kotowake.jpg",
+      "url": "samples/sample-kotowake/index.html"
+    },
+    {
+      "id": "sample-yoiyami",
+      "name": "灯町のちいさな醸造所 よいやみ醸造（架空）",
+      "industry": "クラフトビール・地酒",
+      "typeId": "CA06",
+      "typeName": "ファン化ブランド型サイト",
+      "plan": "おまかせ",
+      "pages": "5ページ",
+      "summary": "夕暮れから夜へ変わる空と円形ラベルで、季節の銘柄を待ちたくなる世界観をつくった5ページの見本です。",
+      "points": [
+        "スクロールで夕暮れから宵へ変わる背景",
+        "銘柄ごとに生成する円形ラベルと味わいチャート",
+        "年齢の注意と購入案内を各ページに"
+      ],
+      "thumb": "assets/img/works/sample-yoiyami.jpg",
+      "url": "samples/sample-yoiyami/index.html"
+    },
+    {
+      "id": "sample-minamo",
+      "name": "hair salon ミナモ（架空）",
+      "industry": "美容室",
+      "typeId": "CA11",
+      "typeName": "今らしさ魅力型サイト",
+      "plan": "シンプル",
+      "pages": "3ページ",
+      "summary": "写真に頼らず、光と線で「ツヤ」を表現した3ページの見本です。料金と所要時間を必ず並べています。",
+      "points": [
+        "水面の光が流れる最初の画面",
+        "目的で選べるメニューと所要時間つきの料金表",
+        "はじめての方の3段階を予約の手前に"
+      ],
+      "thumb": "assets/img/works/sample-minamo.jpg",
+      "url": "samples/sample-minamo/index.html"
+    },
+    {
+      "id": "sample-tsumiki",
+      "name": "個別指導 つみき塾（架空）",
+      "industry": "学習塾",
+      "typeId": "CA14",
+      "typeName": "成長案内型サイト",
+      "plan": "シンプル",
+      "pages": "3ページ",
+      "summary": "保護者と生徒の両方が、入塾までの段階と費用の総額を先に確かめられる3ページの見本です。",
+      "points": [
+        "積み木が積み上がる最初の画面と章番号",
+        "学年と目的から選べるコース早見",
+        "月謝以外の費用も含めた年間総額の例"
+      ],
+      "thumb": "assets/img/works/sample-tsumiki.jpg",
+      "url": "samples/sample-tsumiki/index.html"
+    },
+    {
+      "id": "sample-shinari",
+      "name": "からだを整える 整体 しなり（架空）",
+      "industry": "整体・接骨院",
+      "typeId": "CA15",
+      "typeName": "すっきり実用型サイト",
+      "plan": "はじめて",
+      "pages": "1ページ",
+      "summary": "1ページで「何をする・何分・いくら・どう予約するか」が上から順に分かる見本です。",
+      "points": [
+        "最初の画面に初回料金・所要時間・予約方法",
+        "今日の曜日を強調する受付時間表",
+        "効果を断定しない言葉選び"
+      ],
+      "thumb": "assets/img/works/sample-shinari.jpg",
+      "url": "samples/sample-shinari/index.html"
+    },
+    {
+      "id": "sample-shiori",
+      "name": "税理士 しおり会計事務所（架空）",
+      "industry": "税理士・会計",
+      "typeId": "CA20",
+      "typeName": "クリア相談型サイト",
+      "plan": "シンプル",
+      "pages": "3ページ",
+      "summary": "相談する前に「何を聞けばいいか」「何を用意するか」が分かる、状況別の入口を持つ3ページの見本です。",
+      "points": [
+        "3つの状況から選ぶ入口と、質問に答えると出る持ち物リスト",
+        "範囲ごとに先に示す料金の目安",
+        "読んでいる章を示す栞"
+      ],
+      "thumb": "assets/img/works/sample-shiori.jpg",
+      "url": "samples/sample-shiori/index.html"
+    },
+    {
+      "id": "sample-madonohi",
+      "name": "珈琲と焼き菓子 マドノヒ（架空）",
+      "industry": "カフェ",
+      "typeId": "CA22",
+      "typeName": "親しみブランド型サイト",
+      "plan": "はじめて",
+      "pages": "1ページ",
+      "summary": "窓辺の光と焼き菓子の香りを、見る時間帯で変わる窓のイラストで表した1ページの見本です。",
+      "points": [
+        "見る時刻で朝・昼・夕に変わる窓の光",
+        "値段と席の事実を雰囲気と同じ画面に",
+        "営業中かどうかがすぐ分かる表示"
+      ],
+      "thumb": "assets/img/works/sample-madonohi.jpg",
+      "url": "samples/sample-madonohi/index.html"
+    },
+    {
+      "id": "sample-tatemae",
+      "name": "木組みの家 たてまえ工務店（架空）",
+      "industry": "工務店",
+      "typeId": "CA26",
+      "typeName": "王道サービス型サイト",
+      "plan": "標準",
+      "pages": "5ページ",
+      "summary": "家づくりの段取りと、費用が決まるタイミングを先に見せる5ページの見本です。",
+      "points": [
+        "スクロールで骨組みが組み上がるタイムライン",
+        "段階ごとに決めること・用意するもの",
+        "項目別の費用の目安と対応できないこと"
+      ],
+      "thumb": "assets/img/works/sample-tatemae.jpg",
+      "url": "samples/sample-tatemae/index.html"
+    },
+    {
+      "id": "sample-orime",
+      "name": "精密板金 オリメ工業（架空）",
+      "industry": "金属加工・板金",
+      "typeId": "CA31",
+      "typeName": "堅実情報型サイト",
+      "plan": "標準",
+      "pages": "5ページ",
+      "summary": "図面を送る前に、加工範囲・材質・板厚の可否が表で分かる5ページの見本です。",
+      "points": [
+        "平板が折れてブラケットになる最初の画面",
+        "材質×板厚の対応マトリクスと絞り込み",
+        "見積もり前に伝える「できないこと」"
+      ],
+      "thumb": "assets/img/works/sample-orime.jpg",
+      "url": "samples/sample-orime/index.html"
+    },
+    {
+      "id": "sample-sumiakari",
+      "name": "書の教室 墨灯（架空）",
+      "industry": "和の教室（着物・茶道など）",
+      "typeId": "CA34",
+      "typeName": "品格ブランド型サイト",
+      "plan": "はじめて",
+      "pages": "1ページ",
+      "summary": "一筆の線と朱の落款で品格を出しながら、初心者が体験の申し込みまで迷わない1ページの見本です。",
+      "points": [
+        "一筆の線と落款が現れる縦書きの最初の画面",
+        "一回の稽古の流れを縦書きのタイムラインで",
+        "月謝・入会金・道具の費用を同じ画面に"
+      ],
+      "thumb": "assets/img/works/sample-sumiakari.jpg",
+      "url": "samples/sample-sumiakari/index.html"
+    }
+  ]
 }
