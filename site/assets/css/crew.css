@@ -930,3 +930,95 @@ h1, h2, h3 { color:var(--ink); }
 .map-cell.area-bl.is-current, .map-cell.area-br.is-current { background:var(--deep); border-color:var(--deep); }
 .tp-map__c.is-here b { background:var(--deep); color:#fff; }
 :root { --success:#0e7a6c; }
+
+/* =====================================================================
+   第8版「人がひと目で分かる」（2026-11-01）
+   オーナー指摘「文字が大きすぎる・枠が縦に長い・脊髄反射で分かるように、画像も使って」への対応。
+   ・見出しは小さく（下層 h1 26〜38px、h2 20〜26px）、区切りの余白も詰める
+   ・下層の見出し帯に、主の行動（ボタン）とページの意味を表す画像を入れる
+   ・スマホでは、画像は見出しより下（見出し → 説明 → ボタン → 画像 → 要点）
+   ===================================================================== */
+:root {
+  --sec-y: clamp(40px, 4.4vw, 68px);
+  --fs-h1: clamp(1.625rem, 2.6vw, 2.375rem);
+  --fs-h2: clamp(1.25rem, 1.9vw, 1.625rem);
+  --fs-h3: clamp(1rem, 1.15vw, 1.125rem);
+  --fs-lead: clamp(.9375rem, 1vw, 1rem);
+}
+.sec--tight { padding-block:clamp(32px, 3.4vw, 52px); }
+.opener { margin-bottom:clamp(18px, 2vw, 28px); padding-top:14px; }
+
+/* 見出し帯 */
+.pg-sub .ah, .ah { padding-block:clamp(22px, 2.6vw, 40px) clamp(24px, 2.8vw, 44px); }
+.ah h1, .rs-mast__name { font-size:var(--fs-h1); line-height:1.4; margin-bottom:12px; }
+.ah__brand { font-size:clamp(1.75rem, 2.8vw, 2.375rem); }
+.ah__h1sub { font-size:clamp(1rem, 1.4vw, 1.1875rem); line-height:1.65; }
+.ah .eyebrow { margin-bottom:10px; }
+.ah__lead { font-size:var(--fs-lead); line-height:1.85; max-width:36em; }
+.ah__peek { display:none; }
+.ah--trust .ah__inner { display:grid; max-width:none; }
+.ah__cta { display:flex; flex-wrap:wrap; align-items:center; gap:12px 28px; margin-top:20px; }
+.ah__cta .btn { min-height:48px; padding-inline:22px; }
+.alink--btn { background:none; border:0; border-bottom:1px solid currentColor; border-radius:0; font:inherit; font-size:.875rem; font-weight:700; cursor:pointer; min-height:44px; }
+.ah__fig { margin:0; overflow:hidden; background:var(--paper-2); }
+.ah__fig img { display:block; width:100%; height:100%; aspect-ratio:3 / 2; object-fit:cover; }
+.ah__aside { display:grid; gap:14px; align-content:start; }
+.ah__facts > div, .ah__coords > div { padding:10px 16px; }
+.ah .num--md, .ah__coords .num { font-size:1.25rem; }
+@media (min-width:960px) {
+  .ah__inner { grid-template-columns:minmax(0, 1.15fr) minmax(0, 1fr); gap:clamp(32px, 4vw, 64px); align-items:center; }
+  .ah__aside:has(.ah__facts, .ah__coords) .ah__fig img { aspect-ratio:2 / 1; }
+}
+@media (max-width:959px) {
+  .ah__inner { gap:20px; }
+  .ah__fig img { aspect-ratio:2 / 1; }
+}
+.ah__band { margin-top:18px; }
+
+/* 本文: 大きさを1つにそろえる（読む文 15〜16px） */
+main p { font-size:clamp(.9375rem, 1vw, 1rem); }
+main .hint, main figcaption, main .ah__facts p { font-size:.8125rem; }
+/* 画像の下の要点は横3つに並べ、行の高さを抑える */
+@media (min-width:620px) {
+  .ah__aside .ah__facts, .ah__aside .ah__coords { grid-template-columns:repeat(3, minmax(0, 1fr)); }
+  .ah__aside .ah__facts > div, .ah__aside .ah__coords > div { display:block; padding:10px 14px; border-bottom:0; }
+  .ah__aside .ah__facts > div + div, .ah__aside .ah__coords > div + div { border-left:1px solid var(--rule-fine); }
+  .ah__aside .ah__facts dt, .ah__aside .ah__coords dt { margin-bottom:4px; font-size:.75rem; }
+  .ah__aside .ah__facts dd, .ah__aside .ah__coords dd { font-size:.875rem; line-height:1.6; }
+  .ah__aside .ah__facts p { margin-top:2px; line-height:1.6; }
+}
+.ah__facts dd, .ah__coords dd { line-height:1.6; }
+.ah__fig--top img { object-position:center 22%; }
+/* 本文中に直接書かれた 24px の見出しも、スマホでは 20px へ */
+main h2[style*="1.5rem"] { font-size:clamp(1.25rem, 1.9vw, 1.5rem) !important; }
+/* スマホ: 番号つきの項目・見出し帯の要点を詰める */
+@media (max-width:759px) {
+  .numbered > li { grid-template-columns:32px 1fr; gap:10px; padding:12px 0; }
+  .numbered h3 { font-size:1rem; margin-bottom:2px; }
+  .numbered p { font-size:.875rem; line-height:1.75; }
+  .ah__facts > div, .ah__coords > div { padding:8px 14px; }
+  .ah__fig img { aspect-ratio:5 / 2; }
+}
+@media (max-width:619px) {
+  .ah__aside .ah__facts, .ah__aside .ah__coords { grid-template-columns:repeat(3, minmax(0, 1fr)); }
+  .ah__aside .ah__facts > div, .ah__aside .ah__coords > div { display:block; padding:8px 10px; border-bottom:0; }
+  .ah__aside .ah__facts > div + div, .ah__aside .ah__coords > div + div { border-left:1px solid var(--rule); }
+  .ah__aside .ah__facts dt, .ah__aside .ah__coords dt { font-size:.75rem; margin-bottom:2px; }
+  .ah__aside .ah__facts dd, .ah__aside .ah__coords dd { font-size:.8125rem; line-height:1.5; }
+  .ah__aside .num--md, .ah__aside .ah__coords .num { font-size:1rem; }
+  .ah__aside .ah__facts p { font-size:.75rem; line-height:1.5; }
+}
+/* トップ: 写真つきの入口（知りたいことから選ぶ） */
+.entry { padding-block:clamp(32px, 3.6vw, 56px); background:#fff; border-bottom:1px solid var(--rule); }
+.entry__h { font-size:var(--fs-h2); margin:0 0 16px; }
+.entry__list { list-style:none; margin:0; padding:0; display:grid; gap:14px; grid-template-columns:repeat(2, minmax(0, 1fr)); }
+@media (min-width:900px) { .entry__list { grid-template-columns:repeat(6, minmax(0, 1fr)); gap:16px; } }
+.entry__a { display:grid; gap:4px; color:var(--ink); text-decoration:none; min-height:44px; }
+.entry__img { display:block; overflow:hidden; background:var(--paper-2); margin-bottom:6px; }
+.entry__img img { display:block; width:100%; aspect-ratio:3 / 2; object-fit:cover; transition:transform .3s var(--ez); }
+.entry__a:hover .entry__img img { transform:scale(1.04); }
+.entry__t { font-weight:700; font-size:.9375rem; line-height:1.5; }
+.entry__a:hover .entry__t { color:var(--act); text-decoration:underline; text-underline-offset:4px; }
+.entry__d { font-size:.8125rem; line-height:1.6; color:var(--tx-3); }
+@media (prefers-reduced-motion:reduce) { .entry__img img { transition:none; } .entry__a:hover .entry__img img { transform:none; } }
+.atl .atl-hero-copy h1 { font-size:clamp(30px, 3.3vw, 48px); }
