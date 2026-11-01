@@ -1,0 +1,30 @@
+﻿追加動画の再修正指示
+
+共通：不合格の動画と、その動画に対応する参考画像1枚を添付し、該当する指示だけを送ってください。
+
+【13：波の動きが弱い】
+Keep the current composition and fixed camera. Make the coherent traveling wave clearly visible, with a broad crest and a vertical excursion of about 10 to 15 percent of the visible dot band's height. Keep the regular rows and empty black left area. Do not replace the wave with random particles or camera motion.
+
+【13：点が飛び散る・模様が流出する】
+The dots must remain an orderly connected surface. Remove random particle emission, disappearing dots, collisions, and sideways scrolling of the entire pattern. Animate one full wave phase cycle in the existing field and return to the same shape.
+
+【13：横長の参考画像が切られた】
+Keep the complete horizontal composition of the supplied 21:9 reference. For a 16:9 output, extend the existing black background above it. Do not crop the wave, stretch the dots, or move the pattern into the empty left text area.
+
+【14：枚数や絵柄が変わる】
+Keep exactly FIVE separate upright tracing-paper sheets for the entire video. Preserve the fine grid and one hollow brown rectangle on each sheet. Do not add, remove, duplicate, merge, bend, or rotate sheets. The printed marks remain attached to their original sheet.
+
+【14：動きが弱い】
+Keep the rear-left sheet fixed. Open the spacing of the remaining four sheets progressively until the total group is about 20 percent wider, then return every sheet to the reference position. Keep all five sheets visible within the left 62 percent of the frame. Make this opening and closing clearly readable.
+
+【14：紙がガラスや板になる】
+Restore the matte semi-translucent paper fibers and thin paper edges of the reference. Remove glass reflections, thick block sides, plastic gloss, and neon edges. Keep the sheets flat while translating them.
+
+【共通：カメラが動く】
+Lock the camera, framing, focus, floor, and background. Remove pan, zoom, orbit, shake, and perspective drift. Keep the intended subject animation; do not reduce all motion to a still image.
+
+【共通：ループで跳ぶ】
+Complete the full motion and return to the opening composition and illumination before the last hold. Match the beginning and ending without a jump, brightness flash, or crossfade ghosting. If the tool cannot make an exact loop, state that limitation rather than claiming success.
+
+【共通：音声や出力仕様】
+Deliver the actual MP4 with no soundtrack or sound effects, and omit the audio track if possible. Report the real duration and pixel dimensions. A native 8-second output and 1280x720 are acceptable; do not claim 10 seconds or 1080p when the file differs.

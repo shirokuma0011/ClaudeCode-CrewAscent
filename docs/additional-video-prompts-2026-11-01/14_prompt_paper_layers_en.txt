@@ -1,0 +1,30 @@
+﻿Generate one actual downloadable MP4 video using the attached photograph of five upright tracing-paper sheets as the authoritative composition, material, and opening/closing reference. Deliver the actual video, not production instructions, code, or a storyboard.
+
+DELIVERY
+Landscape 16:9. Prefer 10 seconds; if your video tool only supports 8 seconds, deliver 8 seconds and scale the timeline proportionally. Prefer 1920x1080; native 1280x720 is also acceptable. No soundtrack, speech, or sound effects; omit the audio track if possible. Filename: 14-video-paper-layers.mp4. Aim for a naturally repeating loop and state the actual duration and resolution.
+
+PRESERVE THE SCENE
+Exactly FIVE upright, flat, semi-translucent tracing-paper sheets on the same dark textured surface. Each sheet retains its existing fine grid lines and ONE thin, hollow muted-brown rectangular outline. No letters or numbers. Match the reference positions, sheet sizes, angles, translucency, paper grain, warm upper-left light, dark floor, and dark background at the beginning and end. The sheets are paper, not glass, plastic, metal, or thick blocks.
+Keep all content within approximately the left 62 percent of the frame. Preserve at least the rightmost 35 percent as quiet dark negative space for website text. Do not draw any text there.
+
+LOCK THE CAMERA
+Fixed-tripod static shot. No pan, zoom, orbit, handheld shake, focus breathing, cuts, or background morphing. The floor and background remain stationary. Each sheet stays planar, upright, and parallel to its original orientation. The grid and brown outline stay attached to their sheet with no independent drifting or redrawing.
+
+MAIN MOTION: FIVE LAYERS OPEN AND RETURN
+Keep the rear-left sheet anchored. Let the remaining four sheets translate gently along the existing diagonal arrangement, with progressively larger travel toward the front-right, so the spacing opens smoothly. At maximum expansion the total horizontal width of the five-sheet group is about 20 percent wider than in the reference, while all five sheets remain fully visible within the left 62 percent of the frame. Then reverse the translation smoothly and return every sheet to its exact original position.
+The opening should be clearly readable and memorable, not an almost invisible vibration. Preserve the order of all five sheets. Translate them as intact flat sheets: no fanning rotation, bending, flapping, curling, folding, stretching, duplication, disappearance, or sheets passing through one another. No hands or mechanical supports.
+While the group opens, let a soft warm highlight pass across the five sheets in sequence from rear-left to front-right, revealing the natural translucent paper texture. Keep the highlight restrained and the exposure of the dark text area stable. Do not add a hard spotlight, glowing diagram, laser beam, or neon edge.
+
+LOOP TIMELINE FOR 10 SECONDS
+0.0-1.0 seconds: hold the reference arrangement.
+1.0-4.5 seconds: progressively open the spacing between the five sheets.
+4.5-5.5 seconds: briefly show the expanded arrangement as the warm highlight reaches the front sheet.
+5.5-9.0 seconds: smoothly bring all five sheets back to their original positions and restore the reference illumination.
+9.0-10.0 seconds: hold the opening state so the loop has no position jump or brightness flash.
+If producing 8 seconds, shorten these phases proportionally and complete the return before the end.
+
+LOOK AND EXCLUSIONS
+Quiet premium still-life photography, matte natural paper and stone, warm ivory near #EEE9E1, muted brown near #7B6B5A, black and deep charcoal. Keep realistic contact shadows. No people, faces, hands, bodies, text, numbers, logos, screens, plants, cups, additional objects, changing sheet count, solid colored rectangles replacing the hollow outlines, glass-like reflections, excessive bloom, or CGI gloss.
+
+CHECK BEFORE DELIVERY
+Exactly five sheets remain visible and distinct throughout, each retaining its grid and one hollow brown rectangle. The opening movement is visible, the camera stays fixed, the dark right text area stays clear, and all sheet positions and lighting return for the loop. Report any limitation honestly. Deliver the real MP4 file.

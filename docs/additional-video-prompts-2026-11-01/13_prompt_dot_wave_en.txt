@@ -1,0 +1,26 @@
+﻿Generate one actual downloadable MP4 video using the attached dot-wave image as the authoritative visual reference. Deliver the video itself, not code, instructions, a storyboard, or separate still images.
+
+DELIVERY
+Landscape 16:9. Prefer 10 seconds; if your video tool only supports 8 seconds, deliver 8 seconds and scale the timeline proportionally. Prefer 1920x1080; 1280x720 is acceptable if that is the available native output. No soundtrack, speech, or sound effects; omit the audio track if possible. Filename: 13-video-dot-wave.mp4. Create a smooth, naturally repeating loop and state the actual output duration and resolution.
+
+REFERENCE AND FRAMING
+The reference is 21:9. Preserve its full horizontal composition and the proportions of the dots. For the 16:9 output, extend the existing pure black background above the scene; do not crop the wave or stretch the reference. Keep the dot surface concentrated in the lower-right part of the frame. Preserve a large empty black area on the left and above it for website text. Do not add text yourself.
+
+LOCK THE CAMERA
+Fixed camera for the entire shot. No pan, zoom, orbit, shake, perspective drift, focus breathing, or scene cuts. The background is uniformly black (#000000). Use only muted warm brown dots close to #7B6B5A. Near dots are larger, distant dots are smaller, as in the reference.
+
+MAIN MOTION: ONE CLEAR TRAVELING WAVE
+Animate the existing orderly dot surface as a coherent smooth wave. One broad, visibly readable crest travels diagonally from the lower-right foreground toward the upper-left, more distant part of the dot field. The impression should be memorable, comparable in visual strength to a single tile clearly lifting in an otherwise still scene. Do not make the motion almost imperceptible.
+Use a graceful vertical excursion approximately 10 to 15 percent of the visible dot band's height. Preserve the regular rows, stable dot sizes at each depth, and the overall occupied region. Dots remain distinct rounded marks: they do not turn into sparks, strings, water, fog, or glowing particles. They move together with the surface and return coherently; they do not randomly spawn, vanish, collide, or fly out of the field. The traveling crest is a change in wave phase, not a camera move or the whole pattern sliding across the screen. Keep the left text area empty throughout.
+
+LOOP TIMELINE FOR 10 SECONDS
+0.0-0.5 seconds: establish the reference state.
+0.5-9.0 seconds: complete one smooth full wave cycle, returning to the same phase and shape. Ease in and out without stopping abruptly.
+9.0-10.0 seconds: settle into the opening state, matching framing, dot positions, and brightness. No reset jump, exposure flash, or crossfade ghosting.
+If producing 8 seconds, shorten these phases proportionally rather than cutting off the action.
+
+LOOK AND EXCLUSIONS
+Elegant abstract motion graphics with a matte, understated brown-on-black appearance. Keep the dots clearly visible without turning them gold or neon. No people, hands, objects, lettering, digits, logos, screens, extra geometry, reflective liquid, lens flares, gradients in the background, added bars, or texture noise. Keep overall brightness stable.
+
+CHECK BEFORE DELIVERY
+Confirm that the wave movement is clearly visible, regular rows stay coherent, the left and upper text area stays dark and empty, the camera stays fixed, and the ending joins the beginning. Report any feature you could not achieve instead of claiming it was verified. Deliver the actual video file.

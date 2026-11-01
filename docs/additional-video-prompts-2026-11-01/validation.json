@@ -1,0 +1,79 @@
+﻿{
+  "date": "2026-11-01",
+  "archive": "crewascent-extra-video-prompts-20261101.zip",
+  "files": [
+    {
+      "name": "00_README.html",
+      "bytes": 24875,
+      "sha256": "3e71654123f6c6dd7fa058e2a8dfcafd50b4ffb676ffe904fb62668307ec8821",
+      "strict_utf8_and_bom": "PASS"
+    },
+    {
+      "name": "00_README.txt",
+      "bytes": 3233,
+      "sha256": "9f87597df434278ca7f3d6c7128857a1d39d94e5a0077153d26c550e1306e738",
+      "strict_utf8_and_bom": "PASS"
+    },
+    {
+      "name": "13_prompt_dot_wave_en.txt",
+      "bytes": 3545,
+      "sha256": "c97afe942e4af5e8eeca85a6c3ea461c2e268fbcb68e19eaf9c239bd1d1caaa8",
+      "strict_utf8_and_bom": "PASS"
+    },
+    {
+      "name": "13_prompt_dot_wave_ja.txt",
+      "bytes": 3534,
+      "sha256": "5d183b66d593eaac5a543c26d0cb822a44f216d883e517f94667d8e3ab9eed05",
+      "strict_utf8_and_bom": "PASS"
+    },
+    {
+      "name": "13_reference_dot_wave.png",
+      "bytes": 510393,
+      "sha256": "d826afc03f7dfad4f6aee3617f78f5b7109721538bae3a4873efb3c31c872722",
+      "dimensions": [
+        2100,
+        900
+      ],
+      "reference_unchanged": true
+    },
+    {
+      "name": "14_prompt_paper_layers_en.txt",
+      "bytes": 4252,
+      "sha256": "a35cc0f760d2f922cf1a80077c954d0e0137b49859b0eb91e43a38aba22c6758",
+      "strict_utf8_and_bom": "PASS"
+    },
+    {
+      "name": "14_prompt_paper_layers_ja.txt",
+      "bytes": 4246,
+      "sha256": "8f62520160fcad7c18ee45956d1326e34cb678eb9c10a5b65dedebba81451367",
+      "strict_utf8_and_bom": "PASS"
+    },
+    {
+      "name": "14_reference_paper_layers.png",
+      "bytes": 4188285,
+      "sha256": "61b3949f11addeca24a59050c7005e54c976a277fa20490874c62ed2322df74c",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "reference_unchanged": true
+    },
+    {
+      "name": "90_revision_prompts_ja.txt",
+      "bytes": 2869,
+      "sha256": "4a46d7f4e516ad5ea02e916a150e8fbcfa5ba239b17613668a1890ea3b807b68",
+      "strict_utf8_and_bom": "PASS"
+    },
+    {
+      "name": "91_checklist_ja.txt",
+      "bytes": 2170,
+      "sha256": "275a1a2347c51c17c784e1039185763522473b08603d46191ac72ada36839b43",
+      "strict_utf8_and_bom": "PASS"
+    }
+  ],
+  "archive_crc": "PASS",
+  "filename_encoding": "ASCII only",
+  "text_encoding": "UTF-8 with BOM",
+  "sha256": "2d8c70d3b66c5e0b82bf1e36ae94bc084c00f7f38ccb367178c8625fe0835bfe",
+  "archive_bytes": 4723341
+}
