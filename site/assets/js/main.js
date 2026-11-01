@@ -3,6 +3,18 @@
   'use strict';
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ------------------- ページを開いたら必ず一番上から -------------------
+     別のページへ移ったとき、戻る・進むで来たとき、再読み込みしたときも
+     ブラウザが前のスクロール位置を復元しないようにする。
+     ただし #plan-first のような「ページ内の場所を指したリンク」で来たときは、その場所を見せる。 */
+  try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) { /* noop */ }
+  var toTop = function () {
+    if (location.hash && location.hash.length > 1) return;
+    window.scrollTo(0, 0);
+  };
+  toTop();
+  window.addEventListener('pageshow', function (ev) { if (ev.persisted) toTop(); });
+
   /* 計測: dataLayer がある場合だけ push する薄い層（個人情報・回答値は送らない） */
   window.crewTrack = function (event, params) {
     try {
