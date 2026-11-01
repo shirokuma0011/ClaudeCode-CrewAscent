@@ -676,7 +676,7 @@ html .sec--cream { background: var(--paper-2); }
   .pg-sub .mlist li { padding-block: 6px; }
 }
 
-/* 14. 動画: トップの相談の帯に36枚のタイル（生成画像から作った8秒の繰り返し。光が移ろい、茶色の1枚が浮いて戻る） */
+/* 14. 動画: トップの相談の帯に36枚のタイル（オーナーが用意した生成動画。9秒の繰り返し） */
 .cta--photo { position: relative; overflow: hidden; }
 .cta__photo { position: absolute; inset: 0 0 0 auto; width: 44%; background: #0d0c0b; }
 .cta__photo img, .cta__photo video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 72% 50%; }
