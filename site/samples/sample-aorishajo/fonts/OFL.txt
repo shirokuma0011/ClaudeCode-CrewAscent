@@ -1,5 +1,9 @@
-=== notosansjp ===
-Copyright 2014-2021 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'
+This folder contains subsets of the following fonts, all licensed under the SIL Open Font License 1.1.
+- Murecho (aori-murecho-300.woff2, aori-murecho-600.woff2): Copyright 2021 The Murecho Project Authors
+- Sora (aori-sora-400.woff2, aori-sora-600.woff2): Copyright 2019 The Sora Project Authors
+
+===== Murecho =====
+Copyright 2021 The Murecho Project Authors (https://github.com/positype/Murecho-Project)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
@@ -93,13 +97,12 @@ DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
 
-
-=== manrope ===
-Copyright 2018 The Manrope Project Authors (https://github.com/googlefonts/manrope)
+===== Sora =====
+Copyright 2019 The Sora Project Authors (https://github.com/sora-xor/sora-font)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
-This license is copied below, and is also available with a FAQ at:
-http://scripts.sil.org/OFL
+
+This license is copied below, and is also available with a FAQ at: https://scripts.sil.org/OFL
 
 
 -----------------------------------------------------------

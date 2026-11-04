@@ -121,12 +121,12 @@
       "industry": "専門商社",
       "typeId": "CA07",
       "typeName": "先進情報型サイト",
-      "pages": "TOPページのみ",
-      "summary": "品番が分からなくても仕様から探せることを示す、専門商社のTOPページの見本です。",
+      "pages": "2ページ",
+      "summary": "品番が分からなくても寸法から探せる専門商社の見本です。TOPと、見積もり・在庫の問い合わせページの2枚です。",
       "points": [
-        "分類の色帯と細い罫の条件表",
+        "分類索引と寸法の条件表",
         "取り寄せ日数・最小数量・送料を一覧に",
-        "当日出荷の締め時刻と更新日を明記"
+        "型番・寸法・数量で送れる問い合わせ"
       ],
       "thumb": "assets/img/works/sample-korogari.jpg",
       "url": "samples/sample-korogari/index.html"
@@ -137,12 +137,12 @@
       "industry": "語学",
       "typeId": "CA08",
       "typeName": "今らしい案内型サイト",
-      "pages": "TOPページのみ",
-      "summary": "スマートフォンで3つ確かめてから相談できる、英会話教室のTOPページの見本です。",
+      "pages": "2ページ",
+      "summary": "スマートフォンで確かめてから体験を申し込める英会話教室の見本です。TOPと、はじめての方へのページの2枚です。",
       "points": [
-        "クラス・初回の流れ・月謝の3つの入口",
-        "追加費用の条件を短く",
-        "スマートフォンを先に設計"
+        "クラス・初めての1回・月謝の入口",
+        "体験の申し込みを3段階で",
+        "追加費用の条件を短く"
       ],
       "thumb": "assets/img/works/sample-hanashiba.jpg",
       "url": "samples/sample-hanashiba/index.html"
@@ -153,12 +153,12 @@
       "industry": "写真・映像制作",
       "typeId": "CA09",
       "typeName": "洗練集客型サイト",
-      "pages": "TOPページのみ",
-      "summary": "撮れるもの・撮れないものと料金の目安を問い合わせ前に示す、撮影スタジオのTOPページの見本です。",
+      "pages": "2ページ",
+      "summary": "撮れる範囲と料金を問い合わせ前に示す撮影スタジオの見本です。TOPと、料金と撮れる範囲のページの2枚です。",
       "points": [
         "料金の目安を最初の画面の近くに",
         "撮れるもの・撮れないものを並べる",
-        "納品までの流れと追加費用を表で"
+        "追加費用と納品までを表で"
       ],
       "thumb": "assets/img/works/sample-aorishajo.jpg",
       "url": "samples/sample-aorishajo/index.html"
@@ -169,12 +169,12 @@
       "industry": "設計事務所",
       "typeId": "CA10",
       "typeName": "洗練ブランド型サイト",
-      "pages": "TOPページのみ",
-      "summary": "素材と光の考え方から設計料まで一枚で読める、設計事務所のTOPページの見本です。",
+      "pages": "2ページ",
+      "summary": "軒の下の暗さから考える設計事務所の見本です。TOPと、相談から引き渡しまでの進め方と費用のページの2枚です。",
       "points": [
         "写真を大きく、言葉は少なく",
-        "相談から設計契約までの4段階",
-        "初回相談の費用と設計料の考え方"
+        "5つの段階と各段階の費用",
+        "設計料の考え方を先に"
       ],
       "thumb": "assets/img/works/sample-nokishita.jpg",
       "url": "samples/sample-nokishita/index.html"
@@ -187,11 +187,11 @@
       "typeName": "今らしさ魅力型サイト",
       "plan": "シンプル",
       "pages": "3ページ",
-      "summary": "写真に頼らず、光と線で「ツヤ」を表現した3ページの見本です。料金と所要時間を必ず並べています。",
+      "summary": "写真と短い説明で「ツヤ」を見せる美容室の3ページの見本です。料金（税込）と所要時間を必ず並べています。",
       "points": [
-        "水面の光が流れる最初の画面",
-        "目的で選べるメニューと所要時間つきの料金表",
-        "はじめての方の3段階を予約の手前に"
+        "写真で見せる仕上がりと所要時間",
+        "目的で選べるメニューと料金表",
+        "はじめての方の流れを予約の手前に"
       ],
       "thumb": "assets/img/works/sample-minamo.jpg",
       "url": "samples/sample-minamo/index.html"
@@ -202,12 +202,12 @@
       "industry": "D2Cブランド",
       "typeId": "CA12",
       "typeName": "印象記憶ブランド型サイト",
-      "pages": "TOPページのみ",
-      "summary": "縞の靴下だけを編むブランドを、縞そのもので覚えてもらうTOPページの見本です。",
+      "pages": "2ページ",
+      "summary": "縞の靴下だけを編むブランドを縞で覚えてもらう見本です。TOPと、贈り物とまとめ買いのページの2枚です。",
       "points": [
         "4色の糸と縞の幅の決め方",
         "1足と3足組の値段（税込）",
-        "贈り物とまとめ買いの相談の入口"
+        "紙の帯で包む贈り物とまとめ買い"
       ],
       "thumb": "assets/img/works/sample-shimawo.jpg",
       "url": "samples/sample-shimawo/index.html"

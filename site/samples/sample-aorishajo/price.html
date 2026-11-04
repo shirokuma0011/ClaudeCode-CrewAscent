@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>料金と撮れる範囲｜アオリ写場 商品撮影と採用動画（見本・架空）</title>
+<meta name="description" content="アオリ写場の料金表です。商品撮影・採用動画・出張撮影の基本料金と、カットの追加・修正・動画の延長・特急の追加費用を一枚の表にまとめ、撮れないものを表のすぐ下に書いています。点数と長さから料金の目安を計算できます（架空の事業の見本サイト）。">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="../../assets/brand/icon-32.png" sizes="32x32">
+<link rel="preload" href="fonts/aori-murecho-300.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../_shared/crew-frame.css?v=20261015">
+<script defer src="../_shared/crew-frame.js?v=20261015"></script>
+<link rel="stylesheet" href="assets/aorishajo.css?v=2">
+<script>document.documentElement.classList.add('js');</script>
+<script defer src="assets/aorishajo.js?v=2"></script>
+</head>
+<body class="pg-price">
+<a class="skip" href="#main">本文へ移動</a>
+<div class="ca-ribbon" role="note" aria-label="見本サイトについて">
+  <a class="ca-ribbon__brand" href="../../index.html" aria-label="クルーアセント（制作）"><img src="../../assets/brand/logo-onink.webp" width="360" height="278" alt=""><span class="ca-ribbon__long">クルーアセント</span></a>
+  <p class="ca-ribbon__text"><b>見本サイト・架空</b><span class="ca-ribbon__long">架空の事業を想定した制作イメージです。事業・価格・住所はすべて架空です。</span></p>
+  <p class="ca-ribbon__links"><a href="../../type-refined-conversion.html">CA09<span class="ca-ribbon__long"> 洗練集客型サイト</span></a><a href="design-notes.html"><span class="ca-ribbon__long">この見本の</span>設計メモ</a></p>
+</div>
+
+<header class="site-head">
+  <a class="logo" href="index.html" aria-label="アオリ写場 トップ">
+    <svg viewBox="0 0 28 28" width="28" height="28" aria-hidden="true" focusable="false"><path d="M1 8 V1 H8 M20 1 H27 V8 M27 20 V27 H20 M8 27 H1 V20" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="14" cy="14" r="3.2" fill="none" stroke="#17706f" stroke-width="1.4"/></svg>
+    <span class="logo__name">アオリ写場</span>
+  </a>
+  <p class="cut" aria-label="このページはカット02"><span>カット</span><b class="ff-s">02</b><span class="cut__of ff-s">/02</span></p>
+  <nav class="head-nav" aria-label="サイトの案内">
+    <a href="index.html">トップ</a>
+    <a href="price.html" aria-current="page">料金と撮れる範囲</a>
+  </nav>
+  <a class="btn btn--head" href="index.html#contact">問い合わせる</a>
+</header>
+
+<main id="main">
+  <!-- 下層の最初の画面：全幅の作例写真の下端に、料金の目安と範囲の帯を重ねる。h1 は帯の中 -->
+  <section class="sub-hero" aria-labelledby="page-title">
+    <div class="sub-hero__media">
+      <img src="assets/img/04-kit.webp" width="1536" height="1024" alt="開いた機材ケースに収まったレンズ、照明、背景紙のロール" fetchpriority="high">
+      <span class="frame" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <p class="memo memo--tr"><span class="memo__k">撮影メモ</span><span>出張用の機材ケース</span><span>カメラ 2台・照明 3灯・背景紙</span></p>
+      <p class="credit">画像はAI生成のイメージです</p>
+    </div>
+    <div class="sub-hero__band">
+      <div class="sub-hero__title">
+        <p class="no"><b class="ff-s">02</b>料金表</p>
+        <h1 id="page-title">料金と、撮れる範囲。</h1>
+      </div>
+      <ul class="sub-hero__pts">
+        <li><b>商品撮影・半日</b><span class="pv"><span class="ff-s">55,000</span>円〜<small>税込</small></span><span class="ps">20カットまで</span></li>
+        <li><b>採用動画・90秒</b><span class="pv"><span class="ff-s">198,000</span>円〜<small>税込</small></span><span class="ps">撮影1日</span></li>
+        <li><b>出張・範囲</b><span class="pv">市内 +<span class="ff-s">11,000</span>円〜</span><span class="ps">記念写真・空撮は撮りません</span></li>
+      </ul>
+      <div class="sub-hero__act">
+        <a class="btn btn--act" href="index.html#contact" data-hero-cta>問い合わせる</a>
+        <a class="more" href="#calc">料金の目安を計算する</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1 一枚の料金表：基本料金と追加費用の条件を同じ行に。撮れないものは表の下 -->
+  <section class="sec sec--white" id="table" aria-labelledby="table-title">
+    <div class="sec__head sec__head--row">
+      <p class="no"><b class="ff-s">02-1</b>基本料金と追加費用</p>
+      <h2 id="table-title">何を撮ると、いくらか。</h2>
+    </div>
+    <div class="ptable-wrap">
+      <table class="ptable">
+        <caption class="sr-only">撮影の種類ごとの基本料金・含むもの・追加費用が出る条件（すべて税込）</caption>
+        <thead><tr><th scope="col">撮影の種類</th><th scope="col">基本料金（税込）</th><th scope="col">含むもの</th><th scope="col" id="extra">追加費用が出る条件（税込）</th></tr></thead>
+        <tbody>
+          <tr>
+            <th scope="row"><span class="ptable__pic"><img src="assets/img/02-product.webp" width="1200" height="900" alt="" loading="lazy"></span><span class="ptable__name">商品撮影<small>半日</small></span></th>
+            <td class="ptable__price"><span class="ff-s">55,000</span>円〜</td>
+            <td>20カットまで。色の合わせ込み・切り抜き</td>
+            <td><span class="ptable__cond">カットを増やす<b><span class="ff-s">2,200</span>円</b><small>1点ごと</small></span></td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="ptable__pic ptable__pic--b"><img src="assets/img/02-product.webp" width="1200" height="900" alt="" loading="lazy"></span><span class="ptable__name">商品撮影<small>1日</small></span></th>
+            <td class="ptable__price"><span class="ff-s">88,000</span>円〜</td>
+            <td>色の合わせ込み・切り抜き</td>
+            <td><span class="ptable__cond">カットを増やす<b><span class="ff-s">2,200</span>円</b><small>1点ごと</small></span></td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="ptable__pic"><img src="assets/img/03-video.webp" width="1200" height="900" alt="" loading="lazy"></span><span class="ptable__name">採用動画<small>90秒1本・撮影1日</small></span></th>
+            <td class="ptable__price"><span class="ff-s">198,000</span>円〜</td>
+            <td>構成の相談・撮影・編集・字幕</td>
+            <td><span class="ptable__cond">動画を長くする<b><span class="ff-s">33,000</span>円</b><small>30秒ごと</small></span></td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="ptable__pic"><img src="assets/img/04-kit.webp" width="1536" height="1024" alt="" loading="lazy"></span><span class="ptable__name">出張撮影<small>上の料金に足す</small></span></th>
+            <td class="ptable__price"><span class="ff-s">11,000</span>円〜</td>
+            <td>工場・店舗・事務所への機材の持ち込み（市内）</td>
+            <td><span class="ptable__cond">市外へ行く<b>距離で見積もり</b></span></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row">すべての撮影に共通</th>
+            <td colspan="2">修正は2回まで含みます。納品は撮影から10営業日</td>
+            <td><span class="ptable__cond">3回目以降の修正<b><span class="ff-s">5,500</span>円</b><small>1回ごと</small></span><span class="ptable__cond">5営業日で納品（特急）<b><span class="ff-s">22,000</span>円</b></span></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <div class="under">
+      <div>
+        <h3>含まないもの</h3>
+        <p>モデルの手配</p>
+      </div>
+      <div class="under__no">
+        <h3>撮れないもの</h3>
+        <p>結婚式・七五三などの個人の記念写真／ライブ配信・イベントの当日記録／ドローンでの空撮／人物が主役の広告モデル撮影</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 見積もりの目安：選んだ内容で、税込の合計を出す -->
+  <section class="sec sec--gray calc" id="calc" aria-labelledby="calc-title">
+    <div class="calc__head">
+      <p class="no"><b class="ff-s">02-2</b>見積もりの目安</p>
+      <h2 id="calc-title">点数と長さから、<br>目安を出す。</h2>
+      <p>上の表の料金で足し算をします。正式な金額は、見積書でお伝えします。</p>
+    </div>
+    <form class="calc__form" data-calc data-sample-form="見積もりの目安を計算する" action="#" novalidate aria-describedby="calc-nojs">
+      <fieldset class="calc__g">
+        <legend>撮影の種類</legend>
+        <label class="opt"><input type="radio" name="kind" value="half" checked><span>商品撮影・半日</span></label>
+        <label class="opt"><input type="radio" name="kind" value="day"><span>商品撮影・1日</span></label>
+        <label class="opt"><input type="radio" name="kind" value="video"><span>採用動画</span></label>
+      </fieldset>
+      <div class="calc__g" data-for="half">
+        <label for="c-cuts">全部のカット数</label>
+        <div class="num"><input id="c-cuts" name="cuts" type="number" inputmode="numeric" min="1" max="300" value="20"><span>カット</span></div>
+        <p class="calc__hint">20カットを超えた分は、1点 2,200円</p>
+      </div>
+      <div class="calc__g" data-for="day" hidden>
+        <p class="calc__hint">1日で撮れる点数は、内容を伺って見積書でお伝えします</p>
+      </div>
+      <div class="calc__g" data-for="video" hidden>
+        <label for="c-len">動画の長さ</label>
+        <select id="c-len" name="len"><option value="90">90秒</option><option value="120">120秒</option><option value="150">150秒</option><option value="180">180秒</option></select>
+      </div>
+      <div class="calc__g">
+        <label for="c-trip">撮る場所</label>
+        <select id="c-trip" name="trip"><option value="studio">スタジオ</option><option value="city">出張（市内）</option><option value="far">出張（市外）</option></select>
+      </div>
+      <div class="calc__g">
+        <label for="c-fix">修正の回数</label>
+        <select id="c-fix" name="fix"><option value="2">2回まで</option><option value="3">3回</option><option value="4">4回</option></select>
+      </div>
+      <label class="opt opt--check"><input type="checkbox" name="rush" value="1"><span>5営業日で納品（特急）</span></label>
+    </form>
+    <div class="slip" aria-labelledby="slip-title">
+      <p class="slip__k" id="slip-title">見積もりの目安</p>
+      <ul class="slip__rows" data-slip-rows>
+        <li><span>商品撮影・半日</span><b class="ff-s">55,000円</b></li>
+      </ul>
+      <p class="slip__sum"><span>合計の目安（税込）</span><b data-slip-sum><span class="ff-s">55,000</span>円〜</b></p>
+      <p class="slip__note" data-slip-note>表の「〜」は最低の目安です。</p>
+      <p class="slip__nojs" id="calc-nojs">計算が動かないときは、上の料金表で足し算してください。</p>
+      <a class="btn btn--act" href="index.html#contact" data-slip-go>この内容で問い合わせる</a>
+    </div>
+  </section>
+
+  <!-- 3 費用が決まるまで：一列の段階に、日数と用意するもの -->
+  <section class="sec sec--white" id="steps" aria-labelledby="steps-title">
+    <div class="sec__head sec__head--row">
+      <p class="no"><b class="ff-s">02-3</b>費用が決まるまで</p>
+      <h2 id="steps-title">見積書が届くまで、<br class="sp">費用はかかりません。</h2>
+    </div>
+    <ol class="stage">
+      <li><span class="stage__d ff-s">当日</span><h3>問い合わせ</h3><p>フォームか電話で</p><p class="stage__prep"><b>用意するもの</b>撮りたいもの・点数・時期（分かる範囲で）</p></li>
+      <li><span class="stage__d ff-s">2<small>営業日以内</small></span><h3>質問と目安の返信</h3><p>使い道を伺い、目安を返信</p><p class="stage__prep"><b>用意するもの</b>商品の大きさ、撮る場所の写真があれば</p></li>
+      <li><span class="stage__d ff-s">決定後</span><h3>見積書</h3><p>内容が決まったら送付</p><p class="stage__prep stage__prep--key"><b>ここで決める</b>見積書を見て、頼むかを決める</p></li>
+      <li><span class="stage__d ff-s">撮影日</span><h3>撮影</h3><p>スタジオか、会社への出張</p><p class="stage__prep"><b>用意するもの</b>撮る商品・制服、立ち会う担当の方1名</p></li>
+    </ol>
+  </section>
+
+  <!-- ページの終わり：次に読むページと主なボタン -->
+  <section class="end" aria-label="次に進む">
+    <a class="end__next" href="index.html#product">
+      <span class="end__k">次に見る</span>
+      <span class="end__t">作例と、仕上げの前後を見る</span>
+    </a>
+    <div class="end__act">
+      <p>決まっていなくても相談できます。<br>返信は2営業日以内です。</p>
+      <a class="btn btn--act" href="index.html#contact">問い合わせる</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="site-foot__in">
+    <div class="site-foot__name">
+      <p class="logo__name">アオリ写場</p>
+      <p>中小企業の商品撮影と採用動画（架空の事業）</p>
+    </div>
+    <dl class="site-foot__info">
+      <div><dt>所在地</dt><dd>架空県港見市 倉町2-14 倉庫棟2階<span class="nw">【要確認】</span></dd></div>
+      <div><dt>連絡先</dt><dd>電話<span class="nw">【要確認】</span>／問い合わせフォーム</dd></div>
+      <div><dt>受付</dt><dd>平日 10:00〜18:00</dd></div>
+    </dl>
+    <nav class="site-foot__nav" aria-label="フッターの案内">
+      <a href="index.html">トップ</a>
+      <a href="price.html" aria-current="page">料金と撮れる範囲</a>
+      <a href="index.html#contact">問い合わせ</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="dock" aria-label="問い合わせの窓口">
+  <a class="btn btn--line" href="#calc">目安を計算</a>
+  <a class="btn btn--act" href="index.html#contact">問い合わせる</a>
+</div>
+
+<aside class="ca-credit" aria-labelledby="ca-credit-title">
+  <p class="ca-credit__label">この見本サイトについて</p>
+  <h2 id="ca-credit-title">Web診断36「CA09 洗練集客型サイト」の設計方針で、クルーアセントが制作した見本です。</h2>
+  <p>「アオリ写場」は架空の事業です。掲載している価格・営業時間・住所・数値はすべて見本用の設定で、実在の店舗・人物・お客様の声は載せていません。</p>
+  <div class="ca-credit__actions">
+    <a class="ca-btn ca-btn--primary" href="../../diagnosis.html?mode=quick">あなたの事業の方向を診断する（16問・無料）</a>
+    <a class="ca-btn" href="design-notes.html">この見本の設計メモ</a>
+    <a class="ca-link" href="../../works.html">見本サイトの一覧</a>
+  </div>
+  <p class="ca-credit__fine">参考の規模: TOPページと下層1ページ（料金と撮れる範囲）の見本です。見本の規模は参考で、特定のプランをおすすめするものではありません。</p>
+  <a class="ca-credit__brand" href="../../index.html"><img src="../../assets/brand/logo.webp" width="360" height="278" alt="">クルーアセント（CREW ASCENT）</a>
+</aside>
+
+<dialog class="ca-dialog" id="ca-sample-dialog" aria-labelledby="ca-dialog-title">
+  <h2 id="ca-dialog-title">これは見本サイトです</h2>
+  <p data-ca-dialog-text>この操作は、見本のため実際には行われません。</p>
+  <div class="ca-dialog__actions">
+    <a class="ca-btn" href="../../contact.html">クルーアセントに相談する</a>
+    <button type="button" data-ca-close>閉じる</button>
+  </div>
+</dialog>
+</body>
+</html>

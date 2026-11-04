@@ -1,9 +1,9 @@
-=== sawarabimincho ===
-Copyright 2024 The Sawarabi Mincho Project Authors (https://github.com/googlefonts/sawarabi-mincho/)
+== Zen Old Mincho (fonts/nokishita-zenold-500.woff2) ==
+Copyright 2021 The Zen Old Mincho Project Authors (https://github.com/googlefonts/zen-oldmincho)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
-https://openfontlicense.org
+http://scripts.sil.org/OFL
 
 
 -----------------------------------------------------------
@@ -92,9 +92,7 @@ INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
 DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
-
-
-=== tenorsans ===
+== Tenor Sans (fonts/nokishita-tenor.woff2) ==
 Copyright (c) 2011, Denis Masharov <denis.masharov@gmail.com>,
 with Reserved Font Name "Tenor", "Tenor Sans".
 

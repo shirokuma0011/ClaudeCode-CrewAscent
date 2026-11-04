@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>縞だけを編む靴下 シマヲ｜縞しか、編まない。（見本・架空）</title>
-<meta name="description" content="日本の靴下工場で、縞の靴下だけを編むブランドです。古い編み機と4色の糸、縞の幅の決め方、1足と3足組の値段、贈り物とまとめ買いの相談の方法を一つのページで紹介します（架空の事業の見本サイト）。">
+<meta name="description" content="日本の小さな靴下工場で、縞の靴下だけを編むブランドです。4つの幅と4色の糸、40年近く動く編み機、縞の幅の決め方、1足と3足組の値段（税込）を紹介します（架空の事業の見本サイト）。">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="../../assets/brand/icon-32.png" sizes="32x32">
-<link rel="preload" href="fonts/shimawo-antique.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/shimawo-zenantique-500.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../_shared/crew-frame.css?v=20261015">
 <script defer src="../_shared/crew-frame.js?v=20261015"></script>
-<link rel="stylesheet" href="assets/shimawo.css?v=1">
+<link rel="stylesheet" href="assets/shimawo.css?v=2">
 <script>document.documentElement.classList.add('js');</script>
-<script defer src="assets/shimawo.js?v=1"></script>
+<script defer src="assets/shimawo.js?v=2"></script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ移動</a>
@@ -23,154 +23,184 @@
 </div>
 
 <header class="site-head">
-  <a class="logo" href="#top" aria-label="シマヲ（ページの先頭へ）">
+  <a class="logo" href="index.html" aria-label="シマヲ トップ">
     <span class="logo__mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
     <span class="logo__name ff-d">シマヲ</span><span class="logo__en ff-n">SHIMAWO</span>
   </a>
-  <nav class="head-nav" aria-label="ページ内の案内">
-    <a href="#about">シマヲについて</a><a href="#making">編み機と糸</a><a href="#width">縞の幅</a><a href="#price">値段</a>
+  <nav class="head-nav" aria-label="サイトの案内">
+    <a href="index.html" aria-current="page">トップ</a>
+    <a href="gift.html">贈り物<span class="pc-only">と</span><span class="sp-only">・</span>まとめ買い</a>
   </nav>
-  <a class="btn btn--head" href="#contact">ご相談</a>
+  <a class="btn btn--head" href="gift.html#form">ご相談</a>
 </header>
 
 <main id="main">
-  <!-- 1. 最初の画面: 全面の写真に、宣言を大きく -->
-  <section class="hero" id="top" aria-labelledby="hero-title">
+  <!-- 最初の画面: 物撮りの全面に宣言。下端に「紙の帯」の面を重ね、何・いくら・どう相談するかを置く -->
+  <section class="hero" aria-labelledby="hero-title">
     <div class="hero__media">
-      <img src="assets/img/01-hero.webp" width="1536" height="864" alt="コバルトの背景紙の上に、斜めに平行に並ぶ5足の縞の靴下" fetchpriority="high">
-      <p class="hero__credit">写真はAI生成のイメージです</p>
+      <img src="assets/img/01-hero.webp" width="1536" height="864" alt="コバルトの背景紙の上に、同じ向きで斜めに並ぶ5足の縞の靴下" fetchpriority="high">
+      <p class="hero__credit">画像はAI生成のイメージです</p>
     </div>
     <div class="hero__copy">
       <h1 id="hero-title">縞しか、<br>編まない。</h1>
       <span class="sweep" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-      <p class="hero__sign"><span class="ff-n">SHIMAWO</span>シマヲ</p>
+      <p class="hero__sign"><span class="ff-n">SHIMAWO</span><span class="ff-d">シマヲ</span></p>
+    </div>
+    <!-- 写真を横切る「紙の帯」: 1足ずつ巻く紙の帯と同じ形で、何・いくら・どう相談するかを1行に -->
+    <div class="wrap-band">
+      <div class="wrap-band__in">
+        <p class="wrap-band__lead"><span class="ff-d">日本の小さな工場で、<br class="sp-only">縞の靴下だけを編むブランドです。</span><small>4つの幅と4色の糸だけで、季節ごとに縞をつくります。</small></p>
+        <div class="wrap-band__price">
+          <dl>
+            <div><dt>1足</dt><dd><span class="ff-n">2,420</span>円</dd></div>
+            <div><dt>3足組</dt><dd><span class="ff-n">6,600</span>円</dd></div>
+          </dl>
+          <p class="wrap-band__tax">税込・22〜25cm／25〜28cm</p>
+        </div>
+        <div class="wrap-band__act">
+          <a class="btn btn--act" href="#about">この考え方を読む</a>
+          <a class="more" href="gift.html">贈り物・まとめ買いの相談<span class="more__sub">返信は2営業日以内</span></a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <div class="intro">
-    <p class="intro__lead">日本の小さな工場で、<br>縞の靴下だけを編むブランドです。</p>
-    <div class="intro__act">
-      <a class="btn btn--act" href="#about">この考え方を読む</a>
-      <ul class="intro__notes">
-        <li>送料 全国一律550円（3足組は無料）</li>
-        <li>相談への返信は2営業日以内</li>
-        <li>1足 2,420円から（税込）</li>
-      </ul>
-    </div>
-  </div>
+  <div class="band band--a band--first" role="presentation"><p class="band__read" aria-hidden="true">この帯の縞 <span class="ff-n">24・3・3・3・12・6・3・3・6</span> mm</p></div>
 
-  <!-- 2. 何をするブランドか -->
+  <!-- 1. 何をするブランドか: 縞の決まり -->
   <section class="about" id="about" aria-labelledby="about-title">
     <div class="about__body">
       <p class="label"><span class="ff-n">01</span>シマヲについて</p>
       <h2 id="about-title">柄を増やさず、<br>縞の幅だけを変える。</h2>
       <p>無地も、水玉も、ワンポイントも編みません。決まった4つの幅と4色の糸の組み合わせだけで、季節ごとに新しい縞をつくります。</p>
-      <dl class="rules">
-        <div><dt>縞の幅</dt><dd><span class="ff-n">3・6・12・24</span>mm の4種類</dd></div>
-        <div><dt>糸の色</dt><dd>コバルト・からし・生成り・黒の4色</dd></div>
-        <div><dt>届け方</dt><dd>1足ずつ紙の帯で巻いて</dd></div>
-      </dl>
+      <p>できた靴下は、1足ずつ紙の帯で巻いてお届けします。</p>
+      <a class="more more--line" href="#width">縞の幅の決め方へ</a>
     </div>
-    <figure class="about__pic">
-      <img src="assets/img/05-package.webp" width="1200" height="900" alt="無地の紙帯で巻いた縞の靴下と、無地の紙箱" loading="lazy">
-    </figure>
-  </section>
-
-  <div class="stripe-rule" aria-hidden="true"></div>
-
-  <!-- 3. 制作の背景（編み機と糸） -->
-  <section class="making" id="making" aria-labelledby="making-title">
-    <div class="making__head">
-      <p class="label label--on"><span class="ff-n">02</span>制作の背景</p>
-      <h2 id="making-title">古い編み機で、一足ずつ。</h2>
-      <p>工場には、40年近く動いている編み機が6台あります。針の数が少ない分、縞の境目がはっきり出ます。糸は4色だけを、毎年同じ紡績工場から仕入れます。</p>
-    </div>
-    <figure class="making__a">
-      <img src="assets/img/02-cylinder.webp" width="1200" height="900" alt="靴下編み機の円筒の接写、並んだ細い針と入っていく糸" loading="lazy">
-      <figcaption><span class="ff-n">A</span>編み機の筒。針に糸が入っていくところ</figcaption>
-    </figure>
-    <figure class="making__b">
-      <img src="assets/img/03-yarn.webp" width="1024" height="1024" alt="生成りの台の上に並ぶ、コバルト・からし・生成り・黒の糸のコーン" loading="lazy">
-      <figcaption><span class="ff-n">B</span>使う糸は、この4色だけ</figcaption>
-    </figure>
-  </section>
-
-  <!-- 4. 縞の幅の決め方 -->
-  <section class="width" id="width" aria-labelledby="width-title">
-    <figure class="width__pic">
-      <img src="assets/img/04-strips.webp" width="1536" height="1024" alt="生成りの机の上に並べた、幅の違う色紙の帯" loading="lazy">
-    </figure>
-    <div class="width__panel">
-      <p class="label"><span class="ff-n">03</span>縞の幅の決め方</p>
-      <h2 id="width-title">縞の幅は、<br>色紙を切って決める。</h2>
-      <p>4つの幅に切った色紙の帯を机に並べ、離れて見て、近くで見て、また並べ替えます。決まった並びは、そのまま編み機の設定になります。</p>
-      <figure class="spec" aria-labelledby="spec-cap">
-        <div class="spec__bars" aria-hidden="true">
-          <span style="--w:3"></span><span style="--w:6"></span><span style="--w:12"></span><span style="--w:24"></span>
+    <div class="rules">
+      <figure class="rules__yarn">
+        <img src="assets/img/03-yarn.webp" width="1024" height="1024" alt="生成りの台の上に並ぶ、コバルト・からし・生成り・黒の糸のコーン" loading="lazy">
+        <figcaption><b class="ff-d">糸は4色</b>コバルト・からし・生成り・黒</figcaption>
+      </figure>
+      <figure class="gauge" aria-labelledby="gauge-cap">
+        <p class="gauge__h ff-d">幅は4つ</p>
+        <div class="gauge__bars" role="img" aria-label="3mm、6mm、12mm、24mm の4つの縞の幅">
+          <div><b class="ff-n">3<small> mm</small></b><span style="--mm:3"></span></div>
+          <div><b class="ff-n">6<small> mm</small></b><span style="--mm:6"></span></div>
+          <div><b class="ff-n">12<small> mm</small></b><span style="--mm:12"></span></div>
+          <div><b class="ff-n">24<small> mm</small></b><span style="--mm:24"></span></div>
         </div>
-        <ul class="spec__labels" aria-hidden="true"><li class="ff-n">3</li><li class="ff-n">6</li><li class="ff-n">12</li><li class="ff-n">24</li></ul>
-        <figcaption id="spec-cap">シマヲが使う4つの幅（mm・実際の幅の約2倍で表示）</figcaption>
+        <figcaption id="gauge-cap">単位は mm。縞の太さは、画面でもおよそ実物の大きさです。</figcaption>
       </figure>
     </div>
   </section>
 
-  <!-- 5. 今の取り組み・料金の入口 -->
-  <section class="price" id="price" aria-labelledby="price-title">
-    <div class="price__news">
-      <p class="label"><span class="ff-n">04</span>今の取り組み</p>
-      <h2 id="price-title">冬の縞「からしと黒」を、<br>11月から。</h2>
-      <p>幅24mmのからしと、幅3mmの黒を交互に。生成りの1本を、つま先の近くにだけ入れました。</p>
-      <div class="swatch" aria-hidden="true"></div>
-    </div>
-    <div class="price__table">
-      <table class="menu">
-        <caption>値段（税込）</caption>
-        <tbody>
-          <tr><th scope="row" class="ff-d">1足</th><td>22〜25cm／25〜28cm</td><td><span class="ff-n">2,420</span>円</td></tr>
-          <tr><th scope="row" class="ff-d">3足組</th><td>色違いの縞を3足・送料無料</td><td><span class="ff-n">6,600</span>円</td></tr>
-          <tr><th scope="row" class="ff-d">送料</th><td>全国一律（3足組は無料）</td><td><span class="ff-n">550</span>円</td></tr>
-        </tbody>
-      </table>
-      <p class="fine">見本用の架空価格です。10足からのまとめ買いは、相談のうえで値段をお伝えします。</p>
+  <!-- 2. 制作の背景（暗い面・写真が主役） -->
+  <section class="making" id="making" aria-labelledby="making-title">
+    <figure class="making__pic">
+      <img src="assets/img/02-cylinder.webp" width="1200" height="900" alt="靴下編み機の円筒の接写。並んだ細い針に、糸が入っていく" loading="lazy">
+      <figcaption>編み機の筒。針に糸が入っていくところ</figcaption>
+    </figure>
+    <div class="making__body">
+      <p class="label label--on"><span class="ff-n">02</span>制作の背景</p>
+      <h2 id="making-title">古い編み機で、<br>一足ずつ。</h2>
+      <p>針の数が少ない古い編み機は、そのぶん縞の境目がくっきり出ます。</p>
+      <dl class="facts">
+        <div><dt>編み機</dt><dd><span class="ff-n">6</span>台</dd></div>
+        <div><dt>動いてきた年数</dt><dd><span class="ff-n">40</span>年近く</dd></div>
+        <div><dt>糸の仕入れ先</dt><dd class="facts__txt">毎年、同じ紡績工場から</dd></div>
+      </dl>
     </div>
   </section>
 
-  <div class="stripe-rule" aria-hidden="true"></div>
-
-  <!-- 6. 問い合わせの方法 -->
-  <section class="contact" id="contact" aria-labelledby="contact-title">
-    <div class="contact__body">
-      <h2 id="contact-title">贈り物と、<br>まとめ買いの相談。</h2>
-      <dl class="ways">
-        <div><dt>贈り物の包装</dt><dd>紙の帯は無料。無地の紙箱は1つ220円（税込）</dd></div>
-        <div><dt>まとめ買い</dt><dd>10足から。会社の記念品や、お店での取り扱いの相談も</dd></div>
-        <div><dt>返信の目安</dt><dd>2営業日以内。電話番号は見本のため載せていません</dd></div>
-      </dl>
+  <!-- 3. 縞の幅の決め方: 色紙の写真を大きく。手順は写真に重なる細長い紙の面に1行で -->
+  <section class="width" id="width" aria-labelledby="width-title">
+    <figure class="width__pic">
+      <img src="assets/img/04-strips.webp" width="1536" height="1024" alt="生成りの机の上に並べた、幅の違う色紙の帯" loading="lazy">
+    </figure>
+    <div class="width__strip">
+      <div class="width__head">
+        <p class="label"><span class="ff-n">03</span>縞の幅の決め方</p>
+        <h2 id="width-title">縞の幅は、<br>色紙を切って決める。</h2>
+      </div>
+      <ol class="steps">
+        <li><b class="ff-d">切る</b>4色の色紙を、4つの幅の帯に切ります。</li>
+        <li><b class="ff-d">並べる</b>机に並べ、離れて見て、近くで見て、また並べ替えます。</li>
+        <li><b class="ff-d">編む</b>決まった並びが、そのまま編み機の設定になります。</li>
+      </ol>
     </div>
-    <form class="form" data-sample-form="相談を送る" action="#" novalidate>
-      <div class="form__row"><label for="f-name">お名前</label><input id="f-name" name="name" type="text" autocomplete="name"></div>
-      <div class="form__row"><label for="f-mail">メールアドレス</label><input id="f-mail" name="mail" type="email" autocomplete="email"></div>
-      <fieldset class="form__row form__wide form__pick">
-        <legend>相談の種類</legend>
-        <label><input type="radio" name="kind" value="gift"> 贈り物の包装</label>
-        <label><input type="radio" name="kind" value="bulk"> まとめ買い</label>
-        <label><input type="radio" name="kind" value="other"> そのほか</label>
-      </fieldset>
-      <div class="form__row form__wide"><label for="f-msg">足数や時期など</label><textarea id="f-msg" name="msg" rows="3"></textarea></div>
-      <button class="btn btn--act" type="submit">相談を送る（見本）</button>
-    </form>
+  </section>
+
+  <div class="band band--b" role="presentation"><p class="band__read" aria-hidden="true">この帯の縞 <span class="ff-n">6・3・3・6・12・3・3・3・24</span> mm</p></div>
+
+  <!-- 4. 今の取り組み・送料と包み方・贈り物の入口（明るい面） -->
+  <section class="season" id="price" aria-labelledby="price-title">
+    <figure class="season__fig">
+      <svg class="swatch" viewBox="0 0 370 452" role="img" aria-labelledby="sw-t">
+        <title id="sw-t">冬の縞「からしと黒」の縞見本。からし24mmと黒3mmが交互に並び、つま先の近くに生成りが1本入る（実物の2倍の比）</title>
+        <defs>
+          <pattern id="sw-p" x="20" y="22" width="200" height="54" patternUnits="userSpaceOnUse"><rect width="200" height="48" fill="#D7AA3F"/><rect y="48" width="200" height="6" fill="#1A1A1A"/></pattern>
+        </defs>
+        <rect x="20" y="22" width="200" height="420" fill="url(#sw-p)"/>
+        <rect x="20" y="410" width="200" height="5" fill="#F3EFE6"/>
+        <rect x="20" y="22" width="200" height="420" fill="none" stroke="#1A1A1A" stroke-width="1"/>
+        <g class="sw-dim" stroke="#1A1A1A" stroke-width="1" fill="none">
+          <path d="M232 22 H244 M232 70 H244 M238 22 V70"/>
+          <path d="M232 76 H244 M238 70 V76"/>
+          <path d="M224 412.5 H250"/>
+        </g>
+        <text x="252" y="51" class="sw-num">24</text><text x="282" y="51" class="sw-u">mm</text>
+        <text x="252" y="82" class="sw-num">3</text><text x="266" y="82" class="sw-u">mm 黒</text>
+        <text x="256" y="417" class="sw-u">生成り 1本</text>
+        <text x="256" y="434" class="sw-u">（つま先の近く）</text>
+      </svg>
+      <figcaption>縞見本（実物の2倍の比）</figcaption>
+    </figure>
+    <div class="season__body">
+      <p class="label"><span class="ff-n">04</span>今の取り組み</p>
+      <h2 id="price-title">冬の縞「からしと黒」を、<br>11月から。</h2>
+      <p class="season__lead">太いからしに、細い黒を一本ずつ。この冬の目じるしは、つま先の近くの生成りの一本です。</p>
+      <div class="season__cols">
+        <div>
+          <table class="menu">
+            <caption>送料と包み方<small>（税込）</small></caption>
+            <tbody>
+              <tr><th scope="row" class="ff-d">送料</th><td>全国一律。3足組は無料</td><td><span class="ff-n">550</span>円</td></tr>
+              <tr><th scope="row" class="ff-d">紙の帯</th><td>どの靴下にも付きます</td><td>無料</td></tr>
+              <tr><th scope="row" class="ff-d">紙箱</th><td>無地。1つにつき</td><td><span class="ff-n">220</span>円</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="gift-entry" aria-labelledby="gift-title">
+          <h3 id="gift-title">贈り物と、まとめ買いの相談</h3>
+          <ul class="gift-entry__list">
+            <li><b class="ff-d">贈り物</b><span>1足から。包み方を選べます</span></li>
+            <li><b class="ff-d">まとめ買い</b><span>10足から。会社の記念品などに</span></li>
+            <li><b class="ff-d">お店での取り扱い</b><span>条件は、相談で決めます</span></li>
+          </ul>
+          <div class="gift-entry__act">
+            <a class="btn btn--act" href="gift.html">相談の方法を見る</a>
+            <p class="fine">相談はフォームから</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </main>
 
 <footer class="site-foot">
-  <p class="logo__name ff-d">シマヲ<span class="ff-n">SHIMAWO</span></p>
-  <p>縞だけを編む靴下 シマヲ（架空の事業）／架空の地方の靴下工場の町（所在地は見本のため非表示）</p>
+  <div class="site-foot__brand">
+    <p class="logo__name ff-d">シマヲ<span class="ff-n">SHIMAWO</span></p>
+    <p>縞だけを編む靴下 シマヲ（架空の事業）</p>
+  </div>
+  <dl class="site-foot__info">
+    <div><dt>所在地</dt><dd>〒000-0000 架空県 縞野市 糸町3-6（架空の地名）<span class="nw">【要確認】</span></dd></div>
+    <div><dt>連絡先</dt><dd>soudan@shimawo.example<span class="nw">【要確認】</span></dd></div>
+  </dl>
+  <nav class="site-foot__nav" aria-label="フッターの案内">
+    <a href="index.html" aria-current="page">トップ</a><a href="gift.html">贈り物とまとめ買い</a><a href="gift.html#form">相談のフォーム</a>
+  </nav>
+  <p class="site-foot__legal">特定商取引法に基づく表記と個人情報の扱いのページは<span class="nw">【要確認】</span></p>
 </footer>
-
-<div class="dock" aria-label="相談の窓口">
-  <a class="btn btn--line" href="#price">値段</a>
-  <a class="btn btn--act" href="#about">この考え方を読む</a>
-</div>
 
 <aside class="ca-credit" aria-labelledby="ca-credit-title">
   <p class="ca-credit__label">この見本サイトについて</p>
@@ -181,7 +211,7 @@
     <a class="ca-btn" href="design-notes.html">この見本の設計メモ</a>
     <a class="ca-link" href="../../works.html">見本サイトの一覧</a>
   </div>
-  <p class="ca-credit__fine">参考の規模: TOPページのみの見本です。見本の規模は参考で、特定のプランをおすすめするものではありません。</p>
+  <p class="ca-credit__fine">参考の規模: TOPページと下層1ページ（贈り物とまとめ買い）の見本です。見本の規模は参考で、特定のプランをおすすめするものではありません。</p>
   <a class="ca-credit__brand" href="../../index.html"><img src="../../assets/brand/logo.webp" width="360" height="278" alt="">クルーアセント（CREW ASCENT）</a>
 </aside>
 
