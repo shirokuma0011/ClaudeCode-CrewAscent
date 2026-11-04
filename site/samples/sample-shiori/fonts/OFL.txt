@@ -1,9 +1,11 @@
-===== bizudpmincho =====
-Copyright 2022 The BIZ UDMincho Project Authors (https://github.com/googlefonts/morisawa-biz-ud-mincho)
+Shippori Mincho (fonts/shiori-mincho-500.woff2)
+Copyright information: see below
+
+Copyright 2021 The Shippori Mincho Project Authors (https://github.com/fontdasu/ShipporiMincho)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
-https://scripts.sil.org/OFL
+http://scripts.sil.org/OFL
 
 
 -----------------------------------------------------------
@@ -93,8 +95,9 @@ DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
 
+==================================================
+Spectral (fonts/shiori-spectral-400.woff2, fonts/shiori-spectral-500.woff2)
 
-===== spectral =====
 Copyright 2017 The Spectral Project Authors (https://github.com/productiontype/Spectral)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.

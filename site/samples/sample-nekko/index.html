@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>森で過ごす小さな保育 野あそび保育 ねっこ｜雨の日も、森で過ごします（見本・架空）</title>
-<meta name="description" content="3〜5歳の子どもと週4日、里山の森で過ごす小さな保育です。雨の日も外で過ごす理由と安全の考え方、一日の流れ・持ち物・月の費用（税込）・見学の申し込みをこのページで確かめられます（架空の事業の見本サイト）。">
+<meta name="description" content="3〜5歳の子どもと週4日、里山の森で過ごす小さな保育です。雨の日も外で過ごす理由と安全の仕組み、月の費用（税込）、見学の申し込みをこのページで確かめられます（架空の事業の見本サイト）。">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="../../assets/brand/icon-32.png" sizes="32x32">
 <link rel="preload" href="fonts/nekko-tegomin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../_shared/crew-frame.css?v=20261015">
 <script defer src="../_shared/crew-frame.js?v=20261015"></script>
-<link rel="stylesheet" href="assets/nekko.css?v=1">
+<link rel="stylesheet" href="assets/nekko.css?v=2">
 <script>document.documentElement.classList.add('js');</script>
-<script defer src="assets/nekko.js?v=1"></script>
+<script defer src="assets/nekko.js?v=2"></script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ移動</a>
@@ -24,163 +24,158 @@
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
-    <!-- 署名モチーフ「根」: 細く枝分かれしていく根の線 -->
-    <symbol id="nk-root" viewBox="0 0 120 80"><path d="M2 2 C 6 22 10 34 22 44 C 34 54 52 56 70 62 C 86 67 100 72 118 78 M22 44 C 26 56 26 66 22 78 M48 54 C 56 50 66 40 70 26 M70 62 C 72 70 78 76 86 79" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+    <!-- 枝と葉（揺れるのはこの小枝だけ） -->
+    <symbol id="nk-sprig" viewBox="0 0 60 80"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M30 79 C 30 60 29 42 31 22 C 32 14 33 8 34 2"/><path d="M30 58 C 22 54 14 52 6 54 C 12 46 22 46 30 52"/><path d="M31 40 C 39 35 47 34 55 37 C 49 29 39 30 31 35"/><path d="M31 22 C 25 18 20 12 19 5 C 27 8 31 14 31 20"/></g></symbol>
   </defs>
 </svg>
 
 <header class="head">
-  <a class="logo" href="#top" aria-label="野あそび保育 ねっこ（ページの先頭へ）"><span class="logo__sub">野あそび保育</span><span class="logo__mark fd">ねっこ</span></a>
-  <nav class="head__nav" aria-label="ページ内の案内">
-    <a href="#idea">考え方</a><a href="#day">一日の流れ</a><a href="#things">持ち物</a><a href="#fee">費用と質問</a>
+  <a class="logo" href="index.html" aria-label="野あそび保育 ねっこ（トップ）"><span class="logo__sub">野あそび保育</span><span class="logo__mark fd">ねっこ</span></a>
+  <nav class="head__nav" aria-label="ページの案内">
+    <a href="index.html" aria-current="page"><small>8:50</small>はじめに</a>
+    <a href="day.html"><small>9:00〜14:00</small>森の一日</a>
   </nav>
-  <a class="head__cta" href="#visit">見学の相談</a>
+  <a class="head__cta" href="#visit">見学の申し込み</a>
 </header>
 
-<main id="main" class="trunk">
-  <!-- 1. 最初の画面: 左の紙の白に宣言、右に雨上がりの森 -->
-  <section class="hero" id="top" aria-labelledby="hero-title">
-    <div class="hero__copy">
-      <p class="hero__kicker">3〜5歳・週4日・定員12名</p>
-      <h1 id="hero-title">雨の日も、<br>森で過ごします。</h1>
-      <p class="hero__lead">里山のふもとの森で、子どもと一日を過ごす小さな保育です。<br class="pc">晴れの日も雨の日も、森の入口の小屋に集まって、歩いて森へ入ります。</p>
-      <div class="hero__acts">
+<main id="main">
+  <!-- 最初の画面: 森の入口の絵に、一日の時刻の縦の帯を重ねる -->
+  <section class="fv" aria-labelledby="fv-title">
+    <div class="fv__head">
+      <p class="fv__kicker"><span>里山のふもとの森で、</span><span>3〜5歳の子どもと過ごす小さな保育</span></p>
+      <h1 id="fv-title"><span>雨の日も、</span><span>森で過ごします。</span></h1>
+    </div>
+    <figure class="fv__art">
+      <img src="assets/img/01-hero.webp" width="1536" height="864" alt="雨上がりの森の入口、木の根元に並ぶ小さな長靴と、枝にかけた雨合羽" fetchpriority="high">
+      <figcaption>絵はすべてAI生成のイメージです</figcaption>
+    </figure>
+    <div class="fv__lead">
+      <p>週4日、森の入口の小屋に集まって、歩いて森へ入ります。晴れの日も雨の日も、同じ一日です。<span class="fv__fee-sp">保育料<b class="fd">42,000</b>円／月（税込）・定員12名</span></p>
+      <div class="fv__acts">
         <a class="btn" href="#idea">この考え方を読む</a>
-        <a class="link" href="#visit">見学を申し込む</a>
+        <a class="link" href="day.html">一日の流れと持ち物を見る</a>
       </div>
-      <ul class="hero__notes">
+      <ul class="promise">
         <li>見学だけでも大丈夫です</li>
         <li>入園をすすめるご連絡はしません</li>
-        <li>お問い合わせには3日以内にお返事します</li>
+        <li>お返事は3日以内（土日を除く）</li>
       </ul>
     </div>
-    <figure class="hero__art">
-      <img src="assets/img/01-hero.webp" width="1536" height="864" alt="雨上がりの森の入口、木の根元に並ぶ小さな長靴と、枝にかけた雨合羽" fetchpriority="high">
-      <figcaption>絵はAI生成のイメージです</figcaption>
-    </figure>
+    <aside class="fv__day" aria-labelledby="fv-day-title">
+      <svg class="sprig" width="44" height="58" aria-hidden="true" focusable="false"><use href="#nk-sprig"/></svg>
+      <p class="fv__day-title fd" id="fv-day-title">ねっこの一日<small>月・火・木・金</small></p>
+      <ol class="clock">
+        <li><time class="fd">9:00</time>小屋に集合</li>
+        <li><time class="fd">9:30</time>森へ歩く</li>
+        <li><time class="fd">10:00</time>広場であそぶ</li>
+        <li><time class="fd">12:00</time>お弁当</li>
+        <li><time class="fd">13:30</time>帰り道・着替え</li>
+        <li><time class="fd">14:00</time>小屋でお迎え</li>
+      </ol>
+      <p class="fv__fee">保育料<b class="fd">42,000</b>円／月<small>税込・定員12名</small></p>
+      <a class="btn btn--line" href="#visit">見学を申し込む</a>
+      <svg class="fv__root" viewBox="0 0 80 200" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M6 0 V150 C 6 168 10 180 20 190 M6 150 C 4 170 -2 182 2 198 M6 128 C 14 140 26 146 40 148 M20 190 C 30 194 40 194 52 198 M6 168 C 12 176 14 188 12 198" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>
+    </aside>
   </section>
 
-  <!-- 2. 考え方と背景 -->
+  <!-- 考え方と、安全の仕組みを並べる -->
   <section class="idea" id="idea" aria-labelledby="idea-title">
-    <div class="node" aria-hidden="true"><svg width="120" height="80" focusable="false"><use href="#nk-root"/></svg></div>
-    <div class="idea__text">
-      <p class="label">考え方</p>
-      <h2 id="idea-title">濡れることも、<br>森の一日のうちです。</h2>
-      <p>雨の森は、晴れの日とは別の場所になります。葉に落ちる音、水たまりに映る枝、湿った土のにおい。わたしたちは、それを「中止の理由」ではなく「その日の森」として子どもと過ごしたいと考えています。</p>
-      <p>そのかわり、無理はしません。森に入らない日の基準を先に決め、保護者の方にもお伝えしています。</p>
-    </div>
     <figure class="idea__art">
       <img src="assets/img/04-rain.webp" width="1200" height="900" alt="森の中に張ったタープの下に落ちる雨粒、落ち葉と水たまり" loading="lazy">
-      <figcaption>雨の日は、タープの下に集まる場所をつくります（絵はAI生成のイメージ）</figcaption>
+      <figcaption>雨の日は、森の広場にタープを張って、集まる場所をつくります。</figcaption>
     </figure>
-    <div class="safety">
-      <h3>安全の考え方</h3>
-      <ul>
-        <li><b>森に入らない日</b>雷・大雨・強風の注意報や警報が出ているときは、入口の小屋とその周りで過ごします。</li>
-        <li><b>見守りの人数</b>子ども6人に大人1人以上。森の中では、いつも大人2人以上でいます。</li>
-        <li><b>行ってよい範囲</b>水辺と斜面は、入ってよい場所を決めて、毎朝歩いて確かめます。</li>
-      </ul>
+    <div class="idea__text">
+      <p class="label">考え方</p>
+      <h2 id="idea-title"><span>濡れることも、</span><span>森の一日のうちです。</span></h2>
+      <p class="idea__story">雨の森は、晴れの日とは別の場所になります。葉に落ちる音、水たまりに映る枝、湿った土のにおい。それを「中止の理由」ではなく「その日の森」として、子どもと過ごします。</p>
+      <h3 class="idea__sub">そのかわり、決めていること</h3>
+      <dl class="ledger">
+        <div><dt>森に入らない日</dt><dd>雷・大雨・強風の注意報や警報が出ている日は、入口の小屋とその周りで過ごします。</dd></div>
+        <div><dt>見守りの人数</dt><dd>子ども6人に大人1人以上。森の中では、いつも大人2人以上でいます。</dd></div>
+        <div><dt>行ってよい範囲</dt><dd>水辺と斜面は入ってよい場所を決めて、毎朝、大人が歩いて確かめます。</dd></div>
+      </dl>
     </div>
   </section>
 
-  <!-- 3. 一日の流れ: 絵巻と根の線 -->
-  <section class="day" id="day" aria-labelledby="day-title">
-    <div class="node" aria-hidden="true"><svg width="120" height="80" focusable="false"><use href="#nk-root"/></svg></div>
-    <div class="day__head">
-      <p class="label">一日の流れ</p>
-      <h2 id="day-title">小屋から森へ、森から小屋へ。</h2>
+  <!-- 一日の絵巻（全幅の帯） -->
+  <section class="scroll" aria-labelledby="scroll-title">
+    <div class="scroll__head">
+      <p class="label">森の一日</p>
+      <h2 id="scroll-title">小屋から森へ、森から小屋へ。</h2>
     </div>
-    <figure class="day__scroll">
+    <figure class="scroll__art">
       <img src="assets/img/02-day.webp" width="2016" height="864" alt="朝の集合場所、森の広場、お弁当の敷物、帰りの道が左から右へ続く絵巻" loading="lazy">
+      <figcaption class="scroll__places">
+        <span>入口の小屋</span><span>森の広場</span><span>木の下の敷物</span><span>帰り道</span>
+      </figcaption>
     </figure>
-    <svg class="day__roots" viewBox="0 0 1000 40" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="draw" d="M0 6 C 120 8 160 30 200 34 M200 34 C 260 30 300 8 400 6 C 480 6 560 30 600 34 C 660 30 720 8 800 6 C 880 8 940 30 1000 34" fill="none" stroke="currentColor" stroke-width="1.2" vector-effect="non-scaling-stroke" pathLength="1"/></svg>
-    <ol class="day__list">
-      <li><time class="fd">9:00</time><b>小屋に集合</b>森の入口の小屋で、身支度と朝の会。</li>
-      <li><time class="fd">9:30</time><b>森へ歩く</b>その日に行く場所を、子どもと決めて歩きます。</li>
-      <li><time class="fd">10:00</time><b>広場であそぶ</b>木登り、どろあそび、虫さがし。雨の日はタープの下も。</li>
-      <li><time class="fd">12:00</time><b>お弁当</b>敷物を広げて、みんなで食べます。</li>
-      <li><time class="fd">13:30</time><b>帰り道</b>小屋に戻って着替え。14:00からお迎えです。</li>
-    </ol>
-    <p class="fine">時間は見本上の設定です。季節や天気で変わります。絵はAI生成のイメージです。</p>
+    <p class="scroll__more">時刻ごとの過ごし方と、雨の日に変わること、持ち物と送り迎えは<a class="link" href="day.html">「森の一日」のページ</a>にまとめています。</p>
   </section>
 
-  <!-- 4. 初めての人向けの説明（持ち物） -->
-  <section class="things" id="things" aria-labelledby="things-title">
-    <div class="node" aria-hidden="true"><svg width="120" height="80" focusable="false"><use href="#nk-root"/></svg></div>
-    <figure class="things__art">
-      <img src="assets/img/03-things.webp" width="1024" height="1024" alt="真上から見た水筒、小さなリュック、長靴、着替え袋、帽子" loading="lazy">
-    </figure>
-    <div class="things__text">
-      <p class="label">持ち物と服装</p>
-      <h2 id="things-title">毎朝、リュックに<br>入れてくるもの。</h2>
-      <ul class="checks">
-        <li>水筒（お茶か水）</li>
-        <li>お弁当と、敷物にもなる小さなタオル</li>
-        <li>着替え一式（上下・靴下・下着）を袋に入れて</li>
-        <li>帽子と、長靴</li>
-        <li>雨の日は雨合羽（持っていなければ貸し出します）</li>
-      </ul>
-      <p class="things__note"><b>服装</b>汚れてもよい長袖・長ズボン。持ち物すべてに名前を書いてください。おもちゃやお菓子は持ってこなくて大丈夫です。</p>
-    </div>
-  </section>
-
-  <!-- 5. よくある質問と費用の考え方 -->
+  <!-- 費用と質問 -->
   <section class="fee" id="fee" aria-labelledby="fee-title">
-    <div class="node" aria-hidden="true"><svg width="120" height="80" focusable="false"><use href="#nk-root"/></svg></div>
     <div class="fee__money">
       <p class="label">費用</p>
       <h2 id="fee-title">ひと月にかかる費用。</h2>
-      <dl class="costs">
-        <div><dt>保育料（週4日）</dt><dd><span class="fd">42,000</span>円<small>／月</small></dd></div>
-        <div><dt>入園のとき（保険・道具）</dt><dd><span class="fd">12,000</span>円<small>／年1回</small></dd></div>
-        <div><dt>雨具の貸し出し</dt><dd><span class="fd">0</span>円</dd></div>
-      </dl>
-      <p class="fine">すべて税込・見本用の架空価格です。給食はなく、お弁当を持ってきていただきます。ここに書いたほかに、毎月の集金はありません。</p>
+      <table class="costs">
+        <caption class="sr-only">月の費用と、入園のときの費用（税込）</caption>
+        <thead><tr><th scope="col">費目</th><th scope="col">金額（税込）</th><th scope="col">内容</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">保育料</th><td><b class="fd">42,000</b>円<small>／月</small></td><td>週4日（月・火・木・金）9:00〜14:00</td></tr>
+          <tr><th scope="row">入園のとき</th><td><b class="fd">12,000</b>円<small>／年1回</small></td><td>保険と、森で使う道具の費用</td></tr>
+          <tr><th scope="row">雨具の貸し出し</th><td><b class="fd">0</b>円</td><td>子ども用の雨合羽と長靴（サイズは見学の日に）</td></tr>
+        </tbody>
+      </table>
+      <p class="fee__terms"><b>含まないもの</b>給食はありません。お弁当を持ってきていただきます。<br><b>ほかの費用</b>ここに書いたほかに、毎月の集金はありません。</p>
+      <p class="fine">金額は税込・見本用の架空の設定です。</p>
     </div>
     <div class="fee__faq">
       <p class="label">よくある質問</p>
-      <details><summary>送り迎えはどうなりますか？</summary><p>送迎バスはありません。森の入口の小屋まで、保護者の方が送り迎えをしてください。小屋の横に車8台分の駐車場と、自転車置き場があります。</p></details>
-      <details><summary>雨具を持っていません。</summary><p>子ども用の雨合羽と長靴を貸し出します。サイズを見学のときに確かめます。</p></details>
-      <details><summary>寒い日や暑い日はどうしますか？</summary><p>真冬と真夏は、小屋で過ごす時間を長くします。熱中症の注意が出ている日は、森の奥へは入りません。</p></details>
-      <details><summary>認可の保育園ですか？</summary><p>認可外の保育施設です。お住まいの自治体の補助が使えるかどうかは、見学のときに一緒に確かめます。</p></details>
+      <details open><summary>認可の保育園ですか？</summary><p>認可外の保育施設です。お住まいの自治体の補助が使えるかどうかは、見学のときに一緒に確かめます。</p></details>
+      <details open><summary>寒い日や暑い日はどうしますか？</summary><p>真冬と真夏は、小屋で過ごす時間を長くします。熱中症の注意が出ている日は、森の奥へは入りません。</p></details>
+      <details open><summary>いま2歳ですが、見学できますか？</summary><p>来年度から通う予定の2歳のお子さまも、見学できます。申し込みの欄で「2歳（来年度から）」を選んでください。</p></details>
     </div>
   </section>
 
-  <!-- 6. 見学のご案内と問い合わせ -->
+  <!-- 見学のご案内と申し込み -->
   <section class="visit" id="visit" aria-labelledby="visit-title">
-    <div class="node node--last" aria-hidden="true"><svg width="120" height="80" focusable="false"><use href="#nk-root"/></svg></div>
     <div class="visit__intro">
       <p class="label">見学</p>
-      <h2 id="visit-title">まずは一度、<br>森を歩いて<br class="sp">みてください。</h2>
-      <ol class="steps">
-        <li><span class="fd">一</span>下のフォームから申し込み</li>
-        <li><span class="fd">二</span>3日以内に、見学の日の候補をお送りします</li>
-        <li><span class="fd">三</span>当日9:00、森の入口の小屋に集合</li>
-        <li><span class="fd">四</span>1時間ほど、子どもたちと一緒に歩きます（長靴で）</li>
+      <h2 id="visit-title"><span>まずは一度、</span><span>森を歩いてみてください。</span></h2>
+      <ol class="visit__steps">
+        <li><span class="visit__when fd">今日</span><div><b>このページの欄から申し込み</b><small>用意するもの：お子さまの年齢</small></div></li>
+        <li><span class="visit__when fd">お返事</span><div><b>見学の日の候補を、メールでお送りします</b></div></li>
+        <li><span class="visit__when fd">当日 9:00</span><div><b>森の入口の小屋に集合</b><small>用意するもの：長靴と、汚れてもよい服</small></div></li>
+        <li><span class="visit__when fd">〜10:00</span><div><b>1時間ほど、子どもたちと森を歩きます</b></div></li>
       </ol>
       <figure class="visit__art">
         <img src="assets/img/05-hut.webp" width="1536" height="1024" alt="森の入口の小さな木の小屋と、文字のない木の看板、自転車置き場" loading="lazy">
-        <figcaption>集合場所の小屋（絵はAI生成のイメージ。所在地は見本のため載せていません）</figcaption>
+        <figcaption>集合場所の、森の入口の小屋。横に駐車場と自転車置き場があります。</figcaption>
       </figure>
     </div>
-    <form class="form" data-sample-form="見学を申し込む" aria-labelledby="form-title">
+    <form class="form" data-sample-form="見学を申し込む" novalidate aria-labelledby="form-title">
       <h3 id="form-title">見学の申し込み・ご相談</h3>
-      <p class="form__lead">見学だけでも、聞いてみたいことだけでも大丈夫です。入園をすすめるご連絡はしません。</p>
-      <label>保護者のお名前<input type="text" name="name" autocomplete="name"></label>
-      <label>メールアドレス<input type="email" name="email" autocomplete="email"></label>
-      <label>お子さまの年齢
-        <select name="age"><option>選んでください</option><option>2歳（来年度から）</option><option>3歳</option><option>4歳</option><option>5歳</option></select>
-      </label>
-      <label>聞いてみたいこと（任意）<textarea name="message" rows="2"></textarea></label>
-      <button class="btn" type="submit">見学を申し込む（見本）</button>
-      <p class="form__fine">見本のため送信されません。お返事は3日以内（土日を除く）の設定です。</p>
+      <p class="form__lead">聞いてみたいことだけのご相談も、この欄からどうぞ。</p>
+      <div class="field"><label for="f-name">保護者のお名前<em>必須</em></label><input id="f-name" type="text" name="name" autocomplete="name" required aria-describedby="e-name"><p class="field__err" id="e-name">お名前を入れてください。</p></div>
+      <div class="field"><label for="f-mail">メールアドレス<em>必須</em></label><input id="f-mail" type="email" name="email" autocomplete="email" required aria-describedby="e-mail"><p class="field__err" id="e-mail">返信できるメールアドレスを入れてください。</p></div>
+      <div class="field"><label for="f-age">お子さまの年齢<em>必須</em></label>
+        <select id="f-age" name="age" required aria-describedby="e-age"><option value="">選んでください</option><option>2歳（来年度から）</option><option>3歳</option><option>4歳</option><option>5歳</option></select><p class="field__err" id="e-age">年齢を選んでください。</p></div>
+      <div class="field"><label for="f-msg">聞いてみたいこと（任意）</label><textarea id="f-msg" name="message" rows="2"></textarea></div>
+      <p class="form__privacy">個人情報の扱い（使う目的・保存の期間・ほかへ渡さないこと）は【要確認】です。</p>
+      <button class="btn" type="submit"><span>見学を申し込む</span></button>
+      <p class="form__state" data-form-state role="status" aria-live="polite" tabindex="-1"></p>
     </form>
   </section>
 </main>
 
 <footer class="foot">
-  <p class="foot__logo"><span class="fd">ねっこ</span>森で過ごす小さな保育 野あそび保育 ねっこ（架空の事業）</p>
-  <p>保育の日: 月・火・木・金 9:00〜14:00 ／ 認可外保育施設（見本上の設定）。所在地は見本のため載せていません。</p>
+  <div class="foot__brand"><p class="foot__logo fd">ねっこ</p><p>森で過ごす小さな保育 野あそび保育 ねっこ（架空の事業）<br>認可外保育施設</p></div>
+  <dl class="foot__info">
+    <div><dt>所在地</dt><dd>架空県 森野里町 里山のふもと 森の入口の小屋<span class="tbd">【要確認】</span></dd></div>
+    <div><dt>連絡先</dt><dd>電話 000-0000-0000<span class="tbd">【要確認】</span>（受付時間<span class="tbd">【要確認】</span>）<br><a href="#visit">見学の申し込み欄</a>からも受け付けます</dd></div>
+    <div><dt>保育の日</dt><dd>月・火・木・金 9:00〜14:00</dd></div>
+  </dl>
+  <nav class="foot__nav" aria-label="フッターの案内"><a href="index.html" aria-current="page">はじめに</a><a href="day.html">森の一日</a><a href="#visit">見学の申し込み</a></nav>
 </footer>
 
 <aside class="ca-credit" aria-labelledby="ca-credit-title">
@@ -192,7 +187,7 @@
     <a class="ca-btn" href="design-notes.html">この見本の設計メモ</a>
     <a class="ca-link" href="../../works.html">見本サイトの一覧</a>
   </div>
-  <p class="ca-credit__fine">参考の規模: TOPページのみの見本です。見本の規模は参考で、特定のプランをおすすめするものではありません。</p>
+  <p class="ca-credit__fine">参考の規模: TOPページと下層1ページ（森の一日と持ち物）の見本です。見本の規模は参考で、特定のプランをおすすめするものではありません。</p>
   <a class="ca-credit__brand" href="../../index.html"><img src="../../assets/brand/logo.webp" width="360" height="278" alt="">クルーアセント（CREW ASCENT）</a>
 </aside>
 
