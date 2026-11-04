@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>説明会と地域行事の機材レンタル カリモノ屋｜料金表と配送・返却の条件（見本・架空）</title>
-<meta name="description" content="会社の説明会や自治会の行事で使う、映像・音響の機材とテント・机を貸し出しています。何を・何日・いくらで借りられるかの料金表と、配送・設置・返却の条件、追加費用が出る条件をこのページで確かめられます（架空の事業の見本サイト）。">
+<title>説明会と地域行事の機材レンタル カリモノ屋｜日数ごとの料金表と配送・返却の条件（見本・架空）</title>
+<meta name="description" content="会社の説明会、自治会の夏祭り、学校の行事で使う映像・音響の機材とテント・机を、1日から貸し出しています。行事ごとの組み合わせと品目ごとの料金を日数ごとの表で、配送・設置・返却の条件と追加費用をそのすぐ下で確かめられます（架空の事業の見本サイト）。">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="../../assets/brand/icon-32.png" sizes="32x32">
-<link rel="preload" href="fonts/karimono-lineseed-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/karimono-bizudp-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../_shared/crew-frame.css?v=20261015">
 <script defer src="../_shared/crew-frame.js?v=20261015"></script>
-<link rel="stylesheet" href="assets/karimonoya.css?v=1">
+<link rel="stylesheet" href="assets/karimonoya.css?v=2">
 <script>document.documentElement.classList.add('js');</script>
-<script defer src="assets/karimonoya.js?v=1"></script>
+<script defer src="assets/karimonoya.js?v=2"></script>
 </head>
-<body>
+<body class="pg-top">
 <a class="skip" href="#main">本文へ移動</a>
 <div class="ca-ribbon" role="note" aria-label="見本サイトについて">
   <a class="ca-ribbon__brand" href="../../index.html" aria-label="クルーアセント（制作）"><img src="../../assets/brand/logo-onink.webp" width="360" height="278" alt=""><span class="ca-ribbon__long">クルーアセント</span></a>
@@ -22,64 +22,93 @@
   <p class="ca-ribbon__links"><a href="../../type-clear-information.html">CA13<span class="ca-ribbon__long"> クリア情報型サイト</span></a><a href="design-notes.html"><span class="ca-ribbon__long">この見本の</span>設計メモ</a></p>
 </div>
 
+<!-- 全ページ共通の道しるべ「受付票の控え」: 受付の時間・前日の締め・配送の範囲 -->
+<div class="slip" role="note" aria-label="受付の時間と配送の範囲">
+  <div class="slip__in">
+    <span class="slip__stamp">受付票の控え</span>
+    <p><b>受付</b><span class="ff-m">平日 9:00〜17:00</span></p>
+    <p><b>前日の締め</b><span class="ff-m">15:00</span><span class="slip__q">【要確認】</span></p>
+    <p class="slip__wide"><b>配送</b>架空市と隣の3町</p>
+  </div>
+</div>
+
 <header class="site-head">
-  <a class="logo" href="#top" aria-label="カリモノ屋（ページの先頭へ）">
-    <svg viewBox="0 0 30 26" width="30" height="26" aria-hidden="true" focusable="false"><path d="M1 7 H11 L13 3 H27 V7 H29 V25 H1 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M13 3 H27 V7 H11 Z" fill="#0891b2"/></svg>
+  <a class="logo" href="index.html" aria-label="カリモノ屋 トップ">
+    <svg viewBox="0 0 30 26" width="30" height="26" aria-hidden="true" focusable="false"><path d="M1 7 H11 L13 3 H27 V7 H29 V25 H1 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M13 3 H27 V7 H11 Z" fill="#17877B"/></svg>
     <span class="logo__name ff-d">カリモノ屋</span>
     <span class="logo__sub">説明会と地域行事の機材レンタル</span>
   </a>
-  <a class="btn btn--line btn--head" href="#contact">空き状況を問い合わせる</a>
+  <nav class="gnav" aria-label="サイトの案内">
+    <a href="index.html" aria-current="page">料金と条件</a>
+    <a href="reserve.html">見積もりと予約</a>
+  </nav>
+  <a class="btn btn--act btn--head" href="reserve.html#form">空き状況を問い合わせる</a>
 </header>
 
 <div class="layout">
-  <!-- 目次: 章の見出しと同じタブの形 -->
   <nav class="toc" aria-label="このページの目次">
-    <p class="toc__h">目次</p>
+    <p class="toc__h">このページの目次</p>
     <ol>
-      <li><a href="#top" data-toc="top">扱う範囲</a></li>
-      <li><a href="#list" data-toc="list">機材の一覧と料金</a></li>
-      <li><a href="#terms" data-toc="terms">配送・設置・返却の条件</a></li>
-      <li><a href="#compare" data-toc="compare">任せる・取りに来るの違い</a></li>
-      <li><a href="#return" data-toc="return">返却の前に</a></li>
-      <li><a href="#contact" data-toc="contact">問い合わせ</a></li>
+      <li><a href="#top" data-toc="top"><span class="ff-m">01</span>組み合わせの例</a></li>
+      <li><a href="#list" data-toc="list"><span class="ff-m">02</span>品目ごとの料金</a></li>
+      <li><a href="#terms" data-toc="terms"><span class="ff-m">03</span>配送・設置・返却の条件</a></li>
+      <li><a href="#compare" data-toc="compare"><span class="ff-m">04</span>受け取り方と配置</a></li>
+      <li><a href="#return" data-toc="return"><span class="ff-m">05</span>返却の前に</a></li>
+      <li><a href="#next" data-toc="next"><span class="ff-m">06</span>見積もりと予約</a></li>
     </ol>
-    <p class="toc__date">更新日 <span class="ff-m">2026.11.01</span></p>
+    <p class="toc__date">料金の更新日<br><span class="ff-m">2026.11.01</span></p>
   </nav>
 
   <main id="main">
-    <!-- 1. 最初の画面 -->
+    <!-- 01 最初の画面: 機材一式の写真の白い面に見出し、写真の下端に日数ごとの組み合わせの料金表を重ねる -->
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="hero__copy">
-        <p class="tab">扱う範囲</p>
-        <h1 id="hero-title">何を・何日・いくらで<br>借りられるかを、<br>表で確かめられます。</h1>
-        <dl class="facts">
-          <div><dt>扱う機材</dt><dd>映像・音響／テント・机</dd></div>
-          <div><dt>料金の考え方</dt><dd>1日料金＋追加1日</dd></div>
-          <div><dt>配送地域</dt><dd>架空市と隣の3町</dd></div>
-          <div><dt>更新日</dt><dd class="ff-m">2026.11.01</dd></div>
-        </dl>
-        <div class="hero__acts">
-          <a class="btn btn--act" href="#terms">条件を確認する</a>
-          <a class="btn btn--line" href="#list">一覧を見る</a>
+      <div class="hero__stage">
+        <figure class="hero__pic">
+          <img src="assets/img/01-hero.webp" width="1536" height="864" alt="白いスタジオに整列した長机、パイプ椅子、スクリーン、プロジェクター、スピーカー、マイク" fetchpriority="high">
+          <figcaption>画像はAI生成のイメージです</figcaption>
+        </figure>
+        <div class="hero__copy">
+          <p class="hero__for">会社の説明会・自治会の夏祭り・学校の行事に</p>
+          <h1 id="hero-title">映像・音響と<br>テント・机を、<br>1日から貸し出します。</h1>
+          <p class="hero__lead">配送と設置もします。料金はすべて税込で、<br>日数ごとに表で確かめられます。</p>
+          <div class="hero__acts">
+            <a class="btn btn--act" href="#terms">条件を確認する</a>
+            <a class="btn btn--line" href="#list">品目の一覧を見る</a>
+          </div>
+          <p class="hero__note">空き状況の返信は、<span class="nw">当日〜翌営業日</span>です。</p>
         </div>
-        <p class="hero__note">返信は当日〜翌営業日。品目や日数が決まっていなくても相談できます。</p>
       </div>
-      <figure class="hero__pic">
-        <img src="assets/img/01-hero.webp" width="1536" height="864" alt="白いスタジオに整列した長机、パイプ椅子、スクリーン、プロジェクター、スピーカー、マイク" fetchpriority="high">
-        <figcaption>写真はAI生成のイメージです</figcaption>
-      </figure>
+
+      <div class="combo">
+        <div class="combo__bar">
+          <p class="combo__h">行事ごとの組み合わせの例<span>単品の料金の合計・税込（円）</span></p>
+          <p class="combo__rule">日数が1日ふえるごとに、品目ごとの「追加1日」を足します</p>
+        </div>
+        <div class="scroll-x" tabindex="0" role="region" aria-label="組み合わせの例の料金表（横に送れます）">
+          <table class="days">
+            <caption class="sr-only">行事ごとの組み合わせの例と、日数ごとの料金（税込・円）</caption>
+            <thead><tr><th scope="col">組み合わせ</th><th scope="col">1日</th><th scope="col">2日</th><th scope="col">3日</th><th scope="col">追加1日</th></tr></thead>
+            <tbody>
+              <tr><th scope="row"><b>説明会の映像</b><small>プロジェクター・スクリーン100型・マイク1本</small></th><td>11,000</td><td>16,500</td><td>22,000</td><td>5,500</td></tr>
+              <tr><th scope="row"><b>式典・発表の音響</b><small>スピーカーセット・マイク2本</small></th><td>13,200</td><td>19,800</td><td>26,400</td><td>6,600</td></tr>
+              <tr><th scope="row"><b>屋外の受付テント</b><small>テント1張・おもり1組・長机2台・椅子10脚</small></th><td>17,050</td><td>25,575</td><td>34,100</td><td>8,525</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="combo__foot">配送・設置は別の料金です（<a href="#terms">03 条件の表</a>）。品目や日数が未定でも、<span class="nw">人数と会場が分かれば相談できます。</span></p>
+      </div>
     </section>
 
-    <!-- 2. 扱っている機材の一覧 -->
+    <!-- 02 品目ごとの料金: 分類のタブ。JSがなければ2つの表を縦に並べる -->
     <section class="list" id="list" aria-labelledby="list-title">
       <div class="sec-head">
-        <p class="tab">一覧</p>
-        <h2 id="list-title">機材の一覧と料金</h2>
-        <p class="sec-head__note">料金は税込・見本用の架空価格です。2日目からは「追加1日」の料金を足します。</p>
+        <p class="sec-head__no ff-m">02</p>
+        <h2 id="list-title">品目ごとの料金</h2>
+        <p class="sec-head__note">税込・円。映像・音響とテント・机、それぞれ4品目。</p>
       </div>
       <div class="tabs" role="tablist" aria-label="機材の分類" hidden>
-        <button type="button" role="tab" id="tab-av" aria-controls="panel-av" aria-selected="true">映像・音響</button>
-        <button type="button" role="tab" id="tab-tent" aria-controls="panel-tent" aria-selected="false" tabindex="-1">テント・机</button>
+        <button type="button" role="tab" id="tab-av" aria-controls="panel-av" aria-selected="true"><img src="assets/img/02-av.webp" width="1200" height="900" alt="" loading="lazy">映像・音響</button>
+        <button type="button" role="tab" id="tab-tent" aria-controls="panel-tent" aria-selected="false" tabindex="-1"><img src="assets/img/03-tent.webp" width="1200" height="900" alt="" loading="lazy">テント・机</button>
       </div>
       <div class="panel" id="panel-av" role="tabpanel" aria-labelledby="tab-av">
         <figure class="panel__pic"><img src="assets/img/02-av.webp" width="1200" height="900" alt="白い背景のプロジェクター、スピーカー、ワイヤレスマイクのセット" loading="lazy"></figure>
@@ -109,123 +138,219 @@
       </div>
     </section>
 
-    <!-- 3. 条件と料金の一覧 -->
+    <!-- 03 条件: 左に条件と追加費用の表、右に配送の範囲の図（配送の料金はこの図だけに書く） -->
     <section class="terms" id="terms" aria-labelledby="terms-title">
       <div class="sec-head">
-        <p class="tab">条件</p>
-        <h2 id="terms-title">配送・設置・返却の条件と、<br class="sp">追加費用</h2>
+        <p class="sec-head__no ff-m">03</p>
+        <h2 id="terms-title">配送・設置・返却の条件と、追加費用</h2>
+        <p class="sec-head__note">料金表のすぐ下に読む条件です。税込。</p>
       </div>
       <div class="terms__grid">
         <table class="cond">
-          <caption class="sr-only">配送・設置・返却の条件と料金（税込）</caption>
+          <caption class="sr-only">設置・返却の条件と、追加費用が出る条件（税込）</caption>
           <thead><tr><th scope="col">区分</th><th scope="col">条件</th><th scope="col">料金</th></tr></thead>
-          <tbody>
-            <tr><th scope="row">配送</th><td>架空市内・往復</td><td><span class="ff-m">3,300</span>円</td></tr>
-            <tr><th scope="row">配送</th><td>隣の3町・往復</td><td><span class="ff-m">5,500</span>円</td></tr>
-            <tr><th scope="row">設置・撤去</th><td>テント1張ごと</td><td><span class="ff-m">4,400</span>円</td></tr>
-            <tr><th scope="row">設置・撤去</th><td>音響の配線と音出しの確認</td><td><span class="ff-m">3,300</span>円</td></tr>
+          <tbody class="cond__base">
+            <tr><th scope="row">配送</th><td>往復。料金は地域ごと（図）</td><td><a href="#area">図を見る</a></td></tr>
+            <tr><th scope="row">テントの設置・撤去</th><td>1張ごと</td><td><span class="ff-m">4,400</span>円</td></tr>
+            <tr><th scope="row">音響の配線・音出し</th><td>配線と、音出しの確認</td><td><span class="ff-m">3,300</span>円</td></tr>
             <tr><th scope="row">返却</th><td>使った翌日の正午まで。過ぎたら追加1日</td><td>—</td></tr>
-            <tr class="is-extra"><th scope="row">追加費用</th><td>雨で濡れたテントの乾燥</td><td><span class="ff-m">2,200</span>円／張</td></tr>
-            <tr class="is-extra"><th scope="row">追加費用</th><td>前日〜当日の取り消し</td><td>料金の<span class="ff-m">50</span>%</td></tr>
-            <tr class="is-extra"><th scope="row">追加費用</th><td>破損・紛失</td><td>修理費の実費</td></tr>
+          </tbody>
+          <tbody class="cond__extra">
+            <tr><th scope="row" colspan="3" class="cond__h">追加費用が出る条件</th></tr>
+            <tr><th scope="row">雨</th><td>濡れたテントの乾燥</td><td><span class="ff-m">2,200</span>円／張</td></tr>
+            <tr><th scope="row">取り消し</th><td>使う日の前日〜当日</td><td>料金の<span class="ff-m">50</span>%</td></tr>
+            <tr><th scope="row">破損・紛失</th><td>修理費。機材の価格が上限</td><td>実費</td></tr>
           </tbody>
         </table>
-        <figure class="terms__pic">
-          <img src="assets/img/04-cart.webp" width="1536" height="1024" alt="倉庫の中で、機材ケースを積んだ台車" loading="lazy">
-          <figcaption>配送と設置は、台車で会場の中まで運び込みます。</figcaption>
+        <figure class="area" id="area">
+          <svg viewBox="0 0 520 376" role="img" aria-labelledby="area-t area-d">
+            <title id="area-t">配送できる範囲と、往復の配送料</title>
+            <desc id="area-d">倉庫のある架空市の中は往復3,300円、まわりの隣の3町は往復5,500円。そのほかの地域は確認が必要です。</desc>
+            <defs>
+              <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#F4F6F8"/><line x1="0" y1="0" x2="0" y2="8" stroke="#D5DBE1" stroke-width="2"/></pattern>
+            </defs>
+            
+            <!-- 隣の3町（模式図。実際の町の形ではない） -->
+            <path d="M200 110 L240 36 L476 46 L484 150 L362 190 L322 102 Z" fill="url(#hatch)" stroke="#9AA5B1" stroke-width="1.2"/>
+            <path d="M362 190 L484 150 L492 334 L300 342 L312 272 Z" fill="url(#hatch)" stroke="#9AA5B1" stroke-width="1.2"/>
+            <path d="M200 110 L160 182 L190 268 L312 272 L300 342 L36 334 L30 66 L240 36 Z" fill="url(#hatch)" stroke="#9AA5B1" stroke-width="1.2"/>
+            <!-- 架空市 -->
+            <path d="M200 110 L322 102 L362 190 L312 272 L190 268 L160 182 Z" fill="#E3F1EE" stroke="#17877B" stroke-width="2"/>
+            <rect x="251" y="140" width="18" height="15" fill="#17877B"/>
+            <path d="M247 142 L260 132 L273 142" fill="none" stroke="#17877B" stroke-width="2"/>
+            <text x="260" y="176" text-anchor="middle" class="t-s">倉庫</text>
+            <text x="260" y="214" text-anchor="middle" class="t-b">架空市内</text>
+            <text x="260" y="240" text-anchor="middle" class="t-n">3,300円</text>
+            <text x="400" y="96" text-anchor="middle" class="t-b">隣の町</text>
+            <text x="400" y="122" text-anchor="middle" class="t-n">5,500円</text>
+            <text x="418" y="262" text-anchor="middle" class="t-b">隣の町</text>
+            <text x="418" y="288" text-anchor="middle" class="t-n">5,500円</text>
+            <text x="98" y="212" text-anchor="middle" class="t-b">隣の町</text>
+            <text x="98" y="238" text-anchor="middle" class="t-n">5,500円</text>
+            <text x="36" y="24" class="t-s">往復の配送料・税込</text>
+            <text x="36" y="364" class="t-s">ほかの地域は【要確認】</text>
+          </svg>
+          <figcaption>配送の範囲。台車で会場の中まで運び込みます。</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- 4. 他と比べたときの違い -->
+    <!-- 04 違い: 受け取り方の3通りを、同じ3段の段取りの線で。下に配置の例の図 -->
     <section class="compare" id="compare" aria-labelledby="compare-title">
       <div class="sec-head">
-        <p class="tab">比較</p>
-        <h2 id="compare-title">任せる場合と、取りに来る場合</h2>
+        <p class="sec-head__no ff-m">04</p>
+        <h2 id="compare-title">受け取り方の3通りと、配置の例</h2>
+        <p class="sec-head__note">どれも同じ料金表です。違うのは、配送と設置の料金だけです。</p>
       </div>
-      <table class="vs">
-        <caption class="sr-only">配送・設置まで任せる場合と、自分で取りに来る場合の違い</caption>
-        <thead><tr><th scope="col"><span class="sr-only">項目</span></th><th scope="col" class="is-pick">配送・設置まで任せる</th><th scope="col">自分で取りに来る</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">追加の料金</th><td class="is-pick">配送＋設置の料金</td><td>なし</td></tr>
-          <tr><th scope="row">当日の手間</th><td class="is-pick">会場で受け取るだけ。音出しの確認まで</td><td>倉庫で積み込み。テントは2人で約20分</td></tr>
-          <tr><th scope="row">返却</th><td class="is-pick">会場まで引き取りに行きます</td><td>翌日の正午までに倉庫へ</td></tr>
-          <tr><th scope="row">向いている場合</th><td class="is-pick">初めて借りる・人手が少ない</td><td>車がある・前にも使ったことがある</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- 5. 返却の前に確認すること -->
-    <section class="return" id="return" aria-labelledby="return-title">
-      <div class="return__body">
-        <div class="sec-head">
-          <p class="tab">返却</p>
-          <h2 id="return-title">返却の前に確認すること</h2>
+      <div class="lanes">
+        <div class="lane">
+          <div class="lane__h"><h3>任せる</h3><p>配送・設置の<br>料金がかかります</p></div>
+          <ol class="lane__steps">
+            <li><b>受け取り</b>会場で受け取るだけ</li>
+            <li><b>設置</b>組み立てと、音出しの確認まで</li>
+            <li><b>返却</b>会場で引き取ります</li>
+          </ol>
+          <p class="lane__fit"><b>向いている場合</b>初めて借りる・人手が少ない</p>
         </div>
-        <ol class="check">
-          <li><span class="ff-m">01</span>ケースの写真の位置に、機材を戻す</li>
-          <li><span class="ff-m">02</span>マイクの電池を抜いて、同じ袋へ</li>
-          <li><span class="ff-m">03</span>ケーブルは8の字に巻いて、面ファスナーで留める</li>
-          <li><span class="ff-m">04</span>テントの汚れは、乾いた布で落とせる分だけ</li>
-        </ol>
-        <p class="broken"><b>破損・紛失したとき</b>使っている途中でも、その日のうちに電話かフォームで知らせてください。修理費は実費で、機材の価格を上限にします。</p>
+        <div class="lane">
+          <div class="lane__h"><h3>届けてもらう</h3><p>設置は自分で。<br>配送料だけかかります</p></div>
+          <ol class="lane__steps">
+            <li><b>受け取り</b>会場で受け取る</li>
+            <li><b>設置</b>自分たちで組み立てる</li>
+            <li><b>返却</b>会場で引き取ります</li>
+          </ol>
+          <p class="lane__fit"><b>向いている場合</b>車はないが、組み立てる人手はある</p>
+        </div>
+        <div class="lane">
+          <div class="lane__h"><h3>取りに来る</h3><p>追加の料金は<br>ありません</p></div>
+          <ol class="lane__steps">
+            <li><b>受け取り</b>倉庫で積み込み。テントは2人で約20分</li>
+            <li><b>設置</b>会場で組み立てる</li>
+            <li><b>返却</b>倉庫へ返す</li>
+          </ol>
+          <p class="lane__fit"><b>向いている場合</b>車がある・前にも使ったことがある</p>
+        </div>
       </div>
-      <figure class="return__pic">
-        <img src="assets/img/05-case.webp" width="1536" height="1024" alt="開いた機材ケースに収まったマイクとケーブル" loading="lazy">
+      <figure class="plan">
+        <svg class="plan__pc" viewBox="0 0 1000 330" role="img" aria-labelledby="plan-t plan-d">
+          <title id="plan-t">配置の例（上から見た図・寸法は目安）</title>
+          <desc id="plan-d">左は体育館の半分で行う説明会の例。正面にスクリーン100型、その前の長机にプロジェクター、左右にスピーカー、受付に長机1台、客席にパイプ椅子。右は屋外の受付テント2間×3間（約3.6×5.4メートル）の例。テントの下に長机2台とパイプ椅子、四隅におもり。</desc>
+          <!-- 屋内 -->
+          <text x="24" y="30" class="p-h">屋内：体育館の半分での説明会</text>
+          <rect x="24" y="48" width="560" height="262" fill="#fff" stroke="#1c2430" stroke-width="1.5"/>
+          
+          <rect x="214" y="58" width="180" height="8" fill="#17877B"/>
+          <text x="304" y="88" text-anchor="middle" class="p-s">スクリーン 100型（幅 約2.2m）</text>
+          <rect x="120" y="62" width="34" height="26" fill="#1c2430"/><text x="137" y="108" text-anchor="middle" class="p-s">スピーカー</text>
+          <rect x="454" y="62" width="34" height="26" fill="#1c2430"/><text x="471" y="108" text-anchor="middle" class="p-s">スピーカー</text>
+          <rect x="254" y="214" width="100" height="18" fill="#E4E8EC" stroke="#5a6573"/>
+          <rect x="294" y="208" width="20" height="12" fill="#1c2430"/>
+          <text x="304" y="250" text-anchor="middle" class="p-s">長机・プロジェクター</text>
+          <g fill="none" stroke="#5a6573" stroke-width="1.2">
+            <rect x="150" y="128" width="14" height="14"/><rect x="172" y="128" width="14" height="14"/><rect x="194" y="128" width="14" height="14"/><rect x="216" y="128" width="14" height="14"/><rect x="238" y="128" width="14" height="14"/>
+            <rect x="356" y="128" width="14" height="14"/><rect x="378" y="128" width="14" height="14"/><rect x="400" y="128" width="14" height="14"/><rect x="422" y="128" width="14" height="14"/><rect x="444" y="128" width="14" height="14"/>
+            <rect x="150" y="160" width="14" height="14"/><rect x="172" y="160" width="14" height="14"/><rect x="194" y="160" width="14" height="14"/><rect x="216" y="160" width="14" height="14"/><rect x="238" y="160" width="14" height="14"/>
+            <rect x="356" y="160" width="14" height="14"/><rect x="378" y="160" width="14" height="14"/><rect x="400" y="160" width="14" height="14"/><rect x="422" y="160" width="14" height="14"/><rect x="444" y="160" width="14" height="14"/>
+          </g>
+          <text x="304" y="152" text-anchor="middle" class="p-s">パイプ椅子</text>
+          <rect x="60" y="270" width="100" height="18" fill="#E4E8EC" stroke="#5a6573"/>
+          <text x="172" y="284" class="p-s">受付の長机</text>
+          <text x="560" y="298" text-anchor="end" class="p-s">入口 →</text>
+          <!-- 屋外 -->
+          <text x="640" y="30" class="p-h">屋外：受付テント 2間×3間</text>
+          <rect x="680" y="88" width="270" height="180" fill="#F4F6F8" stroke="#1c2430" stroke-width="1.5"/>
+          <g fill="#5a6573"><rect x="672" y="80" width="16" height="16"/><rect x="942" y="80" width="16" height="16"/><rect x="672" y="260" width="16" height="16"/><rect x="942" y="260" width="16" height="16"/></g>
+          <rect x="720" y="196" width="90" height="18" fill="#fff" stroke="#5a6573"/><rect x="820" y="196" width="90" height="18" fill="#fff" stroke="#5a6573"/>
+          <g fill="none" stroke="#5a6573" stroke-width="1.2"><rect x="740" y="226" width="14" height="14"/><rect x="776" y="226" width="14" height="14"/><rect x="840" y="226" width="14" height="14"/><rect x="876" y="226" width="14" height="14"/></g>
+          <text x="815" y="150" text-anchor="middle" class="p-s">長机2台・パイプ椅子</text>
+          <line x1="680" y1="290" x2="950" y2="290" stroke="#1c2430"/><text x="815" y="312" text-anchor="middle" class="p-n">約5.4m（3間）</text>
+          <line x1="976" y1="88" x2="976" y2="268" stroke="#1c2430"/><text x="990" y="178" text-anchor="middle" class="p-n" transform="rotate(90 990 178)">約3.6m</text>
+          <text x="640" y="60" class="p-s">四隅におもり（4個1組）</text>
+        </svg>
+        <svg class="plan__sp" viewBox="0 0 400 560" role="img" aria-label="配置の例（上から見た図・寸法は目安）。上は体育館の半分での説明会、下は屋外の受付テント2間×3間（約3.6×5.4m）">
+          <text x="0" y="24" class="q-h">屋内：体育館の半分での説明会</text>
+          <rect x="1" y="40" width="398" height="250" fill="#fff" stroke="#1c2430" stroke-width="2"/>
+          <rect x="110" y="52" width="180" height="9" fill="#17877B"/>
+          <text x="200" y="88" text-anchor="middle" class="q-s">スクリーン 100型</text>
+          <rect x="30" y="54" width="34" height="26" fill="#1c2430"/><rect x="336" y="54" width="34" height="26" fill="#1c2430"/>
+          <text x="47" y="104" text-anchor="middle" class="q-s">音響</text><text x="353" y="104" text-anchor="middle" class="q-s">音響</text>
+          <g fill="none" stroke="#5a6573" stroke-width="1.4">
+            <rect x="70" y="124" width="18" height="18"/><rect x="98" y="124" width="18" height="18"/><rect x="126" y="124" width="18" height="18"/><rect x="154" y="124" width="18" height="18"/>
+            <rect x="228" y="124" width="18" height="18"/><rect x="256" y="124" width="18" height="18"/><rect x="284" y="124" width="18" height="18"/><rect x="312" y="124" width="18" height="18"/>
+            <rect x="70" y="156" width="18" height="18"/><rect x="98" y="156" width="18" height="18"/><rect x="126" y="156" width="18" height="18"/><rect x="154" y="156" width="18" height="18"/>
+            <rect x="228" y="156" width="18" height="18"/><rect x="256" y="156" width="18" height="18"/><rect x="284" y="156" width="18" height="18"/><rect x="312" y="156" width="18" height="18"/>
+          </g>
+          <rect x="150" y="204" width="100" height="20" fill="#E4E8EC" stroke="#5a6573"/><rect x="190" y="198" width="20" height="12" fill="#1c2430"/>
+          <text x="200" y="250" text-anchor="middle" class="q-s">長机・プロジェクター</text>
+          <text x="384" y="278" text-anchor="end" class="q-s">入口 →</text>
+          <text x="0" y="336" class="q-h">屋外：受付テント 2間×3間</text>
+          <rect x="40" y="372" width="300" height="140" fill="#F4F6F8" stroke="#1c2430" stroke-width="2"/>
+          <g fill="#5a6573"><rect x="31" y="363" width="18" height="18"/><rect x="331" y="363" width="18" height="18"/><rect x="31" y="503" width="18" height="18"/><rect x="331" y="503" width="18" height="18"/></g>
+          <rect x="80" y="430" width="100" height="20" fill="#fff" stroke="#5a6573"/><rect x="200" y="430" width="100" height="20" fill="#fff" stroke="#5a6573"/>
+          <text x="190" y="410" text-anchor="middle" class="q-s">長机2台・椅子</text>
+          <line x1="40" y1="540" x2="340" y2="540" stroke="#1c2430"/><text x="190" y="558" text-anchor="middle" class="q-n">約5.4m</text>
+          <line x1="364" y1="372" x2="364" y2="512" stroke="#1c2430"/><text x="384" y="448" text-anchor="middle" class="q-n" transform="rotate(90 384 448)">約3.6m</text>
+        </svg>
+        <figcaption>配置の例です。机と椅子の数は、会場の広さと人数で変わります。</figcaption>
       </figure>
     </section>
 
-    <!-- 6. 問い合わせの方法 -->
-    <section class="contact" id="contact" aria-labelledby="contact-title">
-      <div class="sec-head">
-        <p class="tab">問い合わせ</p>
-        <h2 id="contact-title">空き状況の問い合わせ</h2>
-      </div>
-      <div class="contact__grid">
-        <div class="before">
-          <h3>送る前に確認できること</h3>
-          <ul>
-            <li><a href="#list">品目と1日の料金</a></li>
-            <li><a href="#terms">配送できる地域と、設置の料金</a></li>
-            <li><a href="#compare">任せるか、取りに来るか</a></li>
-          </ul>
-          <dl class="flow">
-            <div><dt>返信の目安</dt><dd>当日〜翌営業日（平日 9:00〜17:00）</dd></div>
-            <div><dt>相談の流れ</dt><dd>空き状況のお返事 → 見積もり → 予約の確定</dd></div>
-            <div><dt>決まっていなくても</dt><dd>人数と会場だけ分かれば、必要な機材を一緒に考えます</dd></div>
-          </dl>
+    <!-- 05 返却: 写真が主役の濃い章。ケースの写真と、戻す順番 -->
+    <section class="return" id="return" aria-labelledby="return-title">
+      <figure class="return__pic">
+        <img src="assets/img/05-case.webp" width="1536" height="1024" alt="開いた機材ケースに収まったマイクとケーブル" loading="lazy">
+      </figure>
+      <div class="return__body">
+        <div class="sec-head sec-head--dark">
+          <p class="sec-head__no ff-m">05</p>
+          <h2 id="return-title">返却の前に確かめる4つ</h2>
         </div>
-        <form class="form" data-sample-form="空き状況を問い合わせる" action="#" novalidate>
-          <div class="form__row"><label for="f-date">使う日</label><input id="f-date" name="date" type="date"></div>
-          <div class="form__row"><label for="f-days">日数</label><input id="f-days" name="days" type="text" inputmode="numeric" placeholder="例: 1"></div>
-          <fieldset class="form__row form__wide form__pick">
-            <legend>借りたい分類</legend>
-            <label><input type="checkbox" name="cat" value="av"> 映像・音響</label>
-            <label><input type="checkbox" name="cat" value="tent"> テント・机</label>
-            <label><input type="checkbox" name="cat" value="unknown"> まだ決めていない</label>
-          </fieldset>
-          <fieldset class="form__row form__wide form__pick">
-            <legend>受け取り方</legend>
-            <label><input type="radio" name="way" value="deliver"> 配送・設置まで任せる</label>
-            <label><input type="radio" name="way" value="pickup"> 取りに行く</label>
-          </fieldset>
-          <div class="form__row"><label for="f-name">お名前・団体名</label><input id="f-name" name="name" type="text" autocomplete="name"></div>
-          <div class="form__row"><label for="f-mail">メールアドレス</label><input id="f-mail" name="mail" type="email" autocomplete="email"></div>
-          <button class="btn btn--act" type="submit">空き状況を問い合わせる（見本）</button>
-        </form>
+        <ol class="check">
+          <li><span class="ff-m">1</span>ケースの形に合わせて、機材を元の場所へ</li>
+          <li><span class="ff-m">2</span>マイクの電池を抜いて、同じ袋へ</li>
+          <li><span class="ff-m">3</span>ケーブルは8の字に巻き、面ファスナーで留める</li>
+          <li><span class="ff-m">4</span>テントの汚れは、乾いた布で落とせる分だけ</li>
+        </ol>
+        <p class="broken"><b>壊した・なくしたとき</b>使っている途中でも、その日のうちに電話かフォームで知らせてください。</p>
+      </div>
+    </section>
+
+    <!-- 06 次の行動: 見積もりと予約のページへ -->
+    <section class="next" id="next" aria-labelledby="next-title">
+      <div class="next__copy">
+        <p class="sec-head__no ff-m">06</p>
+        <h2 id="next-title">見積もりと予約</h2>
+        <p>問い合わせから返却までの日程と、見積もりの計算の例、雨の日や前日の相談の答えを、次のページにまとめています。</p>
+      </div>
+      <div class="next__acts">
+        <a class="btn btn--act" href="reserve.html#form">空き状況を問い合わせる</a>
+        <a class="btn btn--line" href="reserve.html">予約から返却までの日程を見る</a>
       </div>
     </section>
   </main>
 </div>
 
 <footer class="site-foot">
-  <p class="ff-d">カリモノ屋</p>
-  <p>説明会と地域行事の機材レンタル カリモノ屋（架空の事業）／架空の地方都市の倉庫（所在地は見本のため非表示）。電話番号は見本のため載せていません。</p>
+  <div class="site-foot__in">
+    <div>
+      <p class="site-foot__name ff-d">カリモノ屋</p>
+      <p>説明会と地域行事の機材レンタル（架空の事業）</p>
+    </div>
+    <dl class="site-foot__info">
+      <div><dt>倉庫・受付</dt><dd><span class="nw">架空県架空市</span> <span class="nw">倉庫町2-14【要確認】</span></dd></div>
+      <div><dt>電話</dt><dd>【要確認】<span class="nw">（平日 9:00〜17:00）</span></dd></div>
+      <div><dt>問い合わせ</dt><dd><a href="reserve.html#form">空き状況の問い合わせフォーム</a></dd></div>
+    </dl>
+    <nav class="site-foot__nav" aria-label="ページの一覧">
+      <a href="index.html" aria-current="page">料金と条件</a>
+      <a href="reserve.html">見積もりと予約</a>
+    </nav>
+  </div>
 </footer>
 
 <div class="dock" aria-label="問い合わせの窓口">
-  <a class="btn btn--line" href="#list">一覧を見る</a>
-  <a class="btn btn--act" href="#terms">条件を確認する</a>
+  <a class="btn btn--line" href="#terms">条件を確認する</a>
+  <a class="btn btn--act" href="reserve.html#form">問い合わせる</a>
 </div>
 
 <aside class="ca-credit" aria-labelledby="ca-credit-title">
@@ -237,7 +362,7 @@
     <a class="ca-btn" href="design-notes.html">この見本の設計メモ</a>
     <a class="ca-link" href="../../works.html">見本サイトの一覧</a>
   </div>
-  <p class="ca-credit__fine">参考の規模: TOPページのみの見本です。見本の規模は参考で、特定のプランをおすすめするものではありません。</p>
+  <p class="ca-credit__fine">参考の規模: TOPページと下層1ページ（見積もりと予約）の見本です。見本の規模は参考で、特定のプランをおすすめするものではありません。</p>
   <a class="ca-credit__brand" href="../../index.html"><img src="../../assets/brand/logo.webp" width="360" height="278" alt="">クルーアセント（CREW ASCENT）</a>
 </aside>
 

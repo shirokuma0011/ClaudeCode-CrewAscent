@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>からだを整える 整体 しなり｜灯町の整体院 1回60分・初回5,500円（見本・架空）</title>
-<meta name="description" content="灯町の商店街で、ひとりで営む整体院です。1回60分、初回は話を聞く時間を長めにとります。料金・受付時間・予約方法をこのページだけで確かめられます（架空の事業の見本サイト）。">
+<title>からだを整える 整体 しなり｜灯町商店街の整体院 1回60分・4,950円（見本・架空）</title>
+<meta name="description" content="灯町商店街で、ひとりで営む整体院です。肩・首・腰のこわばりを手で整えます。1回60分4,950円・初回75分5,500円（税込）。受付時間・場所・予約の方法をこのページだけで確かめられます（架空の事業の見本サイト）。">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="../../assets/brand/icon-32.png" sizes="32x32">
-<link rel="preload" href="fonts/shinari-min-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/shinari-sawarabi-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../_shared/crew-frame.css?v=20261015">
 <script defer src="../_shared/crew-frame.js?v=20261015"></script>
-<link rel="stylesheet" href="assets/shinari.css?v=4">
+<link rel="stylesheet" href="assets/shinari.css?v=5">
 <script>document.documentElement.classList.add('js');</script>
-<script defer src="assets/shinari.js?v=4"></script>
+<script defer src="assets/shinari.js?v=5"></script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ移動</a>
@@ -24,243 +24,303 @@
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
-    <symbol id="sn-logo" viewBox="0 0 132 48">
-      <text x="0" y="31" font-family="'Shinari Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', serif" font-size="29" font-weight="500" letter-spacing="5" fill="currentColor">しなり</text>
-      <path d="M1 41.5 C 34 44 70 43 98 35 C 112 31 122 25 130 17" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+    <symbol id="sn-logo" viewBox="0 0 120 44">
+      <text x="1" y="28" font-family="'Shinari Gothic', 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="26" letter-spacing="4" fill="currentColor">しなり</text>
+      <path d="M2 37 C 34 40 66 39 92 32 C 104 29 112 24 118 17" fill="none" stroke="#2c6e6a" stroke-width="1.4" stroke-linecap="round"/>
     </symbol>
   </defs>
 </svg>
 
+<!-- 今日の受付の帯（上端の同じ位置。JSがなくても週の受付時間が読める） -->
+<div class="today-bar" id="today-bar">
+  <p class="today-bar__in">
+    <span class="today-bar__mark" aria-hidden="true"></span>
+    <span class="today-bar__now" data-today-line>受付 平日11:00〜20:00・土曜10:00〜17:00</span>
+    <span class="today-bar__sep" aria-hidden="true">／</span>
+    <span class="today-bar__tel"><span class="today-bar__long">当日の空きは電話で <span class="num">00-0000-0000</span><span class="tbc">【要確認】</span></span><a class="today-bar__short" href="#reserve">電話・予約</a></span>
+  </p>
+</div>
+
 <header class="site-head">
   <a class="logo" href="#top" aria-label="からだを整える 整体 しなり（ページの先頭へ）">
-    <svg width="104" height="38" aria-hidden="true" focusable="false"><use href="#sn-logo"/></svg>
-    <span>からだを整える整体<br>灯町商店街</span>
+    <svg width="96" height="35" aria-hidden="true" focusable="false"><use href="#sn-logo"/></svg>
+    <span class="logo__sub">からだを整える整体<br>灯町商店街</span>
   </a>
   <nav class="head-nav" aria-label="ページ内の案内">
-    <a href="#flow">60分の流れ</a><a href="#price">料金</a><a href="#hours">受付時間</a><a href="#access">アクセス</a><a href="#faq">質問</a>
+    <a href="#scope">すること</a><a href="#price">時間と料金</a><a href="#hours">受付時間</a><a href="#access">場所</a><a href="#faq">質問</a>
   </nav>
-  <a class="btn btn--head" href="#reserve" data-sample-action="予約する">予約する（見本）</a>
+  <a class="btn btn--rust btn--head" href="#reserve">予約する</a>
 </header>
 
 <main id="main">
-  <!-- 1. 表紙: 一行の見出しと、全幅の部屋の写真 -->
-  <section class="cover" id="top" aria-labelledby="hero-title">
-    <div class="cover__text">
-      <div class="cover__h">
-        <p class="cover__place"><span class="nw">灯町2丁目・商店街のなか</span> ／ <span class="nw">ひとりで営む整体院（架空）</span></p>
-        <h1 id="hero-title" class="ff-d"><span class="nw">こわばった日に、</span><span class="nw">60分。</span></h1>
-      </div>
-      <div class="cover__side">
-        <p>肩・首・腰のこわばりを、手で整えます。初回は、話を聞く時間を長めにとります。</p>
-        <div class="cover__acts">
-          <a class="btn" href="#reserve" data-sample-action="予約する">予約する（見本）</a>
-          <a class="more" href="#flow">料金と流れを見る</a>
-        </div>
-      </div>
+  <!-- 1. 最初の画面：電話で聞かれる5つに、その場で答える -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="hero__head">
+      <p class="hero__place">灯町商店街の整体院／ひとりで営んでいます</p>
+      <h1 id="hero-title"><span class="nw">肩<span class="dot">・</span>首<span class="dot">・</span>腰のこわばりを、</span><span class="nw">手で整える整体です。</span></h1>
     </div>
-    <figure class="cover__photo">
+    <figure class="hero__photo">
       <img src="assets/img/room.webp" width="1536" height="864" alt="窓から光の入る施術室。木の脚の施術台に白いシーツと深い緑のタオルがかかっている" fetchpriority="high">
-      <svg class="cover__edge" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-        <path d="M0 90 V62 C 320 86 720 88 1040 52 C 1220 32 1340 14 1440 4 V90 Z" fill="currentColor"/>
-        <path class="cover__line" d="M0 58 C 320 82 720 84 1040 48 C 1220 28 1340 10 1440 0" fill="none" stroke="#2f5f5b" stroke-width="1.2" vector-effect="non-scaling-stroke" pathLength="1"/>
-      </svg>
-      <figcaption>施術室（AI生成のイメージ）</figcaption>
+      <figcaption>施術室（写真はすべてAI生成のイメージです）</figcaption>
     </figure>
-    <dl class="facts" aria-label="来院の前に知っておきたいこと">
-      <div><dt>初回</dt><dd class="ff-d"><span class="num">5,500</span>円<small>約75分</small></dd></div>
-      <div><dt>2回目から</dt><dd class="ff-d"><span class="num">4,950</span>円<small>約60分</small></dd></div>
-      <div><dt>受付</dt><dd class="ff-d">平日 <span class="num">20:00</span>まで<small>土曜は17時まで</small></dd></div>
-      <div><dt>予約</dt><dd class="ff-d">電話・Web<small>当日は電話で</small></dd></div>
-    </dl>
-    <p class="facts__note">税込・見本用の架空価格。回数券のおすすめはしていません。健康保険は使えません。</p>
-  </section>
-
-  <!-- 2. こんな日に・しなりについて -->
-  <section class="days" id="days" aria-labelledby="days-title">
-    <div class="days__head">
-      <h2 id="days-title" class="ff-d">「なんだか重い」日に、<br>寄っていく場所です。</h2>
-      <p class="days__lead">灯町の商店街で、ひとりで営む整体院です。受付から施術まで同じ人が担当します。平日は20時まで受付。着替えはなく、仕事帰りにそのまま受けられます。</p>
-    <ol class="day">
-      <li><span class="day__t"><span class="num">8:10</span><small class="ff-d">朝</small></span><p>振り向くと、首が回りにくい</p></li>
-      <li><span class="day__t"><span class="num">14:30</span><small class="ff-d">昼</small></span><p>画面に向かいっぱなしで、肩が上がったまま</p></li>
-      <li><span class="day__t"><span class="num">19:40</span><small class="ff-d">夜</small></span><p>立ち仕事のあと、腰が重い帰り道</p></li>
-      <li><span class="day__t"><span class="ff-d day__w">週明け</span></span><p>庭仕事や片付けのあと、かがむのがおっくう</p></li>
-    </ol>
-    </div>
-    <div class="days__body">
-      <div class="scope">
-        <div class="scope__col">
-          <h3 class="ff-d">しなりがすること</h3>
-          <ul>
-            <li>肩・首・腰まわりのこわばりを、手で整えます</li>
-            <li>生活の様子を聞いて、次に来る目安を一緒に決めます</li>
-            <li>家でできる、短い体の動かし方をお伝えします</li>
-          </ul>
-        </div>
-        <div class="scope__col">
-          <h3 class="ff-d">しないこと</h3>
-          <ul>
-            <li>病気の診断や治療（医療機関ではありません）</li>
-            <li>回数券やまとめ払いのおすすめ</li>
-            <li>強い痛み・しびれがあるときの施術（先に医療機関へ）</li>
-          </ul>
-        </div>
-        <p class="fine scope__fine">体の変わり方には個人差があります。強い痛み・しびれ・けがのあとは、先に医療機関へ。</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3. 60分の流れ: 縦の時間の目盛り -->
-  <section class="flow" id="flow" aria-labelledby="flow-title">
-    <figure class="flow__photo">
-      <img src="assets/img/talk.webp" width="1000" height="800" alt="木の机をはさんで、手帳を前に話をしている二人の手もと" loading="lazy">
-      <figcaption>最初の10分は、話を聞く時間（AI生成のイメージ）</figcaption>
-    </figure>
-    <div class="flow__body">
-      <h2 id="flow-title" class="ff-d">60分の使い方を、<br>先にお見せします。</h2>
-      <ol class="scale" aria-label="1回60分の内訳">
-        <li style="--m:5"><span class="scale__at num">0</span><div><h3 class="ff-d">受付<span class="num">5</span><small>分</small></h3><p>荷物を置いて、5問だけの問診票を書きます。</p></div></li>
-        <li style="--m:10"><span class="scale__at num">5</span><div><h3 class="ff-d">話を聞く<span class="num">10</span><small>分</small></h3><p>どこが、いつから、どんなふうに。初回は長めにとります。</p></div></li>
-        <li style="--m:40" class="is-main"><span class="scale__at num">15</span><div><h3 class="ff-d">施術<span class="num">40</span><small>分</small></h3><p>手でゆっくり整えます。強さは途中でも変えられます。強く押したり、音を鳴らしたりはしません。</p></div></li>
-        <li style="--m:5"><span class="scale__at num">55</span><div><h3 class="ff-d">次回の目安<span class="num">5</span><small>分</small></h3><p>次に来る目安を一緒に決めます。決めなくてもかまいません。</p></div></li>
-      </ol>
-      <p class="scale__end"><span class="num">60</span>分</p>
-    </div>
-  </section>
-
-  <!-- 4. 料金 -->
-  <section class="price" id="price" aria-labelledby="price-title">
-    <div class="price__head">
-      <h2 id="price-title" class="ff-d">料金は、<br>1回ごとに。</h2>
-      <p class="price__lead">回数券やまとめ払いはありません。その日の分だけ、その日にお支払いください。</p>
-      <figure class="price__photo">
-        <img src="assets/img/desk.webp" width="720" height="900" alt="木の机に置かれた時計と深い緑の手帳、ペン、たたんだタオル" loading="lazy">
-        <figcaption>問診票を書く机（AI生成のイメージ）</figcaption>
-      </figure>
-    </div>
-    <div class="price__body">
-      <table class="menu">
-        <caption class="sr-only">料金表（税込・見本用の架空価格）</caption>
-        <thead><tr><th scope="col">内容</th><th scope="col">時間</th><th scope="col">料金（税込）</th></tr></thead>
-        <tbody>
-          <tr><th scope="row"><span class="ff-d">初回</span><small>話を聞く時間を含む</small></th><td><span class="num">75</span>分</td><td><span class="num">5,500</span>円</td></tr>
-          <tr><th scope="row"><span class="ff-d">2回目以降</span><small>首・肩・腰まわり</small></th><td><span class="num">60</span>分</td><td><span class="num">4,950</span>円</td></tr>
-          <tr><th scope="row"><span class="ff-d">短時間コース</span><small>首と肩のみ</small></th><td><span class="num">30</span>分</td><td><span class="num">2,750</span>円</td></tr>
-        </tbody>
-      </table>
-      <dl class="terms">
-        <div><dt>回数券</dt><dd>なし。1回ごとのお支払いです</dd></div>
-        <div><dt>お支払い</dt><dd>現金・電子マネー</dd></div>
-        <div><dt>キャンセル</dt><dd>前日までの連絡で無料</dd></div>
+    <div class="hero__desk slip">
+      <p class="hero__desk-t"><span>受付でよく聞かれること</span><span class="hero__date" data-today-date></span></p>
+      <dl class="answers">
+        <div class="answers__row"><dt>何分？</dt><dd><span class="answers__big"><span class="num">60</span>分</span><span class="answers__sub">初回は約75分</span><a class="answers__go" href="#price">60分の内訳へ</a></dd></div>
+        <div class="answers__row"><dt>いくら？</dt><dd><span class="answers__big"><span class="num">4,950</span>円</span><span class="answers__sub">初回<span class="num"> 5,500</span>円・税込</span><a class="answers__go" href="#menu">料金表へ</a></dd></div>
+        <div class="answers__row answers__row--today"><dt>今日は？</dt><dd><span class="answers__big" data-today-big>平日<span class="num"> 20:00</span>まで</span><span class="answers__sub" data-today-sub>土曜は17時まで</span><a class="answers__go" href="#hours">受付時間へ</a></dd></div>
+        <div class="answers__row"><dt>予約は？</dt><dd><span class="answers__big answers__big--w">当日は電話</span><span class="answers__sub">前日まではWebも</span><a class="answers__go" href="#reserve">予約の方法へ</a></dd></div>
+        <div class="answers__row answers__row--no"><dt>しないこと</dt><dd><span class="answers__big answers__big--w">診断・治療、強い痛みのときの施術</span><a class="answers__go" href="#scope">しないこと一覧へ</a></dd></div>
       </dl>
-      <p class="fine">すべて税込・見本用の架空価格です。健康保険は使えません。</p>
+      <div class="slip__tear" aria-hidden="true"></div>
+      <div class="hero__acts">
+        <a class="btn btn--rust" href="#reserve">予約の方法を見る</a>
+        <a class="btn btn--line" href="#reserve" data-sample-action="電話する">電話で聞く（見本）</a>
+      </div>
+      <p class="hero__flow"><span class="nw">電話かWebで予約</span><span class="hero__arr" aria-hidden="true">→</span><span class="nw">問診票を書く</span><span class="hero__arr" aria-hidden="true">→</span><span class="nw">話を聞いて施術</span></p>
+      <p class="hero__note">日時が決まっていなくても、フォームで相談できます。</p>
     </div>
   </section>
 
-  <!-- 5. 写真の帯 -->
-  <figure class="band">
-    <img src="assets/img/fold.webp" width="1536" height="640" alt="施術台の上で、深い緑のタオルをたたむ手もと" loading="lazy">
-    <figcaption>施術台を整える手もと（AI生成のイメージ）</figcaption>
-  </figure>
+  <!-- 2. 何をしてくれる？：写真の帯 → 考え方の一文／すること／しないこと -->
+  <section class="scope" id="scope" aria-labelledby="scope-title">
+    <div class="scope__grid">
+      <div class="scope__lead">
+        <p class="q">何をしてくれる？</p>
+        <h2 id="scope-title"><span class="nw">手で整えます。</span><span class="nw">診断や治療はしません。</span></h2>
+        <p class="scope__word">体のことは、聞いてから触れる。初回に時間を長めにとるのは、そのためです。</p>
+      </div>
+      <div class="scope__col">
+        <h3>すること</h3>
+        <ul class="ledger">
+          <li>肩・首・腰まわりのこわばりを、手で整えます</li>
+          <li>生活の様子を聞いて、次に来る目安を一緒に決めます</li>
+          <li>家でできる、短い体の動かし方をお伝えします</li>
+        </ul>
+      </div>
+      <div class="scope__col scope__col--no">
+        <h3>しないこと</h3>
+        <ul class="ledger">
+          <li>病気の診断や治療</li>
+          <li>強い痛み・しびれ・けがのあとの施術（先に医療機関へ）</li>
+          <li>回数券やまとめ払いのおすすめ</li>
+        </ul>
+      </div>
+    </div>
+    <p class="scope__fine fine">体の感じ方には個人差があります。</p>
+    <figure class="scope__band">
+      <img src="assets/img/fold.webp" width="1536" height="640" alt="施術台の上で、深い緑のタオルをたたむ手もと" loading="lazy">
+    </figure>
+  </section>
 
-  <!-- 7. 受付時間とアクセス -->
-  <section class="visit" id="visit" aria-label="受付時間とアクセス">
-    <div class="visit__hours" id="hours">
-      <h2 class="ff-d">仕事帰りの、20時まで。</h2>
-      <table class="hours">
-        <caption>受付時間（日曜・祝日休み。見本上の設定）</caption>
-        <tbody>
-          <tr data-day="1"><th scope="row" class="ff-d">月</th><td class="num">11:00 – 20:00</td><td class="st"></td></tr>
-          <tr data-day="2"><th scope="row" class="ff-d">火</th><td class="num">11:00 – 20:00</td><td class="st"></td></tr>
-          <tr data-day="3"><th scope="row" class="ff-d">水</th><td class="num">11:00 – 20:00</td><td class="st"></td></tr>
-          <tr data-day="4"><th scope="row" class="ff-d">木</th><td class="num">11:00 – 20:00</td><td class="st"></td></tr>
-          <tr data-day="5"><th scope="row" class="ff-d">金</th><td class="num">11:00 – 20:00</td><td class="st"></td></tr>
-          <tr data-day="6"><th scope="row" class="ff-d">土</th><td class="num">10:00 – 17:00</td><td class="st"></td></tr>
-          <tr data-day="0" class="is-closed"><th scope="row" class="ff-d">日</th><td>休み</td><td class="st"></td></tr>
-        </tbody>
+  <!-- 3. 何分・いくら？：60分の比例の帯 → 料金表 -->
+  <section class="price" id="price" aria-labelledby="price-title">
+    <div class="price__top">
+      <p class="q">何分・いくら？</p>
+      <h2 id="price-title"><span class="nw">1回60分。</span><span class="nw">料金は、その日の分だけ。</span></h2>
+    </div>
+    <figure class="span60" aria-labelledby="span60-cap">
+      <ol class="span60__bar">
+        <li style="--m:5"><b>受付</b><span><span class="num">5</span>分</span></li>
+        <li style="--m:10"><b>話を聞く</b><span><span class="num">10</span>分</span></li>
+        <li style="--m:40" class="is-main"><b>手で整える</b><span><span class="num">40</span>分</span></li>
+        <li style="--m:5"><b>次の目安</b><span><span class="num">5</span>分</span></li>
+      </ol>
+      <div class="span60__scale" aria-hidden="true"><span class="num">0</span><span class="num">15</span><span class="num">30</span><span class="num">45</span><span class="num">60分</span></div>
+      <figcaption id="span60-cap">2回目以降の60分の内訳。初回は「話を聞く」を長めにとり、約75分です。</figcaption>
+    </figure>
+    <div class="price__body">
+      <figure class="price__photo">
+        <img src="assets/img/talk.webp" width="1000" height="800" alt="木の机をはさんで、手帳を前に話をしている二人の手もと" loading="lazy">
+      </figure>
+      <div class="price__table">
+        <table class="menu" id="menu">
+          <caption>料金（すべて税込）</caption>
+          <thead><tr><th scope="col">内容</th><th scope="col">時間</th><th scope="col">料金</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">初回<small>話を聞く時間を含む</small></th><td><span class="num">75</span>分</td><td><span class="num">5,500</span>円</td></tr>
+            <tr><th scope="row">2回目以降<small>首・肩・腰まわり</small></th><td><span class="num">60</span>分</td><td><span class="num">4,950</span>円</td></tr>
+            <tr><th scope="row">短時間<small>首と肩のみ</small></th><td><span class="num">30</span>分</td><td><span class="num">2,750</span>円</td></tr>
+          </tbody>
+        </table>
+        <dl class="terms">
+          <div><dt>料金に含むもの</dt><dd>話を聞く時間・施術・家でできる動かし方の説明</dd></div>
+          <div><dt>お支払い</dt><dd>現金・電子マネー（その日払い）</dd></div>
+          <div><dt>含まないもの</dt><dd>健康保険の適用（すべて自費です）</dd></div>
+        </dl>
+        <p class="fine">延長などで追加の費用が出る条件は<span class="nw">【要確認】</span>。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 今日は空いてる？：週の格子（今日の列に印） -->
+  <section class="hours" id="hours" aria-labelledby="hours-title">
+   <div class="hours__in">
+    <div class="hours__head">
+      <p class="q">今日は空いてる？</p>
+      <h2 id="hours-title"><span class="nw">平日は20時まで。</span><span class="nw">仕事帰りに、そのまま。</span></h2>
+      <p class="hours__status" data-hours-status hidden></p>
+      <dl class="hours__notes">
+        <div><dt>予約の変更・キャンセル</dt><dd><span class="nw">前日までの連絡で無料。</span><span class="nw">当日の扱いは【要確認】</span></dd></div>
+      </dl>
+    </div>
+    <figure class="hours__photo">
+      <img src="assets/img/desk.webp" width="720" height="900" alt="木の机に置かれた時計と深い緑の手帳、ペン、たたんだタオル" loading="lazy">
+    </figure>
+      <table class="week">
+        <caption class="sr-only">受付時間（日曜・祝日は休み）</caption>
+        <thead><tr>
+          <th scope="col" data-day="1">月</th><th scope="col" data-day="2">火</th><th scope="col" data-day="3">水</th><th scope="col" data-day="4">木</th><th scope="col" data-day="5">金</th><th scope="col" data-day="6">土</th><th scope="col" data-day="0">日・祝</th>
+        </tr></thead>
+        <tbody><tr>
+          <td data-day="1"><span class="num">11:00</span><span class="week__to">〜</span><span class="num">20:00</span></td>
+          <td data-day="2"><span class="num">11:00</span><span class="week__to">〜</span><span class="num">20:00</span></td>
+          <td data-day="3"><span class="num">11:00</span><span class="week__to">〜</span><span class="num">20:00</span></td>
+          <td data-day="4"><span class="num">11:00</span><span class="week__to">〜</span><span class="num">20:00</span></td>
+          <td data-day="5"><span class="num">11:00</span><span class="week__to">〜</span><span class="num">20:00</span></td>
+          <td data-day="6"><span class="num">10:00</span><span class="week__to">〜</span><span class="num">17:00</span></td>
+          <td data-day="0" class="is-off">休み</td>
+        </tr></tbody>
       </table>
-    </div>
-    <div class="visit__access" id="access">
-      <h2 class="ff-d">灯町駅から、歩いて約4分。</h2>
-      <div class="access">
-        <figure class="map">
-          <svg viewBox="0 44 600 236" role="img" aria-labelledby="map-t" focusable="false">
-            <title id="map-t">架空の地図。灯町駅の北口を出て商店街を東へ約4分、郵便ポストの角の2軒先にしなりがある</title>
-            <g fill="none" stroke="#e3ddd0" stroke-width="12"><path d="M0 64 H600"/><path d="M0 266 H600"/><path d="M140 0 V320"/><path d="M480 0 V320"/></g>
-            <path d="M0 166 H600" stroke="#d9d1c1" stroke-width="30"/>
-            <g fill="none" stroke="#cfc6b4"><rect x="176" y="96" width="56" height="42"/><rect x="240" y="96" width="56" height="42"/><rect x="304" y="96" width="44" height="42"/><rect x="176" y="194" width="70" height="42"/><rect x="254" y="194" width="56" height="42"/><rect x="318" y="194" width="66" height="42"/><rect x="396" y="96" width="56" height="42"/></g>
-            <rect x="356" y="92" width="32" height="48" fill="#2f5f5b"/>
-            <circle cx="336" cy="156" r="5" fill="#2a2d2b"/>
-            <text x="336" y="190" font-size="13" fill="#2a2d2b" text-anchor="middle" font-family="sans-serif">ポスト</text>
-            <rect x="30" y="200" width="92" height="40" fill="none" stroke="#2a2d2b"/>
-            <text x="76" y="226" font-size="15" fill="#2a2d2b" text-anchor="middle" font-family="sans-serif">灯町駅</text>
-            <path d="M96 200 C 120 168 200 168 290 168 C 330 168 360 160 372 142" fill="none" stroke="#2f5f5b" stroke-width="2" stroke-dasharray="1 7" stroke-linecap="round"/>
-            <text x="540" y="171" font-size="14" fill="#575b57" text-anchor="middle" font-family="sans-serif">灯町商店街</text>
-            <text x="372" y="80" font-size="17" fill="#2f5f5b" text-anchor="middle" font-family="serif">しなり</text>
-          </svg>
-          <figcaption>架空の地図です。実在の場所ではありません。</figcaption>
-        </figure>
-        <div class="access__row">
-          <img class="door" src="assets/img/door.webp" width="640" height="800" alt="木の扉と鉢植えのある入口" loading="lazy">
-          <dl class="addr">
-            <div><dt>場所</dt><dd>架空県灯町2丁目 灯町商店街のなか</dd></div>
-            <div><dt>目印</dt><dd>郵便ポストの角から2軒先の木の扉</dd></div>
-            <div><dt>駐車場</dt><dd>なし。近くの有料駐車場へ</dd></div>
-          </dl>
-        </div>
-        <p class="fine">住所は見本上の設定。扉の写真はAI生成のイメージです。</p>
-      </div>
-    </div>
+   </div>
   </section>
 
-  <!-- 8. よくある質問 -->
+  <!-- 5. どこにある？：地図に扉の写真を重ねる -->
+  <section class="access" id="access" aria-labelledby="access-title">
+    <div class="access__head">
+      <p class="q">どこにある？</p>
+      <h2 id="access-title"><span class="nw">灯町駅の北口から、</span><span class="nw">歩いて約4分。</span></h2>
+    </div>
+    <div class="access__stage">
+      <figure class="map">
+        <svg class="map__wide" viewBox="0 60 720 250" role="img" aria-labelledby="map-t" focusable="false">
+          <title id="map-t">架空の地図。灯町駅の北口を出て商店街を東へ歩き、郵便ポストの角から2軒先にしなりがある</title>
+          <rect width="960" height="360" fill="#ece7dc"/>
+          <g fill="none" stroke="#f8f6f0" stroke-width="16"><path d="M0 70 H960"/><path d="M0 300 H960"/><path d="M200 0 V360"/><path d="M700 0 V360"/></g>
+          <path d="M0 186 H960" stroke="#ddd5c6" stroke-width="44"/>
+          <g fill="#f8f6f0" stroke="#d3cbbb"><rect x="240" y="104" width="76" height="52"/><rect x="326" y="104" width="70" height="52"/><rect x="406" y="104" width="58" height="52"/><rect x="518" y="104" width="74" height="52"/><rect x="602" y="104" width="62" height="52"/><rect x="240" y="216" width="92" height="52"/><rect x="342" y="216" width="80" height="52"/><rect x="432" y="216" width="96" height="52"/><rect x="538" y="216" width="126" height="52"/><rect x="740" y="104" width="120" height="52"/><rect x="740" y="216" width="150" height="52"/></g>
+          <rect x="474" y="98" width="36" height="62" fill="#2c6e6a"/>
+          <circle cx="430" cy="178" r="6" fill="#1e2a2a"/>
+          <text x="430" y="206" font-size="15" fill="#1e2a2a" text-anchor="middle" font-family="'Shinari Gothic',sans-serif">ポスト</text>
+          <rect x="40" y="216" width="120" height="52" fill="#f8f6f0" stroke="#1e2a2a" stroke-width="1.5"/>
+          <text x="100" y="248" font-size="18" fill="#1e2a2a" text-anchor="middle" font-family="'Shinari Gothic',sans-serif">灯町駅</text>
+          <text x="100" y="292" font-size="14" fill="#4f5a58" text-anchor="middle" font-family="'Shinari Gothic',sans-serif">北口</text>
+          <path d="M132 216 C 160 186 230 186 330 186 C 410 186 470 186 492 162" fill="none" stroke="#2c6e6a" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round"/>
+          <text x="640" y="193" font-size="16" fill="#4f5a58" text-anchor="middle" font-family="'Shinari Gothic',sans-serif">灯町商店街</text>
+          <text x="492" y="86" font-size="20" fill="#2c6e6a" text-anchor="middle" font-family="'Shinari Gothic',sans-serif">しなり</text>
+        </svg>
+        <svg class="map__tall" viewBox="0 0 360 300" role="img" aria-labelledby="map-t2" focusable="false">
+          <title id="map-t2">架空の地図。灯町駅の北口を出て商店街を東へ歩き、郵便ポストの角から2軒先にしなりがある</title>
+          <rect width="360" height="300" fill="#ece7dc"/>
+          <g fill="none" stroke="#f8f6f0" stroke-width="12"><path d="M0 50 H360"/><path d="M0 262 H360"/><path d="M110 0 V300"/></g>
+          <path d="M0 158 H360" stroke="#ddd5c6" stroke-width="36"/>
+          <g fill="#f8f6f0" stroke="#d3cbbb"><rect x="132" y="82" width="52" height="46"/><rect x="192" y="82" width="40" height="46"/><rect x="290" y="82" width="58" height="46"/><rect x="132" y="188" width="70" height="46"/><rect x="210" y="188" width="64" height="46"/><rect x="282" y="188" width="66" height="46"/></g>
+          <rect x="246" y="78" width="32" height="54" fill="#2c6e6a"/>
+          <circle cx="214" cy="150" r="5" fill="#1e2a2a"/>
+          <text x="214" y="178" font-size="14" fill="#1e2a2a" text-anchor="middle" font-family="'Shinari Gothic',sans-serif">ポスト</text>
+          <rect x="12" y="188" width="86" height="44" fill="#f8f6f0" stroke="#1e2a2a" stroke-width="1.5"/>
+          <text x="55" y="215" font-size="16" fill="#1e2a2a" text-anchor="middle" font-family="'Shinari Gothic',sans-serif">灯町駅</text>
+          <text x="55" y="252" font-size="14" fill="#4f5a58" text-anchor="middle" font-family="'Shinari Gothic',sans-serif">北口</text>
+          <path d="M80 188 C 100 160 150 158 210 158 C 240 158 254 150 262 134" fill="none" stroke="#2c6e6a" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round"/>
+          <text x="262" y="66" font-size="17" fill="#2c6e6a" text-anchor="middle" font-family="'Shinari Gothic',sans-serif">しなり</text>
+          <text x="306" y="290" font-size="13" fill="#4f5a58" text-anchor="middle" font-family="'Shinari Gothic',sans-serif">商店街</text>
+        </svg>
+        <figcaption>地図は架空のものです。</figcaption>
+      </figure>
+      <figure class="access__door">
+        <img src="assets/img/door.webp" width="640" height="800" alt="木の扉と鉢植えのある入口" loading="lazy">
+        <figcaption>入口の木の扉</figcaption>
+      </figure>
+    <dl class="addr">
+      <div><dt>所在地</dt><dd>架空県灯町2丁目（番地は<span class="nw">【要確認】</span>）灯町商店街のなか</dd></div>
+      <div><dt>目印</dt><dd>郵便ポストの角から2軒先の木の扉</dd></div>
+      <div><dt>駐車場</dt><dd>ありません。近くの有料駐車場へ</dd></div>
+    </dl>
+    </div>
+    <p class="access__app"><a href="#access" data-sample-action="地図アプリで開く">地図アプリで開く（見本）</a></p>
+  </section>
+
+  <!-- 6. ほかに聞かれること：開いたままの問答 -->
   <section class="faq" id="faq" aria-labelledby="faq-title">
-    <h2 id="faq-title" class="ff-d">よく聞かれること。</h2>
-    <div class="faq__list">
-      <details><summary>何回くらい通えばいいですか？</summary><p>決まった回数はありません。次に来る目安をその都度お伝えし、来るかどうかはご自身で決めていただきます。</p></details>
-      <details><summary>着替えは必要ですか？</summary><p>要りません。普段の服のままで受けられます。</p></details>
-      <details><summary>痛いことはされませんか？</summary><p>強く押したり、音を鳴らしたりはしません。強さは途中でも変えられます。</p></details>
-      <details><summary>健康保険は使えますか？</summary><p>使えません。医療機関ではないため、すべて自費（上の料金表のとおり）です。</p></details>
-      <details><summary>当日でも予約できますか？</summary><p>空きがあれば受けられます。当日は電話で。Webの予約は前日までです。</p></details>
+    <div class="faq__head">
+      <p class="q">ほかに聞かれること</p>
+      <h2 id="faq-title"><span class="nw">電話で</span><span class="nw">よく聞かれる順に。</span></h2>
     </div>
+    <dl class="qa">
+      <div><dt>何回くらい通えばいいですか？</dt><dd>決まった回数はありません。次の目安をお伝えし、来るかどうかはご自身で決めていただきます。</dd></div>
+      <div><dt>痛いことはされませんか？</dt><dd>強く押したり、音を鳴らしたりはしません。強さは途中でも変えられます。</dd></div>
+      <div><dt>着替えは要りますか？</dt><dd>要りません。普段の服のままで受けられます。</dd></div>
+      <div><dt>何を持っていけばいいですか？</dt><dd>特にありません。問診は院で5問だけの用紙に書いていただきます。</dd></div>
+    </dl>
   </section>
 
-  <!-- 9. 予約 -->
+  <!-- 7. どう予約する？：電話 → Web → フォーム を上から順に -->
   <section class="reserve" id="reserve" aria-labelledby="reserve-title">
-    <div class="reserve__copy">
-      <h2 id="reserve-title" class="ff-d">予約は、電話かWebで。</h2>
-      <p>1回60分・初回5,500円。空き状況だけの電話も歓迎です。<span class="reserve__fine">（見本用の架空の設定）</span></p>
-      <div class="ways">
-        <div class="way">
-          <p><b class="ff-d">当日・すぐに確かめたい</b>電話で。施術中は出られないため、折り返します。</p>
-          <a class="btn btn--line" href="#reserve" data-sample-action="電話する">電話する（見本）</a>
-        </div>
-        <div class="way">
-          <p><b class="ff-d">前日までに日時を決めたい</b>Webで。空いている時間から選べます。</p>
-          <a class="btn btn--light" href="#reserve" data-sample-action="予約する">予約する（見本）</a>
-        </div>
-      </div>
-    </div>
     <figure class="reserve__photo">
       <img src="assets/img/towels.webp" width="1000" height="750" alt="木の棚にたたんで重ねた白と深い緑のタオル" loading="lazy">
     </figure>
+    <div class="reserve__body">
+      <p class="q">どう予約する？</p>
+      <h2 id="reserve-title"><span class="nw">当日は電話で。</span><span class="nw">前日まではWebかフォームで。</span></h2>
+      <ol class="ways">
+        <li class="way">
+          <p class="way__t">電話<small>当日・すぐ確かめたい</small></p>
+          <p class="way__d"><span class="nw"><span class="num way__tel">00-0000-0000</span>【要確認】</span><br>受付時間内に。施術中は折り返します。</p>
+          <a class="btn btn--line" href="#reserve" data-sample-action="電話する">電話する（見本）</a>
+        </li>
+        <li class="way">
+          <p class="way__t">Web予約<small>前日まで・空いている時間から選ぶ</small></p>
+          <a class="btn btn--rust" href="#reserve" data-sample-action="Webで予約する">Webで予約する（見本）</a>
+        </li>
+      </ol>
+      <form class="form" data-sample-form="フォームで送る" novalidate aria-labelledby="form-title">
+        <p class="way__t" id="form-title">フォーム<small>相談や、日時の候補を送る</small></p>
+        <div class="form__grid">
+          <div class="field">
+            <label for="f-name">お名前<span class="req">必須</span></label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+            <p class="field__err" id="e-name" hidden>お名前を入れてください。</p>
+          </div>
+          <div class="field">
+            <label for="f-contact">電話かメール<span class="req">必須</span></label>
+            <input id="f-contact" name="contact" type="text" autocomplete="email" inputmode="email" required aria-describedby="e-contact">
+            <p class="field__err" id="e-contact" hidden>電話番号かメールアドレスを入れてください。</p>
+          </div>
+          <div class="field">
+            <label for="f-when">希望の日時<span class="req">必須</span></label>
+            <input id="f-when" name="when" type="text" placeholder="例：11月12日（水）19時ごろ" required aria-describedby="e-when">
+            <p class="field__err" id="e-when" hidden>希望の日時か「未定」と入れてください。</p>
+          </div>
+          <div class="field">
+            <label for="f-where">気になる所<span class="opt">任意</span></label>
+            <input id="f-where" name="where" type="text" placeholder="例：右の肩と首">
+          </div>
+        </div>
+        <p class="form__privacy">いただいた内容は予約の連絡にだけ使い、ほかへ渡しません。保存の期間など個人情報の扱いは<span class="nw">【要確認】</span>。返信の目安も<span class="nw">【要確認】</span>。</p>
+        <div class="form__foot">
+          <button class="btn btn--rust" type="submit">この内容で送る（見本）</button>
+          <p class="form__status" data-form-status aria-live="polite">必須の3つを入れると送れます。</p>
+        </div>
+      </form>
+    </div>
   </section>
 </main>
 
 <footer class="site-foot">
   <a class="logo" href="#top" aria-label="からだを整える 整体 しなり（ページの先頭へ）">
-    <svg width="104" height="38" aria-hidden="true" focusable="false"><use href="#sn-logo"/></svg>
+    <svg width="96" height="35" aria-hidden="true" focusable="false"><use href="#sn-logo"/></svg>
   </a>
-  <div>
-    <p>からだを整える 整体 しなり（架空の事業）／架空県灯町2丁目 灯町商店街のなか</p>
-    <p>平日 11:00〜20:00・土曜 10:00〜17:00・日曜祝日休み（見本上の設定）</p>
-    <p class="fine">医療機関ではありません。病気の診断や治療は行いません。電話番号は見本のため載せていません。</p>
-  </div>
+  <dl class="foot__dl">
+    <div><dt>所在地</dt><dd><span class="nw">架空県灯町2丁目（番地は<span class="nw">【要確認】</span>）</span><span class="nw">灯町商店街のなか</span></dd></div>
+    <div><dt>電話</dt><dd><span class="nw"><span class="num">00-0000-0000</span>【要確認】</span></dd></div>
+    <div><dt>受付</dt><dd><span class="nw">平日 11:00〜20:00・</span><span class="nw">土曜 10:00〜17:00・</span><span class="nw">日曜祝日休み</span></dd></div>
+  </dl>
+  <p class="foot__fine">からだを整える 整体 しなり（架空の事業）。医療機関ではありません。</p>
 </footer>
 
 <div class="dock" aria-label="予約の窓口">
-  <a class="btn btn--ghost" href="#reserve" data-sample-action="電話する">電話（見本）</a>
-  <a class="btn" href="#reserve" data-sample-action="予約する">予約する（見本）</a>
+  <a class="btn btn--line" href="#reserve" data-sample-action="電話する">電話（見本）</a>
+  <a class="btn btn--rust" href="#reserve">予約の方法</a>
 </div>
 
 <aside class="ca-credit" aria-labelledby="ca-credit-title">

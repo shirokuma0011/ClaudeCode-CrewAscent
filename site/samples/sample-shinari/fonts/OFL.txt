@@ -1,5 +1,9 @@
-=== shipporimincho ===
-Copyright 2021 The Shippori Mincho Project Authors (https://github.com/fontdasu/ShipporiMincho)
+このフォルダの書体は SIL Open Font License 1.1 で配布されている書体を、このサイトで使う文字だけに絞ったものです。
+- shinari-sawarabi-400.woff2 : Sawarabi Gothic（Regular）
+- shinari-jost.woff2 : Jost（400〜500）
+
+===== Sawarabi Gothic =====
+Copyright 2016 The Sawarabi Gothic Project Authors.
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
@@ -93,8 +97,7 @@ DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
 
-
-=== jost ===
+===== Jost =====
 Copyright 2020 The Jost Project Authors (https://github.com/indestructible-type)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.

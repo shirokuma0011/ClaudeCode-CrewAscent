@@ -1,9 +1,14 @@
-=== lineseedjp ===
-© LY Corporation
+このフォルダの書体（カリモノ屋 見本で使う文字だけに絞ったサブセット）
+- karimono-bizudp-400.woff2 / karimono-bizudp-700.woff2 : BIZ UDPGothic Regular / Bold
+- karimono-redhatmono-500.woff2 : Red Hat Mono（wght 500 に固定）
+どちらも SIL Open Font License 1.1 で配布されています。以下にそれぞれのライセンス文を載せます。
+
+==================== BIZ UDPGothic ====================
+Copyright 2022 The BIZ UDGothic Project Authors (https://github.com/googlefonts/morisawa-biz-ud-mincho)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
-https://openfontlicense.org/
+https://scripts.sil.org/OFL
 
 
 -----------------------------------------------------------
@@ -19,7 +24,7 @@ with others.
 
 The OFL allows the licensed fonts to be used, studied, modified and
 redistributed freely as long as they are not sold by themselves. The
-fonts, including any derivative works, can be bundled, embedded,
+fonts, including any derivative works, can be bundled, embedded, 
 redistributed and/or sold with any software provided that any reserved
 names are not used by derivative works. The fonts and derivatives,
 however, cannot be released under any other type of license. The
@@ -93,13 +98,12 @@ DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
 
-
-=== jetbrainsmono ===
-Copyright 2020 The JetBrains Mono Project Authors (https://github.com/JetBrains/JetBrainsMono)
+==================== Red Hat Mono ====================
+Copyright 2024 The Red Hat Project Authors (https://github.com/RedHatOfficial/RedHatFont)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
-
-This license is copied below, and is also available with a FAQ at: https://scripts.sil.org/OFL
+This license is copied below, and is also available with a FAQ at:
+https://openfontlicense.org
 
 
 -----------------------------------------------------------
@@ -115,7 +119,7 @@ with others.
 
 The OFL allows the licensed fonts to be used, studied, modified and
 redistributed freely as long as they are not sold by themselves. The
-fonts, including any derivative works, can be bundled, embedded,
+fonts, including any derivative works, can be bundled, embedded, 
 redistributed and/or sold with any software provided that any reserved
 names are not used by derivative works. The fonts and derivatives,
 however, cannot be released under any other type of license. The

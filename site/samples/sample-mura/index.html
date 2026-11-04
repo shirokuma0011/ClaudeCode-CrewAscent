@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>傷とムラを残す革工房 ムラ｜植物なめしの革を手で縫う小物とオーダー（見本・架空）</title>
-<meta name="description" content="傷もしわも、その革の履歴として残す革工房です。植物なめしの一枚革を手で縫った名刺入れ・小銭入れ・ペンケースと、オーダーの流れ・期間・費用の考え方をこのページにまとめています（架空の事業の見本サイト）。">
+<meta name="description" content="傷もしわも、その革の履歴として残す革工房です。植物なめしの一枚革を2本の針で手縫いした名刺入れ・小銭入れ・ペンケース（税込9,900円〜）と、オーダー（型紙代5,500円〜・約6〜8週）のご案内（架空の事業の見本サイト）。">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="../../assets/brand/icon-32.png" sizes="32x32">
-<link rel="preload" href="fonts/mura-antique.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/mura-zenantique.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../_shared/crew-frame.css?v=20261015">
 <script defer src="../_shared/crew-frame.js?v=20261015"></script>
-<link rel="stylesheet" href="assets/mura.css?v=1">
+<link rel="stylesheet" href="assets/mura.css?v=2">
 <script>document.documentElement.classList.add('js');</script>
-<script defer src="assets/mura.js?v=1"></script>
+<script defer src="assets/mura.js?v=2"></script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ移動</a>
@@ -23,135 +23,155 @@
 </div>
 
 <header class="head">
-  <a class="logo" href="#top" aria-label="傷とムラを残す革工房 ムラ（ページの先頭へ）">
+  <a class="logo" href="index.html" aria-label="傷とムラを残す革工房 ムラ（工房のこと）">
     <span class="logo__name fd">ムラ</span>
     <span class="logo__sub">傷とムラを残す革工房</span>
   </a>
-  <nav class="head__nav" aria-label="ページ内の案内">
-    <a href="#make">つくるもの</a><a href="#idea">考え方</a><a href="#aging">変わり方</a><a href="#order">進め方と料金</a><a href="#contact">ご相談</a>
+  <nav class="nav" aria-label="サイトの案内">
+    <a href="index.html" aria-current="page">工房のこと<i class="fe">Atelier</i></a>
+    <a href="order.html">オーダーと料金<i class="fe">Order</i></a>
   </nav>
+  <a class="btn btn--s head__cta" href="order.html#consult">ご相談</a>
 </header>
 
 <main id="main">
-  <!-- 1. 最初の画面: 宣言を大きく。写真の左の明るい余白に重ねる -->
-  <section class="hero" id="top" aria-labelledby="hero-title">
-    <figure class="hero__photo">
-      <img src="assets/img/01-hero.webp" width="1536" height="864" alt="灰白の作業台の上の、傷とムラのある一枚革と、菱目打ち、針と糸" fetchpriority="high">
-      <figcaption>画像はAI生成のイメージです</figcaption>
+  <!-- 1. 最初の画面：写真を右へはみ出させ、宣言の2行目を写真に食い込ませる。写真には傷・しわ・ムラの注記 -->
+  <section class="hero" aria-labelledby="hero-title">
+    <p class="margin-note"><span>工房のこと</span><i class="fe">Atelier</i></p>
+    <figure class="hero__photo notes" data-notes>
+      <img src="assets/img/01-hero.webp" width="1536" height="864" alt="作業台に広げた、傷と色のムラが残る植物なめしの一枚革と、菱目打ち・針と糸" fetchpriority="high">
+      <button type="button" class="pin" style="--x:70%;--y:30%" aria-describedby="hn1"><span class="fe">1</span></button>
+      <button type="button" class="pin" style="--x:52%;--y:62%" aria-describedby="hn2"><span class="fe">2</span></button>
+      <button type="button" class="pin" style="--x:82%;--y:72%" aria-describedby="hn3"><span class="fe">3</span></button>
+      <figcaption class="ai-note">画像はAI生成のイメージです</figcaption>
     </figure>
+    <h1 id="hero-title" class="hero__title fd"><span class="ln">傷も、しわも、</span><span class="ln ln--cut">この革の<em>履歴</em>。</span></h1>
     <div class="hero__copy">
-      <h1 id="hero-title" class="fd"><span class="ln">傷も、</span><span class="ln">しわも、</span><span class="ln">この革の<em class="stitch-under">履歴</em>。</span></h1>
-      <p class="hero__what">植物なめしの革を、手で縫って小物にする工房です。</p>
+      <p class="hero__what">植物なめしの一枚革を、2本の針で手縫いする小物の工房です。傷のある場所も、避けずに裁って使います。</p>
+      <dl class="hero__price">
+        <div><dt>既製の小物</dt><dd><b class="fe">9,900</b>円〜<small>（税込）</small></dd></div>
+        <div><dt>オーダー</dt><dd>既製の値段＋型紙代 <b class="fe">5,500</b>円〜</dd></div>
+        <div><dt>期間</dt><dd><span class="nw">相談からお渡しまで、</span><span class="nw">約6〜8週</span></dd></div>
+      </dl>
       <div class="hero__act">
         <a class="btn" href="#idea">この考え方を読む</a>
-        <a class="btn btn--line" href="#contact">ご相談（オーダー）</a>
+        <a class="btn btn--line" href="order.html#consult">オーダーの相談</a>
       </div>
-      <dl class="hero__flow">
-        <div><dt>注文の流れ</dt><dd>相談 → 革を選ぶ → 縫う → お渡し（約6〜8週）</dd></div>
-        <div><dt>返信</dt><dd>2営業日以内。決めていない段階の相談もどうぞ</dd></div>
-      </dl>
+      <p class="hero__reply">返信は2営業日以内。何を作るか決める前の相談も受けています。</p>
     </div>
+    <ol class="legend hero__legend" aria-label="写真の注記">
+      <li id="hn1"><b class="fe">1</b><span><em>傷</em>牛が生きていたときの擦り傷。避けずに裁ちます</span></li>
+      <li id="hn2"><b class="fe">2</b><span><em>しわ</em>革の伸び縮みの跡。表面を塗り固めずに残します</span></li>
+      <li id="hn3"><b class="fe">3</b><span><em>ムラ</em>色の濃淡。使ううちに飴色の中へ沈みます</span></li>
+    </ol>
   </section>
 
-  <!-- 2. 何をする工房か: 革の表面（大）と、つくるもの3つ（自由な格子） -->
+  <!-- 2. つくるもの：大きな作品写真に品名と値段の注記。右上に革の表面の接写をはみ出させて重ねる -->
   <section class="make" id="make" aria-labelledby="make-title">
+    <div class="make__head">
+      <p class="eyebrow"><span>つくるもの</span><i class="fe">Goods</i></p>
+      <h2 id="make-title" class="fd">一枚革から、手のひらの<em>道具</em>を3つ。</h2>
+      <p>名刺入れ・小銭入れ・ペンケース。どれも同じ一枚の革から裁つので、傷の入り方と色は一点ずつ違います。</p>
+    </div>
     <figure class="make__surface">
-      <img src="assets/img/02-surface.webp" width="1024" height="1024" alt="植物なめし革の表面の接写、しわと毛穴と小さな傷" loading="lazy">
+      <img src="assets/img/02-surface.webp" width="1024" height="1024" alt="植物なめし革の表面の接写。細かいしわと毛穴、小さな傷" loading="lazy">
       <figcaption>使う革の表面。しわ・毛穴・小さな傷は、そのままにします。</figcaption>
     </figure>
-    <div class="make__body">
-      <p class="label"><span class="no">01</span>つくるもの</p>
-      <h2 id="make-title" class="fd">一枚革から、<br>手のひらの道具を3つ。</h2>
-      <img class="make__works" src="assets/img/04-works.webp" width="1200" height="900" alt="灰白の台の上に並ぶ革の名刺入れ、小銭入れ、ペンケース" loading="lazy">
-      <ul class="goods">
-        <li><span class="goods__n">名刺入れ</span><span class="goods__p"><b class="fd">14,300</b>円〜</span></li>
-        <li><span class="goods__n">小銭入れ</span><span class="goods__p"><b class="fd">12,100</b>円〜</span></li>
-        <li><span class="goods__n">ペンケース</span><span class="goods__p"><b class="fd">9,900</b>円〜</span></li>
-      </ul>
-      <p class="fine">既製の品の値段。税込・見本用の架空価格です。</p>
+    <figure class="make__works notes" data-notes>
+      <img src="assets/img/04-works.webp" width="1200" height="900" alt="作業台に並ぶ、革の名刺入れ・小銭入れ・ペンケース" loading="lazy">
+      <button type="button" class="pin" style="--x:22%;--y:46%" aria-describedby="g1"><span class="fe">a</span></button>
+      <button type="button" class="pin" style="--x:50%;--y:46%" aria-describedby="g2"><span class="fe">b</span></button>
+      <button type="button" class="pin" style="--x:80%;--y:44%" aria-describedby="g3"><span class="fe">c</span></button>
+    </figure>
+    <div class="make__list">
+      <p class="make__rule">値段はすべて税込。仕立ては3品とも、植物なめしの牛革を2本の針で手縫いし、切り口を蜜蝋で磨きます。</p>
+      <ol class="goods">
+        <li id="g1"><b class="fe">a</b><span class="goods__n">名刺入れ</span><span class="goods__p"><b class="fe">14,300</b>円〜</span></li>
+        <li id="g2"><b class="fe">b</b><span class="goods__n">小銭入れ</span><span class="goods__p"><b class="fe">12,100</b>円〜</span></li>
+        <li id="g3"><b class="fe">c</b><span class="goods__n">ペンケース</span><span class="goods__p"><b class="fe">9,900</b>円〜</span></li>
+      </ol>
+      <p class="fine">寸法・いまある色は【要確認】。大きさを変えたいときはオーダーで承ります。</p>
     </div>
   </section>
 
-  <!-- 3. 考え方と制作の背景: 縫いかけの革の写真を背景に、右に文章 -->
+  <!-- 3. 考え方：縫いかけの写真を左へはみ出させ、工程の注記を写真に打つ。文章は右上にずらす -->
   <section class="idea" id="idea" aria-labelledby="idea-title">
-    <img class="idea__bg" src="assets/img/03-stitch.webp" width="1536" height="1024" alt="木のクランプに挟まれた縫いかけの革と、針と糸" loading="lazy">
-    <div class="idea__panel">
-      <p class="label"><span class="no">02</span>考え方</p>
-      <h2 id="idea-title" class="fd">傷を避けて、<br>裁たない。</h2>
-      <p>牛が生きていたときの傷や、しわ、色のムラ。多くの工房は、それを避けて革を裁ちます。ムラでは、傷のある場所も使います。一枚の革を無駄にしないためと、使う人のものになってから増える傷と、同じものだと考えているからです。</p>
-      <ol class="hand">
-        <li><b class="fd">i</b><span>菱目打ちで、縫い穴を一つずつ開ける</span></li>
-        <li><b class="fd">ii</b><span>2本の針で、ひと針ずつ手で縫う</span></li>
-        <li><b class="fd">iii</b><span>切り口を磨いて、蜜蝋で仕上げる</span></li>
+    <figure class="idea__photo notes" data-notes>
+      <img src="assets/img/03-stitch.webp" width="1536" height="1024" alt="木のクランプに挟まれた縫いかけの革と、2本の針と糸" loading="lazy">
+      <button type="button" class="pin" style="--x:58%;--y:30%" aria-describedby="s1"><span class="fe">i</span></button>
+      <button type="button" class="pin" style="--x:46%;--y:56%" aria-describedby="s2"><span class="fe">ii</span></button>
+      <button type="button" class="pin" style="--x:30%;--y:78%" aria-describedby="s3"><span class="fe">iii</span></button>
+    </figure>
+    <div class="idea__body">
+      <p class="eyebrow"><span>考え方</span><i class="fe">Idea</i></p>
+      <h2 id="idea-title" class="fd">傷を<em>避けて</em>、裁たない。</h2>
+      <p>生きていたときの傷や、しわ、色のムラ。多くの工房は、それを避けて革を裁ちます。ムラでは、傷のある場所も使います。一枚の革を無駄にしないためと、使う人の手に渡ってから増える傷と、同じものだと考えているからです。</p>
+      <ol class="legend legend--steps" aria-label="手縫いの3つの工程（写真の注記）">
+        <li id="s1"><b class="fe">i</b><span><em>穴を開ける</em>菱目打ちで、縫い穴を一つずつ開けます</span></li>
+        <li id="s2"><b class="fe">ii</b><span><em>縫う</em>2本の針で、ひと針ずつ手で縫います</span></li>
+        <li id="s3"><b class="fe">iii</b><span><em>磨く</em>切り口を磨いて、蜜蝋で仕上げます</span></li>
       </ol>
       <p class="idea__note">傷の位置は一点ずつ違います。気になる傷があれば、裁つ前に写真でお見せします。</p>
     </div>
   </section>
 
-  <!-- 4. 他と比べたときの違い: 新しいものと使い込んだものを並べる -->
+  <!-- 4. 変わり方：写真が主役の濃い章。全幅の写真の右下に、生成りの面をずらして重ねる -->
   <section class="aging" id="aging" aria-labelledby="aging-title">
     <figure class="aging__photo">
-      <img src="assets/img/05-aging.webp" width="1536" height="1024" alt="新しい薄茶の名刺入れと、数年使って飴色になった同じ形の名刺入れ" loading="lazy">
+      <img src="assets/img/05-aging.webp" width="1536" height="1024" alt="新しい薄茶の名刺入れ（左）と、数年使って飴色になった同じ形の名刺入れ（右）" loading="lazy">
       <figcaption><span>新しいもの</span><span>数年使ったもの</span></figcaption>
     </figure>
-    <div class="aging__body">
-      <p class="label"><span class="no">03</span>変わり方</p>
-      <h2 id="aging-title" class="fd">新しいときが、<br>いちばん白い。</h2>
+    <div class="aging__plate">
+      <p class="eyebrow"><span>変わり方</span><i class="fe">Aging</i></p>
+      <h2 id="aging-title" class="fd">新しいときが、いちばん<em>淡い</em>。</h2>
       <p>植物なめしの革は、手の脂と日の光で、薄茶から飴色へ深くなります。表面を塗り固めていないので、傷も艶の中に沈んでいきます。</p>
+    </div>
+    <div class="aging__tone">
       <div class="tone" role="img" aria-label="色の変わり方の目安。新しいときは薄茶、1年ほどで茶色、3年ほどで飴色">
         <div class="tone__bar"></div>
         <div class="tone__ticks"><span>新しいとき</span><span>1年</span><span>3年</span></div>
       </div>
-      <p class="fine">変わり方は使い方と環境で大きく違います。目安としてご覧ください。</p>
-      <a class="btn btn--line aging__cta" href="#contact">ご相談（オーダー）</a>
+      <p class="fine">色の目安です。変わり方は、使い方と置き場所で大きく違います。</p>
     </div>
   </section>
 
-  <!-- 5. 進め方と料金（牛血色の章） -->
+  <!-- 5. オーダーと相談：素直な縦の流れ（明るい面）。左に入口、右に2つの窓口 -->
   <section class="order" id="order" aria-labelledby="order-title">
-    <div class="order__in">
-      <div class="order__head">
-        <p class="label label--on"><span class="no">04</span>進め方と料金</p>
-        <h2 id="order-title" class="fd">オーダーは、<br>約6〜8週間。</h2>
-        <p>大きさや仕切りを変えたいとき、手持ちの道具に合わせたいときは、オーダーで。費用は、既製の品の値段に、型紙を起こす費用を足して考えます。</p>
-        <dl class="cost">
-          <div><dt>オーダーの費用</dt><dd>既製の値段＋型紙代 <b class="fd">5,500</b>円〜</dd></div>
-          <div><dt>お支払い</dt><dd>型紙が決まったときに半額、お渡しのときに残り</dd></div>
-        </dl>
-        <p class="order__fine">税込・見本用の架空価格です。</p>
-      </div>
-      <ol class="weeks">
-        <li><span class="weeks__w fd">1週目</span><h3>相談</h3><p>フォームか工房で。使い方と、入れたいものを聞きます</p></li>
-        <li><span class="weeks__w fd">2週目</span><h3>革を選ぶ・見積もり</h3><p>革の色と傷の位置を見て、型紙と見積もりを決めます</p></li>
-        <li><span class="weeks__w fd">3〜7週目</span><h3>裁つ・縫う</h3><p>途中の写真を1回お送りします</p></li>
-        <li><span class="weeks__w fd">8週目まで</span><h3>お渡し</h3><p>工房で受け取るか、送ります（送料は実費）</p></li>
-      </ol>
+    <div class="order__head">
+      <p class="eyebrow"><span>オーダーと相談</span><i class="fe">Order</i></p>
+      <h2 id="order-title" class="fd">作る前に、<em>話</em>を聞かせてください。</h2>
+      <p>大きさや仕切りを変えたいとき、手持ちの道具に合わせたいときは、オーダーで。週ごとの進め方と、品ごとの値段は、次のページにまとめています。</p>
+      <a class="more" href="order.html">オーダーの進め方と料金を詳しく見る</a>
     </div>
-  </section>
-
-  <!-- 6. 問い合わせの方法 -->
-  <section class="contact" id="contact" aria-labelledby="contact-title">
-    <h2 id="contact-title" class="fd">相談は、<br>決める前で構いません。</h2>
-    <div class="contact__rows">
-      <div class="contact__row">
-        <h3>オーダーの相談</h3>
+    <div class="ways">
+      <div class="way">
+        <h3>オーダー・既製の品の相談</h3>
         <p>フォームから。作りたいものの写真や、手持ちの道具の寸法があると話が早く進みます。返信は2営業日以内です。</p>
-        <a class="btn" href="#contact" data-sample-action="オーダーの相談">ご相談（オーダー）</a>
+        <a class="btn" href="order.html#consult">オーダーの相談</a>
       </div>
-      <div class="contact__row">
-        <h3>工房に来るとき</h3>
+      <div class="way">
+        <h3>工房で革を選ぶ</h3>
         <p>土・日の13:00〜17:00、予約制です。革を手に取って選べます。作業中のため、予約のない日はお応えできません。</p>
-        <a class="btn btn--line" href="#contact" data-sample-action="工房に来る予約">工房に来る予約</a>
+        <a class="btn btn--line" href="order.html?k=visit#consult">工房に来る予約</a>
       </div>
     </div>
-    <p class="contact__back"><a href="#idea">この考え方を、もう一度読む</a></p>
-    <p class="fine">所在地は、見本のため載せていません。</p>
   </section>
 </main>
 
 <footer class="foot">
-  <p class="foot__name fd">ムラ</p>
-  <p>傷とムラを残す革工房（架空の事業）／工房の見学は土・日 13:00〜17:00 予約制（見本上の設定）</p>
+  <div class="foot__in">
+    <p class="foot__name"><span class="fd">ムラ</span>傷とムラを残す革工房（架空）</p>
+    <dl class="foot__info">
+      <div><dt>所在地</dt><dd>〒000-0000 風見坂市 北町2-8【要確認】</dd></div>
+      <div><dt>連絡先</dt><dd>atelier@mura.example（ご相談はフォームから）</dd></div>
+      <div><dt>工房</dt><dd>土・日 13:00〜17:00（予約制）</dd></div>
+    </dl>
+    <nav class="foot__nav" aria-label="フッターの案内">
+      <a href="index.html" aria-current="page">工房のこと</a>
+      <a href="order.html">オーダーと料金</a>
+      <a href="order.html#consult">ご相談</a>
+    </nav>
+  </div>
 </footer>
 
 <aside class="ca-credit" aria-labelledby="ca-credit-title">
@@ -163,7 +183,7 @@
     <a class="ca-btn" href="design-notes.html">この見本の設計メモ</a>
     <a class="ca-link" href="../../works.html">見本サイトの一覧</a>
   </div>
-  <p class="ca-credit__fine">TOPページのみの見本です。見本の規模は参考で、特定のプランをおすすめするものではありません。</p>
+  <p class="ca-credit__fine">TOPページと下層1ページ（オーダーの進め方と料金）の見本です。見本の規模は参考で、特定のプランをおすすめするものではありません。</p>
   <a class="ca-credit__brand" href="../../index.html"><img src="../../assets/brand/logo.webp" width="360" height="278" alt="">クルーアセント（CREW ASCENT）</a>
 </aside>
 

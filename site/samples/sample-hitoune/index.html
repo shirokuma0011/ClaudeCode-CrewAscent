@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>朝どり野菜の農園と直売所 ひとうね農園｜野菜箱1,800円から・予約なしでも買えます（見本・架空）</title>
-<meta name="description" content="朝とった野菜を、その日のうちに直売所に並べる農園です。直売所・予約の野菜箱・飲食店向けの3つの買い方と値段、今週の野菜と営業日をこのページで確かめられます（架空の事業の見本サイト）。">
+<title>朝どり野菜の農園と直売所 ひとうね農園｜今週の野菜と3つの買い方（見本・架空）</title>
+<meta name="description" content="朝とった野菜を、その日のうちに県道沿いの直売所に並べる農園です。今週の野菜と値段、直売所・予約の野菜箱・飲食店向けの3つの買い方、営業日をこのページで確かめられます（架空の事業の見本サイト）。">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="../../assets/brand/icon-32.png" sizes="32x32">
-<link rel="preload" href="fonts/hitoune-sawarabi-mincho.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/hitoune-klee-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../_shared/crew-frame.css?v=20261015">
 <script defer src="../_shared/crew-frame.js?v=20261015"></script>
-<link rel="stylesheet" href="assets/hitoune.css?v=1">
+<link rel="stylesheet" href="assets/hitoune.css?v=3">
 <script>document.documentElement.classList.add('js');</script>
-<script defer src="assets/hitoune.js?v=1"></script>
+<script defer src="assets/hitoune.js?v=3"></script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ移動</a>
@@ -24,7 +24,6 @@
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
-    <!-- 署名モチーフ「畝の波線」: ゆるい平行の波線 -->
     <symbol id="hu-une" viewBox="0 0 600 24" preserveAspectRatio="none">
       <path d="M0 6 C 50 1 100 1 150 6 S 250 11 300 6 S 400 1 450 6 S 550 11 600 6" fill="none" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"/>
       <path d="M0 16 C 50 11 100 11 150 16 S 250 21 300 16 S 400 11 450 16 S 550 21 600 16" fill="none" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"/>
@@ -32,199 +31,231 @@
     <symbol id="hu-mark" viewBox="0 0 40 40">
       <path d="M4 30 C 12 25 28 25 36 30" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
       <path d="M4 22 C 12 17 28 17 36 22" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-      <path d="M20 16 C 20 10 23 6 30 4 C 29 11 25 14 20 16 Z M20 16 C 19 11 16 8 10 7 C 11 12 15 15 20 16 Z" fill="#7cb518"/>
+      <path d="M20 16 C 20 10 23 6 30 4 C 29 11 25 14 20 16 Z M20 16 C 19 11 16 8 10 7 C 11 12 15 15 20 16 Z" fill="#6f9a2c"/>
     </symbol>
   </defs>
 </svg>
 
 <header class="head">
-  <a class="logo" href="#top" aria-label="朝どり野菜の農園と直売所 ひとうね農園（ページの先頭へ）">
-    <svg width="36" height="36" aria-hidden="true" focusable="false"><use href="#hu-mark"/></svg>
-    <span class="logo__name fd">ひとうね農園</span>
+  <a class="logo" href="index.html" aria-label="ひとうね農園（トップ）">
+    <svg width="34" height="34" aria-hidden="true" focusable="false"><use href="#hu-mark"/></svg>
+    <span class="logo__name">ひとうね農園</span>
     <span class="logo__sub">朝どり野菜の農園と直売所</span>
   </a>
-  <nav class="head__nav" aria-label="ページ内の案内">
-    <a href="#idea">考え方</a><a href="#buy">買い方と値段</a><a href="#week">今週の野菜</a><a href="#contact">問い合わせ</a>
+  <nav class="head__nav" aria-label="ページの案内">
+    <a href="index.html" aria-current="page">トップ</a>
+    <a href="box.html">野菜箱と予約</a>
   </nav>
-  <a class="btn btn--head" href="#contact" data-sample-action="まず相談する">まず相談する</a>
+  <a class="btn btn--head" href="box.html#form">まず相談する</a>
 </header>
 
+<!-- 道しるべ「黒板の日付」: 全ページ同じ日に書き換える -->
+<div class="slate">
+  <p class="slate__date"><time class="num" datetime="2026-11-01">11.1</time><span>（日）に書いた、今週の黒板</span></p>
+  <p class="slate__today" data-today>直売所は 水〜日 <span class="num">8:30</span> から</p>
+</div>
+
 <main id="main">
-  <!-- 1. 最初の画面: 朝の直売所の写真を全面に、左の明るい余白に見出し -->
-  <section class="hero" id="top" aria-labelledby="hero-title">
-    <figure class="hero__photo">
+  <!-- 1. 最初の画面: 全幅の朝の写真 ＋ その下端に立てた「今週の野菜」の黒板 -->
+  <section class="fv" aria-labelledby="fv-title">
+    <figure class="fv__photo">
       <img src="assets/img/01-hero.webp" width="1536" height="864" alt="朝の光が差す直売所の木の台に並ぶトマト、きゅうり、なす、葉物の木箱" fetchpriority="high">
       <figcaption>画像はAI生成のイメージです</figcaption>
     </figure>
-    <div class="hero__copy">
-      <p class="hero__place">県道沿いの直売所・水〜日 8:30から</p>
-      <h1 id="hero-title" class="fd"><span class="nw">朝の畑から、</span><br><span class="nw">その日の台所へ。</span></h1>
-      <p class="hero__lead">季節の野菜を朝にとって、その日のうちに直売所へ並べます。予約の野菜箱と、近くの飲食店への配達もしています。</p>
-      <ul class="hero__ways" aria-label="3つの買い方と値段の入口">
-        <li><span>直売所</span><b class="fd">1袋150円〜</b></li>
-        <li><span>予約の野菜箱</span><b class="fd">1,800円〜</b></li>
-        <li><span>飲食店向け</span><b class="fd">相談して決定</b></li>
-      </ul>
-      <div class="hero__act">
-        <a class="btn" href="#contact" data-sample-action="まず相談する">まず相談する</a>
-        <a class="more" href="#buy">サービスを見る</a>
+    <div class="fv__copy">
+      <p class="fv__place">県道沿いの直売所と畑</p>
+      <h1 id="fv-title"><span class="nw">朝の畑から、</span><br><span class="nw">その日の台所へ。</span></h1>
+      <p class="fv__lead">朝にとった季節の野菜を、その日のうちに直売所へ並べる<span class="nw">農園です。</span></p>
+      <div class="fv__act">
+        <a class="btn" href="box.html#form" data-fv-cta>まず相談する</a>
+        <a class="more" href="box.html">野菜箱と予約を見る</a>
       </div>
-      <p class="hero__note">返信は翌営業日までに。<b>予約しなくても、直売所ではそのまま買えます。</b>何を頼むか決めていなくても大丈夫です。<span class="fine">価格は税込・見本用の架空価格</span></p>
+      <p class="fv__note">返信は翌営業日までに。決めていなくても送れます。</p>
     </div>
-    <!-- 裏づけ: けさの段取り（時系列） -->
-    <div class="morning" aria-labelledby="morning-title">
-      <h2 id="morning-title" class="morning__t fd">けさの段取り</h2>
-      <ol class="morning__line">
-        <li><time class="fd">5:30</time><span>畑でとる</span></li>
-        <li><time class="fd">7:00</time><span>洗って袋に</span></li>
-        <li><time class="fd">8:30</time><span>直売所に並べる</span></li>
-        <li><time class="fd">13:00<small>ごろ</small></time><span>売り切れたら閉店</span></li>
-      </ol>
+
+    <div class="board" id="week" aria-labelledby="week-title">
+      <div class="board__head">
+        <h2 id="week-title">今週の野菜</h2>
+        <p class="board__date"><time class="num" datetime="2026-11-01">11.1</time> 書き換え</p>
+        <dl class="board__ways" aria-label="3つの買い方と値段（税込）">
+          <div><dt>直売所<small>予約なし</small></dt><dd><span class="num">1</span>袋 <b class="num">150</b>円〜</dd></div>
+          <div><dt>野菜箱</dt><dd><b class="num">1,800</b>円〜</dd></div>
+          <div><dt>飲食店向け</dt><dd>見積もり無料</dd></div>
+        </dl>
+        <p class="board__tax">値段はすべて税込</p>
+      </div>
+      <ul class="board__list">
+        <li style="--veg:#efeadb"><span class="v">大根</span><span class="q q--many">たっぷり</span><span class="p"><span class="u">1本</span><span><b class="num">150</b>円</span></span></li>
+        <li style="--veg:#e9d3dc"><span class="v">かぶ</span><span class="q q--many">たっぷり</span><span class="p"><span class="u">1袋</span><span><b class="num">200</b>円</span></span></li>
+        <li style="--veg:#d6e3b4"><span class="v">白菜</span><span class="q q--few">少なめ</span><span class="p"><span class="u">半分</span><span><b class="num">180</b>円</span></span></li>
+        <li style="--veg:#8fbf5a"><span class="v">ほうれん草</span><span class="q q--many">たっぷり</span><span class="p"><span class="u">1袋</span><span><b class="num">180</b>円</span></span></li>
+        <li style="--veg:#a7c96b"><span class="v">春菊</span><span class="q q--few">少なめ</span><span class="p"><span class="u">1袋</span><span><b class="num">180</b>円</span></span></li>
+        <li style="--veg:#c07a92"><span class="v">さつまいも</span><span class="q q--weigh">量り売り</span><span class="p"><span class="u"><span class="num">100</span>g</span><span><b class="num">50</b>円</span></span></li>
+        <li style="--veg:#b8987a"><span class="v">里芋</span><span class="q q--weigh">量り売り</span><span class="p"><span class="u"><span class="num">100</span>g</span><span><b class="num">60</b>円</span></span></li>
+        <li style="--veg:#e2675f"><span class="v">ミニトマト</span><span class="q q--last">今週まで</span><span class="p"><span class="u">1パック</span><span><b class="num">250</b>円</span></span></li>
+      </ul>
+      <p class="board__foot">野菜箱は、この週の野菜から詰めます。<a href="box.html#sizes">箱の大きさを見る</a></p>
     </div>
   </section>
 
-  <!-- 2. この農園の考え方: 21:9 の畑の帯に一文 -->
+  <!-- 2. この農園の考え方: 21:9 の畑の帯 ＋ 帯に差しかかる紙の一文 -->
   <section class="idea" id="idea" aria-labelledby="idea-title">
     <div class="idea__band">
       <img src="assets/img/02-field.webp" width="2016" height="864" alt="朝もやの残る畑の畝が、遠くまで平行に続く" loading="lazy">
-      <h2 id="idea-title" class="fd"><span class="nw">とれた分だけ、</span><br><span class="nw">並べます。</span></h2>
     </div>
-    <div class="idea__body">
-      <p class="idea__lead">こう考えています。前の日にとった野菜を冷蔵庫で待たせることはしません。朝とった分が売り切れたら、その日はおしまいです。</p>
+    <div class="idea__in">
+      <div class="idea__note">
+        <p class="kicker">この農園の考え方</p>
+        <h2 id="idea-title">とれた分だけ、並べます。</h2>
+        <p>こう考えています。前の日にとった野菜を、冷蔵庫で待たせることはしません。朝とった分が売り切れたら、その日はおしまいです。</p>
+      </div>
       <dl class="idea__facts">
-        <div><dt>畑の広さ</dt><dd><b class="fd">1.2</b>ha</dd></div>
-        <div><dt>1年に育てる野菜</dt><dd><b class="fd">約40</b>種類</dd></div>
-        <div><dt>ふぞろいの野菜</dt><dd>味が同じなら<br>同じ値段で</dd></div>
+        <div><dt>畑の広さ</dt><dd><b class="num">1.2</b>ha</dd></div>
+        <div><dt>1年に育てる野菜</dt><dd>約<b class="num">40</b>種類</dd></div>
+        <div><dt>ふぞろいの野菜</dt><dd class="idea__words">味が同じなら、<br>同じ値段で</dd></div>
       </dl>
-      <p class="fine idea__fine">数値は見本上の設定です。</p>
     </div>
   </section>
 
-  <!-- 3. 買い方と値段の考え方 -->
-  <section class="buy" id="buy" aria-labelledby="buy-title">
-    <div class="sec-head">
-      <h2 id="buy-title" class="fd">買い方は、3つ。</h2>
-      <p>来て選ぶか、箱で受け取るか、店に届けるか。すべて税込・見本用の架空価格です。</p>
-    </div>
-    <div class="buy__grid">
-      <article class="way way--box" aria-labelledby="way-box">
-        <img src="assets/img/03-box.webp" width="1200" height="900" alt="木箱に詰めた季節の野菜を真上から" loading="lazy">
-        <div class="way__body">
-          <p class="way__tag">予約</p>
-          <h3 id="way-box" class="fd">野菜箱</h3>
-          <ul class="sizes">
-            <li><span>小箱<small>6〜7品・2人分の目安</small></span><b class="fd">1,800<small>円</small></b></li>
-            <li><span>大箱<small>9〜10品・4人分の目安</small></span><b class="fd">2,800<small>円</small></b></li>
-          </ul>
-          <p class="way__how"><b>中身の決まり方</b>その週にとれたものから詰めます。直売所で同じものを買う合計より、1割ほど安くなるように組みます。</p>
-          <p class="way__how"><b>受け取り</b>金曜までの予約で、土曜に直売所で。車で15分圏内は配達もできます（＋300円）。</p>
-        </div>
-      </article>
-      <article class="way way--stand" aria-labelledby="way-stand">
-        <img src="assets/img/04-stand.webp" width="1536" height="1024" alt="小さな木の小屋の直売所の軒先、木の棚、かご、量り" loading="lazy">
-        <div class="way__body">
-          <p class="way__tag">予約なし</p>
-          <h3 id="way-stand" class="fd">直売所で買う</h3>
-          <p>袋売りは<b class="num fd">1袋150円〜</b>。いも類と玉ねぎは量り売りもします。8:30から、売り切れまで。</p>
-        </div>
-      </article>
-      <article class="way way--shop" aria-labelledby="way-shop">
-        <div class="way__body">
-          <p class="way__tag">相談</p>
-          <h3 id="way-shop" class="fd">飲食店向け</h3>
-          <p>週2回（水・土）の朝に配達します。品目と量は、とれ具合を見ながら相談して決めます。見積もりは無料です。</p>
-        </div>
-        <svg class="way__une" aria-hidden="true" focusable="false"><use href="#hu-une"/></svg>
-      </article>
-    </div>
-  </section>
-
-  <!-- 4. 他と比べたときの違い: とってから並ぶまでの時間（時系列）と洗い方 -->
-  <section class="diff" id="diff" aria-labelledby="diff-title">
-    <div class="diff__text">
-      <h2 id="diff-title" class="fd"><span class="nw">とってから並ぶまで、</span><br><span class="nw">約<span class="big">3</span>時間。</span></h2>
-      <div class="clock" aria-hidden="true">
-        <div class="clock__bar"><span class="clock__fill"></span></div>
-        <div class="clock__ticks"><span>5時</span><span>6時</span><span>7時</span><span>8時</span><span>9時</span></div>
+  <!-- 3. 他と比べたときの違い: 収穫から店頭までの時刻の帯 -->
+  <section class="route" id="route" aria-labelledby="route-title">
+    <div class="route__grid" data-route>
+      <div class="route__head">
+        <p class="kicker">ほかの売り場との違い</p>
+        <h2 id="route-title"><span class="nw">とってから並ぶまで、</span><br><span class="nw">約<span class="num">3</span>時間。</span></h2>
       </div>
-      <p>市場を通さず、畑から直売所まで自分たちで運びます。そのため、朝とったものを、その日の朝のうちに並べられます。</p>
-      <h3 class="diff__h fd">洗い方</h3>
-      <p>根の野菜は、井戸水で土を落とすだけ。葉物は冷たい水にくぐらせてから袋に入れます。洗剤は使いません。</p>
-    </div>
-    <figure class="diff__photo">
-      <img src="assets/img/05-wash.webp" width="1200" height="900" alt="ステンレスの流しの水に浮かぶ大根とかぶ" loading="lazy">
-    </figure>
-    <div class="diff__cta">
-      <p>野菜箱の予約と、飲食店のご相談はこちらから。<span>決めていない段階でも、返信は翌営業日までに。</span></p>
-      <a class="btn" href="#contact" data-sample-action="まず相談する">まず相談する</a>
-    </div>
-  </section>
-
-  <!-- 5. 今週の野菜と営業日 -->
-  <section class="week" id="week" aria-labelledby="week-title">
-    <div class="week__head">
-      <h2 id="week-title" class="fd">今週の野菜</h2>
-      <p class="week__date"><time datetime="2026-11-01">11月1日（日）</time>更新・見本上の一覧です</p>
-    </div>
-    <ul class="crops">
-      <li class="is-pick"><span class="crops__n fd">大根</span><span class="crops__s">たっぷり</span><span class="crops__p">1本 150円</span><em class="pick">今週のおすすめ</em></li>
-      <li><span class="crops__n fd">かぶ</span><span class="crops__s">たっぷり</span><span class="crops__p">1袋 200円</span></li>
-      <li><span class="crops__n fd">白菜</span><span class="crops__s">少なめ</span><span class="crops__p">半分 180円</span></li>
-      <li><span class="crops__n fd">ほうれん草</span><span class="crops__s">たっぷり</span><span class="crops__p">1袋 180円</span></li>
-      <li><span class="crops__n fd">春菊</span><span class="crops__s">少なめ</span><span class="crops__p">1袋 180円</span></li>
-      <li><span class="crops__n fd">さつまいも</span><span class="crops__s">量り売り</span><span class="crops__p">100g 50円</span></li>
-      <li><span class="crops__n fd">里芋</span><span class="crops__s">量り売り</span><span class="crops__p">100g 60円</span></li>
-      <li><span class="crops__n fd">ミニトマト</span><span class="crops__s">今週まで</span><span class="crops__p">1パック 250円</span></li>
-    </ul>
-    <div class="days">
-      <h3 class="fd">営業日</h3>
-      <ol class="days__row" aria-label="曜日ごとの営業">
-        <li data-day="1" class="is-off"><b>月</b>休み</li>
-        <li data-day="2" class="is-off"><b>火</b>休み</li>
-        <li data-day="3"><b>水</b>8:30〜</li>
-        <li data-day="4"><b>木</b>8:30〜</li>
-        <li data-day="5"><b>金</b>8:30〜</li>
-        <li data-day="6"><b>土</b>8:30〜</li>
-        <li data-day="0"><b>日</b>8:30〜</li>
-      </ol>
-      <p>売り切れたら閉店します（13時ごろが目安）。雨の日も開けます。</p>
+      <p class="route__why">市場を通さず、畑から直売所まで自分たちで運びます。だから、朝とったものを、その日の朝のうちに並べられます。</p>
+      <div class="route__rail" aria-hidden="true"><span class="route__fill"></span></div>
+      <article class="stop stop--1">
+        <span class="stop__ph"><img src="assets/img/02-field.webp" width="2016" height="864" alt="朝もやの残る畑の畝" loading="lazy"></span>
+        <p class="stop__t"><time class="num">5:30</time><span>畑でとる</span></p>
+        <p>その日に並べる分を、朝のうちにとります。</p>
+      </article>
+      <article class="stop stop--2">
+        <span class="stop__ph"><img src="assets/img/05-wash.webp" width="1200" height="900" alt="ステンレスの流しの水に浮かぶ大根とかぶ" loading="lazy"></span>
+        <p class="stop__t"><time class="num">7:00</time><span>井戸水で洗う</span></p>
+        <p>根の野菜は、井戸水で土を落とすだけ。葉物は冷たい水にくぐらせてから袋に入れます。洗剤は使いません。</p>
+      </article>
+      <article class="stop stop--3">
+        <span class="stop__ph"><img src="assets/img/04-stand.webp" width="1536" height="1024" alt="小さな木の小屋の直売所の軒先、木の棚、かご、量り" loading="lazy"></span>
+        <p class="stop__t"><time class="num">8:30</time><span>直売所に並べる</span></p>
+        <p>棚に並べて、店を開けます。</p>
+      </article>
     </div>
   </section>
 
-  <!-- 6. 問い合わせの方法 -->
-  <section class="contact" id="contact" aria-labelledby="contact-title">
-    <div class="contact__in">
-      <h2 id="contact-title" class="fd"><span class="nw">まず、</span><span class="nw">ご相談ください。</span></h2>
-      <p class="contact__lead">野菜箱の予約も、飲食店の相談も、同じ窓口です。返信は翌営業日まで。直売所での買い物は予約なしでどうぞ。</p>
-      <div class="contact__ways">
-        <div>
-          <h3>予約・相談のフォーム</h3>
-          <p>野菜箱の大きさと受け取り日、または店名と欲しい品目を。決まっていなくても送れます。</p>
-          <a class="btn" href="#contact" data-sample-action="予約・相談のフォーム">まず相談する</a>
-        </div>
-        <div>
-          <h3>電話</h3>
-          <p>水〜日の 8:00〜12:00。畑に出ている時間は、折り返します。</p>
-          <a class="btn btn--line" href="#contact" data-sample-action="電話する">電話する</a>
-        </div>
-        <div>
-          <h3>駐車場</h3>
-          <p>直売所の前に8台。県道から看板の角を入ってすぐです。</p>
+  <!-- 4. 買い方と値段の考え方: 3つの買い方を横に比べる表 -->
+  <section class="ways" id="ways" aria-labelledby="ways-title">
+    <div class="ways__head">
+      <h2 id="ways-title">買い方は、3つ。</h2>
+      <p>来て選ぶか、箱で受け取るか、店に届けるか。<br>値段はすべて税込です。</p>
+    </div>
+    <div class="ways__wrap">
+      <table class="ways__table">
+        <caption class="sr-only">3つの買い方の比べ方</caption>
+        <thead>
+          <tr>
+            <td class="ways__blank"></td>
+            <th scope="col"><img src="assets/img/04-stand.webp" width="1536" height="1024" alt="" loading="lazy"><span class="ways__name">直売所で買う</span></th>
+            <th scope="col"><img src="assets/img/03-box.webp" width="1200" height="900" alt="木箱に詰めた季節の野菜を真上から" loading="lazy"><span class="ways__name">予約の野菜箱</span></th>
+            <th scope="col"><span class="slip" role="img" aria-label="飲食店への納品の控えの例。11月4日水曜の朝、大根10本、かぶ5袋、ほうれん草8袋"><span class="slip__h"><span>納品の控え（例）</span><span class="num">11/4 WED AM</span></span><span class="slip__r"><span>大根</span><span class="num">10</span></span><span class="slip__r"><span>かぶ</span><span class="num">5</span></span><span class="slip__r"><span>ほうれん草</span><span class="num">8</span></span></span><span class="ways__name">飲食店向け</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">値段</th><td data-w="直売所"><b class="num">1</b>袋 <b class="num">150</b>円〜。いも類と玉ねぎは<span class="nw">量り売り</span></td><td data-w="野菜箱">小箱 <b class="num">1,800</b>円<br>大箱 <b class="num">2,800</b>円</td><td data-w="飲食店向け">品目と量で見積もり（無料）</td></tr>
+          <tr><th scope="row">量の目安</th><td data-w="直売所">1袋から、要る分だけ</td><td data-w="野菜箱">小箱 6〜7品・2人分<br>大箱 9〜10品・4人分</td><td data-w="飲食店向け">店の使い方に合わせて相談</td></tr>
+          <tr><th scope="row">予約</th><td data-w="直売所">いりません</td><td data-w="野菜箱">金曜まで</td><td data-w="飲食店向け">相談して決めます</td></tr>
+          <tr><th scope="row">受け取り</th><td data-w="直売所">直売所の棚から</td><td data-w="野菜箱">土曜に直売所で。車で15分圏内は配達<span class="nw">（＋<span class="num">300</span>円）</span></td><td data-w="飲食店向け">水・土の朝に配達</td></tr>
+          <tr><th scope="row">売り切れのとき</th><td data-w="直売所">その日は閉店します</td><td data-w="野菜箱">その週にとれたものから詰めるので、中身は週ごとに変わります</td><td data-w="飲食店向け">とれ具合を見ながら、品目と量を<span class="nw">決めます</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="ways__foot">
+      <p>野菜箱は、直売所で同じものを買う合計より1割ほど安くなるように組みます。野菜箱で追加の費用がかかるのは、配達を頼むときだけです。飲食店向けの配達料は【要確認】。</p>
+      <a class="btn btn--line" href="box.html">野菜箱の大きさと予約へ</a>
+    </div>
+  </section>
+
+  <!-- 5. 営業日・場所・問い合わせの方法 -->
+  <section class="visit" id="access" aria-labelledby="visit-title">
+    <div class="visit__in">
+      <figure class="visit__map">
+        <svg viewBox="0 0 560 400" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="map-t">
+          <title id="map-t">直売所までの略図。県道から看板の角を入ってすぐ、直売所の前に駐車場</title>
+          <rect width="560" height="400" fill="#f6f0dd"/>
+          <g stroke="#cfc29c" stroke-width="1.4" fill="none">
+            <path d="M330 40 C 380 44 450 44 540 40"/><path d="M330 62 C 380 66 450 66 540 62"/><path d="M330 84 C 380 88 450 88 540 84"/><path d="M330 106 C 380 110 450 110 540 106"/><path d="M330 128 C 380 132 450 132 540 128"/>
+            <path d="M330 300 C 380 304 450 304 540 300"/><path d="M330 322 C 380 326 450 326 540 322"/><path d="M330 344 C 380 348 450 348 540 344"/><path d="M330 366 C 380 370 450 370 540 366"/>
+          </g>
+          <path d="M0 214 C 140 206 300 222 560 210" stroke="#d9cfb4" stroke-width="34" fill="none"/>
+          <path d="M0 214 C 140 206 300 222 560 210" stroke="#fff" stroke-width="2" stroke-dasharray="14 12" fill="none"/>
+          <path d="M248 214 L 252 150" stroke="#d9cfb4" stroke-width="18" fill="none"/>
+          <rect x="196" y="78" width="120" height="74" fill="#fff" stroke="#2c3a27" stroke-width="2"/>
+          <path d="M190 80 L 256 46 L 322 80" fill="none" stroke="#2c3a27" stroke-width="2"/>
+          <rect x="120" y="96" width="62" height="56" fill="none" stroke="#2c3a27" stroke-width="1.6" stroke-dasharray="5 4"/>
+          <text x="151" y="133" font-size="26" text-anchor="middle" fill="#2c3a27" font-family="Hitoune Courier, monospace">P</text>
+          <circle cx="232" cy="236" r="7" fill="#c2463c"/>
+          <g font-size="21" fill="#2c3a27" font-family="Hitoune Klee, sans-serif">
+            <text x="256" y="124" text-anchor="middle">直売所</text>
+            <text x="151" y="180" text-anchor="middle">8台</text>
+            <text x="246" y="268" text-anchor="end">看板の角</text>
+            <text x="470" y="244" text-anchor="middle">県道</text>
+            <text x="436" y="160" text-anchor="middle">畑</text>
+          </g>
+        </svg>
+        <figcaption>略図。<a href="#" data-sample-action="地図アプリで開く">地図アプリで開く</a></figcaption>
+      </figure>
+      <div class="visit__info">
+        <h2 id="visit-title">直売所の営業日</h2>
+        <ol class="days" aria-label="曜日ごとの営業">
+          <li data-day="1" class="is-off"><b>月</b>休み</li>
+          <li data-day="2" class="is-off"><b>火</b>休み</li>
+          <li data-day="3"><b>水</b>営業</li>
+          <li data-day="4"><b>木</b>営業</li>
+          <li data-day="5"><b>金</b>営業</li>
+          <li data-day="6"><b>土</b>営業</li>
+          <li data-day="0"><b>日</b>営業</li>
+        </ol>
+        <dl class="visit__facts">
+          <div><dt>時間</dt><dd><span class="nw">8:30〜売り切れまで</span><span class="nw">（13時ごろが目安）</span></dd></div>
+          <div><dt>雨の日</dt><dd>開けます</dd></div>
+          <div><dt>駐車場</dt><dd>直売所の前に8台。県道から看板の角を入ってすぐです</dd></div>
+          <div><dt>所在地</dt><dd>架空県あさぎ野町、県道沿い【要確認：番地】</dd></div>
+        </dl>
+        <div class="visit__ask">
+          <h3>まず、ご相談ください。</h3>
+          <p>野菜箱の予約も、飲食店の相談も、同じ窓口で受けます。電話は水〜日の 8:00〜12:00。畑に出ている時間は、折り返します。</p>
+          <div class="visit__btns">
+            <a class="btn" href="box.html#form">まず相談する</a>
+            <a class="btn btn--line" href="#" data-sample-action="電話する">電話する</a>
+          </div>
         </div>
       </div>
-      <p class="fine">電話番号と所在地は、見本のため載せていません。</p>
     </div>
   </section>
 </main>
 
 <footer class="foot">
-  <svg class="foot__une" aria-hidden="true" focusable="false"><use href="#hu-une"/></svg>
-  <p class="foot__name fd">ひとうね農園</p>
-  <p>朝どり野菜の農園と直売所（架空の事業）／水〜日 8:30〜売り切れまで・月火休み（見本上の設定）</p>
+  <div class="foot__in">
+    <div class="foot__brand">
+      <svg class="foot__une" aria-hidden="true" focusable="false"><use href="#hu-une"/></svg>
+      <p class="foot__name">ひとうね農園</p>
+      <p>朝どり野菜の農園と直売所（架空の事業）</p>
+    </div>
+    <dl class="foot__facts">
+      <div><dt>所在地</dt><dd>架空県あさぎ野町、県道沿い【要確認：番地】</dd></div>
+      <div><dt>電話</dt><dd>【要確認：番号】水〜日 8:00〜12:00</dd></div>
+      <div><dt>直売所</dt><dd>水〜日 8:30〜売り切れまで・月火休み</dd></div>
+    </dl>
+    <nav class="foot__nav" aria-label="すべてのページ">
+      <a href="index.html" aria-current="page">トップ</a>
+      <a href="box.html">野菜箱と予約</a>
+    </nav>
+  </div>
 </footer>
 
 <div class="dock" aria-label="相談の窓口">
-  <a class="btn" href="#contact" data-sample-action="まず相談する">まず相談する</a>
+  <a class="btn" href="box.html#form">まず相談する</a>
 </div>
 
 <aside class="ca-credit" aria-labelledby="ca-credit-title">
@@ -236,7 +267,7 @@
     <a class="ca-btn" href="design-notes.html">この見本の設計メモ</a>
     <a class="ca-link" href="../../works.html">見本サイトの一覧</a>
   </div>
-  <p class="ca-credit__fine">TOPページのみの見本です。見本の規模は参考で、特定のプランをおすすめするものではありません。</p>
+  <p class="ca-credit__fine">TOPページと下層1ページ（野菜箱と予約）の見本です。見本の規模は参考で、特定のプランをおすすめするものではありません。</p>
   <a class="ca-credit__brand" href="../../index.html"><img src="../../assets/brand/logo.webp" width="360" height="278" alt="">クルーアセント（CREW ASCENT）</a>
 </aside>
 
