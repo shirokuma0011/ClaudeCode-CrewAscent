@@ -1,4 +1,8 @@
-Copyright 2014-2021 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'
+このフォルダの書体（どちらも SIL Open Font License 1.1。このページで使う文字だけに絞ったものです）
+- tebiki-noto-500.woff2 / tebiki-noto-700.woff2 : Noto Sans JP
+  Copyright 2014-2021 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'
+- tebiki-manrope-500.woff2 : Manrope
+  Copyright 2018 The Manrope Project Authors (https://github.com/googlefonts/manrope)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:

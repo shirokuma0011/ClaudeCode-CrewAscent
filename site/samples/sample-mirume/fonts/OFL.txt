@@ -1,3 +1,8 @@
+このフォルダの書体は SIL Open Font License 1.1 で配布されている書体を、このサイトで使う文字だけに絞ったものです。
+- mirume-mplus2-300/400/500.woff2 : M PLUS 2（https://github.com/coz-m/MPLUS_FONTS）
+- mirume-spacegrotesk-400/500.woff2 : Space Grotesk（https://github.com/floriankarsten/space-grotesk）
+
+===== M PLUS 2 =====
 Copyright 2021 The M+ FONTS Project Authors (https://github.com/coz-m/MPLUS_FONTS)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
@@ -92,10 +97,8 @@ DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
 
-
-============================================================
-
-Copyright 2016 The Space Mono Project Authors (https://github.com/googlefonts/spacemono)
+===== Space Grotesk =====
+Copyright 2020 The Space Grotesk Project Authors (https://github.com/floriankarsten/space-grotesk)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
