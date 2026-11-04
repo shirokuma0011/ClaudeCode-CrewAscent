@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>業務用空調と給排水の定期点検 つぶさ設備｜点検の種類・頻度・料金の一覧（見本・架空）</title>
-<meta name="description" content="延床3,000㎡までの事業所・店舗・小規模ビルの、業務用空調と給排水ポンプの定期点検です。点検の種類・頻度・料金（税込）、報告書の中身、追加費用が出る条件を表で確かめられます（架空の事業の見本サイト）。">
+<title>業務用空調と給排水の定期点検 つぶさ設備｜点検の案内（見本・架空）</title>
+<meta name="description" content="延床3,000㎡までの事業所・店舗・小規模ビルの、業務用空調と給排水ポンプの定期点検です。点検の種類・頻度・料金（税込）、毎回お渡しする報告書の見本、依頼から次の点検までの進め方を確かめられます（架空の事業の見本サイト）。">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="../../assets/brand/icon-32.png" sizes="32x32">
 <link rel="preload" href="fonts/tsubusa-udp-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../_shared/crew-frame.css?v=20261015">
 <script defer src="../_shared/crew-frame.js?v=20261015"></script>
-<link rel="stylesheet" href="assets/tsubusa.css?v=1">
+<link rel="stylesheet" href="assets/tsubusa.css?v=2">
 <script>document.documentElement.classList.add('js');</script>
-<script defer src="assets/tsubusa.js?v=1"></script>
+<script defer src="assets/tsubusa.js?v=2"></script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ移動</a>
@@ -23,70 +23,81 @@
 </div>
 
 <header class="head">
-  <a class="logo" href="#top" aria-label="つぶさ設備（ページの先頭へ）">
-    <svg class="logo__box" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><rect x="1" y="1" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7 14.5 L12 19.5 L21.5 8" fill="none" stroke="#8c6d1f" stroke-width="2.6"/></svg>
+  <a class="logo" href="index.html" aria-label="つぶさ設備 点検の案内">
+    <svg class="logo__box" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><rect x="1" y="1" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7 14.5 L12 19.5 L21.5 8" fill="none" stroke="currentColor" stroke-width="2.6"/></svg>
     <span class="logo__name fd">つぶさ設備</span><span class="logo__sub">業務用空調と給排水の定期点検</span>
   </a>
-  <p class="head__upd">最終更新 <span class="fm">2026.10.01</span></p>
-  <a class="btn btn--s" href="#plans">条件を確認する</a>
+  <nav class="gnav" aria-label="ページ">
+    <a href="index.html" aria-current="page">点検の案内</a>
+    <a href="fees.html">料金と追加費用</a>
+  </nav>
+  <a class="btn btn--s" href="#contact">見積もりを依頼する</a>
 </header>
 
 <div class="doc">
-  <nav class="toc" aria-label="このページの目次">
-    <p class="toc__h">目次</p>
-    <ol>
-      <li><a href="#top"><span class="fm">00</span>概要と条件</a></li>
-      <li><a href="#scope"><span class="fm">01</span>扱っている範囲</a></li>
-      <li><a href="#plans"><span class="fm">02</span>種類・頻度・料金</a></li>
-      <li><a href="#process"><span class="fm">03</span>進め方と道具</a></li>
-      <li><a href="#report"><span class="fm">04</span>報告書と追加費用</a></li>
-      <li><a href="#contact"><span class="fm">05</span>見積もりの依頼</a></li>
-    </ol>
-    <p class="toc__note">見積もりの返信<br><b>2営業日以内</b>（無料）</p>
+  <nav class="toc" id="toc" aria-label="このページの目次">
+    <details class="toc__box" open>
+      <summary class="toc__h">目次<span class="fm">06</span></summary>
+      <ol>
+        <li><a href="#top"><span class="fm">00</span>点検の案内と料金</a></li>
+        <li><a href="#scope"><span class="fm">01</span>点検する設備</a></li>
+        <li><a href="#freq"><span class="fm">02</span>頻度の選び方</a></li>
+        <li><a href="#report"><span class="fm">03</span>報告書の見本</a></li>
+        <li><a href="#process"><span class="fm">04</span>依頼からの進め方</a></li>
+        <li><a href="#contact"><span class="fm">05</span>見積もりの依頼</a></li>
+      </ol>
+    </details>
+    <a class="toc__next" href="fees.html"><span>次のページ</span>料金と追加費用 <span aria-hidden="true">→</span></a>
   </nav>
 
   <main id="main">
-    <!-- 00. 最初の画面 -->
-    <section class="sec hero" id="top" aria-labelledby="hero-title">
-      <p class="kicker">業務用空調・給排水ポンプの定期点検 ／ 架空市と隣接2市</p>
-      <h1 id="hero-title">点検の内容と費用を、<br>表で比べられます。</h1>
-      <p class="hero__lead">延床3,000㎡までの事業所・店舗・小規模ビルの、空調と給排水ポンプを定期点検します。点検の種類・頻度・料金、報告書の中身、追加費用が出る条件を、このページの表で確かめられます。</p>
-      <div class="hero__grid">
-        <div class="hero__left">
-        <dl class="conds">
-          <div><dt>対象</dt><dd>延床3,000㎡までの建物の、業務用空調（室外機・室内機）と給排水ポンプ</dd></div>
-          <div><dt>料金の考え方</dt><dd>台数 × 頻度の定額。部品代は交換が必要なときだけ、事前に見積もり</dd></div>
-          <div><dt>対応地域</dt><dd>架空市・隣接する2市（それ以外は出張費の相談）</dd></div>
-          <div><dt>更新日</dt><dd><span class="fm">2026.10.01</span>（料金表・対応地域）</dd></div>
-        </dl>
-        <div class="hero__acts">
-          <a class="btn" href="#plans">条件を確認する</a>
-          <a class="btn btn--line" href="#scope">点検項目の一覧を見る</a>
-        </div>
-        <ul class="hero__notes">
-          <li>見積もりは現地確認1回まで無料。相談だけでもかまいません</li>
-          <li>部品交換・夜間休日の作業は追加費用になります（<a href="#extra">条件の表</a>）</li>
-          <li>営業の電話や訪問はしていません</li>
-        </ul>
-        </div>
-        <figure class="hero__photo">
+    <!-- 00. 最初の画面：点検の案内票 -->
+    <section class="sec sec--hero" id="top" aria-labelledby="hero-title">
+      <div class="slip">
+        <figure class="slip__photo">
+          <p class="slot"><span class="fm">写真 1</span><span>屋上の室外機</span><span class="nb">（画像はAI生成のイメージです）</span></p>
           <img src="assets/img/01-hero.webp" width="1536" height="864" alt="曇り空のビル屋上に並ぶ業務用空調の室外機と、点検用の工具バッグ" fetchpriority="high">
-          <figcaption>屋上の室外機の点検（写真はAI生成のイメージ）</figcaption>
         </figure>
+        <div class="slip__side">
+          <dl class="slip__head">
+            <div><dt>料金の考え方</dt><dd><span class="ib">台数 × 頻度の定額</span><span class="ib">（税込）</span></dd></div>
+            <div><dt>対象</dt><dd><span class="ib">延床3,000㎡までの</span><span class="ib">事業所・店舗・</span><span class="ib">小規模ビル</span></dd></div>
+            <div><dt>対応地域</dt><dd><span class="ib">架空市と</span><span class="ib">隣接する2市</span></dd></div>
+            <div><dt>更新日</dt><dd><span class="fm">2026.10.01</span><span class="ib">（料金表・</span><span class="ib">対応地域）</span></dd></div>
+          </dl>
+          <h1 id="hero-title"><span class="ib">小さなビルと店舗の、</span><br><span class="ib">空調と給排水ポンプの</span><br><span class="ib">定期点検。</span></h1>
+          <div class="slip__fees">
+            <table class="fee">
+              <caption>1回の点検料金<span>税込・1台（1基）あたり</span></caption>
+              <thead><tr><th scope="col"><span class="sr-only">設備</span></th><th scope="col">年1回</th><th scope="col">半年ごと</th><th scope="col">四半期ごと</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">空調<small>1台</small></th><td><span class="fm">16,500</span><i>円</i></td><td><span class="fm">14,300</span><i>円</i></td><td><span class="fm">12,100</span><i>円</i></td></tr>
+                <tr><th scope="row">給排水ポンプ<small>1基</small></th><td><span class="fm">22,000</span><i>円</i></td><td><span class="fm">19,800</span><i>円</i></td><td><span class="fm">17,600</span><i>円</i></td></tr>
+                <tr class="fee__sub"><th scope="row"><span class="ib">フィルター</span><span class="ib">洗浄</span></th><td>年1回</td><td>年2回</td><td>年4回</td></tr>
+              </tbody>
+            </table>
+            <p class="fee__min"><span class="sp-only">フィルター洗浄は年1・2・4回。</span>1回の最低料金 <span class="fm">22,000</span>円。報告書は毎回つきます。</p>
+            <div class="acts">
+              <a class="btn" href="fees.html">条件を確認する</a>
+              <a class="btn btn--line" href="#scope">点検項目の一覧を見る</a>
+            </div>
+            <p class="acts__note">見積もり（現地確認1回まで）は無料です。相談だけでもかまいません。営業の電話や訪問はしていません。</p>
+            <p class="extra-note"><span class="xm" aria-hidden="true"></span><span>追加費用が出るのは、部品の交換・夜間休日・高所作業車・対応地域の外の4つだけ。<a href="fees.html#extra">条件の表</a></span></p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- 01. 扱っている範囲の全体像 -->
+    <!-- 01. 点検する設備と、扱わない設備 -->
     <section class="sec" id="scope" aria-labelledby="scope-title">
-      <h2 id="scope-title"><span class="no fm">01</span>扱っている範囲</h2>
-      <p class="sec__lead">点検するのは、次の2種類の設備です。建物の電気設備・消防設備・昇降機は扱いません。</p>
-      <div class="scope">
-        <article class="unit">
-          <figure>
+      <div class="sec__h"><span class="no fm">01</span><h2 id="scope-title">点検する設備と、扱わない設備</h2></div>
+      <div class="ledger">
+        <article class="ledger__col">
+          <figure class="ledger__ph">
             <img src="assets/img/02-filter.webp" width="1536" height="1024" alt="洗浄前の汚れたエアコンのフィルターと、洗浄後のきれいなフィルターを左右に並べた物撮り" loading="lazy">
-            <figcaption>フィルターの洗浄前（左）と洗浄後（右）。報告書にも同じ並びで貼ります</figcaption>
+            <figcaption>フィルターの洗浄前（左）と洗浄後（右）</figcaption>
           </figure>
-          <h3>業務用空調</h3>
+          <h3>業務用空調<small>室外機・室内機</small></h3>
           <ul class="items">
             <li>フィルターの汚れ・破れの確認と洗浄</li>
             <li>熱交換器（フィン）の汚れ・曲がり</li>
@@ -95,12 +106,12 @@
             <li>運転音・振動・吹き出し温度の記録</li>
           </ul>
         </article>
-        <article class="unit">
-          <figure>
+        <article class="ledger__col">
+          <figure class="ledger__ph">
             <img src="assets/img/03-pump.webp" width="1200" height="900" alt="機械室の給水ポンプと、色分けされた配管とバルブ" loading="lazy">
-            <figcaption>機械室の給水ポンプと配管（写真はAI生成のイメージ）</figcaption>
+            <figcaption>機械室の給水ポンプと配管</figcaption>
           </figure>
-          <h3>給排水ポンプ</h3>
+          <h3>給排水ポンプ<small>給水・排水槽</small></h3>
           <ul class="items">
             <li>給水ポンプの運転状態・異音・振動</li>
             <li>圧力の記録（前回との比較）</li>
@@ -109,129 +120,174 @@
             <li>制御盤の表示ランプと端子のゆるみ</li>
           </ul>
         </article>
+        <aside class="ledger__col ledger__col--out" aria-labelledby="out-title">
+          <h3 id="out-title">扱わないもの</h3>
+          <ul class="outs">
+            <li>建物の電気設備</li>
+            <li>消防設備</li>
+            <li>昇降機（エレベーター）</li>
+            <li>延床3,000㎡を超える建物<span class="nb">【要確認】</span></li>
+          </ul>
+          <p class="ledger__law">定期点検が法令で求められるかどうかは、建物の用途と規模で変わります。ご相談のときに、建物ごとに確かめます。</p>
+        </aside>
       </div>
     </section>
 
-    <!-- 02. 点検の種類・頻度・料金の一覧 -->
-    <section class="sec" id="plans" aria-labelledby="plans-title">
-      <h2 id="plans-title"><span class="no fm">02</span>点検の種類・頻度・料金</h2>
-      <p class="sec__lead">同じ項目を点検し、違うのは頻度と、フィルター洗浄の回数です。どれが合うかは、建物の使い方で決まります。</p>
-      <div class="tbl-wrap">
-        <table class="cmp">
-          <caption>点検の頻度ごとの比較（料金は税込・見本用の架空価格）</caption>
-          <thead><tr><th scope="col">項目</th><th scope="col">年1回</th><th scope="col">半年ごと</th><th scope="col">四半期ごと</th></tr></thead>
-          <tbody>
-            <tr class="cmp__fit"><th scope="row">向いている建物</th><td data-l="年1回">事務所など、空調を使う時期が限られる</td><td data-l="半年ごと">冷房・暖房の切り替え前に見たい店舗</td><td data-l="四半期ごと">飲食店・工場など、油や粉じんの多い場所</td></tr>
-            <tr><th scope="row">空調 1台あたり<small>1回の料金</small></th><td data-l="年1回"><span class="fm">16,500</span>円</td><td data-l="半年ごと"><span class="fm">14,300</span>円</td><td data-l="四半期ごと"><span class="fm">12,100</span>円</td></tr>
-            <tr><th scope="row">給排水ポンプ 1基あたり<small>1回の料金</small></th><td data-l="年1回"><span class="fm">22,000</span>円</td><td data-l="半年ごと"><span class="fm">19,800</span>円</td><td data-l="四半期ごと"><span class="fm">17,600</span>円</td></tr>
-            <tr><th scope="row">フィルター洗浄</th><td data-l="年1回">年1回</td><td data-l="半年ごと">年2回</td><td data-l="四半期ごと">年4回</td></tr>
-            <tr><th scope="row">報告書</th><td colspan="3" data-l="全頻度共通">毎回（写真・判定・次の点検時期）。7営業日以内にPDFと紙で</td></tr>
-            <tr><th scope="row">最低料金</th><td colspan="3" data-l="全頻度共通">1回 <span class="fm">22,000</span>円（台数が少ないとき）</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <dl class="fit">
-        <div><dt>年1回</dt><dd>事務所など、空調を使う時期が限られる</dd></div>
-        <div><dt>半年ごと</dt><dd>冷房・暖房の切り替え前に見たい店舗</dd></div>
-        <div><dt>四半期ごと</dt><dd>飲食店・工場など、油や粉じんの多い場所</dd></div>
-      </dl>
-      <p class="fine">例: 空調4台を半年ごとに点検する場合、1回 <span class="fm">57,200</span>円・年 <span class="fm">114,400</span>円（税込・架空価格）。年間の契約にしなくても、1回ずつ頼めます。</p>
+    <!-- 02. 頻度の選び方 -->
+    <section class="sec" id="freq" aria-labelledby="freq-title">
+      <div class="sec__h"><span class="no fm">02</span><h2 id="freq-title">頻度の選び方と、1年の点検時期</h2></div>
+      <p class="sec__lead">点検する項目は、どの頻度でも同じです。違うのは、1年の点検の回数と、その時期です。</p>
+      <table class="cal">
+        <caption class="sr-only">頻度ごとの向いている建物と、1年の点検時期の例、空調4台の年額</caption>
+        <thead>
+          <tr><th scope="col">頻度</th><th scope="col">向いている建物</th><th scope="col" class="cal__mh"><span class="cal__m">
+            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span></span><span class="sr-only">月ごとの点検時期の例</span></th><th scope="col" class="cal__yr">空調4台の年額<small>税込・例</small></th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">年1回</th><td>事務所など、空調を使う時期が限られる</td><td class="cal__mc"><span class="cal__m" role="img" aria-label="5月に点検">
+            <i></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></td><td class="cal__yr"><span class="fm">66,000</span>円</td></tr>
+          <tr><th scope="row">半年ごと</th><td>冷房・暖房の切り替え前に見たい店舗</td><td class="cal__mc"><span class="cal__m" role="img" aria-label="4月と10月に点検">
+            <i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i></span></td><td class="cal__yr"><span class="fm">114,400</span>円</td></tr>
+          <tr><th scope="row">四半期ごと</th><td>飲食店・工場など、油や粉じんの多い場所</td><td class="cal__mc"><span class="cal__m" role="img" aria-label="1月・4月・7月・10月に点検">
+            <i class="on"></i><i></i><i></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i><i></i></span></td><td class="cal__yr"><span class="fm">193,600</span>円</td></tr>
+        </tbody>
+      </table>
+      <p class="fine">塗った月は一例で、時期は建物の使い方に合わせて決めます。年間の契約にしなくても、1回ずつ頼めます。ほかの台数は<a href="fees.html#quick">台数ごとの早見表</a>で確かめられます。</p>
     </section>
 
-    <!-- 03. 対応の範囲と進め方 -->
-    <section class="sec" id="process" aria-labelledby="process-title">
-      <h2 id="process-title"><span class="no fm">03</span>進め方と、使う道具</h2>
-      <div class="process">
-        <figure class="process__photo">
-          <img src="assets/img/04-tools.webp" width="1024" height="1024" alt="灰色の台に並べた懐中電灯、レンチ、清掃用ブラシ、ウエス、手袋" loading="lazy">
-          <figcaption>点検で使う道具（写真はAI生成のイメージ）</figcaption>
-        </figure>
-        <table class="steps">
-          <caption>依頼から次回の連絡まで</caption>
-          <thead><tr><th scope="col">段階</th><th scope="col">内容</th><th scope="col">用意していただくもの</th></tr></thead>
-          <tbody>
-            <tr><th scope="row"><span class="fm">1</span>事前の確認</th><td>電話かメールで、機器の台数と設置場所を伺う</td><td>機器の一覧、前回の報告書（あれば）</td></tr>
-            <tr><th scope="row"><span class="fm">2</span>現地確認</th><td>屋上・機械室を見て、見積もりを出す（無料・1回）</td><td>屋上と機械室の鍵</td></tr>
-            <tr><th scope="row"><span class="fm">3</span>点検の当日</th><td>2〜4時間。空調は運転を止めて行う</td><td>最初と最後の15分、立ち会いの方1名</td></tr>
-            <tr><th scope="row"><span class="fm">4</span>報告書</th><td>7営業日以内に、PDFと紙でお渡し</td><td class="none">—</td></tr>
-            <tr><th scope="row"><span class="fm">5</span>次回の連絡</th><td>次の点検時期の1か月前にご連絡</td><td class="none">—</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- 04. 報告書の中身と追加費用の考え方 -->
+    <!-- 03. 報告書の見本 -->
     <section class="sec" id="report" aria-labelledby="report-title">
-      <h2 id="report-title"><span class="no fm">04</span>報告書の中身と、追加費用</h2>
-      <div class="report">
-        <div class="sheet" role="group" aria-label="報告書の1ページの例">
-          <p class="sheet__h"><span>点検報告書（例）</span><span class="fm">No.0412 / 2026.09.18</span></p>
-          <table>
-            <thead><tr><th scope="col">機器</th><th scope="col">判定</th><th scope="col">所見</th></tr></thead>
+      <div class="sec__h"><span class="no fm">03</span><h2 id="report-title">毎回お渡しする報告書の見本</h2></div>
+      <div class="rep">
+        <div class="paper" role="group" aria-label="点検報告書の1ページの見本">
+          <div class="paper__top">
+            <p class="paper__t fd">定期点検報告書</p>
+            <p class="paper__no fm">No.0412</p>
+          </div>
+          <dl class="paper__meta">
+            <div><dt>建物</dt><dd><span class="ib">架空市の</span><span class="ib">事務所ビル（例）</span></dd></div>
+            <div><dt>点検日</dt><dd class="fm">2026.09.18</dd></div>
+            <div><dt>頻度</dt><dd>半年ごと</dd></div>
+            <div><dt>機器</dt><dd><span class="ib">空調3台・</span><span class="ib">給水ポンプ1基</span></dd></div>
+          </dl>
+          <table class="paper__tbl">
+            <thead><tr><th scope="col">機器</th><th scope="col">写真<sup class="fm">1</sup></th><th scope="col">判定<sup class="fm">2</sup></th><th scope="col">所見</th></tr></thead>
             <tbody>
-              <tr><td>室外機 1</td><td><span class="mk mk--ok" aria-hidden="true"></span>良好</td><td>異常なし</td></tr>
-              <tr><td>室外機 2</td><td><span class="mk mk--warn" aria-hidden="true"></span>要観察</td><td>防振ゴムに小さなひび。次回も確認</td></tr>
-              <tr><td>室内機 3</td><td><span class="mk mk--ng" aria-hidden="true"></span>交換推奨</td><td>ドレンパンにさび。部品の見積もりを添付</td></tr>
+              <tr><th scope="row">室外機 1</th><td class="paper__ph"><img src="assets/img/01-hero.webp" width="1536" height="864" alt="" loading="lazy" style="object-position: 46% 62%"></td><td><span class="jd jd--ok" aria-hidden="true"></span>良好</td><td>異常なし。音・振動とも前回と同じ</td></tr>
+              <tr><th scope="row">室外機 2</th><td class="paper__ph"><img src="assets/img/01-hero.webp" width="1536" height="864" alt="" loading="lazy" style="object-position: 86% 62%"></td><td><span class="jd jd--warn" aria-hidden="true"></span>要観察</td><td>防振ゴムに小さなひび。次回も確認</td></tr>
+              <tr><th scope="row">室内機 3</th><td class="paper__ph"><img src="assets/img/02-filter.webp" width="1536" height="1024" alt="" loading="lazy" style="object-position: 22% 50%"></td><td><span class="jd jd--ng" aria-hidden="true"></span>交換推奨</td><td>フィルターに破れ。部品の見積もりを別紙で添付<sup class="fm">3</sup></td></tr>
+              <tr><th scope="row">給水ポンプ</th><td class="paper__ph"><img src="assets/img/03-pump.webp" width="1200" height="900" alt="" loading="lazy" style="object-position: 50% 62%"></td><td><span class="jd jd--ok" aria-hidden="true"></span>良好</td><td>圧力は前回と同じ範囲。にじみなし</td></tr>
             </tbody>
           </table>
-          <p class="sheet__f">各機器の写真・次の点検時期 <span class="fm">2027.03</span></p>
+          <p class="paper__foot"><span>次の点検時期<sup class="fm">4</sup></span><b class="fm">2027.03</b><span class="paper__att">別紙　部品の見積もり（室内機 3）</span></p>
         </div>
-        <figure class="report__photo">
-          <img src="assets/img/05-report.webp" width="1536" height="1024" alt="表紙が無地のバインダーと、クリップで留めた室外機の写真の束" loading="lazy">
-          <figcaption>報告書には、点検した機器ごとの写真を貼ります（写真はAI生成のイメージ）</figcaption>
-        </figure>
+        <div class="rep__side">
+          <figure class="rep__ph">
+            <img src="assets/img/05-report.webp" width="1536" height="1024" alt="表紙が無地のバインダーと、クリップで留めた室外機の写真の束" loading="lazy">
+            <figcaption>綴じて保管できる、紙の報告書</figcaption>
+          </figure>
+          <ol class="notes">
+            <li><span class="fm">1</span>機器ごとに、点検したときの写真を貼ります。</li>
+            <li><span class="fm">2</span>判定は「良好・要観察・交換推奨」の3段階です。○△×の形でも見分けられます。</li>
+            <li><span class="fm">3</span>交換推奨の機器には、部品の見積もりを別紙で添えます。交換するかどうかは、見積もりを見てから決められます。</li>
+            <li><span class="fm">4</span>次の点検時期は、報告書の最後の行に書きます。</li>
+          </ol>
+        </div>
       </div>
-      <h3 class="sub" id="extra">追加費用が出る条件</h3>
-      <div class="tbl-wrap">
-        <table class="extra">
-          <caption>料金表のほかにかかる費用（税込・見本用の架空価格）</caption>
-          <thead><tr><th scope="col">条件</th><th scope="col">費用</th><th scope="col">いつ分かるか</th></tr></thead>
-          <tbody>
-            <tr><th scope="row">部品の交換</th><td>部品代 ＋ 作業 <span class="fm">5,500</span>円／時間</td><td>点検のあと、見積もりを出して了承をいただいてから</td></tr>
-            <tr><th scope="row">夜間・休日の作業</th><td>料金の <span class="fm">25</span>％増し</td><td>日程を決めるとき</td></tr>
-            <tr><th scope="row">高所作業車が必要</th><td>実費（レンタル代）</td><td>現地確認のとき</td></tr>
-            <tr><th scope="row">対応地域の外</th><td>出張費 <span class="fm">3,300</span>円〜</td><td>最初のご連絡のとき</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="fine">了承のない作業や、表にない費用は請求しません。</p>
     </section>
 
-    <!-- 05. 問い合わせの方法 -->
-    <section class="sec" id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title"><span class="no fm">05</span>見積もりの依頼</h2>
+    <!-- 04. 依頼からの進め方 -->
+    <section class="sec" id="process" aria-labelledby="process-title">
+      <div class="sec__h"><span class="no fm">04</span><h2 id="process-title">依頼から、次の点検の連絡まで</h2></div>
+      <div class="flow">
+        <figure class="flow__ph">
+          <img src="assets/img/04-tools.webp" width="1024" height="1024" alt="灰色の台に並べた懐中電灯、レンチ、清掃用ブラシ、ウエス、手袋" loading="lazy">
+          <figcaption>点検の当日に持ち込む道具</figcaption>
+        </figure>
+        <ol class="line">
+          <li>
+            <p class="line__k"><span class="fm">1</span>事前の確認</p>
+            <p class="line__t">電話かメールで、機器の台数と設置場所を伺います。</p>
+            <p class="line__p"><b>ご用意</b>機器の一覧、前回の報告書（あれば）</p>
+          </li>
+          <li>
+            <p class="line__k"><span class="fm">2</span>現地確認</p>
+            <p class="line__t">屋上と機械室を見て、見積もりを出します。</p>
+            <p class="line__p"><b>ご用意</b>屋上と機械室の鍵</p>
+          </li>
+          <li>
+            <p class="line__k"><span class="fm">3</span>点検の当日</p>
+            <p class="line__t"><span class="fm">2〜4</span>時間。空調は運転を止めて行います。</p>
+            <p class="line__p"><b>ご用意</b>最初と最後の<span class="fm">15</span>分、立ち会いの方1名</p>
+          </li>
+          <li>
+            <p class="line__k"><span class="fm">4</span>報告書</p>
+            <p class="line__t"><span class="fm">7</span>営業日以内に、PDFと紙でお渡しします。</p>
+            <p class="line__p line__p--none"><b>ご用意</b>なし</p>
+          </li>
+          <li>
+            <p class="line__k"><span class="fm">5</span>次回の連絡</p>
+            <p class="line__t">次の点検時期の<span class="fm">1</span>か月前に、こちらからご連絡します。</p>
+            <p class="line__p line__p--none"><b>ご用意</b>なし</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 05. 見積もりの依頼 -->
+    <section class="sec sec--contact" id="contact" aria-labelledby="contact-title">
+      <div class="sec__h"><span class="no fm">05</span><h2 id="contact-title">見積もりの依頼</h2></div>
       <div class="contact">
         <div class="contact__prep">
-          <p>次の5つが分かると、最初の返信で概算をお伝えできます。分からない項目は空けたままで大丈夫です。</p>
-          <ul class="items">
-            <li>建物の用途（事務所・店舗・飲食店など）</li>
+          <dl class="reply">
+            <div><dt>返信の目安</dt><dd><span class="fm">2</span>営業日以内に、メールで</dd></div>
+            <div><dt>電話</dt><dd>番号は<span class="nb">【要確認】</span></dd></div>
+            <div><dt>返信のあと</dt><dd>概算をお伝えし、<a href="#process">進め方の「1 事前の確認」</a>から始めます</dd></div>
+          </dl>
+          <p>次のことが分かると、最初の返信で概算をお伝えできます。分からない項目は空欄でかまいません。</p>
+          <ul class="prep">
+            <li>建物の種類（事務所・店舗・飲食店など）</li>
             <li>延床面積のおおよそ</li>
             <li>空調の台数と、ポンプの有無</li>
             <li>前回の点検の時期</li>
             <li>希望の頻度（未定でも可）</li>
           </ul>
-          <p class="contact__reply"><b>返信の目安</b>2営業日以内（電話 平日9:00〜17:00）</p>
         </div>
-        <form class="form" data-sample-form="見積もりを依頼する" aria-label="見積もりの依頼フォーム">
-          <label>会社名・建物名<input type="text" name="org" autocomplete="organization"></label>
-          <label>ご担当者<input type="text" name="name" autocomplete="name"></label>
-          <label>メールアドレス<input type="email" name="email" autocomplete="email"></label>
-          <label>建物の用途<select name="use"><option>選んでください</option><option>事務所</option><option>店舗</option><option>飲食店</option><option>工場・倉庫</option><option>その他</option></select></label>
-          <label>空調の台数<input type="text" name="units" inputmode="numeric"></label>
-          <label>希望の頻度<select name="freq"><option>未定</option><option>年1回</option><option>半年ごと</option><option>四半期ごと</option></select></label>
+        <form class="form" data-sample-form="見積もりを依頼する" novalidate aria-labelledby="contact-title">
+          <div class="field"><label for="f-org">会社名・建物名<em>必須</em></label><input id="f-org" type="text" name="org" autocomplete="organization" required aria-describedby="e-org"><p class="field__err" id="e-org">会社名か建物名を入れてください。</p></div>
+          <div class="field"><label for="f-name">ご担当者<em>必須</em></label><input id="f-name" type="text" name="name" autocomplete="name" required aria-describedby="e-name"><p class="field__err" id="e-name">お名前を入れてください。</p></div>
+          <div class="field field--w"><label for="f-mail">メールアドレス<em>必須</em></label><input id="f-mail" type="email" name="email" autocomplete="email" required aria-describedby="e-mail"><p class="field__err" id="e-mail">返信先のメールアドレスを、例のように入れてください（例: tantou@example.jp）。</p></div>
+          <div class="field"><label for="f-use">建物の種類<em>必須</em></label><select id="f-use" name="use" required aria-describedby="e-use"><option value="">選んでください</option><option>事務所</option><option>店舗</option><option>飲食店</option><option>工場・倉庫</option><option>その他</option></select><p class="field__err" id="e-use">建物の種類を選んでください。</p></div>
+          <div class="field"><label for="f-eq">点検したい設備<em>必須</em></label><select id="f-eq" name="equipment" required aria-describedby="e-eq"><option value="">選んでください</option><option>業務用空調</option><option>給排水ポンプ</option><option>空調とポンプの両方</option><option>まだ分からない</option></select><p class="field__err" id="e-eq">点検したい設備を選んでください。</p></div>
+          <div class="field"><label for="f-units">空調の台数<span>任意</span></label><input id="f-units" type="number" name="units" min="1" max="999" inputmode="numeric" aria-describedby="e-units"><p class="field__err" id="e-units">1以上の数で入れてください。</p></div>
+          <div class="field"><label for="f-freq">希望の頻度<span>任意</span></label><select id="f-freq" name="freq"><option>未定</option><option>年1回</option><option>半年ごと</option><option>四半期ごと</option></select></div>
+          <div class="field field--w"><label for="f-msg">困っていること<span>任意</span></label><textarea id="f-msg" name="message" rows="3"></textarea></div>
+          <p class="form__pv"><b>個人情報の扱い<span class="nb">【要確認】</span></b>いただいた内容は、見積もりと点検のご連絡にだけ使います。</p>
           <div class="form__end">
-            <button class="btn" type="submit">見積もりを依頼する（見本）</button>
-            <p>見本のため送信されません。</p>
+            <button class="btn" type="submit"><span>見積もりを依頼する</span></button>
+            <p class="form__state" data-form-state tabindex="-1" aria-live="polite">＊のついた5項目を入れると送れます。</p>
           </div>
         </form>
       </div>
+      <a class="next" href="fees.html"><span class="next__k">次に読む</span><span class="next__t fd">料金と追加費用</span><span class="next__d">台数ごとの早見表と、追加費用の条件</span><span class="next__a" aria-hidden="true">→</span></a>
     </section>
   </main>
 </div>
 
 <footer class="foot">
-  <p><b class="fd">つぶさ設備</b>業務用空調と給排水の定期点検（架空の事業）</p>
-  <p>電話受付 平日9:00〜17:00 ／ 対応地域 架空市と隣接2市 ／ 最終更新 <span class="fm">2026.10.01</span>（見本上の設定）。所在地は見本のため載せていません。</p>
+  <div class="foot__in">
+    <p class="foot__name"><b class="fd">つぶさ設備</b>業務用空調と給排水の定期点検（架空の事業）</p>
+    <dl class="foot__dl">
+      <div><dt>所在地</dt><dd>架空市港南三丁目8-2（架空の所在地）<span class="nb">【要確認】</span></dd></div>
+      <div><dt>電話</dt><dd>番号は<span class="nb">【要確認】</span>／受付 平日 9:00〜17:00</dd></div>
+      <div><dt>対応地域</dt><dd>架空市と隣接する2市（それ以外は出張費）</dd></div>
+    </dl>
+    <ul class="foot__nav">
+      <li><a href="index.html">点検の案内</a></li>
+      <li><a href="fees.html">料金と追加費用</a></li>
+      <li><a href="#contact">見積もりの依頼</a></li>
+    </ul>
+  </div>
 </footer>
 
 <aside class="ca-credit" aria-labelledby="ca-credit-title">
@@ -243,7 +299,7 @@
     <a class="ca-btn" href="design-notes.html">この見本の設計メモ</a>
     <a class="ca-link" href="../../works.html">見本サイトの一覧</a>
   </div>
-  <p class="ca-credit__fine">参考の規模: TOPページのみの見本です。見本の規模は参考で、特定のプランをおすすめするものではありません。</p>
+  <p class="ca-credit__fine">参考の規模: トップと「料金と追加費用」の2ページの見本です。見本の規模は参考で、特定のプランをおすすめするものではありません。</p>
   <a class="ca-credit__brand" href="../../index.html"><img src="../../assets/brand/logo.webp" width="360" height="278" alt="">クルーアセント（CREW ASCENT）</a>
 </aside>
 
