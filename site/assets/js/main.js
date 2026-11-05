@@ -8,12 +8,33 @@
      ブラウザが前のスクロール位置を復元しないようにする。
      ただし #plan-first のような「ページ内の場所を指したリンク」で来たときは、その場所を見せる。 */
   try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) { /* noop */ }
+  /* プレビュー画面などの枠（iframe）の中で開いたときは、枠の外側の画面が
+     前のページの位置のまま止まる。ページの先頭を見える位置へ出して、外側も一番上へ戻す。 */
+  var framed = false;
+  try { framed = window.self !== window.top; } catch (e) { framed = true; }
   var toTop = function () {
     if (location.hash && location.hash.length > 1) return;
     window.scrollTo(0, 0);
+    if (framed && document.body) {
+      /* ページ最上部の目印だけを「見える範囲へ」出す。すでに見えていれば外側は動かない */
+      try {
+        var probe = document.createElement('span');
+        probe.setAttribute('aria-hidden', 'true');
+        probe.style.cssText = 'position:absolute;top:0;left:0;width:1px;height:1px;pointer-events:none;';
+        document.body.appendChild(probe);
+        probe.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+        document.body.removeChild(probe);
+      } catch (e) { /* noop */ }
+    }
   };
   toTop();
   window.addEventListener('pageshow', function (ev) { if (ev.persisted) toTop(); });
+  /* 画像や文字の読み込みで高さが変わったあとにも、もう一度だけ合わせる（読み手が動かしていなければ） */
+  var moved = false;
+  ['wheel', 'touchstart', 'keydown'].forEach(function (t) {
+    window.addEventListener(t, function () { moved = true; }, { passive: true, once: true });
+  });
+  window.addEventListener('load', function () { if (!moved) toTop(); });
 
   /* 計測: dataLayer がある場合だけ push する薄い層（個人情報・回答値は送らない） */
   window.crewTrack = function (event, params) {
