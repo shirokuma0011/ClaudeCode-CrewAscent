@@ -77,8 +77,10 @@
     if (mode === 'coord') {
       label('先進・新しさ', 50, 12);
       label('王道・信頼', 50, height - 27);
-      label('実用・情報', origin / width * 100, height - 27, 'left');
-      label('ブランド・魅力', (width - origin) / width * 100, height - 27, 'right');
+      /* 横軸の両端は、盤の左右の中央に縦書きで置く（上下・左右の4方向がそれぞれの辺の中央にそろう） */
+      const mid = top + (unit * 5 + size) / 2;
+      label('実用・情報', origin / 2 / width * 100, mid, 'side');
+      label('ブランド・魅力', (width - origin / 2) / width * 100, mid, 'side');
     } else if (mode === 'regions') {
       ['実用 × 先進', 'ブランド × 先進', '実用 × 王道', 'ブランド × 王道'].forEach((text, i) => {
         const x = origin + ((i % 2) * (3 + split) + 1) * unit + size / 2;

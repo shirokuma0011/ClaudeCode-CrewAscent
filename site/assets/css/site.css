@@ -219,7 +219,7 @@ font-size:13px;font-weight:700;line-height:1.5;letter-spacing:.02em;white-space:
 .atl-stage-labels{position:absolute;inset:0;pointer-events:none;transform:translateZ(2px);}
 .atl-stage-label{position:absolute;font-size:13px;font-weight:700;line-height:20px;white-space:nowrap;color:var(--on-ink-2);transform:translateX(-50%);}
 .atl-stage-label[data-align="left"]{transform:none;}
-.atl-stage-label[data-align="right"]{transform:translateX(-100%);}
+.atl-stage-label[data-align="right"]{transform:translateX(-100%);}.atl-stage-label[data-align="side"]{writing-mode:vertical-rl;letter-spacing:.08em;transform:translate(-50%,-50%);}
 .atl-spatial-stage[data-motion="off"] .atl-spatial-plane{transform:none;}
 .atl-spatial-stage[data-motion="off"] .atl-map-cell{transform:translate3d(var(--tile-x),var(--tile-y),0);transition:none;}
 .atl-spatial-stage.atl-resizing,.atl-spatial-stage.atl-resizing .atl-spatial-plane,.atl-spatial-stage.atl-resizing .atl-map-cell{transition:none;}
@@ -1311,7 +1311,7 @@ box-shadow:0 0 0 1px rgba(0,0,0,.04) inset;}
 img.brand__mark{display:block;width:auto;height:38px;}
 .ftr__brand img.brand__mark{height:44px;}
 @media (max-width:760px){img.brand__mark{height:32px;}}
-/* 縦長の画面（スマホ・縦向きタブレット）: 最初の画面が黒い文字だけにならないよう、見出しの上に明るい写真を6×2のタイルで置く */
+/* 縦長の画面: 見出しの上に写真を6×2で置く */
 .hero__mosaic{display:none;}
 @media (max-width:1180px){
 .hero__mosaic{--cx:4;--cy:1;display:block;position:relative;height:clamp(150px,30vw,300px);margin:0 var(--gut);margin-top:14px;background:url("../img/n-sail.webp") 50% 62% / cover no-repeat;
