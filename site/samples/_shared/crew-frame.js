@@ -47,3 +47,13 @@
     open(form.getAttribute('data-sample-form') || '送信', document.activeElement);
   });
 })();
+
+/* 枠の中（プレビュー）で開かれたときだけ、ページを移るたびに外側の画面もこのページの先頭へ戻す */
+(function () {
+  if (window === window.top) return;
+  function toTop() {
+    var first = document.body && document.body.firstElementChild;
+    if (first && !location.hash) first.scrollIntoView({ block: 'nearest' });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', toTop); else toTop();
+})();
