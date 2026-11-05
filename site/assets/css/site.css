@@ -1298,7 +1298,7 @@ box-shadow:0 0 0 1px rgba(0,0,0,.04) inset;}
 @keyframes f36on{0%,100%{transform:translateZ(calc(var(--w)*.06));}50%{transform:translateZ(calc(var(--w)*.227));}}
 @media (max-width:860px){
 .sec--m36{padding-block:56px 300px;}
-.float36{top:auto;bottom:-70px;right:-26vw;--w:118vw;transform:none;}
+.float36{top:auto;bottom:-70px;--w:min(118vw,520px);right:calc(var(--w)*-.22);transform:none;}
 .m36band{grid-template-columns:1fr;}
 .m36band__no{font-size:64px;margin-bottom:8px;}
 }
@@ -1307,7 +1307,7 @@ box-shadow:0 0 0 1px rgba(0,0,0,.04) inset;}
 .ah__band{position:relative;z-index:3;background:#000;}
 @media (max-width:860px){.ah{flex-direction:column;}.ah::after{order:-1;}}
 @media (max-width:860px){.ah__band{order:1;}.ah__peek{order:2;}}
-/* ロゴは原本の画像（青いC＋矢印のA＋つながる点）を使う。図形で描き直さない */
+/* ロゴは原本の画像を使う。描き直さない */
 img.brand__mark{display:block;width:auto;height:38px;}
 .ftr__brand img.brand__mark{height:44px;}
 @media (max-width:760px){img.brand__mark{height:32px;}}
@@ -1321,7 +1321,7 @@ img.brand__mark{display:block;width:auto;height:38px;}
 }
 @keyframes mosaicOn{0%,100%{opacity:1;}50%{opacity:.55;}}
 @media (prefers-reduced-motion:reduce){.hero__mosaic::after{animation:none;}}
-/* 立体36マス: --w で伸縮 */
+
 .ah--type{overflow:visible;z-index:2;}
 .float36--type{top:58%;right:max(-60px,calc((100vw - 1440px) / 2 - 40px));--w:max(min(600px,46vw),min(41.7vw,75vh));z-index:1;}
 .float36--type .float36__plane i{background:#ece5da;}
@@ -1335,8 +1335,8 @@ img.brand__mark{display:block;width:auto;height:38px;}
 .ah--type + .tp-toc,.ah--type ~ *{position:relative;}
 .ah--type .ah__inner{position:relative;z-index:3;}
 @media (max-width:860px){
-.ah--type{padding-bottom:250px;}
-.float36--type{top:auto;bottom:-90px;right:-18vw;--w:104vw;transform:none;}
+.ah--type{padding-bottom:min(64vw,300px);}
+.float36--type{top:auto;bottom:-90px;--w:min(104vw,480px);right:calc(var(--w)*-.17);transform:none;}
 }
 .ah--type{z-index:auto;}.ah--type ~ .tp-toc{z-index:3;}.ah--type ~ .tp-toc .tp-toc__l,.ah--type ~ .tp-toc .tp-toc__h{position:relative;}@media (max-width:860px){.ah--type ~ .tp-toc .tp-toc__h{background:#fff;display:inline-block;padding-right:8px;}}
 /* 料金ページ: 4プランの範囲を、積み重なるタイル（1枚＝1ページ、茶色＝原稿・画像・ロゴも整える）で見せる */

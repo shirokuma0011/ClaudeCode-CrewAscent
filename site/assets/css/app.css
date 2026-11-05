@@ -77,7 +77,7 @@ body[data-page="industries"] .idx-head h2{font-size:clamp(18px,1.6vw,21px)!impor
 .rs-mast .rs-mast__inner > *{max-width:600px}
 .rs-mast .float36--type{top:55%;--w:max(min(520px,40vw),min(36.1vw,65vh));right:-4vw}
 .rs-mast ~ *{position:relative;z-index:3}
-@media (max-width:860px){.rs-mast{padding-bottom:240px}.rs-mast .float36--type{top:auto;bottom:-80px;right:-18vw;--w:104vw}}
+@media (max-width:860px){.rs-mast{padding-bottom:min(62vw,290px)}.rs-mast .float36--type{top:auto;bottom:-80px;--w:min(104vw,480px);right:calc(var(--w)*-.17)}}
 /* 立体の36マス（タイプ説明・診断結果）: マスを押すとそのタイプのページへ */
 .float36--type .float36__plane i{pointer-events:auto;}
 .float36__go{position:absolute;inset:0;z-index:1;cursor:pointer;}
