@@ -65,6 +65,25 @@
     ss.set(NAV, { t: Date.now() });
   }, true);
 
+  /* 次のページを先に読む: サイト内のリンクに指が触れた・カーソルが乗った時点で取りに行く。
+     押したときにはもう手元にあるので、ページの切り替えが軽くなる。1ページにつき1回だけ */
+  var fetched = {};
+  var prefetch = function (ev) {
+    var a = ev.target && ev.target.closest ? ev.target.closest('a[href]') : null;
+    if (!a || a.target === '_blank' || a.origin !== location.origin || a.hasAttribute('download')) return;
+    var url = a.href.split('#')[0];
+    if (!/\.html$|\/$/.test(url) || url === location.href.split('#')[0] || fetched[url]) return;
+    fetched[url] = true;
+    try {
+      var l = document.createElement('link');
+      l.rel = 'prefetch'; l.href = url;
+      document.head.appendChild(l);
+    } catch (e) { /* noop */ }
+  };
+  document.addEventListener('pointerover', prefetch, { passive: true });
+  document.addEventListener('touchstart', prefetch, { passive: true });
+  document.addEventListener('focusin', prefetch);
+
   var pos = ss.get(POS), byLink = ss.get(NAV), restoreNext = ss.get(BACK);
   ss.del(NAV);
   var fresh = function (o, ms) { return o && Date.now() - (o.t || 0) < ms; };
