@@ -40,26 +40,26 @@ html .pg-sub .ah h1{font-weight:600;letter-spacing:.06em}
 .pg-sub .rd-scenes figure{border-radius:4px 4px 0 0}
 .pg-sub .rd-grow{overflow:visible}
 /* 全下層ページの最初の画面: 生成りの面に濃い文字（左の文字の列だけ）。右の図は暗いカードのまま */
-html body.pg-sub :is(.ah,.ah.ah--type,.ah--product,.phead){background:linear-gradient(180deg,#f4efe6,#eee5d6) !important;color:var(--ink)}
-html body.pg-sub :is(.hx__main,.ah__main,.wk-head__main,.phead__title,.phead__lead,.ah--utility .wrap,.ah__inner>div:first-child) :is(h1,dd,b,strong,a:not(.btn),li){color:var(--ink)}
-html body.pg-sub :is(.hx__main,.ah__main,.wk-head__main,.ah--utility .wrap,.ah__inner>div:first-child) :is(.ah__lead,p,span:not(.blocker-inline):not(.btn *)){color:#4d463f}
-html body.pg-sub .phead :is(.phead__title,.phead__title *){color:var(--ink)}html body.pg-sub .phead .phead__lead{color:#4d463f}
-html body.pg-sub :is(.hx__main,.ah__main,.wk-head__main,.phead,.ah--utility) :is(.eyebrow,.kicker,dt,.lbl){color:var(--c4)}
-html body.pg-sub :is(.ah,.phead) :is(.ah__facts,.ah__facts2,.ah__meta,.ah__facts>div,.ah__facts2>div,.ah__meta>div,.ah__peek){border-color:#d8cdbd}
-html body.pg-sub .ah .ah__peek{color:var(--ink)}
-html body.pg-sub .hx-panel{box-shadow:0 18px 40px rgba(50,35,20,.22);border-radius:6px;overflow:hidden}
-html body.pg-sub .hx__main .btn--onink{border-color:var(--ink);color:var(--ink)}
+html body.pg-sub:not([data-page="plans"]) :is(.ah,.ah.ah--type,.ah--product,.phead){background:linear-gradient(180deg,#f4efe6,#eee5d6) !important;color:var(--ink)}
+html body.pg-sub:not([data-page="plans"]) :is(.hx__main,.ah__main,.wk-head__main,.phead__title,.phead__lead,.ah--utility .wrap,.ah__inner>div:first-child) :is(h1,dd,b,strong,a:not(.btn),li){color:var(--ink)}
+html body.pg-sub:not([data-page="plans"]) :is(.hx__main,.ah__main,.wk-head__main,.ah--utility .wrap,.ah__inner>div:first-child) :is(.ah__lead,p,span:not(.blocker-inline):not(.btn *)){color:#4d463f}
+html body.pg-sub:not([data-page="plans"]) .phead :is(.phead__title,.phead__title *){color:var(--ink)}html body.pg-sub:not([data-page="plans"]) .phead .phead__lead{color:#4d463f}
+html body.pg-sub:not([data-page="plans"]) :is(.hx__main,.ah__main,.wk-head__main,.phead,.ah--utility) :is(.eyebrow,.kicker,dt,.lbl){color:var(--c4)}
+html body.pg-sub:not([data-page="plans"]) :is(.ah,.phead) :is(.ah__facts,.ah__facts2,.ah__meta,.ah__facts>div,.ah__facts2>div,.ah__meta>div,.ah__peek){border-color:#d8cdbd}
+html body.pg-sub:not([data-page="plans"]) .ah .ah__peek{color:var(--ink)}
+html body.pg-sub:not([data-page="plans"]) .hx-panel{box-shadow:0 18px 40px rgba(50,35,20,.22);border-radius:6px;overflow:hidden}
+html body.pg-sub:not([data-page="plans"]) .hx__main .btn--onink{border-color:var(--ink);color:var(--ink)}
 .pg-sub .breadcrumb{border-bottom:0}
 
 /* 下層ページの最初の画面: ページごとの色の写真を右半分に敷き、図のカードを重ねる。左の面はページの色をうすく */
 body.pg-sub{--pk:var(--c4)}
-html body.pg-sub :is(.ah,.phead){position:relative;isolation:isolate;background:color-mix(in srgb,var(--pk) 13%,#f7f2ea) !important}
-html body.pg-sub[data-hero] :is(.ah,.phead)::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;right:0;width:50%;background:var(--hero) center/cover no-repeat}
-html body.pg-sub[data-hero] :is(.ah,.phead)::after{content:"";position:absolute;z-index:-1;top:0;bottom:0;right:calc(50% - 1px);width:120px;background:linear-gradient(90deg,color-mix(in srgb,var(--pk) 13%,#f7f2ea),transparent);transform:translateX(100%)}
-html body.pg-sub[data-hero] .hx-panel{box-shadow:0 24px 60px rgba(20,12,4,.38)}
-html body.pg-sub :is(.hx__main,.ah__main,.wk-head__main) .eyebrow{display:inline-block;padding:4px 10px;background:var(--pk);color:#fff !important}
-html body.pg-sub :is(.hx__main,.ah__main) h1{font-size:clamp(30px,3vw,42px) !important}
-@media (max-width:860px){html body.pg-sub[data-hero] :is(.ah,.phead)::before{width:100%;height:220px;top:auto;bottom:0;opacity:1}html body.pg-sub[data-hero] :is(.ah,.phead)::after{display:none}html body.pg-sub[data-hero] :is(.ah,.phead){padding-bottom:150px}}
+html body.pg-sub:not([data-page="plans"]) :is(.ah,.phead){position:relative;isolation:isolate;background:color-mix(in srgb,var(--pk) 13%,#f7f2ea) !important}
+html body.pg-sub[data-hero]:not([data-page="plans"]) :is(.ah,.phead)::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;right:0;width:50%;background:var(--hero) center/cover no-repeat}
+html body.pg-sub[data-hero]:not([data-page="plans"]) :is(.ah,.phead)::after{content:"";position:absolute;z-index:-1;top:0;bottom:0;right:calc(50% - 1px);width:120px;background:linear-gradient(90deg,color-mix(in srgb,var(--pk) 13%,#f7f2ea),transparent);transform:translateX(100%)}
+html body.pg-sub[data-hero]:not([data-page="plans"]) .hx-panel{box-shadow:0 24px 60px rgba(20,12,4,.38)}
+html body.pg-sub:not([data-page="plans"]) :is(.hx__main,.ah__main,.wk-head__main) .eyebrow{display:inline-block;padding:4px 10px;background:var(--pk);color:#fff !important}
+html body.pg-sub:not([data-page="plans"]) :is(.hx__main,.ah__main) h1{font-size:clamp(30px,3vw,42px) !important}
+@media (max-width:860px){html body.pg-sub[data-hero]:not([data-page="plans"]) :is(.ah,.phead)::before{width:100%;height:220px;top:auto;bottom:0;opacity:1}html body.pg-sub[data-hero]:not([data-page="plans"]) :is(.ah,.phead)::after{display:none}html body.pg-sub[data-hero]:not([data-page="plans"]) :is(.ah,.phead){padding-bottom:150px}}
 body[data-page="services"]{--hero:url("../img/hero-services.webp")}body[data-page="services"]{--pk:var(--c1)}
 body[data-page="plans"]{--hero:url("../img/hero-plans.webp")}body[data-page="plans"]{--pk:var(--c4)}
 body[data-page="process"]{--hero:url("../img/hero-process.webp")}body[data-page="process"]{--pk:var(--c3)}
@@ -71,17 +71,17 @@ body[data-page="faq"]{--hero:url("../img/hero-faq.webp")}body[data-page="faq"]{-
 body[data-page="contact"]{--hero:url("../img/hero-contact.webp")}body[data-page="contact"]{--pk:var(--c3)}
 body[data-page="guide"]{--hero:url("../img/hero-guide.webp")}body[data-page="guide"]{--pk:var(--c4)}
 body[data-page="works"]{--hero:url("../img/hero-works.webp")}body[data-page="works"]{--pk:var(--c1)}
-html body.pg-sub[data-hero] .ah.hx::before,html body.pg-sub[data-hero] .ah.hx::after{content:"" !important}
-html body.pg-sub[data-hero] .ah.hx::before{z-index:-1;inset:0 0 0 auto;width:50%;display:block;opacity:1;filter:none;background:var(--hero) center/cover no-repeat}
-html body.pg-sub[data-hero] .ah.hx::after{display:block;inset:0 auto 0 auto;right:calc(50% - 1px);width:120px;aspect-ratio:auto;transform:translateX(100%);background:linear-gradient(90deg,color-mix(in srgb,var(--pk) 13%,#f7f2ea),transparent);filter:none}
-html body.pg-sub[data-hero] .ah.hx .hx__inner{position:relative;z-index:1}
-@media (max-width:860px){html body.pg-sub[data-hero] .ah.hx::before{inset:auto 0 0 0;width:100%;height:200px;aspect-ratio:auto}html body.pg-sub[data-hero] .ah.hx::after{display:none}html body.pg-sub[data-hero] .ah.hx{padding-bottom:130px}}
-html body.pg-sub[data-hero] :is(.ah,.phead)::before,html body.pg-sub[data-hero] :is(.ah,.phead)::after{-webkit-mask:none !important;mask:none !important}
+html body.pg-sub[data-hero]:not([data-page="plans"]) .ah.hx::before,html body.pg-sub[data-hero]:not([data-page="plans"]) .ah.hx::after{content:"" !important}
+html body.pg-sub[data-hero]:not([data-page="plans"]) .ah.hx::before{z-index:-1;inset:0 0 0 auto;width:50%;display:block;opacity:1;filter:none;background:var(--hero) center/cover no-repeat}
+html body.pg-sub[data-hero]:not([data-page="plans"]) .ah.hx::after{display:block;inset:0 auto 0 auto;right:calc(50% - 1px);width:120px;aspect-ratio:auto;transform:translateX(100%);background:linear-gradient(90deg,color-mix(in srgb,var(--pk) 13%,#f7f2ea),transparent);filter:none}
+html body.pg-sub[data-hero]:not([data-page="plans"]) .ah.hx .hx__inner{position:relative;z-index:1}
+@media (max-width:860px){html body.pg-sub[data-hero]:not([data-page="plans"]) .ah.hx::before{inset:auto 0 0 0;width:100%;height:200px;aspect-ratio:auto}html body.pg-sub[data-hero]:not([data-page="plans"]) .ah.hx::after{display:none}html body.pg-sub[data-hero]:not([data-page="plans"]) .ah.hx{padding-bottom:130px}}
+html body.pg-sub[data-hero]:not([data-page="plans"]) :is(.ah,.phead)::before,html body.pg-sub[data-hero]:not([data-page="plans"]) :is(.ah,.phead)::after{-webkit-mask:none !important;mask:none !important}
 /* 料金の頭: 右の料金の事実は暗いカード、下の4つの範囲は濃い文字 */
-html body.pg-sub .phead .pfacts{padding:18px 22px;background:#1c1a18;border-radius:6px;box-shadow:0 18px 40px rgba(50,35,20,.22)}
-html body.pg-sub .phead .pfacts :is(dd,b,span){color:#fff}html body.pg-sub .phead .pfacts span{color:#cfc8be}html body.pg-sub .phead .pfacts dt{color:var(--c4i)}
-html body.pg-sub .phead .pstacks :is(span,a){color:var(--ink)}html body.pg-sub .phead .phead__peek{color:var(--ink)}
-html body.pg-sub .phead .pstacks{border-color:#d8cdbd}
+html body.pg-sub:not([data-page="plans"]) .phead .pfacts{padding:18px 22px;background:#1c1a18;border-radius:6px;box-shadow:0 18px 40px rgba(50,35,20,.22)}
+html body.pg-sub:not([data-page="plans"]) .phead .pfacts :is(dd,b,span){color:#fff}html body.pg-sub:not([data-page="plans"]) .phead .pfacts span{color:#cfc8be}html body.pg-sub:not([data-page="plans"]) .phead .pfacts dt{color:var(--c4i)}
+html body.pg-sub:not([data-page="plans"]) .phead .pstacks :is(span,a){color:var(--ink)}html body.pg-sub:not([data-page="plans"]) .phead .phead__peek{color:var(--ink)}
+html body.pg-sub:not([data-page="plans"]) .phead .pstacks{border-color:#d8cdbd}
 /* 公開・管理の4つの確認: 明るい色のカード */
 .pg-sub .cycle__step,.pg-sub .cycle__step + .cycle__step{--sc:var(--c1);background:color-mix(in srgb,var(--sc) 9%,#fff);border:1px solid color-mix(in srgb,var(--sc) 35%,transparent);border-top:4px solid var(--sc);color:var(--ink)}
 .pg-sub .cycle__step:nth-child(2){--sc:var(--c3)}.pg-sub .cycle__step:nth-child(3){--sc:var(--c4)}.pg-sub .cycle__step:nth-child(4){--sc:var(--c2)}
@@ -170,3 +170,5 @@ body[data-page="guide-first-decisions"]{--hero:url("../img/hero-guide-first-deci
 body[data-page="guide-sns-vs-website"]{--hero:url("../img/hero-guide-sns-vs-website.webp");--pk:var(--c3)}
 body[data-page="guide-basic-seo"]{--hero:url("../img/hero-guide-basic-seo.webp");--pk:var(--c2)}
 .pg-sub .toc a{text-decoration:none !important;color:var(--ink)}
+/* 料金ページの頭は、以前の黒いままにする（11/05 オーナー判断） */
+html body[data-page="plans"] .breadcrumb{background:#000}html body[data-page="plans"] .breadcrumb :is(a,li){color:var(--on-ink)}
