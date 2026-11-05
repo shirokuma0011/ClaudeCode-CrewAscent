@@ -333,7 +333,7 @@ function hub() {
                   ['area-bl', '実用・情報 × 王道・安心'], ['area-br', 'ブランド・魅力 × 王道・安心']];
   const body = groups.map(([k, label], i) => (CURRENT = { id: `area-${i + 1}` }, sec(String(i + 1).padStart(2, '0'), label, null,
     `<ul class="tp-list">${TYPES.filter((t) => areaClass(t.xIndex, t.yIndex) === k)
-      .map((t) => `<li><a href="type-${t.slug}.html"><span class="tp-list__id">${esc(t.id)}</span>` +
+      .map((t) => `<li style="--r:${Math.floor((parseInt(t.id.slice(2), 10) - 1) / 6)};--c:${(parseInt(t.id.slice(2), 10) - 1) % 6}"><a href="type-${t.slug}.html"><span class="tp-list__map" aria-hidden="true"></span><span class="tp-list__id">${esc(t.id)}</span>` +
         `<b>${esc(t.name)}</b><span class="tp-list__s">${esc(t.oneLiner)}</span></a></li>`).join('')}</ul>`,
     i % 2 ? 'sec--paper2' : ''))).join('\n');
   CURRENT = null;

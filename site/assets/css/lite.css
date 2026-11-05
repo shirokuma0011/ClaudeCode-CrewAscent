@@ -93,3 +93,80 @@ html body.pg-sub .phead .pstacks{border-color:#d8cdbd}
 .pg-sub .marker-list.rd-tiles li *{color:#fff !important}
 body[data-page="plans"]{--pk:var(--c1)}body[data-page="about"]{--pk:var(--c3)}body[data-page="website-guide"]{--pk:var(--c2)}
 body:has(.ah--area-tl){--pk:var(--c1)}body:has(.ah--area-tr){--pk:var(--c2)}body:has(.ah--area-bl){--pk:var(--c3)}body:has(.ah--area-br){--pk:var(--c4)}
+/* 36タイプ一覧: 領域ごとの色のカード。左上に6×6のどこにいるかの小さな盤 */
+#area-1{--ac:var(--c1)}#area-2{--ac:var(--c2)}#area-3{--ac:var(--c3)}#area-4{--ac:var(--c4)}
+.pg-sub [id^="area-"] .idx-head__no{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--ac);color:#fff;font-size:15px}
+.pg-sub [id^="area-"] .idx-head h2{color:var(--ac)}
+.pg-sub .tp-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;border:0}
+.pg-sub .tp-list li{border:0}
+.pg-sub .tp-list a{position:relative;display:grid;grid-template-columns:auto 1fr;grid-template-areas:"map id" "map name" "s s";gap:2px 14px;height:100%;padding:16px 18px;background:color-mix(in srgb,var(--ac) 8%,#fff);border:1px solid color-mix(in srgb,var(--ac) 30%,transparent);border-top:4px solid var(--ac);border-radius:4px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.pg-sub .tp-list a:hover,.pg-sub .tp-list a:focus-visible{transform:translateY(-2px);box-shadow:0 10px 24px rgba(40,30,20,.14)}
+.tp-list__map{grid-area:map;width:42px;height:42px;background:linear-gradient(var(--ac),var(--ac)) calc(var(--c) * 20%) calc(var(--r) * 20%) / calc(100% / 6) calc(100% / 6) no-repeat,repeating-linear-gradient(90deg,transparent 0 6px,#fff 6px 7px),repeating-linear-gradient(0deg,transparent 0 6px,#fff 6px 7px),color-mix(in srgb,var(--ac) 18%,#fff)}
+.pg-sub .tp-list__id{grid-area:id;color:var(--ac);font:700 14px/1.2 var(--mono)}
+.pg-sub .tp-list b{grid-area:name;font:700 17px/1.4 var(--serif);color:var(--ink)}
+.pg-sub .tp-list__s{grid-area:s;margin-top:8px;font-size:13.5px;line-height:1.7;color:var(--tx-2)}
+@media (max-width:900px){.pg-sub .tp-list{grid-template-columns:1fr 1fr}}@media (max-width:560px){.pg-sub .tp-list{grid-template-columns:1fr}}
+.pg-sub .tp-list a,.pg-sub .tp-list a *{text-decoration:none !important;background-image:none}.pg-sub .tp-list{background:none}
+/* FAQ: カテゴリごとに色。質問は Q の札つきのカード、開くと A の札 */
+.faq-group{--ac:var(--c1)}#faq-1{--ac:var(--c3)}#faq-2{--ac:var(--c4)}#faq-3{--ac:var(--c2)}#faq-4{--ac:#6b5a46}
+.pg-sub .faq-group__title{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--ac);color:#fff;border:0;border-radius:4px 4px 0 0}
+.pg-sub .faq-group__title *{color:#fff !important}.pg-sub .faq-group__no{font-family:var(--mono);opacity:.8}.pg-sub .faq-group__en{margin-left:auto;opacity:.7}
+.pg-sub .faq-group{margin-bottom:28px}
+.pg-sub .faq-item{background:#fff;border:1px solid color-mix(in srgb,var(--ac) 25%,transparent);border-top:0}
+.pg-sub .faq-item>summary{position:relative;padding:14px 48px 14px 52px;font-weight:700}
+.pg-sub .faq-item>summary::before{content:"Q";position:absolute;left:14px;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:color-mix(in srgb,var(--ac) 14%,#fff);color:var(--ac);font:700 14px/1 var(--mono)}
+.pg-sub .faq-item[open]>summary{background:color-mix(in srgb,var(--ac) 7%,#fff)}
+.pg-sub .faq-item .faq-body{position:relative;padding:12px 18px 16px 52px;color:var(--tx-2)}
+.pg-sub .faq-item .faq-body::before{content:"A";position:absolute;left:14px;top:12px;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--ac);color:#fff;font:700 14px/1 var(--mono)}
+.pg-sub nav[aria-label="よくある質問のカテゴリ"]{position:sticky;top:96px;align-self:start}
+.pg-sub nav[aria-label="よくある質問のカテゴリ"] .faq-group__title{background:#3a332c}
+.pg-sub nav[aria-label="よくある質問のカテゴリ"] li{--ac:var(--c1);border:0;padding:0;margin:0 0 6px}
+.pg-sub nav[aria-label="よくある質問のカテゴリ"] li:nth-child(2){--ac:var(--c3)}.pg-sub nav[aria-label="よくある質問のカテゴリ"] li:nth-child(3){--ac:var(--c4)}.pg-sub nav[aria-label="よくある質問のカテゴリ"] li:nth-child(4){--ac:var(--c2)}.pg-sub nav[aria-label="よくある質問のカテゴリ"] li:nth-child(5){--ac:#6b5a46}
+.pg-sub nav[aria-label="よくある質問のカテゴリ"] li::before{display:none}
+.pg-sub nav[aria-label="よくある質問のカテゴリ"] a{display:flex;align-items:center;min-height:46px;padding:8px 14px;border-left:5px solid var(--ac);background:color-mix(in srgb,var(--ac) 8%,#fff);color:var(--ink);text-decoration:none;font-weight:700}
+.pg-sub nav[aria-label="よくある質問のカテゴリ"] a:hover{background:color-mix(in srgb,var(--ac) 16%,#fff)}
+/* このサイトについて: 3つの疑問は色のカード、約束する・しないは左右の面 */
+.rd-qa{gap:14px;border:0}
+.rd-qa .qa-grid__item{--ac:var(--c1);padding:20px 22px !important;background:#fff;border:1px solid color-mix(in srgb,var(--ac) 30%,transparent) !important;border-top:4px solid var(--ac) !important;border-radius:4px}
+.rd-qa .qa-grid__item:nth-child(2){--ac:var(--c3)}.rd-qa .qa-grid__item:nth-child(3){--ac:var(--c4)}
+.rd-qa h3{display:flex;gap:10px;align-items:flex-start;color:var(--ac) !important}
+.rd-qa h3::before{content:"?";flex:none;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--ac);color:#fff;font:700 15px/1 var(--mono)}
+.rd-qa p{font-size:14px;line-height:1.8}
+.rd-split{gap:14px}
+.rd-split>div{padding:20px 22px;border-radius:4px}
+.rd-split>div:first-child{background:color-mix(in srgb,var(--c3) 9%,#fff);border:1px solid color-mix(in srgb,var(--c3) 35%,transparent);border-top:4px solid var(--c3)}
+.rd-split>div:last-child{background:repeating-linear-gradient(45deg,#f6f2ec 0 8px,#f0e9df 8px 16px);border:1px dashed #a89b8c;border-top:4px solid #8a8178}
+.rd-split .plan-entry__cap{color:var(--c3);font-weight:700}.rd-split>div:last-child .plan-entry__cap{color:#6f665d}
+.pg-sub .numbered.rd-cards>li{--ac:var(--c1);border-top:4px solid var(--ac) !important;background:color-mix(in srgb,var(--ac) 6%,#fff) !important;border-radius:4px}
+.pg-sub .numbered.rd-cards>li:nth-child(4n+2){--ac:var(--c3)}.pg-sub .numbered.rd-cards>li:nth-child(4n+3){--ac:var(--c4)}.pg-sub .numbered.rd-cards>li:nth-child(4n){--ac:var(--c2)}
+.pg-sub .numbered.rd-cards>li::before{color:var(--ac) !important}
+.pg-sub .numbered.rd-cards>li:first-child{background:var(--pk) !important;border-color:var(--pk) !important}
+.pg-sub .numbered.rd-cards>li:first-child *,.pg-sub .numbered.rd-cards>li:first-child::before{color:#fff !important}
+
+/* ガイド記事: 頭に色の写真、要点は色の枠、章は色の番号、チェックリストは色の札 */
+.pg-sub .article__head{position:relative;max-width:none;margin:0;padding:36px 0 40px;min-height:320px;border-bottom:0;background:color-mix(in srgb,var(--pk) 12%,#f7f2ea);box-shadow:0 0 0 100vmax color-mix(in srgb,var(--pk) 12%,#f7f2ea);clip-path:inset(0 -100vmax)}
+.pg-sub .article__head>*{max-width:min(100%,600px)}
+.pg-sub .article__head::after{content:"";position:absolute;top:24px;bottom:24px;right:0;width:min(42%,540px);background:var(--hero) center/cover no-repeat;border-radius:6px;box-shadow:0 18px 40px rgba(40,25,10,.25)}
+.pg-sub .article__head .eyebrow{display:inline-block;padding:4px 10px;background:var(--pk);color:#fff}
+.pg-sub .article__head .ah__en{color:var(--pk)}
+.pg-sub.article,.pg-sub .article{padding-top:0}
+@media (max-width:860px){.pg-sub .article__head{padding-bottom:240px}.pg-sub .article__head::after{top:auto;bottom:20px;height:200px;width:100%}}
+.pg-sub .article__points{background:color-mix(in srgb,var(--pk) 9%,#fff) !important;border:0 !important;border-left:5px solid var(--pk) !important;border-radius:4px}
+.pg-sub .article__points b{color:var(--pk)}
+.pg-sub .article__main{counter-reset:asec}
+.pg-sub .article__sec{--ac:var(--c1)}
+.pg-sub .article__sec:nth-of-type(4n+2){--ac:var(--c3)}.pg-sub .article__sec:nth-of-type(4n+3){--ac:var(--c4)}.pg-sub .article__sec:nth-of-type(4n){--ac:var(--c2)}
+.pg-sub .article__sec h2{padding:10px 0 10px 16px;border-top:0 !important;border-left:5px solid var(--ac);background:linear-gradient(90deg,color-mix(in srgb,var(--ac) 10%,transparent),transparent 70%);color:var(--ink)}
+.pg-sub .article__sec>p:first-of-type{font-size:16px;color:var(--ink);font-weight:500}
+.pg-sub .toc li{--ac:var(--c1)}.pg-sub .toc li:nth-child(4n+2){--ac:var(--c3)}.pg-sub .toc li:nth-child(4n+3){--ac:var(--c4)}.pg-sub .toc li:nth-child(4n){--ac:var(--c2)}
+.pg-sub .toc a{display:block;padding:6px 10px;border-left:3px solid var(--ac);text-decoration:none}
+.pg-sub .toc a:hover{background:color-mix(in srgb,var(--ac) 10%,#fff)}
+.pg-sub .checklist{display:grid;grid-template-columns:1fr 1fr;gap:8px;border:0}
+.pg-sub .checklist li{padding:10px 14px 10px 40px !important;background:color-mix(in srgb,var(--c3) 8%,#fff);border:1px solid color-mix(in srgb,var(--c3) 30%,transparent) !important;border-radius:4px}
+@media (max-width:640px){.pg-sub .checklist{grid-template-columns:1fr}}
+/* 規約類: 条ごとに色の見出し帯、目次は札 */
+:is(body[data-page="terms"],body[data-page="privacy"],body[data-page="commercial"]) main h2[id^="sec-"]{padding:10px 14px;border-top:0 !important;border-left:5px solid var(--c1);background:color-mix(in srgb,var(--c1) 8%,#fff);border-radius:0 4px 4px 0}
+body[data-page="guide-first-decisions"]{--hero:url("../img/hero-guide-first-decisions.webp");--pk:var(--c1)}
+body[data-page="guide-sns-vs-website"]{--hero:url("../img/hero-guide-sns-vs-website.webp");--pk:var(--c3)}
+body[data-page="guide-basic-seo"]{--hero:url("../img/hero-guide-basic-seo.webp");--pk:var(--c2)}
+.pg-sub .toc a{text-decoration:none !important;color:var(--ink)}
