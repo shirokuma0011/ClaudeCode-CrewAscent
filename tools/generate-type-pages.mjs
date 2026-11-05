@@ -367,7 +367,7 @@ function hub() {
   return HEAD_TOP + `  <title>${esc(title)}</title>\n  <meta name="description" content="${esc(desc)}">\n` +
     AFTER_DESC.replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${esc(title)}">`)
               .replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${esc(desc)}">`) +
-    `</head>\n<body data-page="types" data-archetype="editorial" class="pg pg--editorial pg-sub">\n\n` + HEADER +
+    `</head>\n<body data-page="types" data-hero data-archetype="editorial" class="pg pg--editorial pg-sub">\n\n` + HEADER +
     `<nav class="breadcrumb" aria-label="パンくず"><div class="wrap"><ol><li><a href="index.html">ホーム</a></li>` +
     `<li><a href="diagnosis.html">診断</a></li><li aria-current="page">36タイプ一覧</li></ol></div></nav>\n` +
     `  <main id="main">\n\n` + HUB_HEAD + finder + body +
