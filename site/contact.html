@@ -24,7 +24,7 @@
   <!-- 第8版: スタイルは site.css の1ファイルだけ -->
   <link rel="stylesheet" href="assets/css/site.css?v=20261105i">
   <link rel="stylesheet" href="assets/css/color.css?v=20261105b">
-  <link rel="stylesheet" href="assets/css/read.css?v=20261105a">
+  <link rel="stylesheet" href="assets/css/read.css?v=20261105b">
   <link rel="stylesheet" href="assets/css/heads.css?v=20261105c">
   <script>document.documentElement.className += ' js';</script>
   <script src="assets/js/site-config.js?v=20261105a"></script>
@@ -187,19 +187,28 @@
         <h2 style="font-size:1.25rem">2つのヒアリングから、近いほうを選んでください</h2>
         <p class="caption">どちらもこのサイトの中のページで、相談は無料です。入力の途中はこの端末に下書きとして残ります。どちらから始めても、最後は公式LINEで内容を確かめてから確認PDFをお送りします。迷ったら、はじめての方ヒアリングで構いません。</p>
         <div class="form-choice">
-          <div class="form-choice__item">
-            <p class="form-choice__who">何から決めればよいか、まだ分からない方</p>
+          <div class="form-choice__item fc--easy">
+            <p class="form-choice__who"><i class="ic ic--chat" aria-hidden="true"></i>何から決めればよいか、まだ分からない方</p>
             <h3>はじめての方ヒアリング</h3>
+            <ul class="fc-stats" aria-label="目安"><li><b>約3分</b>かかる時間</li><li><b>15問</b>選ぶだけ</li><li><b>2問</b>必須</li></ul>
+            <p class="fc-meter" aria-hidden="true"><i></i><i></i><i></i><span>短い</span></p>
             <p>どんなサイトが合いそうかを、選ぶだけで答えられる15問で伺います。約3分・必須は2問です。詳しいことは、送信後に公式LINEで伺います。</p>
             <a class="btn btn--primary btn--block" href="consult-form.html" data-form-link>はじめての方ヒアリングを開く</a>
           </div>
-          <div class="form-choice__item">
-            <p class="form-choice__who">作りたいサイトが、ある程度決まっている方</p>
+          <div class="form-choice__item fc--full">
+            <p class="form-choice__who"><i class="ic ic--clip" aria-hidden="true"></i>作りたいサイトが、ある程度決まっている方</p>
             <h3>本格ヒアリング</h3>
+            <ul class="fc-stats" aria-label="目安"><li><b>約25〜40分</b>かかる時間</li><li><b>14段階</b>最大</li><li><b>空欄OK</b>分からない項目</li></ul>
+            <p class="fc-meter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span>くわしい</span></p>
             <p>ページ、原稿、デザイン、写真の受け渡し、プランの選択まで、制作と見積もりに必要なことを最大14の段階で伺います。約25〜40分。分からない項目は空欄のまま送れます。</p>
             <a class="btn btn--secondary btn--block" href="hearing-form.html" data-form-link="hearing">本格ヒアリングを開く</a>
           </div>
         </div>
+        <ol class="rd-steps" aria-label="送ったあとの流れ">
+          <li><i class="ic ic--clip" aria-hidden="true"></i><b>ヒアリングを送る</b><span>どちらか一方でかまいません</span></li>
+          <li><i class="ic ic--chat" aria-hidden="true"></i><b>公式LINEで確かめる</b><span>日曜〜金曜 10:00〜18:00</span></li>
+          <li><i class="ic ic--page" aria-hidden="true"></i><b>確認PDFと見積もり</b><span>そろってから2週間以内</span></li>
+        </ol>
         <div class="intake-line">
           <div>
             <h3>公式LINE</h3>
@@ -209,30 +218,23 @@
           <img src="assets/img/line-qr.jpg" width="120" height="120" alt="クルーアセント公式LINEの友だち追加用QRコード" loading="lazy">
         </div>
       </div>
-      <div class="contact-ways">
-        <div class="contact-ways__item">
-          <h3>フォームやLINEを使わずに相談したいとき</h3>
-          <p>メール <span class="blocker-inline" title="公開前に確定する項目">（公開前に確定: メール）</span> でも受け付けます。件名に「Web制作の相談」と書いて、分かる範囲でお送りください。</p>
-        </div>
-        <div class="contact-ways__item">
-          <h3>受付と返信</h3>
-          <p>営業日 日曜〜金曜 10:00〜18:00（土曜・祝日は休み）<br>返信の目安 通常3営業日以内</p>
-        </div>
-        <div class="contact-ways__item">
-          <h3>相談の前に見ておくと早いもの</h3>
-          <ul class="contact-ways__links">
-            <li><a class="alink" href="plans.html">4つのプランと料金</a></li>
-            <li><a class="alink" href="process.html">相談から公開までの流れ</a></li>
-            <li><a class="alink" href="faq.html">よくある質問</a></li>
-            <li><a class="alink" href="diagnosis.html?mode=quick">16問の診断（結果をフォームに書けます）</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="stack" style="margin-top:var(--s5)">
-        <p class="note"><b>入力していただく主な項目</b> — お名前、事業名、連絡方法、業種、Webサイトの目的、見てほしいお客さん、素材の有無、希望の時期、気になるプラン、診断結果のタイプ（送ると選んだときだけ）、自由記入。分かる範囲で構いません。</p>
-        <p class="note note--info"><b>送信＝契約ではありません</b> — フォーム送信は契約の申込み確定ではありません。内容確認と見積もり・制作条件への同意後に契約となります。</p>
-        <p class="note note--calm"><b>個人情報の利用目的</b> — 入力いただいた情報は、お問い合わせへの回答、見積もり、制作内容の確認、契約・連絡のために利用します。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご確認ください。</p>
-      </div>
+      <p class="rd-callout"><i class="ic ic--shield" aria-hidden="true"></i><span><b>送信＝契約ではありません。</b>内容確認と見積もり・制作条件への同意後に契約となります。</span></p>
+      <h3 class="rd-sub">相談の前に見ておくと早いもの</h3>
+      <ul class="rd-links">
+        <li><a href="plans.html"><i class="ic ic--yen" aria-hidden="true"></i><span>4つのプランと料金</span><i class="rd-arr" aria-hidden="true"></i></a></li>
+        <li><a href="process.html"><i class="ic ic--flow" aria-hidden="true"></i><span>相談から公開までの流れ</span><i class="rd-arr" aria-hidden="true"></i></a></li>
+        <li><a href="faq.html"><i class="ic ic--chat" aria-hidden="true"></i><span>よくある質問</span><i class="rd-arr" aria-hidden="true"></i></a></li>
+        <li><a href="diagnosis.html?mode=quick"><i class="ic ic--layout" aria-hidden="true"></i><span>16問の診断<small>結果をフォームに書けます</small></span><i class="rd-arr" aria-hidden="true"></i></a></li>
+      </ul>
+      <ul class="rd-info">
+        <li><i class="ic ic--cal" aria-hidden="true"></i><span><b>受付</b>日曜〜金曜 10:00〜18:00（土曜・祝日は休み）</span></li>
+        <li><i class="ic ic--redo" aria-hidden="true"></i><span><b>返信の目安</b>通常3営業日以内</span></li>
+        <li><i class="ic ic--mail" aria-hidden="true"></i><span><b>フォームやLINEを使わないとき</b>メール <span class="blocker-inline" title="公開前に確定する項目">（公開前に確定: メール）</span> でも受け付けます。件名に「Web制作の相談」と書いて、分かる範囲でお送りください。</span></li>
+      </ul>
+      <details class="rd-more"><summary>くわしく見る（入力していただく項目、個人情報の扱い）</summary><div class="rd-more__b">
+        <p><b>入力していただく主な項目</b> — お名前、事業名、連絡方法、業種、Webサイトの目的、見てほしいお客さん、素材の有無、希望の時期、気になるプラン、診断結果のタイプ（送ると選んだときだけ）、自由記入。分かる範囲で構いません。</p>
+        <p><b>個人情報の利用目的</b> — 入力いただいた情報は、お問い合わせへの回答、見積もり、制作内容の確認、契約・連絡のために利用します。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご確認ください。</p>
+      </div></details>
     </div>
   </section>
 

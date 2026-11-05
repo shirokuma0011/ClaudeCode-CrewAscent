@@ -24,7 +24,7 @@
   <!-- 第8版: スタイルは site.css の1ファイルだけ -->
   <link rel="stylesheet" href="assets/css/site.css?v=20261105i">
   <link rel="stylesheet" href="assets/css/color.css?v=20261105b">
-  <link rel="stylesheet" href="assets/css/read.css?v=20261105a">
+  <link rel="stylesheet" href="assets/css/read.css?v=20261105b">
   <link rel="stylesheet" href="assets/css/heads.css?v=20261105c">
   <script>document.documentElement.className += ' js';</script>
   <script src="assets/js/site-config.js?v=20261105a"></script>
@@ -208,14 +208,15 @@
   </figure>
         <div>
           <h2 style="font-size:1.375rem">含む内容 / 含まない内容</h2>
-          <ul class="marker-list" style="margin-top:var(--s3)">
+          <div class="rd-yn rd-yn--stack"><div class="rd-pan rd-pan--yes"><p class="rd-pan__h">管理に含むこと</p><ul class="marker-list">
             <li><span class="mk mk--plus" aria-hidden="true"></span><span>サーバー管理、公開状態チェック、自動稼働確認</span></li>
             <li><span class="mk mk--plus" aria-hidden="true"></span><span>ドメイン・SSLまわりの確認</span></li>
             <li><span class="mk mk--plus" aria-hidden="true"></span><span>月1回までの軽微なテキスト修正</span></li>
             <li><span class="mk mk--plus" aria-hidden="true"></span><span>障害時の一次確認</span></li>
+</ul></div><div class="rd-pan rd-pan--no"><p class="rd-pan__h">管理に含まないこと</p><ul class="marker-list">
             <li><span class="mk mk--minus" aria-hidden="true"></span><span>ページ追加、レイアウト・デザイン変更、新規文章作成</span></li>
             <li><span class="mk mk--minus" aria-hidden="true"></span><span>新機能の追加、外部サービス側の有料費用、大幅な画像加工</span></li>
-          </ul>
+</ul></div></div>
           <p class="hint">軽微な修正の例: 文章の一部変更、電話番号・営業時間・リンクの差し替え、画像1〜2点の差し替え（翌月への繰越なし）。</p>
         </div>
       </div>
@@ -249,7 +250,8 @@
           <div class="c5-6 rv rv-d1"><p class="sec-lead">自動更新はしません。満了の前にご案内します。</p></div>
         </div>
       </div>
-      <ol class="timeaxis">
+      <div class="rd-key"><p class="rd-key__h">要点</p><p class="rd-key__t">自動では更新しません。<b>入金がないときは、満了日の翌日に公開を止め、その後30日間はデータを保管します。</b>その間に入金を確認できれば、もう一度公開できます。</p></div>
+<ol class="timeaxis">
         <li class="timeaxis__step">
           <span class="timeaxis__when">満了月の1日</span>
           <b>更新のご案内</b>
@@ -266,11 +268,13 @@
           <span class="timeaxis__d">満了日に最終のお知らせをお送りし、満了日の翌日にサイトの公開を停止します。停止から30日間はデータを保管し、その間に入金を確認できれば再公開します。30日を過ぎたデータはサーバーから削除します。データの引き渡しをご希望の場合は、満了日までにご連絡ください。</span>
         </li>
       </ol>
-      <p class="hint" style="margin-top:var(--s4)">満了日の14日前・7日前・3日前を目安に、確認のご連絡もお送りする予定です。開始日から月末まで15日以上ある場合はその月を1か月目とし、14日以下の場合は月末までを無償期間として翌月1日から数えます。契約期間の途中で解約された場合の返金は、法令上必要な場合や当方の責めに帰すべき事由がある場合を除き、原則ありません。</p>
-      <div class="prose" style="margin-top:var(--s6)">
+      <details class="rd-more"><summary>くわしく見る（お知らせの時期、途中解約、障害時、ドメインの扱い）</summary><div class="rd-more__b">
+<p class="hint" style="margin-top:var(--s4)">満了日の14日前・7日前・3日前を目安に、確認のご連絡もお送りする予定です。開始日から月末まで15日以上ある場合はその月を1か月目とし、14日以下の場合は月末までを無償期間として翌月1日から数えます。契約期間の途中で解約された場合の返金は、法令上必要な場合や当方の責めに帰すべき事由がある場合を除き、原則ありません。</p>
+      <div class="prose">
         <p class="note">本プランは100%の稼働や一定時間内の復旧を保証するSLAではありません。障害時はまず原因を確認し、復旧作業が管理範囲を超える場合は、作業前に費用と対応方法をご案内します。</p>
         <p>サーバーはクルーアセント側の契約で管理する方針です。各プランには.comドメイン1件の取得・更新費が含まれます。ドメインの登録名義はお客様で、取得・更新・DNS設定をクルーアセントが代行します。契約期間中にドメイン会社の料金が上がっても期間中は据え置き、次の更新で変わる場合は事前にお知らせします。ご希望のドメイン名が取れない場合はご相談します。</p>
       </div>
+</div></details>
       <div class="cta-row" style="margin-top:var(--s5)"><a class="btn btn--primary" href="contact.html" data-form-link>管理について相談する</a></div>
     </div>
   </section>
