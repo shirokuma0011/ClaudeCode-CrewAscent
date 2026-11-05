@@ -172,6 +172,18 @@
       var tile = el('i', 'q-' + (r < 3 ? 't' : 'b') + (c < 3 ? 'l' : 'r') + (on ? ' is-on' : ''));
       tile.style.setProperty('--d', String(r + c));
       if (on) tile.appendChild(el('b', '', type.id));
+      else {
+        /* マスを押すと、そのタイプのページへ（マウス用の近道。キーボードは結果の地図から同じ先へ行ける） */
+        var ot = null;
+        try { ot = E.typeForIndices(c, 5 - r); } catch (e2) { ot = null; }
+        if (ot) {
+          var go = el('a', 'float36__go');
+          go.href = 'type-' + ot.slug + '.html';
+          go.tabIndex = -1;
+          go.title = ot.id + ' ' + ot.name;
+          tile.appendChild(go);
+        }
+      }
       plane.appendChild(tile);
     }
     field.appendChild(plane);

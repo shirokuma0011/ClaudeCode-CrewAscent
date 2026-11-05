@@ -78,3 +78,12 @@ body[data-page="industries"] .idx-head h2{font-size:clamp(18px,1.6vw,21px)!impor
 .rs-mast .float36--type{top:55%;width:min(520px,40vw);right:-4vw}
 .rs-mast ~ *{position:relative;z-index:3}
 @media (max-width:860px){.rs-mast{padding-bottom:240px}.rs-mast .float36--type{top:auto;bottom:-80px;right:-18vw;width:104vw}}
+/* 立体の36マス（タイプ説明・診断結果）: マスを押すとそのタイプのページへ */
+.float36--type .float36__plane i{pointer-events:auto;}
+.float36__go{position:absolute;inset:0;z-index:1;cursor:pointer;}
+.float36--type .float36__plane i:has(.float36__go):hover{background:#c9a77e;}
+.float36--type .float36__plane i:has(.float36__go):hover::before{background:#8a6a45;}
+.float36--type .float36__plane i:has(.float36__go):hover::after{background:#a9875f;}
+/* 見出しの枠が立体のマスの上に重なっていても、マスを押せるように（文字とボタンはそのまま押せる） */
+.ah--type .ah__inner,.ah--type .ah__main,.rs-mast .rs-mast__inner{pointer-events:none;}
+.ah--type .ah__main>*,.rs-mast .rs-mast__inner>*{pointer-events:auto;}

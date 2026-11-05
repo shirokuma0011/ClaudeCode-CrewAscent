@@ -386,7 +386,10 @@ function typeField(t) {
   for (let r = 0; r < 6; r++) for (let c = 0; c < 6; c++) {
     const q = (r < 3 ? 't' : 'b') + (c < 3 ? 'l' : 'r');
     const on = r === row && c === col;
-    tiles += `<i class="q-${q}${on ? ' is-on' : ''}" style="--d:${r + c}">${on ? `<b>${esc(t.id)}</b>` : ''}</i>`;
+    /* マスを押すと、そのタイプのページへ（マウス用の近道。キーボードと読み上げは「このタイプの位置」の地図で同じ先へ行ける） */
+    const o = TYPES.find((x) => x.xIndex === c && x.yIndex === 5 - r);
+    const go = o && !on ? `<a class="float36__go" href="type-${o.slug}.html" tabindex="-1" title="${esc(o.id + ' ' + o.name)}"></a>` : '';
+    tiles += `<i class="q-${q}${on ? ' is-on' : ''}" style="--d:${r + c}">${on ? `<b>${esc(t.id)}</b>` : ''}${go}</i>`;
   }
   return `    <div class="float36 float36--type" data-float36 aria-hidden="true"><div class="float36__plane">${tiles}</div></div>`;
 }
