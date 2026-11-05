@@ -119,3 +119,58 @@
 .hx-st a,.hx-st a *,.hx-fq__list a,.hx-fq__list a *{text-decoration:none;}
 .hx-mo__row{grid-template-columns:9.5em minmax(0,1fr);}
 @media (max-width:560px){.hx-mo__row{grid-template-columns:1fr;}}
+
+/* ---------------- サービス: 写真の6マス（1マスずつ、整える作業） ---------------- */
+.hx-sv__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin:0;padding:16px;list-style:none;}
+.hx-sv__grid li{position:relative;margin:0;aspect-ratio:1;overflow:hidden;background:#2a2622;color:#fff;}
+.hx-sv__grid img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.8) brightness(.72);transition:filter .3s,transform .4s;}
+.hx-sv__grid li:hover img{filter:saturate(.95) brightness(.85);transform:scale(1.04);}
+.hx-sv__grid li::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.78),rgba(0,0,0,0) 62%);}
+.hx-sv__grid li.is-on::before{content:"";position:absolute;right:0;top:0;z-index:2;width:22%;aspect-ratio:1;background:#8a5f33;}
+.hx-sv__no,.hx-sv__grid b,.hx-sv__s{position:absolute;left:12px;z-index:1;}
+.hx-sv__no{top:10px;font:700 13px/1 var(--mono);color:#e7d6c2;}
+.hx-sv__grid b{bottom:30px;font:700 15px/1.4 var(--serif);}
+.hx-sv__s{bottom:10px;font-size:13px;color:#d8cfc4;}
+
+/* ---------------- このサイトについて: 大きな写真1枚＋3つの約束 ---------------- */
+.hx-ab__fig{position:relative;margin:0;background:#141210;border:1px solid #2e2a25;}
+.hx-ab__fig img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;filter:saturate(.85);}
+.hx-ab__fig::before{content:"";position:absolute;left:0;top:0;width:12%;aspect-ratio:1;background:#8a5f33;z-index:1;}
+.hx-ab__list{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin:0;padding:4px;list-style:none;}
+.hx-ab__list li{display:grid;gap:4px;margin:0;padding:12px;background:#2a2622;color:#fff;}
+.hx-ab__list li.is-on{background:#8a5f33;}
+.hx-ab__list span{font:700 13px/1 var(--mono);color:#c9a27a;}
+.hx-ab__list li.is-on span{color:#fff;}
+.hx-ab__list b{font:700 15px/1.5 var(--serif);}
+
+/* ---------------- 相談: 3つの段取り（最初の段に、ヒアリングの入口） ---------------- */
+.hx-ct__steps{display:grid;gap:4px;margin:0;padding:16px;list-style:none;background:#141210;border:1px solid #2e2a25;}
+.hx-ct__steps li{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:0;padding:14px 16px;background:#2a2622;color:#fff;}
+.hx-ct__steps li.is-on{background:#3a2c1f;box-shadow:inset 4px 0 0 #8a5f33;}
+.hx-ct__no{grid-row:span 2;font:700 13px/1.6 var(--mono);color:#c9a27a;}
+.hx-ct__steps b{font:700 16px/1.5 var(--serif);}
+.hx-ct__steps li>span:not(.hx-ct__no):not(.hx-ct__go){font-size:13px;color:#d8cfc4;}
+.hx-ct__go{grid-column:2;display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;}
+.hx-ct__go .btn{min-height:46px;}
+.hx-ct__go .btn--line{color:#fff;border-color:#fff;background:transparent;}
+.hx-ct__go .btn--line:hover{background:#fff;color:#000;}
+
+/* ---------------- ガイド: 3本の記事をマスで ---------------- */
+.hx-gd__list{display:grid;gap:4px;margin:0;padding:16px;list-style:none;background:#141210;border:1px solid #2e2a25;}
+.hx-gd__list li{margin:0;}
+.hx-gd__list a{display:grid;grid-template-columns:120px auto 1fr;align-items:center;gap:14px;padding:10px 16px 10px 10px;background:#2a2622;color:#fff;text-decoration:none;transition:background .2s;}
+.hx-gd__list li.is-on a{background:#8a5f33;}
+.hx-gd__list a:hover,.hx-gd__list a:focus-visible{background:#6f4d2b;}
+.hx-gd__list img{width:120px;height:auto;aspect-ratio:4/3;object-fit:cover;}
+.hx-gd__no{font:700 13px/1 var(--mono);color:#c9a27a;}
+.hx-gd__list li.is-on .hx-gd__no{color:#fff;}
+.hx-gd__list b{font:700 15px/1.6 var(--serif);}
+@media (max-width:560px){
+  .hx-sv__grid{grid-template-columns:repeat(2,1fr);padding:10px;}
+  .hx-ab__list{grid-template-columns:1fr;}
+  .hx-ct__steps{padding:10px;}
+  .hx-gd__list{padding:10px;}
+  .hx-gd__list a{grid-template-columns:88px 1fr;}
+  .hx-gd__list img{width:88px;grid-row:span 2;}
+}
+@media (prefers-reduced-motion:reduce){.hx-sv__grid img,.hx-gd__list a{transition:none;}}
