@@ -75,7 +75,7 @@ body[data-page="industries"] .idx-head h2{font-size:clamp(18px,1.6vw,21px)!impor
 .rs-mast{position:relative;overflow:visible}
 .rs-mast .rs-mast__inner{position:relative;z-index:3}
 .rs-mast .rs-mast__inner > *{max-width:600px}
-.rs-mast .float36--type{top:55%;--w:max(min(520px,40vw),min(36.1vw,65vh));right:-4vw}
+.rs-mast .float36--type{top:55%;--w:min(36.1vw,max(520px,65vh));right:-4vw}
 .rs-mast ~ *{position:relative;z-index:3}
 @media (max-width:860px){.rs-mast{padding-bottom:min(62vw,290px)}.rs-mast .float36--type{top:auto;bottom:-80px;--w:min(104vw,480px);right:calc(var(--w)*-.17)}}
 /* 立体の36マス（タイプ説明・診断結果）: マスを押すとそのタイプのページへ */
@@ -92,3 +92,8 @@ body[data-page="industries"] .idx-head h2{font-size:clamp(18px,1.6vw,21px)!impor
 @media (min-width:1441px){.ah--type .float36--type{right:auto;left:calc(50vw + 160px);}}
 /* 開閉の印は .fold__mk の1つだけ（::after の＋と二重にしない） */
 .fold>summary.fold__sum::after{content:none}
+
+/* 結果ページ: 本文列をロゴ・メニューの左端にそろえ、広い画面では立体を本文の右に置く */
+@media (min-width:861px){body[data-page="result"] main :is(.container,.wrap--mid){margin-left:max(0px,calc((100% - var(--max) - var(--gut) * 2) / 2));margin-right:auto}}
+@media (min-width:1441px){.rs-mast .float36--type{right:auto;left:calc(50vw + 258px)}}
+@media (min-width:861px) and (max-width:1099px){body .rs-mast .rs-mast__inner>*{max-width:calc(62vw - 96px)}}
