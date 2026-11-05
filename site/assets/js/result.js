@@ -316,6 +316,13 @@
       fvGrid.appendChild(fvL);
       fvGrid.appendChild(fvR);
       fv.box.appendChild(fvGrid);
+      /* この方針で作った見本サイト。見本がなければ works.js が何も出さない */
+      var ws = el('div', 'wk-strip');
+      ws.hidden = true;
+      ws.setAttribute('data-works-type', type.id);
+      ws.setAttribute('data-works-label', 'この方針で作った見本サイト');
+      ws.setAttribute('data-works-near', near.map(function (n) { return n.type.id; }).join(','));
+      fv.box.appendChild(ws);
       root.appendChild(fv.sec);
     }
 

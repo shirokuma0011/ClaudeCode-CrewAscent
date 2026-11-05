@@ -23,6 +23,7 @@
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CASerif-700.woff2" crossorigin>
   <!-- 第8版: スタイルは site.css の1ファイルだけ -->
   <link rel="stylesheet" href="assets/css/site.css?v=20261101f">
+  <link rel="stylesheet" href="assets/css/works.css?v=20261105b">
   <script>(function(d){var r=d.documentElement;r.classList.remove('no-js');
    var off=/[?&]motion=off/.test(location.search)||
      (window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
@@ -30,6 +31,7 @@
   <script defer src="assets/js/site-config.js?v=20261025a"></script>
   <script defer src="assets/js/top.js?v=20261027a"></script>
   <script defer src="assets/js/main.js?v=20261101"></script>
+  <script defer src="assets/js/works.js?v=20261105b"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"index.html"},{"@type":"ListItem","position":2,"name":"Web制作サービス","item":"services.html"},{"@type":"ListItem","position":3,"name":"4つのプラン・料金","item":"plans.html"}]}</script>
 </head>
 <body data-page="plans" class="pg-sub">
@@ -70,6 +72,7 @@
         <li><a href="plans.html"><span class="mega__ttl">4つのプラン・料金</span><span class="mega__note">8万〜22万円の買い切り</span></a></li>
         <li><a href="process.html"><span class="mega__ttl">制作の流れ</span><span class="mega__note">相談から公開までの9段階</span></a></li>
         <li><a href="management.html"><span class="mega__ttl">公開・管理</span><span class="mega__note">公開後に必要な範囲だけ</span></a></li>
+        <li><a href="works.html"><span class="mega__ttl">見本サイト</span><span class="mega__note">36タイプを架空の事業で</span></a></li>
       </ul>
     </div>
   </div>
@@ -108,6 +111,7 @@
             <li><a href="plans.html">4つのプラン・料金<span>8万〜22万円の買い切り</span></a></li>
             <li><a href="process.html">制作の流れ<span>相談から公開までの9段階</span></a></li>
             <li><a href="management.html">公開・管理<span>公開後に必要な範囲だけ</span></a></li>
+            <li><a href="works.html">見本サイト<span>36タイプを架空の事業で</span></a></li>
           </ul>
         </li>
         <li>
@@ -223,6 +227,7 @@
             <dl class="pentry__facts"><div><dt>料金</dt><dd>80,000円（買い切り／1ページ）</dd></div><div><dt>ページ数</dt><dd>1ページ</dd></div><div><dt>修正回数</dt><dd>1回</dd></div><div><dt>納期目安</dt><dd>1〜2週間</dd></div></dl>
             <div><p class="pentry__cap">このプランに含まれるもの</p><ul class="mlist"><li class="is-yes"><b>文章整理</b><span>支給原稿の誤字・見出しを調整</span></li><li class="is-yes"><b>計測設定</b><span>アクセス解析のコードを後から追加できる作り</span></li></ul></div>
             <div><p class="pentry__cap">このプランでは行わないこと</p><ul class="mlist"><li class="is-no"><b>画像準備</b><span>素材はご支給</span></li><li class="is-no"><b>簡易ロゴ</b><span>既存ロゴ使用</span></li><li class="is-no"><b>外部サービスへの案内</b><span>なし</span></li></ul></div>
+            <p class="wk-plan" data-works-plan="はじめて" hidden></p>
             <div class="pentry__foot"><p>支払い: 着手金50%（制作着手前）、残金50%（公開または納品前）</p><a class="btn btn--line" href="contact.html" data-form-link>はじめてプランについて相談する</a></div>
           </section>
         </details>
@@ -231,6 +236,7 @@
             <dl class="pentry__facts"><div><dt>料金</dt><dd>120,000円（買い切り／3ページ前後）</dd></div><div><dt>ページ数</dt><dd>3ページ前後</dd></div><div><dt>修正回数</dt><dd>1〜2回</dd></div><div><dt>納期目安</dt><dd>2〜3週間</dd></div></dl>
             <div><p class="pentry__cap">このプランに含まれるもの</p><ul class="mlist"><li class="is-yes"><b>文章整理</b><span>フォーム回答を3ページへ整理</span></li><li class="is-yes"><b>画像準備</b><span>商用利用可能な候補素材を少数提案</span></li><li class="is-yes"><b>計測設定</b><span>アクセス解析のコードを後から追加できる作り</span></li></ul></div>
             <div><p class="pentry__cap">このプランでは行わないこと</p><ul class="mlist"><li class="is-no"><b>簡易ロゴ</b><span>既存ロゴ使用</span></li><li class="is-no"><b>外部サービスへの案内</b><span>なし</span></li></ul></div>
+            <p class="wk-plan" data-works-plan="シンプル" hidden></p>
             <div class="pentry__foot"><p>支払い: 着手金50%（制作着手前）、残金50%（公開または納品前）</p><a class="btn btn--line" href="contact.html" data-form-link>シンプルプランについて相談する</a></div>
           </section>
         </details>
@@ -239,6 +245,7 @@
             <dl class="pentry__facts"><div><dt>料金</dt><dd>150,000円（買い切り／5ページ前後）</dd></div><div><dt>ページ数</dt><dd>5ページ前後</dd></div><div><dt>修正回数</dt><dd>1〜2回</dd></div><div><dt>納期目安</dt><dd>3〜4週間</dd></div></dl>
             <div><p class="pentry__cap">このプランに含まれるもの</p><ul class="mlist"><li class="is-yes"><b>文章整理</b><span>情報を5ページへ配分し、見出しと順序を調整</span></li><li class="is-yes"><b>画像準備</b><span>商用利用可能な素材をページごとに選定・調整</span></li><li class="is-yes"><b>計測設定</b><span>アクセス解析のコードを後から追加できる作り</span></li></ul></div>
             <div><p class="pentry__cap">このプランでは行わないこと</p><ul class="mlist"><li class="is-no"><b>簡易ロゴ</b><span>既存ロゴ使用</span></li><li class="is-no"><b>外部サービスへの案内</b><span>なし</span></li></ul></div>
+            <p class="wk-plan" data-works-plan="標準" hidden></p>
             <div class="pentry__foot"><p>支払い: 着手金50%（制作着手前）、残金50%（公開または納品前）</p><a class="btn btn--line" href="contact.html" data-form-link>標準プランについて相談する</a></div>
           </section>
         </details>
@@ -247,6 +254,7 @@
             <dl class="pentry__facts"><div><dt>料金</dt><dd>220,000円（買い切り／5ページ前後）</dd></div><div><dt>ページ数</dt><dd>5ページ前後</dd></div><div><dt>修正回数</dt><dd>1〜3回</dd></div><div><dt>納期目安</dt><dd>4〜6週間</dd></div></dl>
             <div><p class="pentry__cap">このプランに含まれるもの</p><ul class="mlist"><li class="is-yes"><b>文章整理</b><span>回答内容から見出し・紹介文・案内文を作成</span></li><li class="is-yes"><b>画像準備</b><span>選定・生成・トリミング・ページ別調整</span></li><li class="is-yes"><b>簡易ロゴ</b><span>Webサイト用の簡易ロゴ1案</span></li><li class="is-yes"><b>外部サービスへの案内</b><span>フォーム・LINE・SNSへの案内を整理</span></li><li class="is-yes"><b>計測設定</b><span>GA4・Search Consoleの初期設定支援</span></li></ul></div>
             <div><p class="pentry__cap">このプランでは行わないこと</p><ul class="mlist"><li class="is-yes"><b>—</b><span>比較表の項目はすべて含まれます</span></li></ul></div>
+            <p class="wk-plan" data-works-plan="おまかせ" hidden></p>
             <div class="pentry__foot"><p>支払い: 着手金50%（制作着手前）、残金50%（公開または納品前）</p><a class="btn btn--line" href="contact.html" data-form-link>おまかせプランについて相談する</a></div>
           </section>
         </details>
@@ -381,6 +389,7 @@
           <li><a href="plans.html">制作プラン・料金</a></li>
           <li><a href="process.html">制作の流れ</a></li>
           <li><a href="management.html">公開・管理プラン</a></li>
+          <li><a href="works.html">見本サイト</a></li>
           <li><a href="services.html">Web制作サービス</a></li>
         </ul>
       </div>

@@ -167,7 +167,10 @@ function page(t) {
 
   /* 60秒の見本。X軸の方式ごとに操作の種類そのものが変わる */
   S.specimen = (no) => sec(no, '60秒で試せる、この方式の見本', ov.specimen,
-    buildSpecimen(t, specimenFor(t, ov)), 'sec--paper2');
+    buildSpecimen(t, specimenFor(t, ov)) +
+    /* このタイプで作った見本サイト。data/works.json に見本があるときだけ works.js が出す */
+    `\n      <div class="wk-strip" data-works-type="${t.id}" data-works-near="${near.map((n) => n.id).join(',')}" hidden></div>`,
+    'sec--paper2');
 
   S.blueprint = (no) => sec(no, 'サイト設計のたたき台', d.recommendedPurpose,
     dl([['想定する訪問者', d.targetVisitor],
@@ -281,6 +284,8 @@ function page(t) {
     AFTER_DESC.replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${esc(title)}">`)
               .replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${esc(desc)}">`) +
     `<script defer src="assets/js/type-specimen.js?v=20260825"></script>\n` +
+    `<link rel="stylesheet" href="assets/css/works.css?v=20261105b">\n` +
+    `<script defer src="assets/js/works.js?v=20261105b"></script>\n` +
     `<script type="application/ld+json">${jsonld}</script>\n</head>\n` +
     `<body data-page="type" data-archetype="product" data-x="${t.xIndex + 1}" data-y="${t.yIndex + 1}"` +
     ` class="pg pg--product pg-sub pg-type x${t.xIndex + 1} y${t.yIndex + 1}">\n\n` + HEADER +
