@@ -19,6 +19,7 @@
   function card(w) {
     var a = el(w.url ? 'a' : 'div', 'work');
     if (w.url) { a.href = w.url; a.rel = 'noopener'; }
+    if (w.typeId) a.id = 'w-' + w.typeId;
 
     var thumb = el('div', 'work__thumb');
     thumb.appendChild(el('span', 'work__notice', NOTICE));   /* サムネイルにも必ず出す */
@@ -64,16 +65,45 @@
       mount.appendChild(wait);
       return 0;
     }
-    var list = limit ? items.slice(0, limit) : items;
+    var list = (limit ? items.slice(0, limit) : items).slice().sort(function (x, y) {
+      return String(x.typeId || 'ZZ').localeCompare(String(y.typeId || 'ZZ'));
+    });
     var grid = el('div', 'works');
     list.forEach(function (w) { grid.appendChild(card(w)); });
     mount.appendChild(grid);
     return list.length;
   }
 
+  /* 36マスの地図。CA01 が左上、CA36 が右下（診断の地図と同じ並び）。
+     typeId が CA01〜CA36 の見本を、そのマスに写真で置く。見本がないマスは番号だけ。 */
+  function renderMap(mount, items) {
+    var byId = {};
+    items.forEach(function (w) { if (/^CA\d\d$/.test(w.typeId || '')) byId[w.typeId] = w; });
+    mount.textContent = '';
+    for (var n = 1; n <= 36; n++) {
+      var id = 'CA' + (n < 10 ? '0' : '') + n;
+      var w = byId[id];
+      var c = el(w ? 'a' : 'span', 'wk-cell' + (w ? '' : ' wk-cell--none'));
+      c.style.setProperty('--r', Math.floor((n - 1) / 6));
+      c.style.setProperty('--c', (n - 1) % 6);
+      if (w) {
+        c.href = '#w-' + id;
+        c.setAttribute('aria-label', id + ' ' + (w.typeName || '') + '：' + (w.name || ''));
+        if (w.thumb) {
+          var img = new Image();
+          img.src = w.thumbSmall || w.thumb; img.alt = ''; img.decoding = 'async';
+          img.width = 160; img.height = 100;
+          c.appendChild(img);
+        }
+      }
+      c.appendChild(el('b', null, id));
+      mount.appendChild(c);
+    }
+  }
+
   function init() {
     var mounts = Array.prototype.slice.call(document.querySelectorAll('[data-works]'));
-    if (!mounts.length) return;
+    if (!mounts.length && !document.querySelector('[data-works-map]')) return;
     fetch('data/works.json', { cache: 'no-cache' })
       .then(function (r) { return r.json(); })
       .then(function (j) {
@@ -82,6 +112,7 @@
         Array.prototype.forEach.call(document.querySelectorAll('[data-works-status]'), function (s) {
           s.textContent = items.length ? '公開中の見本: ' + items.length + '件（すべて架空の事業です）' : '現在、公開中の見本はありません。';
         });
+        Array.prototype.forEach.call(document.querySelectorAll('[data-works-map]'), function (m) { renderMap(m, items); });
         mounts.forEach(function (m) {
           var n = render(m, items, parseInt(m.getAttribute('data-works'), 10) || 0);
           var host = m.closest('[data-works-host]');
@@ -89,7 +120,9 @@
         });
       })
       .catch(function () {
+        Array.prototype.forEach.call(document.querySelectorAll('[data-works-map]'), function (m) { renderMap(m, items); });
         mounts.forEach(function (m) { render(m, []); });
+        Array.prototype.forEach.call(document.querySelectorAll('[data-works-map]'), function (m) { renderMap(m, []); });
       });
   }
 

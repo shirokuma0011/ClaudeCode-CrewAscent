@@ -26,6 +26,7 @@
   <!-- 第8版: スタイルは site.css の1ファイルだけ -->
   <link rel="stylesheet" href="assets/css/site.css?v=20261101f">
   <link rel="stylesheet" href="assets/css/app.css?v=20261101f">
+  <link rel="stylesheet" href="assets/css/works.css?v=20261105">
   <script>/* 動きの入り切り。?motion=off と、動きを減らす設定で外れる。
      site-config.js の motion:'off' は main.js が後から外します。 */
   (function(d){var r=d.documentElement;r.classList.remove('no-js');
@@ -36,9 +37,9 @@
   <script defer src="assets/js/top.js?v=20261101b"></script>
   <script defer src="assets/js/main.js?v=20261101"></script>
   <script defer src="assets/js/scroll-steady.js?v=20260817r9"></script>
-  <script defer src="assets/js/works.js?v=20261015"></script>
+  <script defer src="assets/js/works.js?v=20261105"></script>
 </head>
-<body class="pg pg-sub">
+<body data-page="works" class="pg pg-sub">
 
 <a class="skip-link" href="#main">本文へスキップ</a>
 
@@ -149,35 +150,38 @@
 
 <main id="main">
 
-  <section class="ah">
-    <div class="wrap ah__inner">
-      <div class="ah__main">
+  <section class="ah wk-head">
+    <div class="wrap wk-head__inner">
+      <div class="wk-head__main">
         <p class="eyebrow">見本サイト</p>
-        <h1><span class="nb">架空の事業で作った、</span><span class="nb">見本サイト。</span></h1>
-        <p class="ah__lead">Web診断36のタイプごとに、架空の事業を想定して作った見本です。実在の顧客や実績ではありません。架空であることを明記できる見本だけを、内容と表示を確認したうえで掲載します。</p>
+        <h1><span class="nw">36タイプの、</span><span class="nw">見本サイト。</span></h1>
+        <p class="ah__lead">Web診断36のタイプごとに、架空の事業で1つずつ作った見本です。マスを押すと、そのタイプの見本へ移ります。</p>
         <p class="ah__meta" data-works-status>見本は、準備ができたものから掲載します。</p>
-      </div>
-      <div class="ah__aside">
-        <dl class="ah__facts">
-          <div><dt>表示ルール</dt><dd>すべて架空の事業を想定した見本</dd><p>一覧・詳細・サムネイルのすべてに表示します</p></div>
-          <div><dt>掲載しないもの</dt><dd>実在しない顧客の声・受注件数</dd><p>成果や検索順位も保証しません</p></div>
+        <dl class="wk-rule">
+          <div><dt>表示</dt><dd>すべて架空の事業を想定した見本です。実在の顧客・実績ではありません。</dd></div>
+          <div><dt>載せないもの</dt><dd>実在しない顧客の声・受注件数・成果の保証</dd></div>
         </dl>
       </div>
+      <figure class="wk-map" aria-label="36タイプの見本の地図">
+        <div class="wk-map__box">
+          <div class="wk-map__field" data-works-map></div>
+          <span class="wk-map__ax wk-map__ax--t">先進・新しさ</span>
+          <span class="wk-map__ax wk-map__ax--b">王道・安心</span>
+          <span class="wk-map__ax wk-map__ax--l">実用・情報</span>
+          <span class="wk-map__ax wk-map__ax--r">ブランド・魅力</span>
+        </div>
+        <figcaption>写真はすべて、架空の事業で作った見本の画面です</figcaption>
+      </figure>
     </div>
   </section>
 
-  <section class="sec">
+  <section class="sec wk-list" id="list">
     <div class="wrap">
-      <div class="opener">
-        <div class="opener__top">
-          <span class="opener__no">W</span>
-          <span class="lbl">Samples</span>
-          <span class="opener__ja">見本サイト一覧</span>
-        </div>
-        <span class="opener__rule rvl" aria-hidden="true"><i></i></span>
+      <div class="shead wk-list__head">
+        <h2 class="shead__t">見本サイト一覧</h2>
+        <p class="shead__d">地図の上の段から順に並べています。カードを押すと見本サイトが開きます。</p>
       </div>
       <div data-works></div>
-      <p class="note">公開後は、各見本に「架空の事業を想定した制作イメージ」と表示します。実在の顧客や受注実績としては掲載しません。</p>
       <div class="btn-row btn-row--mt">
         <a class="btn btn--primary" href="diagnosis.html">自分のタイプを診断する<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
         <a class="btn btn--line" href="contact.html">プラン未定のまま相談する</a>
