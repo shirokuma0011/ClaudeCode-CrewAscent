@@ -24,6 +24,7 @@
   <!-- 第8版: スタイルは site.css の1ファイルだけ -->
   <link rel="stylesheet" href="assets/css/site.css?v=20261105i">
   <link rel="stylesheet" href="assets/css/color.css?v=20261105a">
+  <link rel="stylesheet" href="assets/css/read.css?v=20261105a">
   <link rel="stylesheet" href="assets/css/heads.css?v=20261105c">
   <script>document.documentElement.className += ' js';</script>
   <script src="assets/js/site-config.js?v=20261105a"></script>
@@ -185,7 +186,8 @@
           <div class="c5-6 rv rv-d1"><p class="sec-lead">相談の最初に、この7つを一緒に確認します。診断結果があると、この会話が早く進みます。</p></div>
         </div>
       </div>
-      <ol class="numbered numbered--2col">
+      <div class="rd-key"><p class="rd-key__h">要点</p><p class="rd-key__t">この7つを、相談の最初に一緒に確認します。<b>決まっていない項目があっても、そのまま相談できます。</b></p></div>
+        <ol class="numbered rd-cards">
         <li><h3>Webサイトを作る目的</h3><p>問い合わせを受けたいのか、事業内容を説明したいのか、既存客への案内を置きたいのか。</p></li>
         <li><h3>主に見てほしい相手</h3><p>紹介で来る人、検索で来る人、SNSから来る人。どこから来る人を主に想定するか。</p></li>
         <li><h3>最初に伝える内容</h3><p>最初の画面で何を見せるか。事業名だけでは足りません。</p></li>
@@ -205,7 +207,7 @@
           <h2>プランが変わっても、ここは変わりません。</h2>
           <p class="lead mb-0">料金の差はページ数と、文章・画像・ロゴをどこまで整えるかの差です。土台の作りは共通です。</p>
         </div>
-        <ul class="marker-list">
+        <ul class="marker-list rd-tiles">
           <li><span class="mk mk--plus" aria-hidden="true"></span><span><b>事業内容が伝わる情報構成</b> — 何を、どの順番で読ませるかを設計します</span></li>
           <li><span class="mk mk--plus" aria-hidden="true"></span><span><b>スマートフォンとパソコンの表示</b> — 320pxの狭い画面から確認します</span></li>
           <li><span class="mk mk--plus" aria-hidden="true"></span><span><b>問い合わせにつながる案内の流れ</b> — 読み終わった場所に次の行動を置きます</span></li>
@@ -247,14 +249,18 @@
         </div>
       </div>
           <p>各ページのtitleとdescription、見出しの構造、画像の代替テキスト、内部リンク、モバイル表示、表示速度に配慮します。事業名、サービス内容、対応範囲など、ページに必要な情報を検索エンジンが読み取りやすい形にします。</p>
-          <ul class="marker-list">
+          <div class="rd-yn">
+          <div class="rd-pan rd-pan--yes"><p class="rd-pan__h">行うこと</p><ul class="marker-list">
             <li><span class="mk mk--plus" aria-hidden="true"></span><span>ページごとに違う title と説明文を書きます</span></li>
             <li><span class="mk mk--plus" aria-hidden="true"></span><span>見出しを h1 から順に組み、文章の構造を機械が読める形にします</span></li>
             <li><span class="mk mk--plus" aria-hidden="true"></span><span>意味を伝える画像には内容に合う代替テキストを付け、装飾画像は読み上げ対象から外します</span></li>
             <li><span class="mk mk--plus" aria-hidden="true"></span><span>sitemap.xml と robots.txt を用意します</span></li>
+          </ul></div>
+          <div class="rd-pan rd-pan--no"><p class="rd-pan__h">行わないこと</p><ul class="marker-list">
             <li><span class="mk mk--minus" aria-hidden="true"></span><span>特定キーワードの順位、アクセス数、問い合わせ件数の保証は行いません</span></li>
             <li><span class="mk mk--minus" aria-hidden="true"></span><span>継続的なSEO記事の量産、被リンク施策は含みません</span></li>
-          </ul>
+          </ul></div>
+          </div>
         </div>
         <div class="note note--info">
           <b>順位を約束しない理由</b>
@@ -349,7 +355,7 @@
           <div class="c5-6 rv rv-d1"><p class="sec-lead">先にお伝えします。必要な場合は、対応できる方をご紹介できる範囲でご案内します。</p></div>
         </div>
       </div>
-      <ul class="marker-list marker-list--2col">
+      <ul class="marker-list rd-xlist">
         <li><span class="mk mk--minus" aria-hidden="true"></span><span>36タイプ分の見本サイト制作</span></li>
         <li><span class="mk mk--minus" aria-hidden="true"></span><span>高度な予約、会員、決済、在庫、CMS機能</span></li>
         <li><span class="mk mk--minus" aria-hidden="true"></span><span>継続的な広告運用</span></li>

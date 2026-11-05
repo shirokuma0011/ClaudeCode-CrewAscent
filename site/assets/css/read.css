@@ -1,0 +1,66 @@
+/* 読み方の部品（2026-11-05）
+   長い説明でも「どこを先に見ればよいか」が分かるよう、内容の種類ごとに見せ方を変える。
+   色は color.css の区切りごとの差し色（--acc / 暗い面は --acci）を使う。 */
+
+/* 要点: 区切りの先頭で、その区切りで一番伝えたいことを1〜2文で示す */
+.rd-key{display:grid;grid-template-columns:auto 1fr;gap:4px 20px;align-items:baseline;margin:0 0 28px;padding:18px 22px;background:#fff;border:1px solid var(--rule);border-left:5px solid var(--acc,var(--blue));max-width:900px}
+.rd-key__h{margin:0;font:700 13px/1.7 var(--mono);letter-spacing:.08em;color:var(--acc,var(--blue));white-space:nowrap}
+.rd-key__t{margin:0;font:600 17px/1.8 var(--serif);color:var(--ink)}
+.rd-key__t b{background:linear-gradient(transparent 62%,color-mix(in srgb,var(--acc,#8a5f33) 22%,transparent) 0)}
+.sec--ink .rd-key{background:#141312;border-color:#3a3631;border-left-color:var(--acci,var(--sand))}
+.sec--ink .rd-key__h{color:var(--acci,var(--sand))}
+.sec--ink .rd-key__t{color:#fff}
+@media (max-width:640px){.rd-key{grid-template-columns:1fr;padding:16px 16px 16px 18px}.rd-key__t{font-size:16px}}
+
+/* 番号カード: 順番や数に意味がある項目。1枚目を大きく、残りを枠で並べる */
+.numbered.rd-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;border:0}
+.numbered.rd-cards>li{padding:18px 18px 20px;border:1px solid var(--rule);background:#fff;min-width:0}
+.numbered.rd-cards>li::before{position:static;display:block;margin-bottom:12px;font:700 26px/1 var(--mono);color:var(--acc,var(--blue))}
+.numbered.rd-cards>li:first-child{grid-row:span 2;display:flex;flex-direction:column;justify-content:flex-end;background:var(--ink);border-color:var(--ink);padding:24px}
+.numbered.rd-cards>li:first-child::before{font-size:56px;color:var(--acci,var(--sand));margin-bottom:auto;padding-bottom:24px}
+.numbered.rd-cards>li:first-child h3{color:#fff;font-size:22px}
+.numbered.rd-cards>li:first-child p{color:#d9d2c7;font-size:15px}
+.numbered.rd-cards h3{font-size:17px}
+.numbered.rd-cards p{font-size:14px}
+@media (max-width:900px){.numbered.rd-cards{grid-template-columns:1fr 1fr}.numbered.rd-cards>li:first-child{grid-column:span 2;grid-row:auto}}
+@media (max-width:560px){.numbered.rd-cards{grid-template-columns:1fr}.numbered.rd-cards>li:first-child{grid-column:auto;grid-row:auto}.numbered.rd-cards>li:first-child::before{font-size:40px;padding-bottom:14px}}
+
+/* 約束のタイル: 暗い面の上で、変わらない約束を1つずつ枠に入れる */
+.marker-list.rd-tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.marker-list.rd-tiles>li{flex-direction:column;gap:6px;padding:16px 18px;border:1px solid #3a3631;background:#141312;line-height:1.7}
+.marker-list.rd-tiles>li:first-child{border-top:1px solid #3a3631}
+.marker-list.rd-tiles>li .mk{display:none}
+.marker-list.rd-tiles>li b{display:block;font:600 16px/1.6 var(--serif);color:#fff}
+.marker-list.rd-tiles>li b::before{content:"";display:inline-block;width:10px;height:10px;margin-right:10px;background:var(--acci,var(--sand));vertical-align:1px}
+.marker-list.rd-tiles>li span{color:#cfc7bb;font-size:14px}
+@media (max-width:640px){.marker-list.rd-tiles{grid-template-columns:1fr}}
+
+/* 行う / 行わない: 2枚の枠に分ける。行わない側は点線 */
+.rd-yn{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+.rd-pan{padding:18px 20px 8px;border:1px solid var(--rule);background:#fff;min-width:0}
+.rd-pan--no{background:transparent;border:1.5px dashed #b9ae9f}
+.rd-pan__h{display:flex;align-items:center;gap:10px;margin:0 0 6px;font:700 16px/1.5 var(--serif)}
+.rd-pan__h::before{content:"";flex:none;width:22px;height:22px;background:var(--acc,var(--blue)) no-repeat center/14px;-webkit-mask:none}
+.rd-pan--yes .rd-pan__h::before{background-color:var(--acc,var(--blue));clip-path:polygon(14% 52%,0 66%,38% 100%,100% 22%,86% 8%,38% 72%)}
+.rd-pan--no .rd-pan__h::before{background-color:var(--tx-3);clip-path:polygon(0 14%,14% 0,50% 36%,86% 0,100% 14%,64% 50%,100% 86%,86% 100%,50% 64%,14% 100%,0 86%,36% 50%)}
+.rd-pan .marker-list>li:first-child{border-top:0}
+.rd-pan .marker-list>li:last-child{border-bottom:0}
+@media (max-width:760px){.rd-yn{grid-template-columns:1fr}}
+
+/* 含まないこと: 点線の小さな札を並べる */
+.marker-list.rd-xlist{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.marker-list.rd-xlist>li,.marker-list.rd-xlist>li:first-child,.marker-list.rd-xlist>li:nth-child(2){align-items:center;padding:14px 16px;border:1.5px dashed #b9ae9f;background:rgba(255,255,255,.55);line-height:1.6}
+.marker-list.rd-xlist .mk--minus::before{background:var(--tx-3);height:2px;top:6px;left:0;right:0}
+@media (max-width:900px){.marker-list.rd-xlist{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.marker-list.rd-xlist{grid-template-columns:1fr}}
+
+/* 変わる項目のカード: 上に4色の帯を順に */
+.spec-card{border-top:3px solid var(--c1)}
+.spec-card:nth-child(4n+2){border-top-color:var(--c3)}
+.spec-card:nth-child(4n+3){border-top-color:var(--c4)}
+.spec-card:nth-child(4n){border-top-color:var(--c2)}
+.spec-card__no{font-size:20px;color:var(--ink)}
+
+/* ガイド一覧の写真: 幅の属性に引っぱられて縦に伸びないよう、高さは比率で決める */
+.article-list__th img{height:auto;aspect-ratio:3 / 2}
+.article-list__item a{padding:18px 0}
