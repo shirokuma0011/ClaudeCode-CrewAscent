@@ -3,6 +3,35 @@
   'use strict';
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ページを開いたら一番上から見せる。ブラウザに前の位置を復元させない。
+     ただし #plan-first のような「ページ内の場所を指したリンク」で来たときは、その場所を見せる。
+     プレビュー画面などの枠（iframe）の中で開いたときは、枠の外側の画面が前のページの位置のまま
+     止まるので、ページ最上部の目印を「見える範囲へ」出して外側も一番上へ戻す。 */
+  try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) { /* noop */ }
+  var framed = false;
+  try { framed = window.self !== window.top; } catch (e) { framed = true; }
+  var toTop = function () {
+    if (location.hash && location.hash.length > 1) return;
+    window.scrollTo(0, 0);
+    if (!framed || !document.body) return;
+    try {
+      var probe = document.createElement('span');
+      probe.setAttribute('aria-hidden', 'true');
+      probe.style.cssText = 'position:absolute;top:0;left:0;width:1px;height:1px;pointer-events:none;';
+      document.body.appendChild(probe);
+      probe.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      document.body.removeChild(probe);
+    } catch (e) { /* noop */ }
+  };
+  toTop();
+  window.addEventListener('pageshow', function (ev) { if (ev.persisted) toTop(); });
+  /* 画像の読み込みで高さが変わったあとにも、読み手が動かしていなければもう一度だけ合わせる */
+  var moved = false;
+  ['wheel', 'touchstart', 'keydown'].forEach(function (t) {
+    window.addEventListener(t, function () { moved = true; }, { passive: true, once: true });
+  });
+  window.addEventListener('load', function () { if (!moved) toTop(); });
+
   /* 計測: dataLayer がある場合だけ push する薄い層（個人情報・回答値は送らない） */
   window.crewTrack = function (event, params) {
     try {

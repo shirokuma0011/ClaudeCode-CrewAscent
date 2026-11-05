@@ -112,51 +112,54 @@
   $('#direction-detail').addEventListener('click', () => openType(selected, $('#direction-detail')));
   $('#selection-detail').addEventListener('click', () => openType(selected, $('#selection-detail')));
 
-  /* ---------------- 一覧（検索・絞り込み・12件ずつ） ---------------- */
-  function renderArchive() {
-    const slice = filtered.slice(archivePage * 12, archivePage * 12 + 12);
-    $('#archive-grid').replaceChildren(...slice.map((type) => {
-      const b = typeButton(type, 'atl-archive-card');
-      const heading = element('span', 'atl-direction-card-heading');
-      const identity = element('span', 'atl-direction-identity');
-      identity.append(element('small', '', type.id), element('strong', '', type.name));
-      heading.append(positionDiagram(type), identity, element('span', 'atl-card-arrow', '↗'));
-      const content = element('span', 'atl-direction-card-summary', type.oneLiner);
-      const purpose = element('span', 'atl-direction-card-purpose', type.strengths[0]);
-      b.append(heading, content, purpose);
-      return b;
-    }));
-    $('#empty-results').hidden = filtered.length > 0;
-    $('#result-count').textContent = filtered.length
-      ? filtered.length + 'タイプ中 ' + (archivePage * 12 + 1) + '–' + (archivePage * 12 + slice.length) + 'を表示'
-      : '該当するタイプ：0件';
-    $('#archive-page').textContent = filtered.length ? (archivePage + 1) + ' / ' + Math.ceil(filtered.length / 12) : '0 / 0';
-    $('#archive-prev').disabled = archivePage === 0;
-    $('#archive-next').disabled = (archivePage + 1) * 12 >= filtered.length;
-  }
-  /* 全角「ＣＡ０９」でも当たるよう NFKC で寄せる */
-  const normalize = (value) => value.normalize('NFKC').toLocaleLowerCase('ja').trim();
-  function filterArchive() {
-    const query = normalize($('#type-search').value), x = $('#filter-x').value, y = $('#filter-y').value;
-    filtered = types.filter((t) => (x === '' || t.xIndex === Number(x)) && (y === '' || t.yIndex === Number(y))
-      && normalize([t.id, t.name, t.oneLiner, ...t.designKeywords, ...t.strengths].join(' ')).includes(query));
-    archivePage = 0;
-    renderArchive();
-  }
-  $('#type-search-form').addEventListener('submit', (e) => e.preventDefault());
-  $('#type-search').addEventListener('input', filterArchive);
-  ['#filter-x', '#filter-y'].forEach((s) => $(s).addEventListener('change', filterArchive));
-  $('#filter-reset').addEventListener('click', () => { $('#type-search-form').reset(); filterArchive(); });
   const smooth = () => (matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth');
-  function turnArchive(delta) {
-    archivePage += delta;
+  /* ---------------- 一覧（検索・絞り込み・12件ずつ） ---------------- */
+  /* トップから一覧を外した版でも動くよう、一覧の部品があるときだけ組み立てる */
+  if ($('#archive-grid')) {
+    function renderArchive() {
+      const slice = filtered.slice(archivePage * 12, archivePage * 12 + 12);
+      $('#archive-grid').replaceChildren(...slice.map((type) => {
+        const b = typeButton(type, 'atl-archive-card');
+        const heading = element('span', 'atl-direction-card-heading');
+        const identity = element('span', 'atl-direction-identity');
+        identity.append(element('small', '', type.id), element('strong', '', type.name));
+        heading.append(positionDiagram(type), identity, element('span', 'atl-card-arrow', '↗'));
+        const content = element('span', 'atl-direction-card-summary', type.oneLiner);
+        const purpose = element('span', 'atl-direction-card-purpose', type.strengths[0]);
+        b.append(heading, content, purpose);
+        return b;
+      }));
+      $('#empty-results').hidden = filtered.length > 0;
+      $('#result-count').textContent = filtered.length
+        ? filtered.length + 'タイプ中 ' + (archivePage * 12 + 1) + '–' + (archivePage * 12 + slice.length) + 'を表示'
+        : '該当するタイプ：0件';
+      $('#archive-page').textContent = filtered.length ? (archivePage + 1) + ' / ' + Math.ceil(filtered.length / 12) : '0 / 0';
+      $('#archive-prev').disabled = archivePage === 0;
+      $('#archive-next').disabled = (archivePage + 1) * 12 >= filtered.length;
+    }
+    /* 全角「ＣＡ０９」でも当たるよう NFKC で寄せる */
+    const normalize = (value) => value.normalize('NFKC').toLocaleLowerCase('ja').trim();
+    function filterArchive() {
+      const query = normalize($('#type-search').value), x = $('#filter-x').value, y = $('#filter-y').value;
+      filtered = types.filter((t) => (x === '' || t.xIndex === Number(x)) && (y === '' || t.yIndex === Number(y))
+        && normalize([t.id, t.name, t.oneLiner, ...t.designKeywords, ...t.strengths].join(' ')).includes(query));
+      archivePage = 0;
+      renderArchive();
+    }
+    $('#type-search-form').addEventListener('submit', (e) => e.preventDefault());
+    $('#type-search').addEventListener('input', filterArchive);
+    ['#filter-x', '#filter-y'].forEach((s) => $(s).addEventListener('change', filterArchive));
+    $('#filter-reset').addEventListener('click', () => { $('#type-search-form').reset(); filterArchive(); });
+    function turnArchive(delta) {
+      archivePage += delta;
+      renderArchive();
+      $('#collection-title').focus({ preventScroll: true });
+      $('#collection').scrollIntoView({ behavior: smooth() });
+    }
+    $('#archive-prev').addEventListener('click', () => { if (archivePage > 0) turnArchive(-1); });
+    $('#archive-next').addEventListener('click', () => { if ((archivePage + 1) * 12 < filtered.length) turnArchive(1); });
     renderArchive();
-    $('#collection-title').focus({ preventScroll: true });
-    $('#collection').scrollIntoView({ behavior: smooth() });
   }
-  $('#archive-prev').addEventListener('click', () => { if (archivePage > 0) turnArchive(-1); });
-  $('#archive-next').addEventListener('click', () => { if ((archivePage + 1) * 12 < filtered.length) turnArchive(1); });
-  renderArchive();
 
   /* ---------------- 詳細ダイアログ（閉じる・Escape・背景クリック・フォーカス復帰） ---------------- */
   $('.atl-dialog-close').addEventListener('click', () => dialog.close());
