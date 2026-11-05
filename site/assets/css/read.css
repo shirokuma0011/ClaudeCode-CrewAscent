@@ -316,3 +316,49 @@ html .mode-card--quick .btn--primary{background:var(--c3);border-color:var(--c3)
 .mode-card--quick .rd-mode__sq,.mode-card--full .rd-mode__sq{display:flex;flex-wrap:wrap;gap:4px;margin:0 0 14px}
 .mode-card--quick .rd-mode__sq i,.mode-card--full .rd-mode__sq i{width:14px;height:14px;background:var(--sc)}
 @media (max-width:640px){.mode-card--quick .rd-mode__sq i,.mode-card--full .rd-mode__sq i{width:10px;height:10px}}
+.ic--ok{--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M5 12.5l4.5 4.5L19 7.5%22/%3E%3C/svg%3E")}
+/* Webサイトの考え方: 写真3枚で入口と確かめる場所を見せる */
+.rd-trio{display:grid;grid-template-columns:1fr 1fr 1.15fr;gap:16px;margin-top:28px}
+.rd-trio__c{display:flex;flex-direction:column;background:#fff;border:1px solid color-mix(in srgb,var(--sc) 30%,transparent);border-top:4px solid var(--sc)}
+.rd-trio__c figure{position:relative;margin:0;aspect-ratio:16 / 9;overflow:hidden}
+.rd-trio__c img{width:100%;height:100%;object-fit:cover;display:block}
+.rd-trio__c figcaption{position:absolute;left:12px;top:12px;padding:3px 10px;background:var(--sc);color:#fff;font-size:13px;font-weight:700}
+.rd-trio__c h3{margin:16px 18px 10px;font:700 20px/1.4 var(--serif);color:var(--ink)}
+.rd-trio__c p{display:flex;gap:10px;margin:0 18px 12px;font-size:14px;line-height:1.7;color:var(--tx-2)}
+.rd-trio__c p b{display:block;color:var(--ink);font-size:14px}
+.rd-trio__c .ic{width:22px;height:22px;margin-top:2px}
+.rd-trio__g .ic{color:var(--c3)}.rd-trio__w .ic{color:#9a9087}
+.rd-trio__c--lead{background:color-mix(in srgb,var(--c4) 8%,#fff);box-shadow:0 0 0 2px var(--c4)}
+@media (max-width:900px){.rd-trio{grid-template-columns:1fr}}
+/* 5つの場面: 写真＋番号＋短い一行 */
+.rd-scenes{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:28px 0 0;padding:0;list-style:none}
+.rd-scenes li{display:flex;flex-direction:column}
+.rd-scenes figure{position:relative;margin:0 0 12px;aspect-ratio:4 / 3;overflow:hidden;border-bottom:4px solid var(--sc)}
+.rd-scenes img{width:100%;height:100%;object-fit:cover;display:block}
+.rd-scene__no{position:absolute;left:0;top:0;padding:6px 10px;background:var(--sc);color:#111;font:700 16px/1 var(--mono)}
+.rd-scenes h3{margin:0 0 6px;font:700 16px/1.5 var(--serif)}
+.rd-scenes p{margin:0;font-size:13.5px;line-height:1.7}
+@media (max-width:1100px){.rd-scenes{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:640px){.rd-scenes{grid-template-columns:1fr 1fr}}
+/* 1ページから育てる図 */
+.rd-grow{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin:0;padding:28px;background:#fff;border:1px solid var(--rule)}
+.rd-grow>div{flex:1;min-width:140px;padding:16px;background:color-mix(in srgb,var(--sc) 8%,#fff);border-top:4px solid var(--sc)}
+.rd-grow b{display:block;font:700 18px/1.4 var(--serif);color:var(--sc)}.rd-grow span{font-size:13px;color:var(--tx-2)}
+.rd-grow__pg{display:flex;gap:4px;height:46px;margin:0 0 10px;align-items:flex-end}
+.rd-grow__pg i{width:24px;height:34px;background:#fff;border:2px solid var(--sc);box-shadow:3px -3px 0 color-mix(in srgb,var(--sc) 30%,#fff)}
+.rd-grow>.rd-arr{flex:none;color:#5c4a38}
+.rd-grow figcaption{flex-basis:100%;font-size:13px;color:var(--tx-2)}
+/* 公開前に決める7項目 */
+.rd-seven{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0 0;padding:0;list-style:none}
+.rd-seven li{display:flex;align-items:center;gap:12px;min-height:72px;padding:12px 16px;background:color-mix(in srgb,var(--sc) 8%,#fff);border-left:5px solid var(--sc);font-weight:700;font-size:15px;line-height:1.5;color:var(--ink)}
+.rd-seven li>span{flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--sc);color:#fff;font:700 15px/1 var(--mono)}
+.rd-seven .rd-seven__cta{padding:0;border:0;background:none}
+.rd-seven__cta a{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;height:100%;min-height:72px;padding:12px 16px;background:#6b5a46;color:#fff;text-decoration:none;font-weight:700}
+.rd-seven__cta .rd-arr{color:#fff}
+@media (max-width:900px){.rd-seven{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.rd-seven{grid-template-columns:1fr}}
+.rd-seven__cta a,.rd-seven__cta a *{text-decoration:none !important}
+.rd-grow{flex-wrap:nowrap;gap:10px;padding:22px}.rd-grow>div{min-width:0;padding:14px 12px}
+.rd-grow__pg{height:34px;gap:3px}.rd-grow__pg i{width:14px;height:22px;box-shadow:2px -2px 0 color-mix(in srgb,var(--sc) 30%,#fff)}
+.rd-grow figcaption{position:absolute;left:0;bottom:-26px}.rd-grow{position:relative;margin-bottom:26px}
+@media (max-width:640px){.rd-grow{flex-direction:column;align-items:stretch}.rd-grow>.rd-arr{align-self:center;transform:rotate(90deg)}}

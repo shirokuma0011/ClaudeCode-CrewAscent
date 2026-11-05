@@ -24,7 +24,8 @@
   <!-- 第8版: スタイルは site.css の1ファイルだけ -->
   <link rel="stylesheet" href="assets/css/site.css?v=20261105i">
   <link rel="stylesheet" href="assets/css/color.css?v=20261105b">
-  <link rel="stylesheet" href="assets/css/read.css?v=20261105c">
+  <link rel="stylesheet" href="assets/css/read.css?v=20261105d">
+  <link rel="stylesheet" href="assets/css/lite.css?v=20261105a">
   <link rel="stylesheet" href="assets/css/heads.css?v=20261105c">
   <script>document.documentElement.className += ' js';</script>
   <script src="assets/js/site-config.js?v=20261105a"></script>
@@ -39,7 +40,7 @@
      (window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
    if(!off)r.classList.add('motion');})(document);</script>
 </head>
-<body data-page="website-guide" data-archetype="editorial" class="pg pg--editorial pg-sub">
+<body data-page="website-guide" data-archetype="editorial" class="pg pg--editorial pg-sub pg-lite">
   <a class="skip-link" href="#main">本文へスキップ</a>
 
 <svg width="0" height="0" aria-hidden="true" focusable="false" class="sr-only">
@@ -164,27 +165,24 @@
           <div class="c5-6 rv rv-d1"><p class="sec-lead">それぞれ得意なことが違います。置き換えではなく、役割分担です。</p></div>
         </div>
       </div>
-      <div class="compare-3">
-        <div class="compare-3__col">
+      <div class="rd-trio">
+        <div class="rd-trio__c" style="--sc:var(--c2)">
+          <figure><img src="assets/img/x-baker.webp" width="720" height="480" alt="" loading="lazy" decoding="async"><figcaption>入口</figcaption></figure>
           <h3>SNS</h3>
-          <p class="compare-3__good">得意なこと</p>
-          <p>日々の活動、雰囲気、短いお知らせを届ける。届き方はサービスの仕組みや運用状況で変わります。</p>
-          <p class="compare-3__weak">向かないこと</p>
-          <p>投稿が流れるため、料金や対応範囲を「いつでも同じ順番で」読ませることには向きません。</p>
+          <p class="rd-trio__g"><i class="ic ic--ok" aria-hidden="true"></i><span><b>得意なこと</b>日々の活動、雰囲気、短いお知らせを届ける。届き方はサービスの仕組みや運用状況で変わります。</span></p>
+          <p class="rd-trio__w"><i class="ic ic--noguar" aria-hidden="true"></i><span><b>向かないこと</b>投稿が流れるため、料金や対応範囲を「いつでも同じ順番で」読ませることには向きません。</span></p>
         </div>
-        <div class="compare-3__col">
+        <div class="rd-trio__c" style="--sc:var(--c3)">
+          <figure><img src="assets/img/ph-biz-bicycle.webp" width="760" height="570" alt="" loading="lazy" decoding="async"><figcaption>入口</figcaption></figure>
           <h3>地図・店舗情報サービス</h3>
-          <p class="compare-3__good">得意なこと</p>
-          <p>場所、営業時間、経路、口コミの確認。近くで探している人に見つけてもらいやすい入口です。</p>
-          <p class="compare-3__weak">向かないこと</p>
-          <p>掲載できる項目が決まっているため、事業ごとの考え方や進め方までは説明できません。</p>
+          <p class="rd-trio__g"><i class="ic ic--ok" aria-hidden="true"></i><span><b>得意なこと</b>場所、営業時間、経路、口コミの確認。近くで探している人に見つけてもらいやすい入口です。</span></p>
+          <p class="rd-trio__w"><i class="ic ic--noguar" aria-hidden="true"></i><span><b>向かないこと</b>掲載できる項目が決まっているため、事業ごとの考え方や進め方までは説明できません。</span></p>
         </div>
-        <div class="compare-3__col compare-3__col--lead">
+        <div class="rd-trio__c rd-trio__c--lead" style="--sc:var(--c4)">
+          <figure><img src="assets/img/ph-biz-desk.webp" width="760" height="570" alt="" loading="lazy" decoding="async"><figcaption>確かめる場所</figcaption></figure>
           <h3>Webサイト</h3>
-          <p class="compare-3__good">得意なこと</p>
-          <p>サービス全体、料金、考え方、よくある質問、問い合わせ方法を、読み手が比較・判断しやすい順番へ整理できます。</p>
-          <p class="compare-3__weak">向かないこと</p>
-          <p>公開しただけでは見つけてもらえません。SNSや名刺から案内する流れが必要です。</p>
+          <p class="rd-trio__g"><i class="ic ic--ok" aria-hidden="true"></i><span><b>得意なこと</b>サービス全体、料金、考え方、よくある質問、問い合わせ方法を、読み手が比較・判断しやすい順番へ整理できます。</span></p>
+          <p class="rd-trio__w"><i class="ic ic--noguar" aria-hidden="true"></i><span><b>向かないこと</b>公開しただけでは見つけてもらえません。SNSや名刺から案内する流れが必要です。</span></p>
         </div>
       </div>
     </div>
@@ -277,12 +275,12 @@
           <div class="c5-6 rv rv-d1"><p class="sec-lead">「アクセスを増やす」より前に、この5つが起きています。</p></div>
         </div>
       </div>
-      <ol class="numbered numbered--2col">
-        <li><h3>紹介された人が事業内容を確認する</h3><p>人づてに名前を聞いた人が、依頼してよいかを自分で確かめます。</p></li>
-        <li><h3>問い合わせ前に料金や対応範囲を確認する</h3><p>聞きにくいことを、聞かずに確認できる場所になります。</p></li>
-        <li><h3>SNSで興味を持った人が詳しい説明を読む</h3><p>投稿では伝えきれない前提や条件を補います。</p></li>
-        <li><h3>営業時間外でも質問への答えを見つける</h3><p>よくある質問が、返信を待たずに済む窓口になります。</p></li>
-        <li><h3>検索からサービスを探している人へ届く</h3><p>事業名を知らない人にも、内容から見つけてもらえる可能性が生まれます。</p></li>
+      <ol class="rd-scenes">
+        <li style="--sc:var(--c1i)"><figure><img src="assets/img/x-consult.webp" width="720" height="480" alt="" loading="lazy" decoding="async"><span class="rd-scene__no">01</span></figure><h3>紹介された人が事業内容を確認する</h3><p>人づてに名前を聞いた人が、依頼してよいかを自分で確かめます。</p></li>
+        <li style="--sc:var(--c3i)"><figure><img src="assets/img/x-repair.webp" width="720" height="480" alt="" loading="lazy" decoding="async"><span class="rd-scene__no">02</span></figure><h3>問い合わせ前に料金や対応範囲を確認する</h3><p>聞きにくいことを、聞かずに確認できる場所になります。</p></li>
+        <li style="--sc:var(--c4i)"><figure><img src="assets/img/x-barista.webp" width="720" height="480" alt="" loading="lazy" decoding="async"><span class="rd-scene__no">03</span></figure><h3>SNSで興味を持った人が詳しい説明を読む</h3><p>投稿では伝えきれない前提や条件を補います。</p></li>
+        <li style="--sc:var(--c2i)"><figure><img src="assets/img/x-mobile.webp" width="720" height="480" alt="" loading="lazy" decoding="async"><span class="rd-scene__no">04</span></figure><h3>営業時間外でも質問への答えを見つける</h3><p>よくある質問が、返信を待たずに済む窓口になります。</p></li>
+        <li style="--sc:var(--c1i)"><figure><img src="assets/img/x-library.webp" width="720" height="480" alt="" loading="lazy" decoding="async"><span class="rd-scene__no">05</span></figure><h3>検索からサービスを探している人へ届く</h3><p>事業名を知らない人にも、内容から見つけてもらえる可能性が生まれます。</p></li>
       </ol>
     </div>
   </section>
@@ -290,10 +288,14 @@
     <section class="sec sec--paper2">
     <div class="wrap">
       <div class="figure-band figure-band--flip">
-        <figure class="fig fig--crop">
-    <img src="assets/img/four-perspectives-to-map.webp" width="1800" height="1000" alt="四つの視点が一本にまとまり、6×6のマップへ整理されることを示した図" decoding="async" fetchpriority="low" srcset="assets/img/four-perspectives-to-map-900.webp 900w, assets/img/four-perspectives-to-map.webp 1800w" sizes="(min-width: 900px) 60vw, 92vw">
-    <figcaption>1ページでも、Web上の正式な窓口になります</figcaption>
-  </figure>
+        <figure class="rd-grow" aria-label="1ページで始め、必要に応じて3ページ、5ページへ足していく図">
+          <div style="--sc:var(--c1)"><p class="rd-grow__pg"><i></i></p><b>1ページ</b><span>まず正式な窓口に</span></div>
+          <i class="rd-arr" aria-hidden="true"></i>
+          <div style="--sc:var(--c3)"><p class="rd-grow__pg"><i></i><i></i><i></i></p><b>3ページ前後</b><span>事例や料金を分ける</span></div>
+          <i class="rd-arr" aria-hidden="true"></i>
+          <div style="--sc:var(--c4)"><p class="rd-grow__pg"><i></i><i></i><i></i><i></i><i></i></p><b>5ページ前後</b><span>よくある質問も足す</span></div>
+          <figcaption>1ページでも、Web上の正式な窓口になります</figcaption>
+        </figure>
         <div>
           <h2 style="font-size:1.5rem">1ページから始める意味</h2>
           
@@ -320,8 +322,8 @@
           <p class="lead mb-0">先にお伝えしておきたいことです。</p>
         </div>
         <div>
-          <p>Webサイトは、事業そのものの価値や、日々の発信、紹介、接客に代わるものではありません。公開しただけで問い合わせや検索順位が自動的に上がるものでもありません。</p>
-          <p>公開後も、情報を更新し、SNSや名刺から案内し、届いた問い合わせの内容を見ながら少しずつ整えていくことで役割を果たします。クルーアセントは成果を保証するのではなく、その土台を分かりやすく作ります。</p>
+          <div class="rd-key"><span class="rd-key__h">要点</span><p class="rd-key__t">公開しただけで、<b>問い合わせや検索順位が自動で上がることはありません。</b>更新と案内を続けて、少しずつ役割を果たします。</p></div>
+          <details class="rd-more"><summary>くわしく見る</summary><div class="rd-more__b"><p>Webサイトは、事業そのものの価値や、日々の発信、紹介、接客に代わるものではありません。公開しただけで問い合わせや検索順位が自動的に上がるものでもありません。</p><p>公開後も、情報を更新し、SNSや名刺から案内し、届いた問い合わせの内容を見ながら少しずつ整えていくことで役割を果たします。クルーアセントは成果を保証するのではなく、その土台を分かりやすく作ります。</p></div></details>
         </div>
       </div>
     </div>
@@ -337,15 +339,7 @@
           <div class="c5-6 rv rv-d1"><p class="sec-lead">制作会社へ相談する前に考えておくと、話が早く進みます。無料診断は、この7項目を整理するために作りました。</p></div>
         </div>
       </div>
-      <ul class="checklist">
-        <li>誰に見てほしいか</li>
-        <li>何を依頼してほしいか</li>
-        <li>相手が何を不安に感じやすいか</li>
-        <li>最初に見せる情報は何か</li>
-        <li>料金をどこまで掲載するか</li>
-        <li>どの方法で問い合わせを受けるか</li>
-        <li>公開後に誰が更新・管理するか</li>
-      </ul>
+      <ol class="rd-seven"><li style="--sc:var(--c1)"><span>1</span>誰に見てほしいか</li><li style="--sc:var(--c3)"><span>2</span>何を依頼してほしいか</li><li style="--sc:var(--c4)"><span>3</span>相手が何を不安に感じやすいか</li><li style="--sc:var(--c2)"><span>4</span>最初に見せる情報は何か</li><li style="--sc:var(--c1)"><span>5</span>料金をどこまで掲載するか</li><li style="--sc:var(--c3)"><span>6</span>どの方法で問い合わせを受けるか</li><li style="--sc:var(--c4)"><span>7</span>公開後に誰が更新・管理するか</li><li class="rd-seven__cta"><a href="diagnosis.html">この7項目を<br>16問で整理する<i class="rd-arr" aria-hidden="true"></i></a></li></ol>
     </div>
   </section>
 

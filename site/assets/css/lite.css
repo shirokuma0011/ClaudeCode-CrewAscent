@@ -1,0 +1,41 @@
+/* 明るい下層ページ（11/05 見本: Webサイトの考え方）。
+   TOPの黒い盤の形を借りず、生成りの面・色のある写真・色の番号で組む。ヘッダーとフッターは共通のまま。 */
+.pg-lite .breadcrumb,.pg-lite .crumbs{background:#f4efe6}
+.pg-lite .breadcrumb a,.pg-lite .breadcrumb li,.pg-lite .crumbs a,.pg-lite .crumbs li{color:var(--ink)}
+html .pg-lite .ah{background:linear-gradient(180deg,#f4efe6,#efe7da);color:var(--ink)}
+html .pg-lite .ah h1{color:var(--ink)}
+html .pg-lite .ah .ah__lead{color:var(--tx-2)}
+html .pg-lite .ah .eyebrow{color:var(--c4)}
+/* 入口2つ → 確かめる場所: 写真は加工なし、矢印で流れ */
+html .pg-lite .hx-wg__flow{gap:28px 14px;padding:0;background:none;border:0;box-shadow:none}
+html .pg-lite .hx-wg__in{border-radius:6px;box-shadow:0 10px 24px rgba(60,40,20,.14)}
+html .pg-lite .hx-wg__in img{filter:none}
+html .pg-lite .hx-wg__in::after{background:linear-gradient(to top,rgba(0,0,0,.7),rgba(0,0,0,0) 55%)}
+html .pg-lite .hx-wg__in:nth-child(1) .hx-wg__no{background:var(--c2)}html .pg-lite .hx-wg__in:nth-child(2) .hx-wg__no{background:var(--c3)}
+html .pg-lite .hx-wg__in .hx-wg__no{top:0;left:0;padding:6px 10px;color:#fff}
+html .pg-lite .hx-wg__web{border-radius:6px;background:var(--c4);box-shadow:0 10px 24px rgba(120,60,20,.22)}
+html .pg-lite .hx-wg__web::before{content:"";top:-24px;width:22px;height:18px;background:#5c4a38;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 12'%3E%3Cpath d='M0 5h13V1l5 5-5 5V7H0z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 12'%3E%3Cpath d='M0 5h13V1l5 5-5 5V7H0z'/%3E%3C/svg%3E") center/contain no-repeat;transform:translateX(-50%) rotate(90deg)}
+/* 区切りの見出し: 小さな36マスと黒い線をやめ、色の番号札と短い色線に */
+.pg-lite .opener__top::before{display:none}
+.pg-lite main>section:nth-of-type(4n+1){--acc:var(--c4)}.pg-lite main>section:nth-of-type(4n+2){--acc:var(--c1)}.pg-lite main>section:nth-of-type(4n+3){--acc:var(--c3)}.pg-lite main>section:nth-of-type(4n){--acc:var(--c2)}
+.pg-lite .opener__no{display:inline-grid;place-items:center;min-width:40px;height:40px;padding:0 8px;border-radius:50%;background:var(--acc);color:#fff;font-size:15px;letter-spacing:0}
+.pg-lite .opener__rule{width:64px;height:4px;background:var(--acc);margin:14px 0 14px}
+.pg-lite .sec-title{font-size:clamp(24px,2.3vw,32px)}
+/* 黒い面をやめ、色のごく薄い面に */
+.pg-lite .sec--ink{background:color-mix(in srgb,var(--c1) 7%,#fbf9f5);color:var(--ink)}
+.pg-lite .sec--ink :is(h2,h3,.sec-title,.sec-lead,p){color:var(--ink)}
+.pg-lite .sec--ink .opener__rule{background:var(--acc)}
+.pg-lite main>.sec--ink:last-of-type{background:var(--c4)}
+.pg-lite main>.sec--ink:last-of-type :is(h2,p){color:#fff}
+.pg-lite main>.sec--ink:last-of-type .btn--primary{background:#fff;border-color:#fff;color:#4a2a10}
+.pg-lite main>.sec--ink:last-of-type .btn--onink{border-color:#fff;color:#fff}
+.pg-lite main>.sec--ink:last-of-type .closing{border-top-color:rgba(255,255,255,.5)}
+.pg-lite .sec--paper2{background:#f6f1e8}
+/* すっきり見せる: 見出しを細く大きく、番号札は小さく、面の区切りは余白で */
+html .pg-lite .ah h1{font-weight:600;letter-spacing:.06em}
+.pg-lite .opener__no{min-width:30px;height:30px;font-size:13px}
+.pg-lite .opener__rule{width:40px;height:3px}
+.pg-lite .sec-title{font-weight:600;letter-spacing:.05em}
+.pg-lite .rd-trio__c,.pg-lite .rd-grow,.pg-lite .rd-key,.pg-lite .rd-more{border-radius:4px;overflow:hidden}
+.pg-lite .rd-scenes figure{border-radius:4px 4px 0 0}
+.pg-lite .rd-grow{overflow:visible}
