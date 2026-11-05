@@ -725,7 +725,7 @@ html .sec--cream{background:var(--paper-2);}
 /* パンくず（旧ページは breadcrumb のまま） */
 .breadcrumb{background:#000;color:var(--on-ink-2);font-size:13px;}
 .breadcrumb ol{display:flex;flex-wrap:wrap;gap:4px 0;padding-top:12px;}
-.breadcrumb li + li::before{content:"/";margin:0 10px;color:#555;}
+.breadcrumb li + li::before{content:"/";margin:0 10px;color:#555;}.breadcrumb li{display:flex;align-items:center}
 .breadcrumb a{display:inline-flex;min-height:32px;align-items:center;color:var(--on-ink);text-decoration:underline;text-underline-offset:3px;}
 
 /* ページの頭: 黒の面。右に生成した静物（ページごと）、左に見出し */
@@ -1307,7 +1307,7 @@ box-shadow:0 0 0 1px rgba(0,0,0,.04) inset;}
 .ah__band{position:relative;z-index:3;background:#000;}
 @media (max-width:860px){.ah{flex-direction:column;}.ah::after{order:-1;}}
 @media (max-width:860px){.ah__band{order:1;}.ah__peek{order:2;}}
-/* ロゴは原本の画像を使う。描き直さない */
+/* ロゴは原本の画像のみ */
 img.brand__mark{display:block;width:auto;height:38px;}
 .ftr__brand img.brand__mark{height:44px;}
 @media (max-width:760px){img.brand__mark{height:32px;}}

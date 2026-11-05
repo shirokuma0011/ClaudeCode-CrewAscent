@@ -49,7 +49,7 @@ window.CREW_CONFIG = {
   postalAddress: 'PUBLISH_BLOCKER',
   telephone: 'PUBLISH_BLOCKER',
   email: 'PUBLISH_BLOCKER',
-  businessDays: '日・月〜金 10:00〜18:00（土曜・祝日は休み）',
+  businessDays: '日曜〜金曜 10:00〜18:00（土曜・祝日は休み）',
   replyEstimate: '通常3営業日以内',
   serviceArea: '日本全国（オンライン対応）',
   // ヒアリング（consult-form.html / hearing-form.html）の送り方。
