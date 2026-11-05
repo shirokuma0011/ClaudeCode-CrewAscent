@@ -172,3 +172,15 @@ body[data-page="guide-basic-seo"]{--hero:url("../img/hero-guide-basic-seo.webp")
 .pg-sub .toc a{text-decoration:none !important;color:var(--ink)}
 /* 料金ページの頭は、以前の黒いままにする（11/05 オーナー判断） */
 html body[data-page="plans"] .breadcrumb{background:#000}html body[data-page="plans"] .breadcrumb :is(a,li){color:var(--on-ink)}
+/* 11/05 全体を少しコンパクトに: 区切りの上下、見出し、カードの内側を詰める */
+.pg-sub main>:is(section,article).sec{padding-block:36px}
+.pg-sub main>.sec--ink:last-of-type{padding-block:32px}
+.pg-sub .opener{margin-bottom:18px}.pg-sub .opener__rule{margin:10px 0 10px}
+.pg-sub .sec-title{font-size:clamp(22px,2vw,28px) !important}
+html body.pg-sub:not([data-page="plans"]) :is(.hx__main,.ah__main) h1{font-size:clamp(28px,2.6vw,36px) !important}
+html body.pg-sub:not([data-page="plans"]) .hx__inner{padding-block:28px 32px}
+.pg-sub :is(.rd-trio,.rd-scenes,.rd-seven,.rd-st5,.rd-modes,.rd-compass,.rd-icons,.rd-links,.rd-steps,.tp-list,.grid--4,.scope,.form-choice){margin-top:20px}
+.pg-sub :is(.spec-card,.rd-arm,.rd-st5 li,.rd-mode,.cycle__step,.form-choice__item,.rd-qa .qa-grid__item){padding:14px 16px !important}
+.pg-sub .rd-trio__c h3{margin:12px 16px 8px}.pg-sub .rd-trio__c p{margin:0 16px 10px}
+.pg-sub .rd-compass{gap:16px 32px}
+@media (max-width:860px){.pg-sub main>:is(section,article).sec{padding-block:28px}}
