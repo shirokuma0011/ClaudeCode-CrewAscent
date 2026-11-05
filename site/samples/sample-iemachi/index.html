@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>家で過ごすための訪問看護ステーション いえまち｜使えるか・いくらか・始め方（見本・架空）</title>
+<meta name="description" content="訪問看護と訪問リハビリを、ご自宅で受けられるかを確かめるためのページです。保険の種類ごとの対象条件、1回あたりの自己負担の目安、利用開始までの4つの段階、訪問できる地域をまとめています（架空の事業の見本サイト）。">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="../../assets/brand/icon-32.png" sizes="32x32">
+<link rel="preload" href="fonts/iemachi-mplus1-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../_shared/crew-frame.css?v=20261015">
+<script defer src="../_shared/crew-frame.js?v=20261105"></script>
+<link rel="stylesheet" href="assets/iemachi.css?v=2">
+<script>document.documentElement.classList.add('js');</script>
+<script defer src="assets/iemachi.js?v=2"></script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+<div class="ca-ribbon" role="note" aria-label="見本サイトについて">
+  <a class="ca-ribbon__brand" href="../../index.html" aria-label="クルーアセント（制作）"><img src="../../assets/brand/logo-onink.webp" width="360" height="278" alt=""><span class="ca-ribbon__long">クルーアセント</span></a>
+  <p class="ca-ribbon__text"><b>見本サイト・架空</b><span class="ca-ribbon__long">架空の事業を想定した制作イメージです。事業・価格・住所はすべて架空です。</span></p>
+  <p class="ca-ribbon__links"><a href="../../type-reassuring-information.html">CA19<span class="ca-ribbon__long"> 安心情報型サイト</span></a><a href="design-notes.html"><span class="ca-ribbon__long">この見本の</span>設計メモ</a></p>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="ie-roof" viewBox="0 0 28 24"><path d="M2 12 L14 2 L26 12 M6 9 V22 H22 V9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="head">
+  <div class="head__in">
+    <a class="logo" href="index.html" aria-label="家で過ごすための訪問看護ステーション いえまち（トップ）">
+      <svg width="30" height="26" aria-hidden="true" focusable="false"><use href="#ie-roof"/></svg>
+      <span class="logo__txt"><span class="logo__sub">家で過ごすための訪問看護ステーション</span><span class="logo__name fd">いえまち</span></span>
+    </a>
+    <nav class="gnav" aria-label="ページの切り替え">
+      <a href="index.html" aria-current="page">はじめての方へ</a>
+      <a href="fees.html">料金と自己負担</a>
+    </nav>
+    <p class="head__tel"><span class="head__tel-l">電話で相談</span><span class="num">00-0000-0000</span><span class="tbc">【要確認】</span><span class="head__tel-h">平日 8:30〜17:30</span></p>
+    <a class="btn btn--head" href="#list">条件を確認する</a>
+  </div>
+</header>
+
+<main id="main">
+  <!-- 最初の画面：見出しを上に通し、絵と「このページで分かること」の索引を並べる -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__head">
+      <div>
+        <p class="hero__scope">訪問看護・訪問リハビリ　<span>架空市の東部</span></p>
+        <h1 id="hero-title" class="fd"><span class="nw">訪問看護を使えるか、</span><wbr><span class="nw">ここで確かめられます。</span></h1>
+      </div>
+      <p class="hero__lead">看護師と理学療法士が、ご自宅を訪ねます。ご家族からの最初のお電話でよく聞かれる4つのことを、索引から順に読めます。</p>
+    </div>
+
+    <div class="hero__body">
+      <figure class="hero__pic">
+        <img src="assets/img/01-hero.webp" width="1536" height="864" alt="住宅の玄関先に止めた小さな車と、玄関の前に置かれた訪問用のかばん" fetchpriority="high">
+        <figcaption>画像はAI生成のイメージです</figcaption>
+      </figure>
+
+      <nav class="finder" aria-labelledby="finder-title">
+        <p class="finder__t" id="finder-title"><span>このページで分かること</span><span class="finder__date">更新　<time datetime="2026-11-01">2026年11月1日</time></span></p>
+        <ol>
+          <li><a href="#list"><span class="finder__k">対象</span><span class="finder__v"><b>ご自宅で療養中の方</b><small>主治医の指示書が必要です</small></span><span class="finder__go">条件の表</span></a></li>
+          <li><a href="#fees"><span class="finder__k">料金</span><span class="finder__v"><b>1回 <span class="num">約480</span>円から</b><small>看護師の訪問・介護保険・負担1割の目安</small></span><span class="finder__go">料金の表</span></a></li>
+          <li><a href="#flow"><span class="finder__k">流れ</span><span class="finder__v"><b>相談から早ければ1週間ほど</b><small>介護の認定がある方の場合【要確認】</small></span><span class="finder__go">4つの段階</span></a></li>
+          <li><a href="#area"><span class="finder__k">地域</span><span class="finder__v"><b>架空市の東部5地区</b><small>ステーションから車で約20分</small></span><span class="finder__go">地図</span></a></li>
+        </ol>
+      </nav>
+    </div>
+
+    <div class="hero__act">
+      <a class="btn" href="#list">条件を確認する</a>
+      <ul class="promise">
+        <li>相談だけでも構いません</li>
+        <li>こちらから利用をおすすめする電話はしません</li>
+        <li>返信は翌営業日までに</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="doc">
+    <nav class="index" aria-label="このページの目次">
+      <p class="index__t">目次</p>
+      <ol>
+        <li><a href="#visit">訪問でしてもらえること</a></li>
+        <li><a href="#list">対象になる条件と地域</a></li>
+        <li><a href="#fees">1回あたりの自己負担</a></li>
+        <li><a href="#flow">始めるまでの4つの段階</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+        <li><a href="#contact">相談の方法</a></li>
+      </ol>
+      <a class="index__page" href="fees.html">負担2割・3割と1か月の例は<br>「料金と自己負担」のページへ</a>
+    </nav>
+
+    <div class="doc__body">
+      <!-- 1. 訪問でしてもらえること：道具の絵と、看護・リハビリの一覧 -->
+      <section class="sec visit" id="visit" aria-labelledby="visit-title">
+        <h2 id="visit-title" class="fd">訪問でしてもらえること</h2>
+        <div class="visit__grid">
+          <figure class="visit__pic">
+            <img src="assets/img/02-bag.webp" width="1200" height="900" alt="訪問用のかばんの中身、血圧計、体温計、手袋、タオル、記録用のファイル" loading="lazy">
+            <figcaption>訪問のときに持っていくもの</figcaption>
+          </figure>
+          <div class="visit__lists">
+            <div class="visit__col">
+              <h3><span class="who">看護師</span>看護</h3>
+              <ul class="ticks">
+                <li>体温・血圧・脈などの<span class="nw">体調の確認</span></li>
+                <li>お薬の管理と、飲み方の相談</li>
+                <li>床ずれの予防と手当て</li>
+                <li>点滴やカテーテルなど、<span class="nw">医療の処置</span></li>
+                <li>ご家族の介護の相談</li>
+              </ul>
+            </div>
+            <div class="visit__col">
+              <h3><span class="who">理学療法士</span>リハビリ</h3>
+              <ul class="ticks">
+                <li>ベッドからの起き上がりと<span class="nw">歩く練習</span></li>
+                <li>手すりや段差など、<span class="nw">住まいの工夫の相談</span></li>
+                <li>飲み込みや、<span class="nw">むせにくい姿勢の練習</span></li>
+              </ul>
+            </div>
+            <p class="visit__time">1回の訪問は <b class="num">30〜60</b>分です。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. 対象になる条件：保険の種類ごとの条件表と、寝室の絵 -->
+      <section class="sec cond" id="list" aria-labelledby="list-title">
+        <h2 id="list-title" class="fd">対象になる条件と地域</h2>
+        <div class="cond__grid">
+          <div class="cond__main">
+            <p class="cond__lead">ベッドで過ごす時間が長い方も、通院が難しくなってきた方も対象です。どちらの保険になるかは、年齢・介護の認定・病気の種類で変わります。</p>
+            <p class="cond__must"><b>どちらの保険でも、主治医の指示書が必要です。</b>指示書がないうちは、訪問を始められません。</p>
+            <div class="table-wrap">
+              <table class="tbl tbl--cond">
+                <caption class="sr-only">保険の種類ごとの対象条件</caption>
+                <thead><tr><th scope="col">保険の種類</th><th scope="col">主な対象</th><th scope="col">回数の決め方</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">介護保険</th><td>要支援・要介護の認定を受けた方</td><td>ケアプランで決める</td></tr>
+                  <tr><th scope="row">医療保険</th><td>介護の認定がない方など（病気の種類でも変わります）</td><td>主治医の指示書で決める（上限は【要確認】）</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <figure class="cond__pic">
+            <img src="assets/img/03-room.webp" width="1536" height="1024" alt="自宅の寝室の介護ベッドと手すり、窓辺" loading="lazy">
+          </figure>
+        </div>
+        <details class="words" open data-words>
+          <summary>言葉の言い換え</summary>
+          <dl>
+            <div><dt>主治医の指示書</dt><dd>訪問看護をしてよいという、かかりつけの医師の書類</dd></div>
+            <div><dt>ケアプラン</dt><dd>ケアマネジャーが作る、介護サービスの予定表</dd></div>
+            <div><dt>要支援・要介護</dt><dd>市区町村が認める、介護が必要な度合い</dd></div>
+          </dl>
+        </details>
+        <div class="area" id="area">
+          <div class="area__info">
+            <h3 class="area__cap">訪問できる地域<span>架空市の東部5地区</span></h3>
+            <ul class="districts">
+              <li><svg width="20" height="17" aria-hidden="true" focusable="false"><use href="#ie-roof"/></svg>東町<small>ステーションのある地区</small></li>
+              <li><svg width="20" height="17" aria-hidden="true" focusable="false"><use href="#ie-roof"/></svg>川沿町</li>
+              <li><svg width="20" height="17" aria-hidden="true" focusable="false"><use href="#ie-roof"/></svg>緑ヶ丘</li>
+              <li><svg width="20" height="17" aria-hidden="true" focusable="false"><use href="#ie-roof"/></svg>本郷</li>
+              <li><svg width="20" height="17" aria-hidden="true" focusable="false"><use href="#ie-roof"/></svg>新田</li>
+            </ul>
+            <p class="area__out"><b>範囲の外でも、ご相談ください。</b>近くのステーションをご案内します。</p>
+          </div>
+          <figure class="area__map">
+            <img src="assets/img/05-area.webp" width="1024" height="1024" alt="川と道と家々のある架空の町の俯瞰図。中心のステーションから円形の範囲が広がる" loading="lazy">
+          </figure>
+        </div>
+
+      </section>
+
+      <!-- 3. 1回あたりの自己負担：数字を大きくした料金表 -->
+      <section class="sec fees" id="fees" aria-labelledby="fees-title">
+        <h2 id="fees-title" class="fd">1回あたりの自己負担</h2>
+        <div class="fees__grid">
+          <div class="table-wrap">
+            <table class="tbl tbl--fee">
+              <caption>介護保険・看護師が伺う場合の時間ごとの目安<span>見本の金額・負担1割・保険の自己負担は非課税です</span></caption>
+              <thead><tr><th scope="col">訪問の長さ</th><th scope="col">1回の自己負担</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">30分未満</th><td><span class="yen num">約480</span>円</td></tr>
+                <tr><th scope="row">30分〜1時間</th><td><span class="yen num">約830</span>円</td></tr>
+                <tr><th scope="row">1時間〜1時間半</th><td><span class="yen num">約1,140</span>円</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="fees__side">
+            <dl class="fees__notes">
+              <div><dt>医療保険の方</dt><dd>回数や、月の最初の訪問かどうかで金額が変わります。くわしくはお電話で確かめます。</dd></div>
+              <div><dt>加算があるとき</dt><dd>初回や緊急の訪問、訪問の時間帯、24時間の連絡体制など。金額は【要確認】</dd></div>
+              <div><dt>かからないもの</dt><dd>交通費はいただきません</dd></div>
+            </dl>
+            <a class="more" href="fees.html">負担2割・3割の目安と、1か月の計算の例</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. 始めるまでの4つの段階：横長の絵の帯と4列 -->
+      <section class="sec flow" id="flow" aria-labelledby="flow-title">
+        <h2 id="flow-title" class="fd">始めるまでの4つの段階</h2>
+        <figure class="flow__pic">
+          <img src="assets/img/04-flow.webp" width="2016" height="864" alt="電話、診療所の建物、家の玄関、カレンダーの4つの場面が左から右へ並ぶ" loading="lazy">
+        </figure>
+        <ol class="steps">
+          <li><p class="steps__n">段階 1</p><h3>相談</h3><p>電話かフォームで。ご本人の様子と、<span class="nw">困っていること</span>を伺います。</p><p class="steps__need"><b>用意するもの</b>保険の分かるもの・<span class="nw">介護保険証（あれば）</span></p></li>
+          <li><p class="steps__n">段階 2</p><h3>主治医の指示書</h3><p>主治医に、訪問看護の指示書をお願いします。依頼の連絡は<span class="nw">こちらでします。</span></p><p class="steps__need"><b>用意するもの</b>主治医の名前と病院名</p></li>
+          <li><p class="steps__n">段階 3</p><h3>契約</h3><p>ご自宅で、内容と料金を説明してから契約します。持ち帰って考えても<span class="nw">構いません。</span></p><p class="steps__need"><b>用意するもの</b>印鑑・お薬手帳</p></li>
+          <li><p class="steps__n">段階 4</p><h3>初回の訪問</h3><p>契約で決めた曜日と時間に、<span class="nw">最初の訪問をします。</span></p><p class="steps__need"><b>用意するもの</b>特になし</p></li>
+        </ol>
+        <div class="flow__end">
+        <ul class="flow__notes">
+          <li><b>介護保険で使う方</b>ケアマネジャーとケアプランの調整が要ります。連絡はこちらでします。</li>
+          <li><b>介護の認定がまだの方</b>申請から結果が出るまで時間がかかります。その間のこともご相談ください。</li>
+        </ul>
+        <div class="cta-line">
+          <p>どの段階からでも相談できます。<span>まだ決めていなくても構いません。</span></p>
+          <a class="btn" href="#list">条件を確認する</a>
+        </div>
+        </div>
+      </section>
+
+      <!-- 6. よくある質問：利用の前・始めるとき・利用中 -->
+      <section class="sec faq" id="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title" class="fd">よくある質問</h2>
+        <div class="faq__grid">
+          <div class="faq__group">
+            <h3>利用の前</h3>
+            <details><summary>入院中から相談できますか？</summary><p>できます。退院の前に、病院の相談員の方と一緒に準備を進めます。</p></details>
+            <details><summary>家族だけで相談しても<span class="nw">いいですか？</span></summary><p>構いません。ご本人がいなくても、ご家族からの相談を伺います。</p></details>
+            <a class="faq__tel" href="#contact">ほかのことも電話で聞く</a>
+          </div>
+          <div class="faq__group">
+            <h3>始めるとき</h3>
+            <details><summary>家族が仕事で不在でも、<span class="nw">訪問できますか？</span></summary><p>できます。鍵の受け渡しの方法を、契約のときに決めます。</p></details>
+            <details><summary>何回来てもらえますか？</summary><p>介護保険はケアプランで、医療保険は主治医の指示書で決まります。くわしくはお電話で確かめます。</p></details>
+            <a class="faq__tel" href="#contact">ほかのことも電話で聞く</a>
+          </div>
+          <div class="faq__group">
+            <h3>利用中</h3>
+            <details><summary>夜や休日に体調が<span class="nw">変わったら？</span></summary><p>24時間つながる電話を用意しています（契約した方のみ。料金は【要確認】）。</p></details>
+            <details><summary>途中でやめることは<span class="nw">できますか？</span></summary><p>いつでもやめられます。違約金はありません。</p></details>
+            <a class="faq__tel" href="#contact">ほかのことも電話で聞く</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. 相談の方法：電話を先に。フォームは欄を少なく -->
+      <section class="sec contact" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title" class="fd">相談の方法</h2>
+        <div class="contact__grid">
+          <div class="contact__tel">
+            <div class="telbox">
+              <p class="telbox__l">いちばん早いのは電話です</p>
+              <p class="telbox__n"><span class="nw"><span class="num">00-0000-0000</span><span class="tbc">【要確認】</span></span></p>
+              <p class="telbox__h">平日 8:30〜17:30（訪問中は折り返します）</p>
+              <a class="btn btn--line" href="#contact" data-sample-action="電話をかける">電話をかける</a>
+            </div>
+            <div class="asked">
+              <figure class="asked__pic"><img src="assets/img/extra-call.webp" width="800" height="1000" alt="自宅の椅子に座って電話で話す人の、肩から下" loading="lazy"></figure>
+              <div>
+                <h3>お電話で伺う<span class="nw">3つのこと</span></h3>
+                <ol class="asked__list">
+                  <li>お住まいの地区</li>
+                  <li>ご本人のいまの様子</li>
+                  <li>困っていること</li>
+                </ol>
+                <p class="asked__ready"><b>手元にあると話が早いもの</b>保険の分かるもの・介護保険証、主治医の名前と病院名、お薬手帳、ケアマネジャーの名前（いれば）。なくても相談できます。</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="form" data-sample-form="相談の送信" novalidate>
+            <p class="form__t">相談フォーム<span>24時間受け付けます</span></p>
+            <div class="field">
+              <label for="f-name">お名前<span class="req">必須</span></label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-e">
+              <p class="field__err" id="f-name-e">お名前を入れてください。ご家族のお名前でも構いません。</p>
+            </div>
+            <div class="field">
+              <label for="f-tel">折り返しの電話番号<span class="req">必須</span></label>
+              <input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" required pattern="[0-9０-９\-－ ]{10,14}" aria-describedby="f-tel-e">
+              <p class="field__err" id="f-tel-e">数字で10〜11けた入れてください（例 000-0000-0000）。</p>
+            </div>
+            <div class="field">
+              <label for="f-area">お住まいの地区<span class="req">必須</span></label>
+              <select id="f-area" name="area" required aria-describedby="f-area-e">
+                <option value="">選んでください</option>
+                <option>東町</option><option>川沿町</option><option>緑ヶ丘</option><option>本郷</option><option>新田</option><option>それ以外・分からない</option>
+              </select>
+              <p class="field__err" id="f-area-e">地区を選んでください。分からないときは「それ以外・分からない」を。</p>
+            </div>
+            <div class="field">
+              <label for="f-msg">困っていること<span class="opt">任意</span></label>
+              <textarea id="f-msg" name="msg" rows="2" placeholder="例）来月退院する父の、家での看護について"></textarea>
+            </div>
+            <p class="form__privacy">個人情報の扱い（使う目的・保存の期間・ほかへ渡さないこと）【要確認】</p>
+            <button type="submit" class="btn btn--submit"><span>相談を送る</span></button>
+            <p class="form__state" data-form-state role="status" aria-live="polite" tabindex="-1">返信は翌営業日までに、お電話でします。</p>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="foot__in">
+    <div class="foot__id">
+      <p class="foot__name fd"><svg width="26" height="22" aria-hidden="true" focusable="false"><use href="#ie-roof"/></svg>いえまち</p>
+      <p>家で過ごすための訪問看護ステーション（架空の事業）</p>
+    </div>
+    <dl class="foot__dl">
+      <div><dt>所在地</dt><dd>架空県架空市東町（番地は【要確認】）</dd></div>
+      <div><dt>電話</dt><dd><span class="num">00-0000-0000</span>【要確認】</dd></div>
+      <div><dt>受付</dt><dd>平日 8:30〜17:30</dd></div>
+    </dl>
+    <nav class="foot__nav" aria-label="ページの一覧">
+      <a href="index.html" aria-current="page">はじめての方へ</a>
+      <a href="fees.html">料金と自己負担</a>
+    </nav>
+  </div>
+</footer>
+
+<aside class="ca-credit" aria-labelledby="ca-credit-title">
+  <p class="ca-credit__label">この見本サイトについて</p>
+  <h2 id="ca-credit-title">Web診断36「CA19 安心情報型サイト」の設計方針で、クルーアセントが制作した見本です。</h2>
+  <p>「家で過ごすための訪問看護ステーション いえまち」は架空の事業です。掲載している価格・営業時間・住所・数値はすべて見本用の設定で、実在の店舗・人物・お客様の声は載せていません。</p>
+  <div class="ca-credit__actions">
+    <a class="ca-btn ca-btn--primary" href="../../diagnosis.html?mode=quick">あなたの事業の方向を診断する（16問・無料）</a>
+    <a class="ca-btn" href="design-notes.html">この見本の設計メモ</a>
+    <a class="ca-link" href="../../works.html">見本サイトの一覧</a>
+  </div>
+  <p class="ca-credit__fine">トップと「料金と自己負担」の2ページの見本です。見本の規模は参考で、特定のプランをおすすめするものではありません。</p>
+  <a class="ca-credit__brand" href="../../index.html"><img src="../../assets/brand/logo.webp" width="360" height="278" alt="">クルーアセント（CREW ASCENT）</a>
+</aside>
+
+<dialog class="ca-dialog" id="ca-sample-dialog" aria-labelledby="ca-dialog-title">
+  <h2 id="ca-dialog-title">これは見本サイトです</h2>
+  <p data-ca-dialog-text>この操作は、見本のため実際には行われません。</p>
+  <div class="ca-dialog__actions">
+    <a class="ca-btn" href="../../contact.html">クルーアセントに相談する</a>
+    <button type="button" data-ca-close>閉じる</button>
+  </div>
+</dialog>
+</body>
+</html>

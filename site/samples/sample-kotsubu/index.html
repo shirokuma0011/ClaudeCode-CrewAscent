@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>こつぶ動物病院｜犬と猫の町の病院・診療時間と料金の目安（見本・架空）</title>
+<meta name="description" content="犬と猫の診察・予防接種・健康診断・簡単な手術をする町の動物病院です。曜日ごとの診療時間、料金の目安と追加費用が出るとき、猫と犬で分けた待合、電話とWebの相談の窓口を案内します（架空の事業の見本サイト）。">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="../../assets/brand/icon-32.png" sizes="32x32">
+<link rel="preload" href="fonts/kotsubu-zkg-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../_shared/crew-frame.css?v=20261015">
+<script defer src="../_shared/crew-frame.js?v=20261105"></script>
+<link rel="stylesheet" href="assets/kotsubu.css?v=2">
+<script>document.documentElement.classList.add('js');</script>
+<script defer src="assets/kotsubu.js?v=2"></script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+<div class="ca-ribbon" role="note" aria-label="見本サイトについて">
+  <a class="ca-ribbon__brand" href="../../index.html" aria-label="クルーアセント（制作）"><img src="../../assets/brand/logo-onink.webp" width="360" height="278" alt=""><span class="ca-ribbon__long">クルーアセント</span></a>
+  <p class="ca-ribbon__text"><b>見本サイト・架空</b><span class="ca-ribbon__long">架空の事業を想定した制作イメージです。事業・価格・住所はすべて架空です。</span></p>
+  <p class="ca-ribbon__links"><a href="../../type-helpful-guidance.html">CA21<span class="ca-ribbon__long"> 親切案内型サイト</span></a><a href="design-notes.html"><span class="ca-ribbon__long">この見本の</span>設計メモ</a></p>
+</div>
+
+<header class="head">
+  <div class="head__in">
+    <a class="logo" href="index.html" aria-label="こつぶ動物病院 トップ">
+      <span class="logo__name">こつぶ動物病院</span>
+      <span class="logo__sub">犬と猫の町の病院</span>
+    </a>
+    <nav class="head__nav" aria-label="ページ">
+      <a href="index.html" aria-current="page">トップ</a>
+      <a href="first-visit.html">初めての来院</a>
+    </nav>
+    <p class="head__hours"><span>診療</span><b class="num hl">9:00–12:00</b><b class="num hl">16:00–19:00</b><b class="num hs">9–12時／16–19時</b></p>
+    <a class="btn btn--line btn--s head__tel" href="#ask" data-sample-action="電話をかける">電話する</a>
+    <a class="btn btn--s head__cta" href="first-visit.html#reserve">予約の相談</a>
+  </div>
+  <nav class="steps" aria-label="来院の四段">
+    <ol>
+      <li><a href="#when"><span class="num">1</span><span>こんなとき</span></a></li>
+      <li><a href="#before"><span class="num">2</span><span>来る前</span></a></li>
+      <li><a href="#day"><span class="num">3</span><span>当日</span></a></li>
+      <li><a href="first-visit.html#after"><span class="num">4</span><span>その後</span></a></li>
+    </ol>
+  </nav>
+</header>
+
+<main id="main">
+  <!-- 最初の画面：待合の写真の帯と、その手前の受付の台（見出し・時間表・道順） -->
+  <section class="fv" aria-labelledby="fv-title">
+    <figure class="fv__photo">
+      <img src="assets/img/01-hero.webp" width="1536" height="864" alt="木のベンチが並ぶ明るい待合室と、マットの上で伏せて休む犬" fetchpriority="high">
+      <figcaption>画像はAI生成のイメージです</figcaption>
+    </figure>
+    <div class="desk" data-fv>
+      <div class="desk__copy">
+        <h1 id="fv-title"><span class="nw">犬と猫の、</span><br><span class="nw">町の動物病院です。</span></h1>
+        <p class="desk__lead">診察・予防接種・健康診断・簡単な手術をしています。</p>
+        <p class="desk__price"><span>初診料</span><b class="num">1,650</b>円<span class="desk__tax">税込</span><a href="#before">料金の目安を見る</a></p>
+        <div class="desk__act" id="fv-act">
+          <a class="btn" href="#ask" data-sample-action="電話をかける">電話で問い合わせる</a>
+          <a class="btn btn--line" href="first-visit.html#reserve">Webで予約の相談</a>
+        </div>
+        <p class="desk__note">相談だけでも構いません。無理に検査や治療をすすめません。Webの返信は翌診療日までに。</p>
+      </div>
+      <div class="desk__hours">
+        <p class="desk__h">診療時間<span class="today" data-today>今日の受付は端末の時刻で表示します</span></p>
+        <table class="hours" data-hours>
+          <caption class="sr-only">曜日ごとの診療時間</caption>
+          <thead><tr><td></td><th scope="col" data-d="1">月</th><th scope="col" data-d="2">火</th><th scope="col" data-d="3">水</th><th scope="col" data-d="4">木</th><th scope="col" data-d="5">金</th><th scope="col" data-d="6">土</th><th scope="col" data-d="0">日</th><th scope="col" data-d="h">祝</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">午前<b class="num">9:00–12:00</b></th><td data-d="1"><i class="o">●<span class="sr-only">診療</span></i></td><td data-d="2"><i class="o">●<span class="sr-only">診療</span></i></td><td data-d="3"><i class="o">●<span class="sr-only">診療</span></i></td><td data-d="4"><i class="o">●<span class="sr-only">診療</span></i></td><td data-d="5"><i class="o">●<span class="sr-only">診療</span></i></td><td data-d="6"><i class="o">●<span class="sr-only">診療</span></i></td><td data-d="0"><i class="o">●<span class="sr-only">診療</span></i></td><td data-d="h"><i class="x">休</i></td></tr>
+            <tr><th scope="row">午後<b class="num">16:00–19:00</b></th><td data-d="1"><i class="o">●<span class="sr-only">診療</span></i></td><td data-d="2"><i class="o">●<span class="sr-only">診療</span></i></td><td data-d="3"><i class="x">休</i></td><td data-d="4"><i class="o">●<span class="sr-only">診療</span></i></td><td data-d="5"><i class="o">●<span class="sr-only">診療</span></i></td><td data-d="6"><i class="o">●<span class="sr-only">診療</span></i></td><td data-d="0"><i class="x">休</i></td><td data-d="h"><i class="x">休</i></td></tr>
+          </tbody>
+        </table>
+        <p class="desk__fine">予約なしでも診ます。<a href="#when">診られないとき</a></p>
+      </div>
+      <div class="desk__route">
+        <p class="desk__h">道順</p>
+        <img src="assets/img/05-entrance.webp" width="1536" height="1024" alt="ガラス戸の明るい入口と、その前の駐車スペース">
+        <dl>
+          <div><dt>目印</dt><dd>幹線道路沿いの緑の看板</dd></div>
+          <div><dt>駐車場</dt><dd>入口の前に6台</dd></div>
+        </dl>
+        <a class="more" href="first-visit.html#day">地図と入口の様子</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1 こんなとき：診ること・ほかの病院をご案内すること -->
+  <section class="when" id="when" aria-labelledby="when-title">
+    <div class="when__body">
+      <p class="eyebrow"><span class="num">1</span><span>こんなとき</span></p>
+      <h2 id="when-title">こんなときに、<br>来てください。</h2>
+      <table class="ledger">
+        <caption class="sr-only">診ることと、こんなときに</caption>
+        <tbody>
+          <tr><th scope="row">診察</th><td><span class="nw">体調がおかしい、</span><span class="nw">食べない、</span><span class="nw">吐いたとき</span></td></tr>
+          <tr><th scope="row">予防接種</th><td><span class="nw">混合ワクチン、</span><span class="nw">狂犬病の予防注射</span></td></tr>
+          <tr><th scope="row">健康診断</th><td>血液検査と、からだの触診</td></tr>
+          <tr><th scope="row">簡単な手術</th><td><span class="nw">避妊・去勢、</span><span class="nw">小さなできもの</span></td></tr>
+        </tbody>
+      </table>
+      <h3 class="when__h3">ほかの病院をご案内するとき</h3>
+      <dl class="refer">
+        <div><dt>うさぎや鳥</dt><dd>診られる病院をご案内します。</dd></div>
+        <div><dt>大きな手術</dt><dd>設備のある病院へ紹介します。</dd></div>
+      </dl>
+    </div>
+    <figure class="when__photo">
+      <img src="assets/img/02-exam.webp" width="1200" height="900" alt="ステンレスの診察台と聴診器、たたんだタオル" loading="lazy">
+    </figure>
+  </section>
+
+  <!-- 2 来る前：料金の目安と、追加の費用が出るとき -->
+  <section class="price" id="before" aria-labelledby="price-title">
+    <div class="price__head">
+      <p class="eyebrow"><span class="num">2</span><span>来る前</span></p>
+      <h2 id="price-title">料金の目安と、<br><span class="nw">追加の費用が出るとき。</span></h2>
+      <p>料金はすべて税込です。検査や治療は、先に費用の目安をお伝えしてから行います。</p>
+    </div>
+    <table class="fee">
+      <caption class="sr-only">主な料金の目安（税込）</caption>
+      <thead><tr><th scope="col">項目</th><th scope="col">税込</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">初診料</th><td><b class="num">1,650</b>円</td></tr>
+        <tr><th scope="row">再診料</th><td><b class="num">880</b>円</td></tr>
+        <tr><th scope="row">混合ワクチン（犬）</th><td><b class="num">6,600〜8,800</b>円</td></tr>
+        <tr><th scope="row">混合ワクチン（猫）</th><td><b class="num">4,950〜6,600</b>円</td></tr>
+        <tr><th scope="row">健康診断<small>血液検査つき</small></th><td><b class="num">8,800</b>円〜</td></tr>
+      </tbody>
+    </table>
+    <div class="extra">
+      <h3>追加の費用が出るのは</h3>
+      <ul>
+        <li><b>検査</b>レントゲン・エコーなどが必要になったとき</li>
+        <li><b>お薬</b>出す日数で変わります</li>
+        <li><b>時間外</b>診療時間の外に診るとき</li>
+      </ul>
+      <p class="extra__ok">迷ったら、その日は見送っても構いません。</p>
+      <h3>夜間・休日は</h3>
+      <p>夜間の救急はしていません。水・日の午後と祝日は休みです。そのあいだは、近くの夜間病院へ。</p>
+    </div>
+  </section>
+
+  <!-- 3 当日：猫と犬の待合（院内の見取り図） -->
+  <section class="day" id="day" aria-labelledby="day-title">
+    <div class="day__text">
+      <p class="eyebrow"><span class="num">3</span><span>当日</span></p>
+      <h2 id="day-title">猫と犬は、<br>待つ場所を分けています。</h2>
+      <p>入口を入って左が猫、右が犬の待合です。猫の待合には高い棚があり、キャリーを床より高いところに置けます。</p>
+      <ul class="tips">
+        <li>キャリーにタオルをかけたままで大丈夫です</li>
+        <li>犬はリードを短めに持って、右の待合へ</li>
+        <li>鳴き声が心配なときは、車で待って呼び出しを受けられます</li>
+      </ul>
+    </div>
+    <figure class="plan">
+      <svg viewBox="0 0 600 420" role="img" aria-labelledby="plan-t" focusable="false">
+        <title id="plan-t">院内の見取り図。入口を入って左が猫の待合（高い棚あり）、右が犬の待合（ベンチあり）。奥に診察室1・受付・診察室2</title>
+        <g fill="none" stroke="#22302B" stroke-width="2">
+          <rect x="10" y="10" width="580" height="400" fill="#fff"/>
+          <rect x="10" y="10" width="580" height="104" fill="#F3F4EE"/>
+          <path d="M200 10 V114 M400 10 V114"/>
+          <rect x="10" y="114" width="210" height="296" fill="#F6EEDF"/>
+          <rect x="380" y="114" width="210" height="296" fill="#EAF2EA"/>
+          <path d="M262 410 V380 M338 410 V380" />
+        </g>
+        <rect x="262" y="404" width="76" height="12" fill="#fff"/>
+        <rect x="236" y="88" width="128" height="14" fill="#C9A673"/>
+        <rect x="28" y="134" width="174" height="14" fill="#C9A673"/>
+        <rect x="402" y="358" width="166" height="16" fill="#C9A673"/>
+        <g fill="#22302B" font-family="'Zen Kaku Gothic New',sans-serif" text-anchor="middle">
+          <text x="105" y="62" font-size="22">診察室 1</text>
+          <text x="300" y="62" font-size="22">受付</text>
+          <text x="495" y="62" font-size="22">診察室 2</text>
+          <text x="115" y="180" font-size="21" fill="#4E5A53">高い棚</text>
+          <text x="115" y="262" font-size="28" font-weight="700">猫の待合</text>
+          <text x="485" y="262" font-size="28" font-weight="700">犬の待合</text>
+          <text x="485" y="346" font-size="21" fill="#4E5A53">ベンチ</text>
+          <text x="300" y="370" font-size="22">入口</text>
+        </g>
+        <g fill="none" stroke-width="3" stroke-linecap="round">
+          <path d="M300 340 C 300 290 280 262 228 252" stroke="#9A7440" stroke-dasharray="2 8"/>
+          <path d="M300 340 C 300 290 320 262 372 252" stroke="#3B7550" stroke-dasharray="2 8"/>
+        </g>
+        <path d="M232 244 l-10 8 l12 5" fill="none" stroke="#9A7440" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M368 244 l10 8 l-12 5" fill="none" stroke="#3B7550" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <figcaption>院内の見取り図</figcaption>
+    </figure>
+    <figure class="day__photo">
+      <img src="assets/img/04-cat.webp" width="1536" height="1024" alt="布をかけたキャリーから外をのぞく猫と、高い棚" loading="lazy">
+    </figure>
+  </section>
+
+  <!-- 相談の窓口：電話とWebの使い分け -->
+  <section class="ask" id="ask" aria-labelledby="ask-title">
+    <div class="ask__body">
+      <h2 id="ask-title">電話か、Webか。<br><span class="nw">急ぐかどうかで</span><span class="nw">選んでください。</span></h2>
+      <div class="ways">
+        <div class="way">
+          <h3>電話</h3>
+          <p class="way__when">今日診てほしいとき・急ぐとき</p>
+          <p>診療時間内に受けています。</p>
+          <a class="btn" href="#ask" data-sample-action="電話をかける">電話で問い合わせる</a>
+        </div>
+        <div class="way">
+          <h3>Webの予約の相談</h3>
+          <p class="way__when">急がない予約・予防接種や健康診断</p>
+          <a class="btn btn--line" href="first-visit.html#reserve">予約の相談を書く</a>
+        </div>
+      </div>
+      <div class="tell">
+        <h3>電話で伝えていただくと、早く案内できること</h3>
+        <ul>
+          <li>犬か猫か、年齢</li>
+          <li>いつから、どんな様子か</li>
+          <li>初めての来院かどうか</li>
+        </ul>
+      </div>
+      <p class="ask__next">初めての方は、来院の流れと持ち物を先にどうぞ。<a class="more" href="first-visit.html">初めての来院へ</a></p>
+    </div>
+      <figure class="ask__photo">
+      <img src="assets/img/x-phone-call.webp" width="800" height="999" alt="窓辺の椅子に座り、電話で話す人の首から下" loading="lazy">
+    </figure>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot__in">
+    <div class="foot__id">
+      <p class="foot__name">こつぶ動物病院</p>
+      <p>犬と猫の町の病院（架空の事業）</p>
+    </div>
+    <dl class="foot__info">
+      <div><dt>所在地</dt><dd>架空市みどり台2-8【要確認】</dd></div>
+      <div><dt>電話</dt><dd><span class="num">000-000-0000</span>【要確認】</dd></div>
+      <div><dt>診療</dt><dd><span class="num">9:00–12:00</span>／<span class="num">16:00–19:00</span><br>水・日の午後と祝日は休み</dd></div>
+    </dl>
+    <nav class="foot__nav" aria-label="ページ">
+      <a href="index.html" aria-current="page">トップ</a>
+      <a href="first-visit.html">初めての来院</a>
+      <a href="first-visit.html#reserve">予約の相談</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="dock" aria-label="問い合わせの窓口">
+  <a class="btn btn--line" href="#ask" data-sample-action="電話をかける">電話する</a>
+  <a class="btn" href="first-visit.html#reserve">予約の相談</a>
+</div>
+
+<aside class="ca-credit" aria-labelledby="ca-credit-title">
+  <p class="ca-credit__label">この見本サイトについて</p>
+  <h2 id="ca-credit-title">Web診断36「CA21 親切案内型サイト」の設計方針で、クルーアセントが制作した見本です。</h2>
+  <p>「犬と猫の町の病院 こつぶ動物病院」は架空の事業です。掲載している価格・営業時間・住所・数値はすべて見本用の設定で、実在の店舗・人物・お客様の声は載せていません。</p>
+  <div class="ca-credit__actions">
+    <a class="ca-btn ca-btn--primary" href="../../diagnosis.html?mode=quick">あなたの事業の方向を診断する（16問・無料）</a>
+    <a class="ca-btn" href="design-notes.html">この見本の設計メモ</a>
+    <a class="ca-link" href="../../works.html">見本サイトの一覧</a>
+  </div>
+  <p class="ca-credit__fine">TOPページと下層1ページ（初めての来院）の見本です。見本の規模は参考で、特定のプランをおすすめするものではありません。</p>
+  <a class="ca-credit__brand" href="../../index.html"><img src="../../assets/brand/logo.webp" width="360" height="278" alt="">クルーアセント（CREW ASCENT）</a>
+</aside>
+
+<dialog class="ca-dialog" id="ca-sample-dialog" aria-labelledby="ca-dialog-title">
+  <h2 id="ca-dialog-title">これは見本サイトです</h2>
+  <p data-ca-dialog-text>この操作は、見本のため実際には行われません。</p>
+  <div class="ca-dialog__actions">
+    <a class="ca-btn" href="../../contact.html">クルーアセントに相談する</a>
+    <button type="button" data-ca-close>閉じる</button>
+  </div>
+</dialog>
+</body>
+</html>

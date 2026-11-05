@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>司法書士・土地家屋調査士 とおみ事務所｜相続の登記と土地の境界の手続きの手引き（見本・架空）</title>
+<meta name="description" content="相続の登記、土地の境界の確認と測量、建物の登記を、ひとつの窓口で順番どおりに案内します。最初に用意する書類、手続きの正式な名前と期間、相談の流れ、お受けしないことを、一冊の手引きのように確かめられます（架空の事業の見本サイト）。">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="../../assets/brand/icon-32.png" sizes="32x32">
+<link rel="preload" href="fonts/toomi-bizudpmincho-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../_shared/crew-frame.css?v=20261015">
+<script defer src="../_shared/crew-frame.js?v=20261105"></script>
+<link rel="stylesheet" href="assets/toomi.css?v=2">
+<script>document.documentElement.classList.add('js');</script>
+<script defer src="assets/toomi.js?v=2"></script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+<div class="ca-ribbon" role="note" aria-label="見本サイトについて">
+  <a class="ca-ribbon__brand" href="../../index.html" aria-label="クルーアセント（制作）"><img src="../../assets/brand/logo-onink.webp" width="360" height="278" alt=""><span class="ca-ribbon__long">クルーアセント</span></a>
+  <p class="ca-ribbon__text"><b>見本サイト・架空</b><span class="ca-ribbon__long">架空の事業を想定した制作イメージです。事業・価格・住所はすべて架空です。</span></p>
+  <p class="ca-ribbon__links"><a href="../../type-orthodox-guidance.html">CA32<span class="ca-ribbon__long"> 正統案内型サイト</span></a><a href="design-notes.html"><span class="ca-ribbon__long">この見本の</span>設計メモ</a></p>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- 署名モチーフ「境界標の十字」: 細い線だけで描く -->
+    <symbol id="mark" viewBox="0 0 20 20"><rect x="1.5" y="1.5" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1"/><path d="M10 5 V15 M5 10 H15" stroke="currentColor" stroke-width="1"/></symbol>
+  </defs>
+</svg>
+
+<header class="head">
+  <div class="head__in">
+    <a class="logo" href="index.html" aria-label="司法書士・土地家屋調査士 とおみ事務所 トップ">
+      <svg class="logo__mark" width="30" height="30" aria-hidden="true" focusable="false"><use href="#mark"/></svg>
+      <span class="logo__txt"><span class="logo__sub">司法書士・土地家屋調査士</span><span class="logo__name">とおみ事務所</span></span>
+    </a>
+    <nav class="gnav" aria-label="サイトの頁">
+      <a href="index.html" aria-current="page">手引きの表紙<small>トップ</small></a>
+      <a href="fee.html">料金と相談の予約<small>第6章・第7章</small></a>
+    </nav>
+    <a class="btn btn--s head__btn" href="fee.html#reserve">相談を予約する</a>
+  </div>
+</header>
+
+<main id="main">
+  <!-- 最初の画面: 手引き書の表紙（題の帯／口絵／爪掛けの索引） -->
+  <section class="cover" aria-labelledby="cover-title">
+    <figure class="frontis">
+      <img src="assets/img/01-hero.webp" width="1536" height="864" alt="住宅地の道路際のコンクリートの境界標と、三脚に載った測量用のプリズム" fetchpriority="high">
+      <figcaption><span>口絵</span><span class="cap-d">道路際の境界標と測量用のプリズム。</span>画像はAI生成のイメージです</figcaption>
+    </figure>
+    <div class="cover__page">
+      <p class="cover__hashira"><span>手引 <span class="num">TM-01</span></span><span class="cover__hashira-t">相続・境界・建物の登記</span><span>改訂 <span class="num">2026.11</span></span></p>
+      <h1 id="cover-title" class="cover__h1"><span class="ph">相続の登記と、</span><span class="ph">土地の境界の手続きを、</span><span class="ph">順番どおりに。</span></h1>
+      <nav class="index" aria-label="手続きの種類から探す">
+        <p class="index__h">手続きの種類から探す<small>報酬の目安（税込）・本文の節</small></p>
+        <a class="index__row" href="#proc-1"><span class="index__name">相続の登記</span><span class="index__dots" aria-hidden="true"></span><span class="index__fee"><span class="num">66,000</span>円〜</span><span class="index__ref num">2-1</span><span class="index__when">親の名義のままの土地・家を、相続人の名義にしたい</span></a>
+        <a class="index__row" href="#proc-2"><span class="index__name">境界の確認と測量</span><span class="index__dots" aria-hidden="true"></span><span class="index__fee"><span class="num">385,000</span>円〜</span><span class="index__ref num">2-2</span><span class="index__when">売却や分筆の前に、隣地との境目をはっきりさせたい</span></a>
+        <a class="index__row" href="#proc-3"><span class="index__name">建物の登記</span><span class="index__dots" aria-hidden="true"></span><span class="index__fee"><span class="num">88,000</span>円〜</span><span class="index__ref num">2-3</span><span class="index__when">家を新築した・増築した・取り壊した</span></a>
+      </nav>
+      <p class="cover__btns"><a class="btn" href="#flow">相談の流れを見る</a><a class="btn btn--line" href="fee.html#reserve">相談フォームへ進む</a></p>
+      <p class="cover__lead">親から土地や家を相続した方、隣地との境目をはっきりさせたい方へ。司法書士と土地家屋調査士が、ひとつの窓口で順に案内します。初回の相談は30分まで無料。税などの実費は<a href="fee.html#fee">第6章</a>に。</p>
+      <dl class="cover__notes">
+        <div><dt>返信の目安</dt><dd>2営業日以内に、担当の資格者から</dd></div>
+        <div><dt>相談に必要な情報</dt><dd>所在地と、困っていることの概要</dd></div>
+        <div><dt>営業はしません</dt><dd>見積もり後のお断りも費用なし</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <div class="doc">
+    <nav class="toc" aria-label="手引きの目次">
+      <p class="toc__h">目次<small>手引 <span class="num">TM-01</span>・改訂 <span class="num">2026.11</span></small></p>
+      <span class="toc__shiori" aria-hidden="true"></span>
+      <ol>
+        <li><a href="#docs"><span class="toc__t"><span class="sr-only">第1章 </span>まず用意する書類</span><span class="toc__dots" aria-hidden="true"></span><span class="toc__pg num">1</span></a></li>
+        <li><a href="#proc"><span class="toc__t"><span class="sr-only">第2章 </span>手続きの名前と期間</span><span class="toc__dots" aria-hidden="true"></span><span class="toc__pg num">2</span></a></li>
+        <li><a href="#flow"><span class="toc__t"><span class="sr-only">第3章 </span>相談の流れ</span><span class="toc__dots" aria-hidden="true"></span><span class="toc__pg num">3</span></a></li>
+        <li><a href="#scope"><span class="toc__t"><span class="sr-only">第4章 </span>対応範囲と条件</span><span class="toc__dots" aria-hidden="true"></span><span class="toc__pg num">4</span></a></li>
+        <li><a href="#office"><span class="toc__t"><span class="sr-only">第5章 </span>事務所と資格者</span><span class="toc__dots" aria-hidden="true"></span><span class="toc__pg num">5</span></a></li>
+        <li class="toc__next"><a href="fee.html#fee"><span class="toc__t"><span class="sr-only">第6章 </span>料金の目安<small>次の頁</small></span><span class="toc__dots" aria-hidden="true"></span><span class="toc__pg num">6</span></a></li>
+        <li class="toc__next"><a href="fee.html#reserve"><span class="toc__t"><span class="sr-only">第7章 </span>相談の予約<small>次の頁</small></span><span class="toc__dots" aria-hidden="true"></span><span class="toc__pg num">7</span></a></li>
+      </ol>
+    </nav>
+
+    <div class="doc__main">
+      <!-- 第1章 まず用意する書類 -->
+      <section class="ch ch--docs" id="docs" aria-labelledby="docs-title">
+        <p class="ch__hashira">とおみ事務所 手続きの手引き<span>第<span class="num">1</span>章</span></p>
+        <header class="ch__head">
+          <p class="ch__no">第<span class="num">1</span>章</p>
+          <h2 id="docs-title">まず、この書類からご用意ください</h2>
+          <p class="ch__for"><b>こんな方へ</b>相談の日に、何を持っていけばよいかを知りたい方</p>
+        </header>
+        <div class="docs">
+          <figure class="docs__photo">
+            <img src="assets/img/03-documents.webp" width="1536" height="1024" alt="机の上の無地の封筒、印鑑と朱肉、無地のファイル" loading="lazy">
+          </figure>
+          <p class="docs__intro">全部そろっていなくても、手元にあるものだけで相談できます。戸籍や登記の記録は、こちらで取り寄せることもできます（取り寄せの実費のみ）。</p>
+        </div>
+        <table class="tbl tbl--docs">
+          <caption class="sr-only">手続きごとに、相談の日に持ってくる書類</caption>
+          <thead><tr><th scope="col">持ってくる書類</th><th scope="col">相続の登記</th><th scope="col">境界の確認と測量</th><th scope="col">建物の登記</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><b>固定資産税の納税通知書</b><small>毎年、市町村から届く書類。土地・建物の所在地が分かります</small></th><td data-l="相続の登記" class="is-on">持参</td><td data-l="境界の確認と測量" class="is-on">持参</td><td data-l="建物の登記" class="is-on">持参</td></tr>
+            <tr><th scope="row"><b>亡くなった方と相続人の関係のメモ</b><small>家系図の走り書きで十分です</small></th><td data-l="相続の登記" class="is-on">持参</td><td data-l="境界の確認と測量">—</td><td data-l="建物の登記">—</td></tr>
+            <tr><th scope="row"><b>以前の測量図・隣地と話した記録</b><small>境界について話した日付や内容のメモでも構いません</small></th><td data-l="相続の登記">—</td><td data-l="境界の確認と測量" class="is-on">あれば</td><td data-l="建物の登記">—</td></tr>
+            <tr><th scope="row"><b>建物の図面や工事の書類</b><small>工事の内容が分かるもの。要る書類は建物の種類で変わります【要確認】</small></th><td data-l="相続の登記">—</td><td data-l="境界の確認と測量">—</td><td data-l="建物の登記" class="is-on">持参</td></tr>
+          </tbody>
+        </table>
+              </section>
+
+      <!-- 第2章 手続きの正式な名前と、担当・期間 -->
+      <section class="ch ch--proc" id="proc" aria-labelledby="proc-title">
+        <p class="ch__hashira">とおみ事務所 手続きの手引き<span>第<span class="num">2</span>章</span></p>
+        <header class="ch__head">
+          <p class="ch__no">第<span class="num">2</span>章</p>
+          <h2 id="proc-title">手続きの正式な名前と、担当・期間</h2>
+          <p class="ch__for"><b>こんな方へ</b>役所や書類で見かける名前が、どの手続きか確かめたい方</p>
+        </header>
+        <figure class="proc__band">
+          <img src="assets/img/02-survey.webp" width="1200" height="900" alt="曇天の空き地に三脚で立てた測量機" loading="lazy">
+          <figcaption>境界の測量は、土地家屋調査士が現地で行います</figcaption>
+        </figure>
+        <ol class="proc">
+          <li id="proc-1">
+            <p class="proc__no"><span class="num">2-1</span></p>
+            <h3>相続の登記</h3>
+            <p class="proc__formal"><small>正式な名前</small>所有権移転登記（相続）</p>
+            <p class="proc__plain">亡くなった方の名義を、相続する人の名義に書き換える手続き</p>
+            <dl class="proc__meta"><div><dt>担当</dt><dd>司法書士</dd></div><div><dt>期間の目安</dt><dd><span class="num">1</span>〜<span class="num">2</span>か月</dd></div></dl>
+          </li>
+          <li id="proc-2">
+            <p class="proc__no"><span class="num">2-2</span></p>
+            <h3>境界の確認と測量</h3>
+            <p class="proc__formal"><small>書類での呼び名</small>確定測量（境界確定測量）</p>
+            <p class="proc__plain">隣地の方の立ち会いのもとで境目を確かめ、図面にして印を入れる手続き</p>
+            <dl class="proc__meta"><div><dt>担当</dt><dd>土地家屋調査士</dd></div><div><dt>期間の目安</dt><dd><span class="num">2</span>〜<span class="num">4</span>か月</dd></div></dl>
+          </li>
+          <li id="proc-3">
+            <p class="proc__no"><span class="num">2-3</span></p>
+            <h3>建物の登記</h3>
+            <p class="proc__formal"><small>正式な名前</small>建物表題登記・建物表題部変更登記・建物滅失登記</p>
+            <p class="proc__plain">新築・増築・取り壊しを、登記の記録（国が管理する土地と建物の台帳）に反映する手続き</p>
+            <dl class="proc__meta"><div><dt>担当</dt><dd>土地家屋調査士</dd></div><div><dt>期間の目安</dt><dd><span class="num">2</span>〜<span class="num">6</span>週間</dd></div></dl>
+          </li>
+        </ol>
+        <p class="ch__fine"><b>用語の言い換え</b>筆（ひつ）＝登記で土地を数える単位。分筆（ぶんぴつ）＝一つの土地を分けて登記すること。期間は書類がそろってからの目安です。</p>
+      </section>
+
+      <!-- 第3章 相談の流れ -->
+      <section class="ch ch--flow" id="flow" aria-labelledby="flow-title">
+        <p class="ch__hashira">とおみ事務所 手続きの手引き<span>第<span class="num">3</span>章</span></p>
+        <header class="ch__head">
+          <p class="ch__no">第<span class="num">3</span>章</p>
+          <h2 id="flow-title">相談から完了まで、この順番で進みます</h2>
+          <p class="ch__for"><b>こんな方へ</b>初めてで、どこまでが自分の役目か知りたい方</p>
+        </header>
+        <table class="tbl tbl--flow">
+          <caption class="sr-only">相談から完了までの4つの段と、依頼者・事務所それぞれがすること</caption>
+          <thead><tr><th scope="col">段</th><th scope="col">ご依頼者がすること</th><th scope="col">事務所がすること</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><span class="num">3-1</span>相談</th><td data-l="ご依頼者">電話かフォームで申し込み、来所かオンラインを選ぶ。第1章の書類を持参する</td><td data-l="事務所">話を伺い、必要な手続きと担当の資格者を整理する</td></tr>
+            <tr><th scope="row"><span class="num">3-2</span>書類の確認と見積もり</th><td data-l="ご依頼者">見積もりの書面を見て、依頼するかどうかを決める</td><td data-l="事務所">登記の記録や図面を取り寄せ、手続きと費用を書面でお出しする</td></tr>
+            <tr><th scope="row"><span class="num">3-3</span>手続き</th><td data-l="ご依頼者">求められた書類に署名・押印する</td><td data-l="事務所">申請・測量を進め、途中の経過を書面で報告する</td></tr>
+            <tr><th scope="row"><span class="num">3-4</span>完了</th><td data-l="ご依頼者">書類と図面を受け取り、大切に保管する</td><td data-l="事務所">登記完了証など、登記が終わったことを示す書類と、図面をお渡しする</td></tr>
+          </tbody>
+        </table>
+        <p class="ch__fine">登記や測量の結果（境界がどこに決まるか、など）は、あらかじめお約束できません。見通しは、書類を確かめた段階で書面にします。</p>
+      </section>
+
+      <!-- 第4章 対応範囲と、お受けしないこと -->
+      <section class="ch ch--scope" id="scope" aria-labelledby="scope-title">
+        <p class="ch__hashira">とおみ事務所 手続きの手引き<span>第<span class="num">4</span>章</span></p>
+        <header class="ch__head">
+          <p class="ch__no">第<span class="num">4</span>章</p>
+          <h2 id="scope-title">対応範囲と、お受けしないこと</h2>
+          <p class="ch__for"><b>こんな方へ</b>自分の手続きを頼めるか、先に確かめたい方</p>
+        </header>
+        <div class="scope">
+          <figure class="scope__fig">
+            <svg viewBox="0 0 520 360" role="img" aria-labelledby="plot-t plot-d">
+              <title id="plot-t">境界標と立ち会いの範囲を示した例の図</title>
+              <desc id="plot-d">道路に面した四角い土地の四隅に境界標があり、左・奥・右の3件の隣地と、点線の境目を立ち会いで確かめることを示しています。</desc>
+              <g class="plot-ground">
+                <rect x="20" y="20" width="110" height="250"/><rect x="130" y="20" width="260" height="60"/><rect x="390" y="20" width="110" height="250"/>
+              </g>
+              <rect class="plot-road" x="20" y="300" width="480" height="40"/>
+              <path class="plot-own" d="M130 80 L390 80 L390 270 L130 270 Z"/>
+              <path class="plot-line" d="M130 80 L390 80 M130 80 L130 270 M390 80 L390 270"/>
+              <path class="plot-road-line" d="M130 270 L390 270"/>
+              <path class="plot-lead" d="M400 70 L400 8 L520 8"/>
+              <g class="plot-k"><use href="#mark" x="120" y="70" width="20" height="20"/><use href="#mark" x="380" y="70" width="20" height="20"/><use href="#mark" x="120" y="260" width="20" height="20"/><use href="#mark" x="380" y="260" width="20" height="20"/></g>
+              <g class="plot-t">
+                <text x="260" y="170" text-anchor="middle" class="t-own">ご依頼の土地</text>
+                <text x="260" y="196" text-anchor="middle" class="t-sub">（1筆）</text>
+                <text x="75" y="150" text-anchor="middle">隣地A</text>
+                <text x="260" y="56" text-anchor="middle">隣地B</text>
+                <text x="445" y="150" text-anchor="middle">隣地C</text>
+                <text x="260" y="326" text-anchor="middle">道路</text>
+                <text x="260" y="104" text-anchor="middle" class="t-len">12.40m</text>
+                <text x="152" y="180" class="t-len" transform="rotate(-90 152 180)" text-anchor="middle">16.20m</text>
+              </g>
+            </svg>
+            <figcaption><span class="lg lg--k"><svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#mark"/></svg><span class="nw">境界標（コンクリートや金属の印）</span></span><span class="lg lg--d">点線＝隣地の方と立ち会いで確かめる境目</span><span class="lg">説明のための例の図です</span></figcaption>
+          </figure>
+          <div class="scope__txt">
+            <figure class="scope__photo">
+              <img src="assets/img/05-marker.webp" width="1024" height="1024" alt="地面に埋められた金属プレートの境界標の接写" loading="lazy">
+              <figcaption>この印の実物の例</figcaption>
+            </figure>
+            <dl class="scope__dl scope__not">
+              <div class="is-not"><dt>お受けしないこと</dt><dd><span class="not__r"><span>境界をめぐる争いの代理人</span><span>弁護士をご紹介します</span></span><span class="not__r"><span>税金の申告</span><span>税理士をご紹介します</span></span></dd></div>
+            </dl>
+          </div>
+          <dl class="scope__dl scope__list">
+              <div><dt>境界標の確認</dt><dd>四隅の印が残っているかを現地で確かめます。なくなっていれば、隣地の方の確認を得たうえで入れ直します。確認が得られないときは、ご相談ください。</dd></div>
+              <div><dt>隣地の立ち会い</dt><dd>隣地の方へのお願いの書面と、日程の調整は事務所が行います。</dd></div>
+              <div><dt>対応する地域</dt><dd>架空県内と、隣接する市まで。遠い場合は、現地の事務所をご紹介します。</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- 第5章 事務所と資格者 -->
+      <section class="ch ch--office" id="office" aria-labelledby="office-title">
+        <p class="ch__hashira">とおみ事務所 手続きの手引き<span>第<span class="num">5</span>章</span></p>
+        <header class="ch__head">
+          <p class="ch__no">第<span class="num">5</span>章</p>
+          <h2 id="office-title">事務所と資格者</h2>
+          <p class="ch__for"><b>こんな方へ</b>誰が担当し、どんな部屋で話すのかを先に知りたい方</p>
+        </header>
+        <div class="office">
+          <figure class="office__photo">
+            <img src="assets/img/04-office.webp" width="1536" height="1024" alt="事務所の相談スペースの4人掛けの机と、背表紙が無地の書棚" loading="lazy">
+          </figure>
+          <div class="office__txt">
+            <table class="tbl tbl--v">
+              <caption class="sr-only">事務所と資格者の情報</caption>
+              <tbody>
+                <tr><th scope="row">名称</th><td>司法書士・土地家屋調査士 とおみ事務所</td></tr>
+                <tr><th scope="row">資格者</th><td>代表 遠見（とおみ）<br>司法書士・土地家屋調査士</td></tr>
+                <tr><th scope="row">相談の部屋</th><td>仕切りのある個室</td></tr>
+                <tr><th scope="row">相談の方法</th><td>来所かオンライン（申し込みは電話かフォーム）</td></tr>
+              </tbody>
+            </table>
+            <p class="ch__fine">資格者の登録番号と所属する会は【要確認】。所在地と受付時間は頁の下にあります。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 次の頁へ -->
+      <nav class="next" aria-label="次に読む頁">
+        <p class="next__k">次の頁</p>
+        <a class="next__link" href="fee.html"><span class="next__no">第<span class="num">6</span>章・第<span class="num">7</span>章</span><span class="next__t">料金の目安と、相談の予約</span><span class="next__d">報酬と実費の違い、追加費用が出る条件、計算の例、予約の欄</span></a>
+        <a class="btn" href="fee.html#reserve">相談フォームへ進む</a>
+      </nav>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="foot__in">
+    <div class="foot__id">
+      <p class="foot__name"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#mark"/></svg>司法書士・土地家屋調査士 とおみ事務所<small>（架空の事業）</small></p>
+    </div>
+    <dl class="foot__dl">
+      <div><dt>所在地</dt><dd>〒000-0000 架空県とおみ市本町2丁目（市役所の近く）【要確認】<br>駅から徒歩6分・駐車場2台</dd></div>
+      <div><dt>受付時間</dt><dd>平日 9:00〜17:30<br>土曜は予約のみ</dd></div>
+      <div><dt>連絡先</dt><dd>電話 000-000-0000【要確認】<br>相談フォーム（<a href="fee.html#reserve">第7章</a>）</dd></div>
+    </dl>
+    <nav class="foot__nav" aria-label="頁の一覧"><a href="index.html" aria-current="page">手引きの表紙（トップ）</a><a href="fee.html">料金と相談の予約</a></nav>
+  </div>
+</footer>
+
+<aside class="ca-credit" aria-labelledby="ca-credit-title">
+  <p class="ca-credit__label">この見本サイトについて</p>
+  <h2 id="ca-credit-title">Web診断36「CA32 正統案内型サイト」の設計方針で、クルーアセントが制作した見本です。</h2>
+  <p>「司法書士・土地家屋調査士 とおみ事務所」は架空の事業です。掲載している価格・営業時間・住所・数値はすべて見本用の設定で、実在の店舗・人物・お客様の声は載せていません。</p>
+  <div class="ca-credit__actions">
+    <a class="ca-btn ca-btn--primary" href="../../diagnosis.html?mode=quick">あなたの事業の方向を診断する（16問・無料）</a>
+    <a class="ca-btn" href="design-notes.html">この見本の設計メモ</a>
+    <a class="ca-link" href="../../works.html">見本サイトの一覧</a>
+  </div>
+  <p class="ca-credit__fine">参考の規模: TOPページと下層1ページの見本です。見本の規模は参考で、特定のプランをおすすめするものではありません。</p>
+  <a class="ca-credit__brand" href="../../index.html"><img src="../../assets/brand/logo.webp" width="360" height="278" alt="">クルーアセント（CREW ASCENT）</a>
+</aside>
+
+<dialog class="ca-dialog" id="ca-sample-dialog" aria-labelledby="ca-dialog-title">
+  <h2 id="ca-dialog-title">これは見本サイトです</h2>
+  <p data-ca-dialog-text>この操作は、見本のため実際には行われません。</p>
+  <div class="ca-dialog__actions">
+    <a class="ca-btn" href="../../contact.html">クルーアセントに相談する</a>
+    <button type="button" data-ca-close>閉じる</button>
+  </div>
+</dialog>
+</body>
+</html>

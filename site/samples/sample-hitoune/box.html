@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>予約の野菜箱と、予約・相談の窓口｜ひとうね農園（見本・架空）</title>
+<meta name="description" content="ひとうね農園の予約の野菜箱（小箱1,800円・大箱2,800円、税込）の中身の決まり方、予約から土曜の受け取りまでの流れ、月ごとにとれる野菜、予約と飲食店の相談の入力欄（架空の事業の見本サイト）。">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="../../assets/brand/icon-32.png" sizes="32x32">
+<link rel="preload" href="fonts/hitoune-klee-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../_shared/crew-frame.css?v=20261015">
+<script defer src="../_shared/crew-frame.js?v=20261105"></script>
+<link rel="stylesheet" href="assets/hitoune.css?v=3">
+<script>document.documentElement.classList.add('js');</script>
+<script defer src="assets/hitoune.js?v=3"></script>
+</head>
+<body class="page-box">
+<a class="skip" href="#main">本文へ移動</a>
+<div class="ca-ribbon" role="note" aria-label="見本サイトについて">
+  <a class="ca-ribbon__brand" href="../../index.html" aria-label="クルーアセント（制作）"><img src="../../assets/brand/logo-onink.webp" width="360" height="278" alt=""><span class="ca-ribbon__long">クルーアセント</span></a>
+  <p class="ca-ribbon__text"><b>見本サイト・架空</b><span class="ca-ribbon__long">架空の事業を想定した制作イメージです。事業・価格・住所はすべて架空です。</span></p>
+  <p class="ca-ribbon__links"><a href="../../type-fresh-appeal.html">CA16<span class="ca-ribbon__long"> 新鮮魅力型サイト</span></a><a href="design-notes.html"><span class="ca-ribbon__long">この見本の</span>設計メモ</a></p>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="hu-une" viewBox="0 0 600 24" preserveAspectRatio="none">
+      <path d="M0 6 C 50 1 100 1 150 6 S 250 11 300 6 S 400 1 450 6 S 550 11 600 6" fill="none" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"/>
+      <path d="M0 16 C 50 11 100 11 150 16 S 250 21 300 16 S 400 11 450 16 S 550 21 600 16" fill="none" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"/>
+    </symbol>
+    <symbol id="hu-mark" viewBox="0 0 40 40">
+      <path d="M4 30 C 12 25 28 25 36 30" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+      <path d="M4 22 C 12 17 28 17 36 22" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+      <path d="M20 16 C 20 10 23 6 30 4 C 29 11 25 14 20 16 Z M20 16 C 19 11 16 8 10 7 C 11 12 15 15 20 16 Z" fill="#6f9a2c"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="head">
+  <a class="logo" href="index.html" aria-label="ひとうね農園（トップ）">
+    <svg width="34" height="34" aria-hidden="true" focusable="false"><use href="#hu-mark"/></svg>
+    <span class="logo__name">ひとうね農園</span>
+    <span class="logo__sub">朝どり野菜の農園と直売所</span>
+  </a>
+  <nav class="head__nav" aria-label="ページの案内">
+    <a href="index.html">トップ</a>
+    <a href="box.html" aria-current="page">野菜箱と予約</a>
+  </nav>
+  <a class="btn btn--head" href="#form">予約・相談を送る</a>
+</header>
+
+<div class="slate">
+  <p class="slate__date"><time class="num" datetime="2026-11-01">11.1</time><span>（日）に書いた、今週の黒板</span></p>
+  <p class="slate__today" data-today>直売所は 水〜日 <span class="num">8:30</span> から</p>
+</div>
+
+<main id="main">
+  <!-- 黒板の扉: 黒板の帯に h1 と要点3つ、その下に全幅の写真 -->
+  <section class="door" aria-labelledby="door-title">
+    <div class="door__board">
+      <div class="door__lead">
+        <p class="door__kicker">予約の野菜箱</p>
+        <h1 id="door-title"><span class="nw">その週の畑を、</span><span class="nw">ひと箱に。</span></h1>
+        <p>中身は、その週にとれたものから詰めます。<span class="sp-hide">飲食店への配達の相談も、このページから送れます。</span></p>
+      </div>
+      <ul class="door__points">
+        <li><span class="door__k">値段</span><span>小箱 <b class="num">1,800</b>円・大箱 <b class="num">2,800</b>円（税込）</span></li>
+        <li><span class="door__k">予約</span><span><b>金曜まで</b>に、フォームか電話で</span></li>
+        <li><span class="door__k">受け取り</span><span>土曜の朝、直売所で<span class="nw">（配達もできます）</span></span></li>
+      </ul>
+      <div class="door__act">
+        <a class="btn btn--chalk" href="#form" data-fv-cta>予約・相談を送る</a>
+        <a class="more more--chalk" href="#sizes">大きさを比べる</a>
+      </div>
+    </div>
+    <figure class="door__photo">
+      <img src="assets/img/03-box.webp" width="1200" height="900" alt="木箱に詰めた季節の野菜を真上から" fetchpriority="high">
+      <figcaption>画像はAI生成のイメージです</figcaption>
+    </figure>
+  </section>
+
+  <!-- 1. 2つの大きさ: 箱を真上から見た区画の図 -->
+  <section class="sizes" id="sizes" aria-labelledby="sizes-title">
+    <div class="sizes__head">
+      <h2 id="sizes-title">小箱と大箱</h2>
+      <p>直売所で同じものを買う合計より、1割ほど安くなるように組みます。図は11月1日の週の例です。</p>
+    </div>
+    <div class="sizes__row">
+      <figure class="crate crate--s">
+        <div class="crate__box" role="img" aria-label="小箱を真上から見た図。11月1日の週なら、大根・かぶ・ほうれん草・春菊・さつまいも・里芋に、とれ具合で1品">
+          <i class="w2" style="--veg:#cfc8ae">大根</i><i style="--veg:#d9a3b6">かぶ</i><i style="--veg:#6f9a3c">ほうれん草</i><i style="--veg:#94b85a">春菊</i><i style="--veg:#c07a92">さつまいも</i><i style="--veg:#b8987a">里芋</i><i class="is-maybe">とれ具合で入る週もある1品</i>
+        </div>
+        <figcaption>
+          <span class="crate__name">小箱</span>
+          <span class="crate__price"><b class="num">1,800</b>円<small>税込</small></span>
+          <span class="crate__spec">6〜7品・2人分の目安</span>
+        </figcaption>
+      </figure>
+      <figure class="crate crate--l">
+        <div class="crate__box" role="img" aria-label="大箱を真上から見た図。11月1日の週なら、大根・白菜・かぶ・ほうれん草・春菊・さつまいも・里芋・ミニトマトと、その週の1品に、とれ具合で1品">
+          <i class="w2" style="--veg:#cfc8ae">大根</i><i class="w2" style="--veg:#b9cf8a">白菜</i><i style="--veg:#d9a3b6">かぶ</i><i style="--veg:#6f9a3c">ほうれん草</i><i style="--veg:#94b85a">春菊</i><i style="--veg:#c07a92">さつまいも</i><i style="--veg:#b8987a">里芋</i><i style="--veg:#e2675f">ミニトマト</i><i style="--veg:#d9b45a">その週の1品</i><i class="is-maybe">とれ具合で入る週もある1品</i>
+        </div>
+        <figcaption>
+          <span class="crate__name">大箱</span>
+          <span class="crate__price"><b class="num">2,800</b>円<small>税込</small></span>
+          <span class="crate__spec">9〜10品・4人分の目安</span>
+        </figcaption>
+      </figure>
+      <dl class="sizes__terms">
+        <div><dt>含むもの</dt><dd>その週にとれた野菜<span class="nw">（小箱 6〜7品、</span><span class="nw">大箱 9〜10品）</span></dd></div>
+        <div><dt>含まないもの</dt><dd>配達（送料は<a href="#form">予約・相談の欄</a>の上に）</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 2. 予約から受け取りまで: 1週間の帯と、土曜の朝の時刻の帯 -->
+  <section class="week" aria-labelledby="flow-title">
+    <div class="week__in" data-route>
+      <h2 id="flow-title" class="week__h">予約から受け取りまで</h2>
+      <div class="week__strip">
+        <div class="week__days">
+          <p class="week__span"><span class="week__lbl">月〜金</span><b>フォームか電話で予約</b><span><span class="nw">届いた予約を、</span><span class="nw">その週の土曜に詰めます。</span></span></p>
+          <ol class="week__dots" aria-hidden="true"><li>月</li><li>火</li><li>水</li><li>木</li><li class="is-end">金</li></ol>
+        </div>
+        <ol class="week__sat" aria-label="土曜の朝">
+          <li><time class="num">5:30</time><span>畑でとる</span></li>
+          <li><time class="num">7:00</time><span>洗って、<span class="nw">箱に詰める</span></span></li>
+          <li><time class="num">8:30</time><span>直売所で<span class="nw">受け取り</span></span><small>配達はこのあと</small></li>
+        </ol>
+        <figure class="week__photo"><img src="assets/img/04-stand.webp" width="1536" height="1024" alt="受け取りの場所になる、木の小屋の直売所の軒先" loading="lazy"></figure>
+      </div>
+      <p class="week__note">受け取りの締めの時刻と、配達の時間帯は<span class="nw">【要確認】。</span></p>
+    </div>
+  </section>
+
+  <!-- 3. 月の表: いつ、何が箱に入るか -->
+  <section class="cal" aria-labelledby="cal-title">
+    <div class="cal__head">
+      <h2 id="cal-title">いつ、何が箱に入るか</h2>
+      <p>例年の目安です。その年の天気で前後します。</p>
+    </div>
+    <div class="cal__wrap">
+      <table class="cal__table">
+        <caption class="sr-only">月ごとに、とれる野菜の目安（色のある月がとれる月）</caption>
+        <thead><tr><th scope="col" class="cal__veg">野菜</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th><th scope="col">4</th><th scope="col">5</th><th scope="col">6</th><th scope="col">7</th><th scope="col">8</th><th scope="col">9</th><th scope="col">10</th><th scope="col" class="is-now">11</th><th scope="col">12</th></tr></thead>
+        <tbody>
+          <tr style="--veg:#8fbf5a"><th scope="row">きゅうり</th><td></td><td></td><td></td><td></td><td></td><td class="on"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td><td></td><td class="is-now"></td><td></td></tr>
+          <tr style="--veg:#8a6aa6"><th scope="row">なす</th><td></td><td></td><td></td><td></td><td></td><td class="on"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td><td class="is-now"></td><td></td></tr>
+          <tr style="--veg:#e2675f"><th scope="row">ミニトマト</th><td></td><td></td><td></td><td></td><td></td><td class="on"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td><td class="on is-now"><span class="sr-only">とれる</span></td><td></td></tr>
+          <tr style="--veg:#d9b45a"><th scope="row">玉ねぎ</th><td></td><td></td><td></td><td></td><td class="on"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td><td></td><td></td><td></td><td class="is-now"></td><td></td></tr>
+          <tr style="--veg:#c9a77a"><th scope="row">じゃがいも</th><td></td><td></td><td></td><td></td><td></td><td class="on"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td><td></td><td></td><td></td><td class="is-now"></td><td></td></tr>
+          <tr style="--veg:#c07a92"><th scope="row">さつまいも</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="on"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td><td class="on is-now"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td></tr>
+          <tr style="--veg:#b8987a"><th scope="row">里芋</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="on"><span class="sr-only">とれる</span></td><td class="on is-now"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td></tr>
+          <tr style="--veg:#e0dbc8"><th scope="row">大根</th><td class="on"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="on"><span class="sr-only">とれる</span></td><td class="on is-now"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td></tr>
+          <tr style="--veg:#e4c3cf"><th scope="row">かぶ</th><td></td><td></td><td class="on"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td><td></td><td></td><td></td><td></td><td class="on"><span class="sr-only">とれる</span></td><td class="on is-now"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td></tr>
+          <tr style="--veg:#c6d89c"><th scope="row">白菜</th><td class="on"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="on is-now"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td></tr>
+          <tr style="--veg:#6f9a3c"><th scope="row">ほうれん草</th><td class="on"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="on"><span class="sr-only">とれる</span></td><td class="on is-now"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td></tr>
+          <tr style="--veg:#94b85a"><th scope="row">春菊</th><td></td><td></td><td class="on"><span class="sr-only">とれる</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="on"><span class="sr-only">とれる</span></td><td class="on is-now"><span class="sr-only">とれる</span></td><td class="on"><span class="sr-only">とれる</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 4. 予約・相談の入力欄 -->
+  <section class="ask" id="form" aria-labelledby="form-title">
+    <div class="ask__in">
+      <div class="ask__side">
+        <h2 id="form-title">予約・相談を送る</h2>
+        <dl class="ask__terms">
+          <div><dt>届く地域</dt><dd>直売所から車で15分圏内</dd></div>
+          <div><dt>送料</dt><dd>配達のとき＋<span class="num">300</span>円（税込）。直売所で受け取れば、かかりません</dd></div>
+          <div><dt>届く曜日</dt><dd>野菜箱は土曜。飲食店は水・土の朝</dd></div>
+          <div><dt>返信</dt><dd>翌営業日までに、メールか電話で</dd></div>
+        </dl>
+        <div class="ask__tel">
+          <p><b>電話でも受けます</b>水〜日の 8:00〜12:00。畑に出ている時間は、折り返します。</p>
+          <a class="btn btn--line" href="#" data-sample-action="電話する">電話する</a>
+        </div>
+      </div>
+
+      <form class="form" data-sample-form="予約・相談" novalidate>
+        <p class="form__privacy">個人情報の扱い（使う目的・保存の期間・ほかへ渡さないこと）は【要確認】。</p>
+        <fieldset class="form__set">
+          <legend>用件</legend>
+          <div class="form__choices">
+            <label><input type="radio" name="kind" value="box" checked> 野菜箱の予約</label>
+            <label><input type="radio" name="kind" value="shop"> 飲食店の相談</label>
+            <label><input type="radio" name="kind" value="other"> そのほか</label>
+          </div>
+        </fieldset>
+        <fieldset class="form__set" data-for="box">
+          <legend>箱の大きさ</legend>
+          <div class="form__choices">
+            <label><input type="radio" name="size" value="s"> 小箱 1,800円</label>
+            <label><input type="radio" name="size" value="l"> 大箱 2,800円</label>
+            <label><input type="radio" name="size" value="undecided" checked> まだ決めていない</label>
+          </div>
+        </fieldset>
+        <div class="form__two" data-for="box">
+          <fieldset class="form__set">
+            <legend>受け取り方</legend>
+            <div class="form__choices form__choices--col">
+              <label><input type="radio" name="pickup" value="stand" checked> 土曜に直売所で</label>
+              <label><input type="radio" name="pickup" value="delivery"> 配達（＋300円）</label>
+            </div>
+          </fieldset>
+          <div class="form__row">
+            <label for="f-sat">受け取りたい土曜</label>
+            <select id="f-sat" name="sat">
+              <option>11月7日（土）</option><option>11月14日（土）</option><option>11月21日（土）</option><option>11月28日（土）</option><option>まだ決めていない</option>
+            </select>
+          </div>
+        </div>
+        <div class="form__row" data-for="shop">
+          <label for="f-shop">店名</label>
+          <input id="f-shop" name="shop" type="text" autocomplete="organization">
+        </div>
+        <div class="form__two">
+          <div class="form__row">
+            <label for="f-name">お名前<span class="form__req">必須</span></label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+            <p class="form__err" id="e-name" hidden>お名前を書いてください。</p>
+          </div>
+          <div class="form__row">
+            <label for="f-contact">メールか電話番号<span class="form__req">必須</span></label>
+            <input id="f-contact" name="contact" type="text" inputmode="email" autocomplete="email" required aria-describedby="e-contact">
+            <p class="form__err" id="e-contact" hidden>返信先のメールか電話番号を書いてください。</p>
+          </div>
+        </div>
+        <div class="form__row">
+          <label for="f-msg">聞きたいこと・欲しい品目</label>
+          <textarea id="f-msg" name="msg" rows="3" placeholder="例）大箱を毎週頼めますか。葉物を多めにできますか。"></textarea>
+        </div>
+        <div class="form__end">
+          <button class="btn" type="submit">この内容で送る</button>
+          <p class="form__status" role="status" aria-live="polite" tabindex="-1">必須は2つです。決めていない項目は、そのままで送れます。</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ページの終わり: 次に読むページ ＋ 主なボタン -->
+  <section class="next" aria-label="次に読むページ">
+    <div class="next__in">
+      <a class="next__link" href="index.html#access"><span class="next__k">直売所で選ぶなら</span><span class="next__t">営業日と場所を見る</span></a>
+      <a class="btn" href="#form">予約・相談を送る</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot__in">
+    <div class="foot__brand">
+      <svg class="foot__une" aria-hidden="true" focusable="false"><use href="#hu-une"/></svg>
+      <p class="foot__name">ひとうね農園</p>
+      <p>朝どり野菜の農園と直売所（架空の事業）</p>
+    </div>
+    <dl class="foot__facts">
+      <div><dt>所在地</dt><dd>架空県あさぎ野町、県道沿い【要確認：番地】</dd></div>
+      <div><dt>電話</dt><dd>【要確認：番号】水〜日 8:00〜12:00</dd></div>
+      <div><dt>直売所</dt><dd>水〜日 8:30〜売り切れまで・月火休み</dd></div>
+    </dl>
+    <nav class="foot__nav" aria-label="すべてのページ">
+      <a href="index.html">トップ</a>
+      <a href="box.html" aria-current="page">野菜箱と予約</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="dock" aria-label="予約・相談の窓口">
+  <a class="btn" href="#form">予約・相談を送る</a>
+</div>
+
+<aside class="ca-credit" aria-labelledby="ca-credit-title">
+  <p class="ca-credit__label">この見本サイトについて</p>
+  <h2 id="ca-credit-title">Web診断36「CA16 新鮮魅力型サイト」の設計方針で、クルーアセントが制作した見本です。</h2>
+  <p>「朝どり野菜の農園と直売所 ひとうね農園」は架空の事業です。掲載している価格・営業時間・住所・数値はすべて見本用の設定で、実在の店舗・人物・お客様の声は載せていません。</p>
+  <div class="ca-credit__actions">
+    <a class="ca-btn ca-btn--primary" href="../../diagnosis.html?mode=quick">あなたの事業の方向を診断する（16問・無料）</a>
+    <a class="ca-btn" href="design-notes.html">この見本の設計メモ</a>
+    <a class="ca-link" href="../../works.html">見本サイトの一覧</a>
+  </div>
+  <p class="ca-credit__fine">TOPページと下層1ページ（野菜箱と予約）の見本です。見本の規模は参考で、特定のプランをおすすめするものではありません。</p>
+  <a class="ca-credit__brand" href="../../index.html"><img src="../../assets/brand/logo.webp" width="360" height="278" alt="">クルーアセント（CREW ASCENT）</a>
+</aside>
+
+<dialog class="ca-dialog" id="ca-sample-dialog" aria-labelledby="ca-dialog-title">
+  <h2 id="ca-dialog-title">これは見本サイトです</h2>
+  <p data-ca-dialog-text>この操作は、見本のため実際には行われません。</p>
+  <div class="ca-dialog__actions">
+    <a class="ca-btn" href="../../contact.html">クルーアセントに相談する</a>
+    <button type="button" data-ca-close>閉じる</button>
+  </div>
+</dialog>
+</body>
+</html>

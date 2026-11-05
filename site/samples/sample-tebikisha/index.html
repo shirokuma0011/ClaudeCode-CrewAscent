@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>小さなお店のレジと予約の導入代行 てびき舎｜相談は無料（見本・架空）</title>
+<meta name="description" content="紙の予約台帳と現金レジで回してきた小さな食堂・雑貨店・習い事教室に、レジと予約をお店の順番で入れ替える導入代行です。機種選び・設定・操作説明。相談は無料（架空の事業の見本サイト）。">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="../../assets/brand/icon-32.png" sizes="32x32">
+<link rel="preload" href="fonts/tebiki-noto-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../_shared/crew-frame.css?v=20261015">
+<script defer src="../_shared/crew-frame.js?v=20261105"></script>
+<link rel="stylesheet" href="assets/tebikisha.css?v=3">
+<script>document.documentElement.classList.add('js');</script>
+<script defer src="assets/tebikisha.js?v=3"></script>
+</head>
+<body class="pg-top">
+<a class="skip" href="#main">本文へ移動</a>
+<div class="ca-ribbon" role="note" aria-label="見本サイトについて">
+  <a class="ca-ribbon__brand" href="../../index.html" aria-label="クルーアセント（制作）"><img src="../../assets/brand/logo-onink.webp" width="360" height="278" alt=""><span class="ca-ribbon__long">クルーアセント</span></a>
+  <p class="ca-ribbon__text"><b>見本サイト・架空</b><span class="ca-ribbon__long">架空の事業を想定した制作イメージです。事業・価格・住所はすべて架空です。</span></p>
+  <p class="ca-ribbon__links"><a href="../../type-advanced-guidance.html">CA02<span class="ca-ribbon__long"> 先進案内型サイト</span></a><a href="design-notes.html"><span class="ca-ribbon__long">この見本の</span>設計メモ</a></p>
+</div>
+
+<header class="site-head">
+  <div class="site-head__in">
+    <a class="logo" href="index.html" aria-label="てびき舎 小さなお店のレジと予約の導入代行（トップ）">
+      <svg class="logo__mark" width="40" height="22" viewBox="0 0 40 22" aria-hidden="true" focusable="false"><rect x="6" y="10" width="26" height="2" fill="#3A86FF"/><circle cx="8" cy="11" r="5.5" fill="#fff" stroke="#14213D" stroke-width="2.5"/><circle cx="32" cy="11" r="6.5" fill="#14213D"/></svg>
+      <span class="logo__name">てびき舎</span>
+      <span class="logo__sub">小さなお店の<br>レジと予約の導入代行</span>
+    </a>
+    <nav class="route-nav" aria-label="このサイトのページ">
+      <ol>
+        <li class="is-here"><a href="index.html" aria-current="page"><span class="rn-dot" aria-hidden="true"></span><span class="rn-lbl">案内を読む</span></a></li>
+        <li><a href="soudan.html"><span class="rn-dot" aria-hidden="true"></span><span class="rn-lbl">相談を申し込む</span></a></li>
+      </ol>
+    </nav>
+    <a class="btn btn--act btn--head" href="#flow">相談の流れを見る</a>
+  </div>
+</header>
+
+<main id="main">
+  <!-- 最初の画面 -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__in">
+      <div class="hero__copy">
+        <p class="eyebrow">小さなお店の、レジと予約の導入代行</p>
+        <h1 id="hero-title">レジと予約を、<br>お店の順番で<br>入れ替える。</h1>
+        <p class="hero__lead">紙の予約台帳と現金レジで回してきた小さなお店に代わって、機種選び・設定・操作の説明を進めます。初めての方は、相談の流れからご覧ください。</p>
+        <dl class="facts">
+          <div><dt>対象</dt><dd>従業員5人以下の食堂・雑貨店・習い事教室</dd></div>
+          <div><dt>頼めること</dt><dd>機種選び・設定・操作の説明</dd></div>
+          <div><dt>料金</dt><dd><b>相談は無料</b><span class="facts__sep" aria-hidden="true"></span>設定作業 1回 <b class="num">16,500</b>円〜<small>（税込）</small></dd></div>
+        </dl>
+        <div class="hero__acts" data-dock-hide="first">
+          <a class="btn btn--act" href="#flow">相談の流れを見る</a>
+          <a class="more" href="soudan.html">相談フォームへ進む</a>
+        </div>
+        <p class="hero__note">決まっていない段階でも相談できます。いま対応しているのは、<b>レジ・カード決済・ネット予約</b>の3つです。</p>
+      </div>
+      <figure class="hero__art">
+        <img src="assets/img/01-hero.webp" width="1536" height="864" alt="小さなお店の木のカウンターに置かれたタブレットのレジとカード読み取り機、紙の予約台帳" fetchpriority="high">
+      </figure>
+    </div>
+
+    <!-- 裏づけ：受付の流れ（最初の画面の下端） -->
+    <nav class="band" aria-label="相談から本番までの4段階">
+      <div class="band__in">
+        <p class="band__h"><span>相談から本番まで</span><span class="band__time">早ければ<b class="num">3</b>週間</span></p>
+        <ol class="band__line">
+          <li><a href="#st1"><span class="ring num" aria-hidden="true">1</span><span class="band__name">相談</span><span class="band__meta">無料・30分</span></a></li>
+          <li><a href="#st2"><span class="ring num" aria-hidden="true">2</span><span class="band__name">機種の提案</span><span class="band__meta">約1週間</span></a></li>
+          <li><a href="#st3"><span class="ring num" aria-hidden="true">3</span><span class="band__name">設置と設定</span><span class="band__meta">半日〜1日</span></a></li>
+          <li><a href="#st4"><span class="ring num" aria-hidden="true">4</span><span class="band__name">練習と本番</span><span class="band__meta">2回の練習</span></a></li>
+        </ol>
+      </div>
+    </nav>
+  </section>
+
+  <!-- ここから、ページの終わりの「次の駅」まで一本の線が通る -->
+  <div class="line-area" data-line-area>
+    <div class="trunk" aria-hidden="true"><span class="trunk__fill"></span></div>
+
+    <!-- 対象のお店 -->
+    <section class="sec sec--shops" id="shops" aria-labelledby="shops-title">
+      <div class="wrap">
+        <div class="shops__head">
+          <header class="sec-head">
+            <span class="tick" aria-hidden="true"></span>
+            <p class="kicker">対象のお店</p>
+            <h2 id="shops-title">どんなお店のための支援か</h2>
+          </header>
+          <div class="shops__lead">
+            <p class="sec-lead">従業員5人以下のお店が対象です。近い入口を選ぶと、その業態でよくある入れ替えの順番が分かります。</p>
+            <div class="lines__pick" role="group" aria-label="近いお店を選ぶ" hidden>
+              <span class="lines__pick-h">近いお店を選ぶ</span>
+              <button type="button" data-pick="food" aria-pressed="false">食堂</button>
+              <button type="button" data-pick="shop" aria-pressed="false">雑貨店</button>
+              <button type="button" data-pick="class" aria-pressed="false">教室</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="lines" data-lines>
+          <p class="lines__cols" aria-hidden="true"><span></span><span>まず一つだけ</span><span>2番目</span><span>3番目</span></p>
+          <article class="tline" data-line="food" aria-labelledby="ln-food">
+            <div class="tline__plate">
+              <span class="tline__pic tline__pic--1"><img src="assets/img/02-shops.webp" width="1536" height="1024" alt="" loading="lazy"></span>
+              <h3 id="ln-food"><span class="tline__k">食堂</span><span class="tline__s">席の予約の電話が多いお店</span></h3>
+            </div>
+            <ol class="tline__st">
+              <li><b>カード決済</b>いまのレジの横に読み取り機だけ置く</li>
+              <li><b>ネット予約</b>席の予約を、営業中の電話から外す</li>
+              <li><b>レジの入れ替え</b>慣れてから売上の集計をまとめる</li>
+            </ol>
+          </article>
+          <article class="tline" data-line="shop" aria-labelledby="ln-shop">
+            <div class="tline__plate">
+              <span class="tline__pic tline__pic--2"><img src="assets/img/02-shops.webp" width="1536" height="1024" alt="" loading="lazy"></span>
+              <h3 id="ln-shop"><span class="tline__k">雑貨店</span><span class="tline__s">品数が多く、手で記帳しているお店</span></h3>
+            </div>
+            <ol class="tline__st">
+              <li><b>レジの入れ替え</b>よく売れる50品から登録する</li>
+              <li><b>カード決済</b>レジとつないで打ち間違いを減らす</li>
+              <li><b>在庫の確認</b>残りの品の登録は、閑散期に</li>
+            </ol>
+          </article>
+          <article class="tline" data-line="class" aria-labelledby="ln-class">
+            <div class="tline__plate">
+              <span class="tline__pic tline__pic--3"><img src="assets/img/02-shops.webp" width="1536" height="1024" alt="" loading="lazy"></span>
+              <h3 id="ln-class"><span class="tline__k">教室</span><span class="tline__s">振替と月謝の管理に追われる教室</span></h3>
+            </div>
+            <ol class="tline__st">
+              <li><b>ネット予約</b>振替の空きを生徒が自分で選べる</li>
+              <li><b>月謝のカード払い</b>現金の受け渡しを減らす</li>
+              <li><b>レジ</b>物販が少なければ、入れなくてよい</li>
+            </ol>
+          </article>
+          <p class="words"><b>ことばの意味</b>カード決済＝クレジットカードなどで代金を受け取ること。ネット予約＝お客さまがスマートフォンやパソコンから予約を入れられる仕組み。読み取り機＝カードを差し込んだり、かざしたりする手のひら大の機械。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 頼めること -->
+    <section class="sec sec--scope" id="scope" aria-labelledby="scope-title">
+      <div class="wrap scope">
+        <header class="sec-head">
+          <span class="tick" aria-hidden="true"></span>
+          <p class="kicker">頼めること</p>
+          <h2 id="scope-title">依頼できること・<br>まだできないこと</h2>
+          <p class="fine">対応範囲は見本上の設定です。</p>
+        </header>
+        <div class="scope__can">
+          <h3>依頼できること</h3>
+          <ul>
+            <li>お店に合う機種と料金の組み合わせ選び</li>
+            <li>レジ・読み取り機・回線（お店のインターネット）の初期設定</li>
+            <li>予約ページの作成と、受付時間の設定</li>
+            <li>お店の方との操作の練習</li>
+          </ul>
+        </div>
+        <div class="scope__cannot">
+          <h3>まだできないこと</h3>
+          <ul>
+            <li>記帳や確定申告の代行</li>
+            <li>機器の販売・リース</li>
+            <li>営業時間中の常駐</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 導入の流れ（写真が主役の章。濃い地はここだけ） -->
+    <section class="sec sec--flow" id="flow" aria-labelledby="flow-title" data-dock-hide>
+      <div class="wrap">
+        <header class="sec-head sec-head--wide">
+          <span class="tick" aria-hidden="true"></span>
+          <p class="kicker">導入の流れ</p>
+          <h2 id="flow-title">はじめての導入の流れ</h2>
+          <p class="sec-lead">各段階で、お店に用意していただくものを先にお伝えします。</p>
+        </header>
+        <ol class="stages">
+          <li class="stage" id="st1">
+            <span class="ring ring--lg num" aria-hidden="true">1</span>
+            <div class="stage__text">
+              <p class="stage__meta">段階 <span class="num">1</span><span class="stage__time">無料・30分</span></p>
+              <h3>相談</h3>
+              <p class="stage__desc">いまの道具と困りごとを、オンラインで聞きます。</p>
+              <p class="bring"><b>お店が用意するもの</b>いまのメニュー表か商品の一覧</p>
+            </div>
+            <figure class="stage__art stage__art--fig"><img src="assets/img/05-online.webp" width="1536" height="1024" alt="ノートパソコンでオンライン相談をする机の上" loading="lazy"></figure>
+          </li>
+          <li class="stage" id="st2">
+            <span class="ring ring--lg num" aria-hidden="true">2</span>
+            <div class="stage__text">
+              <p class="stage__meta">段階 <span class="num">2</span><span class="stage__time">約1週間</span></p>
+              <h3>機種の提案</h3>
+              <p class="stage__desc">2〜3通りの組み合わせと、月々の費用を並べてお見せします。</p>
+              <p class="bring"><b>お店が用意するもの</b>回線の契約書類（あれば）</p>
+            </div>
+            <figure class="stage__art"><img src="assets/img/x1-proposal-hands.webp" width="1000" height="563" alt="テーブルをはさみ、ノートパソコンを前に話す二人の手元" loading="lazy"></figure>
+          </li>
+          <li class="stage" id="st3">
+            <span class="ring ring--lg num" aria-hidden="true">3</span>
+            <div class="stage__text">
+              <p class="stage__meta">段階 <span class="num">3</span><span class="stage__time">半日〜1日</span></p>
+              <h3>設置と設定</h3>
+              <p class="stage__desc">定休日にお店へ伺い、商品・予約枠・決済を設定します。</p>
+              <p class="bring"><b>お店が用意するもの</b>予約台帳・よく使うスマートフォン</p>
+            </div>
+            <figure class="stage__art stage__art--fig"><img src="assets/img/03-setup.webp" width="1200" height="900" alt="箱から出したタブレットとカード読み取り機、ルーターが線でつながる作業机" loading="lazy"></figure>
+          </li>
+          <li class="stage" id="st4">
+            <span class="ring ring--lg num" aria-hidden="true">4</span>
+            <div class="stage__text">
+              <p class="stage__meta">段階 <span class="num">4</span><span class="stage__time">2回の練習</span></p>
+              <h3>練習と本番</h3>
+              <p class="stage__desc">お店の方と練習してから、本番の営業日を決めます。</p>
+              <p class="bring"><b>お店が用意するもの</b>練習に使う1時間ほど</p>
+            </div>
+            <figure class="stage__art"><img src="assets/img/x3-booking-phone.webp" width="860" height="860" alt="スマートフォンの予約画面で、空いている日を選ぶ手元" loading="lazy"><figcaption>画面は、この見本のための架空の予約画面です</figcaption></figure>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 費用 -->
+    <section class="sec sec--fee" id="fee" aria-labelledby="fee-title">
+      <div class="wrap">
+        <div class="fee__top">
+          <header class="sec-head">
+            <span class="tick" aria-hidden="true"></span>
+            <p class="kicker">費用</p>
+            <h2 id="fee-title">費用の考え方</h2>
+            <p class="sec-lead">てびき舎に払うのは、設定作業の料金だけです。</p>
+          </header>
+          <ol class="fare">
+            <li class="fare__st">
+              <p class="fare__k">相談</p>
+              <p class="fare__v"><span class="num">0</span><small>円</small></p>
+              <p class="fare__s">何度でも・オンライン可</p>
+            </li>
+            <li class="fare__st">
+              <p class="fare__k">設定作業（1回）</p>
+              <p class="fare__v"><span class="num">16,500</span><small>円〜（税込）</small></p>
+              <p class="fare__s">レジ・決済・予約のうち1つ</p>
+            </li>
+          </ol>
+        </div>
+        <div class="fee__table">
+          <table>
+            <caption>追加の費用が出る条件</caption>
+            <thead><tr><th scope="col">条件</th><th scope="col">追加の費用（税込）</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">出張の距離が片道10kmを超える</th><td><span class="num">10</span>kmごとに <b class="num">1,100</b>円</td></tr>
+              <tr><th scope="row">商品・顧客のデータが300件を超える</th><td><span class="num">300</span>件ごとに <b class="num">5,500</b>円</td></tr>
+              <tr><th scope="row">3つ目以降の練習の回</th><td><span class="num">1</span>回 <b class="num">3,300</b>円</td></tr>
+            </tbody>
+          </table>
+          <dl class="fee__in">
+            <div><dt>設定作業に含むもの</dt><dd>選んだ1つ（レジ・決済・予約のうち1つ）の設定と、操作の練習2回まで</dd></div>
+            <div><dt>含まないもの</dt><dd>機器の代金と月額。機器会社と直接ご契約いただき、てびき舎は代金を預かりません</dd></div>
+          </dl>
+          <p class="fine">すべて税込・見本用の架空価格です。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- よくある質問と相談の方法 -->
+    <section class="sec sec--ask" id="ask" aria-labelledby="ask-title">
+      <div class="wrap ask">
+        <div class="ask__faq">
+          <header class="sec-head">
+            <span class="tick" aria-hidden="true"></span>
+            <p class="kicker">相談</p>
+            <h2 id="ask-title">よくある質問と相談の方法</h2>
+          </header>
+          <div class="faq">
+            <details><summary>料金は、いつからかかりますか？</summary><p>相談の時点ではかかりません。費用がかかるのは設定作業からで、作業の前に、見積もりを書面でお渡しします。</p></details>
+            <details><summary>今のレジは、すぐに捨てる必要がありますか？</summary><p>ありません。カード決済や予約から始めて、レジは慣れてから替える順番もよく選ばれます。</p></details>
+            <details><summary>機器が壊れたときは、どこに連絡しますか？</summary><p>故障は機器会社の窓口です。設定の困りごとは、本番から1か月はてびき舎にも相談できます。</p></details>
+            <details><summary>相談のあとに、断ってもよいですか？</summary><p>はい。相談は無料で、その後の依頼は必要ありません。</p></details>
+          </div>
+        </div>
+        <figure class="ask__art">
+          <img src="assets/img/x2-phone-consult.webp" width="760" height="950" alt="椅子に座り、スマートフォンで話す人の肩から下" loading="lazy">
+          <figcaption>当日は、スマートフォンかパソコンで30分</figcaption>
+        </figure>
+      </div>
+
+      <!-- 線の終点：次の駅 -->
+      <div class="wrap">
+        <div class="next" data-line-end data-dock-hide>
+          <span class="stn stn--end" aria-hidden="true"></span>
+          <div class="next__text">
+            <p class="kicker">次の駅</p>
+            <p class="next__title">相談の申し込み</p>
+            <p>フォームで、お店の業態と困りごとを送ります。2営業日以内に、日時の候補をメールで返信します。</p>
+          </div>
+          <div class="next__acts">
+            <a class="btn btn--act" href="soudan.html">相談フォームへ進む</a>
+            <a class="more" href="#flow">相談の流れをもう一度見る</a>
+          </div>
+          <p class="fine next__fine">返信の目安・相談時間は見本上の設定です。</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="site-foot__in">
+    <div class="site-foot__name">
+      <p class="logo__name">てびき舎</p>
+      <p>小さなお店のレジと予約の導入代行（架空の事業）</p>
+    </div>
+    <div class="site-foot__info">
+      <dl>
+        <div><dt>所在地</dt><dd>架空県ひより市 本町商店街（見本上の設定）</dd></div>
+        <div><dt>連絡</dt><dd><a href="soudan.html">相談フォーム</a>（返信は2営業日以内）</dd></div>
+        <div><dt>受付</dt><dd>平日 10:00〜18:00（見本上の設定）</dd></div>
+      </dl>
+      <p class="site-foot__note">このサイトの画像は、すべてAI生成のイメージです。</p>
+    </div>
+    <nav class="site-foot__nav" aria-label="ページの一覧">
+      <a href="index.html" aria-current="page">てびき舎の案内（トップ）</a>
+      <a href="soudan.html">相談の申し込み</a>
+      <a href="design-notes.html">この見本の設計メモ</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="dock" aria-label="相談の窓口" data-dock>
+  <a class="btn btn--act" href="#flow">相談の流れを見る</a>
+</div>
+
+<aside class="ca-credit" aria-labelledby="ca-credit-title">
+  <p class="ca-credit__label">この見本サイトについて</p>
+  <h2 id="ca-credit-title">Web診断36「CA02 先進案内型サイト」の設計方針で、クルーアセントが制作した見本です。</h2>
+  <p>「小さなお店のレジと予約の導入代行 てびき舎」は架空の事業です。掲載している価格・営業時間・住所・数値はすべて見本用の設定で、実在の店舗・人物・お客様の声は載せていません。</p>
+  <div class="ca-credit__actions">
+    <a class="ca-btn ca-btn--primary" href="../../diagnosis.html?mode=quick">あなたの事業の方向を診断する（16問・無料）</a>
+    <a class="ca-btn" href="design-notes.html">この見本の設計メモ</a>
+    <a class="ca-link" href="../../works.html">見本サイトの一覧</a>
+  </div>
+  <p class="ca-credit__fine">トップと相談の申し込みの2ページの見本です。見本の規模は参考で、特定のプランをおすすめするものではありません。</p>
+  <a class="ca-credit__brand" href="../../index.html"><img src="../../assets/brand/logo.webp" width="360" height="278" alt="">クルーアセント（CREW ASCENT）</a>
+</aside>
+
+<dialog class="ca-dialog" id="ca-sample-dialog" aria-labelledby="ca-dialog-title">
+  <h2 id="ca-dialog-title">これは見本サイトです</h2>
+  <p data-ca-dialog-text>この操作は、見本のため実際には行われません。</p>
+  <div class="ca-dialog__actions">
+    <a class="ca-btn" href="../../contact.html">クルーアセントに相談する</a>
+    <button type="button" data-ca-close>閉じる</button>
+  </div>
+</dialog>
+</body>
+</html>
