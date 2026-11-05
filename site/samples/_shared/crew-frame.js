@@ -48,12 +48,31 @@
   });
 })();
 
-/* 枠の中（プレビュー）で開かれたときだけ、ページを移るたびに外側の画面もこのページの先頭へ戻す */
+/* ページを開いたら、いつも一番上から（ページ内の #場所 へのリンクを除く）。
+   プレビューなどの枠の中では、枠の外側の画面もこのページの先頭へ合わせる。 */
 (function () {
-  if (window === window.top) return;
-  function toTop() {
-    var first = document.body && document.body.firstElementChild;
-    if (first && !location.hash) first.scrollIntoView({ block: 'nearest' });
+  try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
+  var framed = false;
+  try { framed = window.self !== window.top; } catch (e) { framed = true; }
+  var moved = false;
+  window.addEventListener('wheel', function () { moved = true; }, { passive: true, once: true });
+  window.addEventListener('touchmove', function () { moved = true; }, { passive: true, once: true });
+  function toTop(force) {
+    if (location.hash && location.hash.length > 1) return;
+    if (moved && !force) return;
+    window.scrollTo(0, 0);
+    if (!framed || !document.body) return;
+    try {
+      var probe = document.createElement('span');
+      probe.setAttribute('aria-hidden', 'true');
+      probe.style.cssText = 'position:absolute;left:0;top:0;width:1px;height:1px;pointer-events:none;';
+      document.body.appendChild(probe);
+      probe.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      document.body.removeChild(probe);
+    } catch (e) {}
   }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', toTop); else toTop();
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { toTop(true); });
+  else toTop(true);
+  window.addEventListener('load', function () { toTop(false); });
+  window.addEventListener('pageshow', function (ev) { if (ev.persisted) { moved = false; toTop(true); } });
 })();
