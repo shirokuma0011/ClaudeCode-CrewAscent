@@ -96,7 +96,7 @@ function pickSpec(t, spec, cls, pickLabel) {
         <div class="spx__bd ${cls}">
           <div class="spx-picks" role="group" aria-label="${esc(pickLabel)}">${picks}</div>
           <div class="spx-panels">${panels}</div>
-        </div>`, `${pickLabel}を選ぶと、右（下）の内容が入れ替わります。`);
+        </div>`, `${pickLabel}を選ぶと、見本の中身が入れ替わります。`);
 }
 
 export function buildSpecimen(t, spec) {

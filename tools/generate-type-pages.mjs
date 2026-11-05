@@ -298,7 +298,7 @@ function page(t) {
     `<h1>${esc(t.name)}</h1><p class="ah__lead">${esc(t.oneLiner)}</p>` +
     `<p class="ah__facts2"><span><b>情報の組み方</b>${esc(spec.xFamily || '')}</span>` +
     `<span><b>見せ方</b>${esc(spec.yModifier || '')}</span>` +
-    `<span><b>座標</b>横${t.xIndex + 1} / 縦${t.yIndex + 1}</span></p>` +
+    `<span><b>36マスの位置</b>左から${t.xIndex + 1}・下から${t.yIndex + 1}</span></p>` +
     `<p class="ah__meta">この診断はWebサイトで何を先にするかの整理です。性格・能力・適性・成果を測るものではありません。</p>` +
     `</div></div>\n` + typeField(t) + `\n    </section>\n` + body + closing + `\n\n  </main>\n  ` + FOOTER;
 }
@@ -319,15 +319,24 @@ function map6All() {
     + `<p class="tp-map__ax tp-map__ax--x" aria-hidden="true"><span>← 実用・情報</span><span>ブランド・魅力 →</span></p></div>`;
 }
 
+/* 一覧の最初の画面は types.html にある手組みの形（4つの領域パネル）をそのまま使う */
+const HUB_HEAD = (() => {
+  const cur = fs.readFileSync(path.join(ROOT, 'types.html'), 'utf8');
+  const m = cur.match(/  <section class="ah ah--editorial hx hx-ty">[\s\S]*?\n    <\/section>\n/);
+  if (!m) throw new Error('types.html の最初の画面が見つかりません');
+  return m[0];
+})();
+
 /* --- 一覧ページ --- */
 function hub() {
   const groups = [['area-tl', '実用・情報 × 先進・新しさ'], ['area-tr', 'ブランド・魅力 × 先進・新しさ'],
                   ['area-bl', '実用・情報 × 王道・安心'], ['area-br', 'ブランド・魅力 × 王道・安心']];
-  const body = groups.map(([k, label], i) => sec(String(i + 1).padStart(2, '0'), label, null,
+  const body = groups.map(([k, label], i) => (CURRENT = { id: `area-${i + 1}` }, sec(String(i + 1).padStart(2, '0'), label, null,
     `<ul class="tp-list">${TYPES.filter((t) => areaClass(t.xIndex, t.yIndex) === k)
       .map((t) => `<li><a href="type-${t.slug}.html"><span class="tp-list__id">${esc(t.id)}</span>` +
         `<b>${esc(t.name)}</b><span class="tp-list__s">${esc(t.oneLiner)}</span></a></li>`).join('')}</ul>`,
-    i % 2 ? 'sec--paper2' : '')).join('\n');
+    i % 2 ? 'sec--paper2' : ''))).join('\n');
+  CURRENT = null;
 
   /* 一覧に入ってすぐ、36タイプのどれへも行けるようにする。
      マス（座標で探す）と業種（自分の仕事から探す）の2通りを先頭に置く。 */
@@ -361,11 +370,7 @@ function hub() {
     `</head>\n<body data-page="types" data-archetype="editorial" class="pg pg--editorial pg-sub">\n\n` + HEADER +
     `<nav class="breadcrumb" aria-label="パンくず"><div class="wrap"><ol><li><a href="index.html">ホーム</a></li>` +
     `<li><a href="diagnosis.html">診断</a></li><li aria-current="page">36タイプ一覧</li></ol></div></nav>\n` +
-    `  <main id="main">\n\n  <section class="ah ah--editorial">\n` +
-    `      <div class="wrap ah__inner"><div class="ah__main"><p class="eyebrow">Web診断36</p>` +
-    `<h1>36タイプ一覧</h1><p class="ah__lead">二つの軸を6段階に分けるので、6×6＝36通りになります。優劣はありません。` +
-    `どれも「今どちらを先にするか」の置き方の違いです。</p>` +
-    `<p class="ah__meta">全36タイプ ／ 4つの領域</p></div></div>\n    </section>\n` + finder + body +
+    `  <main id="main">\n\n` + HUB_HEAD + finder + body +
     `\n  <section class="sec sec--ink">\n` +
     `    <div class="wrap"><div class="closing"><h2>自分がどこに入るかは、16問で分かります。</h2>` +
     `<p class="lead">2〜3分です。登録もログインも必要ありません。</p>` +

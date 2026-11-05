@@ -97,3 +97,4 @@ body[data-page="industries"] .idx-head h2{font-size:clamp(18px,1.6vw,21px)!impor
 @media (min-width:861px){body[data-page="result"] main :is(.container,.wrap--mid){margin-left:max(0px,calc((100% - var(--max) - var(--gut) * 2) / 2));margin-right:auto}}
 @media (min-width:1441px){.rs-mast .float36--type{right:auto;left:calc(50vw + 258px)}}
 @media (min-width:861px) and (max-width:1099px){body .rs-mast .rs-mast__inner>*{max-width:calc(62vw - 96px)}}
+.tp-toc__more{display:none}@media (max-width:639px){.tp-toc.is-short .tp-toc__l li:nth-child(n+5){display:none}.tp-toc.is-short .tp-toc__more{display:inline-flex;align-items:center;min-height:44px;margin:0 0 12px;padding:0 16px;border:1px solid var(--rule);background:var(--card);color:var(--ink);font:inherit;font-size:.875rem;cursor:pointer}}

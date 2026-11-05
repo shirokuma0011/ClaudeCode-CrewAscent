@@ -443,6 +443,20 @@
   openAncestorDetails(location.hash);
   window.addEventListener('hashchange', function () { openAncestorDetails(location.hash); });
 
+  /* スマホでは、長い目次を最初の4項目だけにして「ほかも見る」で開く（13項目は長いという声を受けて） */
+  Array.prototype.forEach.call(document.querySelectorAll('.tp-toc'), function (nav) {
+    var list = nav.querySelector('.tp-toc__l');
+    var n = list ? list.children.length : 0;
+    if (n < 7) return;
+    var more = document.createElement('button');
+    more.type = 'button';
+    more.className = 'tp-toc__more';
+    more.textContent = 'ほかの' + (n - 4) + '項目も見る';
+    more.addEventListener('click', function () { nav.classList.remove('is-short'); });
+    list.parentNode.insertBefore(more, list.nextSibling);
+    nav.classList.add('is-short');
+  });
+
   Array.prototype.forEach.call(document.querySelectorAll('[data-fold-all]'), function (btn) {
     var scope = document;
     btn.addEventListener('click', function () {

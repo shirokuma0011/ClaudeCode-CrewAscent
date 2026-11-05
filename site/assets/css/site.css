@@ -544,7 +544,7 @@ html .atl-dialog-copy h2{color:var(--ink);}
 .ptable__for{display:block;min-height:3.4em;font-size:13px;font-weight:400;color:var(--tx-2);}
 .ptable__price{display:block;margin-top:10px;font-size:14px;font-weight:700;color:var(--ink);}
 .ptable__price b{font:700 32px/1.2 var(--serif);margin-right:2px;}
-.ptable tbody th{text-align:left;font-size:13px;font-weight:700;color:var(--tx-3);padding:14px 16px 14px 0;border-top:1px solid var(--rule);vertical-align:top;}
+.ptable tbody th{text-align:left;font-size:14px;font-weight:700;color:var(--tx-2);padding:14px 16px 14px 0;border-top:1px solid var(--rule);vertical-align:top;}
 .ptable tbody td{padding:14px 16px;border-top:1px solid var(--rule);border-left:1px solid var(--rule);vertical-align:top;color:var(--ink);}
 .ptable tbody tr:first-child>*{border-top:2px solid var(--ink);}
 .ptable__cta td,.ptable__cta td:first-child{border-top:1px solid var(--rule);}
