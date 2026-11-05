@@ -1,0 +1,24 @@
+/* 差し色（2026-11-05）: 36マスの4領域の色（藍・葡萄・苔・柿）を、写真・小見出し・36マスに広げる。
+   黒・明朝・茶色の軸と背景は変えない。文字に使う色は生成り・白の上で 4.5:1 以上。 */
+:root{--c1:#2f6690;--c2:#7b4a7d;--c3:#48703a;--c4:#9a5220;--c1i:#8dbbe0;--c2i:#d19fcf;--c3i:#a8d08a;--c4i:#f0a66a}
+main>section:nth-of-type(4n+1){--acc:var(--c1);--acci:var(--c1i)}
+main>section:nth-of-type(4n+2){--acc:var(--c3);--acci:var(--c3i)}
+main>section:nth-of-type(4n+3){--acc:var(--c4);--acci:var(--c4i)}
+main>section:nth-of-type(4n){--acc:var(--c2);--acci:var(--c2i)}
+main .eyebrow,main .idx-head__no{color:var(--acc)}
+main .sec--ink .eyebrow,main .ah .eyebrow,main .hx .eyebrow,main .hero .eyebrow{color:var(--acci)}
+main .idx-head__no::after{background:var(--acc)}
+/* 写真: 白黒・くすませる加工を外す（暗い面に文字を重ねるものだけ少し暗く） */
+.fig img,.hx-ab__fig img,.wk-cell img{filter:none}
+.hx-sv__grid img,.hx-in__grid img{filter:saturate(1.1) brightness(.86)}
+.hx-wg__in img{filter:saturate(1.05) brightness(.74)}
+/* トップの写真の上の四角を4色で順に */
+.pics li:nth-child(4n+1){--pc:var(--c1)}.pics li:nth-child(4n+2){--pc:var(--c3)}.pics li:nth-child(4n+3){--pc:var(--c4)}.pics li:nth-child(4n){--pc:var(--c2)}
+.pics .pic__img::after{background:linear-gradient(var(--pc),var(--pc)) calc(var(--cx,0) * 20%) calc(var(--cy,3) * 33.333%) / calc(100% / 6) 25% no-repeat}
+/* トップの36マスの盤: 各マスを自分の領域の色で薄く染める（選択中は茶色のまま） */
+html .atl-map-cell:not([aria-pressed="true"]){background:linear-gradient(140deg,color-mix(in srgb,var(--point-color) 30%,#232120),color-mix(in srgb,var(--point-color) 16%,#151413))}
+/* トップの立体の36マス: タイプページと同じ4領域の淡い色（上3段=先進、左3列=実用） */
+.float36:not(.float36--type) .float36__plane i:not(.is-on):nth-child(-n+18):is(:nth-child(6n+1),:nth-child(6n+2),:nth-child(6n+3)){background:#dfe4e7}
+.float36:not(.float36--type) .float36__plane i:not(.is-on):nth-child(-n+18):is(:nth-child(6n+4),:nth-child(6n+5),:nth-child(6n)){background:#e7dee5}
+.float36:not(.float36--type) .float36__plane i:not(.is-on):nth-child(n+19):is(:nth-child(6n+1),:nth-child(6n+2),:nth-child(6n+3)){background:#e3e6db}
+.float36:not(.float36--type) .float36__plane i:not(.is-on):nth-child(n+19):is(:nth-child(6n+4),:nth-child(6n+5),:nth-child(6n)){background:#efe3d4}
