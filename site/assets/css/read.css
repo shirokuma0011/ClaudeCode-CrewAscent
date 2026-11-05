@@ -253,3 +253,66 @@ html .spec-card{padding:20px 20px 22px !important}
 @media (max-width:640px){.rd-steps{grid-template-columns:1fr;gap:28px}.rd-steps li+li::before{left:50%;top:-22px;margin:0 0 0 -12px;transform:rotate(90deg)}}
 @media (max-width:640px){.fc-meter{gap:2px}.fc-meter i{width:9px}}
 .scope h3 small{color:var(--c2);border-color:var(--c2)}
+.ic--spark{--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6%22/%3E%3C/svg%3E")}
+/* 診断の仕組み 01: 四つの視点を、真ん中の6×6へ向けて四方に置く（盤と同じ向き・同じ色） */
+.rd-compass{display:grid;grid-template-columns:1fr minmax(220px,260px) 1fr;grid-template-areas:"top top top" "left core right" "bottom bottom bottom";gap:22px 40px;align-items:center;margin-top:32px}
+.rd-arm{position:relative;padding:16px 18px 18px;background:color-mix(in srgb,var(--sc) 8%,#fff);border:1px solid color-mix(in srgb,var(--sc) 35%,transparent);border-top:4px solid var(--sc)}
+.rd-arm--top{grid-area:top;justify-self:center;width:min(100%,520px)}.rd-arm--bottom{grid-area:bottom;justify-self:center;width:min(100%,520px)}
+.rd-arm--left{grid-area:left}.rd-arm--right{grid-area:right}
+.rd-arm .ic{float:right;color:var(--sc);width:30px;height:30px}
+.rd-arm__tag{display:inline-block;padding:2px 8px;background:var(--sc);color:#fff;font-size:13px;font-weight:700}
+.rd-arm h3{margin:8px 0 4px;font:700 19px/1.45 var(--serif);color:var(--ink)}
+.rd-arm p{margin:0;font-size:14px;color:var(--tx-2);line-height:1.7}
+.rd-arm::after{content:"";position:absolute;width:0;height:0;border:9px solid transparent}
+.rd-arm--top::after{left:50%;bottom:-20px;margin-left:-9px;border-top-color:var(--sc)}
+.rd-arm--bottom::after{left:50%;top:-22px;margin-left:-9px;border-bottom-color:var(--sc)}
+.rd-arm--left::after{top:50%;right:-22px;margin-top:-9px;border-left-color:var(--sc)}
+.rd-arm--right::after{top:50%;left:-22px;margin-top:-9px;border-right-color:var(--sc)}
+.rd-compass__core{grid-area:core;position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:3px;aspect-ratio:1;padding:10px;background:#1b1917}
+.rd-compass__core i{background:var(--c1)}
+.rd-compass__core i:nth-child(n+1):nth-child(-n+18):is(:nth-child(6n+4),:nth-child(6n+5),:nth-child(6n)){background:var(--c2)}
+.rd-compass__core i:nth-child(n+19):is(:nth-child(6n+1),:nth-child(6n+2),:nth-child(6n+3)){background:var(--c3)}
+.rd-compass__core i:nth-child(n+19):is(:nth-child(6n+4),:nth-child(6n+5),:nth-child(6n)){background:var(--c4)}
+.rd-compass__core b{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);padding:4px 12px;background:#1b1917;color:#fff;font:700 18px/1.3 var(--mono);white-space:nowrap}
+@media (max-width:760px){.rd-compass{grid-template-columns:1fr;grid-template-areas:"top" "left" "core" "right" "bottom";gap:12px}.rd-arm--top,.rd-arm--bottom{width:100%}.rd-arm::after{display:none}.rd-compass__core{width:200px;justify-self:center}}
+/* 軸の式 */
+.rd-eq{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 0;padding:0;list-style:none}
+.rd-eq li{padding:8px 14px;border-left:4px solid var(--sc);background:#fff;font-size:15px}
+.rd-eq b{margin-right:10px;color:var(--sc)}
+/* 16問と48問: 問題の量を四角の数で見せる */
+.rd-modes{display:grid;grid-template-columns:1fr 1.5fr;gap:16px;margin-top:28px}
+.rd-mode{padding:22px 24px;border:1px solid #3a3631;border-top:5px solid var(--sc);background:#161514;color:#e8e2d9}
+.rd-mode__n{display:flex;align-items:baseline;gap:6px;margin:0;font-size:16px;color:#e8e2d9}
+.rd-mode__n b{font:700 56px/1 var(--mono);color:var(--sc)}
+.rd-mode__n span{margin-left:auto;padding:3px 10px;border:1px solid var(--sc);color:var(--sc);font-size:14px;font-weight:700}
+.rd-mode h3{margin:10px 0 12px;color:#fff;font:700 20px/1.4 var(--serif)}
+.rd-mode__sq{display:flex;flex-wrap:wrap;gap:4px;margin:0 0 14px}
+.rd-mode__sq i{width:14px;height:14px;background:var(--sc)}
+.rd-mode p:last-child{margin:0;font-size:14px;line-height:1.75;color:#cfc8be}
+.rd-more--ink{background:#161514;border-color:#3a3631}.rd-more--ink>summary{color:#e8e2d9}.rd-more--ink .rd-more__b{color:#cfc8be}
+@media (max-width:760px){.rd-modes{grid-template-columns:1fr}.rd-mode__n b{font-size:44px}}
+/* 結果の使い方: 5段を矢印でつなぐ */
+.rd-st5{display:grid;grid-template-columns:repeat(5,1fr);gap:28px;margin:28px 0 0;padding:0;list-style:none}
+.rd-st5 li{position:relative;padding:16px 16px 18px;background:color-mix(in srgb,var(--sc) 8%,#fff);border:1px solid color-mix(in srgb,var(--sc) 35%,transparent);border-top:4px solid var(--sc)}
+.rd-st5 li+li::before{content:"";position:absolute;left:-24px;top:34px;width:20px;height:14px;background:#5c4a38;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 12'%3E%3Cpath d='M0 5h13V1l5 5-5 5V7H0z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 12'%3E%3Cpath d='M0 5h13V1l5 5-5 5V7H0z'/%3E%3C/svg%3E") center/contain no-repeat}
+.rd-st__no{display:inline-grid;place-items:center;width:34px;height:34px;background:var(--sc);color:#fff;font:700 15px/1 var(--mono)}
+.rd-st5 h3{margin:10px 0 6px;font:700 16px/1.5 var(--serif);color:var(--ink)}
+.rd-st5 p{margin:0;font-size:13.5px;line-height:1.7;color:var(--tx-2)}
+.rd-yn--notes{margin-top:24px}
+.rd-callout--warn{margin:0;border-left-color:var(--c4);background:color-mix(in srgb,var(--c4) 9%,#fff)}.rd-callout--warn .ic{color:var(--c4)}
+.rd-callout--calm{margin:0;border-left-color:#9a9087;background:#fff;color:var(--tx-2);font-size:14px}.rd-callout--calm .ic{color:#9a9087}
+.rd-callout b{display:block}
+@media (max-width:1100px){.rd-st5{grid-template-columns:repeat(3,1fr)}.rd-st5 li:nth-child(4)::before{display:none}}
+@media (max-width:640px){.rd-st5{grid-template-columns:1fr;gap:26px}.rd-st5 li+li::before,.rd-st5 li:nth-child(4)::before{display:block;left:50%;top:-21px;margin-left:-10px;transform:rotate(90deg)}}
+/* 診断の入口: 16問=明るい苔、48問=暗い面に藍。四角の数で量の差を見せる */
+html .mode-card--quick,html .mode-card--full{padding:24px 26px 26px;border:1px solid var(--rule);border-top:5px solid var(--sc)}
+html .mode-card--quick{--sc:var(--c3);background:color-mix(in srgb,var(--c3) 8%,#fff)}
+html .mode-card--full{--sc:var(--c1i);background:#1c1a18;border-color:#1c1a18;border-top-color:var(--sc);color:#e8e2d9}
+html .mode-card--full :is(h2,.num,dd){color:#fff}html .mode-card--full dt{color:#bdb5aa}
+html .mode-card--quick .num{color:var(--c3)}html .mode-card--full .num{color:var(--c1i)}
+html .mode-card--quick .tag,html .mode-card--full .tag{border-color:var(--sc);color:var(--sc);background:transparent;font-weight:700}
+html .mode-card--full .btn--primary{background:var(--c1i);border-color:var(--c1i);color:#111}
+html .mode-card--quick .btn--primary{background:var(--c3);border-color:var(--c3)}
+.mode-card--quick .rd-mode__sq,.mode-card--full .rd-mode__sq{display:flex;flex-wrap:wrap;gap:4px;margin:0 0 14px}
+.mode-card--quick .rd-mode__sq i,.mode-card--full .rd-mode__sq i{width:14px;height:14px;background:var(--sc)}
+@media (max-width:640px){.mode-card--quick .rd-mode__sq i,.mode-card--full .rd-mode__sq i{width:10px;height:10px}}
