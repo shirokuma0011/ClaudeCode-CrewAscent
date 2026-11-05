@@ -1276,33 +1276,33 @@ transform だけで動かす。見えている間だけ動き、動きを減ら�
 スクロールに合わせて JS が --p（0〜1）を入れ、面の傾きが変わる。
 ===================================================================== */
 main{overflow-x:clip;}
-.sec--m36{position:relative;background:#f6f2ec;padding-block:88px;}
+.sec--m36{position:relative;background:#f6f2ec;padding-block:88px;}@media (min-width:1441px){.sec--m36{padding-block:6.1vw 7.6vw}}
 .m36band{position:relative;z-index:3;display:grid;grid-template-columns:auto 1fr;gap:0 28px;align-items:start;max-width:calc(var(--max) + var(--gut) * 2);}
 .m36band>div{max-width:460px;}
 .m36band__no{font:700 clamp(72px,8vw,112px)/.85 var(--serif);color:#8a5f33;letter-spacing:-.02em;}
 .m36band__t{font:700 clamp(20px,1.8vw,24px)/1.5 var(--serif);color:var(--ink);margin-bottom:8px;}
 .m36band__d{font-size:14px;line-height:1.8;color:var(--tx-2);margin-bottom:18px;}
-.float36{--p:.5;position:absolute;z-index:2;top:40%;right:-12vw;width:min(660px,50vw);aspect-ratio:1;transform:translateY(-50%);perspective:1600px;pointer-events:none;}
+.float36{--p:.5;--w:max(min(660px,50vw),min(45.8vw,82vh));position:absolute;z-index:2;top:40%;right:-12vw;width:var(--w);aspect-ratio:1;transform:translateY(-50%);perspective:calc(var(--w)*2.42);pointer-events:none;}
 .float36__plane{position:absolute;inset:0;display:grid;grid-template-columns:repeat(6,1fr);gap:2.4%;transform-style:preserve-3d;
-transform:rotateX(calc(48deg + var(--p) * 16deg)) rotateZ(calc(-44deg + var(--p) * 22deg)) translateZ(-40px);}
+transform:rotateX(calc(48deg + var(--p) * 16deg)) rotateZ(calc(-44deg + var(--p) * 22deg)) translateZ(calc(var(--w)*-.06));}
 .float36__plane i{position:relative;display:block;aspect-ratio:1;background:#ece5da;transform-style:preserve-3d;
 animation:f36 7s cubic-bezier(.45,0,.55,1) infinite;animation-delay:calc(var(--d) * -.32s);animation-play-state:paused;
 box-shadow:0 0 0 1px rgba(0,0,0,.04) inset;}
-.float36__plane i::before{content:"";position:absolute;left:0;right:0;top:100%;height:18px;background:#b8ab97;transform-origin:top;transform:rotateX(-90deg);}
-.float36__plane i::after{content:"";position:absolute;top:0;bottom:0;left:100%;width:18px;background:#cfc3b1;transform-origin:left;transform:rotateY(90deg);}
+.float36__plane i::before{content:"";position:absolute;left:0;right:0;top:100%;height:calc(var(--w)*.027);background:#b8ab97;transform-origin:top;transform:rotateX(-90deg);}
+.float36__plane i::after{content:"";position:absolute;top:0;bottom:0;left:100%;width:calc(var(--w)*.027);background:#cfc3b1;transform-origin:left;transform:rotateY(90deg);}
 .float36__plane i.is-on{background:#8a5f33;animation-name:f36on;}
 .float36__plane i.is-on::before{background:#5e4023;}
 .float36__plane i.is-on::after{background:#74512d;}
 .float36.is-run .float36__plane i{animation-play-state:running;}
-@keyframes f36{0%,100%{transform:translateZ(0);}50%{transform:translateZ(34px);}}
-@keyframes f36on{0%,100%{transform:translateZ(40px);}50%{transform:translateZ(150px);}}
+@keyframes f36{0%,100%{transform:translateZ(0);}50%{transform:translateZ(calc(var(--w)*.052));}}
+@keyframes f36on{0%,100%{transform:translateZ(calc(var(--w)*.06));}50%{transform:translateZ(calc(var(--w)*.227));}}
 @media (max-width:860px){
 .sec--m36{padding-block:56px 300px;}
-.float36{top:auto;bottom:-70px;right:-26vw;width:118vw;transform:none;}
+.float36{top:auto;bottom:-70px;right:-26vw;--w:118vw;transform:none;}
 .m36band{grid-template-columns:1fr;}
 .m36band__no{font-size:64px;margin-bottom:8px;}
 }
-@media (prefers-reduced-motion:reduce){.float36__plane i{animation:none !important;}.float36__plane i.is-on{transform:translateZ(70px);}}
+@media (prefers-reduced-motion:reduce){.float36__plane i{animation:none !important;}.float36__plane i.is-on{transform:translateZ(calc(var(--w)*.106));}}
 .sec--steps .wrap{position:relative;z-index:3;}
 .ah__band{position:relative;z-index:3;background:#000;}
 @media (max-width:860px){.ah{flex-direction:column;}.ah::after{order:-1;}}
@@ -1321,9 +1321,9 @@ img.brand__mark{display:block;width:auto;height:38px;}
 }
 @keyframes mosaicOn{0%,100%{opacity:1;}50%{opacity:.55;}}
 @media (prefers-reduced-motion:reduce){.hero__mosaic::after{animation:none;}}
-/* タイプ別ページ: 見出しの右に立体の36マス。4つの領域を淡い色で分け、このタイプだけ茶色で高く浮く。見出しの下へはみ出す */
+/* 立体36マス: --w で伸縮 */
 .ah--type{overflow:visible;z-index:2;}
-.float36--type{top:58%;right:max(-60px,calc((100vw - 1440px) / 2 - 40px));width:min(600px,46vw);z-index:1;}
+.float36--type{top:58%;right:max(-60px,calc((100vw - 1440px) / 2 - 40px));--w:max(min(600px,46vw),min(41.7vw,75vh));z-index:1;}
 .float36--type .float36__plane i{background:#ece5da;}
 .float36--type .float36__plane i.q-tl{background:#dfe4e7;}.float36--type .float36__plane i.q-tl::before{background:#a9b3ba;}.float36--type .float36__plane i.q-tl::after{background:#c3ccd2;}
 .float36--type .float36__plane i.q-tr{background:#e7dee5;}.float36--type .float36__plane i.q-tr::before{background:#b5a5b1;}.float36--type .float36__plane i.q-tr::after{background:#cfc1cb;}
@@ -1336,7 +1336,7 @@ img.brand__mark{display:block;width:auto;height:38px;}
 .ah--type .ah__inner{position:relative;z-index:3;}
 @media (max-width:860px){
 .ah--type{padding-bottom:250px;}
-.float36--type{top:auto;bottom:-90px;right:-18vw;width:104vw;transform:none;}
+.float36--type{top:auto;bottom:-90px;right:-18vw;--w:104vw;transform:none;}
 }
 .ah--type{z-index:auto;}.ah--type ~ .tp-toc{z-index:3;}.ah--type ~ .tp-toc .tp-toc__l,.ah--type ~ .tp-toc .tp-toc__h{position:relative;}@media (max-width:860px){.ah--type ~ .tp-toc .tp-toc__h{background:#fff;display:inline-block;padding-right:8px;}}
 /* 料金ページ: 4プランの範囲を、積み重なるタイル（1枚＝1ページ、茶色＝原稿・画像・ロゴも整える）で見せる */
