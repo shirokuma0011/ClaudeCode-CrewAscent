@@ -3,38 +3,97 @@
   'use strict';
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ------------------- ページを開いたら必ず一番上から -------------------
-     別のページへ移ったとき、戻る・進むで来たとき、再読み込みしたときも
-     ブラウザが前のスクロール位置を復元しないようにする。
-     ただし #plan-first のような「ページ内の場所を指したリンク」で来たときは、その場所を見せる。 */
+  /* ------------------- ページを開いたときの位置 -------------------
+     ・別のページへ移ったとき、戻る・進むで来たとき … 一番上から
+     ・再読み込みしたとき                           … 読んでいた位置のまま
+     ・#plan-first のような「ページ内の場所」へのリンク … その場所
+     プレビュー画面などの枠（iframe）の中で開いたときは、枠の外側の画面も合わせる。
+     また枠ごと読み込み直されて最初のページに戻されたときは、読んでいたページと位置へ戻す。
+     保存するのはページのパスと位置だけ（このタブの間だけ、sessionStorage）。 */
   try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) { /* noop */ }
-  /* プレビュー画面などの枠（iframe）の中で開いたときは、枠の外側の画面が
-     前のページの位置のまま止まる。ページの先頭を見える位置へ出して、外側も一番上へ戻す。 */
   var framed = false;
   try { framed = window.self !== window.top; } catch (e) { framed = true; }
-  var toTop = function () {
-    if (location.hash && location.hash.length > 1) return;
-    window.scrollTo(0, 0);
-    if (framed && document.body) {
-      /* ページ最上部の目印だけを「見える範囲へ」出す。すでに見えていれば外側は動かない */
-      try {
-        var probe = document.createElement('span');
-        probe.setAttribute('aria-hidden', 'true');
-        probe.style.cssText = 'position:absolute;top:0;left:0;width:1px;height:1px;pointer-events:none;';
-        document.body.appendChild(probe);
-        probe.scrollIntoView({ block: 'nearest', inline: 'nearest' });
-        document.body.removeChild(probe);
-      } catch (e) { /* noop */ }
-    }
+  var POS = 'crew:pos', NAV = 'crew:nav', BACK = 'crew:restore';
+  var ss = {
+    get: function (k) { try { var v = sessionStorage.getItem(k); return v ? JSON.parse(v) : null; } catch (e) { return null; } },
+    set: function (k, v) { try { sessionStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* noop */ } },
+    del: function (k) { try { sessionStorage.removeItem(k); } catch (e) { /* noop */ } }
   };
-  toTop();
-  window.addEventListener('pageshow', function (ev) { if (ev.persisted) toTop(); });
+  var here = location.pathname + location.search;
+  var navType = 'navigate';
+  try { var ne = performance.getEntriesByType('navigation')[0]; if (ne && ne.type) navType = ne.type; } catch (e) { /* noop */ }
+
+  /* 枠の外側の画面を、この文書の y の位置へ合わせる（すでに見えていれば動かさない＝nearest） */
+  var alignOuter = function (y, how) {
+    if (!framed || !document.body) return;
+    try {
+      var probe = document.createElement('span');
+      probe.setAttribute('aria-hidden', 'true');
+      probe.style.cssText = 'position:absolute;left:0;width:1px;height:1px;pointer-events:none;top:' + Math.max(0, y) + 'px;';
+      document.body.appendChild(probe);
+      probe.scrollIntoView({ block: how || 'nearest', inline: 'nearest' });
+      document.body.removeChild(probe);
+    } catch (e) { /* noop */ }
+  };
+  var goTo = function (y) {
+    window.scrollTo(0, y);
+    alignOuter(y, y > 0 ? 'start' : 'nearest');
+  };
+
+  /* いま読んでいる位置。枠の外側でスクロールしているときは、見えている範囲の上端で測る */
+  var visTop = 0;
+  if (framed && 'IntersectionObserver' in window) {
+    var steps = []; for (var i = 0; i <= 200; i++) steps.push(i / 200);
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) { visTop = Math.max(0, Math.round(en.intersectionRect.top - en.boundingClientRect.top)); });
+    }, { threshold: steps });
+    document.addEventListener('DOMContentLoaded', function () { io.observe(document.body); });
+  }
+  var save = function () {
+    var y = Math.max(window.scrollY || 0, framed ? visTop : 0);
+    ss.set(POS, { path: here, y: Math.round(y), t: Date.now() });
+  };
+  var st = 0;
+  window.addEventListener('scroll', function () { clearTimeout(st); st = setTimeout(save, 150); }, { passive: true });
+  window.addEventListener('pagehide', save);
+  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'hidden') save(); });
+
+  /* サイト内のリンクを押したことを覚えておく（枠ごとの読み込み直しと区別するため） */
+  document.addEventListener('click', function (ev) {
+    var a = ev.target && ev.target.closest ? ev.target.closest('a[href]') : null;
+    if (!a || a.target === '_blank' || a.origin !== location.origin) return;
+    ss.set(NAV, { t: Date.now() });
+  }, true);
+
+  var pos = ss.get(POS), byLink = ss.get(NAV), restoreNext = ss.get(BACK);
+  ss.del(NAV);
+  var fresh = function (o, ms) { return o && Date.now() - (o.t || 0) < ms; };
+  var isTop = /\/(index\.html)?$/.test(location.pathname);
+  var wantY = 0;
+
+  if (restoreNext && pos && pos.path === here) {
+    ss.del(BACK); wantY = pos.y;                       /* 枠の読み込み直しから戻ってきた */
+  } else if (navType === 'reload' && pos && pos.path === here) {
+    wantY = pos.y;                                     /* 再読み込み */
+  } else if (framed && isTop && navType !== 'back_forward' && !fresh(byLink, 30000) &&
+             pos && pos.path !== here && fresh(pos, 30 * 60 * 1000) && /\.html/.test(pos.path)) {
+    ss.set(BACK, { t: Date.now() });                   /* 枠ごと読み込み直され、最初のページに戻された */
+    location.replace(pos.path);
+    return;
+  }
+
+  var place = function () {
+    if (location.hash && location.hash.length > 1) return;
+    goTo(wantY);
+  };
+  place();
+  window.addEventListener('pageshow', function (ev) { if (ev.persisted) { wantY = 0; place(); } });
   /* 画像や文字の読み込みで高さが変わったあとにも、もう一度だけ合わせる（読み手が動かしていなければ） */
   var moved = false;
   ['wheel', 'touchstart', 'keydown'].forEach(function (t) {
     window.addEventListener(t, function () { moved = true; }, { passive: true, once: true });
   });
-  window.addEventListener('load', function () { if (!moved) toTop(); });
+  window.addEventListener('load', function () { if (!moved) place(); });
 
   /* 計測: dataLayer がある場合だけ push する薄い層（個人情報・回答値は送らない） */
   window.crewTrack = function (event, params) {
