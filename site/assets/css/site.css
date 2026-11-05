@@ -733,7 +733,7 @@ html .sec--cream{background:var(--paper-2);}
 .ah::after{content:none;position:absolute;inset:0 0 0 auto;width:46%;background:#0d0c0b 70% 50% / cover no-repeat;pointer-events:none;}
 [data-page] .ah::after{content:"";}
 :not(:is([data-page="services"],[data-page="process"],[data-page="management"],[data-page="website-guide"],[data-page="guide"],[data-page="contact"],[data-page="consult-form"],[data-page="hearing-form"],[data-page="about"],[data-page="diagnosis"],[data-page="diagnosis-guide"],[data-page="faq"],[data-page="types"],[data-page="industries"]))>main .ah::after{content:none;}
-.ah__inner{position:relative;z-index:1;padding-block:48px 56px;}
+.ah__inner{position:relative;z-index:1;padding-block:40px 46px;}
 .ah__inner>*,.ah__main{max-width:min(680px,calc(54vw - var(--gut) - 24px));}
 .ah .eyebrow,.ah__eyebrow{color:var(--sand);}
 .ah h1{margin:12px 0 16px;font:700 clamp(30px,3.6vw,52px)/1.45 var(--serif);letter-spacing:.04em;color:#fff;}
@@ -765,7 +765,7 @@ html .sec--paper2{background:var(--paper-2);}
 .sec--tight{padding-block:48px;}
 
 /* 章の頭（番号・罫線・見出し・導入） */
-.opener{margin-bottom:36px;}
+.opener{margin-bottom:28px;}
 .opener__top{display:flex;align-items:center;gap:12px;}
 .opener__no{font:700 13px/1 var(--mono);letter-spacing:.12em;color:var(--blue);}
 .sec--ink .opener__no{color:var(--sand);}
@@ -850,7 +850,7 @@ html .sec--paper2{background:var(--paper-2);}
 .link-arrow .ico{width:16px;height:16px;}
 
 /* 締めの帯 */
-.closing{padding:56px 0 8px;border-top:2px solid var(--ink);}
+.closing{padding:44px 0 8px;border-top:2px solid var(--ink);}
 .closing h2{font:700 clamp(24px,2.6vw,36px)/1.5 var(--serif);letter-spacing:.04em;margin-bottom:12px;}
 .sec--ink .closing{border-top-color:#fff;}
 
@@ -864,7 +864,7 @@ html .sec--paper2{background:var(--paper-2);}
 .ah::after{position:relative;display:block;inset:auto;width:100%;aspect-ratio:16 / 9;}
 .ah{display:flex;flex-direction:column-reverse;justify-content:flex-end;}
 .ah__inner>*,.ah__main{max-width:none;}
-.ah__inner{padding-block:28px 36px;}
+.ah__inner{padding-block:24px 30px;}
 .ah h1 br{display:none;}
 .ah__peek{order:-1;}
 .g6{grid-template-columns:1fr;gap:12px;}.c1-4,.c5-6{grid-column:1;}
@@ -915,7 +915,7 @@ html .sec--paper2{background:var(--paper-2);}
 .timeline__roles{grid-column:2;grid-row:1 / span 2;display:grid;gap:4px;}
 .timeline__role{display:grid;grid-template-columns:9em 1fr;gap:12px;font-size:14px;}
 .timeline__role b{font-weight:700;color:var(--tx-3);font-size:13px;}
-.tl-phase{display:grid;grid-template-columns:200px 1fr auto;gap:4px 20px;align-items:baseline;margin-top:40px;padding:18px 0 14px;border-bottom:2px solid var(--ink);}
+.tl-phase{display:grid;grid-template-columns:200px 1fr auto;gap:4px 20px;align-items:baseline;margin-top:32px;padding:18px 0 14px;border-bottom:2px solid var(--ink);}
 .tl-phase:first-child{margin-top:0;}
 .tl-phase__en{grid-row:1 / span 2;font:700 13px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--blue);}
 .tl-phase__ja{font:700 clamp(22px,2.2vw,30px)/1.4 var(--serif);}
@@ -968,7 +968,7 @@ html .sec--paper2{background:var(--paper-2);}
 .form-choice__item h3{font:700 24px/1.4 var(--serif);}
 .form-choice__item p{font-size:15px;color:var(--tx-2);}
 .form-choice__item .btn{margin-top:auto;align-self:flex-start;}
-.intake-line{display:grid;grid-template-columns:1fr auto;gap:24px 40px;align-items:center;margin-top:32px;padding:24px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+.intake-line{display:grid;grid-template-columns:1fr auto;gap:24px 40px;align-items:center;margin-top:24px;padding:20px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
 .intake-line h3{font:700 20px/1.5 var(--serif);margin-bottom:6px;}
 .intake-line img{width:120px;height:auto;}
 .contact-ways{display:grid;grid-template-columns:1fr 1fr;gap:0 40px;margin-top:32px;}
@@ -977,7 +977,7 @@ html .sec--paper2{background:var(--paper-2);}
 .contact-ways__item p{font-size:15px;color:var(--tx-2);}
 .contact-ways__links{display:flex;flex-wrap:wrap;gap:0 20px;margin-top:8px;}
 /* よくある質問 */
-.faq-group + .faq-group{margin-top:48px;}
+.faq-group + .faq-group{margin-top:36px;}
 .faq-group__title{display:flex;align-items:baseline;gap:14px;padding-bottom:12px;border-bottom:2px solid var(--ink);}
 .faq-group__no{font:700 13px/1 var(--mono);color:var(--blue);}
 .faq-group__ja{font:700 clamp(22px,2vw,28px)/1.4 var(--serif);}
@@ -1118,8 +1118,8 @@ html .sec--paper2{background:var(--paper-2);}
 参考サイトの実測（古川製作所・中川政七商店・KESIKI・ALGO ARTIS）:
 章見出し15〜24px、本文14〜16px、1画面の3〜9割が写真。写真＋短い名前で行き先が分かる。
 ===================================================================== */
-:root{--sec:72px;}
-.pg-sub{--sec:56px;}
+:root{--sec:64px;}
+.pg-sub{--sec:48px;}
 /* 見出しの大きさ（PC） */
 .hero__title,html .hero__title{font-size:clamp(30px,3vw,42px);line-height:1.4;margin:14px 0 16px;}
 .hero__lead{font-size:15px;line-height:1.85;}
@@ -1199,8 +1199,8 @@ html .sec--paper2{background:var(--paper-2);}
 .steps3 li,.steps3 li + li{padding:14px 0;border-left:0;border-bottom:1px solid var(--rule-ink);}
 }
 @media (max-width:760px){
-:root{--sec:48px;}
-.pg-sub{--sec:40px;}
+:root{--sec:44px;}
+.pg-sub{--sec:34px;}
 .hero__title,html .hero__title{font-size:clamp(26px,7.4vw,32px);}
 .ah h1,.phead__title,.article__head h1{font-size:clamp(22px,6.4vw,28px);}
 .sec__title,.sec-title,.ed h2,.split h2,.closing h2,.cta__title,.pg-sub main h2:not([class]),.faq-group__ja,.tl-phase__ja,.external-cta h2,.article__sec h2,.shead__t{font-size:19px !important;}
