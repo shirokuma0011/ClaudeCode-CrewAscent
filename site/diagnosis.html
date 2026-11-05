@@ -23,6 +23,7 @@
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CASerif-700.woff2" crossorigin>
   <!-- 第8版: スタイルは site.css の1ファイルだけ -->
   <link rel="stylesheet" href="assets/css/site.css?v=20261105">
+  <link rel="stylesheet" href="assets/css/heads.css?v=20261105">
   <link rel="stylesheet" href="assets/css/app.css?v=20261105b">
   <script>document.documentElement.className += ' js';</script>
   <script src="assets/js/site-config.js?v=20261025a"></script>
@@ -150,17 +151,24 @@
   <main id="main">
 
   <div id="dg-start">
-    <section class="ah ah--product">
-    <div class="ah__field" aria-hidden="true"></div>
-    <div class="wrap ah__inner">
-      <div class="ah__main"><p class="eyebrow eyebrow--on-ink">無料・登録不要</p><h1><span class="ah__brand">Web診断36</span><span class="ah__h1sub">Webサイトで優先したい方向を、<br>四つの視点から整理する。</span></h1><p class="ah__lead">人や事業を評価する診断ではありません。二つの考え方を比べながら、今のWebサイトでどちらを優先したいかを答えてください。迷った質問は「どちらともいえない」で進められます。</p></div>
-      <div class="ah__aside"><dl class="ah__coords">
-        <div><dt>質問数</dt><dd><span class="num num--md">16</span><span class="num__unit">問</span> または <span class="num num--md">48</span><span class="num__unit">問</span></dd></div>
-        <div><dt>所要時間</dt><dd>2〜3分 または 6〜9分</dd></div>
-        <div><dt>登録</dt><dd>氏名・メール不要</dd></div>
-      </dl></div>
+    <section class="ah ah--product hx hx-dg">
+    <div class="wrap hx__inner">
+      <div class="hx__main">
+        <p class="eyebrow eyebrow--on-ink">無料・登録不要</p>
+        <h1><span class="ah__brand">Web診断36</span><span class="ah__h1sub">Webサイトで優先したい方向を、<br>四つの視点から整理する。</span></h1>
+        <p class="ah__lead">人や事業を評価する診断ではありません。二つの考え方を比べながら、今のWebサイトでどちらを優先したいかを答えてください。迷った質問は「どちらともいえない」で進められます。</p>
+        <div class="hx-dg__go">
+          <button type="button" class="btn btn--primary btn--lg" data-start-mode="quick">16問で始める<small>2〜3分</small></button>
+          <button type="button" class="btn btn--line btn--lg" data-start-mode="full">48問で始める<small>6〜9分</small></button>
+        </div>
+        <p class="hx__note">氏名・メールは不要です。答えたところまで、30日間この端末に保存されます。</p>
+      </div>
+      <figure class="hx-dg__map" aria-hidden="true">
+        <div class="hx-dg__field"><i style="--r:0;--c:0"></i><i style="--r:0;--c:1"></i><i style="--r:0;--c:2"></i><i style="--r:0;--c:3"></i><i style="--r:0;--c:4"></i><i style="--r:0;--c:5"></i><i style="--r:1;--c:0"></i><i style="--r:1;--c:1"></i><i style="--r:1;--c:2"></i><i style="--r:1;--c:3"></i><i style="--r:1;--c:4"></i><i style="--r:1;--c:5"></i><i style="--r:2;--c:0"></i><i style="--r:2;--c:1"></i><i style="--r:2;--c:2"></i><i style="--r:2;--c:3"></i><i style="--r:2;--c:4"></i><i style="--r:2;--c:5"></i><i style="--r:3;--c:0"></i><i style="--r:3;--c:1"></i><i style="--r:3;--c:2"></i><i style="--r:3;--c:3"></i><i style="--r:3;--c:4"></i><i style="--r:3;--c:5"></i><i style="--r:4;--c:0"></i><i style="--r:4;--c:1"></i><i style="--r:4;--c:2"></i><i style="--r:4;--c:3"></i><i style="--r:4;--c:4"></i><i style="--r:4;--c:5"></i><i style="--r:5;--c:0"></i><i style="--r:5;--c:1"></i><i style="--r:5;--c:2"></i><i style="--r:5;--c:3"></i><i style="--r:5;--c:4"></i><i style="--r:5;--c:5"></i><b class="hx-dg__on"></b></div>
+        <span class="hx-ax hx-ax--t">先進・新しさ</span><span class="hx-ax hx-ax--b">王道・安心</span>
+        <span class="hx-ax hx-ax--l">実用・情報</span><span class="hx-ax hx-ax--r">ブランド・魅力</span>
+      </figure>
     </div>
-    <div class="ah__peek"><span aria-hidden="true">↓</span>答えたところまで、30日間この端末に保存されます</div>
   </section>
     <div class="wrap wrap--mid"><div class="dg-resume" id="dg-resume" hidden style="margin-top:var(--s5)"></div></div>
 

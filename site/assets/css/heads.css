@@ -1,0 +1,121 @@
+/* heads.css — 下層ページの最初の画面（hx）
+   トップの第一印象にそろえる: 黒地、左に明朝の見出し＋茶色のボタン＋数字、
+   右に「黒い枠の中で触れるマス」。マスの中身だけをページの目的ごとに変える。
+     診断       … 6×6の地図の上を茶色の1マスが動く（答えると位置が決まる）
+     制作の流れ … 9つの段階を3×3のマスで
+     公開・管理 … 1マス＝1か月の帯を3本
+     よくある質問 … 5つの分類を、質問数つきのマスで */
+
+.ah.hx{display:block;}
+.ah.hx::before,.ah.hx::after{content:none !important;}
+.hx__inner{position:relative;z-index:1;display:grid;gap:28px;align-items:center;padding-block:36px 44px;}
+@media (min-width:961px){.hx__inner{grid-template-columns:minmax(0,1fr) minmax(0,600px);gap:56px;padding-block:44px 52px;}}
+.hx__main{min-width:0;}
+.hx h1{margin:10px 0 14px;}
+.hx .ah__lead{max-width:32em;}
+.hx__note{margin:14px 0 0;font-size:13px;line-height:1.7;color:#bfb3a5;}
+
+/* 右の黒い枠（トップの36マスの枠と同じ扱い） */
+.hx-panel,.hx-dg__map,.hx-pr__grid,.hx-mo__fig,.hx-fq__list{background:#141210;border:1px solid #2e2a25;}
+
+/* 数字の並び（トップの「制作費・ページ数・管理」と同じ組み） */
+.hx-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin:20px 0 0;border-top:2px solid #fff;}
+.hx-facts>div{padding:12px 16px 12px 0;border-bottom:1px solid #3a3631;}
+.hx-facts>div+div{padding-left:16px;border-left:1px solid #3a3631;}
+.hx-facts dt{font-size:13px;color:#bfb3a5;}
+.hx-facts dd{margin:4px 0 0;font:700 18px/1.5 var(--serif);color:#fff;}
+
+/* ---------------- 診断 ---------------- */
+.hx-dg .ah__brand{display:block;}
+.hx-dg__go{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px;}
+.hx-dg__go .btn{min-height:56px;gap:10px;}
+.hx-dg__go .btn small{font-size:13px;font-weight:400;opacity:.85;}
+.hx-dg__go .btn--line{color:#fff;border-color:#fff;background:transparent;}
+.hx-dg__go .btn--line:hover{background:#fff;color:#000;}
+.hx-dg__map{position:relative;margin:0;padding:34px 40px;}
+.hx-dg__field{position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:4px;aspect-ratio:1;max-width:440px;margin:auto;}
+.hx-dg__field i{background:#2a2622;transition:background .3s;}
+.hx-dg__field i:nth-child(6n+1),.hx-dg__field i:nth-child(6n+2),.hx-dg__field i:nth-child(6n+3){background:#26231f;}
+.hx-dg__on{position:absolute;width:calc((100% - 20px) / 6);aspect-ratio:1;background:#8a5f33;box-shadow:0 0 0 1px #c9a27a inset;
+  left:calc(var(--x,3) * (100% + 4px) / 6);top:calc(var(--y,2) * (100% + 4px) / 6);animation:dgHop 9s steps(1,end) infinite;}
+@keyframes dgHop{
+  0%{left:calc(0*(100% + 4px)/6);top:calc(5*(100% + 4px)/6);}
+  12%{left:calc(1*(100% + 4px)/6);top:calc(4*(100% + 4px)/6);}
+  24%{left:calc(3*(100% + 4px)/6);top:calc(4*(100% + 4px)/6);}
+  36%{left:calc(2*(100% + 4px)/6);top:calc(2*(100% + 4px)/6);}
+  48%{left:calc(4*(100% + 4px)/6);top:calc(1*(100% + 4px)/6);}
+  60%{left:calc(5*(100% + 4px)/6);top:calc(3*(100% + 4px)/6);}
+  72%{left:calc(3*(100% + 4px)/6);top:calc(2*(100% + 4px)/6);}
+  100%{left:calc(3*(100% + 4px)/6);top:calc(2*(100% + 4px)/6);}
+}
+.hx-ax{position:absolute;font-size:13px;letter-spacing:.08em;color:#bfb3a5;white-space:nowrap;}
+.hx-ax--t{top:8px;left:50%;transform:translateX(-50%);}
+.hx-ax--b{bottom:8px;left:50%;transform:translateX(-50%);}
+.hx-ax--l,.hx-ax--r{top:50%;writing-mode:vertical-rl;transform:translateY(-50%);}
+.hx-ax--l{left:10px;}
+.hx-ax--r{right:10px;}
+
+/* ---------------- 制作の流れ ---------------- */
+.hx-pr__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin:0;padding:16px;list-style:none;counter-reset:none;}
+.hx-st{margin:0;}
+.hx-st a{display:grid;align-content:space-between;gap:6px;min-height:118px;height:100%;padding:12px 12px 10px;background:#2a2622;color:#fff;text-decoration:none;transition:background .2s;}
+.hx-st.p2 a{background:#2f2a25;}
+.hx-st.p3 a{background:#342e28;}
+.hx-st.p4 a{background:#3a332c;}
+.hx-st.is-first a{background:#8a5f33;}
+.hx-st a:hover,.hx-st a:focus-visible{background:#6f4d2b;}
+.hx-st__no{font:700 13px/1 var(--mono);color:#c9a27a;}
+.hx-st.is-first .hx-st__no{color:#fff;}
+.hx-st b{font:700 15px/1.5 var(--serif);}
+.hx-st__ph{font-size:13px;color:#bfb3a5;}
+.hx-st.is-first .hx-st__ph{color:#f1e6d8;}
+
+/* ---------------- 公開・管理 ---------------- */
+.hx-mo__fig{margin:0;padding:18px 20px 8px;}
+.hx-mo__fig figcaption{font-size:13px;color:#bfb3a5;margin:0 0 8px;}
+.hx-mo__rows{margin:0;}
+.hx-mo__row{display:grid;grid-template-columns:7.5em minmax(0,1fr);gap:4px 14px;align-items:center;padding:12px 0;border-top:1px solid #2e2a25;}
+.hx-mo__row dt b{display:block;font:700 15px/1.4 var(--serif);color:#fff;}
+.hx-mo__row dt span{font-size:13px;color:#bfb3a5;}
+.hx-mo__row dd{margin:0;display:grid;gap:6px;}
+.hx-mo__bar{display:grid;grid-template-columns:repeat(12,1fr);gap:3px;}
+.hx-mo__bar i{aspect-ratio:1.6;background:#2a2622;}
+.hx-mo__bar i.on{background:#6f655a;}
+.hx-mo__row:first-child .hx-mo__bar i.on{background:#8a5f33;}
+.hx-mo__pr{color:#fff;}
+.hx-mo__pr .num{font-family:var(--serif);}
+
+/* ---------------- よくある質問 ---------------- */
+.hx-fq__list{display:grid;grid-template-columns:repeat(2,1fr);gap:4px;margin:0;padding:16px;list-style:none;}
+.hx-fq__list li{margin:0;}
+.hx-fq__list li:first-child{grid-column:span 2;}
+.hx-fq__list a{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;min-height:64px;padding:12px 16px;background:#2a2622;color:#fff;text-decoration:none;transition:background .2s;}
+.hx-fq__list li.is-first a{background:#8a5f33;}
+.hx-fq__list a:hover,.hx-fq__list a:focus-visible{background:#6f4d2b;}
+.hx-fq__no{font:700 13px/1 var(--mono);color:#c9a27a;}
+.hx-fq__list li.is-first .hx-fq__no{color:#fff;}
+.hx-fq__list b{font:700 15px/1.5 var(--serif);}
+.hx-fq__ct{font-size:13px;color:#bfb3a5;}
+.hx-fq__list li.is-first .hx-fq__ct{color:#f1e6d8;}
+
+@media (max-width:960px){
+  .hx-dg__map{padding:30px 34px;}
+  .hx-dg__field{max-width:360px;}
+}
+@media (max-width:560px){
+  .hx-pr__grid{padding:10px;}
+  .hx-st a{min-height:96px;padding:10px 8px 8px;}
+  .hx-st b{font-size:14px;}
+  .hx-fq__list{grid-template-columns:1fr;padding:10px;}
+  .hx-fq__list li:first-child{grid-column:auto;}
+  .hx-mo__row{grid-template-columns:1fr;}
+  .hx-dg__go .btn{flex:1 1 100%;justify-content:space-between;}
+  .hx-facts>div+div{padding-left:0;border-left:0;}
+}
+@media (prefers-reduced-motion:reduce){
+  .hx-dg__on{animation:none;left:calc(3*(100% + 4px)/6);top:calc(2*(100% + 4px)/6);}
+  .hx-st a,.hx-fq__list a,.hx-dg__field i{transition:none;}
+}
+.hx-st a,.hx-st a *,.hx-fq__list a,.hx-fq__list a *{text-decoration:none;}
+.hx-mo__row{grid-template-columns:9.5em minmax(0,1fr);}
+@media (max-width:560px){.hx-mo__row{grid-template-columns:1fr;}}
