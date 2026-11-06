@@ -3,6 +3,117 @@
   'use strict';
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ------------------- ページを開いたときの位置 -------------------
+     ・別のページへ移ったとき、戻る・進むで来たとき … 一番上から
+     ・再読み込みしたとき                           … 読んでいた位置のまま
+     ・#plan-first のような「ページ内の場所」へのリンク … その場所
+     プレビュー画面などの枠（iframe）の中で開いたときは、枠の外側の画面も合わせる。
+     また枠ごと読み込み直されて最初のページに戻されたときは、読んでいたページと位置へ戻す。
+     保存するのはページのパスと位置だけ（このタブの間だけ、sessionStorage）。 */
+  try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) { /* noop */ }
+  var framed = false;
+  try { framed = window.self !== window.top; } catch (e) { framed = true; }
+  var POS = 'crew:pos', NAV = 'crew:nav', BACK = 'crew:restore';
+  var ss = {
+    get: function (k) { try { var v = sessionStorage.getItem(k); return v ? JSON.parse(v) : null; } catch (e) { return null; } },
+    set: function (k, v) { try { sessionStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* noop */ } },
+    del: function (k) { try { sessionStorage.removeItem(k); } catch (e) { /* noop */ } }
+  };
+  var here = location.pathname + location.search;
+  var navType = 'navigate';
+  try { var ne = performance.getEntriesByType('navigation')[0]; if (ne && ne.type) navType = ne.type; } catch (e) { /* noop */ }
+
+  /* 枠の外側の画面を、この文書の y の位置へ合わせる（すでに見えていれば動かさない＝nearest） */
+  var alignOuter = function (y, how) {
+    if (!framed || !document.body) return;
+    try {
+      var probe = document.createElement('span');
+      probe.setAttribute('aria-hidden', 'true');
+      probe.style.cssText = 'position:absolute;left:0;width:1px;height:1px;pointer-events:none;top:' + Math.max(0, y) + 'px;';
+      document.body.appendChild(probe);
+      probe.scrollIntoView({ block: how || 'nearest', inline: 'nearest' });
+      document.body.removeChild(probe);
+    } catch (e) { /* noop */ }
+  };
+  var goTo = function (y) {
+    window.scrollTo(0, y);
+    alignOuter(y, y > 0 ? 'start' : 'nearest');
+  };
+
+  /* いま読んでいる位置。枠の外側でスクロールしているときは、見えている範囲の上端で測る */
+  var visTop = 0;
+  if (framed && 'IntersectionObserver' in window) {
+    var steps = []; for (var i = 0; i <= 200; i++) steps.push(i / 200);
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) { visTop = Math.max(0, Math.round(en.intersectionRect.top - en.boundingClientRect.top)); });
+    }, { threshold: steps });
+    document.addEventListener('DOMContentLoaded', function () { io.observe(document.body); });
+  }
+  var save = function () {
+    var y = Math.max(window.scrollY || 0, framed ? visTop : 0);
+    ss.set(POS, { path: here, y: Math.round(y), t: Date.now() });
+  };
+  var st = 0;
+  window.addEventListener('scroll', function () { clearTimeout(st); st = setTimeout(save, 150); }, { passive: true });
+  window.addEventListener('pagehide', save);
+  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'hidden') save(); });
+
+  /* サイト内のリンクを押したことを覚えておく（枠ごとの読み込み直しと区別するため） */
+  document.addEventListener('click', function (ev) {
+    var a = ev.target && ev.target.closest ? ev.target.closest('a[href]') : null;
+    if (!a || a.target === '_blank' || a.origin !== location.origin) return;
+    ss.set(NAV, { t: Date.now() });
+  }, true);
+
+  /* 次のページを先に読む: サイト内のリンクに指が触れた・カーソルが乗った時点で取りに行く。
+     押したときにはもう手元にあるので、ページの切り替えが軽くなる。1ページにつき1回だけ */
+  var fetched = {};
+  var prefetch = function (ev) {
+    var a = ev.target && ev.target.closest ? ev.target.closest('a[href]') : null;
+    if (!a || a.target === '_blank' || a.origin !== location.origin || a.hasAttribute('download')) return;
+    var url = a.href.split('#')[0];
+    if (!/\.html$|\/$/.test(url) || url === location.href.split('#')[0] || fetched[url]) return;
+    fetched[url] = true;
+    try {
+      var l = document.createElement('link');
+      l.rel = 'prefetch'; l.href = url;
+      document.head.appendChild(l);
+    } catch (e) { /* noop */ }
+  };
+  document.addEventListener('pointerover', prefetch, { passive: true });
+  document.addEventListener('touchstart', prefetch, { passive: true });
+  document.addEventListener('focusin', prefetch);
+
+  var pos = ss.get(POS), byLink = ss.get(NAV), restoreNext = ss.get(BACK);
+  ss.del(NAV);
+  var fresh = function (o, ms) { return o && Date.now() - (o.t || 0) < ms; };
+  var isTop = /\/(index\.html)?$/.test(location.pathname);
+  var wantY = 0;
+
+  if (restoreNext && pos && pos.path === here) {
+    ss.del(BACK); wantY = pos.y;                       /* 枠の読み込み直しから戻ってきた */
+  } else if (navType === 'reload' && pos && pos.path === here) {
+    wantY = pos.y;                                     /* 再読み込み */
+  } else if (framed && isTop && navType !== 'back_forward' && !fresh(byLink, 30000) &&
+             pos && pos.path !== here && fresh(pos, 30 * 60 * 1000) && /\.html/.test(pos.path)) {
+    ss.set(BACK, { t: Date.now() });                   /* 枠ごと読み込み直され、最初のページに戻された */
+    location.replace(pos.path);
+    return;
+  }
+
+  var place = function () {
+    if (location.hash && location.hash.length > 1) return;
+    goTo(wantY);
+  };
+  place();
+  window.addEventListener('pageshow', function (ev) { if (ev.persisted) { wantY = 0; place(); } });
+  /* 画像や文字の読み込みで高さが変わったあとにも、もう一度だけ合わせる（読み手が動かしていなければ） */
+  var moved = false;
+  ['wheel', 'touchstart', 'keydown'].forEach(function (t) {
+    window.addEventListener(t, function () { moved = true; }, { passive: true, once: true });
+  });
+  window.addEventListener('load', function () { if (!moved) place(); });
+
   /* 計測: dataLayer がある場合だけ push する薄い層（個人情報・回答値は送らない） */
   window.crewTrack = function (event, params) {
     try {
@@ -331,6 +442,20 @@
   }
   openAncestorDetails(location.hash);
   window.addEventListener('hashchange', function () { openAncestorDetails(location.hash); });
+
+  /* スマホでは、長い目次を最初の4項目だけにして「ほかも見る」で開く（13項目は長いという声を受けて） */
+  Array.prototype.forEach.call(document.querySelectorAll('.tp-toc'), function (nav) {
+    var list = nav.querySelector('.tp-toc__l');
+    var n = list ? list.children.length : 0;
+    if (n < 7) return;
+    var more = document.createElement('button');
+    more.type = 'button';
+    more.className = 'tp-toc__more';
+    more.textContent = 'ほかの' + (n - 4) + '項目も見る';
+    more.addEventListener('click', function () { nav.classList.remove('is-short'); });
+    list.parentNode.insertBefore(more, list.nextSibling);
+    nav.classList.add('is-short');
+  });
 
   Array.prototype.forEach.call(document.querySelectorAll('[data-fold-all]'), function (btn) {
     var scope = document;

@@ -7,29 +7,31 @@
   <title>Web制作サービス | 小規模事業者向け | クルーアセント</title>
   <meta name="description" content="診断で方向を整理し、必要なページ、文章、画像、問い合わせまでの流れを一つのWebサイトへまとめます。1ページから5ページ前後まで、全プラン共通で整えることと、プランで変わることを説明します。">
   <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="https://crewascent.com/services.html">
   <meta property="og:title" content="Web制作サービス | 小規模事業者向け | クルーアセント">
+  <meta property="og:url" content="https://crewascent.com/services.html">
   <meta property="og:description" content="診断で方向を整理し、必要なページ、文章、画像、問い合わせまでの流れを一つのWebサイトへまとめます。1ページから5ページ前後まで、全プラン共通で整えることと、プランで変わることを説明します。">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="クルーアセント">
   <meta property="og:locale" content="ja_JP">
-  <meta property="og:image" content="assets/og/og-plans.png">
+  <meta property="og:image" content="https://crewascent.com/assets/og/og-plans.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/brand/icon-32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="assets/brand/icon-512.png" sizes="512x512" type="image/png">
   <link rel="apple-touch-icon" href="assets/brand/icon-180.png">
-  <!-- 旧CSSを先に読み、新しい共通CSSで上書きする。トークンは base.css が正本。 -->
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CASans-700.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CASans-400.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CAMono-700.woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/styles.css?v=20260817r9">
-  <link rel="stylesheet" href="assets/css/base.css?v=20260817r9">
-  <link rel="stylesheet" href="assets/css/system.css?v=20260817r9">
-  <link rel="stylesheet" href="assets/css/crew.css?v=20261025a">
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CASerif-700.woff2" crossorigin>
+  <!-- 第8版: スタイルは site.css の1ファイルだけ -->
+  <link rel="stylesheet" href="assets/css/site.css?v=20261105i">
+  <link rel="stylesheet" href="assets/css/color.css?v=20261105b">
+  <link rel="stylesheet" href="assets/css/read.css?v=20261105e">
+  <link rel="stylesheet" href="assets/css/lite.css?v=20261105k">
+  <link rel="stylesheet" href="assets/css/heads.css?v=20261105c">
   <script>document.documentElement.className += ' js';</script>
-  <script src="assets/js/site-config.js?v=20261025a"></script>
-  <script defer src="assets/js/top.js?v=20260817r9"></script>
+  <script src="assets/js/site-config.js?v=20261105a"></script>
+  <script defer src="assets/js/top.js?v=20261101b"></script>
   <script defer src="assets/js/scroll-steady.js?v=20260817r9"></script>
-  <script defer src="assets/js/main.js?v=20261025a"></script>
+  <script defer src="assets/js/main.js?v=20261105d"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"index.html"},{"@type":"ListItem","position":2,"name":"Web制作サービス","item":"services.html"}]}</script>
   <script>/* 動きの入り切り。?motion=off と、動きを減らす設定で外れる。
      site-config.js の motion:'off' は main.js が後から外します。 */
@@ -40,69 +42,74 @@
 </head>
 <body data-page="services" data-archetype="decision" class="pg pg--decision pg-sub">
   <a class="skip-link" href="#main">本文へスキップ</a>
-  <header class="hdr" id="hdr">
+
+<svg width="0" height="0" aria-hidden="true" focusable="false" class="sr-only">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 5 12 6.5l4.5 4.5H4v2h12.5L12 17.5 13.5 19l7-7z"/></symbol>
+</svg>
+
+<header class="hdr" id="hdr">
   <div class="wrap hdr__in">
     <a class="brand" href="index.html" aria-label="クルーアセント ホームへ">
-      <span class="brand__mark" aria-hidden="true"></span>
+      <img class="brand__mark" src="assets/brand/logo-onink-h88.webp" srcset="assets/brand/logo-onink-h88.webp 1x, assets/brand/logo-onink-h176.webp 2x" width="49" height="38" alt="">
       <span class="brand__tx"><span class="brand__ja">クルーアセント</span><span class="brand__en">CREW ASCENT</span></span>
     </a>
     <nav class="gnav" aria-label="メインメニュー">
       <ul class="gnav__list">
-        <li class="gnav__item"><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-service" aria-current="page">サービス<span class="gnav__caret" aria-hidden="true"></span></button></li>
-        <li class="gnav__item"><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-diagnosis">診断<span class="gnav__caret" aria-hidden="true"></span></button></li>
-        <li class="gnav__item"><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-first">はじめての方へ<span class="gnav__caret" aria-hidden="true"></span></button></li>
-        <li class="gnav__item"><a class="gnav__link" href="about.html">クルーアセントについて</a></li>
-        <li class="gnav__item"><a class="gnav__link" href="contact.html">相談</a></li>
+        <li><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-service" aria-current="page">サービス</button></li>
+        <li><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-diagnosis">診断</button></li>
+        <li><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-first">はじめての方へ</button></li>
+        <li><a class="gnav__link" href="about.html">クルーアセントについて</a></li>
+        <li><a class="gnav__link" href="contact.html">相談</a></li>
       </ul>
     </nav>
-    <a class="btn btn--primary btn--sm hdr-cta" href="diagnosis.html">無料診断を始める<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+    <a class="hdr-cta" href="diagnosis.html">無料診断を始める<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
     <button class="burger" type="button" aria-expanded="false" aria-controls="drawer">
       <span class="burger__label">メニュー</span>
-      <span class="burger__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="burger__bars" aria-hidden="true"><span></span><span></span></span>
     </button>
   </div>
 
   <div class="mega" id="mega-service" hidden>
-    <div class="wrap mega__in"><div class="g6">
-      <div class="mega__intro c1-2"><p class="mega__h">サービス</p><p>何を作り、何を整え、公開後に何を続けるのか。対応範囲と料金を先に開示しています。</p></div>
-      <ul class="mega__list c3-6">
+    <div class="wrap mega__in">
+      <div class="mega__intro"><p class="mega__h">サービス</p><p>何を作り、何を整え、公開後に何を続けるのか。対応範囲と料金を先に開示しています。</p></div>
+      <ul class="mega__list">
         <li><a href="services.html"><span class="mega__ttl">Web制作サービス</span><span class="mega__note">何を作り、何を整えるか</span></a></li>
         <li><a href="plans.html"><span class="mega__ttl">4つのプラン・料金</span><span class="mega__note">8万〜22万円の買い切り</span></a></li>
         <li><a href="process.html"><span class="mega__ttl">制作の流れ</span><span class="mega__note">相談から公開までの9段階</span></a></li>
         <li><a href="management.html"><span class="mega__ttl">公開・管理</span><span class="mega__note">公開後に必要な範囲だけ</span></a></li>
       </ul>
-    </div></div>
+    </div>
   </div>
 
   <div class="mega" id="mega-diagnosis" hidden>
-    <div class="wrap mega__in"><div class="g6">
-      <div class="mega__intro c1-2"><p class="mega__h">Web診断36</p><p>2軸 × 6段階で36通り。Webサイトで何を優先するかを整理するための、無料の入口です。</p></div>
-      <ul class="mega__list c3-6">
+    <div class="wrap mega__in">
+      <div class="mega__intro"><p class="mega__h">Web診断36</p><p>2軸 × 6段階で36通り。Webサイトで何を優先するかを整理するための、無料の入口です。</p></div>
+      <ul class="mega__list">
         <li><a href="diagnosis.html"><span class="mega__ttl">無料診断を始める</span><span class="mega__note">16問または48問</span></a></li>
         <li><a href="diagnosis-guide.html"><span class="mega__ttl">Web診断36の仕組み</span><span class="mega__note">四つの視点と二つの軸</span></a></li>
         <li><a href="types.html"><span class="mega__ttl">36タイプ一覧</span><span class="mega__note">4つの領域・36の方向</span></a></li>
         <li><a href="industries.html"><span class="mega__ttl">業種からタイプを探す</span><span class="mega__note">13分類・102の業種</span></a></li>
         <li><a href="result.html?type=helpful-guidance"><span class="mega__ttl">結果サンプルを見る</span><span class="mega__note">実際の結果画面</span></a></li>
       </ul>
-    </div></div>
+    </div>
   </div>
 
   <div class="mega" id="mega-first" hidden>
-    <div class="wrap mega__in"><div class="g6">
-      <div class="mega__intro c1-2"><p class="mega__h">はじめての方へ</p><p>制作会社へ相談する前に読んでも使える形で、判断に必要なことを整理しています。</p></div>
-      <ul class="mega__list c3-6">
+    <div class="wrap mega__in">
+      <div class="mega__intro"><p class="mega__h">はじめての方へ</p><p>制作会社へ相談する前に読んでも使える形で、判断に必要なことを整理しています。</p></div>
+      <ul class="mega__list">
         <li><a href="website-guide.html"><span class="mega__ttl">Webサイトの役割</span><span class="mega__note">SNSとの使い分け</span></a></li>
         <li><a href="guide.html"><span class="mega__ttl">Webサイトづくりガイド</span><span class="mega__note">決める前に読む記事</span></a></li>
         <li><a href="faq.html"><span class="mega__ttl">よくある質問</span><span class="mega__note">料金・制作・契約</span></a></li>
       </ul>
-    </div></div>
+    </div>
   </div>
 
   <nav class="drawer" id="drawer" aria-label="メインメニュー（モバイル）" hidden>
     <div class="wrap">
       <ul class="drawer__list">
         <li>
-          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-1">サービス<span class="drawer__caret" aria-hidden="true"></span></button>
+          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-1">サービス</button>
           <ul class="drawer__sub" id="dr-1" hidden>
             <li><a href="services.html">Web制作サービス<span>何を作り、何を整えるか</span></a></li>
             <li><a href="plans.html">4つのプラン・料金<span>8万〜22万円の買い切り</span></a></li>
@@ -111,17 +118,17 @@
           </ul>
         </li>
         <li>
-          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-2">診断<span class="drawer__caret" aria-hidden="true"></span></button>
+          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-2">診断</button>
           <ul class="drawer__sub" id="dr-2" hidden>
             <li><a href="diagnosis.html">無料診断を始める<span>16問または48問</span></a></li>
             <li><a href="diagnosis-guide.html">Web診断36の仕組み<span>四つの視点と二つの軸</span></a></li>
             <li><a href="types.html">36タイプ一覧<span>4つの領域・36の方向</span></a></li>
-              <li><a href="industries.html">業種からタイプを探す<span>13分類・102の業種</span></a></li>
+            <li><a href="industries.html">業種からタイプを探す<span>13分類・102の業種</span></a></li>
             <li><a href="result.html?type=helpful-guidance">結果サンプルを見る<span>実際の結果画面</span></a></li>
           </ul>
         </li>
         <li>
-          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-3">はじめての方へ<span class="drawer__caret" aria-hidden="true"></span></button>
+          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-3">はじめての方へ</button>
           <ul class="drawer__sub" id="dr-3" hidden>
             <li><a href="website-guide.html">Webサイトの役割<span>SNSとの使い分け</span></a></li>
             <li><a href="guide.html">Webサイトづくりガイド<span>決める前に読む記事</span></a></li>
@@ -132,8 +139,8 @@
         <li><a class="drawer__row" href="contact.html">相談</a></li>
       </ul>
       <div class="drawer__foot">
-        <a class="btn btn--primary btn--block" href="diagnosis.html">無料診断を始める<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-        <a class="btn btn--line btn--block" href="plans.html">4つのプランを見る</a>
+        <a class="btn btn--primary" href="diagnosis.html">無料診断を始める<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+        <a class="btn btn--line" href="plans.html">4つのプランを見る</a>
       </div>
     </div>
   </nav>
@@ -141,23 +148,23 @@
   <nav class="breadcrumb" aria-label="パンくず"><div class="wrap"><ol><li><a href="index.html">ホーム</a></li><li aria-current="page">Web制作サービス</li></ol></div></nav>
   <main id="main">
 
-  <section class="ah ah--decision">
-      <div class="wrap ah__inner">
-        <div class="ah__main"><p class="eyebrow eyebrow--cobalt">Web制作サービス</p><h1>何を作り、<br>何を整えるのか。</h1><p class="ah__lead">診断で方向を整理し、必要なページ、文章、画像、問い合わせまでの流れを一つのWebサイトへまとめます。1ページから5ページ前後まで、今の事業に必要な範囲を選べます。</p></div>
-        <div class="ah__aside"><dl class="ah__facts">
-      <div><dt>制作費</dt><dd><span class="num num--md">80,000</span><span class="num__unit">円</span> 〜 <span class="num num--md">220,000</span><span class="num__unit">円</span></dd><p>買い切り</p></div>
-      <div><dt>ページ数</dt><dd><span class="num num--md">1</span><span class="num__unit">〜</span><span class="num num--md">5</span><span class="num__unit">ページ前後</span></dd><p>必要な範囲だけ</p></div>
-      <div><dt>公開後の管理</dt><dd class="ah__facts__txt">必須ではありません</dd><p>別契約</p></div>
-    </dl></div>
+  <section class="ah ah--decision hx hx-sv">
+      <div class="wrap hx__inner">
+        <div class="hx__main"><p class="eyebrow eyebrow--cobalt">Web制作サービス</p><h1>何を作り、<br>何を整えるのか。</h1><p class="ah__lead">診断で方向を整理し、必要なページ、文章、画像、問い合わせまでの流れを一つのWebサイトへまとめます。1ページから5ページ前後まで、今の事業に必要な範囲を選べます。</p>
+        <dl class="hx-facts">
+          <div><dt>制作費</dt><dd><span class="nw">80,000〜</span><span class="nw">220,000円</span></dd></div>
+          <div><dt>ページ数</dt><dd>1〜5ページ前後</dd></div>
+          <div><dt>公開後の管理</dt><dd>任意・別契約</dd></div>
+        </dl></div>
+        <ol class="hx-sv__grid" aria-label="制作で整える6つのこと"><li class="is-on"><img src="assets/img/x-consult.webp" alt="" width="720" height="480" loading="eager" decoding="async"><span class="hx-sv__no">01</span><b>方向を整理する</b><span class="hx-sv__s">診断と相談で</span></li><li><img src="assets/img/x-baker.webp" alt="" width="720" height="480" loading="eager" decoding="async"><span class="hx-sv__no">02</span><b>文章を整える</b><span class="hx-sv__s">支給原稿から</span></li><li><img src="assets/img/x-florist.webp" alt="" width="720" height="480" loading="eager" decoding="async"><span class="hx-sv__no">03</span><b>写真を選ぶ</b><span class="hx-sv__s">伝わる順番に</span></li><li><img src="assets/img/x-barista.webp" alt="" width="720" height="480" loading="eager" decoding="async"><span class="hx-sv__no">04</span><b>ページを組む</b><span class="hx-sv__s">1〜5ページ</span></li><li><img src="assets/img/x-mobile.webp" alt="" width="720" height="480" loading="eager" decoding="async"><span class="hx-sv__no">05</span><b>問い合わせまで</b><span class="hx-sv__s">スマホで迷わず</span></li><li><img src="assets/img/x-repair.webp" alt="" width="720" height="480" loading="eager" decoding="async"><span class="hx-sv__no">06</span><b>公開後も見る</b><span class="hx-sv__s">管理は任意</span></li></ol>
       </div>
-      <div class="ah__peek"><span aria-hidden="true">↓</span>制作前に、そろっているものと足りないものを分けます</div>
     </section>
 
     <section class="sec sec--paper2">
     <div class="wrap">
       <div class="figure-band">
         <figure class="fig fig--crop">
-    <img src="assets/img/production-readiness-overview.webp" width="1800" height="1000" alt="原稿・写真・ロゴなど複数の準備物が一点に集まり、6×6の構成へ展開する図" decoding="async" srcset="assets/img/production-readiness-overview-900.webp 900w, assets/img/production-readiness-overview.webp 1800w" sizes="(min-width: 900px) 60vw, 92vw">
+    <img src="assets/img/ph-converge.webp" width="1200" height="667" alt="いくつもの流れが一つに合わさる川を上から見た写真" decoding="async" srcset="assets/img/ph-converge-600.webp 600w, assets/img/ph-converge.webp 1200w" sizes="(min-width: 900px) 50vw, 92vw">
     <figcaption>制作前に、そろっているものと足りないものを分けます</figcaption>
   </figure>
         <div>
@@ -180,7 +187,8 @@
           <div class="c5-6 rv rv-d1"><p class="sec-lead">相談の最初に、この7つを一緒に確認します。診断結果があると、この会話が早く進みます。</p></div>
         </div>
       </div>
-      <ol class="numbered numbered--2col">
+      <div class="rd-key"><p class="rd-key__h">要点</p><p class="rd-key__t">この7つを、相談の最初に一緒に確認します。<b>決まっていない項目があっても、そのまま相談できます。</b></p></div>
+        <ol class="numbered rd-cards">
         <li><h3>Webサイトを作る目的</h3><p>問い合わせを受けたいのか、事業内容を説明したいのか、既存客への案内を置きたいのか。</p></li>
         <li><h3>主に見てほしい相手</h3><p>紹介で来る人、検索で来る人、SNSから来る人。どこから来る人を主に想定するか。</p></li>
         <li><h3>最初に伝える内容</h3><p>最初の画面で何を見せるか。事業名だけでは足りません。</p></li>
@@ -200,7 +208,7 @@
           <h2>プランが変わっても、ここは変わりません。</h2>
           <p class="lead mb-0">料金の差はページ数と、文章・画像・ロゴをどこまで整えるかの差です。土台の作りは共通です。</p>
         </div>
-        <ul class="marker-list">
+        <ul class="marker-list rd-tiles">
           <li><span class="mk mk--plus" aria-hidden="true"></span><span><b>事業内容が伝わる情報構成</b> — 何を、どの順番で読ませるかを設計します</span></li>
           <li><span class="mk mk--plus" aria-hidden="true"></span><span><b>スマートフォンとパソコンの表示</b> — 320pxの狭い画面から確認します</span></li>
           <li><span class="mk mk--plus" aria-hidden="true"></span><span><b>問い合わせにつながる案内の流れ</b> — 読み終わった場所に次の行動を置きます</span></li>
@@ -223,7 +231,7 @@
         </div>
       </div>
       <div class="grid grid--4">
-        <div class="spec-card"><span class="spec-card__no">01</span><h3>ページ数</h3><p>1ページ / 3ページ前後 / 5ページ前後</p></div><div class="spec-card"><span class="spec-card__no">02</span><h3>文章整理の深さ</h3><p>支給原稿の誤字・見出し調整 〜 回答内容から紹介文・案内文を作成</p></div><div class="spec-card"><span class="spec-card__no">03</span><h3>画像準備の範囲</h3><p>ご支給のみ 〜 素材選定・生成・トリミング・ページ別調整</p></div><div class="spec-card"><span class="spec-card__no">04</span><h3>簡易ロゴ</h3><p>おまかせプランのみ、Webで使える1案</p></div><div class="spec-card"><span class="spec-card__no">05</span><h3>外部サービスへの案内</h3><p>おまかせプランのみ、フォーム・LINE・SNSを整理</p></div><div class="spec-card"><span class="spec-card__no">06</span><h3>計測設定</h3><p>アクセス解析のコードを後から追加できる作り 〜 GA4・Search Consoleの初期設定支援</p></div><div class="spec-card"><span class="spec-card__no">07</span><h3>修正回数</h3><p>1回 / 1〜2回 / 1〜3回</p></div><div class="spec-card"><span class="spec-card__no">08</span><h3>納期目安</h3><p>1〜2週間 〜 4〜6週間</p></div>
+        <div class="spec-card"><span class="spec-card__no">01</span><i class="ic ic--page" aria-hidden="true"></i><h3>ページ数</h3><p class="rd-flow"><span>1ページ</span><i class="rd-arr" aria-hidden="true"></i><span class="sr-only">から</span><span>3ページ前後</span><i class="rd-arr" aria-hidden="true"></i><span class="sr-only">から</span><span>5ページ前後</span></p></div><div class="spec-card"><span class="spec-card__no">02</span><i class="ic ic--pen" aria-hidden="true"></i><h3>文章整理の深さ</h3><p class="rd-flow"><span>支給原稿の誤字・見出し調整</span><i class="rd-arr" aria-hidden="true"></i><span class="sr-only">から</span><span>回答内容から紹介文・案内文を作成</span></p></div><div class="spec-card"><span class="spec-card__no">03</span><i class="ic ic--image" aria-hidden="true"></i><h3>画像準備の範囲</h3><p class="rd-flow"><span>ご支給のみ</span><i class="rd-arr" aria-hidden="true"></i><span class="sr-only">から</span><span>素材選定・生成・トリミング・ページ別調整</span></p></div><div class="spec-card"><span class="spec-card__no">04</span><i class="ic ic--logo" aria-hidden="true"></i><h3>簡易ロゴ</h3><p>おまかせプランのみ、Webで使える1案</p></div><div class="spec-card"><span class="spec-card__no">05</span><i class="ic ic--link" aria-hidden="true"></i><h3>外部サービスへの案内</h3><p>おまかせプランのみ、フォーム・LINE・SNSを整理</p></div><div class="spec-card"><span class="spec-card__no">06</span><i class="ic ic--chart" aria-hidden="true"></i><h3>計測設定</h3><p class="rd-flow"><span>アクセス解析のコードを後から追加できる作り</span><i class="rd-arr" aria-hidden="true"></i><span class="sr-only">から</span><span>GA4・Search Consoleの初期設定支援</span></p></div><div class="spec-card"><span class="spec-card__no">07</span><i class="ic ic--redo" aria-hidden="true"></i><h3>修正回数</h3><p class="rd-flow"><span>1回</span><i class="rd-arr" aria-hidden="true"></i><span class="sr-only">から</span><span>1〜2回</span><i class="rd-arr" aria-hidden="true"></i><span class="sr-only">から</span><span>1〜3回</span></p></div><div class="spec-card"><span class="spec-card__no">08</span><i class="ic ic--cal" aria-hidden="true"></i><h3>納期目安</h3><p class="rd-flow"><span>1〜2週間</span><i class="rd-arr" aria-hidden="true"></i><span class="sr-only">から</span><span>4〜6週間</span></p></div>
       </div>
       <div class="cta-row" style="margin-top:var(--s6)"><a class="btn btn--primary" href="plans.html">4つのプランを比較する</a></div>
     </div>
@@ -241,15 +249,19 @@
           <div class="c5-6 rv rv-d1"><p class="sec-lead">検索結果に出るための土台を整えます。順位そのものは扱いません。</p></div>
         </div>
       </div>
-          <p>各ページのtitleとdescription、見出しの構造、画像の代替テキスト、内部リンク、モバイル表示、表示速度に配慮します。事業名、サービス内容、対応範囲など、ページに必要な情報を検索エンジンが読み取りやすい形にします。</p>
-          <ul class="marker-list">
+          <div class="rd-yn">
+          <div class="rd-pan rd-pan--yes"><p class="rd-pan__h">行うこと</p><ul class="marker-list">
             <li><span class="mk mk--plus" aria-hidden="true"></span><span>ページごとに違う title と説明文を書きます</span></li>
             <li><span class="mk mk--plus" aria-hidden="true"></span><span>見出しを h1 から順に組み、文章の構造を機械が読める形にします</span></li>
             <li><span class="mk mk--plus" aria-hidden="true"></span><span>意味を伝える画像には内容に合う代替テキストを付け、装飾画像は読み上げ対象から外します</span></li>
             <li><span class="mk mk--plus" aria-hidden="true"></span><span>sitemap.xml と robots.txt を用意します</span></li>
+          </ul></div>
+          <div class="rd-pan rd-pan--no"><p class="rd-pan__h">行わないこと</p><ul class="marker-list">
             <li><span class="mk mk--minus" aria-hidden="true"></span><span>特定キーワードの順位、アクセス数、問い合わせ件数の保証は行いません</span></li>
             <li><span class="mk mk--minus" aria-hidden="true"></span><span>継続的なSEO記事の量産、被リンク施策は含みません</span></li>
-          </ul>
+          </ul></div>
+          </div>
+          <details class="rd-more"><summary>くわしく見る（整える項目の全体）</summary><div class="rd-more__b"><p>各ページのtitleとdescription、見出しの構造、画像の代替テキスト、内部リンク、モバイル表示、表示速度に配慮します。事業名、サービス内容、対応範囲など、ページに必要な情報を検索エンジンが読み取りやすい形にします。</p></div></details>
         </div>
         <div class="note note--info">
           <b>順位を約束しない理由</b>
@@ -261,7 +273,7 @@
 
   <section class="sec">
     <div class="wrap">
-      <div class="figure-band figure-band--flip">
+      <div class="figure-band figure-band--stack">
         <figure class="fig ">
     
 <!-- 図はインラインSVG。<img src="*.svg"> は独立したSVG文書として
@@ -270,57 +282,72 @@
      150ms級の停止になり、コマ落ち＝加速として見えていた。
      本文に直接置けば、組み版は読み込み時の1回で済む。 -->
 <svg class="fig__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" role="img" aria-labelledby="ssm-t">
-  <title id="ssm-t">制作に含まれる範囲と、別途見積もりになる範囲を左右に分けて並べ、下に4プランの対応ページ数を並べた図</title>
-  <rect width="1200" height="700" fill="#FCFDFE"/>
-  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#5A6B82" letter-spacing="1">
-    <text x="70" y="70">INCLUDED</text>
-    <text x="700" y="70">SEPARATE ESTIMATE</text>
-  </g>
-  <line x1="70" y1="88" x2="560" y2="88" stroke="#087F78" stroke-width="3"/>
-  <line x1="700" y1="88" x2="1130" y2="88" stroke="#C98213" stroke-width="3"/>
-  <g fill="#DCE8FB" stroke="#1F64D1" stroke-width="1.5">
-    <rect x="70" y="120" width="230" height="88" rx="4"/><rect x="330" y="120" width="230" height="88" rx="4"/>
-    <rect x="70" y="232" width="230" height="88" rx="4"/><rect x="330" y="232" width="230" height="88" rx="4"/>
-    <rect x="70" y="344" width="230" height="88" rx="4"/><rect x="330" y="344" width="230" height="88" rx="4"/>
-  </g>
-  <g fill="#0C1D2E" font-family="system-ui, sans-serif" font-size="19" font-weight="700">
-    <text x="92" y="158">情報構成</text><text x="352" y="158">スマホ表示</text>
-    <text x="92" y="270">問い合わせまでの流れ</text><text x="352" y="270">基本SEO設定</text>
-    <text x="92" y="382">SSL・公開確認</text><text x="352" y="382">納品前チェック</text>
-  </g>
-  <g fill="#5A6B82" font-family="system-ui, sans-serif" font-size="14">
-    <text x="92" y="184">読む順番を設計します</text><text x="352" y="184">320pxから確認します</text>
-    <text x="92" y="296">読み終えた場所に置きます</text><text x="352" y="296">title・説明文・見出し構造</text>
-    <text x="92" y="408">通信と表示を確認します</text><text x="352" y="408">表示崩れとリンク切れ</text>
-  </g>
-  <g fill="#FCF1DE" stroke="#C98213" stroke-width="1.5" stroke-dasharray="6 5">
-    <rect x="700" y="120" width="430" height="66" rx="4"/><rect x="700" y="206" width="430" height="66" rx="4"/>
-    <rect x="700" y="292" width="430" height="66" rx="4"/><rect x="700" y="378" width="430" height="66" rx="4"/>
-  </g>
-  <g fill="#0C1D2E" font-family="system-ui, sans-serif" font-size="17" font-weight="700">
-    <text x="722" y="160">高度な予約・会員・決済・CMS</text>
-    <text x="722" y="246">継続的な広告運用</text>
-    <text x="722" y="332">本格的な取材・写真撮影</text>
-    <text x="722" y="418">商標調査を含むロゴ開発</text>
-  </g>
-  <line x1="630" y1="110" x2="630" y2="460" stroke="#D6DEE9" stroke-width="2"/>
-  <g transform="translate(70,500)">
-    <text font-family="ui-monospace, monospace" font-size="15" font-weight="700" fill="#5A6B82" letter-spacing="1">PLAN RANGE</text>
-    <line x1="0" y1="18" x2="1060" y2="18" stroke="#D6DEE9" stroke-width="2"/>
-    <g font-family="system-ui, sans-serif">
-      <rect x="0" y="42" width="230" height="56" fill="#E7F0FE" stroke="#1F64D1" stroke-width="1.5" rx="4"/>
-      <text x="20" y="70" font-size="16" font-weight="700" fill="#0C1D2E">はじめて</text>
-      <text x="20" y="90" font-size="13" fill="#5A6B82">1ページ</text>
-      <rect x="256" y="42" width="230" height="56" fill="#DCF0EE" stroke="#087F78" stroke-width="1.5" rx="4"/>
-      <text x="276" y="70" font-size="16" font-weight="700" fill="#0C1D2E">シンプル</text>
-      <text x="276" y="90" font-size="13" fill="#5A6B82">3ページ前後</text>
-      <rect x="512" y="42" width="230" height="56" fill="#E7F0FE" stroke="#17509E" stroke-width="1.5" rx="4"/>
-      <text x="532" y="70" font-size="16" font-weight="700" fill="#0C1D2E">標準</text>
-      <text x="532" y="90" font-size="13" fill="#5A6B82">5ページ前後</text>
-      <rect x="768" y="42" width="230" height="56" fill="#EDE7F9" stroke="#7354B8" stroke-width="1.5" rx="4"/>
-      <text x="788" y="70" font-size="16" font-weight="700" fill="#0C1D2E">おまかせ</text>
-      <text x="788" y="90" font-size="13" fill="#5A6B82">＋文章・画像・簡易ロゴ</text>
-    </g>
+  <title id="ssm-t">制作に含まれる範囲と、別途見積もりになる範囲を左右に分けて並べ、下に4プランの対応ページ数を矢印で並べた図</title>
+  <defs><pattern id="ssm-h" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f3efe9"/><line x1="0" y1="0" x2="0" y2="10" stroke="#e2d9cc" stroke-width="4"/></pattern>
+  <marker id="ssm-a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5c4a38"/></marker></defs>
+  <rect width="1200" height="700" fill="#FAF8F4"/>
+  <g font-family="system-ui, sans-serif" font-size="17" font-weight="700"><text x="70" y="70" fill="#48703a">制作費に含むこと</text><text x="700" y="70" fill="#8A5F33">別途お見積もり</text></g>
+  <line x1="70" y1="88" x2="560" y2="88" stroke="#48703a" stroke-width="3"/><line x1="700" y1="88" x2="1130" y2="88" stroke="#8A5F33" stroke-width="3"/>
+  <rect x="70" y="120" width="230" height="88" rx="4" fill="#e6eef5" stroke="#2f6690" stroke-width="1.5"/><rect x="70" y="120" width="7" height="88" rx="2" fill="#2f6690"/>
+  <circle cx="281" cy="139" r="9" fill="#2f6690"/><path d="M276.5 139l3 3 6-6" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="92" y="166" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#111">情報構成</text><text x="92" y="190" font-family="system-ui, sans-serif" font-size="14" fill="#4d4740">読む順番を設計します</text>
+  <rect x="330" y="120" width="230" height="88" rx="4" fill="#e9f0e3" stroke="#48703a" stroke-width="1.5"/><rect x="330" y="120" width="7" height="88" rx="2" fill="#48703a"/>
+  <circle cx="541" cy="139" r="9" fill="#48703a"/><path d="M536.5 139l3 3 6-6" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="352" y="166" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#111">スマホ表示</text><text x="352" y="190" font-family="system-ui, sans-serif" font-size="14" fill="#4d4740">320pxから確認します</text>
+  <rect x="70" y="232" width="230" height="88" rx="4" fill="#f6eadf" stroke="#9a5220" stroke-width="1.5"/><rect x="70" y="232" width="7" height="88" rx="2" fill="#9a5220"/>
+  <circle cx="281" cy="251" r="9" fill="#9a5220"/><path d="M276.5 251l3 3 6-6" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="92" y="278" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#111">問い合わせまでの流れ</text><text x="92" y="302" font-family="system-ui, sans-serif" font-size="14" fill="#4d4740">読み終えた場所に置きます</text>
+  <rect x="330" y="232" width="230" height="88" rx="4" fill="#f1e8f0" stroke="#7b4a7d" stroke-width="1.5"/><rect x="330" y="232" width="7" height="88" rx="2" fill="#7b4a7d"/>
+  <circle cx="541" cy="251" r="9" fill="#7b4a7d"/><path d="M536.5 251l3 3 6-6" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="352" y="278" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#111">基本SEO設定</text><text x="352" y="302" font-family="system-ui, sans-serif" font-size="14" fill="#4d4740">title・説明文・見出し構造</text>
+  <rect x="70" y="344" width="230" height="88" rx="4" fill="#e9f0e3" stroke="#48703a" stroke-width="1.5"/><rect x="70" y="344" width="7" height="88" rx="2" fill="#48703a"/>
+  <circle cx="281" cy="363" r="9" fill="#48703a"/><path d="M276.5 363l3 3 6-6" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="92" y="390" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#111">SSL・公開確認</text><text x="92" y="414" font-family="system-ui, sans-serif" font-size="14" fill="#4d4740">通信と表示を確認します</text>
+  <rect x="330" y="344" width="230" height="88" rx="4" fill="#e6eef5" stroke="#2f6690" stroke-width="1.5"/><rect x="330" y="344" width="7" height="88" rx="2" fill="#2f6690"/>
+  <circle cx="541" cy="363" r="9" fill="#2f6690"/><path d="M536.5 363l3 3 6-6" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="352" y="390" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#111">納品前チェック</text><text x="352" y="414" font-family="system-ui, sans-serif" font-size="14" fill="#4d4740">表示崩れとリンク切れ</text>
+  <line x1="630" y1="110" x2="630" y2="440" stroke="#D9D3CA" stroke-width="2" stroke-dasharray="4 6"/>
+  <rect x="700" y="120" width="430" height="66" rx="4" fill="url(#ssm-h)" stroke="#8A5F33" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <circle cx="732" cy="153" r="12" fill="none" stroke="#8A5F33" stroke-width="2"/><path d="M727 148l10 10M737 148l-10 10" stroke="#8A5F33" stroke-width="2" stroke-linecap="round"/>
+  <text x="758" y="160" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="#111">高度な予約・会員・決済・CMS</text>
+  <rect x="700" y="206" width="430" height="66" rx="4" fill="url(#ssm-h)" stroke="#8A5F33" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <circle cx="732" cy="239" r="12" fill="none" stroke="#8A5F33" stroke-width="2"/><path d="M727 234l10 10M737 234l-10 10" stroke="#8A5F33" stroke-width="2" stroke-linecap="round"/>
+  <text x="758" y="246" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="#111">継続的な広告運用</text>
+  <rect x="700" y="292" width="430" height="66" rx="4" fill="url(#ssm-h)" stroke="#8A5F33" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <circle cx="732" cy="325" r="12" fill="none" stroke="#8A5F33" stroke-width="2"/><path d="M727 320l10 10M737 320l-10 10" stroke="#8A5F33" stroke-width="2" stroke-linecap="round"/>
+  <text x="758" y="332" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="#111">本格的な取材・写真撮影</text>
+  <rect x="700" y="378" width="430" height="66" rx="4" fill="url(#ssm-h)" stroke="#8A5F33" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <circle cx="732" cy="411" r="12" fill="none" stroke="#8A5F33" stroke-width="2"/><path d="M727 406l10 10M737 406l-10 10" stroke="#8A5F33" stroke-width="2" stroke-linecap="round"/>
+  <text x="758" y="418" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="#111">商標調査を含むロゴ開発</text>
+  <g transform="translate(70,500)"><text font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#5F5A54">プランごとの広さ（左から右へ広がります）</text><line x1="0" y1="18" x2="1060" y2="18" stroke="#D9D3CA" stroke-width="2"/>
+    <rect x="0" y="42" width="226" height="120" rx="4" fill="#e6eef5" stroke="#2f6690" stroke-width="1.5"/><rect x="0" y="42" width="226" height="6" fill="#2f6690"/>
+    <text x="18" y="80" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#111">はじめて</text><text x="18" y="104" font-family="system-ui, sans-serif" font-size="14" fill="#4d4740">1ページ</text>
+    <rect x="18" y="122" width="16" height="22" rx="2" fill="#2f6690"/>
+    <line x1="232" y1="102" x2="268" y2="102" stroke="#5c4a38" stroke-width="2.5" marker-end="url(#ssm-a)"/>
+    <rect x="276" y="42" width="226" height="120" rx="4" fill="#e9f0e3" stroke="#48703a" stroke-width="1.5"/><rect x="276" y="42" width="226" height="6" fill="#48703a"/>
+    <text x="294" y="80" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#111">シンプル</text><text x="294" y="104" font-family="system-ui, sans-serif" font-size="14" fill="#4d4740">3ページ前後</text>
+    <rect x="294" y="122" width="16" height="22" rx="2" fill="#48703a"/>
+    <rect x="316" y="122" width="16" height="22" rx="2" fill="#48703a"/>
+    <rect x="338" y="122" width="16" height="22" rx="2" fill="#48703a"/>
+    <line x1="508" y1="102" x2="544" y2="102" stroke="#5c4a38" stroke-width="2.5" marker-end="url(#ssm-a)"/>
+    <rect x="552" y="42" width="226" height="120" rx="4" fill="#f6eadf" stroke="#9a5220" stroke-width="1.5"/><rect x="552" y="42" width="226" height="6" fill="#9a5220"/>
+    <text x="570" y="80" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#111">標準</text><text x="570" y="104" font-family="system-ui, sans-serif" font-size="14" fill="#4d4740">5ページ前後</text>
+    <rect x="570" y="122" width="16" height="22" rx="2" fill="#9a5220"/>
+    <rect x="592" y="122" width="16" height="22" rx="2" fill="#9a5220"/>
+    <rect x="614" y="122" width="16" height="22" rx="2" fill="#9a5220"/>
+    <rect x="636" y="122" width="16" height="22" rx="2" fill="#9a5220"/>
+    <rect x="658" y="122" width="16" height="22" rx="2" fill="#9a5220"/>
+    <line x1="784" y1="102" x2="820" y2="102" stroke="#5c4a38" stroke-width="2.5" marker-end="url(#ssm-a)"/>
+    <rect x="828" y="42" width="226" height="120" rx="4" fill="#f1e8f0" stroke="#7b4a7d" stroke-width="1.5"/><rect x="828" y="42" width="226" height="6" fill="#7b4a7d"/>
+    <text x="846" y="80" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#111">おまかせ</text><text x="846" y="104" font-family="system-ui, sans-serif" font-size="14" fill="#4d4740">＋文章・画像・簡易ロゴ</text>
+    <rect x="846" y="122" width="16" height="22" rx="2" fill="#7b4a7d"/>
+    <rect x="868" y="122" width="16" height="22" rx="2" fill="#7b4a7d"/>
+    <rect x="890" y="122" width="16" height="22" rx="2" fill="#7b4a7d"/>
+    <rect x="912" y="122" width="16" height="22" rx="2" fill="#7b4a7d"/>
+    <rect x="934" y="122" width="16" height="22" rx="2" fill="#7b4a7d"/>
+    <circle cx="966" cy="133" r="6" fill="#b98fb7"/>
+    <circle cx="986" cy="133" r="6" fill="#b98fb7"/>
+    <circle cx="1006" cy="133" r="6" fill="#b98fb7"/>
   </g>
 </svg>
     <figcaption>左が制作に含む範囲、右が別途見積もりになる範囲です</figcaption>
@@ -344,7 +371,7 @@
           <div class="c5-6 rv rv-d1"><p class="sec-lead">先にお伝えします。必要な場合は、対応できる方をご紹介できる範囲でご案内します。</p></div>
         </div>
       </div>
-      <ul class="marker-list marker-list--2col">
+      <ul class="marker-list rd-xlist">
         <li><span class="mk mk--minus" aria-hidden="true"></span><span>36タイプ分の見本サイト制作</span></li>
         <li><span class="mk mk--minus" aria-hidden="true"></span><span>高度な予約、会員、決済、在庫、CMS機能</span></li>
         <li><span class="mk mk--minus" aria-hidden="true"></span><span>継続的な広告運用</span></li>
@@ -369,15 +396,16 @@
   </main>
   <footer class="ftr">
   <div class="wrap">
-    <div class="g6">
-      <div class="c1-2">
+    <div class="ftr__grid">
+      <div>
         <div class="ftr__brand">
-          <span class="brand__mark" aria-hidden="true"></span>
+          <img class="brand__mark" src="assets/brand/logo-onink-h88.webp" srcset="assets/brand/logo-onink-h88.webp 1x, assets/brand/logo-onink-h176.webp 2x" width="49" height="38" alt="">
           <span><span class="ftr__ja">クルーアセント</span><span class="ftr__en">CREW ASCENT</span></span>
         </div>
         <p class="ftr__note">診断で方向を整理してから始める、小規模事業者向けのWeb制作事務所です。検索順位や問い合わせ件数を保証するサービスではありません。</p>
+        <p class="ftr__note">運営 Web制作事務所クルーアセント（CREW ASCENT）</p>
       </div>
-      <div class="c3-4">
+      <div>
         <h2>サイト</h2>
         <ul>
           <li><a href="diagnosis.html">Web診断36</a></li>
@@ -387,19 +415,20 @@
           <li><a href="services.html">Web制作サービス</a></li>
         </ul>
       </div>
-      <div class="c5-6">
+      <div>
         <h2>知る・相談する</h2>
         <ul>
           <li><a href="about.html">クルーアセントについて</a></li>
           <li><a href="guide.html">Webサイトづくりガイド</a></li>
           <li><a href="faq.html">よくある質問</a></li>
           <li><a href="contact.html">無料相談・お問い合わせ</a></li>
-          <li>事業者名 <span class="blocker-inline" title="公開前に確定する項目">（公開前に確定: 正式事業者名）</span></li>
-          <li><a href="privacy.html">プライバシーポリシー</a> ／ <a href="terms.html">サイト利用条件</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="terms.html">サイト利用条件</a></li>
           <li><a href="commercial-transactions.html">特定商取引法に基づく表記</a></li>
         </ul>
       </div>
     </div>
+    <p class="ftr__word" aria-hidden="true">CREW ASCENT</p>
     <div class="ftr__bottom">
       <span>© <span data-year>2026</span> クルーアセント（CREW ASCENT）</span>
       <span data-prepublish>このサイトは公開準備中です。確定前の項目があります。</span>

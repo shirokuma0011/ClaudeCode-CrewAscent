@@ -7,29 +7,31 @@
   <title>Webサイト公開・管理プラン | クルーアセント</title>
   <meta name="description" content="サーバー管理、公開状態チェック、SSL・ドメイン確認、月1回の軽微なテキスト修正、障害一次確認を、6か月・12か月・24か月の前払いプランで対応します。.comドメイン1件の取得・更新費を含みます。">
   <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="https://crewascent.com/management.html">
   <meta property="og:title" content="Webサイト公開・管理プラン | クルーアセント">
+  <meta property="og:url" content="https://crewascent.com/management.html">
   <meta property="og:description" content="サーバー管理、公開状態チェック、SSL・ドメイン確認、月1回の軽微なテキスト修正、障害一次確認を、6か月・12か月・24か月の前払いプランで対応します。.comドメイン1件の取得・更新費を含みます。">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="クルーアセント">
   <meta property="og:locale" content="ja_JP">
-  <meta property="og:image" content="assets/og/og-management.png">
+  <meta property="og:image" content="https://crewascent.com/assets/og/og-management.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/brand/icon-32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="assets/brand/icon-512.png" sizes="512x512" type="image/png">
   <link rel="apple-touch-icon" href="assets/brand/icon-180.png">
-  <!-- 旧CSSを先に読み、新しい共通CSSで上書きする。トークンは base.css が正本。 -->
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CASans-700.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CASans-400.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CAMono-700.woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/styles.css?v=20260817r9">
-  <link rel="stylesheet" href="assets/css/base.css?v=20260817r9">
-  <link rel="stylesheet" href="assets/css/system.css?v=20260817r9">
-  <link rel="stylesheet" href="assets/css/crew.css?v=20261025a">
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CASerif-700.woff2" crossorigin>
+  <!-- 第8版: スタイルは site.css の1ファイルだけ -->
+  <link rel="stylesheet" href="assets/css/site.css?v=20261105i">
+  <link rel="stylesheet" href="assets/css/color.css?v=20261105b">
+  <link rel="stylesheet" href="assets/css/read.css?v=20261105e">
+  <link rel="stylesheet" href="assets/css/lite.css?v=20261105k">
+  <link rel="stylesheet" href="assets/css/heads.css?v=20261105c">
   <script>document.documentElement.className += ' js';</script>
-  <script src="assets/js/site-config.js?v=20261025a"></script>
-  <script defer src="assets/js/top.js?v=20260817r9"></script>
+  <script src="assets/js/site-config.js?v=20261105a"></script>
+  <script defer src="assets/js/top.js?v=20261101b"></script>
   <script defer src="assets/js/scroll-steady.js?v=20260817r9"></script>
-  <script defer src="assets/js/main.js?v=20261025a"></script>
+  <script defer src="assets/js/main.js?v=20261105d"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"index.html"},{"@type":"ListItem","position":2,"name":"Web制作サービス","item":"services.html"},{"@type":"ListItem","position":3,"name":"公開・管理","item":"management.html"}]}</script>
   <script>/* 動きの入り切り。?motion=off と、動きを減らす設定で外れる。
      site-config.js の motion:'off' は main.js が後から外します。 */
@@ -38,71 +40,76 @@
      (window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
    if(!off)r.classList.add('motion');})(document);</script>
 </head>
-<body data-page="management" data-archetype="decision" class="pg pg--decision pg-sub">
+<body data-page="management" data-hero data-archetype="decision" class="pg pg--decision pg-sub">
   <a class="skip-link" href="#main">本文へスキップ</a>
-  <header class="hdr" id="hdr">
+
+<svg width="0" height="0" aria-hidden="true" focusable="false" class="sr-only">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 5 12 6.5l4.5 4.5H4v2h12.5L12 17.5 13.5 19l7-7z"/></symbol>
+</svg>
+
+<header class="hdr" id="hdr">
   <div class="wrap hdr__in">
     <a class="brand" href="index.html" aria-label="クルーアセント ホームへ">
-      <span class="brand__mark" aria-hidden="true"></span>
+      <img class="brand__mark" src="assets/brand/logo-onink-h88.webp" srcset="assets/brand/logo-onink-h88.webp 1x, assets/brand/logo-onink-h176.webp 2x" width="49" height="38" alt="">
       <span class="brand__tx"><span class="brand__ja">クルーアセント</span><span class="brand__en">CREW ASCENT</span></span>
     </a>
     <nav class="gnav" aria-label="メインメニュー">
       <ul class="gnav__list">
-        <li class="gnav__item"><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-service" aria-current="page">サービス<span class="gnav__caret" aria-hidden="true"></span></button></li>
-        <li class="gnav__item"><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-diagnosis">診断<span class="gnav__caret" aria-hidden="true"></span></button></li>
-        <li class="gnav__item"><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-first">はじめての方へ<span class="gnav__caret" aria-hidden="true"></span></button></li>
-        <li class="gnav__item"><a class="gnav__link" href="about.html">クルーアセントについて</a></li>
-        <li class="gnav__item"><a class="gnav__link" href="contact.html">相談</a></li>
+        <li><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-service" aria-current="page">サービス</button></li>
+        <li><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-diagnosis">診断</button></li>
+        <li><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-first">はじめての方へ</button></li>
+        <li><a class="gnav__link" href="about.html">クルーアセントについて</a></li>
+        <li><a class="gnav__link" href="contact.html">相談</a></li>
       </ul>
     </nav>
-    <a class="btn btn--primary btn--sm hdr-cta" href="diagnosis.html">無料診断を始める<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+    <a class="hdr-cta" href="diagnosis.html">無料診断を始める<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
     <button class="burger" type="button" aria-expanded="false" aria-controls="drawer">
       <span class="burger__label">メニュー</span>
-      <span class="burger__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="burger__bars" aria-hidden="true"><span></span><span></span></span>
     </button>
   </div>
 
   <div class="mega" id="mega-service" hidden>
-    <div class="wrap mega__in"><div class="g6">
-      <div class="mega__intro c1-2"><p class="mega__h">サービス</p><p>何を作り、何を整え、公開後に何を続けるのか。対応範囲と料金を先に開示しています。</p></div>
-      <ul class="mega__list c3-6">
+    <div class="wrap mega__in">
+      <div class="mega__intro"><p class="mega__h">サービス</p><p>何を作り、何を整え、公開後に何を続けるのか。対応範囲と料金を先に開示しています。</p></div>
+      <ul class="mega__list">
         <li><a href="services.html"><span class="mega__ttl">Web制作サービス</span><span class="mega__note">何を作り、何を整えるか</span></a></li>
         <li><a href="plans.html"><span class="mega__ttl">4つのプラン・料金</span><span class="mega__note">8万〜22万円の買い切り</span></a></li>
         <li><a href="process.html"><span class="mega__ttl">制作の流れ</span><span class="mega__note">相談から公開までの9段階</span></a></li>
         <li><a href="management.html"><span class="mega__ttl">公開・管理</span><span class="mega__note">公開後に必要な範囲だけ</span></a></li>
       </ul>
-    </div></div>
+    </div>
   </div>
 
   <div class="mega" id="mega-diagnosis" hidden>
-    <div class="wrap mega__in"><div class="g6">
-      <div class="mega__intro c1-2"><p class="mega__h">Web診断36</p><p>2軸 × 6段階で36通り。Webサイトで何を優先するかを整理するための、無料の入口です。</p></div>
-      <ul class="mega__list c3-6">
+    <div class="wrap mega__in">
+      <div class="mega__intro"><p class="mega__h">Web診断36</p><p>2軸 × 6段階で36通り。Webサイトで何を優先するかを整理するための、無料の入口です。</p></div>
+      <ul class="mega__list">
         <li><a href="diagnosis.html"><span class="mega__ttl">無料診断を始める</span><span class="mega__note">16問または48問</span></a></li>
         <li><a href="diagnosis-guide.html"><span class="mega__ttl">Web診断36の仕組み</span><span class="mega__note">四つの視点と二つの軸</span></a></li>
         <li><a href="types.html"><span class="mega__ttl">36タイプ一覧</span><span class="mega__note">4つの領域・36の方向</span></a></li>
         <li><a href="industries.html"><span class="mega__ttl">業種からタイプを探す</span><span class="mega__note">13分類・102の業種</span></a></li>
         <li><a href="result.html?type=helpful-guidance"><span class="mega__ttl">結果サンプルを見る</span><span class="mega__note">実際の結果画面</span></a></li>
       </ul>
-    </div></div>
+    </div>
   </div>
 
   <div class="mega" id="mega-first" hidden>
-    <div class="wrap mega__in"><div class="g6">
-      <div class="mega__intro c1-2"><p class="mega__h">はじめての方へ</p><p>制作会社へ相談する前に読んでも使える形で、判断に必要なことを整理しています。</p></div>
-      <ul class="mega__list c3-6">
+    <div class="wrap mega__in">
+      <div class="mega__intro"><p class="mega__h">はじめての方へ</p><p>制作会社へ相談する前に読んでも使える形で、判断に必要なことを整理しています。</p></div>
+      <ul class="mega__list">
         <li><a href="website-guide.html"><span class="mega__ttl">Webサイトの役割</span><span class="mega__note">SNSとの使い分け</span></a></li>
         <li><a href="guide.html"><span class="mega__ttl">Webサイトづくりガイド</span><span class="mega__note">決める前に読む記事</span></a></li>
         <li><a href="faq.html"><span class="mega__ttl">よくある質問</span><span class="mega__note">料金・制作・契約</span></a></li>
       </ul>
-    </div></div>
+    </div>
   </div>
 
   <nav class="drawer" id="drawer" aria-label="メインメニュー（モバイル）" hidden>
     <div class="wrap">
       <ul class="drawer__list">
         <li>
-          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-1">サービス<span class="drawer__caret" aria-hidden="true"></span></button>
+          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-1">サービス</button>
           <ul class="drawer__sub" id="dr-1" hidden>
             <li><a href="services.html">Web制作サービス<span>何を作り、何を整えるか</span></a></li>
             <li><a href="plans.html">4つのプラン・料金<span>8万〜22万円の買い切り</span></a></li>
@@ -111,17 +118,17 @@
           </ul>
         </li>
         <li>
-          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-2">診断<span class="drawer__caret" aria-hidden="true"></span></button>
+          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-2">診断</button>
           <ul class="drawer__sub" id="dr-2" hidden>
             <li><a href="diagnosis.html">無料診断を始める<span>16問または48問</span></a></li>
             <li><a href="diagnosis-guide.html">Web診断36の仕組み<span>四つの視点と二つの軸</span></a></li>
             <li><a href="types.html">36タイプ一覧<span>4つの領域・36の方向</span></a></li>
-              <li><a href="industries.html">業種からタイプを探す<span>13分類・102の業種</span></a></li>
+            <li><a href="industries.html">業種からタイプを探す<span>13分類・102の業種</span></a></li>
             <li><a href="result.html?type=helpful-guidance">結果サンプルを見る<span>実際の結果画面</span></a></li>
           </ul>
         </li>
         <li>
-          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-3">はじめての方へ<span class="drawer__caret" aria-hidden="true"></span></button>
+          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-3">はじめての方へ</button>
           <ul class="drawer__sub" id="dr-3" hidden>
             <li><a href="website-guide.html">Webサイトの役割<span>SNSとの使い分け</span></a></li>
             <li><a href="guide.html">Webサイトづくりガイド<span>決める前に読む記事</span></a></li>
@@ -132,8 +139,8 @@
         <li><a class="drawer__row" href="contact.html">相談</a></li>
       </ul>
       <div class="drawer__foot">
-        <a class="btn btn--primary btn--block" href="diagnosis.html">無料診断を始める<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-        <a class="btn btn--line btn--block" href="plans.html">4つのプランを見る</a>
+        <a class="btn btn--primary" href="diagnosis.html">無料診断を始める<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+        <a class="btn btn--line" href="plans.html">4つのプランを見る</a>
       </div>
     </div>
   </nav>
@@ -141,16 +148,11 @@
   <nav class="breadcrumb" aria-label="パンくず"><div class="wrap"><ol><li><a href="index.html">ホーム</a></li><li><a href="services.html">Web制作サービス</a></li><li aria-current="page">公開・管理</li></ol></div></nav>
   <main id="main">
 
-  <section class="ah ah--decision">
-      <div class="wrap ah__inner">
-        <div class="ah__main"><p class="eyebrow ">公開・管理プラン</p><h1>公開して、<br>終わりにしません。</h1><p class="ah__lead">表示できているか、SSLに問題がないか、連絡先が古くなっていないか。公開後に必要な確認を、必要な範囲でお引き受けします。管理が不要な場合は制作のみでも構いません。</p></div>
-        <div class="ah__aside"><dl class="ah__facts">
-      <div><dt>6か月プラン</dt><dd><span class="num num--md">34,000</span><span class="num__unit">円</span></dd><p>初回。更新は30,000円</p></div>
-      <div><dt>12か月プラン</dt><dd><span class="num num--md">50,000</span><span class="num__unit">円</span></dd><p>一括前払い</p></div>
-      <div><dt>24か月プラン</dt><dd><span class="num num--md">90,000</span><span class="num__unit">円</span></dd><p>一括前払い</p></div>
-    </dl></div>
+  <section class="ah ah--decision hx hx-mo">
+      <div class="wrap hx__inner">
+        <div class="hx__main"><p class="eyebrow ">公開・管理プラン</p><h1>公開して、<br>終わりにしません。</h1><p class="ah__lead">表示できているか、SSLに問題がないか、連絡先が古くなっていないか。公開後に必要な確認を、必要な範囲でお引き受けします。管理が不要な場合は制作のみでも構いません。</p></div>
+        <figure class="hx-mo__fig"><figcaption>1マス＝1か月。押さえる期間と料金</figcaption><dl class="hx-mo__rows"><div class="hx-mo__row" style="--m:6"><dt><b>6か月プラン</b><span>初回。更新は30,000円</span></dt><dd><span class="hx-mo__bar" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="hx-mo__pr"><span class="num num--md">34,000</span><span class="num__unit">円</span></span></dd></div><div class="hx-mo__row" style="--m:12"><dt><b>12か月プラン</b><span>一括前払い</span></dt><dd><span class="hx-mo__bar" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="hx-mo__pr"><span class="num num--md">50,000</span><span class="num__unit">円</span></span></dd></div><div class="hx-mo__row" style="--m:24"><dt><b>24か月プラン</b><span>一括前払い</span></dt><dd><span class="hx-mo__bar" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="hx-mo__pr"><span class="num num--md">90,000</span><span class="num__unit">円</span></span></dd></div></dl></figure>
       </div>
-      <div class="ah__peek"><span aria-hidden="true">↓</span>毎月この順番で確認します</div>
     </section>
 
   <section class="sec" hidden>
@@ -202,19 +204,20 @@
     <div class="wrap">
       <div class="figure-band">
         <figure class="fig fig--crop">
-    <img src="assets/img/site-care-cycle.webp" width="1800" height="1000" alt="公開後の確認項目が6×6の中心を囲んで循環する運用サイクルの図" decoding="async" srcset="assets/img/site-care-cycle-900.webp 900w, assets/img/site-care-cycle.webp 1800w" sizes="(min-width: 900px) 60vw, 92vw">
+    <img src="assets/img/ph-seed.webp" width="1200" height="667" alt="ガラスの覆いの中で守られて育つ若葉の写真" decoding="async" srcset="assets/img/ph-seed-600.webp 600w, assets/img/ph-seed.webp 1200w" sizes="(min-width: 900px) 50vw, 92vw">
     <figcaption>公開後の確認項目が、6×6の構成を囲んで循環します</figcaption>
   </figure>
         <div>
           <h2 style="font-size:1.375rem">含む内容 / 含まない内容</h2>
-          <ul class="marker-list" style="margin-top:var(--s3)">
+          <div class="rd-yn rd-yn--stack"><div class="rd-pan rd-pan--yes"><p class="rd-pan__h">管理に含むこと</p><ul class="marker-list">
             <li><span class="mk mk--plus" aria-hidden="true"></span><span>サーバー管理、公開状態チェック、自動稼働確認</span></li>
             <li><span class="mk mk--plus" aria-hidden="true"></span><span>ドメイン・SSLまわりの確認</span></li>
             <li><span class="mk mk--plus" aria-hidden="true"></span><span>月1回までの軽微なテキスト修正</span></li>
             <li><span class="mk mk--plus" aria-hidden="true"></span><span>障害時の一次確認</span></li>
+</ul></div><div class="rd-pan rd-pan--no"><p class="rd-pan__h">管理に含まないこと</p><ul class="marker-list">
             <li><span class="mk mk--minus" aria-hidden="true"></span><span>ページ追加、レイアウト・デザイン変更、新規文章作成</span></li>
             <li><span class="mk mk--minus" aria-hidden="true"></span><span>新機能の追加、外部サービス側の有料費用、大幅な画像加工</span></li>
-          </ul>
+</ul></div></div>
           <p class="hint">軽微な修正の例: 文章の一部変更、電話番号・営業時間・リンクの差し替え、画像1〜2点の差し替え（翌月への繰越なし）。</p>
         </div>
       </div>
@@ -225,13 +228,13 @@
     <div class="wrap">
       <div class="figure-band figure-band--flip">
         <figure class="fig fig--crop">
-    <img src="assets/img/measurement-foundation.webp" width="1800" height="1000" alt="計測の基本設定が段階的に積み上がり、6×6の記録へつながる図" decoding="async" fetchpriority="low" srcset="assets/img/measurement-foundation-900.webp 900w, assets/img/measurement-foundation.webp 1800w" sizes="(min-width: 900px) 55vw, 92vw">
+    <img src="assets/img/ph-rings.webp" width="1200" height="667" alt="年輪が重なる木の断面の写真" decoding="async" srcset="assets/img/ph-rings-600.webp 600w, assets/img/ph-rings.webp 1200w" sizes="(min-width: 900px) 50vw, 92vw">
     <figcaption>基本設定から、記録が積み上がる状態へ</figcaption>
   </figure>
         <div>
           <p class="eyebrow eyebrow--cobalt">計測設定</p>
           <h2 style="font-size:1.375rem">数字を見る土台だけ、先に作ります。</h2>
-          <p>おまかせプランでは、GA4・Search Console・主要クリックの計測設定を支援します。その他のプランでは、基本タグを入れられる構造まで整えます。</p>
+          <p>おまかせプランでは、アクセス解析（GA4・Search Console。Googleの無料ツール）と主要クリックの計測設定を支援します。その他のプランでは、基本タグを入れられる構造まで整えます。</p>
           <p class="hint mb-0">計測サービスの実接続は、公開作業時にお客様のアカウントで行います。今回のサイトでは未接続です。</p>
         </div>
       </div>
@@ -248,7 +251,8 @@
           <div class="c5-6 rv rv-d1"><p class="sec-lead">自動更新はしません。満了の前にご案内します。</p></div>
         </div>
       </div>
-      <ol class="timeaxis">
+      <div class="rd-key"><p class="rd-key__h">要点</p><p class="rd-key__t">自動では更新しません。<b>入金がないときは、満了日の翌日に公開を止め、その後30日間はデータを保管します。</b>その間に入金を確認できれば、もう一度公開できます。</p></div>
+<ol class="timeaxis">
         <li class="timeaxis__step">
           <span class="timeaxis__when">満了月の1日</span>
           <b>更新のご案内</b>
@@ -262,14 +266,16 @@
         <li class="timeaxis__step timeaxis__step--end">
           <span class="timeaxis__when">入金がない場合</span>
           <b>停止前にお知らせ</b>
-          <span class="timeaxis__d"><span class="blocker-inline" title="公開前に確定する項目">（公開前に確定: 満了後の扱い）</span>。</span>
+          <span class="timeaxis__d">満了日に最終のお知らせをお送りし、満了日の翌日にサイトの公開を停止します。停止から30日間はデータを保管し、その間に入金を確認できれば再公開します。30日を過ぎたデータはサーバーから削除します。データの引き渡しをご希望の場合は、満了日までにご連絡ください。</span>
         </li>
       </ol>
-      <p class="hint" style="margin-top:var(--s4)">満了日の14日前・7日前・3日前を目安に、確認のご連絡もお送りする予定です。開始日から月末まで15日以上ある場合はその月を1か月目とし、14日以下の場合は月末までを無償期間として翌月1日から数えます。契約期間の途中で解約された場合の返金は、法令上必要な場合や当方の責めに帰すべき事由がある場合を除き、原則ありません。</p>
-      <div class="prose" style="margin-top:var(--s6)">
+      <details class="rd-more"><summary>くわしく見る（お知らせの時期、途中解約、障害時、ドメインの扱い）</summary><div class="rd-more__b">
+<p class="hint" style="margin-top:var(--s4)">満了日の14日前・7日前・3日前を目安に、確認のご連絡もお送りする予定です。開始日から月末まで15日以上ある場合はその月を1か月目とし、14日以下の場合は月末までを無償期間として翌月1日から数えます。契約期間の途中で解約された場合の返金は、法令上必要な場合や当方の責めに帰すべき事由がある場合を除き、原則ありません。</p>
+      <div class="prose">
         <p class="note">本プランは100%の稼働や一定時間内の復旧を保証するSLAではありません。障害時はまず原因を確認し、復旧作業が管理範囲を超える場合は、作業前に費用と対応方法をご案内します。</p>
         <p>サーバーはクルーアセント側の契約で管理する方針です。各プランには.comドメイン1件の取得・更新費が含まれます。ドメインの登録名義はお客様で、取得・更新・DNS設定をクルーアセントが代行します。契約期間中にドメイン会社の料金が上がっても期間中は据え置き、次の更新で変わる場合は事前にお知らせします。ご希望のドメイン名が取れない場合はご相談します。</p>
       </div>
+</div></details>
       <div class="cta-row" style="margin-top:var(--s5)"><a class="btn btn--primary" href="contact.html" data-form-link>管理について相談する</a></div>
     </div>
   </section>
@@ -297,15 +303,16 @@
 </main>
   <footer class="ftr">
   <div class="wrap">
-    <div class="g6">
-      <div class="c1-2">
+    <div class="ftr__grid">
+      <div>
         <div class="ftr__brand">
-          <span class="brand__mark" aria-hidden="true"></span>
+          <img class="brand__mark" src="assets/brand/logo-onink-h88.webp" srcset="assets/brand/logo-onink-h88.webp 1x, assets/brand/logo-onink-h176.webp 2x" width="49" height="38" alt="">
           <span><span class="ftr__ja">クルーアセント</span><span class="ftr__en">CREW ASCENT</span></span>
         </div>
         <p class="ftr__note">診断で方向を整理してから始める、小規模事業者向けのWeb制作事務所です。検索順位や問い合わせ件数を保証するサービスではありません。</p>
+        <p class="ftr__note">運営 Web制作事務所クルーアセント（CREW ASCENT）</p>
       </div>
-      <div class="c3-4">
+      <div>
         <h2>サイト</h2>
         <ul>
           <li><a href="diagnosis.html">Web診断36</a></li>
@@ -315,19 +322,20 @@
           <li><a href="services.html">Web制作サービス</a></li>
         </ul>
       </div>
-      <div class="c5-6">
+      <div>
         <h2>知る・相談する</h2>
         <ul>
           <li><a href="about.html">クルーアセントについて</a></li>
           <li><a href="guide.html">Webサイトづくりガイド</a></li>
           <li><a href="faq.html">よくある質問</a></li>
           <li><a href="contact.html">無料相談・お問い合わせ</a></li>
-          <li>事業者名 <span class="blocker-inline" title="公開前に確定する項目">（公開前に確定: 正式事業者名）</span></li>
-          <li><a href="privacy.html">プライバシーポリシー</a> ／ <a href="terms.html">サイト利用条件</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="terms.html">サイト利用条件</a></li>
           <li><a href="commercial-transactions.html">特定商取引法に基づく表記</a></li>
         </ul>
       </div>
     </div>
+    <p class="ftr__word" aria-hidden="true">CREW ASCENT</p>
     <div class="ftr__bottom">
       <span>© <span data-year>2026</span> クルーアセント（CREW ASCENT）</span>
       <span data-prepublish>このサイトは公開準備中です。確定前の項目があります。</span>

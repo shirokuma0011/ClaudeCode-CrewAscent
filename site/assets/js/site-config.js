@@ -25,7 +25,7 @@ window.CREW_CONFIG = {
   siteAlternateName: 'CREW ASCENT',
 
   // ---- 以下は公開前に本人が確定する(PUBLISH-BLOCKER) ----
-  canonicalOrigin: 'PUBLISH_BLOCKER',   // 例: https://example.com
+  canonicalOrigin: 'https://crewascent.com',   // 例: https://example.com
 
   /* --- スクロール速度の上限（トラックパッドの慣性対策） ---------------
      true にすると、勢いよく操作しても最高速度が一定以上に上がりません。
@@ -44,14 +44,14 @@ window.CREW_CONFIG = {
   // steadyStepCap: 120,   // 1イベントで受け付ける最大px
   // steadySpeedCap: 60,   // 1コマの上限px（60 = 毎秒3600px）
   // steadyEase: 0.26,     // 大きいほど機敏
-  legalBusinessName: 'PUBLISH_BLOCKER', // 正式事業者名 / 法人名
+  legalBusinessName: 'Web制作事務所クルーアセント（CREW ASCENT）', // 正式事業者名 / 法人名
   responsiblePerson: 'PUBLISH_BLOCKER', // 運営責任者
   postalAddress: 'PUBLISH_BLOCKER',
   telephone: 'PUBLISH_BLOCKER',
   email: 'PUBLISH_BLOCKER',
-  businessDays: 'PUBLISH_BLOCKER',
-  replyEstimate: 'PUBLISH_BLOCKER',
-  serviceArea: 'PUBLISH_BLOCKER',
+  businessDays: '日曜〜金曜 10:00〜18:00（土曜・祝日は休み）',
+  replyEstimate: '通常3営業日以内',
+  serviceArea: '日本全国（オンライン対応）',
   // ヒアリング（consult-form.html / hearing-form.html）の送り方。
   // 空のあいだは「メールアプリで送る」（宛先は上の email）。さくらのレンタルサーバに server/ の受け口を置いたら、
   // そのURLを書く（例: '/api/questionnaire-mail.php'。手順は server/README.md）。
@@ -59,9 +59,9 @@ window.CREW_CONFIG = {
   // 公式LINEの友だち追加URL（2026-10-25 本人確認済み）。完了画面の案内は data/questionnaires.json の line が正本
   officialLineUrl: 'https://lin.ee/ND8Ou2Q',
   socialUrls: [],
-  taxMode: 'PUBLISH_BLOCKER',            // 'included' | 'excluded' 等
-  paymentMethods: ['PUBLISH_BLOCKER'],
-  domainFeePolicy: 'PUBLISH_BLOCKER',
+  taxMode: '税込',            // 'included' | 'excluded' 等
+  paymentMethods: ['銀行振込'],
+  domainFeePolicy: '公開・管理プランに.comドメイン1件の取得・更新費を含みます。登録名義はお客様で、取得・更新・DNS設定を代行します',
 
   // ---- 確定済み(資料に基づく) ----
   logoHorizontalReference: 'assets/brand/crew-ascent-logo-horizontal-reference.png',

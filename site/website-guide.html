@@ -7,29 +7,31 @@
   <title>小規模事業者にWebサイトが必要な理由 | クルーアセント</title>
   <meta name="description" content="SNS、地図サービス、Webサイトはそれぞれ得意なことが違います。1ページから始める意味、Webサイトだけでは解決しないこと、公開前に決める7項目を説明します。">
   <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="https://crewascent.com/website-guide.html">
   <meta property="og:title" content="小規模事業者にWebサイトが必要な理由 | クルーアセント">
+  <meta property="og:url" content="https://crewascent.com/website-guide.html">
   <meta property="og:description" content="SNS、地図サービス、Webサイトはそれぞれ得意なことが違います。1ページから始める意味、Webサイトだけでは解決しないこと、公開前に決める7項目を説明します。">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="クルーアセント">
   <meta property="og:locale" content="ja_JP">
-  <meta property="og:image" content="assets/og/og-about.png">
+  <meta property="og:image" content="https://crewascent.com/assets/og/og-about.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/brand/icon-32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="assets/brand/icon-512.png" sizes="512x512" type="image/png">
   <link rel="apple-touch-icon" href="assets/brand/icon-180.png">
-  <!-- 旧CSSを先に読み、新しい共通CSSで上書きする。トークンは base.css が正本。 -->
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CASans-700.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CASans-400.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CAMono-700.woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/styles.css?v=20260817r9">
-  <link rel="stylesheet" href="assets/css/base.css?v=20260817r9">
-  <link rel="stylesheet" href="assets/css/system.css?v=20260817r9">
-  <link rel="stylesheet" href="assets/css/crew.css?v=20261025a">
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/CASerif-700.woff2" crossorigin>
+  <!-- 第8版: スタイルは site.css の1ファイルだけ -->
+  <link rel="stylesheet" href="assets/css/site.css?v=20261105i">
+  <link rel="stylesheet" href="assets/css/color.css?v=20261105b">
+  <link rel="stylesheet" href="assets/css/read.css?v=20261105e">
+  <link rel="stylesheet" href="assets/css/lite.css?v=20261105k">
+  <link rel="stylesheet" href="assets/css/heads.css?v=20261105c">
   <script>document.documentElement.className += ' js';</script>
-  <script src="assets/js/site-config.js?v=20261025a"></script>
-  <script defer src="assets/js/top.js?v=20260817r9"></script>
+  <script src="assets/js/site-config.js?v=20261105a"></script>
+  <script defer src="assets/js/top.js?v=20261101b"></script>
   <script defer src="assets/js/scroll-steady.js?v=20260817r9"></script>
-  <script defer src="assets/js/main.js?v=20261025a"></script>
+  <script defer src="assets/js/main.js?v=20261105d"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"index.html"},{"@type":"ListItem","position":2,"name":"Webサイトの役割","item":"website-guide.html"}]}</script>
   <script>/* 動きの入り切り。?motion=off と、動きを減らす設定で外れる。
      site-config.js の motion:'off' は main.js が後から外します。 */
@@ -40,69 +42,74 @@
 </head>
 <body data-page="website-guide" data-archetype="editorial" class="pg pg--editorial pg-sub">
   <a class="skip-link" href="#main">本文へスキップ</a>
-  <header class="hdr" id="hdr">
+
+<svg width="0" height="0" aria-hidden="true" focusable="false" class="sr-only">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 5 12 6.5l4.5 4.5H4v2h12.5L12 17.5 13.5 19l7-7z"/></symbol>
+</svg>
+
+<header class="hdr" id="hdr">
   <div class="wrap hdr__in">
     <a class="brand" href="index.html" aria-label="クルーアセント ホームへ">
-      <span class="brand__mark" aria-hidden="true"></span>
+      <img class="brand__mark" src="assets/brand/logo-onink-h88.webp" srcset="assets/brand/logo-onink-h88.webp 1x, assets/brand/logo-onink-h176.webp 2x" width="49" height="38" alt="">
       <span class="brand__tx"><span class="brand__ja">クルーアセント</span><span class="brand__en">CREW ASCENT</span></span>
     </a>
     <nav class="gnav" aria-label="メインメニュー">
       <ul class="gnav__list">
-        <li class="gnav__item"><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-service">サービス<span class="gnav__caret" aria-hidden="true"></span></button></li>
-        <li class="gnav__item"><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-diagnosis">診断<span class="gnav__caret" aria-hidden="true"></span></button></li>
-        <li class="gnav__item"><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-first" aria-current="page">はじめての方へ<span class="gnav__caret" aria-hidden="true"></span></button></li>
-        <li class="gnav__item"><a class="gnav__link" href="about.html">クルーアセントについて</a></li>
-        <li class="gnav__item"><a class="gnav__link" href="contact.html">相談</a></li>
+        <li><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-service">サービス</button></li>
+        <li><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-diagnosis">診断</button></li>
+        <li><button class="gnav__link" type="button" aria-expanded="false" aria-controls="mega-first" aria-current="page">はじめての方へ</button></li>
+        <li><a class="gnav__link" href="about.html">クルーアセントについて</a></li>
+        <li><a class="gnav__link" href="contact.html">相談</a></li>
       </ul>
     </nav>
-    <a class="btn btn--primary btn--sm hdr-cta" href="diagnosis.html">無料診断を始める<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+    <a class="hdr-cta" href="diagnosis.html">無料診断を始める<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
     <button class="burger" type="button" aria-expanded="false" aria-controls="drawer">
       <span class="burger__label">メニュー</span>
-      <span class="burger__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="burger__bars" aria-hidden="true"><span></span><span></span></span>
     </button>
   </div>
 
   <div class="mega" id="mega-service" hidden>
-    <div class="wrap mega__in"><div class="g6">
-      <div class="mega__intro c1-2"><p class="mega__h">サービス</p><p>何を作り、何を整え、公開後に何を続けるのか。対応範囲と料金を先に開示しています。</p></div>
-      <ul class="mega__list c3-6">
+    <div class="wrap mega__in">
+      <div class="mega__intro"><p class="mega__h">サービス</p><p>何を作り、何を整え、公開後に何を続けるのか。対応範囲と料金を先に開示しています。</p></div>
+      <ul class="mega__list">
         <li><a href="services.html"><span class="mega__ttl">Web制作サービス</span><span class="mega__note">何を作り、何を整えるか</span></a></li>
         <li><a href="plans.html"><span class="mega__ttl">4つのプラン・料金</span><span class="mega__note">8万〜22万円の買い切り</span></a></li>
         <li><a href="process.html"><span class="mega__ttl">制作の流れ</span><span class="mega__note">相談から公開までの9段階</span></a></li>
         <li><a href="management.html"><span class="mega__ttl">公開・管理</span><span class="mega__note">公開後に必要な範囲だけ</span></a></li>
       </ul>
-    </div></div>
+    </div>
   </div>
 
   <div class="mega" id="mega-diagnosis" hidden>
-    <div class="wrap mega__in"><div class="g6">
-      <div class="mega__intro c1-2"><p class="mega__h">Web診断36</p><p>2軸 × 6段階で36通り。Webサイトで何を優先するかを整理するための、無料の入口です。</p></div>
-      <ul class="mega__list c3-6">
+    <div class="wrap mega__in">
+      <div class="mega__intro"><p class="mega__h">Web診断36</p><p>2軸 × 6段階で36通り。Webサイトで何を優先するかを整理するための、無料の入口です。</p></div>
+      <ul class="mega__list">
         <li><a href="diagnosis.html"><span class="mega__ttl">無料診断を始める</span><span class="mega__note">16問または48問</span></a></li>
         <li><a href="diagnosis-guide.html"><span class="mega__ttl">Web診断36の仕組み</span><span class="mega__note">四つの視点と二つの軸</span></a></li>
         <li><a href="types.html"><span class="mega__ttl">36タイプ一覧</span><span class="mega__note">4つの領域・36の方向</span></a></li>
         <li><a href="industries.html"><span class="mega__ttl">業種からタイプを探す</span><span class="mega__note">13分類・102の業種</span></a></li>
         <li><a href="result.html?type=helpful-guidance"><span class="mega__ttl">結果サンプルを見る</span><span class="mega__note">実際の結果画面</span></a></li>
       </ul>
-    </div></div>
+    </div>
   </div>
 
   <div class="mega" id="mega-first" hidden>
-    <div class="wrap mega__in"><div class="g6">
-      <div class="mega__intro c1-2"><p class="mega__h">はじめての方へ</p><p>制作会社へ相談する前に読んでも使える形で、判断に必要なことを整理しています。</p></div>
-      <ul class="mega__list c3-6">
+    <div class="wrap mega__in">
+      <div class="mega__intro"><p class="mega__h">はじめての方へ</p><p>制作会社へ相談する前に読んでも使える形で、判断に必要なことを整理しています。</p></div>
+      <ul class="mega__list">
         <li><a href="website-guide.html"><span class="mega__ttl">Webサイトの役割</span><span class="mega__note">SNSとの使い分け</span></a></li>
         <li><a href="guide.html"><span class="mega__ttl">Webサイトづくりガイド</span><span class="mega__note">決める前に読む記事</span></a></li>
         <li><a href="faq.html"><span class="mega__ttl">よくある質問</span><span class="mega__note">料金・制作・契約</span></a></li>
       </ul>
-    </div></div>
+    </div>
   </div>
 
   <nav class="drawer" id="drawer" aria-label="メインメニュー（モバイル）" hidden>
     <div class="wrap">
       <ul class="drawer__list">
         <li>
-          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-1">サービス<span class="drawer__caret" aria-hidden="true"></span></button>
+          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-1">サービス</button>
           <ul class="drawer__sub" id="dr-1" hidden>
             <li><a href="services.html">Web制作サービス<span>何を作り、何を整えるか</span></a></li>
             <li><a href="plans.html">4つのプラン・料金<span>8万〜22万円の買い切り</span></a></li>
@@ -111,17 +118,17 @@
           </ul>
         </li>
         <li>
-          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-2">診断<span class="drawer__caret" aria-hidden="true"></span></button>
+          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-2">診断</button>
           <ul class="drawer__sub" id="dr-2" hidden>
             <li><a href="diagnosis.html">無料診断を始める<span>16問または48問</span></a></li>
             <li><a href="diagnosis-guide.html">Web診断36の仕組み<span>四つの視点と二つの軸</span></a></li>
             <li><a href="types.html">36タイプ一覧<span>4つの領域・36の方向</span></a></li>
-              <li><a href="industries.html">業種からタイプを探す<span>13分類・102の業種</span></a></li>
+            <li><a href="industries.html">業種からタイプを探す<span>13分類・102の業種</span></a></li>
             <li><a href="result.html?type=helpful-guidance">結果サンプルを見る<span>実際の結果画面</span></a></li>
           </ul>
         </li>
         <li>
-          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-3">はじめての方へ<span class="drawer__caret" aria-hidden="true"></span></button>
+          <button class="drawer__row" type="button" aria-expanded="false" aria-controls="dr-3">はじめての方へ</button>
           <ul class="drawer__sub" id="dr-3" hidden>
             <li><a href="website-guide.html">Webサイトの役割<span>SNSとの使い分け</span></a></li>
             <li><a href="guide.html">Webサイトづくりガイド<span>決める前に読む記事</span></a></li>
@@ -132,8 +139,8 @@
         <li><a class="drawer__row" href="contact.html">相談</a></li>
       </ul>
       <div class="drawer__foot">
-        <a class="btn btn--primary btn--block" href="diagnosis.html">無料診断を始める<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-        <a class="btn btn--line btn--block" href="plans.html">4つのプランを見る</a>
+        <a class="btn btn--primary" href="diagnosis.html">無料診断を始める<svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+        <a class="btn btn--line" href="plans.html">4つのプランを見る</a>
       </div>
     </div>
   </nav>
@@ -141,10 +148,10 @@
   <nav class="breadcrumb" aria-label="パンくず"><div class="wrap"><ol><li><a href="index.html">ホーム</a></li><li aria-current="page">Webサイトの役割</li></ol></div></nav>
   <main id="main">
 
-  <section class="ah ah--editorial">
-      <div class="wrap ah__inner">
-        <div class="ah__main"><p class="eyebrow ">はじめての方へ</p><h1>SNSがある時代にも、<br>Webサイトが必要な理由</h1><p class="ah__lead">WebサイトとSNSは、どちらか一方を選ぶものではありません。見つけてもらう入口と、内容を確認する場所を分けると、事業の情報が伝わりやすくなります。</p></div>
-        
+  <section class="ah ah--editorial hx hx-wg">
+      <div class="wrap hx__inner">
+        <div class="hx__main"><p class="eyebrow ">はじめての方へ</p><h1>SNSがある時代にも、<br>Webサイトが必要な理由</h1><p class="ah__lead">WebサイトとSNSは、どちらか一方を選ぶものではありません。見つけてもらう入口と、内容を確認する場所を分けると、事業の情報が伝わりやすくなります。</p></div>
+        <ol class="hx-panel hx-wg__flow" aria-label="お客様がたどる順番"><li class="hx-wg__in"><img src="assets/img/x-wg-sns.webp" alt="" width="480" height="320" loading="eager" decoding="async"><span class="hx-wg__no">入口 1</span><b>SNS</b><span class="hx-wg__s">見つけてもらう</span></li><li class="hx-wg__in"><img src="assets/img/x-wg-map.webp" alt="" width="480" height="320" loading="eager" decoding="async"><span class="hx-wg__no">入口 2</span><b>地図・店舗情報</b><span class="hx-wg__s">場所を確かめる</span></li><li class="hx-wg__web"><span class="hx-wg__no">確かめる場所</span><b>Webサイト</b><span class="hx-wg__s">内容・料金・考え方を読んで、<br>相談するかを決める</span></li></ol>
       </div>
     </section>
 
@@ -158,27 +165,24 @@
           <div class="c5-6 rv rv-d1"><p class="sec-lead">それぞれ得意なことが違います。置き換えではなく、役割分担です。</p></div>
         </div>
       </div>
-      <div class="compare-3">
-        <div class="compare-3__col">
+      <div class="rd-trio">
+        <div class="rd-trio__c" style="--sc:var(--c2)">
+          <figure><img src="assets/img/x-baker.webp" width="720" height="480" alt="" loading="lazy" decoding="async"><figcaption>入口</figcaption></figure>
           <h3>SNS</h3>
-          <p class="compare-3__good">得意なこと</p>
-          <p>日々の活動、雰囲気、短いお知らせを届ける。届き方はサービスの仕組みや運用状況で変わります。</p>
-          <p class="compare-3__weak">向かないこと</p>
-          <p>投稿が流れるため、料金や対応範囲を「いつでも同じ順番で」読ませることには向きません。</p>
+          <p class="rd-trio__g"><i class="ic ic--ok" aria-hidden="true"></i><span><b>得意なこと</b>日々の活動、雰囲気、短いお知らせを届ける。届き方はサービスの仕組みや運用状況で変わります。</span></p>
+          <p class="rd-trio__w"><i class="ic ic--noguar" aria-hidden="true"></i><span><b>向かないこと</b>投稿が流れるため、料金や対応範囲を「いつでも同じ順番で」読ませることには向きません。</span></p>
         </div>
-        <div class="compare-3__col">
+        <div class="rd-trio__c" style="--sc:var(--c3)">
+          <figure><img src="assets/img/ph-biz-bicycle.webp" width="760" height="570" alt="" loading="lazy" decoding="async"><figcaption>入口</figcaption></figure>
           <h3>地図・店舗情報サービス</h3>
-          <p class="compare-3__good">得意なこと</p>
-          <p>場所、営業時間、経路、口コミの確認。近くで探している人に見つけてもらいやすい入口です。</p>
-          <p class="compare-3__weak">向かないこと</p>
-          <p>掲載できる項目が決まっているため、事業ごとの考え方や進め方までは説明できません。</p>
+          <p class="rd-trio__g"><i class="ic ic--ok" aria-hidden="true"></i><span><b>得意なこと</b>場所、営業時間、経路、口コミの確認。近くで探している人に見つけてもらいやすい入口です。</span></p>
+          <p class="rd-trio__w"><i class="ic ic--noguar" aria-hidden="true"></i><span><b>向かないこと</b>掲載できる項目が決まっているため、事業ごとの考え方や進め方までは説明できません。</span></p>
         </div>
-        <div class="compare-3__col compare-3__col--lead">
+        <div class="rd-trio__c rd-trio__c--lead" style="--sc:var(--c4)">
+          <figure><img src="assets/img/ph-biz-desk.webp" width="760" height="570" alt="" loading="lazy" decoding="async"><figcaption>確かめる場所</figcaption></figure>
           <h3>Webサイト</h3>
-          <p class="compare-3__good">得意なこと</p>
-          <p>サービス全体、料金、考え方、よくある質問、問い合わせ方法を、読み手が比較・判断しやすい順番へ整理できます。</p>
-          <p class="compare-3__weak">向かないこと</p>
-          <p>公開しただけでは見つけてもらえません。SNSや名刺から案内する流れが必要です。</p>
+          <p class="rd-trio__g"><i class="ic ic--ok" aria-hidden="true"></i><span><b>得意なこと</b>サービス全体、料金、考え方、よくある質問、問い合わせ方法を、読み手が比較・判断しやすい順番へ整理できます。</span></p>
+          <p class="rd-trio__w"><i class="ic ic--noguar" aria-hidden="true"></i><span><b>向かないこと</b>公開しただけでは見つけてもらえません。SNSや名刺から案内する流れが必要です。</span></p>
         </div>
       </div>
     </div>
@@ -195,62 +199,62 @@
      本文に直接置けば、組み版は読み込み時の1回で済む。 -->
 <svg class="fig__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="wrd-t">
   <title id="wrd-t">SNS・地図サービス・紹介・検索の四つの入口から訪れた人が、Webサイトで事業内容・料金・進め方・連絡方法を確かめ、問い合わせや来店へ進む流れの図</title>
-  <rect width="1200" height="720" fill="#FCFDFE"/>
-  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700" fill="#5A6B82" letter-spacing="1.5">
+  <rect width="1200" height="720" fill="#FAF8F4"/>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700" fill="#5F5A54" letter-spacing="1.5">
     <text x="60" y="52">ENTRY</text><text x="520" y="52">CONFIRM</text><text x="980" y="52">ACTION</text>
   </g>
   <g font-family="system-ui, sans-serif">
-    <g fill="#fff" stroke="#D6DEE9" stroke-width="1.5">
+    <g fill="#fff" stroke="#D9D3CA" stroke-width="1.5">
       <rect x="60" y="80" width="220" height="76" rx="4"/><rect x="60" y="184" width="220" height="76" rx="4"/>
       <rect x="60" y="288" width="220" height="76" rx="4"/><rect x="60" y="392" width="220" height="76" rx="4"/>
     </g>
-    <g font-size="18" font-weight="700" fill="#0C1D2E">
+    <g font-size="18" font-weight="700" fill="#111111">
       <text x="84" y="115">SNS</text><text x="84" y="219">地図・店舗情報</text><text x="84" y="323">紹介・名刺</text><text x="84" y="427">検索</text>
     </g>
-    <g font-size="13" fill="#5A6B82">
+    <g font-size="13" fill="#5F5A54">
       <text x="84" y="138">日々の活動・雰囲気</text><text x="84" y="242">場所・営業時間・経路</text>
       <text x="84" y="346">人づてに名前を聞く</text><text x="84" y="450">サービス名・地域で探す</text>
     </g>
   </g>
-  <g stroke="#9AA9BD" stroke-width="2" fill="none">
+  <g stroke="#8A847C" stroke-width="2" fill="none">
     <path d="M280 118 L 380 118 L 380 300 L 470 300"/>
     <path d="M280 222 L 350 222 L 350 300 L 470 300"/>
     <path d="M280 326 L 350 326 L 350 300 L 470 300"/>
     <path d="M280 430 L 380 430 L 380 300 L 470 300"/>
   </g>
-  <circle cx="470" cy="300" r="5" fill="#1F64D1"/>
-  <rect x="500" y="120" width="380" height="360" rx="5" fill="#E7F0FE" stroke="#1F64D1" stroke-width="2.5"/>
+  <circle cx="470" cy="300" r="5" fill="#7B6B5A"/>
+  <rect x="500" y="120" width="380" height="360" rx="5" fill="#F1ECE4" stroke="#7B6B5A" stroke-width="2.5"/>
   <g font-family="system-ui, sans-serif">
-    <text x="528" y="162" font-size="21" font-weight="700" fill="#0C1D2E">Webサイト</text>
-    <text x="528" y="186" font-size="13" fill="#17509E">比較・判断しやすい順番へ整理できる場所</text>
-    <g fill="#fff" stroke="#A9C9F7" stroke-width="1.5">
+    <text x="528" y="162" font-size="21" font-weight="700" fill="#111111">Webサイト</text>
+    <text x="528" y="186" font-size="13" fill="#5C4A38">比較・判断しやすい順番へ整理できる場所</text>
+    <g fill="#fff" stroke="#C9B9A6" stroke-width="1.5">
       <rect x="528" y="208" width="324" height="46" rx="3"/><rect x="528" y="264" width="324" height="46" rx="3"/>
       <rect x="528" y="320" width="324" height="46" rx="3"/><rect x="528" y="376" width="324" height="46" rx="3"/>
     </g>
-    <g font-size="15" font-weight="600" fill="#0C1D2E">
+    <g font-size="15" font-weight="600" fill="#111111">
       <text x="548" y="237">事業内容・対応範囲</text><text x="548" y="293">料金の考え方</text>
       <text x="548" y="349">進め方・よくある質問</text><text x="548" y="405">連絡方法・受付時間</text>
     </g>
-    <g font-family="ui-monospace, monospace" font-size="12" font-weight="700" fill="#7E8FA5">
+    <g font-family="ui-monospace, monospace" font-size="12" font-weight="700" fill="#8A847C">
       <text x="822" y="237">01</text><text x="822" y="293">02</text><text x="822" y="349">03</text><text x="822" y="405">04</text>
     </g>
   </g>
-  <path d="M880 300 L 960 300" stroke="#087F78" stroke-width="2.5" fill="none"/>
-  <circle cx="960" cy="300" r="5" fill="#087F78"/>
+  <path d="M880 300 L 960 300" stroke="#5C6B4A" stroke-width="2.5" fill="none"/>
+  <circle cx="960" cy="300" r="5" fill="#5C6B4A"/>
   <g font-family="system-ui, sans-serif">
-    <g fill="#DCF0EE" stroke="#087F78" stroke-width="1.5">
+    <g fill="#EEF0E8" stroke="#5C6B4A" stroke-width="1.5">
       <rect x="980" y="200" width="170" height="62" rx="4"/><rect x="980" y="272" width="170" height="62" rx="4"/>
       <rect x="980" y="344" width="170" height="62" rx="4"/>
     </g>
-    <g font-size="16" font-weight="700" fill="#0C1D2E">
+    <g font-size="16" font-weight="700" fill="#111111">
       <text x="1002" y="230">問い合わせ</text><text x="1002" y="302">予約・来店</text><text x="1002" y="374">見送る判断</text>
     </g>
-    <g font-size="12" fill="#5A6B82">
+    <g font-size="12" fill="#5F5A54">
       <text x="1002" y="250">フォーム・電話・LINE</text><text x="1002" y="322">場所と時間を確認して</text><text x="1002" y="394">合わないと分かることも成果</text>
     </g>
   </g>
-  <line x1="60" y1="540" x2="1140" y2="540" stroke="#D6DEE9" stroke-width="1.5"/>
-  <g font-family="system-ui, sans-serif" font-size="14" fill="#5A6B82">
+  <line x1="60" y1="540" x2="1140" y2="540" stroke="#D9D3CA" stroke-width="1.5"/>
+  <g font-family="system-ui, sans-serif" font-size="14" fill="#5F5A54">
     <text x="60" y="576">Webサイトは、入口ではなく「確かめる場所」として働きます。</text>
     <text x="60" y="602">公開しただけで見つけてもらえるわけではありません。SNSや名刺など、既にある入口から案内する流れが必要です。</text>
     <text x="60" y="628">検索順位・アクセス数・問い合わせ件数を保証するものではありません。</text>
@@ -271,12 +275,12 @@
           <div class="c5-6 rv rv-d1"><p class="sec-lead">「アクセスを増やす」より前に、この5つが起きています。</p></div>
         </div>
       </div>
-      <ol class="numbered numbered--2col">
-        <li><h3>紹介された人が事業内容を確認する</h3><p>人づてに名前を聞いた人が、依頼してよいかを自分で確かめます。</p></li>
-        <li><h3>問い合わせ前に料金や対応範囲を確認する</h3><p>聞きにくいことを、聞かずに確認できる場所になります。</p></li>
-        <li><h3>SNSで興味を持った人が詳しい説明を読む</h3><p>投稿では伝えきれない前提や条件を補います。</p></li>
-        <li><h3>営業時間外でも質問への答えを見つける</h3><p>よくある質問が、返信を待たずに済む窓口になります。</p></li>
-        <li><h3>検索からサービスを探している人へ届く</h3><p>事業名を知らない人にも、内容から見つけてもらえる可能性が生まれます。</p></li>
+      <ol class="rd-scenes">
+        <li style="--sc:var(--c1i)"><figure><img src="assets/img/x-consult.webp" width="720" height="480" alt="" loading="lazy" decoding="async"><span class="rd-scene__no">01</span></figure><h3>紹介された人が事業内容を確認する</h3><p>人づてに名前を聞いた人が、依頼してよいかを自分で確かめます。</p></li>
+        <li style="--sc:var(--c3i)"><figure><img src="assets/img/x-repair.webp" width="720" height="480" alt="" loading="lazy" decoding="async"><span class="rd-scene__no">02</span></figure><h3>問い合わせ前に料金や対応範囲を確認する</h3><p>聞きにくいことを、聞かずに確認できる場所になります。</p></li>
+        <li style="--sc:var(--c4i)"><figure><img src="assets/img/x-barista.webp" width="720" height="480" alt="" loading="lazy" decoding="async"><span class="rd-scene__no">03</span></figure><h3>SNSで興味を持った人が詳しい説明を読む</h3><p>投稿では伝えきれない前提や条件を補います。</p></li>
+        <li style="--sc:var(--c2i)"><figure><img src="assets/img/x-mobile.webp" width="720" height="480" alt="" loading="lazy" decoding="async"><span class="rd-scene__no">04</span></figure><h3>営業時間外でも質問への答えを見つける</h3><p>よくある質問が、返信を待たずに済む窓口になります。</p></li>
+        <li style="--sc:var(--c1i)"><figure><img src="assets/img/x-library.webp" width="720" height="480" alt="" loading="lazy" decoding="async"><span class="rd-scene__no">05</span></figure><h3>検索からサービスを探している人へ届く</h3><p>事業名を知らない人にも、内容から見つけてもらえる可能性が生まれます。</p></li>
       </ol>
     </div>
   </section>
@@ -284,10 +288,14 @@
     <section class="sec sec--paper2">
     <div class="wrap">
       <div class="figure-band figure-band--flip">
-        <figure class="fig fig--crop">
-    <img src="assets/img/four-perspectives-to-map.webp" width="1800" height="1000" alt="四つの視点が一本にまとまり、6×6のマップへ整理されることを示した図" decoding="async" fetchpriority="low" srcset="assets/img/four-perspectives-to-map-900.webp 900w, assets/img/four-perspectives-to-map.webp 1800w" sizes="(min-width: 900px) 60vw, 92vw">
-    <figcaption>1ページでも、Web上の正式な窓口になります</figcaption>
-  </figure>
+        <figure class="rd-grow" aria-label="1ページで始め、必要に応じて3ページ、5ページへ足していく図">
+          <div style="--sc:var(--c1)"><p class="rd-grow__pg"><i></i></p><b>1ページ</b><span>まず正式な窓口に</span></div>
+          <i class="rd-arr" aria-hidden="true"></i>
+          <div style="--sc:var(--c3)"><p class="rd-grow__pg"><i></i><i></i><i></i></p><b>3ページ前後</b><span>事例や料金を分ける</span></div>
+          <i class="rd-arr" aria-hidden="true"></i>
+          <div style="--sc:var(--c4)"><p class="rd-grow__pg"><i></i><i></i><i></i><i></i><i></i></p><b>5ページ前後</b><span>よくある質問も足す</span></div>
+          <figcaption>1ページでも、Web上の正式な窓口になります</figcaption>
+        </figure>
         <div>
           <h2 style="font-size:1.5rem">1ページから始める意味</h2>
           
@@ -314,8 +322,8 @@
           <p class="lead mb-0">先にお伝えしておきたいことです。</p>
         </div>
         <div>
-          <p>Webサイトは、事業そのものの価値や、日々の発信、紹介、接客に代わるものではありません。公開しただけで問い合わせや検索順位が自動的に上がるものでもありません。</p>
-          <p>公開後も、情報を更新し、SNSや名刺から案内し、届いた問い合わせの内容を見ながら少しずつ整えていくことで役割を果たします。クルーアセントは成果を保証するのではなく、その土台を分かりやすく作ります。</p>
+          <div class="rd-key"><span class="rd-key__h">要点</span><p class="rd-key__t">公開しただけで、<b>問い合わせや検索順位が自動で上がることはありません。</b>更新と案内を続けて、少しずつ役割を果たします。</p></div>
+          <details class="rd-more"><summary>くわしく見る</summary><div class="rd-more__b"><p>Webサイトは、事業そのものの価値や、日々の発信、紹介、接客に代わるものではありません。公開しただけで問い合わせや検索順位が自動的に上がるものでもありません。</p><p>公開後も、情報を更新し、SNSや名刺から案内し、届いた問い合わせの内容を見ながら少しずつ整えていくことで役割を果たします。クルーアセントは成果を保証するのではなく、その土台を分かりやすく作ります。</p></div></details>
         </div>
       </div>
     </div>
@@ -331,15 +339,7 @@
           <div class="c5-6 rv rv-d1"><p class="sec-lead">制作会社へ相談する前に考えておくと、話が早く進みます。無料診断は、この7項目を整理するために作りました。</p></div>
         </div>
       </div>
-      <ul class="checklist">
-        <li>誰に見てほしいか</li>
-        <li>何を依頼してほしいか</li>
-        <li>相手が何を不安に感じやすいか</li>
-        <li>最初に見せる情報は何か</li>
-        <li>料金をどこまで掲載するか</li>
-        <li>どの方法で問い合わせを受けるか</li>
-        <li>公開後に誰が更新・管理するか</li>
-      </ul>
+      <ol class="rd-seven"><li style="--sc:var(--c1)"><span>1</span>誰に見てほしいか</li><li style="--sc:var(--c3)"><span>2</span>何を依頼してほしいか</li><li style="--sc:var(--c4)"><span>3</span>相手が何を不安に感じやすいか</li><li style="--sc:var(--c2)"><span>4</span>最初に見せる情報は何か</li><li style="--sc:var(--c1)"><span>5</span>料金をどこまで掲載するか</li><li style="--sc:var(--c3)"><span>6</span>どの方法で問い合わせを受けるか</li><li style="--sc:var(--c4)"><span>7</span>公開後に誰が更新・管理するか</li><li class="rd-seven__cta"><a href="diagnosis.html">この7項目を<br>16問で整理する<i class="rd-arr" aria-hidden="true"></i></a></li></ol>
     </div>
   </section>
 
@@ -356,15 +356,16 @@
   </main>
   <footer class="ftr">
   <div class="wrap">
-    <div class="g6">
-      <div class="c1-2">
+    <div class="ftr__grid">
+      <div>
         <div class="ftr__brand">
-          <span class="brand__mark" aria-hidden="true"></span>
+          <img class="brand__mark" src="assets/brand/logo-onink-h88.webp" srcset="assets/brand/logo-onink-h88.webp 1x, assets/brand/logo-onink-h176.webp 2x" width="49" height="38" alt="">
           <span><span class="ftr__ja">クルーアセント</span><span class="ftr__en">CREW ASCENT</span></span>
         </div>
         <p class="ftr__note">診断で方向を整理してから始める、小規模事業者向けのWeb制作事務所です。検索順位や問い合わせ件数を保証するサービスではありません。</p>
+        <p class="ftr__note">運営 Web制作事務所クルーアセント（CREW ASCENT）</p>
       </div>
-      <div class="c3-4">
+      <div>
         <h2>サイト</h2>
         <ul>
           <li><a href="diagnosis.html">Web診断36</a></li>
@@ -374,19 +375,20 @@
           <li><a href="services.html">Web制作サービス</a></li>
         </ul>
       </div>
-      <div class="c5-6">
+      <div>
         <h2>知る・相談する</h2>
         <ul>
           <li><a href="about.html">クルーアセントについて</a></li>
           <li><a href="guide.html">Webサイトづくりガイド</a></li>
           <li><a href="faq.html">よくある質問</a></li>
           <li><a href="contact.html">無料相談・お問い合わせ</a></li>
-          <li>事業者名 <span class="blocker-inline" title="公開前に確定する項目">（公開前に確定: 正式事業者名）</span></li>
-          <li><a href="privacy.html">プライバシーポリシー</a> ／ <a href="terms.html">サイト利用条件</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="terms.html">サイト利用条件</a></li>
           <li><a href="commercial-transactions.html">特定商取引法に基づく表記</a></li>
         </ul>
       </div>
     </div>
+    <p class="ftr__word" aria-hidden="true">CREW ASCENT</p>
     <div class="ftr__bottom">
       <span>© <span data-year>2026</span> クルーアセント（CREW ASCENT）</span>
       <span data-prepublish>このサイトは公開準備中です。確定前の項目があります。</span>

@@ -95,13 +95,14 @@ const cats = OCC.categories.map((c) => `
 const jsonld = JSON.stringify({
   '@context': 'https://schema.org', '@type': 'CollectionPage',
   name: '業種からタイプを探す', description: desc,
-  isPartOf: { '@type': 'WebSite', name: 'クルーアセント' },
+  isPartOf: { '@type': 'WebSite', url: 'https://crewascent.com/', name: 'クルーアセント' },
 });
 
 const html = HEAD_TOP + `  <title>${esc(title)}</title>\n  <meta name="description" content="${esc(desc)}">\n`
   + AFTER_DESC.replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${esc(title)}">`)
               .replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${esc(desc)}">`)
-  + `<script defer src="assets/js/industries.js?v=20260909b"></script>\n`
+              .replace(/diagnosis-guide\.html">/g, 'industries.html">')
+  + `<script defer src="assets/js/industries.js?v=20261027a"></script>\n`
   + `<script type="application/ld+json">${jsonld}</script>\n</head>\n<body data-page="industries">\n`
   + HEADER
   + `<nav class="breadcrumb" aria-label="現在地"><div class="wrap"><ol>
@@ -109,9 +110,9 @@ const html = HEAD_TOP + `  <title>${esc(title)}</title>\n  <meta name="descripti
       <li aria-current="page">業種から探す</li></ol></div></nav>
 
   <main id="main">
-  <section class="ah ah--index">
-    <div class="wrap">
-      <div class="ah__main">
+  <section class="ah ah--index hx hx-in">
+    <div class="wrap hx__inner">
+      <div class="hx__main">
         <p class="ah__eyebrow"><span class="lbl">Industries</span></p>
         <h1>業種からタイプを探す</h1>
         <p class="ah__lead">${esc(OCC.categories.length)}の分類・${count}の業種から、Webサイト設計のタイプを引けます。
@@ -123,6 +124,7 @@ const html = HEAD_TOP + `  <title>${esc(title)}</title>\n  <meta name="descripti
           <a class="btn btn--line" href="types.html">36タイプの一覧を見る</a>
         </div>
       </div>
+      <div class="hx-panel hx-in__box"><ol class="hx-in__grid" aria-label="分類へ移動"><li class="is-on"><a class="hx-go" href="#c-food"><img src="assets/img/x-ind-food.webp" alt="" width="480" height="320" loading="eager" decoding="async"><b>飲食・食品</b><span class="hx-in__n">8業種</span></a></li><li><a class="hx-go" href="#c-beauty"><img src="assets/img/x-ind-beauty.webp" alt="" width="480" height="320" loading="eager" decoding="async"><b>美容・健康</b><span class="hx-in__n">8業種</span></a></li><li><a class="hx-go" href="#c-care"><img src="assets/img/x-ind-care.webp" alt="" width="480" height="320" loading="eager" decoding="async"><b>介護・福祉</b><span class="hx-in__n">6業種</span></a></li><li><a class="hx-go" href="#c-school"><img src="assets/img/x-ind-school.webp" alt="" width="480" height="320" loading="eager" decoding="async"><b>教室</b><span class="hx-in__n">8業種</span></a></li><li><a class="hx-go" href="#c-retail"><img src="assets/img/x-ind-retail.webp" alt="" width="480" height="320" loading="eager" decoding="async"><b>小売・工芸</b><span class="hx-in__n">8業種</span></a></li><li><a class="hx-go" href="#c-btob"><img src="assets/img/x-ind-btob.webp" alt="" width="480" height="320" loading="eager" decoding="async"><b>法人向け</b><span class="hx-in__n">9業種</span></a></li><li><a class="hx-go" href="#c-industry"><img src="assets/img/x-ind-industry.webp" alt="" width="480" height="320" loading="eager" decoding="async"><b>製造・技術</b><span class="hx-in__n">7業種</span></a></li><li><a class="hx-go" href="#c-culture"><img src="assets/img/x-ind-culture.webp" alt="" width="480" height="320" loading="eager" decoding="async"><b>宿泊・観光</b><span class="hx-in__n">8業種</span></a></li></ol><p class="hx-in__more">ほかに、医療・士業・建設・修理・クリエイターの5分類があります。</p></div>
     </div>
   </section>
 

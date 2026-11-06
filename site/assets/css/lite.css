@@ -1,0 +1,270 @@
+/* 明るい下層ページ（11/05 見本: Webサイトの考え方）。
+   TOPの黒い盤の形を借りず、生成りの面・色のある写真・色の番号で組む。ヘッダーとフッターは共通のまま。 */
+.pg-sub .breadcrumb,.pg-sub .crumbs{background:#f4efe6}
+.pg-sub .breadcrumb a,.pg-sub .breadcrumb li,.pg-sub .crumbs a,.pg-sub .crumbs li{color:var(--ink)}
+html .pg-sub .ah{background:linear-gradient(180deg,#f4efe6,#efe7da);color:var(--ink)}
+html .pg-sub .ah h1{color:var(--ink)}
+html .pg-sub .ah .ah__lead{color:var(--tx-2)}
+html .pg-sub .ah .eyebrow{color:var(--c4)}
+/* 入口2つ → 確かめる場所: 写真は加工なし、矢印で流れ */
+html .pg-sub .hx-wg__flow{gap:28px 14px;padding:0;background:none;border:0;box-shadow:none}
+html .pg-sub .hx-wg__in{border-radius:6px;box-shadow:0 10px 24px rgba(60,40,20,.14)}
+html .pg-sub .hx-wg__in img{filter:none}
+html .pg-sub .hx-wg__in::after{background:linear-gradient(to top,rgba(0,0,0,.7),rgba(0,0,0,0) 55%)}
+html .pg-sub .hx-wg__in:nth-child(1) .hx-wg__no{background:var(--c2)}html .pg-sub .hx-wg__in:nth-child(2) .hx-wg__no{background:var(--c3)}
+html .pg-sub .hx-wg__in .hx-wg__no{top:0;left:0;padding:6px 10px;color:#fff}
+html .pg-sub .hx-wg__web{border-radius:6px;background:var(--c4);box-shadow:0 10px 24px rgba(120,60,20,.22)}
+html .pg-sub .hx-wg__web::before{content:"";top:-24px;width:22px;height:18px;background:#5c4a38;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 12'%3E%3Cpath d='M0 5h13V1l5 5-5 5V7H0z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 12'%3E%3Cpath d='M0 5h13V1l5 5-5 5V7H0z'/%3E%3C/svg%3E") center/contain no-repeat;transform:translateX(-50%) rotate(90deg)}
+/* 区切りの見出し: 小さな36マスと黒い線をやめ、色の番号札と短い色線に */
+.pg-sub .opener__top::before{display:none}
+.pg-sub main>section:nth-of-type(4n+1){--acc:var(--c4)}.pg-sub main>section:nth-of-type(4n+2){--acc:var(--c1)}.pg-sub main>section:nth-of-type(4n+3){--acc:var(--c3)}.pg-sub main>section:nth-of-type(4n){--acc:var(--c2)}
+.pg-sub .opener__no{display:inline-grid;place-items:center;min-width:40px;height:40px;padding:0 8px;border-radius:50%;background:var(--acc);color:#fff;font-size:15px;letter-spacing:0}
+.pg-sub .opener__rule{width:64px;height:4px;background:var(--acc);margin:14px 0 14px}
+.pg-sub .sec-title{font-size:clamp(24px,2.3vw,32px)}
+/* 黒い面をやめ、色のごく薄い面に */
+.pg-sub .sec--ink{background:color-mix(in srgb,var(--c1) 7%,#fbf9f5);color:var(--ink)}
+.pg-sub .sec--ink :is(h2,h3,.sec-title,.sec-lead,p){color:var(--ink)}
+.pg-sub .sec--ink .opener__rule{background:var(--acc)}
+.pg-sub main>.sec--ink:last-of-type{background:var(--pk)}
+.pg-sub main>.sec--ink:last-of-type :is(h2,p){color:#fff}
+.pg-sub main>.sec--ink:last-of-type .btn--primary{background:#fff;border-color:#fff;color:#4a2a10}
+.pg-sub main>.sec--ink:last-of-type .btn--onink{border-color:#fff;color:#fff}
+.pg-sub main>.sec--ink:last-of-type .closing{border-top-color:rgba(255,255,255,.5)}
+.pg-sub .sec--paper2{background:#f6f1e8}
+/* すっきり見せる: 見出しを細く大きく、番号札は小さく、面の区切りは余白で */
+html .pg-sub .ah h1{font-weight:600;letter-spacing:.06em}
+.pg-sub .opener__no{min-width:30px;height:30px;font-size:13px}
+.pg-sub .opener__rule{width:40px;height:3px}
+.pg-sub .sec-title{font-weight:600;letter-spacing:.05em}
+.pg-sub .rd-trio__c,.pg-sub .rd-grow,.pg-sub .rd-key,.pg-sub .rd-more{border-radius:4px;overflow:hidden}
+.pg-sub .rd-scenes figure{border-radius:4px 4px 0 0}
+.pg-sub .rd-grow{overflow:visible}
+/* 全下層ページの最初の画面: 生成りの面に濃い文字（左の文字の列だけ）。右の図は暗いカードのまま */
+html body.pg-sub:not([data-page="plans"]):not([data-page="website-guide"]) :is(.ah,.ah.ah--type,.ah--product,.phead){background:linear-gradient(180deg,#f4efe6,#eee5d6) !important;color:var(--ink)}
+html body.pg-sub:not([data-page="plans"]):not([data-page="website-guide"]) :is(.hx__main,.ah__main,.wk-head__main,.phead__title,.phead__lead,.ah--utility .wrap,.ah__inner>div:first-child) :is(h1,dd,b,strong,a:not(.btn),li){color:var(--ink)}
+html body.pg-sub:not([data-page="plans"]):not([data-page="website-guide"]) :is(.hx__main,.ah__main,.wk-head__main,.ah--utility .wrap,.ah__inner>div:first-child) :is(.ah__lead,p,span:not(.blocker-inline):not(.btn *)){color:#4d463f}
+html body.pg-sub:not([data-page="plans"]):not([data-page="website-guide"]) .phead :is(.phead__title,.phead__title *){color:var(--ink)}html body.pg-sub:not([data-page="plans"]):not([data-page="website-guide"]) .phead .phead__lead{color:#4d463f}
+html body.pg-sub:not([data-page="plans"]):not([data-page="website-guide"]) :is(.hx__main,.ah__main,.wk-head__main,.phead,.ah--utility) :is(.eyebrow,.kicker,dt,.lbl){color:var(--c4)}
+html body.pg-sub:not([data-page="plans"]):not([data-page="website-guide"]) :is(.ah,.phead) :is(.ah__facts,.ah__facts2,.ah__meta,.ah__facts>div,.ah__facts2>div,.ah__meta>div,.ah__peek){border-color:#d8cdbd}
+html body.pg-sub:not([data-page="plans"]):not([data-page="website-guide"]) .ah .ah__peek{color:var(--ink)}
+html body.pg-sub:not([data-page="plans"]):not([data-page="website-guide"]) .hx-panel{box-shadow:0 18px 40px rgba(50,35,20,.22);border-radius:6px;overflow:hidden}
+html body.pg-sub:not([data-page="plans"]):not([data-page="website-guide"]) .hx__main .btn--onink{border-color:var(--ink);color:var(--ink)}
+.pg-sub .breadcrumb{border-bottom:0}
+
+/* 下層ページの最初の画面: ページごとの色の写真を右半分に敷き、図のカードを重ねる。左の面はページの色をうすく */
+body.pg-sub{--pk:var(--c4)}
+html body.pg-sub:not([data-page="plans"]):not([data-page="website-guide"]) :is(.ah,.phead){position:relative;isolation:isolate;background:color-mix(in srgb,var(--pk) 13%,#f7f2ea) !important}
+html body.pg-sub[data-hero]:not([data-page="plans"]):not([data-page="website-guide"]) :is(.ah,.phead)::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;right:0;width:50%;background:var(--hero) center/cover no-repeat}
+html body.pg-sub[data-hero]:not([data-page="plans"]):not([data-page="website-guide"]) :is(.ah,.phead)::after{content:"";position:absolute;z-index:-1;top:0;bottom:0;right:calc(50% - 1px);width:120px;background:linear-gradient(90deg,color-mix(in srgb,var(--pk) 13%,#f7f2ea),transparent);transform:translateX(100%)}
+html body.pg-sub[data-hero]:not([data-page="plans"]):not([data-page="website-guide"]) .hx-panel{box-shadow:0 24px 60px rgba(20,12,4,.38)}
+html body.pg-sub:not([data-page="plans"]):not([data-page="website-guide"]) :is(.hx__main,.ah__main,.wk-head__main) .eyebrow{display:inline-block;padding:4px 10px;background:var(--pk);color:#fff !important}
+html body.pg-sub:not([data-page="plans"]):not([data-page="website-guide"]) :is(.hx__main,.ah__main) h1{font-size:clamp(30px,3vw,42px) !important}
+@media (max-width:860px){html body.pg-sub[data-hero]:not([data-page="plans"]):not([data-page="website-guide"]) :is(.ah,.phead)::before{width:100%;height:220px;top:auto;bottom:0;opacity:1}html body.pg-sub[data-hero]:not([data-page="plans"]):not([data-page="website-guide"]) :is(.ah,.phead)::after{display:none}html body.pg-sub[data-hero]:not([data-page="plans"]):not([data-page="website-guide"]) :is(.ah,.phead){padding-bottom:150px}}
+body[data-page="services"]{--hero:url("../img/hero-services.webp")}body[data-page="services"]{--pk:var(--c1)}
+body[data-page="plans"]{--hero:url("../img/hero-plans.webp")}body[data-page="plans"]{--pk:var(--c4)}
+body[data-page="process"]{--hero:url("../img/hero-process.webp")}body[data-page="process"]{--pk:var(--c3)}
+body[data-page="management"]{--hero:url("../img/hero-management.webp")}body[data-page="management"]{--pk:var(--c1)}
+body[data-page="diagnosis"]{--hero:url("../img/hero-diagnosis.webp")}body[data-page="diagnosis"]{--pk:var(--c2)}
+body[data-page="diagnosis-guide"]{--hero:url("../img/hero-diagnosis-guide.webp")}body[data-page="diagnosis-guide"]{--pk:var(--c1)}
+body[data-page="types"]{--hero:url("../img/hero-types.webp")}body[data-page="types"]{--pk:var(--c2)}
+body[data-page="faq"]{--hero:url("../img/hero-faq.webp")}body[data-page="faq"]{--pk:var(--c4)}
+body[data-page="contact"]{--hero:url("../img/hero-contact.webp")}body[data-page="contact"]{--pk:var(--c3)}
+body[data-page="guide"]{--hero:url("../img/hero-guide.webp")}body[data-page="guide"]{--pk:var(--c4)}
+body[data-page="works"]{--hero:url("../img/hero-works.webp")}body[data-page="works"]{--pk:var(--c1)}
+html body.pg-sub[data-hero]:not([data-page="plans"]):not([data-page="website-guide"]) .ah.hx::before,html body.pg-sub[data-hero]:not([data-page="plans"]):not([data-page="website-guide"]) .ah.hx::after{content:"" !important}
+html body.pg-sub[data-hero]:not([data-page="plans"]):not([data-page="website-guide"]) .ah.hx::before{z-index:-1;inset:0 0 0 auto;width:50%;display:block;opacity:1;filter:none;background:var(--hero) center/cover no-repeat}
+html body.pg-sub[data-hero]:not([data-page="plans"]):not([data-page="website-guide"]) .ah.hx::after{display:block;inset:0 auto 0 auto;right:calc(50% - 1px);width:120px;aspect-ratio:auto;transform:translateX(100%);background:linear-gradient(90deg,color-mix(in srgb,var(--pk) 13%,#f7f2ea),transparent);filter:none}
+html body.pg-sub[data-hero]:not([data-page="plans"]):not([data-page="website-guide"]) .ah.hx .hx__inner{position:relative;z-index:1}
+@media (max-width:860px){html body.pg-sub[data-hero]:not([data-page="plans"]):not([data-page="website-guide"]) .ah.hx::before{inset:auto 0 0 0;width:100%;height:200px;aspect-ratio:auto}html body.pg-sub[data-hero]:not([data-page="plans"]):not([data-page="website-guide"]) .ah.hx::after{display:none}html body.pg-sub[data-hero]:not([data-page="plans"]):not([data-page="website-guide"]) .ah.hx{padding-bottom:130px}}
+html body.pg-sub[data-hero]:not([data-page="plans"]):not([data-page="website-guide"]) :is(.ah,.phead)::before,html body.pg-sub[data-hero]:not([data-page="plans"]):not([data-page="website-guide"]) :is(.ah,.phead)::after{-webkit-mask:none !important;mask:none !important}
+/* 料金の頭: 右の料金の事実は暗いカード、下の4つの範囲は濃い文字 */
+html body.pg-sub:not([data-page="plans"]):not([data-page="website-guide"]) .phead .pfacts{padding:18px 22px;background:#1c1a18;border-radius:6px;box-shadow:0 18px 40px rgba(50,35,20,.22)}
+html body.pg-sub:not([data-page="plans"]):not([data-page="website-guide"]) .phead .pfacts :is(dd,b,span){color:#fff}html body.pg-sub:not([data-page="plans"]):not([data-page="website-guide"]) .phead .pfacts span{color:#cfc8be}html body.pg-sub:not([data-page="plans"]):not([data-page="website-guide"]) .phead .pfacts dt{color:var(--c4i)}
+html body.pg-sub:not([data-page="plans"]):not([data-page="website-guide"]) .phead .pstacks :is(span,a){color:var(--ink)}html body.pg-sub:not([data-page="plans"]):not([data-page="website-guide"]) .phead .phead__peek{color:var(--ink)}
+html body.pg-sub:not([data-page="plans"]):not([data-page="website-guide"]) .phead .pstacks{border-color:#d8cdbd}
+/* 公開・管理の4つの確認: 明るい色のカード */
+.pg-sub .cycle__step,.pg-sub .cycle__step + .cycle__step{--sc:var(--c1);background:color-mix(in srgb,var(--sc) 9%,#fff);border:1px solid color-mix(in srgb,var(--sc) 35%,transparent);border-top:4px solid var(--sc);color:var(--ink)}
+.pg-sub .cycle__step:nth-child(2){--sc:var(--c3)}.pg-sub .cycle__step:nth-child(3){--sc:var(--c4)}.pg-sub .cycle__step:nth-child(4){--sc:var(--c2)}
+.pg-sub .cycle__step .n{color:var(--sc)}.pg-sub .cycle__step b{display:block;margin:8px 0 4px;color:var(--ink);font-size:16px}.pg-sub .cycle__step span:not(.n){color:var(--tx-2);font-size:14px}
+.pg-sub .cycle__step:not(:last-child)::after{color:#5c4a38;font-size:20px}
+.pg-sub .marker-list.rd-tiles li{--sc:var(--c1)}
+.pg-sub .marker-list.rd-tiles li:nth-child(4n+2){--sc:var(--c3)}.pg-sub .marker-list.rd-tiles li:nth-child(4n+3){--sc:var(--c4)}.pg-sub .marker-list.rd-tiles li:nth-child(4n){--sc:var(--c2)}
+.pg-sub .marker-list.rd-tiles li{background:var(--sc) !important;border-color:var(--sc) !important}
+.pg-sub .marker-list.rd-tiles li *{color:#fff !important}
+body[data-page="plans"]{--pk:var(--c1)}body[data-page="about"]{--pk:var(--c3)}body[data-page="website-guide"]{--pk:var(--c2)}
+body:has(.ah--area-tl){--pk:var(--c1)}body:has(.ah--area-tr){--pk:var(--c2)}body:has(.ah--area-bl){--pk:var(--c3)}body:has(.ah--area-br){--pk:var(--c4)}
+/* 36タイプ一覧: 領域ごとの色のカード。左上に6×6のどこにいるかの小さな盤 */
+#area-1{--ac:var(--c1)}#area-2{--ac:var(--c2)}#area-3{--ac:var(--c3)}#area-4{--ac:var(--c4)}
+.pg-sub [id^="area-"] .idx-head__no{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--ac);color:#fff;font-size:15px}
+.pg-sub [id^="area-"] .idx-head h2{color:var(--ac)}
+.pg-sub .tp-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;border:0}
+.pg-sub .tp-list li{border:0}
+.pg-sub .tp-list a{position:relative;display:grid;grid-template-columns:auto 1fr;grid-template-areas:"map id" "map name" "s s";gap:2px 14px;height:100%;padding:16px 18px;background:color-mix(in srgb,var(--ac) 8%,#fff);border:1px solid color-mix(in srgb,var(--ac) 30%,transparent);border-top:4px solid var(--ac);border-radius:4px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.pg-sub .tp-list a:hover,.pg-sub .tp-list a:focus-visible{transform:translateY(-2px);box-shadow:0 10px 24px rgba(40,30,20,.14)}
+.tp-list__map{grid-area:map;width:42px;height:42px;background:linear-gradient(var(--ac),var(--ac)) calc(var(--c) * 20%) calc(var(--r) * 20%) / calc(100% / 6) calc(100% / 6) no-repeat,repeating-linear-gradient(90deg,transparent 0 6px,#fff 6px 7px),repeating-linear-gradient(0deg,transparent 0 6px,#fff 6px 7px),color-mix(in srgb,var(--ac) 18%,#fff)}
+.pg-sub .tp-list__id{grid-area:id;color:var(--ac);font:700 14px/1.2 var(--mono)}
+.pg-sub .tp-list b{grid-area:name;font:700 17px/1.4 var(--serif);color:var(--ink)}
+.pg-sub .tp-list__s{grid-area:s;margin-top:8px;font-size:13.5px;line-height:1.7;color:var(--tx-2)}
+@media (max-width:900px){.pg-sub .tp-list{grid-template-columns:1fr 1fr}}@media (max-width:560px){.pg-sub .tp-list{grid-template-columns:1fr}}
+.pg-sub .tp-list a,.pg-sub .tp-list a *{text-decoration:none !important;background-image:none}.pg-sub .tp-list{background:none}
+/* FAQ: カテゴリごとに色。質問は Q の札つきのカード、開くと A の札 */
+.faq-group{--ac:var(--c1)}#faq-1{--ac:var(--c3)}#faq-2{--ac:var(--c4)}#faq-3{--ac:var(--c2)}#faq-4{--ac:#6b5a46}
+.pg-sub .faq-group__title{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--ac);color:#fff;border:0;border-radius:4px 4px 0 0}
+.pg-sub .faq-group__title *{color:#fff !important}.pg-sub .faq-group__no{font-family:var(--mono);opacity:.8}.pg-sub .faq-group__en{margin-left:auto;opacity:.7}
+.pg-sub .faq-group{margin-bottom:28px}
+.pg-sub .faq-item{background:#fff;border:1px solid color-mix(in srgb,var(--ac) 25%,transparent);border-top:0}
+.pg-sub .faq-item>summary{position:relative;padding:14px 48px 14px 52px;font-weight:700}
+.pg-sub .faq-item>summary::before{content:"Q";position:absolute;left:14px;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:color-mix(in srgb,var(--ac) 14%,#fff);color:var(--ac);font:700 14px/1 var(--mono)}
+.pg-sub .faq-item[open]>summary{background:color-mix(in srgb,var(--ac) 7%,#fff)}
+.pg-sub .faq-item .faq-body{position:relative;padding:12px 18px 16px 52px;color:var(--tx-2)}
+.pg-sub .faq-item .faq-body::before{content:"A";position:absolute;left:14px;top:12px;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--ac);color:#fff;font:700 14px/1 var(--mono)}
+.pg-sub nav[aria-label="よくある質問のカテゴリ"]{position:sticky;top:96px;align-self:start}
+.pg-sub nav[aria-label="よくある質問のカテゴリ"] .faq-group__title{background:#3a332c}
+.pg-sub nav[aria-label="よくある質問のカテゴリ"] li{--ac:var(--c1);border:0;padding:0;margin:0 0 6px}
+.pg-sub nav[aria-label="よくある質問のカテゴリ"] li:nth-child(2){--ac:var(--c3)}.pg-sub nav[aria-label="よくある質問のカテゴリ"] li:nth-child(3){--ac:var(--c4)}.pg-sub nav[aria-label="よくある質問のカテゴリ"] li:nth-child(4){--ac:var(--c2)}.pg-sub nav[aria-label="よくある質問のカテゴリ"] li:nth-child(5){--ac:#6b5a46}
+.pg-sub nav[aria-label="よくある質問のカテゴリ"] li::before{display:none}
+.pg-sub nav[aria-label="よくある質問のカテゴリ"] a{display:flex;align-items:center;min-height:46px;padding:8px 14px;border-left:5px solid var(--ac);background:color-mix(in srgb,var(--ac) 8%,#fff);color:var(--ink);text-decoration:none;font-weight:700}
+.pg-sub nav[aria-label="よくある質問のカテゴリ"] a:hover{background:color-mix(in srgb,var(--ac) 16%,#fff)}
+/* このサイトについて: 3つの疑問は色のカード、約束する・しないは左右の面 */
+.rd-qa{gap:14px;border:0}
+.rd-qa .qa-grid__item{--ac:var(--c1);padding:20px 22px !important;background:#fff;border:1px solid color-mix(in srgb,var(--ac) 30%,transparent) !important;border-top:4px solid var(--ac) !important;border-radius:4px}
+.rd-qa .qa-grid__item:nth-child(2){--ac:var(--c3)}.rd-qa .qa-grid__item:nth-child(3){--ac:var(--c4)}
+.rd-qa h3{display:flex;gap:10px;align-items:flex-start;color:var(--ac) !important}
+.rd-qa h3::before{content:"?";flex:none;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--ac);color:#fff;font:700 15px/1 var(--mono)}
+.rd-qa p{font-size:14px;line-height:1.8}
+.rd-split{gap:14px}
+.rd-split>div{padding:20px 22px;border-radius:4px}
+.rd-split>div:first-child{background:color-mix(in srgb,var(--c3) 9%,#fff);border:1px solid color-mix(in srgb,var(--c3) 35%,transparent);border-top:4px solid var(--c3)}
+.rd-split>div:last-child{background:repeating-linear-gradient(45deg,#f6f2ec 0 8px,#f0e9df 8px 16px);border:1px dashed #a89b8c;border-top:4px solid #8a8178}
+.rd-split .plan-entry__cap{color:var(--c3);font-weight:700}.rd-split>div:last-child .plan-entry__cap{color:#6f665d}
+.pg-sub .numbered.rd-cards>li{--ac:var(--c1);border-top:4px solid var(--ac) !important;background:color-mix(in srgb,var(--ac) 6%,#fff) !important;border-radius:4px}
+.pg-sub .numbered.rd-cards>li:nth-child(4n+2){--ac:var(--c3)}.pg-sub .numbered.rd-cards>li:nth-child(4n+3){--ac:var(--c4)}.pg-sub .numbered.rd-cards>li:nth-child(4n){--ac:var(--c2)}
+.pg-sub .numbered.rd-cards>li::before{color:var(--ac) !important}
+.pg-sub .numbered.rd-cards>li:first-child{background:var(--pk) !important;border-color:var(--pk) !important}
+.pg-sub .numbered.rd-cards>li:first-child *,.pg-sub .numbered.rd-cards>li:first-child::before{color:#fff !important}
+
+/* ガイド記事: 頭に色の写真、要点は色の枠、章は色の番号、チェックリストは色の札 */
+.pg-sub .article__head{position:relative;max-width:none;margin:0;padding:36px 0 40px;min-height:320px;border-bottom:0;background:color-mix(in srgb,var(--pk) 12%,#f7f2ea);box-shadow:0 0 0 100vmax color-mix(in srgb,var(--pk) 12%,#f7f2ea);clip-path:inset(0 -100vmax)}
+.pg-sub .article__head>*{max-width:min(100%,600px)}
+.pg-sub .article__head::after{content:"";position:absolute;top:24px;bottom:24px;right:0;width:min(42%,540px);background:var(--hero) center/cover no-repeat;border-radius:6px;box-shadow:0 18px 40px rgba(40,25,10,.25)}
+.pg-sub .article__head .eyebrow{display:inline-block;padding:4px 10px;background:var(--pk);color:#fff}
+.pg-sub .article__head .ah__en{color:var(--pk)}
+.pg-sub.article,.pg-sub .article{padding-top:0}
+@media (max-width:860px){.pg-sub .article__head{padding-bottom:240px}.pg-sub .article__head::after{top:auto;bottom:20px;height:200px;width:100%}}
+.pg-sub .article__points{background:color-mix(in srgb,var(--pk) 9%,#fff) !important;border:0 !important;border-left:5px solid var(--pk) !important;border-radius:4px}
+.pg-sub .article__points b{color:var(--pk)}
+.pg-sub .article__main{counter-reset:asec}
+.pg-sub .article__sec{--ac:var(--c1)}
+.pg-sub .article__sec:nth-of-type(4n+2){--ac:var(--c3)}.pg-sub .article__sec:nth-of-type(4n+3){--ac:var(--c4)}.pg-sub .article__sec:nth-of-type(4n){--ac:var(--c2)}
+.pg-sub .article__sec h2{padding:10px 0 10px 16px;border-top:0 !important;border-left:5px solid var(--ac);background:linear-gradient(90deg,color-mix(in srgb,var(--ac) 10%,transparent),transparent 70%);color:var(--ink)}
+.pg-sub .article__sec>p:first-of-type{font-size:16px;color:var(--ink);font-weight:500}
+.pg-sub .toc li{--ac:var(--c1)}.pg-sub .toc li:nth-child(4n+2){--ac:var(--c3)}.pg-sub .toc li:nth-child(4n+3){--ac:var(--c4)}.pg-sub .toc li:nth-child(4n){--ac:var(--c2)}
+.pg-sub .toc a{display:block;padding:6px 10px;border-left:3px solid var(--ac);text-decoration:none}
+.pg-sub .toc a:hover{background:color-mix(in srgb,var(--ac) 10%,#fff)}
+.pg-sub .checklist{display:grid;grid-template-columns:1fr 1fr;gap:8px;border:0}
+.pg-sub .checklist li{padding:10px 14px 10px 40px !important;background:color-mix(in srgb,var(--c3) 8%,#fff);border:1px solid color-mix(in srgb,var(--c3) 30%,transparent) !important;border-radius:4px}
+@media (max-width:640px){.pg-sub .checklist{grid-template-columns:1fr}}
+/* 規約類: 条ごとに色の見出し帯、目次は札 */
+:is(body[data-page="terms"],body[data-page="privacy"],body[data-page="commercial"]) main h2[id^="sec-"]{padding:10px 14px;border-top:0 !important;border-left:5px solid var(--c1);background:color-mix(in srgb,var(--c1) 8%,#fff);border-radius:0 4px 4px 0}
+body[data-page="guide-first-decisions"]{--hero:url("../img/hero-guide-first-decisions.webp");--pk:var(--c1)}
+body[data-page="guide-sns-vs-website"]{--hero:url("../img/hero-guide-sns-vs-website.webp");--pk:var(--c3)}
+body[data-page="guide-basic-seo"]{--hero:url("../img/hero-guide-basic-seo.webp");--pk:var(--c2)}
+.pg-sub .toc a{text-decoration:none !important;color:var(--ink)}
+/* 料金ページの頭は、以前の黒いままにする（11/05 オーナー判断） */
+html body:is([data-page="plans"],[data-page="website-guide"]) .breadcrumb{background:#000}html body:is([data-page="plans"],[data-page="website-guide"]) .breadcrumb :is(a,li){color:var(--on-ink)}
+/* 11/05 全体を少しコンパクトに: 区切りの上下、見出し、カードの内側を詰める */
+.pg-sub main>:is(section,article).sec{padding-block:36px}
+.pg-sub main>.sec--ink:last-of-type{padding-block:32px}
+.pg-sub .opener{margin-bottom:18px}.pg-sub .opener__rule{margin:10px 0 10px}
+.pg-sub .sec-title{font-size:clamp(22px,2vw,28px) !important}
+html body.pg-sub:not([data-page="plans"]):not([data-page="website-guide"]) :is(.hx__main,.ah__main) h1{font-size:clamp(28px,2.6vw,36px) !important}
+html body.pg-sub:not([data-page="plans"]):not([data-page="website-guide"]) .hx__inner{padding-block:28px 32px}
+.pg-sub :is(.rd-trio,.rd-scenes,.rd-seven,.rd-st5,.rd-modes,.rd-compass,.rd-icons,.rd-links,.rd-steps,.tp-list,.grid--4,.scope,.form-choice){margin-top:20px}
+.pg-sub :is(.spec-card,.rd-arm,.rd-st5 li,.rd-mode,.cycle__step,.form-choice__item,.rd-qa .qa-grid__item){padding:14px 16px !important}
+.pg-sub .rd-trio__c h3{margin:12px 16px 8px}.pg-sub .rd-trio__c p{margin:0 16px 10px}
+.pg-sub .rd-compass{gap:16px 32px}
+@media (max-width:860px){.pg-sub main>:is(section,article).sec{padding-block:28px}}
+/* 11/05 位置ずれ修正：写真は右の列（黒い盤）の後ろに額のように敷き、盤をその中央に置く */
+@media (min-width:961px){
+html body.pg-sub[data-hero]:not([data-page="plans"]):not([data-page="website-guide"]) .ah.hx::before,html body.pg-sub[data-hero]:not([data-page="plans"]):not([data-page="website-guide"]) .ah.hx::after{content:none !important;display:none !important}
+html body.pg-sub[data-hero]:not([data-page="plans"]):not([data-page="website-guide"]) .ah.hx .hx__inner{align-items:start}
+html body.pg-sub[data-hero]:not([data-page="plans"]):not([data-page="website-guide"]) .ah.hx .hx__inner::before{content:"";position:absolute;z-index:-1;grid-column:2;grid-row:1;top:0;left:56px;right:-24px;height:250px;border-radius:10px;background:var(--hero) var(--hp,center)/cover no-repeat;box-shadow:0 18px 40px rgba(40,25,10,.20)}
+html body.pg-sub[data-hero]:not([data-page="plans"]):not([data-page="website-guide"]) .ah.hx .hx__inner>:not(.hx__main){position:relative;margin-top:170px;margin-right:24px}
+html body.pg-sub[data-hero]:not([data-page="plans"]):not([data-page="website-guide"]) .ah.hx .hx__main{align-self:center}
+}
+@media (max-width:960px) and (min-width:861px){html body.pg-sub[data-hero]:not([data-page="plans"]):not([data-page="website-guide"]) .ah.hx::before{inset:auto 0 0 0;width:100%;height:200px}html body.pg-sub[data-hero]:not([data-page="plans"]):not([data-page="website-guide"]) .ah.hx::after{display:none}html body.pg-sub[data-hero]:not([data-page="plans"]):not([data-page="website-guide"]) .ah.hx{padding-bottom:130px}}
+/* 16問と48問：明るい札（16）と深い藍の札（48）。マスは1行16個で、16＝1行・48＝3行と量の差が一目で分かる */
+html body.pg-sub .rd-modes{grid-template-columns:1fr 1fr;gap:18px}
+html body.pg-sub .rd-mode{border:0 !important;border-radius:8px;padding:22px 24px !important;box-shadow:0 10px 26px rgba(40,25,10,.12)}
+html body.pg-sub .rd-mode:first-child{background:#fff;color:var(--ink);border-left:6px solid var(--c3) !important}
+html body.pg-sub .rd-mode:last-child{background:#1f3f5c;color:#fff}
+html body.pg-sub .rd-mode:first-child{--sc:var(--c3) !important}html body.pg-sub .rd-mode:last-child{--sc:#9cc3e6 !important}html body.pg-sub .rd-mode h3{font-size:20px !important;margin:6px 0 12px}
+html body.pg-sub .rd-mode .rd-mode__n{color:inherit !important}
+html body.pg-sub .rd-mode .rd-mode__n b{color:var(--sc) !important;font-size:60px}
+html body.pg-sub .rd-mode .rd-mode__n span{color:var(--sc) !important;border-color:currentColor;border-radius:999px;padding:4px 12px}
+html body.pg-sub .rd-mode:first-child :is(h3,p:last-child){color:var(--ink) !important}
+html body.pg-sub .rd-mode:last-child :is(h3,p:last-child){color:#fff !important}
+html body.pg-sub .rd-mode p:last-child{font-size:15px;opacity:.92}
+html body.pg-sub .rd-mode .rd-mode__sq{display:grid;grid-template-columns:repeat(16,1fr);gap:4px;max-width:420px;min-height:60px;align-content:start}
+html body.pg-sub .rd-mode .rd-mode__sq i{width:auto;aspect-ratio:1;height:auto;border-radius:2px}
+@media (max-width:760px){html body.pg-sub .rd-modes{grid-template-columns:1fr}}
+/* 緑が強すぎる（11/05）：下層ページだけ苔色をくすませる。TOPの盤の色は変えない */
+body.pg-sub{--c3:#5d6f52;--c3i:#c2cdb4}
+/* 最後の誘導帯が目立ちすぎ（11/05）：濃い色の面をやめ、ごく薄い色の面＋上の色線にする */
+html body.pg-sub main>.sec--ink:last-of-type{background:color-mix(in srgb,var(--pk) 7%,#f7f3ec) !important;border-top:3px solid color-mix(in srgb,var(--pk) 70%,#fff)}
+html body.pg-sub main>.sec--ink:last-of-type :is(h2,p,.sec-title,.sec-lead){color:var(--ink) !important}
+html body.pg-sub main>.sec--ink:last-of-type .closing{border-top-color:transparent}
+html body.pg-sub main>.sec--ink:last-of-type .btn--primary{background:var(--blue);border-color:var(--blue);color:#fff}
+html body.pg-sub main>.sec--ink:last-of-type :is(.btn--onink,.btn--secondary){border-color:var(--ink);color:var(--ink)}
+html body.pg-sub main>.sec--ink:last-of-type :is(.btn--onink,.btn--secondary):hover{background:var(--ink);color:#fff}
+html body.pg-sub .rd-seven__cta a,html body.pg-sub .rd-seven__cta a *{color:#fff !important}
+/* 四つの方向の図：配置はそのまま。白い札＋細い線と点でつなぐ（気に入られた役割図と同じ線の言葉）、中央の盤は立体に */
+html body.pg-sub .rd-compass{gap:30px 44px;padding:28px;border-radius:12px;background:radial-gradient(circle at 50% 50%,#fff 0,#fbf8f3 45%,#f1ebe1 100%)}
+html body.pg-sub .rd-arm{background:#fff;border:0;border-radius:8px;box-shadow:0 1px 0 rgba(0,0,0,.04),0 12px 28px rgba(40,25,10,.10);padding:16px 18px 16px 22px !important}
+html body.pg-sub .rd-arm::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:4px;border-radius:0 3px 3px 0;background:var(--sc)}
+html body.pg-sub .rd-arm__tag{border-radius:999px;padding:3px 12px;font-size:13px;letter-spacing:.04em}
+html body.pg-sub .rd-arm h3{font-size:20px !important;margin:10px 0 4px}
+html body.pg-sub .rd-arm .ic{width:34px;height:34px;opacity:.9}
+html body.pg-sub .rd-arm::after{border:0;background:var(--sc);border-radius:2px}
+html body.pg-sub .rd-arm--top::after{width:2px;height:26px;bottom:-26px;top:auto;margin-left:-1px}
+html body.pg-sub .rd-arm--bottom::after{width:2px;height:26px;top:-26px;margin-left:-1px}
+html body.pg-sub .rd-arm--left::after{height:2px;width:44px;right:-44px;margin-top:-1px;background:linear-gradient(90deg,var(--sc) 0 calc(100% - 8px),transparent 0),radial-gradient(circle at calc(100% - 4px) 50%,var(--sc) 3.5px,transparent 4px);height:8px;margin-top:-4px;background-size:100% 2px,100% 100%;background-repeat:no-repeat;background-position:0 50%,0 0;background-color:transparent}
+html body.pg-sub .rd-arm--right::after{height:8px;width:44px;left:-44px;margin-top:-4px;background:linear-gradient(90deg,transparent 8px,var(--sc) 0) 0 50%/100% 2px no-repeat,radial-gradient(circle at 4px 50%,var(--sc) 3.5px,transparent 4px);background-color:transparent}
+html body.pg-sub .rd-compass__core{border-radius:10px;padding:12px;gap:4px;background:#1b1917;transform:perspective(900px) rotateX(14deg) rotateZ(-4deg);box-shadow:0 28px 40px -12px rgba(30,18,6,.45),0 2px 0 #3a3631 inset}
+html body.pg-sub .rd-compass__core i{border-radius:3px;background-image:linear-gradient(160deg,rgba(255,255,255,.18),rgba(0,0,0,.12))}
+html body.pg-sub .rd-compass__core b{border-radius:999px;padding:6px 14px;background:#fff;color:#1b1917;font-size:17px;box-shadow:0 6px 14px rgba(0,0,0,.35)}
+@media (prefers-reduced-motion:no-preference){html body.pg-sub .rd-compass__core{transition:transform .5s ease}html body.pg-sub .rd-compass:hover .rd-compass__core{transform:perspective(900px) rotateX(8deg) rotateZ(-3deg)}}
+@media (max-width:760px){html body.pg-sub .rd-compass{padding:16px}html body.pg-sub .rd-arm::after{display:none}html body.pg-sub .rd-compass__core{transform:perspective(700px) rotateX(14deg) rotateZ(-6deg)}}
+/* 見本サイト：盤を黒い札にのせ、写真は右上の帯に（他の下層と同じ組み方） */
+@media (min-width:961px){
+html body.pg-sub[data-hero][data-page="works"] :is(.ah,.phead,.wk-head)::before,html body.pg-sub[data-hero][data-page="works"] :is(.ah,.phead,.wk-head)::after{content:none !important;display:none !important}
+html body.pg-sub[data-page="works"] .wk-head__inner{position:relative;z-index:1;align-items:start}
+html body.pg-sub[data-page="works"] .wk-head__inner::before{content:"";position:absolute;z-index:-1;grid-column:2;grid-row:1;top:0;left:56px;right:-24px;height:250px;border-radius:10px;background:var(--hero) center/cover no-repeat;box-shadow:0 18px 40px rgba(40,25,10,.20)}
+html body.pg-sub[data-page="works"] .wk-head__main{align-self:center}
+}
+html body.pg-sub[data-page="works"] .wk-map{position:relative;padding:20px 22px 14px;background:#141312;border-radius:6px;box-shadow:0 24px 60px rgba(20,12,4,.38)}
+@media (min-width:961px){html body.pg-sub[data-page="works"] .wk-map{margin:170px 24px 0 0}}
+html body.pg-sub[data-page="works"] .wk-map__box{padding:28px 30px}
+html body.pg-sub[data-page="works"] .wk-cell--none{background:#24384b}
+html body.pg-sub[data-page="works"] .wk-map__field>.wk-cell--none:nth-child(-n+18):is(:nth-child(6n+4),:nth-child(6n+5),:nth-child(6n)){background:#3d2c40}
+html body.pg-sub[data-page="works"] .wk-map__field>.wk-cell--none:nth-child(n+19):is(:nth-child(6n+1),:nth-child(6n+2),:nth-child(6n+3)){background:#2f3a2b}
+html body.pg-sub[data-page="works"] .wk-map__field>.wk-cell--none:nth-child(n+19):is(:nth-child(6n+4),:nth-child(6n+5),:nth-child(6n)){background:#4a2f1d}
+html body.pg-sub[data-page="works"] .wk-cell--none b{color:#cfc5b8}
+/* 制作の流れ：縦一列をやめ、段階ごとに1行。左に段階の札、右に手順を横に並べ、矢印でつなぐ（PCのみ） */
+@media (min-width:1000px){
+html body.pg-sub .timeline.timeline--wide{display:grid;grid-template-columns:220px repeat(6,minmax(0,1fr));gap:14px 22px;align-items:stretch}
+html body.pg-sub .timeline--wide>.tl-phase{grid-column:1;margin:0 !important;display:flex;flex-direction:column;justify-content:center;gap:6px;padding:16px 18px;border-left-width:6px;border-radius:0 6px 6px 0}
+html body.pg-sub .timeline--wide>.tl-phase .tl-phase__ja{font-size:20px}
+html body.pg-sub .timeline--wide>li:not(.tl-phase){grid-column:span 3;margin:0 !important;padding:16px 18px !important;border-radius:6px;box-shadow:0 6px 16px rgba(40,25,10,.06)}
+html body.pg-sub .timeline--wide>li:nth-child(-n+4):not(.tl-phase){grid-column:span 2}
+html body.pg-sub .timeline--wide>li:not(.tl-phase)::before{left:18px;top:16px;width:36px;height:36px;font-size:14px;border-radius:50%}
+html body.pg-sub .timeline--wide>li:not(.tl-phase) h3{display:flex;align-items:center;min-height:36px;padding-left:48px;margin:0 0 8px}
+html body.pg-sub .timeline--wide>li:not(.tl-phase)>div{display:flex;flex-direction:column}
+html body.pg-sub .timeline--wide .caption{margin-bottom:12px !important;font-size:14px;line-height:1.7}
+html body.pg-sub .timeline--wide .timeline__roles{margin-top:auto}
+html body.pg-sub .timeline--wide .timeline__role{grid-template-columns:6.5em 1fr;padding:6px 10px;font-size:14px}
+/* 次の手順への矢印（行の最後には付けない） */
+html body.pg-sub .timeline--wide>li:not(.tl-phase)::after{left:auto;right:-19px;top:50%;bottom:auto;width:16px;height:16px;margin-top:-8px;background:var(--pc);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2 8h10M8 3l5 5-5 5' fill='none' stroke='%23000' stroke-width='2.2'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2 8h10M8 3l5 5-5 5' fill='none' stroke='%23000' stroke-width='2.2'/%3E%3C/svg%3E") center/contain no-repeat}
+html body.pg-sub .timeline--wide>li:is(:nth-child(4),:nth-child(7),:nth-child(10),:nth-child(13))::after{display:none}
+}
+@media (min-width:1000px){html body.pg-sub .timeline--wide>.tl-phase .tl-phase__ja{font-size:19px;white-space:nowrap}html body.pg-sub .timeline--wide .tl-phase__note{font-size:13px;text-wrap:balance}}

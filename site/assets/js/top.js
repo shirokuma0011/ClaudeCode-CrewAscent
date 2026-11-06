@@ -336,7 +336,7 @@
 
   /* ---------------- 8. モバイル固定CTA ---------------- */
   function mobileCta() {
-    var bar = $('.mcta'), hero = $('.hero'), ftr = $('.ftr');
+    var bar = $('.mcta'), hero = $('.hero, .atl-room, .ah'), ftr = $('.ftr');
     if (!bar) return;
 
     /* フッターに達したかは IntersectionObserver に任せる。
@@ -618,14 +618,75 @@
     else window.addEventListener('load', start);
   }
 
+  /* ---------------- 12. 相談の帯の動画（見えている間だけ再生。動きを減らす設定では静止画のまま） ---------------- */
+  function ctaVideo() {
+    var v = $('[data-cta-video]');
+    if (!v || reduce || !('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          if (v.preload === 'none') v.preload = 'auto';
+          var p = v.play();
+          if (p && p.then) p.then(function () { v.classList.add('is-playing'); }).catch(function () {});
+        } else { v.pause(); }
+      });
+    }, { rootMargin: '200px 0px' });
+    io.observe(v);
+  }
+
+  /* ---------------- 13. 立体の36マス（見えている間だけ浮き沈み。スクロールで面の傾きが変わる） ---------------- */
+  function float36() {
+    var els = $$('[data-float36]');
+    if (!els.length) return;
+    if (!reduce && 'IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { en.target.classList.toggle('is-run', en.isIntersecting); });
+      }, { rootMargin: '100px 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    }
+    if (reduce) return;
+    var ticking = false;
+    function update() {
+      ticking = false;
+      var vh = window.innerHeight;
+      els.forEach(function (el) {
+        var r = el.parentElement.getBoundingClientRect();
+        if (r.bottom < -200 || r.top > vh + 200) return;
+        var p = 1 - (r.top + r.height / 2) / (vh + r.height);
+        el.style.setProperty('--p', Math.max(0, Math.min(1, p)).toFixed(3));
+      });
+    }
+    window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    update();
+  }
+
+  /* ---------------- 14. 制作の流れ: 読んでいる段階をタイルの列に灯す ---------------- */
+  function stepRail() {
+    var rail = $('[data-steprail]');
+    if (!rail || !('IntersectionObserver' in window)) return;
+    var items = $$('li', rail);
+    var steps = items.map(function (li) { return document.querySelector(li.querySelector('a').getAttribute('href')); });
+    function mark(idx) {
+      items.forEach(function (li, i) { li.classList.toggle('is-done', i < idx); li.classList.toggle('is-now', i === idx); });
+    }
+    mark(0);
+    var io = new IntersectionObserver(function () {
+      var line = window.innerHeight * 0.45, cur = 0;
+      steps.forEach(function (st, i) { if (st && st.getBoundingClientRect().top < line) cur = i; });
+      mark(cur);
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+    steps.forEach(function (st) { if (st) io.observe(st); });
+  }
+
   function year() { $$('[data-year]').forEach(function (el) { el.textContent = String(new Date().getFullYear()); }); }
 
   /* 結果ページのように、あとからJSで組み立てる節にも効かせるため外へ出す */
   window.CREW_REVEAL = function () { reveal(); };
+  window.CREW_FLOAT36 = function () { float36(); };
 
   function init() {
     header(); mega(); drawer(); tabs(); typeMap(); miniQuiz(); reveal();
-    heroCross(); heroIn(); chapterIndex(); countUp(); mobileCta(); year();
+    heroCross(); heroIn(); chapterIndex(); countUp(); mobileCta(); ctaVideo(); float36(); stepRail(); year();
     predecodeImages();   /* ← 呼び出しが抜けていた。画像の展開がスクロール中に走っていた原因 */
   }
 

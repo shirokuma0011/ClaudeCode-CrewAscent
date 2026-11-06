@@ -11,5 +11,4 @@
 User-agent: *
 Allow: /
 
-# 公開前に実ドメインへ差し替える(PUBLISH-BLOCKER: 公開ドメイン)
-# Sitemap: https://[DOMAIN]/sitemap.xml
+Sitemap: https://crewascent.com/sitemap.xml

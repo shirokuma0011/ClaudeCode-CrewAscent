@@ -58,7 +58,7 @@ if (new Set(heroColors).size !== heroColors.length) problems.push('地の色が�
 
 /* ---------- プランの範囲（site/plans.html の比較表から転記） ---------- */
 const plansHtml = read(path.join(SITE, 'plans.html'));
-const table = (plansHtml.match(/<table class="plan-table">[\s\S]*?<\/table>/) || [])[0] || '';
+const table = (plansHtml.match(/<table class="(?:plan-table|ptable)">[\s\S]*?<\/table>/) || [])[0] || '';
 const strip = (h) => h.replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
 const ROWS = {};
 for (const tr of table.match(/<tr[\s\S]*?<\/tr>/g) || []) {

@@ -167,7 +167,10 @@ function page(t) {
 
   /* 60秒の見本。X軸の方式ごとに操作の種類そのものが変わる */
   S.specimen = (no) => sec(no, '60秒で試せる、この方式の見本', ov.specimen,
-    buildSpecimen(t, specimenFor(t, ov)), 'sec--paper2');
+    buildSpecimen(t, specimenFor(t, ov)) +
+    /* このタイプで作った見本サイト。data/works.json に見本があるときだけ works.js が出す */
+    `\n      <div class="wk-strip" data-works-type="${t.id}" data-works-near="${near.map((n) => n.id).join(',')}" hidden></div>`,
+    'sec--paper2');
 
   S.blueprint = (no) => sec(no, 'サイト設計のたたき台', d.recommendedPurpose,
     dl([['想定する訪問者', d.targetVisitor],
@@ -281,6 +284,8 @@ function page(t) {
     AFTER_DESC.replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${esc(title)}">`)
               .replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${esc(desc)}">`) +
     `<script defer src="assets/js/type-specimen.js?v=20260825"></script>\n` +
+    `<link rel="stylesheet" href="assets/css/works.css?v=20261105b">\n` +
+    `<script defer src="assets/js/works.js?v=20261105b"></script>\n` +
     `<script type="application/ld+json">${jsonld}</script>\n</head>\n` +
     `<body data-page="type" data-archetype="product" data-x="${t.xIndex + 1}" data-y="${t.yIndex + 1}"` +
     ` class="pg pg--product pg-sub pg-type x${t.xIndex + 1} y${t.yIndex + 1}">\n\n` + HEADER +
@@ -293,9 +298,9 @@ function page(t) {
     `<h1>${esc(t.name)}</h1><p class="ah__lead">${esc(t.oneLiner)}</p>` +
     `<p class="ah__facts2"><span><b>情報の組み方</b>${esc(spec.xFamily || '')}</span>` +
     `<span><b>見せ方</b>${esc(spec.yModifier || '')}</span>` +
-    `<span><b>座標</b>横${t.xIndex + 1} / 縦${t.yIndex + 1}</span></p>` +
+    `<span><b>36マスの位置</b>左から${t.xIndex + 1}・下から${t.yIndex + 1}</span></p>` +
     `<p class="ah__meta">この診断はWebサイトで何を先にするかの整理です。性格・能力・適性・成果を測るものではありません。</p>` +
-    `</div></div>\n    </section>\n` + body + closing + `\n\n  </main>\n  ` + FOOTER;
+    `</div></div>\n` + typeField(t) + `\n    </section>\n` + body + closing + `\n\n  </main>\n  ` + FOOTER;
 }
 
 /* 一覧ページ用のマップ。36マスすべてがリンク。名前も出して、番号だけに頼らない */
@@ -314,15 +319,24 @@ function map6All() {
     + `<p class="tp-map__ax tp-map__ax--x" aria-hidden="true"><span>← 実用・情報</span><span>ブランド・魅力 →</span></p></div>`;
 }
 
+/* 一覧の最初の画面は types.html にある手組みの形（4つの領域パネル）をそのまま使う */
+const HUB_HEAD = (() => {
+  const cur = fs.readFileSync(path.join(ROOT, 'types.html'), 'utf8');
+  const m = cur.match(/  <section class="ah ah--editorial hx hx-ty">[\s\S]*?\n    <\/section>\n/);
+  if (!m) throw new Error('types.html の最初の画面が見つかりません');
+  return m[0];
+})();
+
 /* --- 一覧ページ --- */
 function hub() {
   const groups = [['area-tl', '実用・情報 × 先進・新しさ'], ['area-tr', 'ブランド・魅力 × 先進・新しさ'],
                   ['area-bl', '実用・情報 × 王道・安心'], ['area-br', 'ブランド・魅力 × 王道・安心']];
-  const body = groups.map(([k, label], i) => sec(String(i + 1).padStart(2, '0'), label, null,
+  const body = groups.map(([k, label], i) => (CURRENT = { id: `area-${i + 1}` }, sec(String(i + 1).padStart(2, '0'), label, null,
     `<ul class="tp-list">${TYPES.filter((t) => areaClass(t.xIndex, t.yIndex) === k)
-      .map((t) => `<li><a href="type-${t.slug}.html"><span class="tp-list__id">${esc(t.id)}</span>` +
+      .map((t) => `<li style="--r:${Math.floor((parseInt(t.id.slice(2), 10) - 1) / 6)};--c:${(parseInt(t.id.slice(2), 10) - 1) % 6}"><a href="type-${t.slug}.html"><span class="tp-list__map" aria-hidden="true"></span><span class="tp-list__id">${esc(t.id)}</span>` +
         `<b>${esc(t.name)}</b><span class="tp-list__s">${esc(t.oneLiner)}</span></a></li>`).join('')}</ul>`,
-    i % 2 ? 'sec--paper2' : '')).join('\n');
+    i % 2 ? 'sec--paper2' : ''))).join('\n');
+  CURRENT = null;
 
   /* 一覧に入ってすぐ、36タイプのどれへも行けるようにする。
      マス（座標で探す）と業種（自分の仕事から探す）の2通りを先頭に置く。 */
@@ -353,14 +367,10 @@ function hub() {
   return HEAD_TOP + `  <title>${esc(title)}</title>\n  <meta name="description" content="${esc(desc)}">\n` +
     AFTER_DESC.replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${esc(title)}">`)
               .replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${esc(desc)}">`) +
-    `</head>\n<body data-page="types" data-archetype="editorial" class="pg pg--editorial pg-sub">\n\n` + HEADER +
+    `</head>\n<body data-page="types" data-hero data-archetype="editorial" class="pg pg--editorial pg-sub">\n\n` + HEADER +
     `<nav class="breadcrumb" aria-label="パンくず"><div class="wrap"><ol><li><a href="index.html">ホーム</a></li>` +
     `<li><a href="diagnosis.html">診断</a></li><li aria-current="page">36タイプ一覧</li></ol></div></nav>\n` +
-    `  <main id="main">\n\n  <section class="ah ah--editorial">\n` +
-    `      <div class="wrap ah__inner"><div class="ah__main"><p class="eyebrow">Web診断36</p>` +
-    `<h1>36タイプ一覧</h1><p class="ah__lead">二つの軸を6段階に分けるので、6×6＝36通りになります。優劣はありません。` +
-    `どれも「今どちらを先にするか」の置き方の違いです。</p>` +
-    `<p class="ah__meta">全36タイプ ／ 4つの領域</p></div></div>\n    </section>\n` + finder + body +
+    `  <main id="main">\n\n` + HUB_HEAD + finder + body +
     `\n  <section class="sec sec--ink">\n` +
     `    <div class="wrap"><div class="closing"><h2>自分がどこに入るかは、16問で分かります。</h2>` +
     `<p class="lead">2〜3分です。登録もログインも必要ありません。</p>` +
@@ -373,3 +383,18 @@ let n = 0;
 for (const t of TYPES) { fs.writeFileSync(path.join(ROOT, `type-${t.slug}.html`), page(t)); n++; }
 fs.writeFileSync(path.join(ROOT, 'types.html'), hub());
 console.log(`${n} タイプページ + 一覧1ページ を出力しました`);
+
+/* 見出しの右の立体の36マス。このタイプのマスだけが茶色で高く浮く（上の段が先進、左の列が実用） */
+function typeField(t) {
+  const row = 5 - t.yIndex, col = t.xIndex;
+  let tiles = '';
+  for (let r = 0; r < 6; r++) for (let c = 0; c < 6; c++) {
+    const q = (r < 3 ? 't' : 'b') + (c < 3 ? 'l' : 'r');
+    const on = r === row && c === col;
+    /* マスを押すと、そのタイプのページへ（マウス用の近道。キーボードと読み上げは「このタイプの位置」の地図で同じ先へ行ける） */
+    const o = TYPES.find((x) => x.xIndex === c && x.yIndex === 5 - r);
+    const go = o && !on ? `<a class="float36__go" href="type-${o.slug}.html" tabindex="-1" title="${esc(o.id + ' ' + o.name)}"></a>` : '';
+    tiles += `<i class="q-${q}${on ? ' is-on' : ''}" style="--d:${r + c}">${on ? `<b>${esc(t.id)}</b>` : ''}${go}</i>`;
+  }
+  return `    <div class="float36 float36--type" data-float36 aria-hidden="true"><div class="float36__plane">${tiles}</div></div>`;
+}

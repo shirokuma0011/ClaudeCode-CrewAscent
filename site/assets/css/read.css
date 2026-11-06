@@ -1,0 +1,365 @@
+/* 読み方の部品（2026-11-05）
+   長い説明でも「どこを先に見ればよいか」が分かるよう、内容の種類ごとに見せ方を変える。
+   色は color.css の区切りごとの差し色（--acc / 暗い面は --acci）を使う。 */
+
+/* 要点: 区切りの先頭で、その区切りで一番伝えたいことを1〜2文で示す */
+.rd-key{display:grid;grid-template-columns:auto 1fr;gap:4px 20px;align-items:baseline;margin:0 0 28px;padding:18px 22px;background:#fff;border:1px solid var(--rule);border-left:5px solid var(--acc,var(--blue));max-width:900px}
+.rd-key__h{margin:0;font:700 13px/1.7 var(--mono);letter-spacing:.08em;color:var(--acc,var(--blue));white-space:nowrap}
+.rd-key__t{margin:0;font:600 17px/1.8 var(--serif);color:var(--ink)}
+.rd-key__t b{background:linear-gradient(transparent 62%,color-mix(in srgb,var(--acc,#8a5f33) 22%,transparent) 0)}
+.sec--ink .rd-key{background:#141312;border-color:#3a3631;border-left-color:var(--acci,var(--sand))}
+.sec--ink .rd-key__h{color:var(--acci,var(--sand))}
+.sec--ink .rd-key__t{color:#fff}
+@media (max-width:640px){.rd-key{grid-template-columns:1fr;padding:16px 16px 16px 18px}.rd-key__t{font-size:16px}}
+
+/* 番号カード: 順番や数に意味がある項目。1枚目を大きく、残りを枠で並べる */
+.numbered.rd-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;border:0}
+.numbered.rd-cards>li{padding:18px 18px 20px;border:1px solid var(--rule);background:#fff;min-width:0}
+.numbered.rd-cards>li::before{position:static;display:block;margin-bottom:12px;font:700 26px/1 var(--mono);color:var(--acc,var(--blue))}
+.numbered.rd-cards>li:first-child{grid-row:span 2;display:flex;flex-direction:column;justify-content:flex-end;background:var(--ink);border-color:var(--ink);padding:24px}
+.numbered.rd-cards>li:first-child::before{font-size:56px;color:var(--acci,var(--sand));margin-bottom:auto;padding-bottom:24px}
+.numbered.rd-cards>li:first-child h3{color:#fff;font-size:22px}
+.numbered.rd-cards>li:first-child p{color:#d9d2c7;font-size:15px}
+.numbered.rd-cards h3{font-size:17px}
+.numbered.rd-cards p{font-size:14px}
+@media (max-width:900px){.numbered.rd-cards{grid-template-columns:1fr 1fr}.numbered.rd-cards>li:first-child{grid-column:span 2;grid-row:auto}}
+@media (max-width:560px){.numbered.rd-cards{grid-template-columns:1fr}.numbered.rd-cards>li:first-child{grid-column:auto;grid-row:auto}.numbered.rd-cards>li:first-child::before{font-size:40px;padding-bottom:14px}}
+
+/* 約束のタイル: 暗い面の上で、変わらない約束を1つずつ枠に入れる */
+.marker-list.rd-tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.marker-list.rd-tiles>li{flex-direction:column;gap:6px;padding:16px 18px;border:1px solid #3a3631;background:#141312;line-height:1.7}
+.marker-list.rd-tiles>li:first-child{border-top:1px solid #3a3631}
+.marker-list.rd-tiles>li .mk{display:none}
+.marker-list.rd-tiles>li b{display:block;font:600 16px/1.6 var(--serif);color:#fff}
+.marker-list.rd-tiles>li b::before{content:"";display:inline-block;width:10px;height:10px;margin-right:10px;background:var(--acci,var(--sand));vertical-align:1px}
+.marker-list.rd-tiles>li span{color:#cfc7bb;font-size:14px}
+@media (max-width:640px){.marker-list.rd-tiles{grid-template-columns:1fr}}
+
+/* 行う / 行わない: 2枚の枠に分ける。行わない側は点線 */
+.rd-yn{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+.rd-pan{padding:18px 20px 8px;border:1px solid var(--rule);background:#fff;min-width:0}
+.rd-pan--no{background:transparent;border:1.5px dashed #b9ae9f}
+.rd-pan__h{display:flex;align-items:center;gap:10px;margin:0 0 6px;font:700 16px/1.5 var(--serif)}
+.rd-pan__h::before{content:"";flex:none;width:22px;height:22px;background:var(--acc,var(--blue)) no-repeat center/14px;-webkit-mask:none}
+.rd-pan--yes .rd-pan__h::before{background-color:var(--acc,var(--blue));clip-path:polygon(14% 52%,0 66%,38% 100%,100% 22%,86% 8%,38% 72%)}
+.rd-pan--no .rd-pan__h::before{background-color:var(--tx-3);clip-path:polygon(0 14%,14% 0,50% 36%,86% 0,100% 14%,64% 50%,100% 86%,86% 100%,50% 64%,14% 100%,0 86%,36% 50%)}
+.rd-pan .marker-list>li:first-child{border-top:0}
+.rd-pan .marker-list>li:last-child{border-bottom:0}
+@media (max-width:760px){.rd-yn{grid-template-columns:1fr}}
+
+/* 含まないこと: 点線の小さな札を並べる */
+.marker-list.rd-xlist{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.marker-list.rd-xlist>li,.marker-list.rd-xlist>li:first-child,.marker-list.rd-xlist>li:nth-child(2){align-items:center;padding:14px 16px;border:1.5px dashed #b9ae9f;background:rgba(255,255,255,.55);line-height:1.6}
+.marker-list.rd-xlist .mk--minus::before{background:var(--tx-3);height:2px;top:6px;left:0;right:0}
+@media (max-width:900px){.marker-list.rd-xlist{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.marker-list.rd-xlist{grid-template-columns:1fr}}
+
+/* 変わる項目のカード: 上に4色の帯を順に */
+.spec-card{border-top:3px solid var(--c1)}
+.spec-card:nth-child(4n+2){border-top-color:var(--c3)}
+.spec-card:nth-child(4n+3){border-top-color:var(--c4)}
+.spec-card:nth-child(4n){border-top-color:var(--c2)}
+.spec-card__no{font-size:20px;color:var(--ink)}
+
+/* ガイド一覧の写真: 幅の属性に引っぱられて縦に伸びないよう、高さは比率で決める */
+.article-list__th img{height:auto;aspect-ratio:3 / 2}
+.article-list__item a{padding:18px 0}
+
+/* 制作の流れ: 4つの段階を色の帯に、9つの手順を番号つきの枠に。お金が動く05・08は茶色の帯で目立たせる */
+.timeline{counter-reset:st;border-top:0}
+.timeline>li{--pc:var(--c1)}
+.timeline>.tl-phase:nth-child(5),.timeline>.tl-phase:nth-child(5)~li{--pc:var(--c3)}
+.timeline>.tl-phase:nth-child(8),.timeline>.tl-phase:nth-child(8)~li{--pc:var(--c4)}
+.timeline>.tl-phase:nth-child(11),.timeline>.tl-phase:nth-child(11)~li{--pc:var(--c2)}
+.timeline>.tl-phase{margin-top:36px;padding:16px 20px;border:0;border-left:8px solid var(--pc);background:color-mix(in srgb,var(--pc) 12%,#fff)}
+.timeline>.tl-phase:first-child{margin-top:0}
+.tl-phase__en{color:var(--pc)}
+.tl-phase__note{display:inline-block;justify-self:start;padding:2px 10px;background:#fff;border:1px solid color-mix(in srgb,var(--pc) 40%,#fff);color:var(--ink);font-weight:700}
+.timeline>li:not(.tl-phase){counter-increment:st;position:relative;margin:10px 0 0 28px;padding:18px 20px 18px 72px;border:1px solid var(--rule);background:#fff}
+.timeline>li:not(.tl-phase)::before{content:counter(st,decimal-leading-zero);position:absolute;left:16px;top:18px;display:grid;place-items:center;width:42px;height:42px;background:var(--pc);color:#fff;font:700 15px/1 var(--mono)}
+.timeline>li:not(.tl-phase)::after{content:"";position:absolute;left:-20px;top:-11px;bottom:-11px;width:3px;background:color-mix(in srgb,var(--pc) 45%,#fff)}
+.timeline>li:not(.tl-phase)>div{padding-left:0;grid-template-columns:5fr 6fr}
+.timeline__roles{gap:0;border:1px solid var(--rule)}
+.timeline__role{grid-template-columns:10.5em 1fr;padding:7px 12px;border-bottom:1px solid var(--rule)}
+.timeline__role:last-child{border-bottom:0}
+.timeline__role:first-child{background:color-mix(in srgb,var(--pc) 8%,#fff)}
+.timeline__role b{color:var(--tx-2)}
+#st-5,#st-8{border:2px solid #8a5f33;background:#fbf7f1}
+#st-5 h3::after,#st-8 h3::after{content:"お支払い";display:inline-block;margin-left:10px;padding:2px 8px;background:#8a5f33;color:#fff;font:700 13px/1.4 var(--sans,inherit);vertical-align:3px}
+@media (max-width:760px){.timeline>li:not(.tl-phase){margin-left:14px;padding:16px 14px 16px 62px}.timeline>li:not(.tl-phase)::before{left:12px;width:38px;height:38px}.timeline>li:not(.tl-phase)::after{left:-10px}.timeline>li:not(.tl-phase)>div{grid-template-columns:1fr}.timeline__role{grid-template-columns:9em 1fr}}
+.steprail li[data-ph="1"] i{background:color-mix(in srgb,var(--c1) 30%,#fff)}.steprail li[data-ph="2"] i{background:color-mix(in srgb,var(--c3) 30%,#fff)}.steprail li[data-ph="3"] i{background:color-mix(in srgb,var(--c4) 30%,#fff)}.steprail li[data-ph="4"] i{background:color-mix(in srgb,var(--c2) 30%,#fff)}
+.steprail li.is-done i{background:#c9a77e}.steprail li.is-now i{background:#8a5f33}
+
+/* 公開・管理: 毎月の4つの確認を、矢印でつながる枠に */
+.cycle{gap:22px;border-top:0}
+.cycle__step,.cycle__step + .cycle__step{position:relative;padding:18px 18px 20px;border:1px solid #3a3631;border-top:4px solid var(--c1i);background:#141312}
+.cycle__step:nth-child(2){border-top-color:var(--c3i)}.cycle__step:nth-child(3){border-top-color:var(--c4i)}.cycle__step:nth-child(4){border-top-color:var(--c2i)}
+.cycle__step .n{font:700 26px/1 var(--mono);color:#fff}
+.cycle__step:not(:last-child)::after{content:"→";position:absolute;right:-19px;top:50%;transform:translateY(-50%);color:#8f857a;font:700 16px/1 var(--mono)}
+@media (max-width:900px){.cycle{gap:12px}.cycle__step::after{display:none}:is(.cycle__step):nth-child(odd){padding-left:18px;border-left:1px solid #3a3631}}
+@media (max-width:560px){.cycle__step,.cycle__step + .cycle__step{padding-left:18px!important;border-left:1px solid #3a3631!important}}
+/* 更新とお支払い: 通常→期限→停止の3段を、色の濃さで進み具合として見せる */
+.timeaxis{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;border-top:0}
+.timeaxis__step,.timeaxis__step + .timeaxis__step{padding:18px 20px 20px;border:1px solid var(--rule);border-top:4px solid var(--c1);background:#fff}
+.timeaxis__step--hold,.timeaxis__step--hold + .timeaxis__step{border-top-color:#8a5f33}
+.timeaxis__step--end{border:1.5px dashed #9a8b78;border-top:4px solid #5f564c;background:#f7f4ef}
+.timeaxis__when{display:inline-block;justify-self:start;padding:3px 10px;background:var(--c1);color:#fff;font-size:13px}
+.timeaxis__step--hold .timeaxis__when{background:#8a5f33;color:#fff}
+.timeaxis__step--end .timeaxis__when{background:#5f564c;color:#fff}
+@media (max-width:760px){.timeaxis{grid-template-columns:1fr}.timeaxis__step,.timeaxis__step + .timeaxis__step{padding-left:20px!important;border-left:1px solid var(--rule)!important}}
+/* 行う/行わないを細い列で縦に積む */
+.rd-yn--stack{grid-template-columns:1fr}
+/* 用語の説明: 1語ずつの札に */
+.words-dl{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;border-top:0}
+.words-dl>div{grid-template-columns:1fr;gap:4px;padding:14px 16px;border:1px solid var(--rule);background:#fff}
+.words-dl dt{font:700 16px/1.5 var(--serif);color:var(--acc,var(--ink))}
+@media (max-width:640px){.words-dl{grid-template-columns:1fr}}
+
+/* くわしく見る: 細かい条件や補足は閉じておき、読みたい人だけが開く */
+.rd-more{margin-top:20px;border:1px solid var(--rule);background:#fff}
+.rd-more>summary{display:flex;align-items:center;gap:12px;min-height:48px;padding:10px 18px;cursor:pointer;list-style:none;font:700 15px/1.5 var(--serif);color:var(--ink)}
+.rd-more>summary::-webkit-details-marker{display:none}
+.rd-more>summary::before{content:"+";flex:none;display:grid;place-items:center;width:24px;height:24px;background:var(--acc,var(--blue));color:#fff;font:700 16px/1 var(--mono)}
+.rd-more[open]>summary::before{content:"−"}
+.rd-more>summary:hover{background:color-mix(in srgb,var(--acc,#8a5f33) 6%,#fff)}
+.rd-more__b{padding:4px 18px 18px;border-top:1px solid var(--rule)}
+.rd-more__b>*:first-child{margin-top:12px}
+.sec--ink .rd-more{background:#141312;border-color:#3a3631}.sec--ink .rd-more>summary{color:#fff}
+
+/* 料金: 4プランに1色ずつ（はじめて=藍、シンプル=苔、標準=柿、おまかせ=葡萄）。どれか1つを強調はしない */
+body[data-page="plans"]{--p1:var(--c1);--p2:var(--c3);--p3:var(--c4);--p4:var(--c2)}
+.ptable thead th{border-top:6px solid var(--p1);padding-top:14px;background:color-mix(in srgb,var(--p1) 7%,#fff)}
+.ptable thead th:nth-of-type(2){--p1:var(--p2)}.ptable thead th:nth-of-type(3){--p1:var(--p3)}.ptable thead th:nth-of-type(4){--p1:var(--p4)}
+.ptable thead th .ptable__no{color:var(--p1);font-size:15px}
+.ptable tbody td.is-yes{background:color-mix(in srgb,var(--c3) 6%,#fff)}
+.ptable tbody td.is-yes::before{background:var(--c3)}
+.ptable tbody td.is-no{background:repeating-linear-gradient(135deg,#faf8f4 0 6px,#f3efe8 6px 12px)}
+.ptable tbody tr:nth-child(1) td,.ptable tbody tr:nth-child(7) td,.ptable tbody tr:nth-child(8) td{font:700 16px/1.5 var(--serif)}
+.pl{display:inline-block;padding:1px 8px;color:#fff;background:var(--p1)}
+.pl2{background:var(--p2)}.pl3{background:var(--p3)}.pl4{background:var(--p4)}.pl23{background:linear-gradient(90deg,var(--p2) 50%,var(--p3) 50%)}
+.fold__no{color:#fff;background:var(--p1);padding:4px 8px}
+.pentries details:nth-of-type(2) .fold__no{background:var(--p2)}.pentries details:nth-of-type(3) .fold__no{background:var(--p3)}.pentries details:nth-of-type(4) .fold__no{background:var(--p4)}
+.ptabs [role="tab"][aria-selected="true"]{box-shadow:inset 0 -4px 0 var(--acc,#8a5f33)}
+/* 作業の中身: 4つの枠に */
+.scope{gap:12px;border-top:0}
+.scope>div,.scope>div:nth-child(even){padding:20px 22px;border:1px solid var(--rule);background:#fff}
+/* 共通すること: 2枚の枠 */
+.twolists{gap:12px}
+.twolists>.mlist{padding:8px 20px;border:1px solid var(--rule);background:#fff}
+.twolists>.mlist li:first-child{border-top:0}
+/* 準備の分担: お客様と クルーアセント の列に色 */
+.prep{border-top:0}
+.prep__row--head span:nth-child(2){color:#fff;background:var(--c1);padding:6px 10px}
+.prep__row--head span:nth-child(3){color:#fff;background:#8a5f33;padding:6px 10px}
+.prep__row:not(.prep__row--head) span:nth-child(2){padding-left:10px;border-left:3px solid color-mix(in srgb,var(--c1) 45%,#fff)}
+.prep__row:not(.prep__row--head) span:nth-child(3){padding-left:10px;border-left:3px solid #d8c3a5}
+/* このページで使う言葉（料金） */
+.words__dl{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.words__dl>div{padding:14px 16px;border:1px solid var(--rule);background:#fff}
+.words__dl dt{font:700 16px/1.5 var(--serif);color:var(--acc,var(--ink))}
+@media (max-width:640px){.words__dl{grid-template-columns:1fr}}
+
+/* 11/05 ひと目で分かる部品: 絵記号（色は currentColor）と、流れの矢印 */
+.ic{display:inline-block;width:28px;height:28px;flex:none;background:currentColor;-webkit-mask:var(--ic) center/contain no-repeat;mask:var(--ic) center/contain no-repeat}
+.ic--page{--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%225%22 y=%223%22 width=%2214%22 height=%2218%22 rx=%221.5%22/%3E%3Cpath d=%22M8 8h8M8 12h8M8 16h5%22/%3E%3C/svg%3E")}
+.ic--pen{--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 20l1-5L15 5l4 4L9 19z%22/%3E%3Cpath d=%22M13 7l4 4%22/%3E%3C/svg%3E")}
+.ic--image{--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%223%22 y=%225%22 width=%2218%22 height=%2214%22 rx=%221.5%22/%3E%3Ccircle cx=%229%22 cy=%2210%22 r=%221.8%22/%3E%3Cpath d=%22M4 18l5-5 4 4 3-3 4 4%22/%3E%3C/svg%3E")}
+.ic--logo{--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 3l9 16H3z%22/%3E%3Ccircle cx=%2212%22 cy=%2214%22 r=%222.5%22/%3E%3C/svg%3E")}
+.ic--link{--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1%22/%3E%3Cpath d=%22M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1%22/%3E%3C/svg%3E")}
+.ic--chart{--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 20V4M4 20h16%22/%3E%3Cpath d=%22M8 16v-4M12 16V8M16 16v-6%22/%3E%3C/svg%3E")}
+.ic--redo{--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M20 8a8 8 0 1 0 1 6%22/%3E%3Cpath d=%22M20 3v5h-5%22/%3E%3C/svg%3E")}
+.ic--cal{--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%223%22 y=%225%22 width=%2218%22 height=%2216%22 rx=%221.5%22/%3E%3Cpath d=%22M3 10h18M8 3v4M16 3v4%22/%3E%3C/svg%3E")}
+.ic--flow{--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%225%22 cy=%226%22 r=%222%22/%3E%3Ccircle cx=%2219%22 cy=%2218%22 r=%222%22/%3E%3Cpath d=%22M7 6h6a3 3 0 0 1 3 3v3a3 3 0 0 0 3 3%22/%3E%3Cpath d=%22M14 18h3%22/%3E%3C/svg%3E")}
+.ic--search{--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2210.5%22 cy=%2210.5%22 r=%226%22/%3E%3Cpath d=%22M15 15l6 6%22/%3E%3C/svg%3E")}
+.ic--layout{--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%223%22 y=%224%22 width=%2218%22 height=%2216%22 rx=%221.5%22/%3E%3Cpath d=%22M3 9h18M10 9v11%22/%3E%3C/svg%3E")}
+.ic--yen{--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22/%3E%3Cpath d=%22M8 7l4 5 4-5M12 12v6M9 13h6M9 16h6%22/%3E%3C/svg%3E")}
+.ic--server{--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%224%22 y=%224%22 width=%2216%22 height=%227%22 rx=%221.5%22/%3E%3Crect x=%224%22 y=%2213%22 width=%2216%22 height=%227%22 rx=%221.5%22/%3E%3Cpath d=%22M8 7.5h1M8 16.5h1%22/%3E%3C/svg%3E")}
+.ic--noguar{--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22/%3E%3Cpath d=%22M6 6l12 12%22/%3E%3C/svg%3E")}
+.rd-arr{display:inline-block;width:18px;height:12px;flex:none;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 12'%3E%3Cpath d='M0 5h13V1l5 5-5 5V7H0z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 12'%3E%3Cpath d='M0 5h13V1l5 5-5 5V7H0z'/%3E%3C/svg%3E") center/contain no-repeat}
+.rd-flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px}
+.rd-flow>span:not(.sr-only){padding:3px 10px;border-radius:3px;background:#fff;border:1px solid color-mix(in srgb,var(--sc) 45%,transparent);font-size:14px;line-height:1.5;color:var(--ink)}
+.rd-flow>span:not(.sr-only):last-of-type{background:var(--sc);border-color:var(--sc);color:#fff}
+.rd-flow .rd-arr{color:var(--sc)}
+/* 制作サービス「プランで変わること」: 1枚ずつ色と絵記号、左から右への流れ */
+.grid--4:has(>.spec-card){gap:12px}
+.spec-card{--sc:var(--c1);position:relative;padding:20px 20px 22px;border:1px solid color-mix(in srgb,var(--sc) 30%,transparent);border-top:4px solid var(--sc);background:color-mix(in srgb,var(--sc) 7%,#fff)}
+.spec-card:nth-child(4n+2){--sc:var(--c3)}.spec-card:nth-child(4n+3){--sc:var(--c4)}.spec-card:nth-child(4n){--sc:var(--c2)}
+.spec-card .ic{color:var(--sc);width:34px;height:34px;margin-bottom:8px;display:block}
+.spec-card__no{position:absolute;top:16px;right:18px;font-size:22px;color:var(--sc);opacity:.55}
+.spec-card h3{margin-bottom:10px}
+/* 料金「共通すること」: 6枚の絵記号カード */
+.rd-icons{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px;padding:0;list-style:none}
+.rd-icons li{--sc:var(--c1);display:flex;align-items:center;gap:14px;padding:16px 18px;border:1px solid color-mix(in srgb,var(--sc) 30%,transparent);border-left:5px solid var(--sc);background:color-mix(in srgb,var(--sc) 7%,#fff);font-size:15px;line-height:1.6}
+.rd-icons li:nth-child(4n+2){--sc:var(--c3)}.rd-icons li:nth-child(4n+3){--sc:var(--c4)}.rd-icons li:nth-child(4n){--sc:var(--c2)}
+.rd-icons li.is-no{--sc:#8a8178;background:repeating-linear-gradient(45deg,#f3efe9 0 6px,#ebe5dc 6px 12px);border-left-style:dashed;color:var(--tx-2)}
+.rd-icons .ic{color:var(--sc);width:32px;height:32px}
+.rd-icons .rd-flow>span:not(.sr-only){font-size:14px}
+/* 料金「作業の中身」: 4枚に流れの図 */
+.rd-fig{margin:-20px -22px 16px;border-bottom:1px solid var(--rule);background:#fafafa}
+.rd-fig img{display:block;width:100%;height:auto;aspect-ratio:9 / 5}
+@media (max-width:900px){.rd-icons{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.rd-icons{grid-template-columns:1fr}.rd-fig{margin:-20px -22px 14px}}
+.ic--chat{--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 5h16v11H9l-5 4z%22/%3E%3Cpath d=%22M8 10h8%22/%3E%3C/svg%3E")}
+.ic--clip{--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%225%22 y=%224%22 width=%2214%22 height=%2217%22 rx=%221.5%22/%3E%3Cpath d=%22M9 4V2.5h6V4M8.5 10l1.5 1.5 3-3M8.5 16h7%22/%3E%3C/svg%3E")}
+/* 相談: 2つのヒアリングを「短い・明るい」と「くわしい・暗い」で見分ける */
+.form-choice{gap:16px;border-top:0}
+.form-choice__item,.form-choice__item+.form-choice__item{padding:26px 28px 28px;border:1px solid var(--rule);border-top:5px solid var(--fc)}
+.fc--easy{--fc:var(--c3);background:color-mix(in srgb,var(--c3) 8%,#fff)}
+.fc--full{--fc:var(--c1i);background:#1c1a18;border-color:#1c1a18;color:#f1ede6}
+.form-choice__who{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--fc)}
+.form-choice__who .ic{width:30px;height:30px}
+.fc--full h3{color:#fff}.form-choice__item.fc--full p{color:#d6cfc6}
+.fc-stats{display:flex;gap:8px;margin:2px 0 0;padding:0;list-style:none}
+.fc-stats li{flex:1;padding:8px 10px;border:1px solid color-mix(in srgb,var(--fc) 40%,transparent);font-size:13px;line-height:1.4;color:inherit}
+.fc-stats b{display:block;font:700 20px/1.3 var(--serif);color:var(--fc)}
+.fc--full .fc-stats li{border-color:#4a453f;color:#cfc8be}
+.fc-meter{display:flex;align-items:center;gap:3px;margin:0}
+.fc-meter i{width:14px;height:10px;background:var(--fc)}
+.form-choice__item .fc-meter span{margin-left:8px;font-size:13px;color:var(--fc);font-weight:700}
+.fc--full .btn--secondary{background:var(--c1i);border-color:var(--c1i);color:#111}
+@media (max-width:900px){html .form-choice__item,html .spec-card{padding-left:20px !important;padding-right:20px}html .form-choice__item{border-left:1px solid var(--rule) !important}html .fc--full{border-left-color:#1c1a18 !important}html .spec-card{border-left:1px solid color-mix(in srgb,var(--sc) 30%,transparent) !important}.fc-stats b{font-size:17px}}
+html .spec-card{padding:20px 20px 22px !important}
+.ic--shield{--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z%22/%3E%3Cpath d=%22M8.5 12l2.5 2.5 4.5-4.5%22/%3E%3C/svg%3E")}
+.ic--mail{--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%223%22 y=%225%22 width=%2218%22 height=%2214%22 rx=%221.5%22/%3E%3Cpath d=%22M3.5 6l8.5 7 8.5-7%22/%3E%3C/svg%3E")}
+/* 相談の下段: 見てほしい所（契約の注意・次に読む所）を大きく、受付時間などは細い帯、補足はたたむ */
+.rd-callout{display:flex;align-items:center;gap:14px;margin:28px 0 0;padding:16px 20px;border-left:5px solid var(--c1);background:color-mix(in srgb,var(--c1) 9%,#fff);font-size:15px;line-height:1.7;color:var(--ink)}
+.rd-callout .ic{color:var(--c1);width:32px;height:32px}
+.rd-callout b{margin-right:6px}
+.rd-sub{margin:32px 0 12px;font:700 17px/1.5 var(--serif);color:var(--ink)}
+.rd-links{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0;padding:0;list-style:none}
+.rd-links li{--sc:var(--c1)}.rd-links li:nth-child(2){--sc:var(--c3)}.rd-links li:nth-child(3){--sc:var(--c4)}.rd-links li:nth-child(4){--sc:var(--c2)}
+.rd-links a{display:flex;align-items:center;gap:12px;min-height:76px;height:100%;padding:14px 16px;border:1px solid color-mix(in srgb,var(--sc) 35%,transparent);border-top:4px solid var(--sc);background:#fff;color:var(--ink);font-weight:700;font-size:15px;line-height:1.45;text-decoration:none;transition:background .2s}
+.rd-links a:hover,.rd-links a:focus-visible{background:color-mix(in srgb,var(--sc) 10%,#fff)}
+.rd-links .ic{color:var(--sc);width:30px;height:30px}
+.rd-links span{flex:1}.rd-links small{display:block;font-weight:400;font-size:13px;color:var(--tx-2)}
+.rd-links .rd-arr{color:var(--sc)}
+.rd-info{display:flex;flex-wrap:wrap;gap:8px 28px;margin:24px 0 0;padding:14px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);list-style:none;font-size:14px;color:var(--tx-2)}
+.rd-info li{display:flex;align-items:center;gap:8px}
+.rd-info .ic{width:20px;height:20px;color:var(--tx-3)}
+.rd-info b{margin-right:8px;color:var(--ink)}
+@media (max-width:900px){.rd-links{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.rd-links{grid-template-columns:1fr}.rd-info{flex-direction:column}}
+/* 料金「作業の中身」の図は高さを抑える */
+.rd-fig img{max-height:230px;object-fit:contain}
+.rd-links a,.rd-links a *{text-decoration:none !important;background-image:none}
+/* 送ったあとの3段の流れ（矢印でつなぐ） */
+.rd-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin:28px 0 0;padding:0;list-style:none;counter-reset:st}
+.rd-steps li{--sc:var(--c1);position:relative;display:grid;grid-template-columns:auto 1fr;column-gap:12px;align-items:center;padding:14px 16px;background:color-mix(in srgb,var(--sc) 9%,#fff);border:1px solid color-mix(in srgb,var(--sc) 35%,transparent);counter-increment:st}
+.rd-steps li:nth-child(2){--sc:var(--c3)}.rd-steps li:nth-child(3){--sc:var(--c4)}
+.rd-steps .ic{grid-row:span 2;color:var(--sc);width:30px;height:30px}
+.rd-steps b{font-size:15px;color:var(--ink)}.rd-steps b::before{content:counter(st,decimal-leading-zero) " ";color:var(--sc);font-family:var(--mono)}
+.rd-steps span{font-size:13px;color:var(--tx-2)}
+.rd-steps li+li::before{content:"";position:absolute;left:-30px;top:50%;width:24px;height:14px;margin-top:-7px;background:#5c4a38;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 12'%3E%3Cpath d='M0 5h13V1l5 5-5 5V7H0z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 12'%3E%3Cpath d='M0 5h13V1l5 5-5 5V7H0z'/%3E%3C/svg%3E") center/contain no-repeat}
+@media (max-width:640px){.rd-steps{grid-template-columns:1fr;gap:28px}.rd-steps li+li::before{left:50%;top:-22px;margin:0 0 0 -12px;transform:rotate(90deg)}}
+@media (max-width:640px){.fc-meter{gap:2px}.fc-meter i{width:9px}}
+.scope h3 small{color:var(--c2);border-color:var(--c2)}
+.ic--spark{--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6%22/%3E%3C/svg%3E")}
+/* 診断の仕組み 01: 四つの視点を、真ん中の6×6へ向けて四方に置く（盤と同じ向き・同じ色） */
+.rd-compass{display:grid;grid-template-columns:1fr minmax(220px,260px) 1fr;grid-template-areas:"top top top" "left core right" "bottom bottom bottom";gap:22px 40px;align-items:center;margin-top:32px}
+.rd-arm{position:relative;padding:16px 18px 18px;background:color-mix(in srgb,var(--sc) 8%,#fff);border:1px solid color-mix(in srgb,var(--sc) 35%,transparent);border-top:4px solid var(--sc)}
+.rd-arm--top{grid-area:top;justify-self:center;width:min(100%,520px)}.rd-arm--bottom{grid-area:bottom;justify-self:center;width:min(100%,520px)}
+.rd-arm--left{grid-area:left}.rd-arm--right{grid-area:right}
+.rd-arm .ic{float:right;color:var(--sc);width:30px;height:30px}
+.rd-arm__tag{display:inline-block;padding:2px 8px;background:var(--sc);color:#fff;font-size:13px;font-weight:700}
+.rd-arm h3{margin:8px 0 4px;font:700 19px/1.45 var(--serif);color:var(--ink)}
+.rd-arm p{margin:0;font-size:14px;color:var(--tx-2);line-height:1.7}
+.rd-arm::after{content:"";position:absolute;width:0;height:0;border:9px solid transparent}
+.rd-arm--top::after{left:50%;bottom:-20px;margin-left:-9px;border-top-color:var(--sc)}
+.rd-arm--bottom::after{left:50%;top:-22px;margin-left:-9px;border-bottom-color:var(--sc)}
+.rd-arm--left::after{top:50%;right:-22px;margin-top:-9px;border-left-color:var(--sc)}
+.rd-arm--right::after{top:50%;left:-22px;margin-top:-9px;border-right-color:var(--sc)}
+.rd-compass__core{grid-area:core;position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:3px;aspect-ratio:1;padding:10px;background:#1b1917}
+.rd-compass__core i{background:var(--c1)}
+.rd-compass__core i:nth-child(n+1):nth-child(-n+18):is(:nth-child(6n+4),:nth-child(6n+5),:nth-child(6n)){background:var(--c2)}
+.rd-compass__core i:nth-child(n+19):is(:nth-child(6n+1),:nth-child(6n+2),:nth-child(6n+3)){background:var(--c3)}
+.rd-compass__core i:nth-child(n+19):is(:nth-child(6n+4),:nth-child(6n+5),:nth-child(6n)){background:var(--c4)}
+.rd-compass__core b{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);padding:4px 12px;background:#1b1917;color:#fff;font:700 18px/1.3 var(--mono);white-space:nowrap}
+@media (max-width:760px){.rd-compass{grid-template-columns:1fr;grid-template-areas:"top" "left" "core" "right" "bottom";gap:12px}.rd-arm--top,.rd-arm--bottom{width:100%}.rd-arm::after{display:none}.rd-compass__core{width:200px;justify-self:center}}
+/* 軸の式 */
+.rd-eq{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 0;padding:0;list-style:none}
+.rd-eq li{padding:8px 14px;border-left:4px solid var(--sc);background:#fff;font-size:15px}
+.rd-eq b{margin-right:10px;color:var(--sc)}
+/* 16問と48問: 問題の量を四角の数で見せる */
+.rd-modes{display:grid;grid-template-columns:1fr 1.5fr;gap:16px;margin-top:28px}
+.rd-mode{padding:22px 24px;border:1px solid #3a3631;border-top:5px solid var(--sc);background:#161514;color:#e8e2d9}
+.rd-mode__n{display:flex;align-items:baseline;gap:6px;margin:0;font-size:16px;color:#e8e2d9}
+.rd-mode__n b{font:700 56px/1 var(--mono);color:var(--sc)}
+.rd-mode__n span{margin-left:auto;padding:3px 10px;border:1px solid var(--sc);color:var(--sc);font-size:14px;font-weight:700}
+.rd-mode h3{margin:10px 0 12px;color:#fff;font:700 20px/1.4 var(--serif)}
+.rd-mode__sq{display:flex;flex-wrap:wrap;gap:4px;margin:0 0 14px}
+.rd-mode__sq i{width:14px;height:14px;background:var(--sc)}
+.rd-mode p:last-child{margin:0;font-size:14px;line-height:1.75;color:#cfc8be}
+.rd-more--ink{background:#161514;border-color:#3a3631}.rd-more--ink>summary{color:#e8e2d9}.rd-more--ink .rd-more__b{color:#cfc8be}
+@media (max-width:760px){.rd-modes{grid-template-columns:1fr}.rd-mode__n b{font-size:44px}}
+/* 結果の使い方: 5段を矢印でつなぐ */
+.rd-st5{display:grid;grid-template-columns:repeat(5,1fr);gap:28px;margin:28px 0 0;padding:0;list-style:none}
+.rd-st5 li{position:relative;padding:16px 16px 18px;background:color-mix(in srgb,var(--sc) 8%,#fff);border:1px solid color-mix(in srgb,var(--sc) 35%,transparent);border-top:4px solid var(--sc)}
+.rd-st5 li+li::before{content:"";position:absolute;left:-24px;top:34px;width:20px;height:14px;background:#5c4a38;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 12'%3E%3Cpath d='M0 5h13V1l5 5-5 5V7H0z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 12'%3E%3Cpath d='M0 5h13V1l5 5-5 5V7H0z'/%3E%3C/svg%3E") center/contain no-repeat}
+.rd-st__no{display:inline-grid;place-items:center;width:34px;height:34px;background:var(--sc);color:#fff;font:700 15px/1 var(--mono)}
+.rd-st5 h3{margin:10px 0 6px;font:700 16px/1.5 var(--serif);color:var(--ink)}
+.rd-st5 p{margin:0;font-size:13.5px;line-height:1.7;color:var(--tx-2)}
+.rd-yn--notes{margin-top:24px}
+.rd-callout--warn{margin:0;border-left-color:var(--c4);background:color-mix(in srgb,var(--c4) 9%,#fff)}.rd-callout--warn .ic{color:var(--c4)}
+.rd-callout--calm{margin:0;border-left-color:#9a9087;background:#fff;color:var(--tx-2);font-size:14px}.rd-callout--calm .ic{color:#9a9087}
+.rd-callout b{display:block}
+@media (max-width:1100px){.rd-st5{grid-template-columns:repeat(3,1fr)}.rd-st5 li:nth-child(4)::before{display:none}}
+@media (max-width:640px){.rd-st5{grid-template-columns:1fr;gap:26px}.rd-st5 li+li::before,.rd-st5 li:nth-child(4)::before{display:block;left:50%;top:-21px;margin-left:-10px;transform:rotate(90deg)}}
+/* 診断の入口: 16問=明るい苔、48問=暗い面に藍。四角の数で量の差を見せる */
+html .mode-card--quick,html .mode-card--full{padding:24px 26px 26px;border:1px solid var(--rule);border-top:5px solid var(--sc)}
+html .mode-card--quick{--sc:var(--c3);background:color-mix(in srgb,var(--c3) 8%,#fff)}
+html .mode-card--full{--sc:var(--c1i);background:#1c1a18;border-color:#1c1a18;border-top-color:var(--sc);color:#e8e2d9}
+html .mode-card--full :is(h2,.num,dd){color:#fff}html .mode-card--full dt{color:#bdb5aa}
+html .mode-card--quick .num{color:var(--c3)}html .mode-card--full .num{color:var(--c1i)}
+html .mode-card--quick .tag,html .mode-card--full .tag{border-color:var(--sc);color:var(--sc);background:transparent;font-weight:700}
+html .mode-card--full .btn--primary{background:var(--c1i);border-color:var(--c1i);color:#111}
+html .mode-card--quick .btn--primary{background:var(--c3);border-color:var(--c3)}
+.mode-card--quick .rd-mode__sq,.mode-card--full .rd-mode__sq{display:flex;flex-wrap:wrap;gap:4px;margin:0 0 14px}
+.mode-card--quick .rd-mode__sq i,.mode-card--full .rd-mode__sq i{width:14px;height:14px;background:var(--sc)}
+@media (max-width:640px){.mode-card--quick .rd-mode__sq i,.mode-card--full .rd-mode__sq i{width:10px;height:10px}}
+.ic--ok{--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M5 12.5l4.5 4.5L19 7.5%22/%3E%3C/svg%3E")}
+/* Webサイトの考え方: 写真3枚で入口と確かめる場所を見せる */
+.rd-trio{display:grid;grid-template-columns:1fr 1fr 1.15fr;gap:16px;margin-top:28px}
+.rd-trio__c{display:flex;flex-direction:column;background:#fff;border:1px solid color-mix(in srgb,var(--sc) 30%,transparent);border-top:4px solid var(--sc)}
+.rd-trio__c figure{position:relative;margin:0;aspect-ratio:16 / 9;overflow:hidden}
+.rd-trio__c img{width:100%;height:100%;object-fit:cover;display:block}
+.rd-trio__c figcaption{position:absolute;left:12px;top:12px;padding:3px 10px;background:var(--sc);color:#fff;font-size:13px;font-weight:700}
+.rd-trio__c h3{margin:16px 18px 10px;font:700 20px/1.4 var(--serif);color:var(--ink)}
+.rd-trio__c p{display:flex;gap:10px;margin:0 18px 12px;font-size:14px;line-height:1.7;color:var(--tx-2)}
+.rd-trio__c p b{display:block;color:var(--ink);font-size:14px}
+.rd-trio__c .ic{width:22px;height:22px;margin-top:2px}
+.rd-trio__g .ic{color:var(--c3)}.rd-trio__w .ic{color:#9a9087}
+.rd-trio__c--lead{background:color-mix(in srgb,var(--c4) 8%,#fff);box-shadow:0 0 0 2px var(--c4)}
+@media (max-width:900px){.rd-trio{grid-template-columns:1fr}}
+/* 5つの場面: 写真＋番号＋短い一行 */
+.rd-scenes{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:28px 0 0;padding:0;list-style:none}
+.rd-scenes li{display:flex;flex-direction:column}
+.rd-scenes figure{position:relative;margin:0 0 12px;aspect-ratio:4 / 3;overflow:hidden;border-bottom:4px solid var(--sc)}
+.rd-scenes img{width:100%;height:100%;object-fit:cover;display:block}
+.rd-scene__no{position:absolute;left:0;top:0;padding:6px 10px;background:var(--sc);color:#111;font:700 16px/1 var(--mono)}
+.rd-scenes h3{margin:0 0 6px;font:700 16px/1.5 var(--serif)}
+.rd-scenes p{margin:0;font-size:13.5px;line-height:1.7}
+@media (max-width:1100px){.rd-scenes{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:640px){.rd-scenes{grid-template-columns:1fr 1fr}}
+/* 1ページから育てる図 */
+.rd-grow{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin:0;padding:28px;background:#fff;border:1px solid var(--rule)}
+.rd-grow>div{flex:1;min-width:140px;padding:16px;background:color-mix(in srgb,var(--sc) 8%,#fff);border-top:4px solid var(--sc)}
+.rd-grow b{display:block;font:700 18px/1.4 var(--serif);color:var(--sc)}.rd-grow span{font-size:13px;color:var(--tx-2)}
+.rd-grow__pg{display:flex;gap:4px;height:46px;margin:0 0 10px;align-items:flex-end}
+.rd-grow__pg i{width:24px;height:34px;background:#fff;border:2px solid var(--sc);box-shadow:3px -3px 0 color-mix(in srgb,var(--sc) 30%,#fff)}
+.rd-grow>.rd-arr{flex:none;color:#5c4a38}
+.rd-grow figcaption{flex-basis:100%;font-size:13px;color:var(--tx-2)}
+/* 公開前に決める7項目 */
+.rd-seven{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0 0;padding:0;list-style:none}
+.rd-seven li{display:flex;align-items:center;gap:12px;min-height:72px;padding:12px 16px;background:color-mix(in srgb,var(--sc) 8%,#fff);border-left:5px solid var(--sc);font-weight:700;font-size:15px;line-height:1.5;color:var(--ink)}
+.rd-seven li>span{flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--sc);color:#fff;font:700 15px/1 var(--mono)}
+.rd-seven .rd-seven__cta{padding:0;border:0;background:none}
+.rd-seven__cta a{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;height:100%;min-height:72px;padding:12px 16px;background:#6b5a46;color:#fff;text-decoration:none;font-weight:700}
+.rd-seven__cta .rd-arr{color:#fff}
+@media (max-width:900px){.rd-seven{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.rd-seven{grid-template-columns:1fr}}
+.rd-seven__cta a,.rd-seven__cta a *{text-decoration:none !important}
+.rd-grow{flex-wrap:nowrap;gap:10px;padding:22px}.rd-grow>div{min-width:0;padding:14px 12px}
+.rd-grow__pg{height:34px;gap:3px}.rd-grow__pg i{width:14px;height:22px;box-shadow:2px -2px 0 color-mix(in srgb,var(--sc) 30%,#fff)}
+.rd-grow figcaption{position:absolute;left:0;bottom:-26px}.rd-grow{position:relative;margin-bottom:26px}
+@media (max-width:640px){.rd-grow{flex-direction:column;align-items:stretch}.rd-grow>.rd-arr{align-self:center;transform:rotate(90deg)}}
+.rd-fig img{object-fit:cover;max-height:220px;width:100%}

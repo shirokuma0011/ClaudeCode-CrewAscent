@@ -1,0 +1,83 @@
+/* 差し色（2026-11-05）: 36マスの4領域の色（藍・葡萄・苔・柿）を、写真・小見出し・36マスに広げる。
+   黒・明朝・茶色の軸と背景は変えない。文字に使う色は生成り・白の上で 4.5:1 以上。 */
+:root{--c1:#2f6690;--c2:#7b4a7d;--c3:#48703a;--c4:#9a5220;--c1i:#8dbbe0;--c2i:#d19fcf;--c3i:#a8d08a;--c4i:#f0a66a}
+main>section:nth-of-type(4n+1){--acc:var(--c1);--acci:var(--c1i)}
+main>section:nth-of-type(4n+2){--acc:var(--c3);--acci:var(--c3i)}
+main>section:nth-of-type(4n+3){--acc:var(--c4);--acci:var(--c4i)}
+main>section:nth-of-type(4n){--acc:var(--c2);--acci:var(--c2i)}
+main .eyebrow,main .idx-head__no{color:var(--acc)}
+main .sec--ink .eyebrow,main .ah .eyebrow,main .hx .eyebrow,main .hero .eyebrow{color:var(--acci)}
+main .idx-head__no::after{background:var(--acc)}
+/* 写真: 白黒・くすませる加工を外す（暗い面に文字を重ねるものだけ少し暗く） */
+.fig img,.hx-ab__fig img,.wk-cell img{filter:none}
+.hx-sv__grid img,.hx-in__grid img{filter:saturate(1.1) brightness(.86)}
+.hx-wg__in img{filter:saturate(1.05) brightness(.74)}
+/* トップの写真の上の四角を4色で順に */
+.pics li:nth-child(4n+1){--pc:var(--c1)}.pics li:nth-child(4n+2){--pc:var(--c3)}.pics li:nth-child(4n+3){--pc:var(--c4)}.pics li:nth-child(4n){--pc:var(--c2)}
+.pics .pic__img::after{background:linear-gradient(var(--pc),var(--pc)) calc(var(--cx,0) * 20%) calc(var(--cy,3) * 33.333%) / calc(100% / 6) 25% no-repeat}
+/* トップの36マスの盤: 各マスを自分の領域の色で薄く染める（選択中は茶色のまま） */
+html .atl-map-cell:not([aria-pressed="true"]){background:linear-gradient(140deg,color-mix(in srgb,var(--point-color) 30%,#232120),color-mix(in srgb,var(--point-color) 16%,#151413))}
+/* トップの立体の36マス: タイプページと同じ4領域の淡い色（上3段=先進、左3列=実用） */
+.float36:not(.float36--type) .float36__plane i:not(.is-on):nth-child(-n+18):is(:nth-child(6n+1),:nth-child(6n+2),:nth-child(6n+3)){background:#dfe4e7}
+.float36:not(.float36--type) .float36__plane i:not(.is-on):nth-child(-n+18):is(:nth-child(6n+4),:nth-child(6n+5),:nth-child(6n)){background:#e7dee5}
+.float36:not(.float36--type) .float36__plane i:not(.is-on):nth-child(n+19):is(:nth-child(6n+1),:nth-child(6n+2),:nth-child(6n+3)){background:#e3e6db}
+.float36:not(.float36--type) .float36__plane i:not(.is-on):nth-child(n+19):is(:nth-child(6n+4),:nth-child(6n+5),:nth-child(6n)){background:#efe3d4}
+
+/* 最初の画面の図: 灰色だったマスや札を、4領域の色で塗り分ける（暗い面になじむ濃さ） */
+:root{--d1:color-mix(in srgb,var(--c1) 42%,#1b1917);--d2:color-mix(in srgb,var(--c2) 42%,#1b1917);--d3:color-mix(in srgb,var(--c3) 42%,#1b1917);--d4:color-mix(in srgb,var(--c4) 42%,#1b1917);--m1:color-mix(in srgb,var(--c1i) 55%,#1b1917);--m2:color-mix(in srgb,var(--c2i) 55%,#1b1917);--m3:color-mix(in srgb,var(--c3i) 55%,#1b1917);--m4:color-mix(in srgb,var(--c4i) 55%,#1b1917)}
+/* 36タイプ一覧: 左上=藍、右上=葡萄、左下=苔、右下=柿 */
+html .hx-ty__areas li:nth-child(1){--d:var(--d1);--m:var(--m1)}html .hx-ty__areas li:nth-child(2){--d:var(--d2);--m:var(--m2)}html .hx-ty__areas li:nth-child(3){--d:var(--d3);--m:var(--m3)}html .hx-ty__areas li:nth-child(4){--d:var(--d4);--m:var(--m4)}html .hx-ty__areas a{background:var(--d)}html .hx-ty__areas a:hover,html .hx-ty__areas a:focus-visible{background:color-mix(in srgb,var(--d) 80%,#fff)}html .hx-ty__dots i{background:var(--m)}html .hx-ty__dots i.on{background:#c9a77e}html .hx-ty__areas li.is-on a{box-shadow:inset 0 0 0 2px #c9a77e}html .hx-ty__n{color:#e4dccf}
+/* 診断の仕組み: 4つの視点と6×6の4領域 */
+html .hx-dx__v--t{background:var(--d2)}html .hx-dx__v--l{background:var(--d1)}html .hx-dx__v--b{background:var(--d3)}html .hx-dx__v--r{background:var(--d4)}html .hx-dx__v small{color:#e4dccf}html .hx-dx__grid i.qtl{background:var(--d1)}html .hx-dx__grid i.qtr{background:var(--d2)}html .hx-dx__grid i.qbl{background:var(--d3)}html .hx-dx__grid i.qbr{background:var(--d4)}html .hx-dx__grid i.on{background:#c9a77e}
+/* 診断ページの盤 */
+html .hx-dg__field i:nth-child(-n+18){background:var(--d2)}html .hx-dg__field i:nth-child(-n+18):is(:nth-child(6n+1),:nth-child(6n+2),:nth-child(6n+3)){background:var(--d1)}html .hx-dg__field i:nth-child(n+19){background:var(--d4)}html .hx-dg__field i:nth-child(n+19):is(:nth-child(6n+1),:nth-child(6n+2),:nth-child(6n+3)){background:var(--d3)}
+/* 制作の流れ: 相談・制作・公開の3段を色で分ける */
+html .hx-st.p1 a{background:var(--d1)}html .hx-st.p2 a{background:var(--d3)}html .hx-st.p3 a{background:var(--d4)}html .hx-st.p4 a{background:var(--d2)}html .hx-st.is-first a{background:#8a5f33}html .hx-st a:hover,html .hx-st a:focus-visible{filter:brightness(1.25)}
+/* 公開・管理: 6・12・24か月の行ごとに色 */
+html .hx-mo__row:nth-child(1) .hx-mo__bar i.on{background:#c9a77e}html .hx-mo__row:nth-child(2) .hx-mo__bar i.on{background:var(--c1i)}html .hx-mo__row:nth-child(3) .hx-mo__bar i.on{background:var(--c3i)}
+/* よくある質問・相談・ガイド: 札を順に4色で */
+html .hx-fq__list li:nth-child(4n+2) a,html .hx-gd__list li:nth-child(4n+2) a{background:var(--d1)}html .hx-fq__list li:nth-child(4n+3) a,html .hx-gd__list li:nth-child(4n+3) a{background:var(--d3)}html .hx-fq__list li:nth-child(4n) a,html .hx-gd__list li:nth-child(4n) a{background:var(--d2)}html .hx-fq__list li:nth-child(4n+1):not(.is-first) a,html .hx-gd__list li:nth-child(4n+1):not(.is-on) a{background:var(--d4)}html .hx-ct__steps li:nth-child(4n+1){background:var(--d1)}html .hx-ct__steps li:nth-child(4n+2){background:var(--d3)}html .hx-ct__steps li:nth-child(4n+3){background:var(--d4)}html .hx-ct__steps li:nth-child(4n){background:var(--d2)}html .hx-fq__list a:hover,html .hx-fq__list a:focus-visible,html .hx-gd__list a:hover,html .hx-gd__list a:focus-visible,html .hx-ty__areas a:hover{filter:brightness(1.25)}
+/* 6×6の盤に CA01〜CA36 の番号（左上から右へ。上の段が先進、左の列が実用） */
+html .hx-dg__field,html .hx-dx__grid{counter-reset:ca}html .hx-dg__field i,html .hx-dx__grid i{counter-increment:ca;display:grid;place-items:center}html .hx-dg__field i::before,html .hx-dx__grid i::before{content:"CA" counter(ca,decimal-leading-zero);font:700 13px/1 var(--mono);letter-spacing:.02em;color:rgba(255,255,255,.78)}html .hx-dx__grid i::before{font-size:13px;letter-spacing:-.04em}
+@media (max-width:420px){.hx-dx__grid i::before{content:counter(ca,decimal-leading-zero)}}
+/* 36タイプ一覧の4領域: 各マスに CA 番号 */
+html .hx-ty__dots i{display:grid;place-items:center}
+html .hx-ty__dots i::before{font:700 13px/1 var(--mono);letter-spacing:-.03em;color:rgba(255,255,255,.85)}
+html .hx-ty__dots i.on::before{color:#1b1917}
+html .hx-ty__areas li:nth-child(1) .hx-ty__dots i:nth-child(1)::before{content:"CA01"}
+html .hx-ty__areas li:nth-child(1) .hx-ty__dots i:nth-child(2)::before{content:"CA02"}
+html .hx-ty__areas li:nth-child(1) .hx-ty__dots i:nth-child(3)::before{content:"CA03"}
+html .hx-ty__areas li:nth-child(1) .hx-ty__dots i:nth-child(4)::before{content:"CA07"}
+html .hx-ty__areas li:nth-child(1) .hx-ty__dots i:nth-child(5)::before{content:"CA08"}
+html .hx-ty__areas li:nth-child(1) .hx-ty__dots i:nth-child(6)::before{content:"CA09"}
+html .hx-ty__areas li:nth-child(1) .hx-ty__dots i:nth-child(7)::before{content:"CA13"}
+html .hx-ty__areas li:nth-child(1) .hx-ty__dots i:nth-child(8)::before{content:"CA14"}
+html .hx-ty__areas li:nth-child(1) .hx-ty__dots i:nth-child(9)::before{content:"CA15"}
+html .hx-ty__areas li:nth-child(2) .hx-ty__dots i:nth-child(1)::before{content:"CA04"}
+html .hx-ty__areas li:nth-child(2) .hx-ty__dots i:nth-child(2)::before{content:"CA05"}
+html .hx-ty__areas li:nth-child(2) .hx-ty__dots i:nth-child(3)::before{content:"CA06"}
+html .hx-ty__areas li:nth-child(2) .hx-ty__dots i:nth-child(4)::before{content:"CA10"}
+html .hx-ty__areas li:nth-child(2) .hx-ty__dots i:nth-child(5)::before{content:"CA11"}
+html .hx-ty__areas li:nth-child(2) .hx-ty__dots i:nth-child(6)::before{content:"CA12"}
+html .hx-ty__areas li:nth-child(2) .hx-ty__dots i:nth-child(7)::before{content:"CA16"}
+html .hx-ty__areas li:nth-child(2) .hx-ty__dots i:nth-child(8)::before{content:"CA17"}
+html .hx-ty__areas li:nth-child(2) .hx-ty__dots i:nth-child(9)::before{content:"CA18"}
+html .hx-ty__areas li:nth-child(3) .hx-ty__dots i:nth-child(1)::before{content:"CA19"}
+html .hx-ty__areas li:nth-child(3) .hx-ty__dots i:nth-child(2)::before{content:"CA20"}
+html .hx-ty__areas li:nth-child(3) .hx-ty__dots i:nth-child(3)::before{content:"CA21"}
+html .hx-ty__areas li:nth-child(3) .hx-ty__dots i:nth-child(4)::before{content:"CA25"}
+html .hx-ty__areas li:nth-child(3) .hx-ty__dots i:nth-child(5)::before{content:"CA26"}
+html .hx-ty__areas li:nth-child(3) .hx-ty__dots i:nth-child(6)::before{content:"CA27"}
+html .hx-ty__areas li:nth-child(3) .hx-ty__dots i:nth-child(7)::before{content:"CA31"}
+html .hx-ty__areas li:nth-child(3) .hx-ty__dots i:nth-child(8)::before{content:"CA32"}
+html .hx-ty__areas li:nth-child(3) .hx-ty__dots i:nth-child(9)::before{content:"CA33"}
+html .hx-ty__areas li:nth-child(4) .hx-ty__dots i:nth-child(1)::before{content:"CA22"}
+html .hx-ty__areas li:nth-child(4) .hx-ty__dots i:nth-child(2)::before{content:"CA23"}
+html .hx-ty__areas li:nth-child(4) .hx-ty__dots i:nth-child(3)::before{content:"CA24"}
+html .hx-ty__areas li:nth-child(4) .hx-ty__dots i:nth-child(4)::before{content:"CA28"}
+html .hx-ty__areas li:nth-child(4) .hx-ty__dots i:nth-child(5)::before{content:"CA29"}
+html .hx-ty__areas li:nth-child(4) .hx-ty__dots i:nth-child(6)::before{content:"CA30"}
+html .hx-ty__areas li:nth-child(4) .hx-ty__dots i:nth-child(7)::before{content:"CA34"}
+html .hx-ty__areas li:nth-child(4) .hx-ty__dots i:nth-child(8)::before{content:"CA35"}
+html .hx-ty__areas li:nth-child(4) .hx-ty__dots i:nth-child(9)::before{content:"CA36"}
+@media (max-width:640px){html .hx-ty__dots i::before{font-size:0}}
